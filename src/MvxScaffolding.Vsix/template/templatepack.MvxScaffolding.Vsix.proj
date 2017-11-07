@@ -7,9 +7,9 @@
           Condition=" '$(TemplatePackPropsFilePath)' != '' and Exists('$(TemplatePackPropsFilePath)') " />
 
   <PropertyGroup Label="TemplatePackInfo">
-    <Authors>Your name here</Authors>
-    <Description>A description for your template pack</Description>
-    <Version>1.0.0</Version>
+    <Authors>Plac3hold3r</Authors>
+    <Description>A customizable template used to scaffold a cross platform MvvmCross application using Xamarin Navtive</Description>
+    <Version>0.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Label="PackageConfiguration">
