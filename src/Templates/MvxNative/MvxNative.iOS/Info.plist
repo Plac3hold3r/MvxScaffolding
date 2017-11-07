@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>MvxNative.iOS</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.MvxNative.iOS</string>
+	<string>PACKAGENAME</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -13,7 +13,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
-  <string>10.3</string>
+	<string>IOSMINVERSION</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>

@@ -28,5 +28,122 @@
     {
       "path": "MvxNative.iOS\\MvxNative.iOS.csproj"
     }
-  ]
+  ],
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!HasDroidProject)",
+          "exclude": [
+            "MvxNative.Droid/**"
+          ]
+        },
+        {
+          "condition": "(!HasiOSProject)",
+          "exclude": [
+            "MvxNative.iOS/**"
+          ]
+        }
+      ]
+    }
+  ],
+  "symbols": {
+    "HasDroidProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Include Xamarin Android Project."
+    },
+    "HasiOSProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Include Xamarin iOS Project."
+    },
+    "PackageName": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "com.mvxscaffolding.app",
+      "replaces": "PACKAGENAME",
+      "description": "The package name or bundle identifier for the app."
+    },
+    "AndroidMinVersion": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "19",
+      "description": "Minimum Android SDK version.",
+      "replaces": "DROIDMINVERSION",
+      "choices": [
+        {
+          "choice": "26",
+          "description": "Android 8 - Oreo v26"
+        },
+        {
+          "choice": "25",
+          "description": "Android 7.1 - Nougat v25"
+        },
+        {
+          "choice": "24",
+          "description": "Android 7 - Nougat v24"
+        },
+        {
+          "choice": "23",
+          "description": "Android 6 - Marshmallow v23"
+        },
+        {
+          "choice": "22",
+          "description": "Android 5.1 - Lollipop v22"
+        },
+        {
+          "choice": "21",
+          "description": "Android 5 - Lollipop v21"
+        },
+        {
+          "choice": "19",
+          "description": "Android 4 - KitKat v19"
+        },
+        {
+          "choice": "18",
+          "description": "Android 4.3 - Jelly Bean v18"
+        },
+        {
+          "choice": "17",
+          "description": "Android 4.2 - Jelly Bean v17"
+        },
+        {
+          "choice": "16",
+          "description": "Android 4.1 - Jelly Bean v16"
+        },
+        {
+          "choice": "15",
+          "description": "Android 4.0.3 - Ice Cream Sandwich v15"
+        },
+        {
+          "choice": "14",
+          "description": "Android 4 - Ice Cream Sandwich v14"
+        }
+      ]
+    },
+    "iOSMinVersion": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "10.3",
+      "description": "Minimum Android SDK version.",
+      "replaces": "IOSMINVERSION",
+      "choices": [
+        {
+          "choice": "11",
+          "description": "iOS 11"
+        },
+        {
+          "choice": "10.3",
+          "description": "iOS 10.3"
+        },
+        {
+          "choice": "9.3",
+          "description": "iOS 9.3"
+        }
+      ]
+    }
+  }
 }
