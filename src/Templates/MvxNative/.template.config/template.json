@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Plac3hold3r",
+  "classifications": [ "Xamarin", "MvvmCross" ],
+  "description": "A customizable template used to scaffold a cross platform MvvmCross application",
+  "name": "MvxScaffolding MvvmCross Native",
+  "defaultName": "MyMvvmCrossApp",
+  "identity": "MvxScaffolding.Native",
+  "groupIdentity": "MvxScaffolding.Native",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "shortName": "MvxNative",
+  "sourceName": "MvxNative",
+  "guids": [
+    "{3B98C6A5-7159-48D1-84C4-4DACDFE12818}",
+    "{F4F67AC0-86F3-4024-A943-0CF49B8E93BA}",
+    "{4E00CCF2-5D4E-415F-AE06-291965E1822E}"
+  ],
+  "primaryOutputs": [
+    {
+      "path": "MvxNative.Core\\MvxNative.Core.csproj"
+    },
+    {
+      "path": "MvxNative.Droid\\MvxNative.Droid.csproj"
+    },
+    {
+      "path": "MvxNative.iOS\\MvxNative.iOS.csproj"
+    }
+  ]
+}
