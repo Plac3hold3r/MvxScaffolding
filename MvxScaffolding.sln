@@ -10,7 +10,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solutio
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxScaffolding.Vsix", "src\MvxScaffolding.Vsix\MvxScaffolding.Vsix.csproj", "{5F73E421-52CF-464D-A53D-F9B76A87B31D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxScaffolding.UI", "src\MvxScaffolding.UI\MvxScaffolding.UI.csproj", "{C727CC5B-1154-4DE7-8654-5038BDE92EBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project Templates", "Project Templates", "{D7352774-663C-445E-8C46-BAEAE4532A76}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item Templates", "Item Templates", "{55BC22BB-C3FE-416A-973C-937E9A2BBBF2}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F73E421-52CF-464D-A53D-F9B76A87B31D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F73E421-52CF-464D-A53D-F9B76A87B31D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F73E421-52CF-464D-A53D-F9B76A87B31D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F73E421-52CF-464D-A53D-F9B76A87B31D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C727CC5B-1154-4DE7-8654-5038BDE92EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C727CC5B-1154-4DE7-8654-5038BDE92EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C727CC5B-1154-4DE7-8654-5038BDE92EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C727CC5B-1154-4DE7-8654-5038BDE92EBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
