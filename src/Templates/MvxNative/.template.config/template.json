@@ -13,19 +13,22 @@
   },
   "shortName": "MvxNative",
   "sourceName": "MvxNative",
+  "preferNameDirectory": true,
   "guids": [
-    "{3B98C6A5-7159-48D1-84C4-4DACDFE12818}",
-    "{F4F67AC0-86F3-4024-A943-0CF49B8E93BA}",
-    "{4E00CCF2-5D4E-415F-AE06-291965E1822E}"
+    "{3B98C6A5-7159-48D1-84C4-4DACDFE12818}", // Core Project
+    "{F4F67AC0-86F3-4024-A943-0CF49B8E93BA}", // Android Project
+    "{4E00CCF2-5D4E-415F-AE06-291965E1822E}" // iOS Project
   ],
   "primaryOutputs": [
     {
       "path": "MvxNative.Core\\MvxNative.Core.csproj"
     },
     {
+      "condition": "(HasDroidProject)",
       "path": "MvxNative.Droid\\MvxNative.Droid.csproj"
     },
     {
+      "condition": "(HasiOSProject)",
       "path": "MvxNative.iOS\\MvxNative.iOS.csproj"
     }
   ],
@@ -60,12 +63,21 @@
       "defaultValue": "true",
       "description": "Include Xamarin iOS Project."
     },
-    "PackageName": {
+    "AppId": {
       "type": "parameter",
       "datatype": "string",
       "defaultValue": "com.mvxscaffolding.app",
-      "replaces": "PACKAGENAME",
-      "description": "The package name or bundle identifier for the app."
+      "replaces": "APPID",
+      //"isRequired": "true",
+      "description": "The Android package name or iOS bundle Id <com.company.appname>."
+    },
+    "AppName": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "Mvx Scaffolding",
+      "replaces": "APPNAME",
+      // "isRequired": "true",
+      "description": "The applition name."
     },
     "AndroidMinVersion": {
       "type": "parameter",
