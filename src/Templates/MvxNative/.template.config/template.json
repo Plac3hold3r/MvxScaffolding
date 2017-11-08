@@ -21,15 +21,15 @@
   ],
   "primaryOutputs": [
     {
-      "path": "MvxNative.Core\\MvxNative.Core.csproj"
+      "path": "src\\MvxNative.Core\\MvxNative.Core.csproj"
     },
     {
       "condition": "(HasDroidProject)",
-      "path": "MvxNative.Droid\\MvxNative.Droid.csproj"
+      "path": "src\\MvxNative.Droid\\MvxNative.Droid.csproj"
     },
     {
       "condition": "(HasiOSProject)",
-      "path": "MvxNative.iOS\\MvxNative.iOS.csproj"
+      "path": "src\\MvxNative.iOS\\MvxNative.iOS.csproj"
     }
   ],
   "sources": [
@@ -38,13 +38,13 @@
         {
           "condition": "(!HasDroidProject)",
           "exclude": [
-            "MvxNative.Droid/**"
+            "src/MvxNative.Droid/**"
           ]
         },
         {
           "condition": "(!HasiOSProject)",
           "exclude": [
-            "MvxNative.iOS/**"
+            "src/MvxNative.iOS/**"
           ]
         }
       ]

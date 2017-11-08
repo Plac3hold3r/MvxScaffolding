@@ -26,11 +26,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{414ED5
 		src\Templates\MvxNative\.template.config\template.vstemplate = src\Templates\MvxNative\.template.config\template.vstemplate
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Core", "src\Templates\MvxNative\MvxNative.Core\MvxNative.Core.csproj", "{3B98C6A5-7159-48D1-84C4-4DACDFE12818}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Core", "src\Templates\MvxNative\src\MvxNative.Core\MvxNative.Core.csproj", "{3B98C6A5-7159-48D1-84C4-4DACDFE12818}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Droid", "src\Templates\MvxNative\MvxNative.Droid\MvxNative.Droid.csproj", "{F4F67AC0-86F3-4024-A943-0CF49B8E93BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Droid", "src\Templates\MvxNative\src\MvxNative.Droid\MvxNative.Droid.csproj", "{F4F67AC0-86F3-4024-A943-0CF49B8E93BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.iOS", "src\Templates\MvxNative\MvxNative.iOS\MvxNative.iOS.csproj", "{4E00CCF2-5D4E-415F-AE06-291965E1822E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.iOS", "src\Templates\MvxNative\src\MvxNative.iOS\MvxNative.iOS.csproj", "{4E00CCF2-5D4E-415F-AE06-291965E1822E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
