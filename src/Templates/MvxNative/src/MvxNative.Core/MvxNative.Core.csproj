@@ -4,4 +4,8 @@
     <TargetFramework>netstandardNETSTANDARDVERSION</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MvvmCross" Version="5.4.2" />
+  </ItemGroup>
+
 </Project>
