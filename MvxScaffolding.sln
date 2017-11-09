@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solution Items", "{CD685E50-2396-43CA-AE14-6F4A5019EFDA}"
 	ProjectSection(SolutionItems) = preProject
@@ -22,6 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Native", "Native", "{A4C3B6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{414ED55C-0665-4CCF-BD0D-26E34C2B7B16}"
 	ProjectSection(SolutionItems) = preProject
+		src\Templates\MvxNative\.template.config\dotnetcli.host.json = src\Templates\MvxNative\.template.config\dotnetcli.host.json
 		src\Templates\MvxNative\.template.config\template.json = src\Templates\MvxNative\.template.config\template.json
 		src\Templates\MvxNative\.template.config\template.vstemplate = src\Templates\MvxNative\.template.config\template.vstemplate
 	EndProjectSection
@@ -33,6 +34,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.iOS", "src\Templates\MvxNative\src\MvxNative.iOS\MvxNative.iOS.csproj", "{4E00CCF2-5D4E-415F-AE06-291965E1822E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.UWP", "src\Templates\MvxNative\src\MvxNative.UWP\MvxNative.UWP.csproj", "{4EDF7269-9680-47BB-A278-FB446F65E3C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Nuspec", "!Nuspec", "{4AEE0797-5D79-4C6B-86FB-85778D650F22}"
+	ProjectSection(SolutionItems) = preProject
+		nuspecs\MvxScaffolding.Native.nuspec = nuspecs\MvxScaffolding.Native.nuspec
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

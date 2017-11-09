@@ -69,19 +69,19 @@
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "true",
-      "description": "Include Xamarin Android Project."
+      "description": "Whether to include Xamarin Android Project."
     },
     "HasiOSProject": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "true",
-      "description": "Include Xamarin iOS Project."
+      "description": "Whether to include Xamarin iOS Project."
     },
     "HasUWPProject": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "true",
-      "description": "Include UWP Project."
+      "description": "Whether to include UWP Project."
     },
     /*
     || Shared project flags
@@ -109,12 +109,12 @@
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "2.0",
-      "description": "The version of the .NET Standard Core project.",
+      "description": "The version of .NET Standard to use in the Core project.",
       "replaces": "NETSTANDARDVERSION",
       "choices": [
         {
           "choice": "2.0",
-          "description": ".NET Standard 2"
+          "description": ".NET Standard 2.0"
         },
         {
           "choice": "1.6",
@@ -197,7 +197,7 @@
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "10.3",
-      "description": "Minimum Android SDK version.",
+      "description": "Minimum iOS SDK version.",
       "replaces": "IOSMINVERSION",
       "choices": [
         {
@@ -220,9 +220,9 @@
     "UWPAppDescription": {
       "type": "parameter",
       "datatype": "string",
-      "defaultValue": "Laying the foundation wiht Mvx Scaffolding",
+      "defaultValue": "Laying the foundation with Mvx Scaffolding",
       "replaces": "APPDESCRIPTION",
-      "description": "The applition name."
+      "description": "The UWP applition description."
     }
   }
 }
