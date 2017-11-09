@@ -1,48 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
-<Package
-  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  IgnorableNamespaces="uap mp">
-
-  <Identity
-    Name="1ce6eb6c-67a5-4d3e-97cf-0c39d4d61f8e"
-    Publisher="CN=jfroo"
-    Version="1.0.0.0" />
-
-  <mp:PhoneIdentity PhoneProductId="1ce6eb6c-67a5-4d3e-97cf-0c39d4d61f8e" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
-
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="1ce6eb6c-67a5-4d3e-97cf-0c39d4d61f8e" Publisher="CN=YourNameHere" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="1ce6eb6c-67a5-4d3e-97cf-0c39d4d61f8e" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>MvxNative.UWP</DisplayName>
-    <PublisherDisplayName>jfroo</PublisherDisplayName>
+    <DisplayName>APPNAME</DisplayName>
+    <PublisherDisplayName>YourNameHere</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
   </Dependencies>
-
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-      Executable="$targetnametoken$.exe"
-      EntryPoint="MvxNative.UWP.App">
-      <uap:VisualElements
-        DisplayName="MvxNative.UWP"
-        Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="MvxNative.UWP"
-        BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="MvxNative.UWP.App">
+      <uap:VisualElements DisplayName="APPNAME" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="APPDESCRIPTION" BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
+        </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
   </Applications>
-
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>

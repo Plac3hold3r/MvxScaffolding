@@ -62,6 +62,9 @@
     }
   ],
   "symbols": {
+    /*
+    || Project include flags
+    =========================================================================================== */
     "HasDroidProject": {
       "type": "parameter",
       "datatype": "bool",
@@ -80,6 +83,9 @@
       "defaultValue": "true",
       "description": "Include UWP Project."
     },
+    /*
+    || Shared project flags
+    =========================================================================================== */
     "AppId": {
       "type": "parameter",
       "datatype": "string",
@@ -96,6 +102,37 @@
       // "isRequired": "true",
       "description": "The applition name."
     },
+    /*
+    || Core project flags
+    =========================================================================================== */
+    "NETStandardVersion": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "2.0",
+      "description": "The version of the .NET Standard Core project.",
+      "replaces": "NETSTANDARDVERSION",
+      "choices": [
+        {
+          "choice": "2.0",
+          "description": ".NET Standard 2"
+        },
+        {
+          "choice": "1.6",
+          "description": ".NET Standard 1.6"
+        },
+        {
+          "choice": "1.5",
+          "description": ".NET Standard 1.5"
+        },
+        {
+          "choice": "1.4",
+          "description": ".NET Standard 1.4"
+        }
+      ]
+    },
+    /*
+    || Android project flags
+    =========================================================================================== */
     "AndroidMinVersion": {
       "type": "parameter",
       "datatype": "choice",
@@ -153,6 +190,9 @@
         }
       ]
     },
+    /*
+    || iOS project flags
+    =========================================================================================== */
     "iOSMinVersion": {
       "type": "parameter",
       "datatype": "choice",
@@ -173,6 +213,16 @@
           "description": "iOS 9.3"
         }
       ]
+    },
+    /*
+    || UWP project flags
+    =========================================================================================== */
+    "UWPAppDescription": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "Laying the foundation wiht Mvx Scaffolding",
+      "replaces": "APPDESCRIPTION",
+      "description": "The applition name."
     }
   }
 }
