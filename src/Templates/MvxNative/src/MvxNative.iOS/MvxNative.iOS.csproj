@@ -107,6 +107,9 @@
     <PackageReference Include="MvvmCross">
       <Version>5.4.2</Version>
     </PackageReference>
+    <PackageReference Include="MvvmCross.CodeAnalysis">
+      <Version>5.4.2</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
