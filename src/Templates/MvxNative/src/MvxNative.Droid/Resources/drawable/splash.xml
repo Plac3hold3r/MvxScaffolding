@@ -6,9 +6,9 @@
 
     <item
       android:bottom="20dp">
-        <!--<bitmap
+        <bitmap
             android:gravity="center"
-            android:src="@drawable/"/>-->
+            android:src="@drawable/ic_mvvmcross_logo"/>
     </item>
 
 </layer-list>
