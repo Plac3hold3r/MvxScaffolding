@@ -1,8 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandardNETSTANDARDVERSION</TargetFramework>
-    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <TargetFramework>netstandardNET_STANDARD_VERSION</TargetFramework>
+    <PackageTargetFallback Condition=" '$(NETStandardVersion)' != '2.0' ">$(PackageTargetFallback);portable-net45+win8+wp8+wpa81</PackageTargetFallback>
+    <AssetTargetFallback Condition=" '$(NETStandardVersion)' == '2.0' ">$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,5 +13,4 @@
     <PackageReference Include="MvvmCross.CodeAnalysis" Version="5.4.2" NoWarn="NU1701" />
     <PackageReference Include="MvvmCross.Platform" Version="5.4.2" NoWarn="NU1701" />
   </ItemGroup>
-
 </Project>

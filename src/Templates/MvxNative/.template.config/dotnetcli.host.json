@@ -15,11 +15,11 @@
     },
     "AppId": {
       "longName": "app-id",
-      "shortName": ""
+      "shortName": "id"
     },
     "AppName": {
       "longName": "app-name",
-      "shortName": ""
+      "shortName": "name"
     },
     "NETStandardVersion": {
       "longName": "net-standard-version",

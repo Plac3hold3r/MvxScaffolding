@@ -19,6 +19,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item Templates", "Item Templates", "{55BC22BB-C3FE-416A-973C-937E9A2BBBF2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Native", "Native", "{A4C3B6E2-92D5-478B-99DC-1CF0F489284E}"
+	ProjectSection(SolutionItems) = preProject
+		src\Templates\MvxNative\MvxNative.sln = src\Templates\MvxNative\MvxNative.sln
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{414ED55C-0665-4CCF-BD0D-26E34C2B7B16}"
 	ProjectSection(SolutionItems) = preProject

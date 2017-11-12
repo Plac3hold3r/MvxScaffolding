@@ -15,8 +15,8 @@
   "sourceName": "MvxNative",
   "preferNameDirectory": true,
   "guids": [
-    "{3B98C6A5-7159-48D1-84C4-4DACDFE12818}", // Core Project
-    "{F4F67AC0-86F3-4024-A943-0CF49B8E93BA}", // Android Project
+    "{59A93A2E-C3BD-457C-860C-FE8140E36C66}", // Core Project
+    "F4F67AC0-86F3-4024-A943-0CF49B8E93BA}", // Android Project
     "{4E00CCF2-5D4E-415F-AE06-291965E1822E}", // iOS Project
     "{4EDF7269-9680-47BB-A278-FB446F65E3C9}" // UWP Project
   ],
@@ -90,7 +90,7 @@
       "type": "parameter",
       "datatype": "string",
       "defaultValue": "com.mvxscaffolding.app",
-      "replaces": "APPID",
+      "replaces": "APP_ID",
       //"isRequired": "true",
       "description": "The Android package name or iOS bundle Id <com.company.appname>."
     },
@@ -98,7 +98,7 @@
       "type": "parameter",
       "datatype": "string",
       "defaultValue": "Mvx Scaffolding",
-      "replaces": "APPNAME",
+      "replaces": "APP_NAME",
       // "isRequired": "true",
       "description": "The applition name."
     },
@@ -110,7 +110,7 @@
       "datatype": "choice",
       "defaultValue": "2.0",
       "description": "The version of .NET Standard to use in the Core project.",
-      "replaces": "NETSTANDARDVERSION",
+      "replaces": "NET_STANDARD_VERSION",
       "choices": [
         {
           "choice": "2.0",
@@ -138,7 +138,7 @@
       "datatype": "choice",
       "defaultValue": "19",
       "description": "Minimum Android SDK version.",
-      "replaces": "DROIDMINVERSION",
+      "replaces": "DROID_MIN_VERSION",
       "choices": [
         {
           "choice": "26",
@@ -198,7 +198,7 @@
       "datatype": "choice",
       "defaultValue": "10.3",
       "description": "Minimum iOS SDK version.",
-      "replaces": "IOSMINVERSION",
+      "replaces": "IOS_MIN_VERSION",
       "choices": [
         {
           "choice": "11",
@@ -221,7 +221,7 @@
       "type": "parameter",
       "datatype": "string",
       "defaultValue": "Laying the foundation with Mvx Scaffolding",
-      "replaces": "APPDESCRIPTION",
+      "replaces": "UWP_APP_DESCRIPTION",
       "description": "The UWP applition description."
     }
   }
