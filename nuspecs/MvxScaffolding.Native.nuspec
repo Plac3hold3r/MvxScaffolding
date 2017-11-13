@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>MvxScaffolding.Native</id>
-    <version>0.0.2-alpha</version>
+    <version>0.0.3-alpha</version>
     <title>MvxScaffolding MvvmCross Native</title>
     <authors>Plac3hold3r</authors>
     <owners>Plac3hold3r</owners>
@@ -14,6 +14,6 @@
     <tags>Xamarin, MvvmCross, C#, Android, iOS, UWP, Template</tags>
   </metadata>
   <files>
-    <file src="..\src\Templates\MvxNative\**" target="content" exclude="..\**\packages\**;..\**\bin\**;..\**\obj\**;**\.vs\**;**\*.user;"/>
+    <file src="..\src\Templates\MvxNative\**" target="content" exclude="..\**\packages\**;..\**\bin\**;..\**\obj\**;**\.vs\**;**\*.user;" />
   </files>
 </package>
