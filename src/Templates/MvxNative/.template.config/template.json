@@ -90,9 +90,9 @@
       "type": "parameter",
       "datatype": "string",
       "defaultValue": "com.mvxscaffolding.app",
-      "replaces": "APP_ID",
       //"isRequired": "true",
-      "description": "The Android package name or iOS bundle Id <com.company.appname>."
+      "description": "The Android package name or iOS bundle Id <com.company.appname>.",
+      "replaces": "APP_ID"
     },
     "AppName": {
       "type": "parameter",
@@ -143,7 +143,6 @@
       "datatype": "choice",
       "defaultValue": "19",
       "description": "Minimum Android SDK version.",
-      "replaces": "DROID_MIN_VERSION",
       "choices": [
         {
           "choice": "26",
@@ -192,6 +191,12 @@
         {
           "choice": "14",
           "description": "Android 4 - Ice Cream Sandwich v14"
+        }
+      ],
+      "replaces": "19",
+      "onlyIf": [
+        {
+          "after": "android:minSdkVersion=\""
         }
       ]
     },

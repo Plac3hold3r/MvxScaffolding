@@ -68,13 +68,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
-    <AndroidResource Include="Resources\layout\fragment_main.axml" />
-    <AndroidResource Include="Resources\layout\layout_toolbar.axml">
+    <AndroidResource Include="Resources\layout\fragment_main.xml" />
+    <AndroidResource Include="Resources\layout\layout_toolbar.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\activity_main_container.axml">
+    <AndroidResource Include="Resources\layout\activity_main_container.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\values\strings.xml" />
@@ -100,6 +100,9 @@
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.V7.AppCompat">
       <Version>5.4.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Constraint.Layout">
+      <Version>1.0.2.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
