@@ -13,7 +13,7 @@
         <key>LSRequiresIPhoneOS</key>
         <true />
         <key>MinimumOSVersion</key>
-        <string>IOS_MIN_VERSION</string>
+        <string>10.3</string>
         <key>UIDeviceFamily</key>
         <array>
             <integer>1</integer>
@@ -38,5 +38,9 @@
             <string>UIInterfaceOrientationLandscapeLeft</string>
             <string>UIInterfaceOrientationLandscapeRight</string>
         </array>
+        <key>XSLaunchImageAssets</key>
+        <string>Resources/Media.xcassets/LaunchImages.launchimage</string>
+        <key>XSAppIconAssets</key>
+        <string>Resources/Media.xcassets/AppIcons.appiconset</string>
     </dict>
 </plist>
