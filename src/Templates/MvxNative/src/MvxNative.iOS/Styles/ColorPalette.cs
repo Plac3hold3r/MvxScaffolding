@@ -5,9 +5,9 @@ namespace MvxNative.iOS.Styles
 {
     public static class ColorPalette
     {
-        public static UIColor Primary => FromHexString("#2fb681");
-        public static UIColor PrimaryDark => FromHexString("#008554");
-        public static UIColor PrimaryLight => FromHexString("#6ae9b1");
+        public static UIColor Primary => FromHexString("#24b780");
+        public static UIColor PrimaryDark => FromHexString("#008653");
+        public static UIColor PrimaryLight => FromHexString("#64eab0");
 
         public static UIColor Accent => FromHexString("#4c555a");
         public static UIColor AccentDark => FromHexString("#242c31");

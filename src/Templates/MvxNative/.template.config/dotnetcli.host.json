@@ -36,6 +36,10 @@
     "UWPAppDescription": {
       "longName": "uwp-app-description",
       "shortName": ""
+    },
+    "skipRestore": {
+      "longName": "no-restore",
+      "shortName": ""
     }
   }
 }
