@@ -84,22 +84,29 @@
       "description": "Whether to include UWP Project."
     },
     /*
-    || Shared project flags
+    || All project flags
     =========================================================================================== */
     "AppId": {
       "type": "parameter",
       "datatype": "string",
-      "defaultValue": "com.mvxscaffolding.app",
-      //"isRequired": "true",
+      "defaultValue": "com.mvxscaffolding.appp",
       "description": "The Android package name or iOS bundle Id <com.company.appname>.",
-      "replaces": "APP_ID"
+      "replaces": "com.mvxscaffolding.app",
+      "onlyIf": [
+        {
+          "after": "<string>",
+          "before": "</string>"
+        },
+        {
+          "after": "package=\""
+        }
+      ]
     },
     "AppName": {
       "type": "parameter",
       "datatype": "string",
       "defaultValue": "Mvx Scaffolding",
       "replaces": "APP_NAME",
-      // "isRequired": "true",
       "description": "The applition name."
     },
     /*
@@ -208,7 +215,6 @@
       "datatype": "choice",
       "defaultValue": "10.3",
       "description": "Minimum iOS SDK version.",
-      "replaces": "IOS_MIN_VERSION",
       "choices": [
         {
           "choice": "11",
@@ -221,6 +227,13 @@
         {
           "choice": "9.3",
           "description": "iOS 9.3"
+        }
+      ],
+      "replaces": "10.3",
+      "onlyIf": [
+        {
+          "after": "<string>",
+          "before": "</string>"
         }
       ]
     },
