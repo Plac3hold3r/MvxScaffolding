@@ -18,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" customColorSpace="sRGB" colorSpace="calibratedWhite" white="1" alpha="1"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="198" translatesAutoresizingMaskIntoConstraints="NO" image="launch_icon.png">
-                                <rect key="frame" x="175" y="160" width="250" height="250"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="198" translatesAutoresizingMaskIntoConstraints="NO" image="launch_icon.png" misplaced="YES">
+                                <rect key="frame" x="175" y="160" width="200" height="200"/>
                                 <constraints>
-                                    <constraint id="633" firstItem="198" firstAttribute="height" constant="250"/>
-                                    <constraint id="634" firstItem="198" firstAttribute="width" constant="250"/>
+                                    <constraint id="633" firstItem="198" firstAttribute="height" constant="200"/>
+                                    <constraint id="634" firstItem="198" firstAttribute="width" constant="200"/>
                                 </constraints>
                             </imageView>
                         </subviews>

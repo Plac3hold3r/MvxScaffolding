@@ -95,6 +95,9 @@
     <Compile Include="Styles\ColorPalette.cs" />
     <Compile Include="Views\!Base\BaseViewController.cs" />
     <Compile Include="Views\Main\MainViewController.cs" />
+    <BundleResource Include="Resources\launch_icon.png" />
+    <BundleResource Include="Resources\launch_icon%402x.png" />
+    <BundleResource Include="Resources\launch_icon%403x.png" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
     </None>
@@ -173,8 +176,6 @@
       <InProject>false</InProject>
     </ImageAsset>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
