@@ -1,4 +1,5 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using Cirrious.FluentLayouts.Touch;
+using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Views;
 using MvxNative.iOS.Styles;
 using UIKit;
@@ -21,6 +22,31 @@ namespace MvxNative.iOS.Views
             NavigationController.NavigationBar.TintColor = UIColor.White;
 
             NavigationController.SetNeedsStatusBarAppearanceUpdate();
+
+            CreateView();
+
+            LayoutView();
+
+            BindView();
+        }
+
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+
+            View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
+        }
+
+        protected virtual void CreateView()
+        {
+        }
+
+        protected virtual void LayoutView()
+        {
+        }
+
+        protected virtual void BindView()
+        {
         }
     }
 }
