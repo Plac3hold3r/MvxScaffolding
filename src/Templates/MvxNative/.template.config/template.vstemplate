@@ -5,7 +5,7 @@
         <TemplateID>MvxScaffolding.Native</TemplateID>
         <DefaultName>MyMvvmCrossApp</DefaultName>
 
-        <Icon>project-icon.png</Icon>
+        <Icon>mvxscaffolding_native_logo.png</Icon>
 
         <ProjectType>CSharp</ProjectType>
         <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
@@ -16,12 +16,12 @@
         <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
     </TemplateData>
     <TemplateContent>
-        <ProjectCollection/>
+        <ProjectCollection />
         <CustomParameters>
             <CustomParameter Name = "$language$" Value="CSharp" />
-            <CustomParameter Name = "$uistyle$" Value="none"/>
+            <CustomParameter Name = "$uistyle$" Value="none" />
             <CustomParameter Name = "$groupid$" Value="MvxScaffolding.Native" />
-            <CustomParameter Name = "SideWaffleNewProjNode" Value="CSharp\MvvmCross"/>
+            <CustomParameter Name = "SideWaffleNewProjNode" Value="CSharp\MvvmCross" />
         </CustomParameters>
     </TemplateContent>
     <WizardExtension>
