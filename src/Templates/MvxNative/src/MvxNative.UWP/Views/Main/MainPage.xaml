@@ -7,7 +7,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    </Grid>
+        <TextBlock
+            Name="TextWelcome"
+            Text="Welcome!!"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            RelativePanel.AlignVerticalCenterWithPanel="True" />
+
+        <TextBlock
+            Name="TextMessage"
+            Text="App scaffolded with MvxScaffolding"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            RelativePanel.Below="TextWelcome"
+            Margin="0,10" />
+    </RelativePanel>
 </Page>
