@@ -21,6 +21,7 @@ namespace MvxNative.UWP
         protected override IMvxApplication CreateApp()
             => new Core.App();
 
+        // https://github.com/MvvmCross/MvvmCross/issues/2333
         protected override MvxLogProviderType GetDefaultLogProviderType()
             => MvxLogProviderType.None;
     }
