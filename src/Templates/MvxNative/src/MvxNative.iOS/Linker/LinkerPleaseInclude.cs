@@ -3,9 +3,10 @@ using System.Collections.Specialized;
 using System.Windows.Input;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.iOS.Views;
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Views;
+using MvvmCross.Platform.IoC;
 using UIKit;
 
 namespace MvxNative.iOS.Linker
@@ -15,13 +16,6 @@ namespace MvxNative.iOS.Linker
     [Preserve(AllMembers = true)]
     public class LinkerPleaseInclude
     {
-        public void Include(MvxTaskBasedBindingContext c)
-        {
-            c.Dispose();
-            var c2 = new MvxTaskBasedBindingContext();
-            c2.Dispose();
-        }
-
         public void Include(UIButton uiButton)
         {
             uiButton.TouchUpInside += (s, e) =>
@@ -31,25 +25,25 @@ namespace MvxNative.iOS.Linker
         public void Include(UIBarButtonItem barButton)
         {
             barButton.Clicked += (s, e) =>
-                                 barButton.Title = barButton.Title + "";
+                                 barButton.Title = $"{ barButton.Title }";
         }
 
         public void Include(UITextField textField)
         {
-            textField.Text = textField.Text + "";
+            textField.Text = $"{ textField.Text }";
             textField.EditingChanged += (sender, args) => { textField.Text = ""; };
         }
 
         public void Include(UITextView textView)
         {
-            textView.Text = textView.Text + "";
+            textView.Text = $"{ textView.Text }";
             textView.Changed += (sender, args) => { textView.Text = ""; };
         }
 
         public void Include(UILabel label)
         {
-            label.Text = label.Text + "";
-            label.AttributedText = new NSAttributedString(label.AttributedText.ToString() + "");
+            label.Text = $"{ label.Text }";
+            label.AttributedText = new NSAttributedString($"{ label.AttributedText.ToString() }");
         }
 
         public void Include(UIImageView imageView)
@@ -99,24 +93,35 @@ namespace MvxNative.iOS.Linker
 
         public void Include(INotifyCollectionChanged changed)
         {
-            changed.CollectionChanged += (s, e) => { var test = $"{e.Action}{e.NewItems}{e.NewStartingIndex}{e.OldItems}{e.OldStartingIndex}"; };
+            changed.CollectionChanged += (s, e) => { var ignore = $"{e.Action}{e.NewItems}{e.NewStartingIndex}{e.OldItems}{e.OldStartingIndex}"; };
         }
+
         public void Include(ICommand command)
         {
             command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
         }
-        public void Include(MvvmCross.Platform.IoC.MvxPropertyInjector injector)
+
+        public void Include(MvxPropertyInjector injector)
         {
-            injector = new MvvmCross.Platform.IoC.MvxPropertyInjector();
+            injector = new MvxPropertyInjector();
         }
+
         public void Include(System.ComponentModel.INotifyPropertyChanged changed)
         {
-            changed.PropertyChanged += (sender, e) => { var test = e.PropertyName; };
+            changed.PropertyChanged += (sender, e) => { var ignore = e.PropertyName; };
+        }
+
+        public void Include(MvxTaskBasedBindingContext c)
+        {
+            c.Dispose();
+            var c2 = new MvxTaskBasedBindingContext();
+            c2.Dispose();
         }
 
         public void Include(MvxNavigationService service, IMvxViewModelLoader loader)
         {
             service = new MvxNavigationService(null, loader);
+            var ignore = new MvxNavigationServiceAppStart<MvxNullViewModel>(null);
         }
         public void Include(ConsoleColor color)
         {
