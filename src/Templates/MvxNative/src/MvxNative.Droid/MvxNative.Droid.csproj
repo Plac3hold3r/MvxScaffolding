@@ -80,9 +80,7 @@
     </AndroidResource>
     <AndroidResource Include="Resources\values\strings.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\MvxNative.Core\MvxNative.Core.csproj">
       <Project>{3b98c6a5-7159-48d1-84c4-4dacdfe12818}</Project>

@@ -1,0 +1,281 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Plac3hold3r",
+  "classifications": [ "Xamarin", "MvvmCross", "Xamarin Forms" ],
+  "description": "A customizable template used to scaffold a cross platform MvvmCross application with Xamarin Forms",
+  "name": "MvxScaffolding MvvmCross Forms",
+  "defaultName": "MyMvvmCrossApp",
+  "identity": "MvxScaffolding.Forms",
+  "groupIdentity": "MvxScaffolding.Forms",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "shortName": "mvxforms",
+  "sourceName": "MvxForms",
+  "preferNameDirectory": true,
+  "guids": [
+    "{59A93A2E-C3BD-457C-860C-FE8140E36C66}", // Core Project
+    "{F4F67AC0-86F3-4024-A943-0CF49B8E93BA}", // Android Project
+    "{4E00CCF2-5D4E-415F-AE06-291965E1822E}", // iOS Project
+    "{4EDF7269-9680-47BB-A278-FB446F65E3C9}", // UWP Project
+    "{5F58BD22-D035-4E3C-BEBA-E4A55F151E5C}" // Solution items
+  ],
+  "primaryOutputs": [
+    {
+      "path": "src\\MvxNative.Core\\MvxNative.Core.csproj"
+    },
+    {
+      "condition": "(HasDroidProject)",
+      "path": "src\\MvxNative.Droid\\MvxNative.Droid.csproj"
+    },
+    {
+      "condition": "(HasiOSProject)",
+      "path": "src\\MvxNative.iOS\\MvxNative.iOS.csproj"
+    },
+    {
+      "condition": "(HasUWPProject)",
+      "path": "src\\MvxNative.UWP\\MvxNative.UWP.csproj"
+    }
+  ],
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!HasDroidProject)",
+          "exclude": [
+            "src/MvxNative.Droid/**"
+          ]
+        },
+        {
+          "condition": "(!HasiOSProject)",
+          "exclude": [
+            "src/MvxNative.iOS/**"
+          ]
+        },
+        {
+          "condition": "(!HasUWPProject)",
+          "exclude": [
+            "src/MvxNative.UWP/**"
+          ]
+        },
+        {
+          "condition": "(!HasEditorConfig)",
+          "exclude": [
+            ".editorconfig"
+          ]
+        }
+      ]
+    }
+  ],
+  "symbols": {
+    /*
+    || Project include flags
+    =========================================================================================== */
+    "HasDroidProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Whether to include Xamarin Android Project."
+    },
+    "HasiOSProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Whether to include Xamarin iOS Project."
+    },
+    "HasUWPProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Whether to include UWP Project."
+    },
+    "HasEditorConfig": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Whether to include an editor config in the root directory."
+    },
+    /*
+    || All project flags
+    =========================================================================================== */
+    "AppId": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "com.mvxscaffolding.app",
+      "description": "The Android package name or iOS bundle Id <com.company.appname>.",
+      "replaces": "com.mvxscaffolding.app",
+      "onlyIf": [
+        {
+          "after": "<string>",
+          "before": "</string>"
+        },
+        {
+          "after": "package=\""
+        }
+      ]
+    },
+    "AppName": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "Mvx Scaffolding",
+      "replaces": "APP_NAME",
+      "description": "The applition name."
+    },
+    "skipRestore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "If specified, skips the automatic restore of the project on create.",
+      "defaultValue": "false"
+    },
+    /*
+    || Core project flags
+    =========================================================================================== */
+    "NETStandardVersion": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "2.0",
+      "description": "The version of .NET Standard to use in the Core project.",
+      "choices": [
+        {
+          "choice": "2.0",
+          "description": ".NET Standard 2.0"
+        },
+        {
+          "choice": "1.6",
+          "description": ".NET Standard 1.6"
+        },
+        {
+          "choice": "1.5",
+          "description": ".NET Standard 1.5"
+        },
+        {
+          "choice": "1.4",
+          "description": ".NET Standard 1.4"
+        }
+      ],
+      "replaces": "2.0",
+      "onlyIf": [
+        {
+          "after": "netstandard"
+        }
+      ]
+    },
+    /*
+    || Android project flags
+    =========================================================================================== */
+    "AndroidMinVersion": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "19",
+      "description": "Minimum Android SDK version.",
+      "choices": [
+        {
+          "choice": "26",
+          "description": "Android 8 - Oreo v26"
+        },
+        {
+          "choice": "25",
+          "description": "Android 7.1 - Nougat v25"
+        },
+        {
+          "choice": "24",
+          "description": "Android 7 - Nougat v24"
+        },
+        {
+          "choice": "23",
+          "description": "Android 6 - Marshmallow v23"
+        },
+        {
+          "choice": "22",
+          "description": "Android 5.1 - Lollipop v22"
+        },
+        {
+          "choice": "21",
+          "description": "Android 5 - Lollipop v21"
+        },
+        {
+          "choice": "19",
+          "description": "Android 4 - KitKat v19"
+        },
+        {
+          "choice": "18",
+          "description": "Android 4.3 - Jelly Bean v18"
+        },
+        {
+          "choice": "17",
+          "description": "Android 4.2 - Jelly Bean v17"
+        },
+        {
+          "choice": "16",
+          "description": "Android 4.1 - Jelly Bean v16"
+        },
+        {
+          "choice": "15",
+          "description": "Android 4.0.3 - Ice Cream Sandwich v15"
+        },
+        {
+          "choice": "14",
+          "description": "Android 4 - Ice Cream Sandwich v14"
+        }
+      ],
+      "replaces": "19",
+      "onlyIf": [
+        {
+          "after": "android:minSdkVersion=\""
+        }
+      ]
+    },
+    /*
+    || iOS project flags
+    =========================================================================================== */
+    "iOSMinVersion": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "10.3",
+      "description": "Minimum iOS SDK version.",
+      "choices": [
+        {
+          "choice": "11",
+          "description": "iOS 11"
+        },
+        {
+          "choice": "10.3",
+          "description": "iOS 10.3"
+        },
+        {
+          "choice": "9.3",
+          "description": "iOS 9.3"
+        }
+      ],
+      "replaces": "10.3",
+      "onlyIf": [
+        {
+          "after": "<string>",
+          "before": "</string>"
+        }
+      ]
+    },
+    /*
+    || UWP project flags
+    =========================================================================================== */
+    "UWPAppDescription": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "Laying the foundation with Mvx Scaffolding",
+      "replaces": "UWP_APP_DESCRIPTION",
+      "description": "The UWP applition description."
+    }
+  },
+  "postActions": [
+    {
+      "condition": "(!skipRestore)",
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
+        { "text": "Run 'dotnet restore'" }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
+}
