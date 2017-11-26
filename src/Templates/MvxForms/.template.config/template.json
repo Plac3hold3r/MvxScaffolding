@@ -15,27 +15,27 @@
   "sourceName": "MvxForms",
   "preferNameDirectory": true,
   "guids": [
-    "{59A93A2E-C3BD-457C-860C-FE8140E36C66}", // Core Project
-    "{F4F67AC0-86F3-4024-A943-0CF49B8E93BA}", // Android Project
-    "{4E00CCF2-5D4E-415F-AE06-291965E1822E}", // iOS Project
-    "{4EDF7269-9680-47BB-A278-FB446F65E3C9}", // UWP Project
-    "{5F58BD22-D035-4E3C-BEBA-E4A55F151E5C}" // Solution items
+    "{E02AD468-057C-4CC0-8B50-F664FD5A031D}", // Core Project
+    "{B816CFD1-B3F7-4188-986F-402CC93A09EC}", // Android Project
+    "{3444E7FD-035D-4DEF-AD46-5E679938589F}", // iOS Project
+    "{C387803D-EAD4-417E-A1FE-A8F81A79ADEA}", // UWP Project
+    "{66D2862F-628D-48C3-AC12-993BECA41132}" // Solution items
   ],
   "primaryOutputs": [
     {
-      "path": "src\\MvxNative.Core\\MvxNative.Core.csproj"
+      "path": "src\\MvxForms.Core\\MvxForms.Core.csproj"
     },
     {
       "condition": "(HasDroidProject)",
-      "path": "src\\MvxNative.Droid\\MvxNative.Droid.csproj"
+      "path": "src\\MvxForms.Droid\\MvxForms.Droid.csproj"
     },
     {
       "condition": "(HasiOSProject)",
-      "path": "src\\MvxNative.iOS\\MvxNative.iOS.csproj"
+      "path": "src\\MvxForms.iOS\\MvxForms.iOS.csproj"
     },
     {
       "condition": "(HasUWPProject)",
-      "path": "src\\MvxNative.UWP\\MvxNative.UWP.csproj"
+      "path": "src\\MvxForms.UWP\\MvxForms.UWP.csproj"
     }
   ],
   "sources": [
@@ -44,19 +44,19 @@
         {
           "condition": "(!HasDroidProject)",
           "exclude": [
-            "src/MvxNative.Droid/**"
+            "src/MvxForms.Droid/**"
           ]
         },
         {
           "condition": "(!HasiOSProject)",
           "exclude": [
-            "src/MvxNative.iOS/**"
+            "src/MvxForms.iOS/**"
           ]
         },
         {
           "condition": "(!HasUWPProject)",
           "exclude": [
-            "src/MvxNative.UWP/**"
+            "src/MvxForms.UWP/**"
           ]
         },
         {
