@@ -6,7 +6,7 @@
     <title>MvxScaffolding MvvmCross Templates</title>
     <authors>Plac3hold3r</authors>
     <owners>Plac3hold3r</owners>
-    <description>A customizable template used to scaffold a cross platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types or Xamarin Native and Xamarin Forms.</description>
+    <description>A customizable template used to scaffold a cross platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.</description>
     <summary>A customizable template used to scaffold a cross platform MvvmCross application.</summary>
     <packageTypes>
       <packageType name="Template" />
