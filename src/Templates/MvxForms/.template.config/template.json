@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Plac3hold3r",
-  "classifications": [ "Xamarin", "MvvmCross", "Xamarin Forms" ],
+  "classifications": [ "Xamarin", "Xamarin Forms", "MvvmCross" ],
   "description": "A customizable template used to scaffold a cross platform MvvmCross application with Xamarin Forms",
   "name": "MvxScaffolding MvvmCross Forms",
   "defaultName": "MyMvvmCrossApp",
@@ -266,16 +266,16 @@
       "replaces": "UWP_APP_DESCRIPTION",
       "description": "The UWP applition description."
     }
-  },
-  "postActions": [
-    {
-      "condition": "(!skipRestore)",
-      "description": "Restore NuGet packages required by this project.",
-      "manualInstructions": [
-        { "text": "Run 'dotnet restore'" }
-      ],
-      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
-      "continueOnError": true
-    }
-  ]
+  }//,
+  //"postActions": [
+  //  {
+  //    "condition": "(!skipRestore)",
+  //    "description": "Restore NuGet packages required by this project.",
+  //    "manualInstructions": [
+  //      { "text": "Run 'dotnet restore'" }
+  //    ],
+  //    "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+  //    "continueOnError": true
+  //  }
+  //]
 }

@@ -23,7 +23,7 @@
     },
     "AppName": {
       "longName": "app-name",
-      "shortName": "name"
+      "shortName": "app-n"
     },
     "NETStandardVersion": {
       "longName": "net-standard-version",
