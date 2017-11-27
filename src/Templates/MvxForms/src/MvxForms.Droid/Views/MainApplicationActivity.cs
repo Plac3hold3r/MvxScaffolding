@@ -6,21 +6,23 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Core.Views;
+using MvvmCross.Forms.Platform;
+using MvvmCross.Forms.Droid;
+using MvvmCross.Forms.Droid.Views;
+using MvvmCross.Platform;
 
 namespace MvxForms.Droid
 {
     [Activity(
-        Label = "MvxForms",
-        Icon = "@drawable/icon",
-        Theme = "@style/AppTheme",
-        MainLauncher = true,
-        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+        Theme = "@style/AppTheme")]
+    public class MainApplicationActivity : MvxFormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
+            //TabLayoutResource = Resource.Layout.Tabbar;
+            //ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
 

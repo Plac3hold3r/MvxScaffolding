@@ -90,6 +90,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Setup.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,6 +128,9 @@
     <PackageReference Include="MvvmCross.CodeAnalysis">
       <Version>5.5.0</Version>
     </PackageReference>
+    <PackageReference Include="MvvmCross.Forms">
+      <Version>5.5.0</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms">
       <Version>2.5.0.91635</Version>
     </PackageReference>
@@ -135,6 +139,10 @@
     <ProjectReference Include="..\MvxForms.Core\MvxForms.Core.csproj">
       <Project>{11142155-cdb9-4241-9faa-dc848f72c6eb}</Project>
       <Name>MvxForms.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvxForms.UI\MvxForms.UI.csproj">
+      <Project>{ae931dcd-1388-4463-8964-04d5232e0748}</Project>
+      <Name>MvxForms.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
