@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using MvvmCross.Core.ViewModels;
-using MvxForms.Core.ViewModels.Main;
+﻿using MvvmCross.Core.ViewModels;
+using MvxForms.Core.ViewModels.Home;
 
 namespace MvxForms.Core
 {
@@ -10,7 +7,7 @@ namespace MvxForms.Core
     {
         public override void Initialize()
         {
-            RegisterNavigationServiceAppStart<MainViewModel>();
+            RegisterNavigationServiceAppStart<HomeViewModel>();
         }
     }
 }

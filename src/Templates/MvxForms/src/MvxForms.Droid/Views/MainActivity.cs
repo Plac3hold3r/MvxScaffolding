@@ -12,22 +12,20 @@ using MvvmCross.Forms.Platform;
 using MvvmCross.Forms.Droid;
 using MvvmCross.Forms.Droid.Views;
 using MvvmCross.Platform;
+using MvxForms.Core.ViewModels.Main;
 
 namespace MvxForms.Droid
 {
     [Activity(
         Theme = "@style/AppTheme")]
-    public class MainApplicationActivity : MvxFormsApplicationActivity
+    public class MainActivity : MvxFormsAppCompatActivity<MainViewModel>
     {
         protected override void OnCreate(Bundle bundle)
         {
-            //TabLayoutResource = Resource.Layout.Tabbar;
-            //ToolbarResource = Resource.Layout.Toolbar;
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-
-            global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
         }
     }
 }
