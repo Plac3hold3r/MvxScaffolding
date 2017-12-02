@@ -2,23 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageTargetFallback Condition=" '$(NETStandardVersion)' != '2.0' ">$(PackageTargetFallback);portable-net45+win8+wp8+wpa81</PackageTargetFallback>
+    <AssetTargetFallback Condition=" '$(NETStandardVersion)' == '2.0' ">$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="App.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pages\MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="MvvmCross" Version="5.5.2" />
-    <PackageReference Include="MvvmCross.CodeAnalysis" Version="5.5.2" />
-    <PackageReference Include="MvvmCross.Forms" Version="5.5.2" />
+    <PackageReference Include="MvvmCross" Version="5.5.2" NoWarn="NU1701" />
+    <PackageReference Include="MvvmCross.Core" Version="5.5.2" NoWarn="NU1701" />
+    <PackageReference Include="MvvmCross.Binding" Version="5.5.2" NoWarn="NU1701" />
+    <PackageReference Include="MvvmCross.Platform" Version="5.5.2" NoWarn="NU1701" />
+    <PackageReference Include="MvvmCross.CodeAnalysis" Version="5.5.2" NoWarn="NU1701" />
+    <PackageReference Include="MvvmCross.Forms" Version="5.5.2" NoWarn="NU1701" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.91635" />
   </ItemGroup>
 

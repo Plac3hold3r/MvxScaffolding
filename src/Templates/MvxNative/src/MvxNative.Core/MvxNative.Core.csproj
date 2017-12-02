@@ -10,7 +10,7 @@
     <PackageReference Include="MvvmCross" Version="5.5.2" NoWarn="NU1701" />
     <PackageReference Include="MvvmCross.Core" Version="5.5.2" NoWarn="NU1701" />
     <PackageReference Include="MvvmCross.Binding" Version="5.5.2" NoWarn="NU1701" />
-    <PackageReference Include="MvvmCross.CodeAnalysis" Version="5.5.2" NoWarn="NU1701" />
     <PackageReference Include="MvvmCross.Platform" Version="5.5.2" NoWarn="NU1701" />
+    <PackageReference Include="MvvmCross.CodeAnalysis" Version="5.5.2" NoWarn="NU1701" />
   </ItemGroup>
 </Project>
