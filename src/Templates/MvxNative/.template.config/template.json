@@ -62,8 +62,14 @@
         {
           "condition": "(!HasEditorConfig)",
           "exclude": [
-            ".editorconfig"
+            "editor.config"
           ]
+        },
+        {
+          "condition": "(HasEditorConfig)",
+          "rename": {
+            "editor.config": ".editorconfig"
+          }
         }
       ]
     }

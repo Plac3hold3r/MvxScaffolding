@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solution Items", "{CD685E50-2396-43CA-AE14-6F4A5019EFDA}"
 	ProjectSection(SolutionItems) = preProject
@@ -25,7 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item Templates", "Item Temp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Native", "Native", "{A4C3B6E2-92D5-478B-99DC-1CF0F489284E}"
 	ProjectSection(SolutionItems) = preProject
-		src\Templates\MvxNative\.editorconfig = src\Templates\MvxNative\.editorconfig
+		src\Templates\MvxNative\editor.config = src\Templates\MvxNative\editor.config
 		src\Templates\MvxNative\MvxNative.sln = src\Templates\MvxNative\MvxNative.sln
 	EndProjectSection
 EndProject
@@ -46,7 +46,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.UWP", "src\Templa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{370BC50F-6FE9-4180-A1EA-90491D79B026}"
 	ProjectSection(SolutionItems) = preProject
-		src\Templates\MvxForms\.editorconfig = src\Templates\MvxForms\.editorconfig
+		src\Templates\MvxForms\editor.config = src\Templates\MvxForms\editor.config
 		src\Templates\MvxForms\MvxForms.sln = src\Templates\MvxForms\MvxForms.sln
 	EndProjectSection
 EndProject
@@ -66,7 +66,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.UWP", "src\Templat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.iOS", "src\Templates\MvxForms\src\MvxForms.iOS\MvxForms.iOS.csproj", "{3444E7FD-035D-4DEF-AD46-5E679938589F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.UI", "src\Templates\MvxForms\src\MvxForms.UI\MvxForms.UI.csproj", "{AE931DCD-1388-4463-8964-04D5232E0748}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxForms.UI", "src\Templates\MvxForms\src\MvxForms.UI\MvxForms.UI.csproj", "{AE931DCD-1388-4463-8964-04D5232E0748}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
