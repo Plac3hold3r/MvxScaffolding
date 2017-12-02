@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>MvxScaffolding.Templates</id>
-    <version>0.3.1-alpha</version>
+    <version>0.3.4-alpha</version>
     <title>MvxScaffolding MvvmCross Templates</title>
     <authors>Plac3hold3r</authors>
     <owners>Plac3hold3r</owners>
@@ -11,7 +11,7 @@
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
-    <tags>Xamarin, Xamarin Forms, MvvmCross, C#, Android, iOS, UWP, Template</tags>
+    <tags>Xamarin, Xamarin.Forms, MvvmCross, C#, Android, iOS, UWP, Template</tags>
   </metadata>
   <files>
     <file src="..\src\Templates\MvxNative\**" target="content\MvxNative" exclude="..\**\packages\**;..\**\bin\**;..\**\obj\**;**\.vs\**;**\*.user;" />

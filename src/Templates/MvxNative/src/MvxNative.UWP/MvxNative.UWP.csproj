@@ -171,10 +171,10 @@
       <Version>6.0.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross">
-      <Version>5.5.0</Version>
+      <Version>5.5.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.CodeAnalysis">
-      <Version>5.5.0</Version>
+      <Version>5.5.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
