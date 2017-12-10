@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Reflection;
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Core.ViewModels;
 using MvvmCross.Forms.iOS;
 using MvvmCross.Forms.Platform;
 using MvvmCross.iOS.Platform;
+using MvxForms.Core;
 using UIKit;
 
 namespace MvxForms.iOS
@@ -16,14 +15,9 @@ namespace MvxForms.iOS
         }
 
         protected override IMvxApplication CreateApp()
-            => new Core.App();
+            => new App();
 
         protected override MvxFormsApplication CreateFormsApplication()
-            => new UI.App();
-
-        protected override IEnumerable<Assembly> GetViewAssemblies() => new List<Assembly>(base.GetViewAssemblies())
-        {
-            typeof(UI.App).GetTypeInfo().Assembly
-        };
+            => new AppForms();
     }
 }

@@ -2,7 +2,7 @@
 <d:MvxFormsApplication xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="clr-namespace:MvvmCross.Forms.Platform;assembly=MvvmCross.Forms"
-             x:Class="MvxForms.UI.App">
+             x:Class="MvxForms.Core.AppForms">
     <Application.Resources>
 
         <!-- Application resource dictionary -->

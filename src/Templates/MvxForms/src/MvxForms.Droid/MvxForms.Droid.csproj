@@ -77,10 +77,6 @@
       <Project>{11142155-cdb9-4241-9faa-dc848f72c6eb}</Project>
       <Name>MvxForms.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MvxForms.UI\MvxForms.UI.csproj">
-      <Project>{ae931dcd-1388-4463-8964-04d5232e0748}</Project>
-      <Name>MvxForms.UI</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MvvmCross">
