@@ -90,16 +90,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MvvmCross">
-      <Version>5.5.2</Version>
+      <Version>5.6.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.CodeAnalysis">
-      <Version>5.5.2</Version>
+      <Version>5.6.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.Design">
-      <Version>5.5.2</Version>
+      <Version>5.6.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.V7.AppCompat">
-      <Version>5.5.2</Version>
+      <Version>5.6.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Constraint.Layout">
       <Version>1.0.2.2</Version>
