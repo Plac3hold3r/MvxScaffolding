@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Specialized;
-using System.Windows.Input;
-using Foundation;
+﻿using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Views;
 using MvvmCross.Platform.IoC;
+using System;
+using System.Collections.Specialized;
+using System.Windows.Input;
 using UIKit;
 
 namespace MvxForms.iOS.Linker
@@ -37,6 +37,7 @@ namespace MvxForms.iOS.Linker
         public void Include(UITextView textView)
         {
             textView.Text = $"{ textView.Text }";
+            textView.TextStorage.DidProcessEditing += (sender, e) => textView.Text = "";
             textView.Changed += (sender, args) => { textView.Text = ""; };
         }
 
