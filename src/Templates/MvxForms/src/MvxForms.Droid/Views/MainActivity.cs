@@ -26,6 +26,10 @@ namespace MvxForms.Droid
 
             base.OnCreate(bundle);
         }
+
+        public override void OnBackPressed()
+        {
+            MoveTaskToBack(false);
+        }
     }
 }
-
