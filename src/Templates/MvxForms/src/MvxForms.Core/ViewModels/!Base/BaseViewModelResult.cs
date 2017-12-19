@@ -10,12 +10,12 @@ namespace MvxForms.Core.ViewModels
     {
         public TaskCompletionSource<object> CloseCompletionSource { get; set; }
 
-        public override void ViewDestroy()
+        public override void ViewDestroy(bool viewFinishing = true)
         {
-            if (CloseCompletionSource?.Task.IsCompleted == false && !CloseCompletionSource.Task.IsFaulted)
+            if (viewFinishing && CloseCompletionSource?.Task.IsCompleted == false && !CloseCompletionSource.Task.IsFaulted)
                 CloseCompletionSource?.TrySetCanceled();
 
-            base.ViewDestroy();
+            base.ViewDestroy(viewFinishing);
         }
     }
 }
