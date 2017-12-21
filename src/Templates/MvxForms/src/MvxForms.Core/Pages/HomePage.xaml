@@ -6,10 +6,11 @@
     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
     xmlns:local="clr-namespace:MvxForms.Core.Pages"
     x:Class="MvxForms.Core.Pages.HomePage"
-    xmlns:viewModels="clr-namespace:MvxForms.Core.ViewModels.Home;assembly=MvxForms.Core">
+    xmlns:viewModels="clr-namespace:MvxForms.Core.ViewModels.Home;assembly=MvxForms.Core"
+                      Title="Main page">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Welcome!!&#10;App scaffolded with MvxScaffolding"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
