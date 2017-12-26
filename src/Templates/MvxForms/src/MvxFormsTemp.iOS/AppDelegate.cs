@@ -2,6 +2,7 @@
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Forms.iOS;
 using MvvmCross.Platform;
+using MvxFormsTemp.iOS.Styles;
 using UIKit;
 
 namespace MvxFormsTemp.iOS
@@ -15,8 +16,8 @@ namespace MvxFormsTemp.iOS
         {
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(65, 105, 225);
-            UINavigationBar.Appearance.TintColor = UIColor.FromRGB(255, 255, 255);
+            UINavigationBar.Appearance.BarTintColor = ColorPalette.Primary;
+            UINavigationBar.Appearance.TintColor = ColorPalette.SecondaryText;
 
             var setup = new Setup(this, Window);
             setup.Initialize();

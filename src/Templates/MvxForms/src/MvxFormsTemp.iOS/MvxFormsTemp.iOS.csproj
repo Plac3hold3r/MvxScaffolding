@@ -99,6 +99,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
+    <Compile Include="Styles\ColorPalette.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
@@ -126,13 +127,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MvvmCross">
-      <Version>5.6.2</Version>
+      <Version>5.6.3</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.CodeAnalysis">
-      <Version>5.6.2</Version>
+      <Version>5.6.3</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Forms">
-      <Version>5.6.2</Version>
+      <Version>5.6.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
       <Version>2.5.0.121934</Version>
@@ -237,6 +238,7 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
