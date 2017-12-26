@@ -3,15 +3,15 @@
   "symbolInfo": {
     "HasAndroidProject": {
       "longName": "has-android",
-      "shortName": "ia"
+      "shortName": "ha"
     },
     "HasiOSProject": {
       "longName": "has-ios",
-      "shortName": "ii"
+      "shortName": "hi"
     },
     "HasUWPProject": {
       "longName": "has-uwp",
-      "shortName": "iu"
+      "shortName": "hu"
     },
     "HasEditorConfig": {
       "longName": "has-editor-config",

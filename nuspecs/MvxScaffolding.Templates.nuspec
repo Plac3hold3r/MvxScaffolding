@@ -13,10 +13,7 @@
     <summary>A customizable template used to scaffold a cross platform MvvmCross application.</summary>
     <copyright>Copyright ©2017 Plac3hold3r</copyright>
     
-    <releaseNotes>
-      * Bug fixes
-      * Getting ready for initial release
-    </releaseNotes>
+    <releaseNotes>Bug fixes and getting ready for initial release</releaseNotes>
 
     <packageTypes>
       <packageType name="Template" />
