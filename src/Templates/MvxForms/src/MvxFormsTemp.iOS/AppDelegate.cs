@@ -16,9 +16,6 @@ namespace MvxFormsTemp.iOS
         {
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            UINavigationBar.Appearance.BarTintColor = ColorPalette.Primary;
-            UINavigationBar.Appearance.TintColor = ColorPalette.SecondaryText;
-
             var setup = new Setup(this, Window);
             setup.Initialize();
 
