@@ -12,7 +12,7 @@
     "type": "project"
   },
   "shortName": "mvxforms",
-  "sourceName": "MvxForms",
+  "sourceName": "MvxFormsTemp",
   "preferNameDirectory": true,
   "guids": [
     "{E02AD468-057C-4CC0-8B50-F664FD5A031D}", // Core Project
@@ -23,19 +23,19 @@
   ],
   "primaryOutputs": [
     {
-      "path": "src\\MvxForms.Core\\MvxForms.Core.csproj"
+      "path": "src\\MvxFormsTemp.Core\\MvxFormsTemp.Core.csproj"
     },
     {
       "condition": "(HasAndroidProject)",
-      "path": "src\\MvxForms.Droid\\MvxForms.Droid.csproj"
+      "path": "src\\MvxFormsTemp.Droid\\MvxFormsTemp.Droid.csproj"
     },
     {
       "condition": "(HasiOSProject)",
-      "path": "src\\MvxForms.iOS\\MvxForms.iOS.csproj"
+      "path": "src\\MvxFormsTemp.iOS\\MvxFormsTemp.iOS.csproj"
     },
     {
       "condition": "(HasUWPProject)",
-      "path": "src\\MvxForms.UWP\\MvxForms.UWP.csproj"
+      "path": "src\\MvxFormsTemp.UWP\\MvxFormsTemp.UWP.csproj"
     }
   ],
   "sources": [
@@ -44,19 +44,19 @@
         {
           "condition": "(!HasAndroidProject)",
           "exclude": [
-            "src/MvxForms.Droid/**"
+            "src/MvxFormsTemp.Droid/**"
           ]
         },
         {
           "condition": "(!HasiOSProject)",
           "exclude": [
-            "src/MvxForms.iOS/**"
+            "src/MvxFormsTemp.iOS/**"
           ]
         },
         {
           "condition": "(!HasUWPProject)",
           "exclude": [
-            "src/MvxForms.UWP/**"
+            "src/MvxFormsTemp.UWP/**"
           ]
         },
         {
@@ -238,7 +238,7 @@
     "iOSMinSDKVersion": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "10",
+      "defaultValue": "10.0",
       "description": "Minimum iOS SDK version.",
       "choices": [
         {
@@ -250,7 +250,7 @@
           "description": "iOS 11.1"
         },
         {
-          "choice": "11",
+          "choice": "11.0",
           "description": "iOS 11"
         },
         {
@@ -266,7 +266,7 @@
           "description": "iOS 10.1"
         },
         {
-          "choice": "10",
+          "choice": "10.0",
           "description": "iOS 10"
         },
         {
@@ -282,11 +282,11 @@
           "description": "iOS 9.1"
         },
         {
-          "choice": "9",
+          "choice": "9.0",
           "description": "iOS 9"
         }
       ],
-      "replaces": "10",
+      "replaces": "10.0",
       "onlyIf": [
         {
           "after": "<string>",
