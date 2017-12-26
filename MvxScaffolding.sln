@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2003
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solution Items", "{CD685E50-2396-43CA-AE14-6F4A5019EFDA}"
 	ProjectSection(SolutionItems) = preProject
@@ -32,6 +32,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{414ED55C-0665-4CCF-BD0D-26E34C2B7B16}"
 	ProjectSection(SolutionItems) = preProject
 		src\Templates\MvxNative\.template.config\dotnetcli.host.json = src\Templates\MvxNative\.template.config\dotnetcli.host.json
+		src\Templates\MvxNative\.template.config\mvxscaffolding_native_logo.png = src\Templates\MvxNative\.template.config\mvxscaffolding_native_logo.png
 		src\Templates\MvxNative\.template.config\template.json = src\Templates\MvxNative\.template.config\template.json
 		src\Templates\MvxNative\.template.config\template.vstemplate = src\Templates\MvxNative\.template.config\template.vstemplate
 	EndProjectSection
