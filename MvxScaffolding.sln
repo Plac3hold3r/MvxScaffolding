@@ -48,7 +48,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{370BC50F-6FE9-4180-A1EA-90491D79B026}"
 	ProjectSection(SolutionItems) = preProject
 		src\Templates\MvxForms\editor.config = src\Templates\MvxForms\editor.config
-		src\Templates\MvxForms\MvxForms.sln = src\Templates\MvxForms\MvxForms.sln
+		src\Templates\MvxForms\MvxFormsTemp.sln = src\Templates\MvxForms\MvxFormsTemp.sln
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{4FD14B44-7E1C-4B04-ABB1-3CB9F9584DA7}"
@@ -59,13 +59,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{4FD14B
 		src\Templates\MvxForms\.template.config\template.vstemplate = src\Templates\MvxForms\.template.config\template.vstemplate
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxForms.Core", "src\Templates\MvxForms\src\MvxForms.Core\MvxForms.Core.csproj", "{11142155-CDB9-4241-9FAA-DC848F72C6EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.Core", "src\Templates\MvxForms\src\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj", "{11142155-CDB9-4241-9FAA-DC848F72C6EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.Droid", "src\Templates\MvxForms\src\MvxForms.Droid\MvxForms.Droid.csproj", "{B816CFD1-B3F7-4188-986F-402CC93A09EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Droid", "src\Templates\MvxForms\src\MvxFormsTemp.Droid\MvxFormsTemp.Droid.csproj", "{B816CFD1-B3F7-4188-986F-402CC93A09EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.UWP", "src\Templates\MvxForms\src\MvxForms.UWP\MvxForms.UWP.csproj", "{C387803D-EAD4-417E-A1FE-A8F81A79ADEA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UWP", "src\Templates\MvxForms\src\MvxFormsTemp.UWP\MvxFormsTemp.UWP.csproj", "{C387803D-EAD4-417E-A1FE-A8F81A79ADEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.iOS", "src\Templates\MvxForms\src\MvxForms.iOS\MvxForms.iOS.csproj", "{3444E7FD-035D-4DEF-AD46-5E679938589F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.iOS", "src\Templates\MvxForms\src\MvxFormsTemp.iOS\MvxFormsTemp.iOS.csproj", "{3444E7FD-035D-4DEF-AD46-5E679938589F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

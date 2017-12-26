@@ -238,7 +238,7 @@
     "iOSMinSDKVersion": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "10",
+      "defaultValue": "10.0",
       "description": "Minimum iOS SDK version.",
       "choices": [
         {
@@ -250,7 +250,7 @@
           "description": "iOS 11.1"
         },
         {
-          "choice": "11",
+          "choice": "11.0",
           "description": "iOS 11"
         },
         {
@@ -266,7 +266,7 @@
           "description": "iOS 10.1"
         },
         {
-          "choice": "10",
+          "choice": "10.0",
           "description": "iOS 10"
         },
         {
@@ -282,11 +282,11 @@
           "description": "iOS 9.1"
         },
         {
-          "choice": "9",
+          "choice": "9.0",
           "description": "iOS 9"
         }
       ],
-      "replaces": "10",
+      "replaces": "10.0",
       "onlyIf": [
         {
           "after": "<string>",
