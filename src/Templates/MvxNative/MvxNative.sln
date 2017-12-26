@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxNative.Core", "src\MvxNative.Core\MvxNative.Core.csproj", "{59A93A2E-C3BD-457C-860C-FE8140E36C66}"
 EndProject
-//#if (HasDroidProject)
+//#if (HasAndroidProject)
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Droid", "src\MvxNative.Droid\MvxNative.Droid.csproj", "{F4F67AC0-86F3-4024-A943-0CF49B8E93BA}"
 EndProject
 //#endif
@@ -100,7 +100,7 @@ Global
 		{59A93A2E-C3BD-457C-860C-FE8140E36C66}.Release|x64.Build.0 = Release|Any CPU
 		{59A93A2E-C3BD-457C-860C-FE8140E36C66}.Release|x86.ActiveCfg = Release|Any CPU
 		{59A93A2E-C3BD-457C-860C-FE8140E36C66}.Release|x86.Build.0 = Release|Any CPU
-//#if (HasDroidProject)
+//#if (HasAndroidProject)
 		{F4F67AC0-86F3-4024-A943-0CF49B8E93BA}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
 		{F4F67AC0-86F3-4024-A943-0CF49B8E93BA}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
 		{F4F67AC0-86F3-4024-A943-0CF49B8E93BA}.Ad-Hoc|Any CPU.Deploy.0 = Release|Any CPU

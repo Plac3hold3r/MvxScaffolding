@@ -9,11 +9,10 @@ namespace MvxForms.Core
 {
     public partial class AppForms : MvxFormsApplication
     {
+
         public AppForms()
         {
             InitializeComponent();
-
-            //MainPage = new MvxForms.MainPage();
         }
 
         protected override void OnStart()

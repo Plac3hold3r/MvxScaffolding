@@ -1,21 +1,21 @@
 {
   "$schema": "http://json.schemastore.org/dotnetcli.host",
   "symbolInfo": {
-    "HasDroidProject": {
-      "longName": "has-droid",
-      "shortName": ""
+    "HasAndroidProject": {
+      "longName": "has-android",
+      "shortName": "ia"
     },
     "HasiOSProject": {
       "longName": "has-ios",
-      "shortName": ""
+      "shortName": "ii"
     },
     "HasUWPProject": {
       "longName": "has-uwp",
-      "shortName": ""
+      "shortName": "iu"
     },
     "HasEditorConfig": {
       "longName": "has-editor-config",
-      "shortName": ""
+      "shortName": "ed"
     },
     "AppId": {
       "longName": "app-id",
@@ -26,16 +26,16 @@
       "shortName": "app-n"
     },
     "NETStandardVersion": {
-      "longName": "net-standard-version",
-      "shortName": ""
+      "longName": "framework",
+      "shortName": "f"
     },
-    "AndroidMinVersion": {
-      "longName": "android-min-version",
-      "shortName": ""
+    "AndroidMinSDKVersion": {
+      "longName": "android-min-sdk",
+      "shortName": "asdk"
     },
-    "iOSMinVersion": {
-      "longName": "ios-min-version",
-      "shortName": ""
+    "iOSMinSDKVersion": {
+      "longName": "ios-min-sdk",
+      "shortName": "isdk"
     },
     "UWPAppDescription": {
       "longName": "uwp-app-description",

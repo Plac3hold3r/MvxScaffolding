@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Plac3hold3r",
   "classifications": [ "Xamarin", "Xamarin Forms", "MvvmCross" ],
-  "description": "A customizable template used to scaffold a cross platform MvvmCross application with Xamarin Forms",
+  "description": "A customizable template used to scaffold a cross platform MvvmCross application with Xamarin Forms.",
   "name": "MvxScaffolding MvvmCross Forms",
   "defaultName": "MyMvvmCrossApp",
   "identity": "MvxScaffolding.Forms",
@@ -26,7 +26,7 @@
       "path": "src\\MvxForms.Core\\MvxForms.Core.csproj"
     },
     {
-      "condition": "(HasDroidProject)",
+      "condition": "(HasAndroidProject)",
       "path": "src\\MvxForms.Droid\\MvxForms.Droid.csproj"
     },
     {
@@ -42,7 +42,7 @@
     {
       "modifiers": [
         {
-          "condition": "(!HasDroidProject)",
+          "condition": "(!HasAndroidProject)",
           "exclude": [
             "src/MvxForms.Droid/**"
           ]
@@ -78,7 +78,7 @@
     /*
     || Project include flags
     =========================================================================================== */
-    "HasDroidProject": {
+    "HasAndroidProject": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "true",
@@ -126,7 +126,7 @@
       "datatype": "string",
       "defaultValue": "Mvx Scaffolding",
       "replaces": "APP_NAME",
-      "description": "The applition name."
+      "description": "The application name."
     },
     "skipRestore": {
       "type": "parameter",
@@ -170,7 +170,7 @@
     /*
     || Android project flags
     =========================================================================================== */
-    "AndroidMinVersion": {
+    "AndroidMinSDKVersion": {
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "19",
@@ -235,12 +235,20 @@
     /*
     || iOS project flags
     =========================================================================================== */
-    "iOSMinVersion": {
+    "iOSMinSDKVersion": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "10.3",
+      "defaultValue": "10",
       "description": "Minimum iOS SDK version.",
       "choices": [
+        {
+          "choice": "11.2",
+          "description": "iOS 11.2"
+        },
+        {
+          "choice": "11.1",
+          "description": "iOS 11.1"
+        },
         {
           "choice": "11",
           "description": "iOS 11"
@@ -250,11 +258,35 @@
           "description": "iOS 10.3"
         },
         {
+          "choice": "10.2",
+          "description": "iOS 10.2"
+        },
+        {
+          "choice": "10.1",
+          "description": "iOS 10.1"
+        },
+        {
+          "choice": "10",
+          "description": "iOS 10"
+        },
+        {
           "choice": "9.3",
           "description": "iOS 9.3"
+        },
+        {
+          "choice": "9.2",
+          "description": "iOS 9.2"
+        },
+        {
+          "choice": "9.1",
+          "description": "iOS 9.1"
+        },
+        {
+          "choice": "9",
+          "description": "iOS 9"
         }
       ],
-      "replaces": "10.3",
+      "replaces": "10",
       "onlyIf": [
         {
           "after": "<string>",
@@ -270,9 +302,9 @@
       "datatype": "string",
       "defaultValue": "Laying the foundation with Mvx Scaffolding",
       "replaces": "UWP_APP_DESCRIPTION",
-      "description": "The UWP applition description."
+      "description": "The UWP application description."
     }
-  }//,
+  } //,
   //"postActions": [
   //  {
   //    "condition": "(!skipRestore)",
