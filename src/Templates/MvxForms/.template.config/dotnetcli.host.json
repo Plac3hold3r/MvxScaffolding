@@ -41,6 +41,10 @@
       "longName": "uwp-app-description",
       "shortName": ""
     },
+    "UWPMinSDKVersion": {
+      "longName": "uwp-min-sdk",
+      "shortName": "usdk"
+    },
     "skipRestore": {
       "longName": "no-restore",
       "shortName": ""

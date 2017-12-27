@@ -126,7 +126,7 @@
       "datatype": "string",
       "defaultValue": "Mvx Scaffolding",
       "replaces": "APP_NAME",
-      "description": "The application name."
+      "description": "The application display name."
     },
     "skipRestore": {
       "type": "parameter",
@@ -303,8 +303,43 @@
       "defaultValue": "Laying the foundation with Mvx Scaffolding",
       "replaces": "UWP_APP_DESCRIPTION",
       "description": "The UWP application description."
+    },
+    "UWPMinSDKVersion": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "10.0.16299.0",
+      "description": "Minimum UWP target SDK version.",
+      "choices": [
+        {
+          "choice": "10.0.16299.0",
+          "description": "Fall Creators Update - build 16299"
+        },
+        {
+          "choice": "10.0.15063.0",
+          "description": "Creators Update - build 15063"
+        },
+        {
+          "choice": "10.0.14393.0",
+          "description": "Anniversary Update - build 14393"
+        },
+        {
+          "choice": "10.0.10586.0",
+          "description": "November Update - build 10586"
+        },
+        {
+          "choice": "10.0.10240.0",
+          "description": "RTM - build 10240"
+        }
+      ],
+      "replaces": "10.0.16299.0",
+      "onlyIf": [
+        {
+          "after": "<TargetPlatformMinVersion>",
+          "before": "</TargetPlatformMinVersion>"
+        }
+      ]
     }
-  }//,
+  } //,
   //"postActions": [
   //  {
   //    "condition": "(!skipRestore)",
