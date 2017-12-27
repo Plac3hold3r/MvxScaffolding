@@ -307,35 +307,35 @@
     "UWPMinSDKVersion": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "10.0.16299.0",
+      "defaultValue": "16299",
       "description": "Minimum UWP target SDK version.",
       "choices": [
         {
-          "choice": "10.0.16299.0",
-          "description": "Fall Creators Update - build 16299"
+          "choice": "16299",
+          "description": "Fall Creators Update"
         },
         {
-          "choice": "10.0.15063.0",
-          "description": "Creators Update - build 15063"
+          "choice": "15063",
+          "description": "Creators Update"
         },
         {
-          "choice": "10.0.14393.0",
-          "description": "Anniversary Update - build 14393"
+          "choice": "14393",
+          "description": "Anniversary Update"
         },
         {
-          "choice": "10.0.10586.0",
-          "description": "November Update - build 10586"
+          "choice": "10586",
+          "description": "November Update"
         },
         {
-          "choice": "10.0.10240.0",
-          "description": "RTM - build 10240"
+          "choice": "10240",
+          "description": "RTM"
         }
       ],
-      "replaces": "10.0.16299.0",
+      "replaces": "16299",
       "onlyIf": [
         {
-          "after": "<TargetPlatformMinVersion>",
-          "before": "</TargetPlatformMinVersion>"
+          "after": "<TargetPlatformMinVersion>10.0.",
+          "before": ".0</TargetPlatformMinVersion>"
         }
       ]
     }
