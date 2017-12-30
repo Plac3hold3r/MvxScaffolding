@@ -1,4 +1,4 @@
-# MvxScaffolding (Preview)
+﻿# MvxScaffolding (Preview)
 
 [![NuGet](https://img.shields.io/nuget/v/MvxScaffolding.Templates.svg?style=flat-square)](https://www.nuget.org/packages/MvxScaffolding.Templates/)
 
@@ -10,12 +10,14 @@ __Templates features__
 :-------------------------:|:-------------------------:|:-------------------------:
 .NET Standard class library |* |*
 Package references |* |*
+Unit test projects |* |*
+UI test projects |* |*
 Android Nougat round icons |* |*
 Android Oreo adaptive icons |* |*
 Android theme base splash screen |* |*
 Android support constraint layout |* |
 iOS storyboard launch screen |* | *
-iOS fluent layouts |* |
+[iOS fluent layouts](https://github.com/FluentLayout/Cirrious.FluentLayout) |* |
 
 ## System Requirements
 
@@ -41,7 +43,7 @@ dotnet new --install MvxScaffolding.Templates::*
 
 ## MvxNative - Xamarin Native Template
 
-To scaffold a new MvvmCross Xamarin application you must use the `mvxnative` command. To specifly the name of the application you can use the `--name`/`-n` options.
+To scaffold a new MvvmCross Xamarin application you must use the `mvxnative` command. To specify the name of the application you can use the `--name`/`-n` options.
 
 ___Example command___ to create an application named `MyXamarinApp`
 
@@ -49,15 +51,33 @@ ___Example command___ to create an application named `MyXamarinApp`
 dotnet new mvxnative --name MyXamarinApp
 ```
 
-For details on the availble customisation options for the template use the `--help`/`-h` command
+For details on the available customisation options for the template use the `--help`/`-h` command
 
 ```text
 dotnet new mvxnative --help
 ```
 
+### Template directory layout
+
+    .
+    ├── src
+    │   ├── <NAME>.Core             # Core .NET Standard library
+    │   ├── <NAME>.Droid            # Android project (Optional)
+    │   ├── <NAME>.iOS              # iOS Project (Optional)
+    │   └── <NAME>.UWP              # UWP Project (Optional)
+    ├── test
+    │   ├── <NAME>.Core.Test        # Core .NET Standard library (Optional)
+    │   ├── <NAME>.Droid.Test       # Android unit test project (Optional)
+    │   ├── <NAME>.Droid.UI.Test    # Android UI test project (Optional)
+    │   ├── <NAME>.iOS.Test         # iOS unit test Project (Optional)
+    │   ├── <NAME>.iOS.UI.Test      # iOS UI test Project (Optional)
+    │   ├── <NAME>.UWP.Test         # UWP unit test Project (Optional)
+    │   └── <NAME>.UWP.UI.Test      # UWP UI test Project (Optional)
+    └── .editorconfig               # Root editor config (Optional)
+
 ## MvxForms - Xamarin Forms Template
 
-To scaffold a new MvvmCross Xamarin Forms application you must use the `mvxforms` command. To specifly the name of the application you can use the `--name`/`-n` options.
+To scaffold a new MvvmCross Xamarin Forms application you must use the `mvxforms` command. To specify the name of the application you can use the `--name`/`-n` options.
 
 ___Example command___ to create an application named `MyXamarinFormsApp`
 
@@ -65,11 +85,28 @@ ___Example command___ to create an application named `MyXamarinFormsApp`
 dotnet new mvxforms --name MyXamarinFormsApp
 ```
 
-For details on the availble customisation options for the template use the `--help`/`-h` command
+For details on the available customisation options for the template use the `--help`/`-h` command
 
 ```text
 dotnet new mvxforms --help
 ```
+
+### Template directory layout
+
+    .
+    ├── src
+    │   ├── <NAME>.Core             # Core .NET Standard library
+    │   ├── <NAME>.Droid            # Android project (Optional)
+    │   ├── <NAME>.iOS              # iOS Project (Optional)
+    │   └── <NAME>.UWP              # UWP Project (Optional)
+    ├── test
+    │   ├── <NAME>.Core.Test        # Core .NET Standard library (Optional)
+    │   ├── <NAME>.UI.Test          # Android and iOS UI test project (Optional)
+    │   ├── <NAME>.Droid.Test       # Android unit test project (Optional)
+    │   ├── <NAME>.iOS.Test         # iOS unit test Project (Optional)
+    │   ├── <NAME>.UWP.Test         # UWP unit test Project (Optional)
+    │   └── <NAME>.UWP.UI.Test      # UWP UI test Project (Optional)
+    └── .editorconfig               # Root editor config (Optional)
 
 ## Additional commands options
 
