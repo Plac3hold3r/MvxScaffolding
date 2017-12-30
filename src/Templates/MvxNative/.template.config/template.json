@@ -19,23 +19,28 @@
     "{F4F67AC0-86F3-4024-A943-0CF49B8E93BA}", // Android Project
     "{4E00CCF2-5D4E-415F-AE06-291965E1822E}", // iOS Project
     "{4EDF7269-9680-47BB-A278-FB446F65E3C9}", // UWP Project
+    "{B307EDDE-CD04-4EF2-8926-A7455E9CD498}", // Core Test Project
     "{5F58BD22-D035-4E3C-BEBA-E4A55F151E5C}" // Solution items
   ],
   "primaryOutputs": [
     {
-      "path": "src\\MvxNative.Core\\MvxNative.Core.csproj"
+      "path": "src/MvxNative.Core/MvxNative.Core.csproj"
     },
     {
       "condition": "(HasAndroidProject)",
-      "path": "src\\MvxNative.Droid\\MvxNative.Droid.csproj"
+      "path": "src/MvxNative.Droid/MvxNative.Droid.csproj"
     },
     {
       "condition": "(HasiOSProject)",
-      "path": "src\\MvxNative.iOS\\MvxNative.iOS.csproj"
+      "path": "src/MvxNative.iOS/MvxNative.iOS.csproj"
     },
     {
       "condition": "(HasUWPProject)",
-      "path": "src\\MvxNative.UWP\\MvxNative.UWP.csproj"
+      "path": "src/MvxNative.UWP/MvxNative.UWP.csproj"
+    },
+    {
+      "condition": "(HasCoreTestProject)",
+      "path": "test/MvxNative.Core.Test/MvxNative.Core.Test.csproj"
     }
   ],
   "sources": [
@@ -57,6 +62,12 @@
           "condition": "(!HasUWPProject)",
           "exclude": [
             "src/MvxNative.UWP/**"
+          ]
+        },
+        {
+          "condition": "(!HasCoreTestProject)",
+          "exclude": [
+            "test/MvxNative.Core.Test/**"
           ]
         },
         {

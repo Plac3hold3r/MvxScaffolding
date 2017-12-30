@@ -17,6 +17,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.UWP", "src\MvxNative.UWP\MvxNative.UWP.csproj", "{4EDF7269-9680-47BB-A278-FB446F65E3C9}"
 EndProject
 //#endif
+//#if (HasCoreTestProject)
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Core.Test", "test\Test.Core.Test\Test.Core.Test.csproj", "{B307EDDE-CD04-4EF2-8926-A7455E9CD498}"
+EndProject
+//#endif
 //#if (HasEditorConfig)
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solution Items", "{5F58BD22-D035-4E3C-BEBA-E4A55F151E5C}"
 	ProjectSection(SolutionItems) = preProject
