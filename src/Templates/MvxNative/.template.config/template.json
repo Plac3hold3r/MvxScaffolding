@@ -19,8 +19,18 @@
     "{F4F67AC0-86F3-4024-A943-0CF49B8E93BA}", // Android Project
     "{4E00CCF2-5D4E-415F-AE06-291965E1822E}", // iOS Project
     "{4EDF7269-9680-47BB-A278-FB446F65E3C9}", // UWP Project
-    "{B307EDDE-CD04-4EF2-8926-A7455E9CD498}", // Core Test Project
-    "{5F58BD22-D035-4E3C-BEBA-E4A55F151E5C}" // Solution items
+    "{4D0735B8-BD04-4514-B0DA-47E4FBF149A1}", // Core Test Project
+    "{467D2AFD-1C1E-4822-9733-96EA243016CA}", // Android Unit Test Project
+    "{0E2901B7-8AAB-408A-B148-B3590DC2BDD5}", // Android UI Test Project
+    "{554FB9CE-B9BA-4F3C-AB6C-ED4CCC1F450F}", // iOS Unit Test Project
+    "{E503C259-5129-4F78-9C48-E5E44A29F795}", // iOS UI Test Project
+    "{CBA111FA-7B16-4822-98CC-9CB8D5C2F34B}", // UWP Unit Test Project
+    "{ABA94514-CF6D-4346-BE42-3C86017F54D0}", // UWP UI Test Project
+    "{5F58BD22-D035-4E3C-BEBA-E4A55F151E5C}", // Solution items
+    "{33A50E97-50E7-4CC4-9A4E-728FAAC9B521}", // Tests folder
+    "{9CC66651-607D-4C5C-9683-376E92A8ABC0}", // Android folder
+    "{07B7769F-0102-4E1D-81B6-E55BC4F1F0C2}", // iOS folder
+    "{1FC7541C-03BE-4A24-96A1-9A90E8D0559B}" // UWP folder
   ],
   "primaryOutputs": [
     {
@@ -41,6 +51,30 @@
     {
       "condition": "(HasCoreTestProject)",
       "path": "test/MvxNative.Core.Test/MvxNative.Core.Test.csproj"
+    },
+    {
+      "condition": "(HasAndroidTestProject)",
+      "path": "test/MvxNative.Droid.Test/MvxNative.Droid.Test.csproj"
+    },
+    {
+      "condition": "(HasAndroidUITestProject)",
+      "path": "test/MvxNative.Droid.UI.Test/MvxNative.Droid.UI.Test.csproj"
+    },
+    {
+      "condition": "(HasiOSTestProject)",
+      "path": "test/MvxNative.iOS.Test/MvxNative.iOS.Test.csproj"
+    },
+    {
+      "condition": "(HasiOSUITestProject)",
+      "path": "test/MvxNative.iOS.UI.Test/MvxNative.iOS.UI.Test.csproj"
+    },
+    {
+      "condition": "(HasUWPTestProject)",
+      "path": "test/MvxNative.UWP.Test/MvxNative.UWP.Test.csproj"
+    },
+    {
+      "condition": "(HasUWPUITestProject)",
+      "path": "test/MvxNative.UWP.UI.Test/MvxNative.UWP.UI.Test.csproj"
     }
   ],
   "sources": [
@@ -71,6 +105,42 @@
           ]
         },
         {
+          "condition": "(!HasAndroidTestProject)",
+          "exclude": [
+            "test/MvxNative.Droid.Test/**"
+          ]
+        },
+        {
+          "condition": "(!HasAndroidUITestProject)",
+          "exclude": [
+            "test/MvxNative.Droid.UI.Test/**"
+          ]
+        },
+        {
+          "condition": "(!HasiOSTestProject)",
+          "exclude": [
+            "test/MvxNative.iOS.Test/**"
+          ]
+        },
+        {
+          "condition": "(!HasiOSUITestProject)",
+          "exclude": [
+            "test/MvxNative.iOS.UI.Test/**"
+          ]
+        },
+        {
+          "condition": "(!HasUWPTestProject)",
+          "exclude": [
+            "test/MvxNative.UWP.Test/**"
+          ]
+        },
+        {
+          "condition": "(!HasUWPUITestProject)",
+          "exclude": [
+            "test/MvxNative.UWP.UI.Test/**"
+          ]
+        },
+        {
           "condition": "(!HasEditorConfig)",
           "exclude": [
             "editor.config"
@@ -93,25 +163,91 @@
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "true",
-      "description": "Whether to include Xamarin Android Project."
+      "description": "Whether to include Xamarin Android project."
     },
     "HasiOSProject": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "true",
-      "description": "Whether to include Xamarin iOS Project."
+      "description": "Whether to include Xamarin iOS project."
     },
     "HasUWPProject": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "true",
-      "description": "Whether to include UWP Project."
+      "description": "Whether to include UWP project."
+    },
+    "HasCoreTestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include Core unit test project."
+    },
+    "HasAndroidTestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include Xamarin Android unit test project."
+    },
+    "HasAndroidUITestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include Xamarin Android UI test project."
+    },
+    "HasiOSTestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include Xamarin iOS unit test project."
+    },
+    "HasiOSUITestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include Xamarin iOS UI test project."
+    },
+    "HasUWPTestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include UWP unit test project."
+    },
+    "HasUWPUITestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include UWP UI test project."
     },
     "HasEditorConfig": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "true",
       "description": "Whether to include an editor config in the root directory."
+    },
+    "HasTests": {
+      "type": "computed",
+      "value": "(HasCoreTestProject || HasAndroidTestProject || HasAndroidUITestProject || HasiOSTestProject || HasiOSUITestProject || HasUWPTestProject || HasUWPUITestProject)"
+    },
+    "SolutionProjectGrouping": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "flat",
+      "description": "The grouping for project into folder inside of the solution.",
+      "choices": [
+        {
+          "choice": "flat",
+          "description": "All projects are placed at the root of the solution"
+        },
+        {
+          "choice": "test-group",
+          "description": "All test projects are placed in a test folder, other projects are placed at the root of the solution"
+        },
+        {
+          "choice": "platform",
+          "description": "Projects are grouped based on their target platform"
+        }
+      ]
     },
     /*
     || All project flags

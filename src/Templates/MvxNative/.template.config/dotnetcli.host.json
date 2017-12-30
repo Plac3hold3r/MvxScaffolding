@@ -3,27 +3,55 @@
   "symbolInfo": {
     "HasAndroidProject": {
       "longName": "include-android",
-      "shortName": "ia"
+      "shortName": "droid"
     },
     "HasiOSProject": {
       "longName": "include-ios",
-      "shortName": "ii"
+      "shortName": "ios"
     },
     "HasUWPProject": {
       "longName": "include-uwp",
-      "shortName": "iu"
-    },
-    "HasEditorConfig": {
-      "longName": "include-editor-config",
-      "shortName": "ied"
+      "shortName": "uwp"
     },
     "HasCoreTestProject": {
       "longName": "include-core-test",
-      "shortName": "ict"
+      "shortName": "core-t"
+    },
+    "HasAndroidTestProject": {
+      "longName": "include-android-test",
+      "shortName": "droid-t"
+    },
+    "HasAndroidUITestProject": {
+      "longName": "include-android-ui-test",
+      "shortName": "droid-ui-t"
+    },
+    "HasiOSTestProject": {
+      "longName": "include-ios-test",
+      "shortName": "ios-t"
+    },
+    "HasiOSUITestProject": {
+      "longName": "include-ios-ui-test",
+      "shortName": "ios-ui-t"
+    },
+    "HasUWPTestProject": {
+      "longName": "include-uwp-test",
+      "shortName": "uwp-t"
+    },
+    "HasUWPUITestProject": {
+      "longName": "include-uwp-ui-test",
+      "shortName": "uwp-ui-t"
+    },
+    "HasEditorConfig": {
+      "longName": "include-editor-config",
+      "shortName": "ed"
     },
     "AppId": {
       "longName": "app-id",
       "shortName": "id"
+    },
+    "SolutionProjectGrouping": {
+      "longName": "solution-project-grouping",
+      "shortName": "sln-gp"
     },
     "AppName": {
       "longName": "app-name",
@@ -35,11 +63,11 @@
     },
     "AndroidMinSDKVersion": {
       "longName": "android-min-sdk",
-      "shortName": "asdk"
+      "shortName": "droid-sdk"
     },
     "iOSMinSDKVersion": {
       "longName": "ios-min-sdk",
-      "shortName": "isdk"
+      "shortName": "ios-sdk"
     },
     "UWPAppDescription": {
       "longName": "uwp-app-description",
@@ -47,7 +75,7 @@
     },
     "UWPMinSDKVersion": {
       "longName": "uwp-min-sdk",
-      "shortName": "usdk"
+      "shortName": "uwp-sdk"
     },
     "skipRestore": {
       "longName": "no-restore",
