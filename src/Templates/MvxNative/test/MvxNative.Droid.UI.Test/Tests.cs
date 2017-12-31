@@ -16,7 +16,7 @@ namespace MvxNative.Droid.UI.Test
         [SetUp]
         public void BeforeEachTest()
         {
-            // TODO: If the iOS app being tested is included in the solution then 
+            // TODO: If the Android app being tested is included in the solution then 
             // add a reference to the android project from the project containing this file
             app = ConfigureApp
                     .Android
