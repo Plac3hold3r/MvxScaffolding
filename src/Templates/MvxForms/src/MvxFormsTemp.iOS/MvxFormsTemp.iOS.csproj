@@ -144,6 +144,10 @@
       <Project>{11142155-cdb9-4241-9faa-dc848f72c6eb}</Project>
       <Name>MvxFormsTemp.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj">
+      <Project>{94d4f314-0270-40fc-a72a-0e76066a7b17}</Project>
+      <Name>MvxFormsTemp.UI</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json">

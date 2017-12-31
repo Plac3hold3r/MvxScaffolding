@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace MvxFormsTemp.Core.Resources
+namespace MvxFormsTemp.UI.Resources
 {
     public partial class Colors : ResourceDictionary
     {

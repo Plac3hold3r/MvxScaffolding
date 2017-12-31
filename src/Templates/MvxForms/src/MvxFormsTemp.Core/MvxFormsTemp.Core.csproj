@@ -12,23 +12,6 @@
     <PackageReference Include="MvvmCross.Binding" Version="5.6.3" NoWarn="NU1701" />
     <PackageReference Include="MvvmCross.Platform" Version="5.6.3" NoWarn="NU1701" />
     <PackageReference Include="MvvmCross.CodeAnalysis" Version="5.6.3" NoWarn="NU1701" />
-    <PackageReference Include="MvvmCross.Forms" Version="5.6.3" NoWarn="NU1701" />
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="AppForms.xaml.cs">
-      <DependentUpon>AppForms.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\HomePage.xaml.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Resources\Colors.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

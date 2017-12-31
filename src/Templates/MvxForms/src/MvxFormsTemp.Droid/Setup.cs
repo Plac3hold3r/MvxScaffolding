@@ -3,7 +3,8 @@ using Android.Content;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Forms.Droid.Platform;
 using MvvmCross.Forms.Platform;
-using MvxFormsTemp.Core;
+using System.Collections.Generic;
+using System.Reflection;
 
 //-:cnd:noEmit
 #if DEBUG
@@ -23,9 +24,14 @@ namespace MvxFormsTemp.Droid
         }
 
         protected override IMvxApplication CreateApp()
-            => new App();
+            => new Core.App();
 
         protected override MvxFormsApplication CreateFormsApplication()
-            => new AppForms();
+            => new UI.App();
+
+        protected override IEnumerable<Assembly> GetViewAssemblies() => new List<Assembly>(base.GetViewAssemblies())
+        {
+            typeof(UI.App).GetTypeInfo().Assembly
+        };
     }
 }

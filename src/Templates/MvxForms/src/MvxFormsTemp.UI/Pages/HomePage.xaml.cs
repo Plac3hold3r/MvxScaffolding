@@ -8,7 +8,7 @@ using MvvmCross.Forms.Views.Attributes;
 using MvxFormsTemp.Core.ViewModels.Home;
 using Xamarin.Forms;
 
-namespace MvxFormsTemp.Core.Pages
+namespace MvxFormsTemp.UI.Pages
 {
     public partial class HomePage : MvxContentPage<HomeViewModel>
     {

@@ -5,12 +5,12 @@ using System.Text;
 using MvvmCross.Forms.Platform;
 using Xamarin.Forms;
 
-namespace MvxFormsTemp.Core
+namespace MvxFormsTemp.UI
 {
-    public partial class AppForms : MvxFormsApplication
+    public partial class App : MvxFormsApplication
     {
 
-        public AppForms()
+        public App()
         {
             InitializeComponent();
         }
