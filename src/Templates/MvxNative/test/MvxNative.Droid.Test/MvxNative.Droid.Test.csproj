@@ -66,6 +66,12 @@
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MvxNative.Droid\MvxNative.Droid.csproj">
+      <Project>{f4f67ac0-86f3-4024-a943-0cf49b8e93ba}</Project>
+      <Name>MvxNative.Droid</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.

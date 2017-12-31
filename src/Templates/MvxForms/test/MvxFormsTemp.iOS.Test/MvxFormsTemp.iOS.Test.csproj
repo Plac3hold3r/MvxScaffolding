@@ -80,5 +80,13 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MvxFormsTemp.iOS\MvxFormsTemp.iOS.csproj">
+      <Project>{3444e7fd-035d-4def-ad46-5e679938589f}</Project>
+      <Name>MvxFormsTemp.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

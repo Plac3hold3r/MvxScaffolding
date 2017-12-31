@@ -80,5 +80,13 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MvxNative.iOS\MvxNative.iOS.csproj">
+      <Project>{4e00ccf2-5d4e-415f-ae06-291965e1822e}</Project>
+      <Name>MvxNative.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

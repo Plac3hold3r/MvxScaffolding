@@ -134,6 +134,12 @@
       <Version>1.2.0</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MvxNative.UWP\MvxNative.UWP.csproj">
+      <Project>{4edf7269-9680-47bb-a278-fb446f65e3c9}</Project>
+      <Name>MvxNative.UWP</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
