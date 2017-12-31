@@ -696,57 +696,62 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-//#if (HasTests && SolutionProjectGrouping == 'test-group')
+//#if (IsTestGroupDir)
 	GlobalSection(NestedProjects) = preSolution
 		{4D0735B8-BD04-4514-B0DA-47E4FBF149A1} = {33A50E97-50E7-4CC4-9A4E-728FAAC9B521}
-//#if (HasAndroidProject && HasAndroidTestProject)
+//#endif
+//#if (IsTestGroupDir && HasAndroidProject && HasAndroidTestProject)
 		{467D2AFD-1C1E-4822-9733-96EA243016CA} = {33A50E97-50E7-4CC4-9A4E-728FAAC9B521}
 //#endif
-//#if (HasAndroidProject && HasAndroidUITestProject)
+//#if (IsTestGroupDir && HasAndroidProject && HasAndroidUITestProject)
 		{0E2901B7-8AAB-408A-B148-B3590DC2BDD5} = {33A50E97-50E7-4CC4-9A4E-728FAAC9B521}
 //#endif
-//#if (HasiOSProject && HasiOSTestProject)
+//#if (IsTestGroupDir && HasiOSProject && HasiOSTestProject)
 		{554FB9CE-B9BA-4F3C-AB6C-ED4CCC1F450F} = {33A50E97-50E7-4CC4-9A4E-728FAAC9B521}
 //#endif
-//#if (HasiOSProject && HasiOSUITestProject)
+//#if (IsTestGroupDir && HasiOSProject && HasiOSUITestProject)
 		{E503C259-5129-4F78-9C48-E5E44A29F795} = {33A50E97-50E7-4CC4-9A4E-728FAAC9B521}
 //#endif
-//#if (HasUWPProject && HasUWPTestProject)
+//#if (IsTestGroupDir && HasUWPProject && HasUWPTestProject)
 		{CBA111FA-7B16-4822-98CC-9CB8D5C2F34B} = {33A50E97-50E7-4CC4-9A4E-728FAAC9B521}
 //#endif
-//#if (HasUWPProject && HasUWPUITestProject)
+//#if (IsTestGroupDir && HasUWPProject && HasUWPUITestProject)
 		{ABA94514-CF6D-4346-BE42-3C86017F54D0} = {33A50E97-50E7-4CC4-9A4E-728FAAC9B521}
 //#endif
+//#if (IsTestGroupDir)
 	EndGlobalSection
-//#elseif (SolutionProjectGrouping == 'platform' && (HasAndroidProject || HasiOSProject || HasUWPProject))
+//#endif
+//#if (IsPlatformDir)
 	GlobalSection(NestedProjects) = preSolution
-//#if (HasAndroidProject)
+//#endif
+//#if (IsPlatformDir && HasAndroidProject)
 		{F4F67AC0-86F3-4024-A943-0CF49B8E93BA} = {9CC66651-607D-4C5C-9683-376E92A8ABC0}
 //#endif
-//#if (HasAndroidProject && HasAndroidTestProject)
+//#if (IsPlatformDir && HasAndroidProject && HasAndroidTestProject)
 		{467D2AFD-1C1E-4822-9733-96EA243016CA} = {9CC66651-607D-4C5C-9683-376E92A8ABC0}
 //#endif
-//#if (HasAndroidProject && HasAndroidUITestProject)
+//#if (IsPlatformDir && HasAndroidProject && HasAndroidUITestProject)
 		{0E2901B7-8AAB-408A-B148-B3590DC2BDD5} = {9CC66651-607D-4C5C-9683-376E92A8ABC0}
 //#endif
-//#if (HasiOSProject)
+//#if (IsPlatformDir && HasiOSProject)
 		{4E00CCF2-5D4E-415F-AE06-291965E1822E} = {07B7769F-0102-4E1D-81B6-E55BC4F1F0C2}
 //#endif
-//#if (HasiOSProject && HasiOSTestProject)
+//#if (IsPlatformDir && HasiOSProject && HasiOSTestProject)
 		{554FB9CE-B9BA-4F3C-AB6C-ED4CCC1F450F} = {07B7769F-0102-4E1D-81B6-E55BC4F1F0C2}
 //#endif
-//#if (HasiOSProject && HasiOSUITestProject)
+//#if (IsPlatformDir && HasiOSProject && HasiOSUITestProject)
 		{E503C259-5129-4F78-9C48-E5E44A29F795} = {07B7769F-0102-4E1D-81B6-E55BC4F1F0C2}
 //#endif
-//#if (HasUWPProject)
+//#if (IsPlatformDir && HasUWPProject)
 		{4EDF7269-9680-47BB-A278-FB446F65E3C9} = {1FC7541C-03BE-4A24-96A1-9A90E8D0559B}
 //#endif
-//#if (HasUWPProject && HasUWPTestProject)
+//#if (IsPlatformDir && HasUWPProject && HasUWPTestProject)
 		{CBA111FA-7B16-4822-98CC-9CB8D5C2F34B} = {1FC7541C-03BE-4A24-96A1-9A90E8D0559B}
 //#endif
-//#if (HasUWPProject && HasUWPUITestProject)
+//#if (IsPlatformDir && HasUWPProject && HasUWPUITestProject)
 		{ABA94514-CF6D-4346-BE42-3C86017F54D0} = {1FC7541C-03BE-4A24-96A1-9A90E8D0559B}
 //#endif
+//#if (IsPlatformDir)
 	EndGlobalSection
 //#endif
 	GlobalSection(ExtensibilityGlobals) = postSolution

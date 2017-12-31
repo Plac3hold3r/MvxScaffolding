@@ -225,10 +225,6 @@
       "defaultValue": "true",
       "description": "Whether to include an editor config in the root directory."
     },
-    "HasTests": {
-      "type": "computed",
-      "value": "(HasCoreTestProject || HasAndroidTestProject || HasAndroidUITestProject || HasiOSTestProject || HasiOSUITestProject || HasUWPTestProject || HasUWPUITestProject)"
-    },
     "SolutionProjectGrouping": {
       "type": "parameter",
       "datatype": "choice",
@@ -248,6 +244,22 @@
           "description": "Projects are grouped based on their target platform"
         }
       ]
+    },
+    "HasTests": {
+      "type": "computed",
+      "value": "(HasCoreTestProject || HasAndroidTestProject || HasAndroidUITestProject || HasiOSTestProject || HasiOSUITestProject || HasUWPTestProject || HasUWPUITestProject)"
+    },
+    "IsFlatDir": {
+      "type": "computed",
+      "value": "(SolutionProjectGrouping == \"flat\")"
+    },
+    "IsTestGroupDir": {
+      "type": "computed",
+      "value": "(HasTests && SolutionProjectGrouping == \"test-group\")"
+    },
+    "IsPlatformDir": {
+      "type": "computed",
+      "value": "(SolutionProjectGrouping == \"platform\" && (HasAndroidProject || HasiOSProject || HasUWPProject))"
     },
     /*
     || All project flags
