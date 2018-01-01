@@ -2,16 +2,40 @@
   "$schema": "http://json.schemastore.org/dotnetcli.host",
   "symbolInfo": {
     "HasAndroidProject": {
-      "longName": "has-android",
-      "shortName": "ha"
+      "longName": "include-android",
+      "shortName": "droid"
     },
     "HasiOSProject": {
-      "longName": "has-ios",
-      "shortName": "hi"
+      "longName": "include-ios",
+      "shortName": "ios"
     },
     "HasUWPProject": {
-      "longName": "has-uwp",
-      "shortName": "hu"
+      "longName": "include-uwp",
+      "shortName": "uwp"
+    },
+    "HasCoreTestProject": {
+      "longName": "include-core-test",
+      "shortName": "core-t"
+    },
+    "HasAndroidTestProject": {
+      "longName": "include-android-test",
+      "shortName": "droid-t"
+    },
+    "HasiOSTestProject": {
+      "longName": "include-ios-test",
+      "shortName": "ios-t"
+    },
+    "HasXamarinUITestProject": {
+      "longName": "include-ui-test",
+      "shortName": "ui-t"
+    },
+    "HasUWPTestProject": {
+      "longName": "include-uwp-test",
+      "shortName": "uwp-t"
+    },
+    "HasUWPUITestProject": {
+      "longName": "include-uwp-ui-test",
+      "shortName": "uwp-ui-t"
     },
     "HasEditorConfig": {
       "longName": "has-editor-config",
@@ -20,6 +44,10 @@
     "AppId": {
       "longName": "app-id",
       "shortName": "id"
+    },
+    "SolutionProjectGrouping": {
+      "longName": "solution-project-grouping",
+      "shortName": "sln-gp"
     },
     "AppName": {
       "longName": "app-name",
@@ -31,11 +59,11 @@
     },
     "AndroidMinSDKVersion": {
       "longName": "android-min-sdk",
-      "shortName": "asdk"
+      "shortName": "droid-sdk"
     },
     "iOSMinSDKVersion": {
       "longName": "ios-min-sdk",
-      "shortName": "isdk"
+      "shortName": "ios-sdk"
     },
     "UWPAppDescription": {
       "longName": "uwp-app-description",
@@ -43,9 +71,9 @@
     },
     "UWPMinSDKVersion": {
       "longName": "uwp-min-sdk",
-      "shortName": "usdk"
+      "shortName": "uwp-sdk"
     },
-    "skipRestore": {
+    "SkipRestore": {
       "longName": "no-restore",
       "shortName": ""
     }

@@ -15,27 +15,66 @@
   "sourceName": "MvxFormsTemp",
   "preferNameDirectory": true,
   "guids": [
-    "{E02AD468-057C-4CC0-8B50-F664FD5A031D}", // Core Project
-    "{B816CFD1-B3F7-4188-986F-402CC93A09EC}", // Android Project
-    "{3444E7FD-035D-4DEF-AD46-5E679938589F}", // iOS Project
-    "{C387803D-EAD4-417E-A1FE-A8F81A79ADEA}", // UWP Project
-    "{66D2862F-628D-48C3-AC12-993BECA41132}" // Solution items
+    "{00000000-0000-0000-0000-000000000001}", // Core Project
+    "{00000000-0000-0000-0000-000000000002}", // Android Project
+    "{00000000-0000-0000-0000-000000000003}", // iOS Project
+    "{00000000-0000-0000-0000-000000000004}", // UWP Project
+    "{00000000-0000-0000-0000-000000000005}", // UWP Project
+    "{00000000-0000-0000-0001-000000000001}", // Core Unit Test Project
+    "{00000000-0000-0000-0001-000000000002}", // Android Unit Test Project
+    "{00000000-0000-0000-0001-000000000003}", // iOS Unit Test Project
+    "{00000000-0000-0000-0002-000000000005}", // Android and iOS UI Test Project
+    "{00000000-0000-0000-0001-000000000004}", // UWP Unit Test Project
+    "{00000000-0000-0000-0002-000000000004}", // UWP UI Test Project
+    "{00000001-0000-0000-0000-000000000000}", // Solution items folder
+    "{00000002-0000-0000-0000-000000000000}", // Tests folder
+    "{00000003-0000-0000-0000-000000000000}", // Android folder
+    "{00000004-0000-0000-0000-000000000000}", // iOS folder
+    "{00000005-0000-0000-0000-000000000000}", // UWP folder
+    "{1650E742-2D5F-44C4-A42E-14B7AC4C6030}" // Solution GUID
   ],
   "primaryOutputs": [
     {
-      "path": "src\\MvxFormsTemp.Core\\MvxFormsTemp.Core.csproj"
+      "path": "src/MvxFormsTemp.Core/MvxFormsTemp.Core.csproj"
+    },
+    {
+      "path": "src/MvxFormsTemp.UI/MvxFormsTemp.UI.csproj"
     },
     {
       "condition": "(HasAndroidProject)",
-      "path": "src\\MvxFormsTemp.Droid\\MvxFormsTemp.Droid.csproj"
+      "path": "src/MvxFormsTemp.Droid/MvxFormsTemp.Droid.csproj"
     },
     {
       "condition": "(HasiOSProject)",
-      "path": "src\\MvxFormsTemp.iOS\\MvxFormsTemp.iOS.csproj"
+      "path": "src/MvxFormsTemp.iOS/MvxFormsTemp.iOS.csproj"
     },
     {
       "condition": "(HasUWPProject)",
-      "path": "src\\MvxFormsTemp.UWP\\MvxFormsTemp.UWP.csproj"
+      "path": "src/MvxFormsTemp.UWP/MvxFormsTemp.UWP.csproj"
+    },
+    {
+      "condition": "(HasCoreTestProject)",
+      "path": "test/MvxFormsTemp.Core.Test/MvxFormsTemp.Core.Test.csproj"
+    },
+    {
+      "condition": "(HasAndroidTestProject)",
+      "path": "test/MvxFormsTemp.Droid.Test/MvxFormsTemp.Droid.Test.csproj"
+    },
+    {
+      "condition": "(HasiOSTestProject)",
+      "path": "test/MvxFormsTemp.iOS.Test/MvxFormsTemp.iOS.Test.csproj"
+    },
+    {
+      "condition": "(HasXamarinUITestProject)",
+      "path": "test/MvxFormsTemp.UI.Test/MvxFormsTemp.UI.Test.csproj"
+    },
+    {
+      "condition": "(HasUWPTestProject)",
+      "path": "test/MvxFormsTemp.UWP.Test/MvxFormsTemp.UWP.Test.csproj"
+    },
+    {
+      "condition": "(HasUWPUITestProject)",
+      "path": "test/MvxFormsTemp.UWP.UI.Test/MvxFormsTemp.UWP.UI.Test.csproj"
     }
   ],
   "sources": [
@@ -57,6 +96,42 @@
           "condition": "(!HasUWPProject)",
           "exclude": [
             "src/MvxFormsTemp.UWP/**"
+          ]
+        },
+        {
+          "condition": "(!HasCoreTestProject)",
+          "exclude": [
+            "test/MvxFormsTemp.Core.Test/**"
+          ]
+        },
+        {
+          "condition": "(!HasAndroidTestProject)",
+          "exclude": [
+            "test/MvxFormsTemp.Droid.Test/**"
+          ]
+        },
+        {
+          "condition": "(!HasiOSTestProject)",
+          "exclude": [
+            "test/MvxFormsTemp.iOS.Test/**"
+          ]
+        },
+        {
+          "condition": "(!HasXamarinUITestProject)",
+          "exclude": [
+            "test/MvxFormsTemp.UI.Test/**"
+          ]
+        },
+        {
+          "condition": "(!HasUWPTestProject)",
+          "exclude": [
+            "test/MvxFormsTemp.UWP.Test/**"
+          ]
+        },
+        {
+          "condition": "(!HasUWPUITestProject)",
+          "exclude": [
+            "test/MvxFormsTemp.UWP.UI.Test/**"
           ]
         },
         {
@@ -96,11 +171,83 @@
       "defaultValue": "true",
       "description": "Whether to include UWP Project."
     },
+    "HasCoreTestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Whether to include Core unit test project."
+    },
+    "HasAndroidTestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Whether to include Xamarin Android unit test project."
+    },
+    "HasiOSTestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Whether to include Xamarin iOS unit test project."
+    },
+    "HasXamarinUITestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Whether to include Xamarin Android and iOS UI test project."
+    },
+    "HasUWPTestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Whether to include UWP unit test project."
+    },
+    "HasUWPUITestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Whether to include UWP UI test project."
+    },
     "HasEditorConfig": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "true",
       "description": "Whether to include an editor config in the root directory."
+    },
+    "SolutionProjectGrouping": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "flat",
+      "description": "The grouping for project into folder inside of the solution.",
+      "choices": [
+        {
+          "choice": "flat",
+          "description": "All projects are placed at the root of the solution"
+        },
+        {
+          "choice": "test-group",
+          "description": "All test projects are placed in a test folder, other projects are placed at the root of the solution"
+        },
+        {
+          "choice": "platform",
+          "description": "Projects are grouped based on their target platform"
+        }
+      ]
+    },
+    "HasTests": {
+      "type": "computed",
+      "value": "(HasCoreTestProject || HasAndroidTestProject || HasiOSTestProject || HasXamarinUITestProject || HasUWPTestProject || HasUWPUITestProject)"
+    },
+    "IsFlatDir": {
+      "type": "computed",
+      "value": "(SolutionProjectGrouping == \"flat\")"
+    },
+    "IsTestGroupDir": {
+      "type": "computed",
+      "value": "(HasTests && SolutionProjectGrouping == \"test-group\")"
+    },
+    "IsPlatformDir": {
+      "type": "computed",
+      "value": "(SolutionProjectGrouping == \"platform\" && (HasAndroidProject || HasiOSProject || HasUWPProject))"
     },
     /*
     || All project flags
@@ -128,7 +275,7 @@
       "replaces": "APP_NAME",
       "description": "The application display name."
     },
-    "skipRestore": {
+    "SkipRestore": {
       "type": "parameter",
       "datatype": "bool",
       "description": "If specified, skips the automatic restore of the project on create.",
@@ -339,16 +486,16 @@
         }
       ]
     }
-  } //,
-  //"postActions": [
-  //  {
-  //    "condition": "(!skipRestore)",
-  //    "description": "Restore NuGet packages required by this project.",
-  //    "manualInstructions": [
-  //      { "text": "Run 'dotnet restore'" }
-  //    ],
-  //    "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
-  //    "continueOnError": true
-  //  }
-  //]
+  },
+  "postActions": [
+    {
+      "condition": "(!SkipRestore)",
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
+        { "text": "Run 'dotnet restore'" }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
 }
