@@ -76,10 +76,6 @@
     "UWPMinSDKVersion": {
       "longName": "uwp-min-sdk",
       "shortName": "uwp-sdk"
-    },
-    "SkipRestore": {
-      "longName": "no-restore",
-      "shortName": ""
     }
   }
 }
