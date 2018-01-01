@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3444E7FD-035D-4DEF-AD46-5E679938589F}</ProjectGuid>
+    <ProjectGuid>{00000000-1111-0000-0000-000000000003}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>MvxFormsTemp.iOS</RootNamespace>
@@ -141,11 +141,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj">
-      <Project>{11142155-cdb9-4241-9faa-dc848f72c6eb}</Project>
+      <Project>{00000000-1111-0000-0000-000000000001}</Project>
       <Name>MvxFormsTemp.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj">
-      <Project>{94d4f314-0270-40fc-a72a-0e76066a7b17}</Project>
+      <Project>{00000000-1111-0000-0000-000000000005}</Project>
       <Name>MvxFormsTemp.UI</Name>
     </ProjectReference>
   </ItemGroup>

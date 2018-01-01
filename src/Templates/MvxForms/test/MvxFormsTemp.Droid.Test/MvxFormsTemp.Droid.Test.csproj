@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7579766E-BBB3-4918-96BC-4C437468703A}</ProjectGuid>
+    <ProjectGuid>{00000000-1111-0000-0001-000000000002}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -72,12 +72,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\MvxFormsTemp.Droid\MvxFormsTemp.Droid.csproj">
-      <Project>{b816cfd1-b3f7-4188-986f-402cc93a09ec}</Project>
+      <Project>{00000000-1111-0000-0000-000000000002}</Project>
       <Name>MvxFormsTemp.Droid</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
      Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

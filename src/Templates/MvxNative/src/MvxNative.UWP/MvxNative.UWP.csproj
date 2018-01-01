@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{4EDF7269-9680-47BB-A278-FB446F65E3C9}</ProjectGuid>
+    <ProjectGuid>{00000000-0000-0000-0000-000000000004}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MvxNative.UWP</RootNamespace>
@@ -184,7 +184,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MvxNative.Core\MvxNative.Core.csproj">
-      <Project>{3b98c6a5-7159-48d1-84c4-4dacdfe12818}</Project>
+      <Project>{00000000-0000-0000-0000-000000000001}</Project>
       <Name>MvxNative.Core</Name>
     </ProjectReference>
   </ItemGroup>
@@ -192,7 +192,7 @@
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

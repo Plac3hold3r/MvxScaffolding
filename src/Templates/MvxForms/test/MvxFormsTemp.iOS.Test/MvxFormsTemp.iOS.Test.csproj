@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{EB46F533-6C5F-4F55-8664-C1BFFDAE1B25}</ProjectGuid>
+    <ProjectGuid>{00000000-1111-0000-0001-000000000003}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>MvxFormsTemp.iOS.Test</RootNamespace>
@@ -82,7 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\MvxFormsTemp.iOS\MvxFormsTemp.iOS.csproj">
-      <Project>{3444e7fd-035d-4def-ad46-5e679938589f}</Project>
+      <Project>{00000000-1111-0000-0000-000000000003}</Project>
       <Name>MvxFormsTemp.iOS</Name>
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>

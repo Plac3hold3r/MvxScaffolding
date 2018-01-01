@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{CBA111FA-7B16-4822-98CC-9CB8D5C2F34B}</ProjectGuid>
+    <ProjectGuid>{00000000-0000-0000-0001-000000000004}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MvxNative.UWP.Test</RootNamespace>
@@ -136,7 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\MvxNative.UWP\MvxNative.UWP.csproj">
-      <Project>{4edf7269-9680-47bb-a278-fb446f65e3c9}</Project>
+      <Project>{00000000-0000-0000-0000-000000000004}</Project>
       <Name>MvxNative.UWP</Name>
     </ProjectReference>
   </ItemGroup>
@@ -144,7 +144,7 @@
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

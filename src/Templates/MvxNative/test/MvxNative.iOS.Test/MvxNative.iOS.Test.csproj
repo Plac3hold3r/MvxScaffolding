@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{554FB9CE-B9BA-4F3C-AB6C-ED4CCC1F450F}</ProjectGuid>
+    <ProjectGuid>{00000000-0000-0000-0001-000000000003}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>MvxNative.iOS.Test</RootNamespace>
@@ -82,7 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\MvxNative.iOS\MvxNative.iOS.csproj">
-      <Project>{4e00ccf2-5d4e-415f-ae06-291965e1822e}</Project>
+      <Project>{00000000-0000-0000-0000-000000000003}</Project>
       <Name>MvxNative.iOS</Name>
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
