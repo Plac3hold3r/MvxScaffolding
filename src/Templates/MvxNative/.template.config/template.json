@@ -35,47 +35,47 @@
   ],
   "primaryOutputs": [
     {
-      "path": "src/MvxNative.Core/MvxNative.Core.csproj"
+      "path": "src\\MvxNative.Core\\MvxNative.Core.csproj"
     },
     {
       "condition": "(HasAndroidProject)",
-      "path": "src/MvxNative.Droid/MvxNative.Droid.csproj"
+      "path": "src\\MvxNative.Droid\\MvxNative.Droid.csproj"
     },
     {
       "condition": "(HasiOSProject)",
-      "path": "src/MvxNative.iOS/MvxNative.iOS.csproj"
+      "path": "src\\MvxNative.iOS\\MvxNative.iOS.csproj"
     },
     {
       "condition": "(HasUWPProject)",
-      "path": "src/MvxNative.UWP/MvxNative.UWP.csproj"
+      "path": "src\\MvxNative.UWP\\MvxNative.UWP.csproj"
     },
     {
       "condition": "(HasCoreTestProject)",
-      "path": "test/MvxNative.Core.Test/MvxNative.Core.Test.csproj"
+      "path": "test\\MvxNative.Core.Test\\MvxNative.Core.Test.csproj"
     },
     {
       "condition": "(HasAndroidTestProject)",
-      "path": "test/MvxNative.Droid.Test/MvxNative.Droid.Test.csproj"
+      "path": "test\\MvxNative.Droid.Test\\MvxNative.Droid.Test.csproj"
     },
     {
       "condition": "(HasAndroidUITestProject)",
-      "path": "test/MvxNative.Droid.UI.Test/MvxNative.Droid.UI.Test.csproj"
+      "path": "test\\MvxNative.Droid.UI.Test\\MvxNative.Droid.UI.Test.csproj"
     },
     {
       "condition": "(HasiOSTestProject)",
-      "path": "test/MvxNative.iOS.Test/MvxNative.iOS.Test.csproj"
+      "path": "test\\MvxNative.iOS.Test\\MvxNative.iOS.Test.csproj"
     },
     {
       "condition": "(HasiOSUITestProject)",
-      "path": "test/MvxNative.iOS.UI.Test/MvxNative.iOS.UI.Test.csproj"
+      "path": "test\\MvxNative.iOS.UI.Test\\MvxNative.iOS.UI.Test.csproj"
     },
     {
       "condition": "(HasUWPTestProject)",
-      "path": "test/MvxNative.UWP.Test/MvxNative.UWP.Test.csproj"
+      "path": "test\\MvxNative.UWP.Test\\MvxNative.UWP.Test.csproj"
     },
     {
       "condition": "(HasUWPUITestProject)",
-      "path": "test/MvxNative.UWP.UI.Test/MvxNative.UWP.UI.Test.csproj"
+      "path": "test\\MvxNative.UWP.UI.Test\\MvxNative.UWP.UI.Test.csproj"
     }
   ],
   "sources": [

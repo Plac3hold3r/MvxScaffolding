@@ -35,46 +35,46 @@
   ],
   "primaryOutputs": [
     {
-      "path": "src/MvxFormsTemp.Core/MvxFormsTemp.Core.csproj"
+      "path": "src\\MvxFormsTemp.Core\\MvxFormsTemp.Core.csproj"
     },
     {
-      "path": "src/MvxFormsTemp.UI/MvxFormsTemp.UI.csproj"
+      "path": "src\\MvxFormsTemp.UI\\MvxFormsTemp.UI.csproj"
     },
     {
       "condition": "(HasAndroidProject)",
-      "path": "src/MvxFormsTemp.Droid/MvxFormsTemp.Droid.csproj"
+      "path": "src\\MvxFormsTemp.Droid\\MvxFormsTemp.Droid.csproj"
     },
     {
       "condition": "(HasiOSProject)",
-      "path": "src/MvxFormsTemp.iOS/MvxFormsTemp.iOS.csproj"
+      "path": "src\\MvxFormsTemp.iOS\\MvxFormsTemp.iOS.csproj"
     },
     {
       "condition": "(HasUWPProject)",
-      "path": "src/MvxFormsTemp.UWP/MvxFormsTemp.UWP.csproj"
+      "path": "src\\MvxFormsTemp.UWP\\MvxFormsTemp.UWP.csproj"
     },
     {
       "condition": "(HasCoreTestProject)",
-      "path": "test/MvxFormsTemp.Core.Test/MvxFormsTemp.Core.Test.csproj"
+      "path": "test\\MvxFormsTemp.Core.Test\\MvxFormsTemp.Core.Test.csproj"
     },
     {
       "condition": "(HasAndroidTestProject)",
-      "path": "test/MvxFormsTemp.Droid.Test/MvxFormsTemp.Droid.Test.csproj"
+      "path": "test\\MvxFormsTemp.Droid.Test\\MvxFormsTemp.Droid.Test.csproj"
     },
     {
       "condition": "(HasiOSTestProject)",
-      "path": "test/MvxFormsTemp.iOS.Test/MvxFormsTemp.iOS.Test.csproj"
+      "path": "test\\MvxFormsTemp.iOS.Test\\MvxFormsTemp.iOS.Test.csproj"
     },
     {
       "condition": "(HasXamarinUITestProject)",
-      "path": "test/MvxFormsTemp.UI.Test/MvxFormsTemp.UI.Test.csproj"
+      "path": "test\\MvxFormsTemp.UI.Test\\MvxFormsTemp.UI.Test.csproj"
     },
     {
       "condition": "(HasUWPTestProject)",
-      "path": "test/MvxFormsTemp.UWP.Test/MvxFormsTemp.UWP.Test.csproj"
+      "path": "test\\MvxFormsTemp.UWP.Test\\MvxFormsTemp.UWP.Test.csproj"
     },
     {
       "condition": "(HasUWPUITestProject)",
-      "path": "test/MvxFormsTemp.UWP.UI.Test/MvxFormsTemp.UWP.UI.Test.csproj"
+      "path": "test\\MvxFormsTemp.UWP.UI.Test\\MvxFormsTemp.UWP.UI.Test.csproj"
     }
   ],
   "sources": [

@@ -32,9 +32,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{414ED55C-0665-4CCF-BD0D-26E34C2B7B16}"
 	ProjectSection(SolutionItems) = preProject
 		src\Templates\MvxNative\.template.config\dotnetcli.host.json = src\Templates\MvxNative\.template.config\dotnetcli.host.json
+		src\Templates\MvxNative\.template.config\mvxnative.vstemplate = src\Templates\MvxNative\.template.config\mvxnative.vstemplate
 		src\Templates\MvxNative\.template.config\mvxscaffolding_native_logo.png = src\Templates\MvxNative\.template.config\mvxscaffolding_native_logo.png
 		src\Templates\MvxNative\.template.config\template.json = src\Templates\MvxNative\.template.config\template.json
-		src\Templates\MvxNative\.template.config\template.vstemplate = src\Templates\MvxNative\.template.config\template.vstemplate
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxNative.Core", "src\Templates\MvxNative\src\MvxNative.Core\MvxNative.Core.csproj", "{3B98C6A5-7159-48D1-84C4-4DACDFE12818}"
@@ -54,9 +54,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{4FD14B44-7E1C-4B04-ABB1-3CB9F9584DA7}"
 	ProjectSection(SolutionItems) = preProject
 		src\Templates\MvxForms\.template.config\dotnetcli.host.json = src\Templates\MvxForms\.template.config\dotnetcli.host.json
+		src\Templates\MvxForms\.template.config\mvxforms.vstemplate = src\Templates\MvxForms\.template.config\mvxforms.vstemplate
 		src\Templates\MvxForms\.template.config\mvxscaffolding_forms_logo.png = src\Templates\MvxForms\.template.config\mvxscaffolding_forms_logo.png
 		src\Templates\MvxForms\.template.config\template.json = src\Templates\MvxForms\.template.config\template.json
-		src\Templates\MvxForms\.template.config\template.vstemplate = src\Templates\MvxForms\.template.config\template.vstemplate
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.Core", "src\Templates\MvxForms\src\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj", "{11142155-CDB9-4241-9FAA-DC848F72C6EB}"
@@ -67,7 +67,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UWP", "src\Tem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.iOS", "src\Templates\MvxForms\src\MvxFormsTemp.iOS\MvxFormsTemp.iOS.csproj", "{3444E7FD-035D-4DEF-AD46-5E679938589F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Core.Test", "src\Templates\MvxNative\test\MvxNative.Core.Test\MvxNative.Core.Test.csproj", "{F3899778-CB3E-407C-8DA2-6135B998E62D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxNative.Core.Test", "src\Templates\MvxNative\test\MvxNative.Core.Test\MvxNative.Core.Test.csproj", "{F3899778-CB3E-407C-8DA2-6135B998E62D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Droid.Test", "src\Templates\MvxNative\test\MvxNative.Droid.Test\MvxNative.Droid.Test.csproj", "{467D2AFD-1C1E-4822-9733-96EA243016CA}"
 EndProject
@@ -77,9 +77,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.iOS.UI.Test", "sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Droid.UI.Test", "src\Templates\MvxNative\test\MvxNative.Droid.UI.Test\MvxNative.Droid.UI.Test.csproj", "{0E2901B7-8AAB-408A-B148-B3590DC2BDD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UI", "src\Templates\MvxForms\src\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj", "{94D4F314-0270-40FC-A72A-0E76066A7B17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.UI", "src\Templates\MvxForms\src\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj", "{94D4F314-0270-40FC-A72A-0E76066A7B17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Core.Test", "src\Templates\MvxForms\test\MvxFormsTemp.Core.Test\MvxFormsTemp.Core.Test.csproj", "{44F78928-130B-4C6E-AA82-FEEABCBEA5D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.Core.Test", "src\Templates\MvxForms\test\MvxFormsTemp.Core.Test\MvxFormsTemp.Core.Test.csproj", "{44F78928-130B-4C6E-AA82-FEEABCBEA5D9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UI.Test", "src\Templates\MvxForms\test\MvxFormsTemp.UI.Test\MvxFormsTemp.UI.Test.csproj", "{7146F485-852D-4E1A-8EBB-6A35961F56A7}"
 EndProject
