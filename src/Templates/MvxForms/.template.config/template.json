@@ -174,37 +174,37 @@
     "HasCoreTestProject": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "true",
+      "defaultValue": "false",
       "description": "Whether to include Core unit test project."
     },
     "HasAndroidTestProject": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "true",
+      "defaultValue": "false",
       "description": "Whether to include Xamarin Android unit test project."
     },
     "HasiOSTestProject": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "true",
+      "defaultValue": "false",
       "description": "Whether to include Xamarin iOS unit test project."
     },
     "HasXamarinUITestProject": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "true",
+      "defaultValue": "false",
       "description": "Whether to include Xamarin Android and iOS UI test project."
     },
     "HasUWPTestProject": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "true",
+      "defaultValue": "false",
       "description": "Whether to include UWP unit test project."
     },
     "HasUWPUITestProject": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "true",
+      "defaultValue": "false",
       "description": "Whether to include UWP UI test project."
     },
     "HasEditorConfig": {
