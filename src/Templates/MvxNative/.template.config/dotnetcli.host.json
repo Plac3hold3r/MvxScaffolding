@@ -77,7 +77,7 @@
       "longName": "uwp-min-sdk",
       "shortName": "uwp-sdk"
     },
-    "skipRestore": {
+    "SkipRestore": {
       "longName": "no-restore",
       "shortName": ""
     }

@@ -15,22 +15,23 @@
   "sourceName": "MvxNative",
   "preferNameDirectory": true,
   "guids": [
-    "{59A93A2E-C3BD-457C-860C-FE8140E36C66}", // Core Project
-    "{F4F67AC0-86F3-4024-A943-0CF49B8E93BA}", // Android Project
-    "{4E00CCF2-5D4E-415F-AE06-291965E1822E}", // iOS Project
-    "{4EDF7269-9680-47BB-A278-FB446F65E3C9}", // UWP Project
-    "{4D0735B8-BD04-4514-B0DA-47E4FBF149A1}", // Core Test Project
-    "{467D2AFD-1C1E-4822-9733-96EA243016CA}", // Android Unit Test Project
-    "{0E2901B7-8AAB-408A-B148-B3590DC2BDD5}", // Android UI Test Project
-    "{554FB9CE-B9BA-4F3C-AB6C-ED4CCC1F450F}", // iOS Unit Test Project
-    "{E503C259-5129-4F78-9C48-E5E44A29F795}", // iOS UI Test Project
-    "{CBA111FA-7B16-4822-98CC-9CB8D5C2F34B}", // UWP Unit Test Project
-    "{ABA94514-CF6D-4346-BE42-3C86017F54D0}", // UWP UI Test Project
-    "{5F58BD22-D035-4E3C-BEBA-E4A55F151E5C}", // Solution items
-    "{33A50E97-50E7-4CC4-9A4E-728FAAC9B521}", // Tests folder
-    "{9CC66651-607D-4C5C-9683-376E92A8ABC0}", // Android folder
-    "{07B7769F-0102-4E1D-81B6-E55BC4F1F0C2}", // iOS folder
-    "{1FC7541C-03BE-4A24-96A1-9A90E8D0559B}" // UWP folder
+    "{00000000-0000-0000-0000-000000000001}", // Core Project
+    "{00000000-0000-0000-0000-000000000002}", // Android Project
+    "{00000000-0000-0000-0000-000000000003}", // iOS Project
+    "{00000000-0000-0000-0000-000000000004}", // UWP Project
+    "{00000000-0000-0000-0001-000000000001}", // Core Unit Test Project
+    "{00000000-0000-0000-0001-000000000002}", // Android Unit Test Project
+    "{00000000-0000-0000-0002-000000000002}", // Android UI Test Project
+    "{00000000-0000-0000-0001-000000000003}", // iOS Unit Test Project
+    "{00000000-0000-0000-0002-000000000003}", // iOS UI Test Project
+    "{00000000-0000-0000-0001-000000000004}", // UWP Unit Test Project
+    "{00000000-0000-0000-0002-000000000004}", // UWP UI Test Project
+    "{00000001-0000-0000-0000-000000000000}", // Solution items folder
+    "{00000002-0000-0000-0000-000000000000}", // Tests folder
+    "{00000003-0000-0000-0000-000000000000}", // Android folder
+    "{00000004-0000-0000-0000-000000000000}", // iOS folder
+    "{00000005-0000-0000-0000-000000000000}", // UWP folder
+    "{6E1DBB1B-50D7-4E7E-A18B-249C279D5F95}" // Solution GUID
   ],
   "primaryOutputs": [
     {
@@ -287,7 +288,7 @@
       "replaces": "APP_NAME",
       "description": "The application display name."
     },
-    "skipRestore": {
+    "SkipRestore": {
       "type": "parameter",
       "datatype": "bool",
       "description": "If specified, skips the automatic restore of the project on create.",
@@ -498,16 +499,16 @@
         }
       ]
     }
-  } //,
-  //"postActions": [
-  //  {
-  //    "condition": "(!skipRestore)",
-  //    "description": "Restore NuGet packages required by this project.",
-  //    "manualInstructions": [
-  //      { "text": "Run 'dotnet restore'" }
-  //    ],
-  //    "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
-  //    "continueOnError": true
-  //  }
-  //]
+  },
+  "postActions": [
+    {
+      "condition": "(!SkipRestore)",
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
+        { "text": "Run 'dotnet restore'" }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
 }
