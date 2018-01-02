@@ -69,6 +69,10 @@
       "longName": "ios-min-sdk",
       "shortName": "ios-sdk"
     },
+    "HasHyperion": {
+      "longName": "include-hyperion",
+      "shortName": "ios-h"
+    },
     "UWPAppDescription": {
       "longName": "uwp-app-description",
       "shortName": ""
