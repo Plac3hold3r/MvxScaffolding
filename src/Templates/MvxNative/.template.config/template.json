@@ -294,12 +294,6 @@
       "replaces": "APP_NAME",
       "description": "The application display name."
     },
-    "SkipRestore": {
-      "type": "parameter",
-      "datatype": "bool",
-      "description": "If specified, skips the automatic restore of the project on create.",
-      "defaultValue": "false"
-    },
     /*
     || Core project flags
     =========================================================================================== */
