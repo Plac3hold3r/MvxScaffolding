@@ -29,7 +29,7 @@
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchLink>Full</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <MtouchExtraArgs>--linkskip=MvxNative.Core</MtouchExtraArgs>
@@ -61,7 +61,7 @@
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchExtraArgs>--linkskip=MvxNative.Core</MtouchExtraArgs>
-    <MtouchLink>Full</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -76,7 +76,7 @@
     <CodesignProvision>Automatic:AdHoc</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
     <MtouchExtraArgs>--linkskip=MvxNative.Core</MtouchExtraArgs>
-    <MtouchLink>Full</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>none</DebugType>
@@ -90,7 +90,7 @@
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
     <MtouchExtraArgs>--linkskip=MvxNative.Core</MtouchExtraArgs>
-    <MtouchLink>Full</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
@@ -229,7 +229,7 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
-<!--#if (HasHyperion)-->
+  <!--#if (HasHyperion)-->
   <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
     <NativeReference Include="Native References/HyperionCore.framework">
       <Kind>Framework</Kind>
@@ -244,7 +244,7 @@
       <Kind>Framework</Kind>
     </NativeReference>
   </ItemGroup>
-<!--#endif-->
+  <!--#endif-->
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

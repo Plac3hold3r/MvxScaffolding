@@ -50,7 +50,7 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchExtraArgs>--linkskip=MvxFormsTemp.Core</MtouchExtraArgs>
+     <MtouchExtraArgs>--linkskip=MvxFormsTemp.Core --linkSkip=MvxFormsTemp.UI</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -62,8 +62,8 @@
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchExtraArgs>--linkskip=MvxFormsTemp.Core</MtouchExtraArgs>
-    <MtouchLink>Full</MtouchLink>
+    <MtouchExtraArgs>--linkskip=MvxFormsTemp.Core --linkSkip=MvxFormsTemp.UI</MtouchExtraArgs>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -77,8 +77,8 @@
     <CodesignProvision>Automatic:AdHoc</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchExtraArgs>--linkskip=MvxForms.Core</MtouchExtraArgs>
-    <MtouchLink>Full</MtouchLink>
+    <MtouchExtraArgs>--linkskip=MvxFormsTemp.Core --linkSkip=MvxFormsTemp.UI</MtouchExtraArgs>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>none</DebugType>
@@ -91,8 +91,8 @@
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchExtraArgs>--linkskip=MvxForms.Core</MtouchExtraArgs>
-    <MtouchLink>Full</MtouchLink>
+     <MtouchExtraArgs>--linkskip=MvxFormsTemp.Core --linkSkip=MvxFormsTemp.UI</MtouchExtraArgs>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
