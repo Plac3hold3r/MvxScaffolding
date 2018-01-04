@@ -66,7 +66,7 @@
       "shortName": "ios-sdk"
     },
     "HasHyperion": {
-      "longName": "include-hyperion",
+      "longName": "ios-include-hyperion",
       "shortName": "ios-h"
     },
     "UWPAppDescription": {

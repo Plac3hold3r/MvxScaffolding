@@ -166,6 +166,24 @@
             "fragment_main.axml": "fragment_main.xml",
             "layout_toolbar.axml": "layout_toolbar.xml"
           }
+        },
+        {
+          "condition": "(!HasFluentLayouts)",
+          "exclude": [
+            "src/MvxNative.iOS/Views/!Base/FluentBaseViewController.cs",
+            "src/MvxNative.iOS/Views/Main/FluentMainViewController.cs"
+          ]
+        },
+        {
+          "condition": "(HasFluentLayouts)",
+          "exclude": [
+            "src/MvxNative.iOS/Views/!Base/BaseViewController.cs",
+            "src/MvxNative.iOS/Views/Main/MainViewController.*"
+          ],
+          "rename": {
+            "FluentBaseViewController.cs": "BaseViewController.cs",
+            "FluentMainViewController.cs": "MainViewController.cs"
+          }
         }
       ]
     }
@@ -473,6 +491,12 @@
       "datatype": "bool",
       "description": "Whether to include Hyperion, in app design review tool, in the iOS project.",
       "defaultValue": "true"
+    },
+    "HasFluentLayouts": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Whether to include FluentLayout, fluent API for creating constraint-based layouts, in the iOS project.",
+      "defaultValue": "false"
     },
     /*
     || UWP project flags

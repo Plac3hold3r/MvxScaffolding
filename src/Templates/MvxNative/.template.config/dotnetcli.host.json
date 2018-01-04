@@ -74,8 +74,12 @@
       "shortName": "ios-sdk"
     },
     "HasHyperion": {
-      "longName": "include-hyperion",
+      "longName": "ios-include-hyperion",
       "shortName": "ios-h"
+    },
+    "HasFluentLayouts": {
+      "longName": "ios-include-fluentlayout",
+      "shortName": "ios-f"
     },
     "UWPAppDescription": {
       "longName": "uwp-app-description",
