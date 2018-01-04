@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.Core", "src\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj", "{00000000-1111-0000-0000-000000000001}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Core", "src\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj", "{00000000-1111-0000-0000-000000000001}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.UI", "src\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj", "{00000000-1111-0000-0000-000000000005}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UI", "src\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj", "{00000000-1111-0000-0000-000000000005}"
 EndProject
 //#if (HasAndroidProject)
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Droid", "src\MvxFormsTemp.Droid\MvxFormsTemp.Droid.csproj", "{00000000-1111-0000-0000-000000000002}"
@@ -20,7 +20,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UWP", "src\Mvx
 EndProject
 //#endif
 //#if (HasCoreTestProject)
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.Core.Test", "test\MvxFormsTemp.Core.Test\MvxFormsTemp.Core.Test.csproj", "{00000000-1111-0000-0001-000000000001}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Core.Test", "test\MvxFormsTemp.Core.Test\MvxFormsTemp.Core.Test.csproj", "{00000000-1111-0000-0001-000000000001}"
 EndProject
 //#endif
 //#if (HasAndroidProject && HasAndroidTestProject)

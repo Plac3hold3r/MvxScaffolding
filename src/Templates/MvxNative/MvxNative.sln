@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxNative.Core", "src\MvxNative.Core\MvxNative.Core.csproj", "{00000000-0000-0000-0000-000000000001}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Core", "src\MvxNative.Core\MvxNative.Core.csproj", "{00000000-0000-0000-0000-000000000001}"
 EndProject
 //#if (HasAndroidProject)
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Droid", "src\MvxNative.Droid\MvxNative.Droid.csproj", "{00000000-0000-0000-0000-000000000002}"
@@ -18,7 +18,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.UWP", "src\MvxNat
 EndProject
 //#endif
 //#if (HasCoreTestProject)
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxNative.Core.Test", "test\MvxNative.Core.Test\MvxNative.Core.Test.csproj", "{00000000-0000-0000-0001-000000000001}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Core.Test", "test\MvxNative.Core.Test\MvxNative.Core.Test.csproj", "{00000000-0000-0000-0001-000000000001}"
 EndProject
 //#endif
 //#if (HasAndroidProject && HasAndroidTestProject)
