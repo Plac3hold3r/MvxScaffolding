@@ -59,29 +59,13 @@
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\!Base\BaseActivity.cs" />
-    <Compile Include="Views\!Base\BaseFragment.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Views\!Base\BaseFragment.cs" />
     <Compile Include="Views\Main\MainContainerActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Main\MainFragment.cs" />
     <Compile Include="Views\Splash\SplashActivity.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\AndroidManifest.xml" />
-    <AndroidResource Include="Resources\layout\fragment_main.xml" />
-    <AndroidResource Include="Resources\layout\layout_toolbar.xml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\activity_main_container.xml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\values\strings.xml" />
-  </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\MvxNative.Core\MvxNative.Core.csproj">
       <Project>{00000000-0000-0000-0000-000000000001}</Project>
@@ -106,6 +90,20 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(UseAndroidXMLLayouts)' != 'false' ">
+    <AndroidResource Include="Resources\layout\fragment_main.xml" />
+    <AndroidResource Include="Resources\layout\layout_toolbar.xml" />
+    <AndroidResource Include="Resources\layout\activity_main_container.xml"/>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(UseAndroidXMLLayouts)' == 'false' ">
+    <AndroidResource Include="Resources\layout\fragment_main.axml" />
+    <AndroidResource Include="Resources\layout\layout_toolbar.axml" />
+    <AndroidResource Include="Resources\layout\activity_main_container.axml"/>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\strings.xml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\values\dimens.xml" />
@@ -134,10 +132,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
-		Other similar extension points exist, see Microsoft.Common.targets.
-		<Target Name="BeforeBuild">
-		</Target>
-		<Target Name="AfterBuild">
-		</Target>
-	-->
+    Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+  -->
 </Project>

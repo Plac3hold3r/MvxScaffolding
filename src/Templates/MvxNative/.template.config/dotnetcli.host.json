@@ -65,6 +65,10 @@
       "longName": "android-min-sdk",
       "shortName": "droid-sdk"
     },
+    "UseAndroidXMLLayouts": {
+      "longName": "android-xml-layouts",
+      "shortName": "droid-xml"
+    },
     "iOSMinSDKVersion": {
       "longName": "ios-min-sdk",
       "shortName": "ios-sdk"

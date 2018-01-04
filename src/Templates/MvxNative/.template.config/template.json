@@ -158,6 +158,14 @@
           "rename": {
             "editor.config": ".editorconfig"
           }
+        },
+        {
+          "condition": "(UseAndroidXMLLayouts)",
+          "rename": {
+            "activity_main_container.axml": "activity_main_container.xml",
+            "fragment_main.axml": "fragment_main.xml",
+            "layout_toolbar.axml": "layout_toolbar.xml"
+          }
         }
       ]
     }
@@ -391,6 +399,12 @@
           "after": "android:minSdkVersion=\""
         }
       ]
+    },
+    "UseAndroidXMLLayouts": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether to XML layouts instead of AXML for Android."
     },
     /*
     || iOS project flags
