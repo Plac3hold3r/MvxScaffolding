@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.Core", "src\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj", "{00000000-1111-0000-0000-000000000001}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestFinalFour.UI", "src\TestFinalFour.UI\TestFinalFour.UI.csproj", "{00000000-1111-0000-0000-000000000005}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.UI", "src\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj", "{00000000-1111-0000-0000-000000000005}"
 EndProject
 //#if (HasAndroidProject)
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Droid", "src\MvxFormsTemp.Droid\MvxFormsTemp.Droid.csproj", "{00000000-1111-0000-0000-000000000002}"
