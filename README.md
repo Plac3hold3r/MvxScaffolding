@@ -14,10 +14,11 @@ Unit test projects |* |*
 UI test projects |* |*
 Android Nougat round icons |* |*
 Android Oreo adaptive icons |* |*
-Android theme base splash screen |* |*
 Android support constraint layout |* |
+Android AXML or XML layout |* |
 iOS storyboard launch screen |* | *
-[iOS fluent layouts](https://github.com/FluentLayout/Cirrious.FluentLayout) |* |
+iOS [Hyperion](https://github.com/willowtreeapps/Hyperion-iOS) |* | *
+iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.FluentLayout) |* |
 
 ## System Requirements
 
