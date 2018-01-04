@@ -103,9 +103,7 @@
     <BundleResource Include="Resources\launch_image%402x.png" />
     <BundleResource Include="Resources\launch_image%403x.png" />
     <Compile Include="Views\Main\MainViewController.cs" />
-    <Compile Include="Views\Main\MainViewController.designer.cs" Condition=" '$(HasFluentLayouts)' != 'true' ">
-      <DependentUpon>MainViewController.cs</DependentUpon>
-    </Compile>
+
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-87.png">
       <Visible>false</Visible>
     </ImageAsset>
@@ -162,8 +160,11 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="Views\Main\MainViewController.storyboard" Condition=" '$(HasFluentLayouts)' != 'true' ">
+  <ItemGroup Condition=" '$(HasFluentLayouts)' != 'true' ">
+    <Compile Include="Views\Main\MainViewController.designer.cs">
+      <DependentUpon>MainViewController.cs</DependentUpon>
+    </Compile>
+    <InterfaceDefinition Include="Views\Main\MainViewController.storyboard" >
       <SubType>Designer</SubType>
     </InterfaceDefinition>
   </ItemGroup>

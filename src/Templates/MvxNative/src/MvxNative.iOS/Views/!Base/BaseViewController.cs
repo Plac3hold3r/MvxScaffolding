@@ -1,5 +1,4 @@
 ﻿using System;
-using Cirrious.FluentLayouts.Touch;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Views;
 using MvxNative.iOS.Styles;
