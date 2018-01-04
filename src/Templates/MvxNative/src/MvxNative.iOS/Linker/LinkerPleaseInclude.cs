@@ -124,6 +124,7 @@ namespace MvxNative.iOS.Linker
             service = new MvxNavigationService(null, loader);
             var ignore = new MvxNavigationServiceAppStart<MvxNullViewModel>(null);
         }
+
         public void Include(ConsoleColor color)
         {
             Console.Write("");

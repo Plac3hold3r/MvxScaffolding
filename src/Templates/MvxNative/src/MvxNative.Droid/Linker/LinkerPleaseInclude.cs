@@ -65,6 +65,7 @@ namespace MvxNative.Droid.Linker
         {
             changed.CollectionChanged += (s, e) => { var ignore = $"{e.Action}{e.NewItems}{e.NewStartingIndex}{e.OldItems}{e.OldStartingIndex}"; };
         }
+
         public void Include(ICommand command)
         {
             command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
@@ -74,6 +75,7 @@ namespace MvxNative.Droid.Linker
         {
             injector = new MvxPropertyInjector();
         }
+
         public void Include(System.ComponentModel.INotifyPropertyChanged changed)
         {
             changed.PropertyChanged += (sender, e) => { var ignore = e.PropertyName; };
