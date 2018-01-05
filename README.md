@@ -31,7 +31,7 @@ __Required__
  __Optional__ 
 
  * Xamarin Android _(Recommanded version 8.0+)_
- * Xamarin iOS _(Recommanded version 11.0+)_
+ * Xamarin iOS _(Recommanded version 10.14+)_
  * UWP SDK _(__Windows Only__, recommanded version 10.0.16299+)_
 
 ## Installation
