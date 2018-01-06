@@ -26,6 +26,8 @@ EndProject
 //#if (HasAndroidProject && HasAndroidTestProject)
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Droid.Test", "test\MvxFormsTemp.Droid.Test\MvxFormsTemp.Droid.Test.csproj", "{00000000-1111-0000-0001-000000000002}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MvxFormsTemp.Droid.Shared", "src\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.shproj", "{00000000-1111-0000-0003-000000000002}"
+EndProject
 //#endif
 //#if (HasiOSProject && HasiOSTestProject)
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.iOS.Test", "test\MvxFormsTemp.iOS.Test\MvxFormsTemp.iOS.Test.csproj", "{00000000-1111-0000-0001-000000000003}"
@@ -67,6 +69,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solutio
 EndProject
 //#endif
 Global
+//#if (HasAndroidProject && HasAndroidTestProject)
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.projitems*{00000000-1111-0000-0000-000000000002}*SharedItemsImports = 4
+		src\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.projitems*{00000000-1111-0000-0001-000000000002}*SharedItemsImports = 4
+		src\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.projitems*{00000000-1111-0000-0003-000000000002}*SharedItemsImports = 13
+	EndGlobalSection
+//#endif
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|ARM = Ad-Hoc|ARM
@@ -724,6 +733,7 @@ Global
 //#endif
 //#if (IsPlatformDir && HasAndroidProject && HasAndroidTestProject)
 		{00000000-1111-0000-0001-000000000002} = {00000003-1111-0000-0000-000000000000}
+		{00000000-1111-0000-0003-000000000002} = {00000003-1111-0000-0000-000000000000}
 //#endif
 //#if (IsPlatformDir && HasiOSProject)
 		{00000000-1111-0000-0000-000000000003} = {00000004-1111-0000-0000-000000000000}

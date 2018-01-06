@@ -22,6 +22,7 @@
     "{00000000-0000-0000-0001-000000000001}", // Core Unit Test Project
     "{00000000-0000-0000-0001-000000000002}", // Android Unit Test Project
     "{00000000-0000-0000-0002-000000000002}", // Android UI Test Project
+    "{00000000-0000-0000-0003-000000000002}", // Android Shared Project
     "{00000000-0000-0000-0001-000000000003}", // iOS Unit Test Project
     "{00000000-0000-0000-0002-000000000003}", // iOS UI Test Project
     "{00000000-0000-0000-0001-000000000004}", // UWP Unit Test Project
@@ -56,6 +57,10 @@
     {
       "condition": "(HasAndroidTestProject)",
       "path": "test\\MvxNative.Droid.Test\\MvxNative.Droid.Test.csproj"
+    },
+    {
+      "condition": "(HasAndroidTestProject)",
+      "path": "src\\MvxNative.Droid.Shared\\MvxNative.Droid.Shared.shproj"
     },
     {
       "condition": "(HasAndroidUITestProject)",
@@ -108,7 +113,8 @@
         {
           "condition": "(!HasAndroidTestProject)",
           "exclude": [
-            "test/MvxNative.Droid.Test/**"
+            "test/MvxNative.Droid.Test/**",
+            "src/MvxNative.Droid.Shared/**"
           ]
         },
         {
@@ -213,43 +219,43 @@
     "HasCoreTestProject": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "false",
+      "defaultValue": "true",
       "description": "Whether to include Core unit test project."
     },
     "HasAndroidTestProject": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "false",
+      "defaultValue": "true",
       "description": "Whether to include Xamarin Android unit test project."
     },
     "HasAndroidUITestProject": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "false",
+      "defaultValue": "true",
       "description": "Whether to include Xamarin Android UI test project."
     },
     "HasiOSTestProject": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "false",
+      "defaultValue": "true",
       "description": "Whether to include Xamarin iOS unit test project."
     },
     "HasiOSUITestProject": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "false",
+      "defaultValue": "true",
       "description": "Whether to include Xamarin iOS UI test project."
     },
     "HasUWPTestProject": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "false",
+      "defaultValue": "true",
       "description": "Whether to include UWP unit test project."
     },
     "HasUWPUITestProject": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "false",
+      "defaultValue": "true",
       "description": "Whether to include UWP UI test project."
     },
     "HasEditorConfig": {
