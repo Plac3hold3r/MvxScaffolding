@@ -37,7 +37,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{414ED5
 		src\Templates\MvxNative\.template.config\template.json = src\Templates\MvxNative\.template.config\template.json
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxNative.Core", "src\Templates\MvxNative\src\MvxNative.Core\MvxNative.Core.csproj", "{00000000-0000-0000-0000-000000000001}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Core", "src\Templates\MvxNative\src\MvxNative.Core\MvxNative.Core.csproj", "{00000000-0000-0000-0000-000000000001}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Droid", "src\Templates\MvxNative\src\MvxNative.Droid\MvxNative.Droid.csproj", "{00000000-0000-0000-0000-000000000002}"
 EndProject
@@ -45,7 +45,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.iOS", "src\Templa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.UWP", "src\Templates\MvxNative\src\MvxNative.UWP\MvxNative.UWP.csproj", "{00000000-0000-0000-0000-000000000004}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxNative.Core.Test", "src\Templates\MvxNative\test\MvxNative.Core.Test\MvxNative.Core.Test.csproj", "{00000000-0000-0000-0001-000000000001}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Core.Test", "src\Templates\MvxNative\test\MvxNative.Core.Test\MvxNative.Core.Test.csproj", "{00000000-0000-0000-0001-000000000001}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Droid.Test", "src\Templates\MvxNative\test\MvxNative.Droid.Test\MvxNative.Droid.Test.csproj", "{00000000-0000-0000-0001-000000000002}"
 EndProject
@@ -75,9 +75,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{4FD14B
 		src\Templates\MvxForms\.template.config\template.json = src\Templates\MvxForms\.template.config\template.json
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.Core", "src\Templates\MvxForms\src\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj", "{00000000-1111-0000-0000-000000000001}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Core", "src\Templates\MvxForms\src\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj", "{00000000-1111-0000-0000-000000000001}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.UI", "src\Templates\MvxForms\src\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj", "{00000000-1111-0000-0000-000000000005}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UI", "src\Templates\MvxForms\src\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj", "{00000000-1111-0000-0000-000000000005}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Droid", "src\Templates\MvxForms\src\MvxFormsTemp.Droid\MvxFormsTemp.Droid.csproj", "{00000000-1111-0000-0000-000000000002}"
 EndProject
@@ -85,7 +85,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.iOS", "src\Tem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UWP", "src\Templates\MvxForms\src\MvxFormsTemp.UWP\MvxFormsTemp.UWP.csproj", "{00000000-1111-0000-0000-000000000004}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.Core.Test", "src\Templates\MvxForms\test\MvxFormsTemp.Core.Test\MvxFormsTemp.Core.Test.csproj", "{00000000-1111-0000-0001-000000000001}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Core.Test", "src\Templates\MvxForms\test\MvxFormsTemp.Core.Test\MvxFormsTemp.Core.Test.csproj", "{00000000-1111-0000-0001-000000000001}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UI.Test", "src\Templates\MvxForms\test\MvxFormsTemp.UI.Test\MvxFormsTemp.UI.Test.csproj", "{00000000-1111-0000-0002-000000000005}"
 EndProject
