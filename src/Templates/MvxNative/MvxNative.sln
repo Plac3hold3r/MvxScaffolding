@@ -24,7 +24,7 @@ EndProject
 //#if (HasAndroidProject && HasAndroidTestProject)
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Droid.Test", "test\MvxNative.Droid.Test\MvxNative.Droid.Test.csproj", "{00000000-0000-0000-0001-000000000002}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MvxNative.Droid.Shared", "src\MvxNative.Droid.Shared\MvxNative.Droid.Shared.shproj", "{00000000-0000-0000-0003-000000000002}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MvxNative.Droid.Shared", "src\MvxNative.Droid.Shared\MvxNative.Droid.Shared.shproj", "{3D028650-2328-468F-98F9-D6777DF7F64D}"
 EndProject
 //#endif
 //#if (HasAndroidProject && HasAndroidUITestProject)
@@ -75,7 +75,7 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		src\MvxNative.Droid.Shared\MvxNative.Droid.Shared.projitems*{00000000-0000-0000-0000-000000000002}*SharedItemsImports = 4
 		src\MvxNative.Droid.Shared\MvxNative.Droid.Shared.projitems*{00000000-0000-0000-0001-000000000002}*SharedItemsImports = 4
-		src\MvxNative.Droid.Shared\MvxNative.Droid.Shared.projitems*{00000000-0000-0000-0003-000000000002}*SharedItemsImports = 13
+		src\MvxNative.Droid.Shared\MvxNative.Droid.Shared.projitems*{3d028650-2328-468f-98f9-d6777df7f64d}*SharedItemsImports = 13
 	EndGlobalSection
 //#endif
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -740,7 +740,7 @@ Global
 //#endif
 //#if (IsPlatformDir && HasAndroidProject && HasAndroidTestProject)
 		{00000000-0000-0000-0001-000000000002} = {00000003-0000-0000-0000-000000000000}
-		{00000000-0000-0000-0003-000000000002} = {00000003-0000-0000-0000-000000000000}
+		{3D028650-2328-468F-98F9-D6777DF7F64D} = {00000003-0000-0000-0000-000000000000}
 //#endif
 //#if (IsPlatformDir && HasAndroidProject && HasAndroidUITestProject)
 		{00000000-0000-0000-0002-000000000002} = {00000003-0000-0000-0000-000000000000}

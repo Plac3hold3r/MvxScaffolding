@@ -37,7 +37,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{414ED5
 		src\Templates\MvxNative\.template.config\template.json = src\Templates\MvxNative\.template.config\template.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Core", "src\Templates\MvxNative\src\MvxNative.Core\MvxNative.Core.csproj", "{00000000-0000-0000-0000-000000000001}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxNative.Core", "src\Templates\MvxNative\src\MvxNative.Core\MvxNative.Core.csproj", "{00000000-0000-0000-0000-000000000001}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Droid", "src\Templates\MvxNative\src\MvxNative.Droid\MvxNative.Droid.csproj", "{00000000-0000-0000-0000-000000000002}"
 EndProject
@@ -45,7 +45,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.iOS", "src\Templa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.UWP", "src\Templates\MvxNative\src\MvxNative.UWP\MvxNative.UWP.csproj", "{00000000-0000-0000-0000-000000000004}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Core.Test", "src\Templates\MvxNative\test\MvxNative.Core.Test\MvxNative.Core.Test.csproj", "{00000000-0000-0000-0001-000000000001}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxNative.Core.Test", "src\Templates\MvxNative\test\MvxNative.Core.Test\MvxNative.Core.Test.csproj", "{00000000-0000-0000-0001-000000000001}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Droid.Test", "src\Templates\MvxNative\test\MvxNative.Droid.Test\MvxNative.Droid.Test.csproj", "{00000000-0000-0000-0001-000000000002}"
 EndProject
@@ -59,7 +59,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.Droid.UI.Test", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxNative.UWP.UI.Test", "src\Templates\MvxNative\test\MvxNative.UWP.UI.Test\MvxNative.UWP.UI.Test.csproj", "{00000000-0000-0000-0002-000000000004}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MvxNative.Droid.Shared", "src\Templates\MvxNative\src\MvxNative.Droid.Shared\MvxNative.Droid.Shared.shproj", "{00000000-0000-0000-0003-000000000002}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MvxNative.Droid.Shared", "src\Templates\MvxNative\src\MvxNative.Droid.Shared\MvxNative.Droid.Shared.shproj", "{3D028650-2328-468F-98F9-D6777DF7F64D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{370BC50F-6FE9-4180-A1EA-90491D79B026}"
 	ProjectSection(SolutionItems) = preProject
@@ -75,9 +75,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{4FD14B
 		src\Templates\MvxForms\.template.config\template.json = src\Templates\MvxForms\.template.config\template.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Core", "src\Templates\MvxForms\src\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj", "{00000000-1111-0000-0000-000000000001}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.Core", "src\Templates\MvxForms\src\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj", "{00000000-1111-0000-0000-000000000001}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UI", "src\Templates\MvxForms\src\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj", "{00000000-1111-0000-0000-000000000005}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.UI", "src\Templates\MvxForms\src\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj", "{00000000-1111-0000-0000-000000000005}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Droid", "src\Templates\MvxForms\src\MvxFormsTemp.Droid\MvxFormsTemp.Droid.csproj", "{00000000-1111-0000-0000-000000000002}"
 EndProject
@@ -85,7 +85,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.iOS", "src\Tem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UWP", "src\Templates\MvxForms\src\MvxFormsTemp.UWP\MvxFormsTemp.UWP.csproj", "{00000000-1111-0000-0000-000000000004}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Core.Test", "src\Templates\MvxForms\test\MvxFormsTemp.Core.Test\MvxFormsTemp.Core.Test.csproj", "{00000000-1111-0000-0001-000000000001}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.Core.Test", "src\Templates\MvxForms\test\MvxFormsTemp.Core.Test\MvxFormsTemp.Core.Test.csproj", "{00000000-1111-0000-0001-000000000001}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UI.Test", "src\Templates\MvxForms\test\MvxFormsTemp.UI.Test\MvxFormsTemp.UI.Test.csproj", "{00000000-1111-0000-0002-000000000005}"
 EndProject
@@ -97,7 +97,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Droid.Test", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.iOS.Test", "src\Templates\MvxForms\test\MvxFormsTemp.iOS.Test\MvxFormsTemp.iOS.Test.csproj", "{00000000-1111-0000-0001-000000000003}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MvxFormsTemp.Droid.Shared", "src\Templates\MvxForms\src\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.shproj", "{00000000-1111-0000-0003-000000000002}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MvxFormsTemp.Droid.Shared", "src\Templates\MvxForms\src\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.shproj", "{EF6F3AC9-FEE6-4DE2-AF9E-3F75F48F0CF3}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -105,8 +105,8 @@ Global
 		src\Templates\MvxNative\src\MvxNative.Droid.Shared\MvxNative.Droid.Shared.projitems*{00000000-0000-0000-0001-000000000002}*SharedItemsImports = 4
 		src\Templates\MvxForms\src\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.projitems*{00000000-1111-0000-0000-000000000002}*SharedItemsImports = 4
 		src\Templates\MvxForms\src\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.projitems*{00000000-1111-0000-0001-000000000002}*SharedItemsImports = 4
-		src\Templates\MvxNative\src\MvxNative.Droid.Shared\MvxNative.Droid.Shared.projitems*{00000000-0000-0000-0003-000000000002}*SharedItemsImports = 13
-		src\Templates\MvxForms\src\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.projitems*{00000000-1111-0000-0003-000000000002}*SharedItemsImports = 13
+		src\Templates\MvxNative\src\MvxNative.Droid.Shared\MvxNative.Droid.Shared.projitems*{3d028650-2328-468f-98f9-d6777df7f64d}*SharedItemsImports = 13
+		src\Templates\MvxForms\src\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.projitems*{ef6f3ac9-fee6-4de2-af9e-3f75f48f0cf3}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -1401,7 +1401,7 @@ Global
 		{00000000-0000-0000-0002-000000000003} = {A4C3B6E2-92D5-478B-99DC-1CF0F489284E}
 		{00000000-0000-0000-0002-000000000002} = {A4C3B6E2-92D5-478B-99DC-1CF0F489284E}
 		{00000000-0000-0000-0002-000000000004} = {A4C3B6E2-92D5-478B-99DC-1CF0F489284E}
-		{00000000-0000-0000-0003-000000000002} = {A4C3B6E2-92D5-478B-99DC-1CF0F489284E}
+		{3D028650-2328-468F-98F9-D6777DF7F64D} = {A4C3B6E2-92D5-478B-99DC-1CF0F489284E}
 		{370BC50F-6FE9-4180-A1EA-90491D79B026} = {D7352774-663C-445E-8C46-BAEAE4532A76}
 		{4FD14B44-7E1C-4B04-ABB1-3CB9F9584DA7} = {370BC50F-6FE9-4180-A1EA-90491D79B026}
 		{00000000-1111-0000-0000-000000000001} = {370BC50F-6FE9-4180-A1EA-90491D79B026}
@@ -1415,7 +1415,7 @@ Global
 		{00000000-1111-0000-0001-000000000004} = {370BC50F-6FE9-4180-A1EA-90491D79B026}
 		{00000000-1111-0000-0001-000000000002} = {370BC50F-6FE9-4180-A1EA-90491D79B026}
 		{00000000-1111-0000-0001-000000000003} = {370BC50F-6FE9-4180-A1EA-90491D79B026}
-		{00000000-1111-0000-0003-000000000002} = {370BC50F-6FE9-4180-A1EA-90491D79B026}
+		{EF6F3AC9-FEE6-4DE2-AF9E-3F75F48F0CF3} = {370BC50F-6FE9-4180-A1EA-90491D79B026}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {71E03F0F-805A-4695-AF83-58E2AEAFBE72}
