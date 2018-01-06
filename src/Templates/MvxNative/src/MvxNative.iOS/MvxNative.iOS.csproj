@@ -103,7 +103,6 @@
     <BundleResource Include="Resources\launch_image%402x.png" />
     <BundleResource Include="Resources\launch_image%403x.png" />
     <Compile Include="Views\Main\MainViewController.cs" />
-
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-87.png">
       <Visible>false</Visible>
     </ImageAsset>

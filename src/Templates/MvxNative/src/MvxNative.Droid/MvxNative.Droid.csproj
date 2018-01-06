@@ -129,7 +129,7 @@
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
     <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
   </ItemGroup>
-  <Import Project="..\MvxNative.Droid.Shared\MvxNative.Droid.Shared.projitems" Label="Shared" />
+  <Import Project="..\MvxNative.Droid.Shared\MvxNative.Droid.Shared.projitems" Label="Shared" Condition=" '$(HasAndroidTestProject)' != 'false' "/>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.

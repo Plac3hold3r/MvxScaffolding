@@ -44,5 +44,13 @@
       <Version>2.2.2</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MvxNative.Droid\MvxNative.Droid.csproj">
+      <Project>{00000000-0000-0000-0000-000000000002}</Project>
+      <Name>MvxNative.Droid</Name>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
