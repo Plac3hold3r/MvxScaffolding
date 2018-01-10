@@ -292,46 +292,46 @@
     "NETStandardVersion": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "netstandard2.0",
+      "defaultValue": "2.0",
       "description": "The version of .NET Standard to use in the Core project.",
       "choices": [
         {
-          "choice": "netstandard2.0",
+          "choice": "2.0",
           "description": ".NET Standard 2.0"
         },
         {
-          "choice": "netstandard1.6",
+          "choice": "1.6",
           "description": ".NET Standard 1.6"
         },
         {
-          "choice": "netstandard1.5",
+          "choice": "1.5",
           "description": ".NET Standard 1.5"
         },
         {
-          "choice": "netstandard1.4",
+          "choice": "1.4",
           "description": ".NET Standard 1.4"
         },
         {
-          "choice": "netstandard1.3",
+          "choice": "1.3",
           "description": ".NET Standard 1.3"
         },
         {
-          "choice": "netstandard1.2",
+          "choice": "1.2",
           "description": ".NET Standard 1.2"
         },
         {
-          "choice": "netstandard1.1",
+          "choice": "1.1",
           "description": ".NET Standard 1.1"
         },
         {
-          "choice": "netstandard1.0",
+          "choice": "1.0",
           "description": ".NET Standard 1.0"
         }
       ],
-      "replaces": "netstandard2.0",
+      "replaces": "2.0",
       "onlyIf": [
         {
-          "after": "<TargetFramework>"
+          "after": "netstandard"
         }
       ]
     },
@@ -406,59 +406,59 @@
     "iOSMinSDKVersion": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "10.0<",
+      "defaultValue": "10.0",
       "description": "Minimum iOS target SDK version.",
       "choices": [
         {
-          "choice": "11.2<",
+          "choice": "11.2",
           "description": "iOS 11.2"
         },
         {
-          "choice": "11.1<",
+          "choice": "11.1",
           "description": "iOS 11.1"
         },
         {
-          "choice": "11.0<",
+          "choice": "11.0",
           "description": "iOS 11"
         },
         {
-          "choice": "10.3<",
+          "choice": "10.3",
           "description": "iOS 10.3"
         },
         {
-          "choice": "10.2<",
+          "choice": "10.2",
           "description": "iOS 10.2"
         },
         {
-          "choice": "10.1<",
+          "choice": "10.1",
           "description": "iOS 10.1"
         },
         {
-          "choice": "10.0<",
+          "choice": "10.0",
           "description": "iOS 10"
         },
         {
-          "choice": "9.3<",
+          "choice": "9.3",
           "description": "iOS 9.3"
         },
         {
-          "choice": "9.2<",
+          "choice": "9.2",
           "description": "iOS 9.2"
         },
         {
-          "choice": "9.1<",
+          "choice": "9.1",
           "description": "iOS 9.1"
         },
         {
-          "choice": "9.0<",
+          "choice": "9.0",
           "description": "iOS 9"
         }
       ],
-      "replaces": "10.0<",
+      "replaces": "10.0",
       "onlyIf": [
         {
           "after": "<string>",
-          "before": "/string>"
+          "before": "</string>"
         }
       ]
     },
