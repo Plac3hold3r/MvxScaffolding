@@ -18,7 +18,7 @@ namespace MvxNative.iOS
             var setup = new Setup(this, Window);
             setup.Initialize();
 
-            var startup = Mvx.Resolve<IMvxAppStart>();
+            IMvxAppStart startup = Mvx.Resolve<IMvxAppStart>();
             startup.Start();
 
             Window.MakeKeyAndVisible();

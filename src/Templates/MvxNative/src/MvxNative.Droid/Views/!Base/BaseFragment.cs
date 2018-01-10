@@ -20,15 +20,11 @@ namespace MvxNative.Droid.Views
     {
         protected abstract int FragmentLayoutId { get; }
 
-        #region Fragment Life Cycle
-
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             base.OnCreateView(inflater, container, savedInstanceState);
 
             return this.BindingInflate(FragmentLayoutId, null);
         }
-
-        #endregion Fragment Life Cycle
     }
 }

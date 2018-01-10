@@ -8,8 +8,8 @@ __Templates features__
 
  Features | mvxnative            |  mvxforms
 :-------------------------:|:-------------------------:|:-------------------------:
-.NET Standard class library |* |*
-Package references |* |*
+[.NET Standard class library](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) |* |*
+[Package references](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files) |* |*
 Unit test projects |* |*
 UI test projects |* |*
 Android Nougat round icons |* |*
@@ -173,7 +173,6 @@ dotnet new mvxnative -n MyXamarinApp --solution-project-grouping platform
 ## Know issues
 
 - __Incorrect project type GUIDs__ - There is currently a [bug in Visual Studio 2017](https://github.com/dotnet/project-system/issues/1821) where Visual Studio may what to convert the `csproj` project type GUID to `9A19103F-16F7-4668-BE54-9A1E7A4F7556`. However, Visual Studio for Mac may then want to convert `csproj` project type GUID back to the correct `FAE04EC0-301F-11d3-BF4B-00C04F79EFBC`. Both GUID's are currently valid but `FAE04EC0-301F-11d3-BF4B-00C04F79EFBC` is preferred.
-- __Shared project GUID casing__ - TODO [PH] log bug for Shared project GUID casing
 - __Truncating trailing ".0"__ - There is currently a [bug in dotnet new templating engine](https://github.com/dotnet/templating/issues/1382) where numbered parameter could get rounded up to the nearest whole number. This bug impacts commands such as .NET Standard version and iOS SDK version. To temporally workaround this issue, MvxScaffolding templates requires full .NET Standard framework target naming and iOS SDK version number suffix of "<".
 
 ## Additional commands options

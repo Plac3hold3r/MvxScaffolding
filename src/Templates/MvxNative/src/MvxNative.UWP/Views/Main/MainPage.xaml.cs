@@ -11,7 +11,7 @@ namespace MvxNative.UWP
     {
         public MainPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
     }
 }

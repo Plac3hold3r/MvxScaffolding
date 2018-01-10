@@ -10,7 +10,7 @@ using Windows.UI.Xaml.Navigation;
 namespace MvxNative.UWP
 {
     /// <summary>
-    /// Provides application-specific behavior to supplement the default Application class.
+    /// Provides application-specific behaviour to supplement the default Application class.
     /// </summary>
     sealed partial class App : Application
     {
@@ -20,8 +20,8 @@ namespace MvxNative.UWP
         /// </summary>
         public App()
         {
-            this.InitializeComponent();
-            this.Suspending += OnSuspending;
+            InitializeComponent();
+            Suspending += OnSuspending;
         }
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace MvxNative.UWP
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-            Frame rootFrame = Window.Current.Content as Frame;
+            var rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
@@ -58,7 +58,7 @@ namespace MvxNative.UWP
                     var setup = new Setup(rootFrame);
                     setup.Initialize();
 
-                    var start = Mvx.Resolve<IMvxAppStart>();
+                    IMvxAppStart start = Mvx.Resolve<IMvxAppStart>();
                     start.Start();
                 }
                 // Ensure the current window is active
@@ -85,7 +85,7 @@ namespace MvxNative.UWP
         /// <param name="e">Details about the suspend request.</param>
         private void OnSuspending(object sender, SuspendingEventArgs e)
         {
-            var deferral = e.SuspendingOperation.GetDeferral();
+            SuspendingDeferral deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }

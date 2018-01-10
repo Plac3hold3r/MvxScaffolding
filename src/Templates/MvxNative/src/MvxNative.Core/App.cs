@@ -1,8 +1,6 @@
 ﻿using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform.IoC;
 using MvxNative.Core.ViewModels.Main;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MvxNative.Core
 {
@@ -10,6 +8,11 @@ namespace MvxNative.Core
     {
         public override void Initialize()
         {
+            CreatableTypes()
+                .EndingWith("Service")
+                .AsInterfaces()
+                .RegisterAsLazySingleton();
+
             RegisterNavigationServiceAppStart<MainViewModel>();
         }
     }

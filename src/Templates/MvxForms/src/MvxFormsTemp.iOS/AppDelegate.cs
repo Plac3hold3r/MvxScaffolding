@@ -2,7 +2,6 @@
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Forms.iOS;
 using MvvmCross.Platform;
-using MvxFormsTemp.iOS.Styles;
 using UIKit;
 
 namespace MvxFormsTemp.iOS

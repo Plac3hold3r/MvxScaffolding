@@ -1,4 +1,10 @@
-﻿using Cirrious.FluentLayouts.Touch;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Cirrious.FluentLayouts.Touch;
+using Foundation;
 using MvvmCross.iOS.Views.Presenters.Attributes;
 using MvxNative.Core.ViewModels.Main;
 using UIKit;
