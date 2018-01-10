@@ -26,7 +26,7 @@ In order to make use of these templates you will need to have the following inst
 
 __Required__
 
- * .NET Core SDK 2.0.0+ ([Download SDK](https://www.microsoft.com/net/download))
+ * .NET Core SDK 2.1.4+ ([Download SDK](https://www.microsoft.com/net/download))
 
  __Optional__ 
 
@@ -170,9 +170,9 @@ dotnet new mvxnative -n MyXamarinApp --solution-project-grouping platform
     └── {NAME}.UI.Test              # Forms UI test project (<b>MvxForms Optional</b>)
 </pre>
 
-## Know issues
+## Known issues
 
-- __Incorrect project type GUIDs__ - There is currently a [bug in Visual Studio 2017](https://github.com/dotnet/project-system/issues/1821) where Visual Studio may what to convert the `csproj` project type GUID to `9A19103F-16F7-4668-BE54-9A1E7A4F7556`. However, Visual Studio for Mac may then want to convert `csproj` project type GUID back to the correct `FAE04EC0-301F-11d3-BF4B-00C04F79EFBC`. Both GUID's are currently valid but `FAE04EC0-301F-11d3-BF4B-00C04F79EFBC` is preferred.
+- __Incorrect project type GUIDs__ - There is currently a [bug in Visual Studio 2017](https://github.com/dotnet/project-system/issues/1821) where Visual Studio will what to convert the new `csproj` project type GUID to `9A19103F-16F7-4668-BE54-9A1E7A4F7556`. However, Visual Studio for Mac will then want to convert `csproj` project type GUID back to the correct `FAE04EC0-301F-11d3-BF4B-00C04F79EFBC`. Both GUID's are currently valid but `FAE04EC0-301F-11d3-BF4B-00C04F79EFBC` is preferred going forward.
 
 ## Additional commands options
 
@@ -189,7 +189,7 @@ dotnet new mvxnative -n MyXamarinApp --solution-project-grouping platform
 
   -uwp|--include-uwp                   Whether to include UWP Project.
                                        bool - Optional
-                                       Default: true
+                                       Default: false
 
   -core-t|--include-core-test          Whether to include Core unit test project.
                                        bool - Optional
@@ -234,15 +234,15 @@ dotnet new mvxnative -n MyXamarinApp --solution-project-grouping platform
                                        Default: Mvx Scaffolding
 
   -f|--framework                       The version of .NET Standard to use in the Core project.
-                                           netstandard2.0    - .NET Standard 2.0
-                                           netstandard1.6    - .NET Standard 1.6
-                                           netstandard1.5    - .NET Standard 1.5
-                                           netstandard1.4    - .NET Standard 1.4
-                                           netstandard1.3    - .NET Standard 1.3
-                                           netstandard1.2    - .NET Standard 1.2
-                                           netstandard1.1    - .NET Standard 1.1
-                                           netstandard1.0    - .NET Standard 1.0
-                                       Default: netstandard2.0
+                                           2.0    - .NET Standard 2.0
+                                           1.6    - .NET Standard 1.6
+                                           1.5    - .NET Standard 1.5
+                                           1.4    - .NET Standard 1.4
+                                           1.3    - .NET Standard 1.3
+                                           1.2    - .NET Standard 1.2
+                                           1.1    - .NET Standard 1.1
+                                           1.0    - .NET Standard 1.0
+                                       Default: 2.0
 
   -droid-sdk|--android-min-sdk         Minimum Android target SDK version.
                                            26    - Android 8 - Oreo v26
@@ -259,19 +259,19 @@ dotnet new mvxnative -n MyXamarinApp --solution-project-grouping platform
                                            14    - Android 4 - Ice Cream Sandwich v14
                                        Default: 19
 
-  -ios-sdk|--ios-min-sdk               Minimum iOS target SDK version.
-                                           11.2<    - iOS 11.2
-                                           11.1<    - iOS 11.1
-                                           11.0<    - iOS 11
-                                           10.3<    - iOS 10.3
-                                           10.2<    - iOS 10.2
-                                           10.1<    - iOS 10.1
-                                           10.0<    - iOS 10
-                                           9.3<     - iOS 9.3
-                                           9.2<     - iOS 9.2
-                                           9.1<     - iOS 9.1
-                                           9.0<     - iOS 9
-                                       Default: 10.0<
+  -ios-sdk|--ios-min-sdk               Minimum iOS SDK version.
+                                           11.2    - iOS 11.2
+                                           11.1    - iOS 11.1
+                                           11.0    - iOS 11
+                                           10.3    - iOS 10.3
+                                           10.2    - iOS 10.2
+                                           10.1    - iOS 10.1
+                                           10.0    - iOS 10
+                                           9.3     - iOS 9.3
+                                           9.2     - iOS 9.2
+                                           9.1     - iOS 9.1
+                                           9.0     - iOS 9
+                                       Default: 10.0
 
   -ios-h|--ios-include-hyperion        Whether to include Hyperion, in app design review tool, in the iOS project.
                                        bool - Optional
