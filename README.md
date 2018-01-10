@@ -12,6 +12,7 @@ __Templates features__
 [Package references](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files) |* |*
 Unit test projects |* |*
 UI test projects |* |*
+Solution [EditorConfig](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options) |* |*
 Android Nougat round icons |* |*
 Android Oreo adaptive icons |* |*
 Android support constraint layout |* |
