@@ -212,7 +212,7 @@
     "HasUWPProject": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "true",
+      "defaultValue": "false",
       "description": "Whether to include UWP project."
     },
     "HasCoreTestProject": {
