@@ -12,11 +12,12 @@ using Android.Widget;
 using MvvmCross.Droid.Support.V4;
 using MvxNative.Core.ViewModels;
 using MvvmCross.Binding.Droid.BindingContext;
+using MvvmCross.Core.ViewModels;
 
 namespace MvxNative.Droid.Views
 {
     public abstract class BaseFragment<TViewModel> : MvxFragment<TViewModel>
-        where TViewModel : BaseViewModel
+        where TViewModel : class, IMvxViewModel
     {
         protected abstract int FragmentLayoutId { get; }
 
