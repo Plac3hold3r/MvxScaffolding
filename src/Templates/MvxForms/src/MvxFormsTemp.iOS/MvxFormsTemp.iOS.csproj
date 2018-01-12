@@ -50,7 +50,7 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-     <MtouchExtraArgs>--linkskip=MvxFormsTemp.Core --linkSkip=MvxFormsTemp.UI</MtouchExtraArgs>
+    <MtouchExtraArgs>--linkskip=MvxFormsTemp.Core --linkSkip=MvxFormsTemp.UI</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -91,7 +91,7 @@
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-     <MtouchExtraArgs>--linkskip=MvxFormsTemp.Core --linkSkip=MvxFormsTemp.UI</MtouchExtraArgs>
+    <MtouchExtraArgs>--linkskip=MvxFormsTemp.Core --linkSkip=MvxFormsTemp.UI</MtouchExtraArgs>
     <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <ItemGroup>
@@ -136,7 +136,7 @@
       <Version>5.6.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>2.5.0.121934</Version>
+      <Version>2.5.0.122203</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

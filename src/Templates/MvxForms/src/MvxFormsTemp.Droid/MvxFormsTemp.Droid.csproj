@@ -99,7 +99,7 @@
       <Version>5.6.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>2.5.0.121934</Version>
+      <Version>2.5.0.122203</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -130,7 +130,7 @@
     <AndroidResource Include="Resources\drawable-mdpi\ic_mvvmcross_logo.png" />
     <AndroidResource Include="Resources\values-v19\styles.xml" />
   </ItemGroup>
-  <Import Project="..\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.projitems" Label="Shared" Condition=" '$(HasAndroidTestProject)' != 'false' "/>
+  <Import Project="..\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.projitems" Label="Shared" Condition=" '$(HasAndroidTestProject)' != 'false' " />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
