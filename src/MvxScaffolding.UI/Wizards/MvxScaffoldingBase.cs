@@ -1,13 +1,25 @@
-﻿using EnvDTE;
-using EnvDTE80;
-using Microsoft.VisualStudio.TemplateWizard;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using EnvDTE;
+using EnvDTE80;
+using Microsoft.Internal.VisualStudio.PlatformUI;
+using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
+using Microsoft.VisualStudio.TemplateWizard;
+using Microsoft.VisualStudio.Threading;
+using MvxScaffolding.UI.Helpers;
+using MvxScaffolding.UI.Views;
 
 namespace MvxScaffolding.UI.Wizards
 {
     public abstract class MvxScaffoldingBase : IWizard
     {
+        protected MvxScaffoldingBase(TemplateType templateType)
+        {
+            MvxScaffoldingContext.TemplateType = templateType;
+        }
+
         public void BeforeOpeningFile(ProjectItem projectItem)
         {
             // Method intentionally left empty.
@@ -44,11 +56,68 @@ namespace MvxScaffolding.UI.Wizards
 
             var newDestinationDirectory = Path.Combine($"{oldDestinationDirectory}", @"..\");
             replacementsDictionary["$destinationdirectory$"] = Path.GetFullPath(newDestinationDirectory);
+
+            ShowModal(new MainWindow());
         }
 
         public bool ShouldAddProjectItem(string filePath)
         {
             return true;
+        }
+
+        public void ShowModal(System.Windows.Window dialog)
+        {
+            SafeThreading.JoinableTaskFactory.SwitchToMainThreadAsync();
+
+            // get the owner of this dialog
+            UIShell.GetDialogOwnerHwnd(out IntPtr hwnd);
+
+            dialog.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
+
+            UIShell.EnableModeless(0);
+
+            try
+            {
+                WindowHelper.ShowModal(dialog, hwnd);
+            }
+            finally
+            {
+                // This will take place after the window is closed.
+                UIShell.EnableModeless(1);
+            }
+        }
+
+        private Lazy<IVsUIShell> _uiShell = new Lazy<IVsUIShell>(() =>
+        {
+            SafeThreading.JoinableTaskFactory.SwitchToMainThreadAsync();
+            return ServiceProvider.GlobalProvider.GetService(typeof(SVsUIShell)) as IVsUIShell;
+        }, true);
+
+        private IVsUIShell UIShell => _uiShell.Value;
+
+        private Lazy<IVsSolution> _vssolution = new Lazy<IVsSolution>(() =>
+        {
+            SafeThreading.JoinableTaskFactory.SwitchToMainThreadAsync();
+            return ServiceProvider.GlobalProvider.GetService(typeof(SVsSolution)) as IVsSolution;
+        }, true);
+
+        public static class SafeThreading
+        {
+            public static JoinableTaskFactory JoinableTaskFactory { get; set; }
+
+            static SafeThreading()
+            {
+                try
+                {
+                    JoinableTaskFactory = ThreadHelper.JoinableTaskFactory;
+                }
+                catch (NullReferenceException)
+                {
+                    var context = new JoinableTaskContext(System.Threading.Thread.CurrentThread);
+                    JoinableTaskCollection collection = context.CreateCollection();
+                    JoinableTaskFactory = context.CreateFactory(collection);
+                }
+            }
         }
     }
 }
