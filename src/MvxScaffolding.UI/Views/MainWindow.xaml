@@ -1,49 +1,359 @@
-﻿<Controls:MetroWindow  x:Class="MvxScaffolding.UI.Views.MainWindow"
-        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+﻿<metro:MetroWindow  x:Class="MvxScaffolding.UI.Views.MainWindow"
+        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:MvxScaffolding.UI.Views"
+        xmlns:viewModels="clr-namespace:MvxScaffolding.UI.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow"
         Icon="../Resources/Images/mvxscaffolding_logo_transparent.png"
         ShowIconOnTitleBar="True"
         Height="600"
-        Width="800"
-        WindowTitleBrush="{StaticResource PrimaryColorBrush}"
-        WindowStartupLocation="CenterScreen">
+        Width="950"
+        MinWidth="950"
+        MinHeight="600"
+        WindowStartupLocation="CenterScreen"
+        TitleForeground="White"
+        TitleCharacterCasing="Normal"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
 
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
-                <!-- Accent and AppTheme setting -->
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
                 <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
-
             </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModels:AppDetailsViewModel}">
+                <local:AppDetailsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:PlatformOptionsViewModel}">
+                <local:PlatformOptionsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:SummaryViewModel}">
+                <local:SummaryView/>
+            </DataTemplate>
         </ResourceDictionary>
     </Window.Resources>
 
-    <Controls:MetroWindow.RightWindowCommands>
-        <Controls:WindowCommands>
-            <!--<Button>
+    <metro:MetroWindow.RightWindowCommands>
+        <metro:WindowCommands>
+            <Button>
                 <iconPacks:PackIconMaterial Width="22"
                                           Height="22"
                                           Kind="GithubCircle" />
-            </Button>-->
-        </Controls:WindowCommands>
-    </Controls:MetroWindow.RightWindowCommands>
-
+            </Button>
+        </metro:WindowCommands>
+    </metro:MetroWindow.RightWindowCommands>
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
 
+        <Grid Margin="12 12 12 12" Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                       HorizontalAlignment="Center"
+                       Grid.Column="0">App Details</TextBlock>
+            <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                       HorizontalAlignment="Center"
+                       Grid.Column="1">></TextBlock>
+            <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                       HorizontalAlignment="Center"
+                       Grid.Column="2">Platforms Options</TextBlock>
+            <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                       HorizontalAlignment="Center"
+                       Grid.Column="3">></TextBlock>
+            <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                       HorizontalAlignment="Center"
+                       Grid.Column="4">Summary</TextBlock>
+        </Grid>
+
+        <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0 0 0 1" Grid.ColumnSpan="4"/>
+
+        <materialDesign:Card Margin="8" Width="230" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="140" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <materialDesign:ColorZone Mode="PrimaryMid" VerticalAlignment="Stretch">
+                    <Image Source="../Resources/Images/mvxscaffolding_logo_transparent.png" Height="140" Width="196" Stretch="Uniform" />
+                </materialDesign:ColorZone>
+                <StackPanel Grid.Row="1" Margin="8 24 8 0" >
+                    <TextBlock FontWeight="Bold">Core</TextBlock>
+                </StackPanel>
+                <Grid Margin="8" HorizontalAlignment="Stretch" Grid.Row="2" Height="180">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <ComboBox Grid.Row="0"
+                              materialDesign:HintAssist.Hint=".NET Standard"
+                              Margin="0 4 0 0"
+                              Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                        <ComboBoxItem>.NET Standard 2.0</ComboBoxItem>
+                        <ComboBoxItem>.NET Standard 1.6</ComboBoxItem>
+                        <ComboBoxItem>.NET Standard 1.5</ComboBoxItem>
+                    </ComboBox>
+                    <DockPanel Grid.Row="1"
+                                Margin="0 12 0 8"
+                                HorizontalAlignment="Stretch">
+                        <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">Unit Test Project</TextBlock>
+                        <ToggleButton Margin="8 0 0 0"
+                                      HorizontalAlignment="Right"></ToggleButton>
+                    </DockPanel>
+                </Grid>
+            </Grid>
+        </materialDesign:Card>
+
+        <materialDesign:Card Margin="8" Width="230" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="140" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <materialDesign:ColorZone Mode="PrimaryMid" VerticalAlignment="Stretch">
+                    <materialDesign:PackIcon Kind="Android" Height="128" Width="128"
+                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </materialDesign:ColorZone>
+                <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" 
+                        HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                        Margin="0 0 16 -20">
+                    <materialDesign:PackIcon Kind="Close" />
+                </Button>
+                <StackPanel Grid.Row="1" Margin="8 24 8 0" >
+                    <TextBlock FontWeight="Bold">Android</TextBlock>
+                </StackPanel>
+                <Grid Margin="8" HorizontalAlignment="Stretch" Grid.Row="2" Height="180">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <ComboBox Grid.Row="0"
+                              materialDesign:HintAssist.Hint="Min SDK version"
+                              Margin="0 4 0 0"
+                              Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                        <ComboBoxItem>Android 8 - Oreo v26</ComboBoxItem>
+                        <ComboBoxItem>Android 7.1 - Nougat v25</ComboBoxItem>
+                        <ComboBoxItem>Android 7 - Nougat v24</ComboBoxItem>
+                    </ComboBox>
+                    <DockPanel Grid.Row="1"
+                                Margin="0 12 0 0"
+                                HorizontalAlignment="Stretch">
+                        <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">Unit Test Project</TextBlock>
+                        <ToggleButton Margin="8 0 0 0"
+                                      HorizontalAlignment="Right"></ToggleButton>
+                    </DockPanel>
+                    <DockPanel Grid.Row="2"
+                                Margin="0 12 0 0"
+                                HorizontalAlignment="Stretch">
+                        <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">UI Test Project</TextBlock>
+                        <ToggleButton Margin="8 0 0 0"
+                                      HorizontalAlignment="Right"></ToggleButton>
+                    </DockPanel>
+                    <DockPanel Grid.Row="3"
+                                Margin="0 12 0 8"
+                                HorizontalAlignment="Stretch">
+                        <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">XML Layouts</TextBlock>
+                        <materialDesign:PackIcon Kind="Information"
+                                                 VerticalAlignment="Center"
+                                                 Margin="4 0" />
+                        <ToggleButton Margin="8 0 0 0"
+                                      HorizontalAlignment="Right"></ToggleButton>
+                    </DockPanel>
+                </Grid>
+            </Grid>
+        </materialDesign:Card>
+
+        <materialDesign:Card Margin="8" Width="230" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="140" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <materialDesign:ColorZone Mode="PrimaryMid" VerticalAlignment="Stretch">
+                    <materialDesign:PackIcon Kind="Apple" Height="128" Width="128"
+                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </materialDesign:ColorZone>
+                <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" 
+                        HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                        Margin="0 0 16 -20">
+                    <materialDesign:PackIcon Kind="Close" />
+                </Button>
+                <StackPanel Grid.Row="1" Margin="8 24 8 0" >
+                    <TextBlock FontWeight="Bold">iOS</TextBlock>
+                </StackPanel>
+                <Grid Margin="8" HorizontalAlignment="Stretch" Grid.Row="2" Height="180">
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <ComboBox Grid.Row="0"
+                              materialDesign:HintAssist.Hint="Min SDK version"
+                              Margin="0 4 0 0"
+                              Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                        <ComboBoxItem>iOS 11.2</ComboBoxItem>
+                        <ComboBoxItem>iOS 11.1</ComboBoxItem>
+                        <ComboBoxItem>iOS 11</ComboBoxItem>
+                    </ComboBox>
+                    <DockPanel Grid.Row="1"
+                                Margin="0 12 0 0"
+                                HorizontalAlignment="Stretch">
+                        <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">Unit Test Project</TextBlock>
+                        <ToggleButton Margin="8 0 0 0"
+                                      HorizontalAlignment="Right"></ToggleButton>
+                    </DockPanel>
+                    <DockPanel Grid.Row="2"
+                                Margin="0 12 0 0"
+                                HorizontalAlignment="Stretch">
+                        <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">UI Test Project</TextBlock>
+                        <ToggleButton Margin="8 0 0 0"
+                                      HorizontalAlignment="Right"></ToggleButton>
+                    </DockPanel>
+                    <DockPanel Grid.Row="3"
+                                Margin="0 12 0 0"
+                                HorizontalAlignment="Stretch">
+                        <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">Fluent Layouts</TextBlock>
+                        <materialDesign:PackIcon Kind="Information"
+                                                 VerticalAlignment="Center"
+                                                 Margin="4 0" />
+                        <ToggleButton Margin="8 0 0 0"
+                                      HorizontalAlignment="Right"></ToggleButton>
+                    </DockPanel>
+                    <DockPanel Grid.Row="4"
+                                Margin="0 12 0 8"
+                                HorizontalAlignment="Stretch">
+                        <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">Hyperion</TextBlock>
+                        <materialDesign:PackIcon Kind="Information"
+                                                 VerticalAlignment="Center"
+                                                 Margin="4 0" />
+                        <ToggleButton Margin="8 0 0 0"
+                                      HorizontalAlignment="Right"></ToggleButton>
+                    </DockPanel>
+                </Grid>
+            </Grid>
+        </materialDesign:Card>
+
+        <materialDesign:Card Margin="8" Width="230" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="140" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <materialDesign:ColorZone Mode="Accent" VerticalAlignment="Stretch">
+                    <materialDesign:PackIcon Kind="Windows" Height="128" Width="128"
+                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </materialDesign:ColorZone>
+                <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniPrimaryButton}"
+                        HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                        Margin="0 0 16 -20">
+                    <materialDesign:PackIcon Kind="Check" />
+                </Button>
+                <StackPanel Grid.Row="1" Margin="8 24 8 0" >
+                    <TextBlock FontWeight="Bold">Windows</TextBlock>
+                </StackPanel>
+                <Grid Margin="8" HorizontalAlignment="Stretch" Grid.Row="2" Height="180">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBox materialDesign:HintAssist.Hint="Description"
+                             materialDesign:HintAssist.IsFloating="True"
+                             IsEnabled="False"
+                             Margin="0 4 0 0"></TextBox>
+                    <ComboBox Grid.Row="1"
+                              materialDesign:HintAssist.Hint="Min SDK version"
+                              Margin="0 4 0 0"
+                              IsEnabled="False"
+                              Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                        <ComboBoxItem>16299 - Fall Creators Update</ComboBoxItem>
+                        <ComboBoxItem>15063 - Creators Update</ComboBoxItem>
+                        <ComboBoxItem>14393 - Anniversary Update</ComboBoxItem>
+                        <ComboBoxItem>10586 - November Update</ComboBoxItem>
+                    </ComboBox>
+                    <DockPanel Grid.Row="2"
+                                Margin="0 12 0 0"
+                                HorizontalAlignment="Stretch">
+                        <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">Unit Test Project</TextBlock>
+                        <ToggleButton Margin="8 0 0 0"
+                                      IsEnabled="False"
+                                      HorizontalAlignment="Right"></ToggleButton>
+                    </DockPanel>
+                    <DockPanel Grid.Row="3"
+                                Margin="0 12 0 8"
+                                HorizontalAlignment="Stretch">
+                        <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">UI Test Project</TextBlock>
+                        <ToggleButton Margin="8 0 0 0"
+                                      IsEnabled="False"
+                                      HorizontalAlignment="Right"></ToggleButton>
+                    </DockPanel>
+                </Grid>
+
+            </Grid>
+        </materialDesign:Card>
+
+        <StackPanel HorizontalAlignment="Right"  Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="4">
+
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" Margin="12 8">
+                Previous
+            </Button>
+
+            <Button Style="{StaticResource MaterialDesignRaisedButton}" Width="100" Margin="16">
+                Next
+            </Button>
+        </StackPanel>
+
+        <StatusBar Grid.Row="3" Grid.ColumnSpan="4" Name="StatusBar">
+            <StatusBarItem Content="0.4.5" ContentStringFormat="{}MvxScaffolding v{0}" Foreground="White"/>
+            <Separator Style="{DynamicResource MetroStatusBarSeparator}" Background="White" />
+            <StatusBarItem Content="5.6.3" ContentStringFormat="{}MvvmCross v{0}" Foreground="White"/>
+        </StatusBar>
     </Grid>
-</Controls:MetroWindow>
+</metro:MetroWindow>
     
