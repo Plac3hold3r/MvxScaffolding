@@ -69,7 +69,6 @@ namespace MvxScaffolding.UI.Wizards
         {
             SafeThreading.JoinableTaskFactory.SwitchToMainThreadAsync();
 
-            // get the owner of this dialog
             UIShell.GetDialogOwnerHwnd(out IntPtr hwnd);
 
             dialog.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
@@ -82,12 +81,11 @@ namespace MvxScaffolding.UI.Wizards
             }
             finally
             {
-                // This will take place after the window is closed.
                 UIShell.EnableModeless(1);
             }
         }
 
-        private Lazy<IVsUIShell> _uiShell = new Lazy<IVsUIShell>(() =>
+        private readonly Lazy<IVsUIShell> _uiShell = new Lazy<IVsUIShell>(() =>
         {
             SafeThreading.JoinableTaskFactory.SwitchToMainThreadAsync();
             return ServiceProvider.GlobalProvider.GetService(typeof(SVsUIShell)) as IVsUIShell;
@@ -95,7 +93,7 @@ namespace MvxScaffolding.UI.Wizards
 
         private IVsUIShell UIShell => _uiShell.Value;
 
-        private Lazy<IVsSolution> _vssolution = new Lazy<IVsSolution>(() =>
+        private readonly Lazy<IVsSolution> _vssolution = new Lazy<IVsSolution>(() =>
         {
             SafeThreading.JoinableTaskFactory.SwitchToMainThreadAsync();
             return ServiceProvider.GlobalProvider.GetService(typeof(SVsSolution)) as IVsSolution;
