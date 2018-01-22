@@ -216,7 +216,7 @@ dotnet new mvxnative -n MyXamarinApp --solution-project-grouping platform
                                        bool - Optional
                                        Default: false
 
-  -ed|--has-editor-config              Whether to include an editor config in the root directory.
+  -ed|--has-editor-config              Whether to include an EditorConfig in the root directory.
                                        bool - Optional
                                        Default: true
 

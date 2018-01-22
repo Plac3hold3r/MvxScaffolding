@@ -261,7 +261,7 @@
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "true",
-      "description": "Whether to include an editor config in the root directory."
+      "description": "Whether to include an EditorConfig in the root directory."
     },
     "SolutionProjectGrouping": {
       "type": "parameter",
