@@ -4,9 +4,55 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MvxScaffolding.UI.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             Background="{DynamicResource MaterialDesignPaper}"
+             d:DesignHeight="600" d:DesignWidth="950">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
+    </UserControl.Resources>
+    
     <Grid>
-            
+        <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
+            <materialDesign:Card Margin="8" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Margin="16">
+                    <TextBlock FontWeight="Bold" >Application</TextBlock>
+                    <TextBox materialDesign:HintAssist.Hint="Identifier"
+                             materialDesign:HintAssist.IsFloating="True"
+                             Margin="0 4 0 0"
+                             Text="{Binding Options.AppName}"></TextBox>
+                    <TextBox materialDesign:HintAssist.Hint="Display Name"
+                             materialDesign:HintAssist.IsFloating="True"
+                             Margin="0 4 0 0"
+                             Text="{Binding Options.AppId}"></TextBox>
+                    <TextBlock FontWeight="Bold" Margin="0 16 0 0">Solution</TextBlock>
+                    <ComboBox Grid.Row="0"
+                              materialDesign:HintAssist.Hint="Project Grouping"
+                              ItemsSource="{Binding Options.ProjectGroupingOptions}"
+                              SelectedValue="{Binding Options.SelectedProjectGrouping}"
+                              Margin="0 4 0 0"
+                              SelectedValuePath="Key"
+                              DisplayMemberPath="Value"
+                              materialDesign:ComboBoxAssist.ClassicMode="true"
+                              Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel />
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                    <DockPanel Grid.Row="1"
+                                Margin="0 12 0 8"
+                                HorizontalAlignment="Stretch">
+                        <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">EditorConfig</TextBlock>
+                        <ToggleButton Margin="8 0 0 0"
+                                      IsChecked="{Binding Options.HasEditorConfig}"
+                                      HorizontalAlignment="Right"></ToggleButton>
+                    </DockPanel>
+                </StackPanel>
+            </materialDesign:Card>
+        </materialDesign:TransitioningContent>
     </Grid>
 </UserControl>

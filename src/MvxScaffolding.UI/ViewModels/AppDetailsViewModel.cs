@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace MvxScaffolding.UI.ViewModels
 {
-    public class AppDetailsViewModel
+    public class AppDetailsViewModel : IViewModel
     {
+        public AppDetailsViewModel(WizardOptionViewModel options)
+        {
+            Options = options;
+        }
+
+        public WizardOptionViewModel Options { get; private set; }
     }
 }

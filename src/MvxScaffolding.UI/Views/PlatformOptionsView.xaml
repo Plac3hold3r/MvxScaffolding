@@ -4,9 +4,379 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MvxScaffolding.UI.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
-    </Grid>
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             Background="{DynamicResource MaterialDesignPaper}"
+             d:DesignHeight="600" d:DesignWidth="950">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
+    </UserControl.Resources>
+
+    <ItemsControl>
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <UniformGrid Columns="4" />
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+        
+        <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
+            <materialDesign:Card Margin="8" Width="230" HorizontalAlignment="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone Mode="PrimaryMid" VerticalAlignment="Stretch">
+                        <Image Source="../Resources/Images/mvxscaffolding_logo_transparent.png" Height="140" Width="196" Stretch="Uniform" />
+                    </materialDesign:ColorZone>
+                    <StackPanel Grid.Row="1" Margin="8 24 8 0" >
+                        <TextBlock FontWeight="Bold">Core</TextBlock>
+                    </StackPanel>
+                    <Grid Margin="8" HorizontalAlignment="Stretch" Grid.Row="2" Height="180">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <ComboBox Grid.Row="0"
+                                  materialDesign:HintAssist.Hint=".NET Standard"
+                                  Margin="0 4 0 0"
+                                  ItemsSource="{Binding Options.NetStandardOptions}"
+                                  SelectedValue="{Binding Options.SelectedNetStandard}"
+                                  SelectedValuePath="Key"
+                                  DisplayMemberPath="Value"
+                                  materialDesign:ComboBoxAssist.ClassicMode="true"
+                                  Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel />
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+                        </ComboBox>
+                        <DockPanel Grid.Row="1"
+                                   Margin="0 12 0 8"
+                                   HorizontalAlignment="Stretch">
+                            <TextBlock VerticalAlignment="Center"
+                                       HorizontalAlignment="Left">Unit Test Project</TextBlock>
+                            <ToggleButton Margin="8 0 0 0"
+                                          IsChecked="{Binding Options.HasCoreUnitTestProject}"
+                                          HorizontalAlignment="Right"></ToggleButton>
+                        </DockPanel>
+                    </Grid>
+                </Grid>
+            </materialDesign:Card>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}"
+                                             OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
+            <materialDesign:Card Margin="8" Width="230" HorizontalAlignment="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone Mode="{Binding Options.HasAndroid, Converter={StaticResource ActiveColorZoneModeConverter}}" VerticalAlignment="Stretch">
+                        <materialDesign:PackIcon Kind="Android" Height="128" Width="128"
+                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </materialDesign:ColorZone>
+                    <Button Grid.Row="0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Bottom"
+                            Margin="0 0 16 -20"
+                            Command="{Binding ToggleAndroidCommand}">
+                        <Button.Style>
+                            <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignFloatingActionMiniDarkButton}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Options.HasAndroid}" Value="True">
+                                        <Setter Property="Background" Value="{DynamicResource AccentHueColorBrush}"/>
+                                        <Setter Property="BorderBrush" Value="{DynamicResource AccentHueColorBrush}"/>
+                                        <Setter Property="Foreground" Value="{DynamicResource AccentHueColorForegroundBrush}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Options.HasAndroid}" Value="False">
+                                        <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}"/>
+                                        <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}"/>
+                                        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <materialDesign:PackIcon Kind="{Binding Options.AndroidIncludeIcon}" />
+                    </Button>
+                    <StackPanel Grid.Row="1" Margin="8 24 8 0" >
+                        <TextBlock FontWeight="Bold">Android</TextBlock>
+                    </StackPanel>
+                    <Grid Margin="8" HorizontalAlignment="Stretch" Grid.Row="2" Height="180">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <ComboBox Grid.Row="0"
+                                  materialDesign:HintAssist.Hint="Min SDK version"
+                                  Margin="0 4 0 0"
+                                  ItemsSource="{Binding Options.MinAndroidSDKOptions}"
+                                  SelectedValue="{Binding Options.SelectedMinAndroidSDK}"
+                                  IsEnabled="{Binding Options.HasAndroid}"
+                                  SelectedValuePath="Key"
+                                  DisplayMemberPath="Value"
+                                  materialDesign:ComboBoxAssist.ClassicMode="true"
+                                  Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel />
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+                        </ComboBox>
+                        <DockPanel Grid.Row="1"
+                                Margin="0 12 0 0"
+                                HorizontalAlignment="Stretch">
+                            <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">Unit Test Project</TextBlock>
+                            <ToggleButton Margin="8 0 0 0"
+                                          IsChecked="{Binding Options.HasAndroidUnitTestProject}"
+                                          IsEnabled="{Binding Options.HasAndroid}"
+                                          HorizontalAlignment="Right"></ToggleButton>
+                        </DockPanel>
+                        <DockPanel Grid.Row="2"
+                                Margin="0 12 0 0"
+                                HorizontalAlignment="Stretch">
+                            <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">UI Test Project</TextBlock>
+                            <ToggleButton Margin="8 0 0 0"
+                                          IsChecked="{Binding Options.HasAndroidUiTestProject}"
+                                          IsEnabled="{Binding Options.HasAndroid}"
+                                          HorizontalAlignment="Right"></ToggleButton>
+                        </DockPanel>
+                        <DockPanel Grid.Row="3"
+                                Margin="0 12 0 8"
+                                HorizontalAlignment="Stretch">
+                            <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">XML Layouts</TextBlock>
+                            <materialDesign:PackIcon Kind="Information"
+                                                 VerticalAlignment="Center"
+                                                 Margin="4 0" />
+                            <ToggleButton Margin="8 0 0 0"
+                                          IsChecked="{Binding Options.HasAndroidXml}"
+                                          IsEnabled="{Binding Options.HasAndroid}"
+                                          HorizontalAlignment="Right"></ToggleButton>
+                        </DockPanel>
+                    </Grid>
+                </Grid>
+            </materialDesign:Card>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}"
+                                             OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
+            <materialDesign:Card Margin="8" Width="230" HorizontalAlignment="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone Mode="{Binding Options.HasIos, Converter={StaticResource ActiveColorZoneModeConverter}}" VerticalAlignment="Stretch">
+                        <materialDesign:PackIcon Kind="Apple" Height="128" Width="128"
+                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </materialDesign:ColorZone>
+                    <Button Grid.Row="0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Bottom"
+                            Margin="0 0 16 -20"
+                            Command="{Binding ToggleIosCommand}">
+                        <Button.Style>
+                            <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignFloatingActionMiniDarkButton}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Options.HasIos}" Value="True">
+                                        <Setter Property="Background" Value="{DynamicResource AccentHueColorBrush}"/>
+                                        <Setter Property="BorderBrush" Value="{DynamicResource AccentHueColorBrush}"/>
+                                        <Setter Property="Foreground" Value="{DynamicResource AccentHueColorForegroundBrush}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Options.HasIos}" Value="False">
+                                        <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}"/>
+                                        <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}"/>
+                                        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <materialDesign:PackIcon Kind="{Binding Options.IosIncludeIcon}" />
+                    </Button>
+                    <StackPanel Grid.Row="1" Margin="8 24 8 0" >
+                        <TextBlock FontWeight="Bold">iOS</TextBlock>
+                    </StackPanel>
+                    <Grid Margin="8" HorizontalAlignment="Stretch" Grid.Row="2" Height="180">
+                        <Grid.RowDefinitions>
+                            <RowDefinition  Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <ComboBox Grid.Row="0"
+                                  materialDesign:HintAssist.Hint="Min SDK version"
+                                  Margin="0 4 0 0"
+                                  ItemsSource="{Binding Options.MinIosSDKOptions}"
+                                  SelectedValue="{Binding Options.SelectedMinIosSDK}"
+                                  IsEnabled="{Binding Options.HasIos}"
+                                  SelectedValuePath="Key"
+                                  DisplayMemberPath="Value"
+                                  materialDesign:ComboBoxAssist.ClassicMode="true"
+                                  Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel />
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+                        </ComboBox>
+                        <DockPanel Grid.Row="1"
+                                Margin="0 12 0 0"
+                                HorizontalAlignment="Stretch">
+                            <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">Unit Test Project</TextBlock>
+                            <ToggleButton Margin="8 0 0 0"
+                                          IsChecked="{Binding Options.HasIosUnitTestProject}"
+                                          IsEnabled="{Binding Options.HasIos}"
+                                          HorizontalAlignment="Right"></ToggleButton>
+                        </DockPanel>
+                        <DockPanel Grid.Row="2"
+                                Margin="0 12 0 0"
+                                HorizontalAlignment="Stretch">
+                            <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">UI Test Project</TextBlock>
+                            <ToggleButton Margin="8 0 0 0"
+                                          IsChecked="{Binding Options.HasIosUiTestProject}"
+                                          IsEnabled="{Binding Options.HasIos}"
+                                          HorizontalAlignment="Right"></ToggleButton>
+                        </DockPanel>
+                        <DockPanel Grid.Row="3"
+                                Margin="0 12 0 0"
+                                HorizontalAlignment="Stretch">
+                            <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">Fluent Layouts</TextBlock>
+                            <materialDesign:PackIcon Kind="Information"
+                                                 VerticalAlignment="Center"
+                                                 Margin="4 0" />
+                            <ToggleButton Margin="8 0 0 0"
+                                          IsChecked="{Binding Options.HasIosFluentLayout}"
+                                          IsEnabled="{Binding Options.HasIos}"
+                                          HorizontalAlignment="Right"></ToggleButton>
+                        </DockPanel>
+                        <DockPanel Grid.Row="4"
+                                Margin="0 12 0 8"
+                                HorizontalAlignment="Stretch">
+                            <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">Hyperion</TextBlock>
+                            <materialDesign:PackIcon Kind="Information"
+                                                 VerticalAlignment="Center"
+                                                 Margin="4 0" />
+                            <ToggleButton Margin="8 0 0 0"
+                                          IsChecked="{Binding Options.HasIosHyperion}"
+                                          IsEnabled="{Binding Options.HasIos}"
+                                          HorizontalAlignment="Right"></ToggleButton>
+                        </DockPanel>
+                    </Grid>
+                </Grid>
+            </materialDesign:Card>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}"
+                                             OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
+            <materialDesign:Card Margin="8" Width="230" HorizontalAlignment="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone Mode="{Binding Options.HasUwp, Converter={StaticResource ActiveColorZoneModeConverter}}" VerticalAlignment="Stretch">
+                        <materialDesign:PackIcon Kind="Windows" Height="128" Width="128"
+                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </materialDesign:ColorZone>
+                    <Button Grid.Row="0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Bottom"
+                            Margin="0 0 16 -20"
+                            Command="{Binding ToggleUwpCommand}">
+                        <Button.Style>
+                            <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignFloatingActionMiniDarkButton}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Options.HasUwp}" Value="True">
+                                        <Setter Property="Background" Value="{DynamicResource AccentHueColorBrush}"/>
+                                        <Setter Property="BorderBrush" Value="{DynamicResource AccentHueColorBrush}"/>
+                                        <Setter Property="Foreground" Value="{DynamicResource AccentHueColorForegroundBrush}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Options.HasUwp}" Value="False">
+                                        <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}"/>
+                                        <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}"/>
+                                        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <materialDesign:PackIcon Kind="{Binding Options.UwpIncludeIcon}" />
+                    </Button>
+                    <StackPanel Grid.Row="1" Margin="8 24 8 0" >
+                        <TextBlock FontWeight="Bold">Windows</TextBlock>
+                    </StackPanel>
+                    <Grid Margin="8" HorizontalAlignment="Stretch" Grid.Row="2" Height="180">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBox materialDesign:HintAssist.Hint="Description"
+                             materialDesign:HintAssist.IsFloating="True"
+                             IsEnabled="{Binding Options.HasUwp}"
+                             Text="{Binding Options.UwpDescription}"
+                             Margin="0 4 0 0"></TextBox>
+                        <ComboBox Grid.Row="1"
+                                  materialDesign:HintAssist.Hint="Min SDK version"
+                                  Margin="0 4 0 0"
+                                  IsEnabled="{Binding Options.HasUwp}"
+                                  ItemsSource="{Binding Options.MinUwpSDKOptions}"
+                                  SelectedValue="{Binding Options.SelectedMinUwpSDK}"
+                                  SelectedValuePath="Key"
+                                  DisplayMemberPath="Value"
+                                  materialDesign:ComboBoxAssist.ClassicMode="true"
+                                  Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel />
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+                        </ComboBox>
+                        <DockPanel Grid.Row="2"
+                                Margin="0 12 0 0"
+                                HorizontalAlignment="Stretch">
+                            <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">Unit Test Project</TextBlock>
+                            <ToggleButton Margin="8 0 0 0"
+                                          IsChecked="{Binding Options.HasUwpUnitTestProject}"
+                                          IsEnabled="{Binding Options.HasUwp}"
+                                          HorizontalAlignment="Right"></ToggleButton>
+                        </DockPanel>
+                        <DockPanel Grid.Row="3"
+                                Margin="0 12 0 8"
+                                HorizontalAlignment="Stretch">
+                            <TextBlock VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">UI Test Project</TextBlock>
+                            <ToggleButton Margin="8 0 0 0"
+                                          IsEnabled="{Binding Options.HasUwp}"
+                                          IsChecked="{Binding Options.HasUwpUiTestProject}"
+                                          HorizontalAlignment="Right"></ToggleButton>
+                        </DockPanel>
+                    </Grid>
+
+                </Grid>
+            </materialDesign:Card>
+        </materialDesign:TransitioningContent>
+    </ItemsControl>
 </UserControl>

@@ -43,6 +43,7 @@
     <SolidColorBrush x:Key="PrimaryLightColorBrush" Color="{StaticResource Primary300}" />
 
     <SolidColorBrush x:Key="AccentHueColorBrush" Color="{StaticResource Accent500}" />
+    <SolidColorBrush x:Key="AccentHueColorForegroundBrush" Color="{StaticResource Accent500Foreground}" po:Freeze="True" />
     <SolidColorBrush x:Key="AccentHueDarkColorBrush" Color="{StaticResource Accent700}" />
     <SolidColorBrush x:Key="AccentHueLightColorBrush" Color="{StaticResource Accent200}" />
 

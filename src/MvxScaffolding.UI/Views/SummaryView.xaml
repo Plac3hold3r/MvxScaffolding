@@ -4,9 +4,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MvxScaffolding.UI.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             Background="{DynamicResource MaterialDesignPaper}"
+             d:DesignHeight="600" d:DesignWidth="950">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
+    </UserControl.Resources>
+
     <Grid>
-            
+        <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
+            <materialDesign:Card Margin="8" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Margin="16">
+                    <TextBlock FontWeight="Bold" >Application</TextBlock>
+                    <TextBlock Margin="0 4 0 0"
+                             Text="{Binding Options.AppName}"></TextBlock>
+                </StackPanel>
+            </materialDesign:Card>
+        </materialDesign:TransitioningContent>
     </Grid>
 </UserControl>
