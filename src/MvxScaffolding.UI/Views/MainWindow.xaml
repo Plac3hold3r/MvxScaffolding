@@ -9,8 +9,8 @@
         xmlns:local="clr-namespace:MvxScaffolding.UI.Views"
         xmlns:viewModels="clr-namespace:MvxScaffolding.UI.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow"
         Icon="../Resources/Images/mvxscaffolding_logo_transparent.png"
+        Title="MvxScaffolding"
         ShowIconOnTitleBar="True"
         Height="600"
         Width="950"
@@ -19,6 +19,11 @@
         WindowStartupLocation="CenterScreen"
         TitleForeground="White"
         TitleCharacterCasing="Normal"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
 
@@ -55,7 +60,6 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
         <Grid Margin="12">
@@ -68,47 +72,44 @@
             </Grid.ColumnDefinitions>
             <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
                        HorizontalAlignment="Center"
+                       Foreground="{Binding SelectedViewModelIndex, Converter={StaticResource HighlightColorConverter}, ConverterParameter=0}"
                        Grid.Column="0">App Details</TextBlock>
             <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
                        HorizontalAlignment="Center"
                        Grid.Column="1">></TextBlock>
             <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
                        HorizontalAlignment="Center"
+                       Foreground="{Binding SelectedViewModelIndex, Converter={StaticResource HighlightColorConverter}, ConverterParameter=1}"
                        Grid.Column="2">Platforms Options</TextBlock>
             <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
                        HorizontalAlignment="Center"
                        Grid.Column="3">></TextBlock>
             <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
                        HorizontalAlignment="Center"
+                       Foreground="{Binding SelectedViewModelIndex, Converter={StaticResource HighlightColorConverter}, ConverterParameter=2}"
                        Grid.Column="4">Summary</TextBlock>
         </Grid>
 
         <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0 0 0 1"/>
 
-        <ContentControl x:Name="Pages" DockPanel.Dock="Right" Content="{Binding SelectedViewModel}" Grid.Row="1"/>
+        <ContentControl x:Name="Pages" DockPanel.Dock="Right" Content="{Binding SelectedNavigationalItem.ViewModel}" Grid.Row="1"/>
 
         <StackPanel HorizontalAlignment="Right"  Orientation="Horizontal" Grid.Row="2">
 
             <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
                     Width="100"
                     Margin="12 8"
-                    Command="{Binding BackCommand}">
-                Previous
-            </Button>
-
+                    Content="{Binding SelectedNavigationalItem.SecondaryActionText}"
+                    Visibility="{Binding SelectedNavigationalItem.SecondaryActionText, 
+                        Converter={StaticResource StringToVisibilityConverter}}"
+                    Command="{Binding BackCommand}"/>
             <Button Style="{StaticResource MaterialDesignRaisedButton}"
                     Width="100"
                     Margin="16"
-                    Command="{Binding ForwardCommand}">
-                Next
-            </Button>
+                    Content="{Binding SelectedNavigationalItem.PrimaryActionText}"
+                    Command="{Binding ForwardCommand}" />
         </StackPanel>
 
-        <StatusBar Grid.Row="3" Name="StatusBar">
-            <StatusBarItem Content="0.4.5" ContentStringFormat="{}MvxScaffolding v{0}" Foreground="White"/>
-            <Separator Style="{DynamicResource MetroStatusBarSeparator}" Background="White" />
-            <StatusBarItem Content="5.6.3" ContentStringFormat="{}MvvmCross v{0}" Foreground="White"/>
-        </StatusBar>
     </Grid>
 </metro:MetroWindow>
     

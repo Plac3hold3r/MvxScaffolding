@@ -6,12 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using MvxScaffolding.UI.Commands;
+using MvxScaffolding.UI.Helpers;
 
 namespace MvxScaffolding.UI.ViewModels
 {
-    public class MainViewModel : IViewModel, INotifyPropertyChanged
+    public class MainViewModel : BaseViewModel
     {
-        private readonly List<IViewModel> _navigationalViewModels;
+        private readonly List<NavigationalViewModel> _navigationalViewModels;
 
         public ICommand ForwardCommand { get; }
 
@@ -25,12 +26,12 @@ namespace MvxScaffolding.UI.ViewModels
             set { _selectedViewModelIndex = value; OnPropertyChanged(nameof(SelectedViewModelIndex)); }
         }
 
-        private IViewModel _selectedViewModel;
+        private NavigationalViewModel _selectedNavigationalItem;
 
-        public IViewModel SelectedViewModel
+        public NavigationalViewModel SelectedNavigationalItem
         {
-            get => _selectedViewModel;
-            set { _selectedViewModel = value; OnPropertyChanged(nameof(SelectedViewModel)); }
+            get => _selectedNavigationalItem;
+            set { _selectedNavigationalItem = value; OnPropertyChanged(nameof(SelectedNavigationalItem)); }
         }
 
         public MainViewModel()
@@ -40,11 +41,11 @@ namespace MvxScaffolding.UI.ViewModels
 
             var options = new WizardOptionViewModel();
 
-            _navigationalViewModels = new List<IViewModel>
+            _navigationalViewModels = new List<NavigationalViewModel>
             {
-                new AppDetailsViewModel(options),
-                new PlatformOptionsViewModel(options),
-                new SummaryViewModel(options)
+                new NavigationalViewModel { SecondaryActionText = string.Empty, ViewModel = new AppDetailsViewModel(options) },
+                new NavigationalViewModel { ViewModel = new PlatformOptionsViewModel(options) },
+                new NavigationalViewModel { PrimaryActionText = "Done", ViewModel = new SummaryViewModel(options) }
             };
 
             NavigateFirst();
@@ -52,26 +53,19 @@ namespace MvxScaffolding.UI.ViewModels
 
         private void NavigateFirst()
         {
-            SelectedViewModel = _navigationalViewModels.First();
+            SelectedNavigationalItem = _navigationalViewModels.First();
         }
 
         private void NavigateForward()
         {
             if (SelectedViewModelIndex + 1 < _navigationalViewModels.Count)
-                SelectedViewModel = _navigationalViewModels[++SelectedViewModelIndex];
+                SelectedNavigationalItem = _navigationalViewModels[++SelectedViewModelIndex];
         }
 
         private void NavigateBackward()
         {
             if (SelectedViewModelIndex - 1 >= 0)
-                SelectedViewModel = _navigationalViewModels[--SelectedViewModelIndex];
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void OnPropertyChanged(string propName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
+                SelectedNavigationalItem = _navigationalViewModels[--SelectedViewModelIndex];
         }
     }
 }

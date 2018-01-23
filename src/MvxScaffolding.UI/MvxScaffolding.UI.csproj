@@ -146,12 +146,17 @@
   <ItemGroup>
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Converters\ActiveColorZoneModeConverter.cs" />
+    <Compile Include="Converters\HighlightColorConverter.cs" />
+    <Compile Include="Converters\StringToVisibilityConverter.cs" />
     <Compile Include="Helpers\MvxScaffoldingContext.cs" />
     <Compile Include="Helpers\TemplateType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Styles\MvxScaffoldingColorResource.cs" />
     <Compile Include="ViewModels\AppDetailsViewModel.cs" />
+    <Compile Include="ViewModels\!Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\IViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\NavigationalViewModel.cs" />
     <Compile Include="ViewModels\WizardOptionViewModel.cs" />
     <Compile Include="ViewModels\PlatformOptionsViewModel.cs" />
     <Compile Include="ViewModels\SummaryViewModel.cs" />
@@ -174,7 +179,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Page Include="Styles\MvxColors.xaml">
+    <Page Include="Styles\MvxScaffoldingColors.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

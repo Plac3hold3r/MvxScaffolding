@@ -12,10 +12,69 @@
     <UserControl.Resources>
         <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
     </UserControl.Resources>
-    
+
     <Grid>
-        <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
-            <materialDesign:Card Margin="8" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:1}">
+            <materialDesign:Card Margin="16" Width="350" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <StackPanel>
+                    <materialDesign:ColorZone Mode="{Binding IsNativeTemplate, Converter={StaticResource ActiveColorZoneModeConverter}}" VerticalAlignment="Stretch">
+                        <Grid Margin="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="../Resources/Images/mvxscaffolding_logo_transparent.png" Height="100" Width="100" Stretch="Uniform" />
+                            <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="8">
+                                <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" >MvxScaffolding</TextBlock>
+                                <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{Binding TemplateTypeName}"/>
+                                <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="{Binding AppVersion, StringFormat={}v{0}}"/>
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:ColorZone>
+                    <Grid Margin="12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock TextWrapping="Wrap"
+                                   Foreground="{DynamicResource MaterialDesignBodyLight}"
+                                   Grid.ColumnSpan="2"
+                                   Margin="0 0 0 8"
+                                   VerticalAlignment="Top">MvxScaffolding GitHub Star button</TextBlock>
+
+                        <Button Style="{DynamicResource MaterialDesignFlatButton}"
+                                Grid.Row="1"
+                                HorizontalAlignment="Stretch">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="GithubCircle" VerticalAlignment="Center"/>
+                                <TextBlock Margin="6 0 0 0" VerticalAlignment="Center">GitHub</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button Style="{DynamicResource MaterialDesignFlatButton}"
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                HorizontalAlignment="Stretch">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="Lock" VerticalAlignment="Center"/>
+                                <TextBlock Margin="6 0 0 0" VerticalAlignment="Center">Privacy Policy</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </materialDesign:Card>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}" Grid.Column="1">
+            <materialDesign:Card Margin="16" Width="400" HorizontalAlignment="Left" VerticalAlignment="Center">
                 <StackPanel Margin="16">
                     <TextBlock FontWeight="Bold" >Application</TextBlock>
                     <TextBox materialDesign:HintAssist.Hint="Identifier"

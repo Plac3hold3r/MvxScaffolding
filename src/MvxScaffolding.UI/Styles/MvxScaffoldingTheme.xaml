@@ -5,7 +5,7 @@
 
     <ResourceDictionary.MergedDictionaries>
         <!-- Custom Theme -->
-        <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxColors.xaml" />
+        <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingColors.xaml" />
 
         <!-- MahApps.Metro resource dictionaries. -->
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
@@ -30,6 +30,8 @@
     </ResourceDictionary.MergedDictionaries>
 
     <converters:ActiveColorZoneModeConverter x:Key="ActiveColorZoneModeConverter"/>
+    <converters:HighlightColorConverter x:Key="HighlightColorConverter"/>
+    <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
 
     <Style x:Key="MaterialDesignFloatingActionMiniPrimaryButton" TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFloatingActionMiniDarkButton}">
         <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}"/>

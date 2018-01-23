@@ -9,7 +9,7 @@ using MvxScaffolding.UI.Commands;
 
 namespace MvxScaffolding.UI.ViewModels
 {
-    public class PlatformOptionsViewModel : IViewModel
+    public class PlatformOptionsViewModel : BaseViewModel
     {
         public PlatformOptionsViewModel(WizardOptionViewModel options)
         {

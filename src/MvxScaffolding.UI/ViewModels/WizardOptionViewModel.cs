@@ -8,7 +8,7 @@ using MaterialDesignThemes.Wpf;
 
 namespace MvxScaffolding.UI.ViewModels
 {
-    public class WizardOptionViewModel : IViewModel, INotifyPropertyChanged
+    public class WizardOptionViewModel : BaseViewModel
     {
         private string _appName;
 
@@ -309,13 +309,6 @@ namespace MvxScaffolding.UI.ViewModels
             HasUwp = false;
             UwpIncludeIcon = PackIconKind.Check;
 
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void OnPropertyChanged(string propName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }
     }
 }

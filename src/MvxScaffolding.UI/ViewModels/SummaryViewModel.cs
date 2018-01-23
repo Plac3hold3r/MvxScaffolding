@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MvxScaffolding.UI.ViewModels
 {
-    public class SummaryViewModel : IViewModel
+    public class SummaryViewModel : BaseViewModel
     {
         public SummaryViewModel(WizardOptionViewModel options)
         {
