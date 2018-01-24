@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,8 @@ namespace MvxScaffolding.UI.ViewModels
         public ICommand ForwardCommand { get; }
 
         public ICommand BackCommand { get; }
+
+        public ICommand GoToGitHubCommand { get; }
 
         private int _selectedViewModelIndex;
 
@@ -38,6 +41,7 @@ namespace MvxScaffolding.UI.ViewModels
         {
             ForwardCommand = new RelayCommand(NavigateForward);
             BackCommand = new RelayCommand(NavigateBackward);
+            GoToGitHubCommand = new RelayCommand(GoToGitHubLink);
 
             var options = new WizardOptionViewModel();
 
@@ -66,6 +70,11 @@ namespace MvxScaffolding.UI.ViewModels
         {
             if (SelectedViewModelIndex - 1 >= 0)
                 SelectedNavigationalItem = _navigationalViewModels[--SelectedViewModelIndex];
+        }
+
+        private void GoToGitHubLink()
+        {
+            Process.Start("https://github.com/Plac3hold3r/MvxScaffolding");
         }
     }
 }

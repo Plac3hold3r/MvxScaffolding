@@ -47,10 +47,11 @@
 
     <metro:MetroWindow.RightWindowCommands>
         <metro:WindowCommands>
-            <Button>
+            <Button Command="{Binding GoToGitHubCommand}">
                 <materialDesign:PackIcon Width="22"
-                                          Height="22"
-                                          Kind="GithubCircle" />
+                                         Height="22"
+                                         Kind="GithubCircle"
+                                         ToolTip="MvxScaffolding on GitHub"/>
             </Button>
         </metro:WindowCommands>
     </metro:MetroWindow.RightWindowCommands>

@@ -53,7 +53,8 @@
 
                         <Button Style="{DynamicResource MaterialDesignFlatButton}"
                                 Grid.Row="1"
-                                HorizontalAlignment="Stretch">
+                                HorizontalAlignment="Stretch"
+                                Command="{Binding GoToGitHubCommand}">
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Kind="GithubCircle" VerticalAlignment="Center"/>
                                 <TextBlock Margin="6 0 0 0" VerticalAlignment="Center">GitHub</TextBlock>
@@ -62,7 +63,8 @@
                         <Button Style="{DynamicResource MaterialDesignFlatButton}"
                                 Grid.Row="1"
                                 Grid.Column="1"
-                                HorizontalAlignment="Stretch">
+                                HorizontalAlignment="Stretch"
+                                Command="{Binding GoToGitHubPrivacyPolicyCommand}">
                             <StackPanel Orientation="Horizontal" >
                                 <materialDesign:PackIcon Kind="Lock" VerticalAlignment="Center"/>
                                 <TextBlock Margin="6 0 0 0" VerticalAlignment="Center">Privacy Policy</TextBlock>
