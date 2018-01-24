@@ -146,7 +146,8 @@
   <ItemGroup>
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Converters\ActiveColorZoneModeConverter.cs" />
-    <Compile Include="Converters\HighlightColorConverter.cs" />
+    <Compile Include="Converters\SummaryHighlightColorConverter.cs" />
+    <Compile Include="Converters\SectionHighlightColorConverter.cs" />
     <Compile Include="Converters\StringToVisibilityConverter.cs" />
     <Compile Include="Helpers\MvxScaffoldingContext.cs" />
     <Compile Include="Helpers\TemplateType.cs" />

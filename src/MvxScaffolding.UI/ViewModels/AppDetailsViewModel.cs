@@ -33,12 +33,6 @@ namespace MvxScaffolding.UI.ViewModels
             set { _mvvmCrossVersion = value; OnPropertyChanged(nameof(MvvmCrossVersion)); }
         }
 
-        public bool IsNativeTemplate
-            => MvxScaffoldingContext.TemplateType == TemplateType.MvxNative;
-
-        public string TemplateTypeName
-            => IsNativeTemplate ? "Native" : "Forms";
-
         public AppDetailsViewModel(WizardOptionViewModel options)
         {
             Options = options;

@@ -7,21 +7,264 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              Background="{DynamicResource MaterialDesignPaper}"
-             d:DesignHeight="600" d:DesignWidth="950">
+             d:DesignHeight="700" d:DesignWidth="950">
 
     <UserControl.Resources>
         <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
     </UserControl.Resources>
 
     <Grid>
-        <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
-            <materialDesign:Card Margin="8" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <StackPanel Margin="16">
-                    <TextBlock FontWeight="Bold" >Application</TextBlock>
-                    <TextBlock Margin="0 4 0 0"
-                             Text="{Binding Options.AppName}"></TextBlock>
-                </StackPanel>
-            </materialDesign:Card>
-        </materialDesign:TransitioningContent>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ItemsControl>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows="2" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                
+                <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:1}">
+                    <materialDesign:Card Margin="8" Width="380" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                        <StackPanel>
+                            <materialDesign:ColorZone Mode="{Binding IsNativeTemplate, Converter={StaticResource ActiveColorZoneModeConverter}}" VerticalAlignment="Stretch">
+                                <TextBlock Margin="16" FontWeight="Medium" Style="{StaticResource MaterialDesignSubheadingTextBlock}">Application</TextBlock>
+                            </materialDesign:ColorZone>
+                            <StackPanel Margin="16">
+                                <DockPanel HorizontalAlignment="Stretch">
+                                    <TextBlock>Identifier</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                       Foreground="{StaticResource PrimaryColorBrush}"
+                                       Text="{Binding Options.AppId}"
+                                       HorizontalAlignment="Right"/>
+                                </DockPanel>
+                                <DockPanel Margin="0 4 0 0"
+                               HorizontalAlignment="Stretch">
+                                    <TextBlock>Name</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                   Text="{Binding Options.AppName}"
+                                       Foreground="{StaticResource PrimaryColorBrush}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                                <DockPanel Margin="0 4 0 0"
+                               HorizontalAlignment="Stretch">
+                                    <TextBlock>Project Grouping</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                   Text="{Binding Options.SelectedProjectGrouping}"
+                                       Foreground="{StaticResource PrimaryColorBrush}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                                <DockPanel Margin="0 4 0 0"
+                               HorizontalAlignment="Stretch">
+                                    <TextBlock>EditorConfig</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                               Text="{Binding Options.HasEditorConfig}"
+                                               Foreground="{Binding Options.HasEditorConfig, Converter={StaticResource SummaryHighlightColorConverter}}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+
+                            </StackPanel>
+                        </StackPanel>
+                    </materialDesign:Card>
+                </materialDesign:TransitioningContent>
+
+                <materialDesign:TransitioningContent OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}"
+                                                     OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:1.2}">
+                    <materialDesign:Card  Margin="8" Width="380" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <StackPanel>
+                            <materialDesign:ColorZone Mode="{Binding IsNativeTemplate, Converter={StaticResource ActiveColorZoneModeConverter}}" VerticalAlignment="Stretch">
+                                <StackPanel  Margin="16" Orientation="Horizontal">
+                                    <Image Source="../Resources/Images/mvxscaffolding_logo_transparent.png" Height="20" Width="20" Stretch="Uniform" VerticalAlignment="Center"/>
+                                    <TextBlock Margin="8 0" FontWeight="Medium" Style="{StaticResource MaterialDesignSubheadingTextBlock}" >Core</TextBlock>
+                                </StackPanel>
+                            </materialDesign:ColorZone>
+                            <StackPanel Margin="16">
+                                <DockPanel  HorizontalAlignment="Stretch">
+                                    <TextBlock>.NET Standard</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                               Foreground="{StaticResource PrimaryColorBrush}"
+                                   Text="{Binding Options.SelectedNetStandard}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                                <DockPanel Margin="0 4 0 0"
+                               HorizontalAlignment="Stretch">
+                                    <TextBlock>Unit Test Project</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                   Text="{Binding Options.HasCoreUnitTestProject}"
+                                               Foreground="{Binding Options.HasCoreUnitTestProject, Converter={StaticResource SummaryHighlightColorConverter}}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </materialDesign:Card>
+                </materialDesign:TransitioningContent>
+            </ItemsControl>
+        </ScrollViewer>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="1">
+            <ItemsControl>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows="3" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}"
+                                                     Visibility="{Binding Options.HasAndroid, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <materialDesign:Card Width="380" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel>
+                            <materialDesign:ColorZone Mode="{Binding IsNativeTemplate, Converter={StaticResource ActiveColorZoneModeConverter}}" VerticalAlignment="Stretch">
+                                <StackPanel  Margin="16" Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Android" Height="20" Width="20"
+                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                    <TextBlock Margin="8 0" FontWeight="Medium" Style="{StaticResource MaterialDesignSubheadingTextBlock}" >Android</TextBlock>
+                                </StackPanel>
+                            </materialDesign:ColorZone>
+                            <StackPanel Margin="16">
+                                <DockPanel   HorizontalAlignment="Stretch">
+                                    <TextBlock>Min SDK version</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                               Foreground="{StaticResource PrimaryColorBrush}"
+                                   Text="{Binding Options.SelectedMinAndroidSDK}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                                <DockPanel Margin="0 4 0 0"
+                               HorizontalAlignment="Stretch">
+                                    <TextBlock>Unit Test Project</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                   Text="{Binding Options.HasAndroidUnitTestProject}"
+                                               Foreground="{Binding Options.HasAndroidUnitTestProject, Converter={StaticResource SummaryHighlightColorConverter}}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                                <DockPanel Margin="0 4 0 0"
+                               HorizontalAlignment="Stretch">
+                                    <TextBlock>UI Test Project</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                   Text="{Binding Options.HasAndroidUiTestProject}"
+                                               Foreground="{Binding Options.HasAndroidUiTestProject, Converter={StaticResource SummaryHighlightColorConverter}}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                                <DockPanel Margin="0 4 0 0"
+                               HorizontalAlignment="Stretch">
+                                    <TextBlock>XML Layouts</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                               Foreground="{Binding Options.HasAndroidXml, Converter={StaticResource SummaryHighlightColorConverter}}"
+                                   Text="{Binding Options.HasAndroidXml}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </materialDesign:Card>
+                </materialDesign:TransitioningContent>
+
+                <materialDesign:TransitioningContent OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}"
+                                                     OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}"
+                                                     Visibility="{Binding Options.HasIos, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <materialDesign:Card  Width="380" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel>
+                            <materialDesign:ColorZone Mode="{Binding IsNativeTemplate, Converter={StaticResource ActiveColorZoneModeConverter}}" VerticalAlignment="Stretch">
+                                <StackPanel  Margin="16" Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Apple" Height="20" Width="20"
+                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                    <TextBlock Margin="8 0" FontWeight="Medium" Style="{StaticResource MaterialDesignSubheadingTextBlock}" >iOS</TextBlock>
+                                </StackPanel>
+                            </materialDesign:ColorZone>
+                            <StackPanel Margin="16">
+                                <DockPanel  HorizontalAlignment="Stretch">
+                                    <TextBlock>Min SDK version</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                               Foreground="{StaticResource PrimaryColorBrush}"
+                                   Text="{Binding Options.SelectedMinIosSDK}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                                <DockPanel Margin="0 4 0 0"
+                               HorizontalAlignment="Stretch">
+                                    <TextBlock>Unit Test Project</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                               Foreground="{Binding Options.HasIosUnitTestProject, Converter={StaticResource SummaryHighlightColorConverter}}"
+                                   Text="{Binding Options.HasIosUnitTestProject}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                                <DockPanel Margin="0 4 0 0"
+                               HorizontalAlignment="Stretch">
+                                    <TextBlock>UI Test Project</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                   Text="{Binding Options.HasIosUiTestProject}"
+                                               Foreground="{Binding Options.HasIosUiTestProject, Converter={StaticResource SummaryHighlightColorConverter}}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                                <DockPanel Margin="0 4 0 0"
+                               HorizontalAlignment="Stretch">
+                                    <TextBlock>Fluent Layouts</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                   Text="{Binding Options.HasIosFluentLayout}"
+                                               Foreground="{Binding Options.HasIosFluentLayout, Converter={StaticResource SummaryHighlightColorConverter}}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                                <DockPanel Margin="0 4 0 0"
+                               HorizontalAlignment="Stretch">
+                                    <TextBlock>Hyperion</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                   Text="{Binding Options.HasIosHyperion}"
+                                               Foreground="{Binding Options.HasIosHyperion, Converter={StaticResource SummaryHighlightColorConverter}}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </materialDesign:Card>
+                </materialDesign:TransitioningContent>
+
+                <materialDesign:TransitioningContent OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}"
+                                                     Visibility="{Binding Options.HasUwp, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                     OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
+                    <materialDesign:Card Width="380" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel>
+                            <materialDesign:ColorZone Mode="{Binding IsNativeTemplate, Converter={StaticResource ActiveColorZoneModeConverter}}" VerticalAlignment="Stretch">
+                                <StackPanel  Margin="16" Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Windows" Height="20" Width="20"
+                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                    <TextBlock Margin="8 0" FontWeight="Medium" Style="{StaticResource MaterialDesignSubheadingTextBlock}" >UWP</TextBlock>
+                                </StackPanel>
+                            </materialDesign:ColorZone>
+                            <StackPanel Margin="16">
+                                <DockPanel HorizontalAlignment="Stretch">
+                                    <TextBlock>Description</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                               Foreground="{StaticResource PrimaryColorBrush}"
+                                   Text="{Binding Options.UwpDescription}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                                <DockPanel Margin="0 4 0 0"
+                               HorizontalAlignment="Stretch">
+                                    <TextBlock>Min SDK version</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                               Foreground="{StaticResource PrimaryColorBrush}"
+                                   Text="{Binding Options.SelectedMinUwpSDK}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                                <DockPanel Margin="0 4 0 0"
+                               HorizontalAlignment="Stretch">
+                                    <TextBlock>Unit Test Project</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                   Text="{Binding Options.HasUwpUnitTestProject}"
+                                               Foreground="{Binding Options.HasUwpUnitTestProject, Converter={StaticResource SummaryHighlightColorConverter}}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                                <DockPanel Margin="0 4 0 0"
+                               HorizontalAlignment="Stretch">
+                                    <TextBlock>UI Test Project</TextBlock>
+                                    <TextBlock Margin="0 4 0 0"
+                                   Text="{Binding Options.HasUwpUiTestProject}"
+                                               Foreground="{Binding Options.HasUwpUiTestProject, Converter={StaticResource SummaryHighlightColorConverter}}"
+                                   HorizontalAlignment="Right"/>
+                                </DockPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </materialDesign:Card>
+                </materialDesign:TransitioningContent>
+            </ItemsControl>
+        </ScrollViewer>
     </Grid>
 </UserControl>

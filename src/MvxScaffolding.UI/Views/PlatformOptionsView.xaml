@@ -7,7 +7,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d"
              Background="{DynamicResource MaterialDesignPaper}"
-             d:DesignHeight="600" d:DesignWidth="950">
+             d:DesignHeight="700" d:DesignWidth="950">
 
     <UserControl.Resources>
         <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
@@ -32,7 +32,7 @@
                         <Image Source="../Resources/Images/mvxscaffolding_logo_transparent.png" Height="140" Width="196" Stretch="Uniform" />
                     </materialDesign:ColorZone>
                     <StackPanel Grid.Row="1" Margin="8 24 8 0" >
-                        <TextBlock FontWeight="Bold">Core</TextBlock>
+                        <TextBlock FontWeight="Medium" Style="{StaticResource MaterialDesignSubheadingTextBlock}">Core</TextBlock>
                     </StackPanel>
                     <Grid Margin="8" HorizontalAlignment="Stretch" Grid.Row="2" Height="180">
                         <Grid.RowDefinitions>
@@ -106,7 +106,7 @@
                         <materialDesign:PackIcon Kind="{Binding Options.AndroidIncludeIcon}" />
                     </Button>
                     <StackPanel Grid.Row="1" Margin="8 24 8 0" >
-                        <TextBlock FontWeight="Bold">Android</TextBlock>
+                        <TextBlock FontWeight="Medium" Style="{StaticResource MaterialDesignSubheadingTextBlock}">Android</TextBlock>
                     </StackPanel>
                     <Grid Margin="8" HorizontalAlignment="Stretch" Grid.Row="2" Height="180">
                         <Grid.RowDefinitions>
@@ -207,7 +207,7 @@
                         <materialDesign:PackIcon Kind="{Binding Options.IosIncludeIcon}" />
                     </Button>
                     <StackPanel Grid.Row="1" Margin="8 24 8 0" >
-                        <TextBlock FontWeight="Bold">iOS</TextBlock>
+                        <TextBlock FontWeight="Medium" Style="{StaticResource MaterialDesignSubheadingTextBlock}">iOS</TextBlock>
                     </StackPanel>
                     <Grid Margin="8" HorizontalAlignment="Stretch" Grid.Row="2" Height="180">
                         <Grid.RowDefinitions>
@@ -322,7 +322,7 @@
                         <materialDesign:PackIcon Kind="{Binding Options.UwpIncludeIcon}" />
                     </Button>
                     <StackPanel Grid.Row="1" Margin="8 24 8 0" >
-                        <TextBlock FontWeight="Bold">Windows</TextBlock>
+                        <TextBlock FontWeight="Medium" Style="{StaticResource MaterialDesignSubheadingTextBlock}">Windows</TextBlock>
                     </StackPanel>
                     <Grid Margin="8" HorizontalAlignment="Stretch" Grid.Row="2" Height="180">
                         <Grid.RowDefinitions>

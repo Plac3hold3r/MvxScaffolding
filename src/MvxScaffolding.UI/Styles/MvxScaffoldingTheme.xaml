@@ -30,8 +30,10 @@
     </ResourceDictionary.MergedDictionaries>
 
     <converters:ActiveColorZoneModeConverter x:Key="ActiveColorZoneModeConverter"/>
-    <converters:HighlightColorConverter x:Key="HighlightColorConverter"/>
+    <converters:SectionHighlightColorConverter x:Key="SectionHighlightColorConverter"/>
+    <converters:SummaryHighlightColorConverter x:Key="SummaryHighlightColorConverter"/>
     <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
+    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
     <Style x:Key="MaterialDesignFloatingActionMiniPrimaryButton" TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFloatingActionMiniDarkButton}">
         <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}"/>

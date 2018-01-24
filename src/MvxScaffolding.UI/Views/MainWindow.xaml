@@ -12,10 +12,10 @@
         Icon="../Resources/Images/mvxscaffolding_logo_transparent.png"
         Title="MvxScaffolding"
         ShowIconOnTitleBar="True"
-        Height="600"
+        Height="700"
         Width="950"
         MinWidth="950"
-        MinHeight="600"
+        MinHeight="700"
         WindowStartupLocation="CenterScreen"
         TitleForeground="White"
         TitleCharacterCasing="Normal"
@@ -73,27 +73,29 @@
             </Grid.ColumnDefinitions>
             <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
                        HorizontalAlignment="Center"
-                       Foreground="{Binding SelectedViewModelIndex, Converter={StaticResource HighlightColorConverter}, ConverterParameter=0}"
+                       Foreground="{Binding SelectedViewModelIndex, Converter={StaticResource SectionHighlightColorConverter}, ConverterParameter=0}"
                        Grid.Column="0">App Details</TextBlock>
             <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
                        HorizontalAlignment="Center"
                        Grid.Column="1">></TextBlock>
             <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
                        HorizontalAlignment="Center"
-                       Foreground="{Binding SelectedViewModelIndex, Converter={StaticResource HighlightColorConverter}, ConverterParameter=1}"
+                       Foreground="{Binding SelectedViewModelIndex, Converter={StaticResource SectionHighlightColorConverter}, ConverterParameter=1}"
                        Grid.Column="2">Platforms Options</TextBlock>
             <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
                        HorizontalAlignment="Center"
                        Grid.Column="3">></TextBlock>
             <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
                        HorizontalAlignment="Center"
-                       Foreground="{Binding SelectedViewModelIndex, Converter={StaticResource HighlightColorConverter}, ConverterParameter=2}"
+                       Foreground="{Binding SelectedViewModelIndex, Converter={StaticResource SectionHighlightColorConverter}, ConverterParameter=2}"
                        Grid.Column="4">Summary</TextBlock>
         </Grid>
 
         <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0 0 0 1"/>
 
         <ContentControl x:Name="Pages" DockPanel.Dock="Right" Content="{Binding SelectedNavigationalItem.ViewModel}" Grid.Row="1"/>
+
+        <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0 0 0 1" Grid.Row="2" VerticalAlignment="Top"/>
 
         <StackPanel HorizontalAlignment="Right"  Orientation="Horizontal" Grid.Row="2">
 

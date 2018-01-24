@@ -17,7 +17,7 @@ namespace MvxScaffolding.UI.Wizards
     {
         protected MvxScaffoldingBase(TemplateType templateType)
         {
-            MvxScaffoldingContext.TemplateType = templateType;
+            MvxScaffoldingContext.CurrentTemplateType = templateType;
         }
 
         public void BeforeOpeningFile(ProjectItem projectItem)

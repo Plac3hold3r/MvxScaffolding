@@ -16,7 +16,7 @@ namespace MvxScaffolding.UI.Views
 
             DataContext = new MainViewModel();
 
-            Brush themeBrush = MvxScaffoldingContext.TemplateType == TemplateType.MvxNative
+            Brush themeBrush = MvxScaffoldingContext.CurrentTemplateType == TemplateType.MvxNative
                 ? (Brush)FindResource("PrimaryColorBrush")
                 : (Brush)FindResource("AccentHueColorBrush");
 
