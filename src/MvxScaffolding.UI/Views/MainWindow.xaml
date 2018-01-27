@@ -32,6 +32,8 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
+                <ResourceDictionary Source="/MvxScaffolding.UI;component/DataTemplates/SimpleInfoDataTemplate.xaml" />
+                <ResourceDictionary Source="/MvxScaffolding.UI;component/DataTemplates/AboutDataTemplate.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModels:AppDetailsViewModel}">
@@ -42,34 +44,6 @@
             </DataTemplate>
             <DataTemplate DataType="{x:Type viewModels:SummaryViewModel}">
                 <local:SummaryView />
-            </DataTemplate>
-            <DataTemplate DataType="{x:Type dialogs:SimpleInfoViewModel}">
-                <StackPanel Width="300" Margin="16">
-                    <TextBlock
-                        FontWeight="Medium"
-                        Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                        Text="{Binding Title}" />
-                    <TextBlock
-                        Margin="0,12,0,0"
-                        Text="{Binding Message}"
-                        TextWrapping="WrapWithOverflow" />
-                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                        <Button
-                            Margin="0,8,8,0"
-                            Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
-                            CommandParameter="{Binding ReadMoreLink}"
-                            Style="{DynamicResource MaterialDesignFlatButton}"
-                            Visibility="{Binding ReadMoreLink, Converter={StaticResource StringToVisibilityConverter}}">
-                            MORE DETAILS
-                        </Button>
-                        <Button
-                            Margin="0,8,8,0"
-                            Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
-                            Style="{DynamicResource MaterialDesignFlatButton}">
-                            CLOSE
-                        </Button>
-                    </StackPanel>
-                </StackPanel>
             </DataTemplate>
         </ResourceDictionary>
     </Window.Resources>
@@ -170,6 +144,21 @@
                     Content="{Binding SelectedNavigationalItem.PrimaryActionText}"
                     Style="{StaticResource MaterialDesignRaisedButton}" />
             </StackPanel>
+
+            <Button
+                Grid.Row="2"
+                Margin="8,0,0,0"
+                HorizontalAlignment="Left"
+                Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                Style="{DynamicResource MaterialDesignFlatButton}">
+                <Button.CommandParameter>
+                    <dialogs:AboutViewModel />
+                </Button.CommandParameter>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon VerticalAlignment="Center" Kind="Information" />
+                    <TextBlock Margin="6,0,0,0" VerticalAlignment="Center">ABOUT</TextBlock>
+                </StackPanel>
+            </Button>
 
         </Grid>
     </materialDesign:DialogHost>

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using MvxScaffolding.UI.Commands;
 using MvxScaffolding.UI.Helpers;
+using MvxScaffolding.UI.Properties;
 
 namespace MvxScaffolding.UI.ViewModels
 {
@@ -74,7 +75,7 @@ namespace MvxScaffolding.UI.ViewModels
 
         private void GoToGitHubLink()
         {
-            Process.Start("https://github.com/Plac3hold3r/MvxScaffolding");
+            Process.Start(Settings.Default.GitHubUri);
         }
     }
 }

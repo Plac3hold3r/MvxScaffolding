@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using MvxScaffolding.UI.Commands;
 using MvxScaffolding.UI.Helpers;
+using MvxScaffolding.UI.Properties;
 
 namespace MvxScaffolding.UI.ViewModels
 {
@@ -17,34 +18,12 @@ namespace MvxScaffolding.UI.ViewModels
 
         public ICommand GoToGitHubPrivacyPolicyCommand { get; }
 
-        public ICommand AboutCommand { get; }
-
-        private string _appVersion;
-
-        public string AppVersion
-        {
-            get => _appVersion;
-            set { _appVersion = value; OnPropertyChanged(nameof(AppVersion)); }
-        }
-
-        private string _mvvmCrossVersion;
-
-        public string MvvmCrossVersion
-        {
-            get => _mvvmCrossVersion;
-            set { _mvvmCrossVersion = value; OnPropertyChanged(nameof(MvvmCrossVersion)); }
-        }
-
         public AppDetailsViewModel(WizardOptionViewModel options)
         {
             Options = options;
 
             GoToGitHubCommand = new RelayCommand(GoToGitHubLink);
             GoToGitHubPrivacyPolicyCommand = new RelayCommand(GoToGitHubPrivacyPolicy);
-            AboutCommand = new RelayCommand(NavigateToAbout);
-
-            AppVersion = "0.4.5";
-            MvvmCrossVersion = "5.6.3";
         }
 
         public WizardOptionViewModel Options { get; private set; }
@@ -52,17 +31,12 @@ namespace MvxScaffolding.UI.ViewModels
         private void GoToGitHubPrivacyPolicy()
         {
             // TODO [JF] :: get the correct policy Uri
-            Process.Start("https://github.com/Plac3hold3r/MvxScaffolding");
+            Process.Start(Settings.Default.PrivacyPolicyUri);
         }
 
         private void GoToGitHubLink()
         {
-            Process.Start("https://github.com/Plac3hold3r/MvxScaffolding");
-        }
-
-        private void NavigateToAbout()
-        {
-
+            Process.Start(Settings.Default.GitHubUri);
         }
     }
 }

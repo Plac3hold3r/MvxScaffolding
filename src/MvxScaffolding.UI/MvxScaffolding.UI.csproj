@@ -152,9 +152,15 @@
     <Compile Include="Helpers\MvxScaffoldingContext.cs" />
     <Compile Include="Helpers\TemplateType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Styles\MvxScaffoldingColorResource.cs" />
     <Compile Include="ViewModels\AppDetailsViewModel.cs" />
     <Compile Include="ViewModels\!Base\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Dialogs\AboutViewModel.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\NavigationalViewModel.cs" />
@@ -181,6 +187,14 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Page Include="DataTemplates\AboutDataTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTemplates\SimpleInfoDataTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Styles\MvxScaffoldingColors.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -213,6 +227,10 @@
     <None Include="key.snk" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

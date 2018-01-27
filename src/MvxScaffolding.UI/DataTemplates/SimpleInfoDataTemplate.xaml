@@ -1,0 +1,39 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dialogs="clr-namespace:MvxScaffolding.UI.ViewModels.Dialogs"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <DataTemplate DataType="{x:Type dialogs:SimpleInfoViewModel}">
+        <StackPanel Width="300" Margin="16">
+            <TextBlock
+                FontWeight="Medium"
+                Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                Text="{Binding Title}" />
+            <TextBlock
+                Margin="0,12,0,0"
+                Text="{Binding Message}"
+                TextWrapping="WrapWithOverflow" />
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button
+                    Margin="0,8,8,0"
+                    Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                    CommandParameter="{Binding ReadMoreLink}"
+                    Style="{DynamicResource MaterialDesignFlatButton}"
+                    Visibility="{Binding ReadMoreLink, Converter={StaticResource StringToVisibilityConverter}}">
+                    MORE DETAILS
+                </Button>
+                <Button
+                    Margin="0,8,8,0"
+                    Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                    Style="{DynamicResource MaterialDesignFlatButton}">
+                    CLOSE
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+</ResourceDictionary>
