@@ -228,7 +228,7 @@
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "flat",
-      "description": "The grouping for project into folder inside of the solution.",
+      "description": "The grouping for projects into folders inside of the solution.",
       "choices": [
         {
           "choice": "flat",
@@ -465,7 +465,7 @@
     "HasHyperion": {
       "type": "parameter",
       "datatype": "bool",
-      "description": "Whether to include Hyperion, in app design review tool, in the iOS project.",
+      "description": "Whether to include Hyperion, an in app design review tool, in the iOS project.",
       "defaultValue": "false"
     },
     /*
