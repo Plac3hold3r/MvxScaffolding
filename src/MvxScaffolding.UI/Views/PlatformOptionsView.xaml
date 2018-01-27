@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MvxScaffolding.UI.Views"
+             xmlns:dialogs="clr-namespace:MvxScaffolding.UI.ViewModels.Dialogs"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d"
              Background="{DynamicResource MaterialDesignPaper}"
@@ -19,7 +20,7 @@
                 <UniformGrid Columns="4" />
             </ItemsPanelTemplate>
         </ItemsControl.ItemsPanel>
-        
+
         <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
             <materialDesign:Card Margin="8" Width="230" HorizontalAlignment="Center">
                 <Grid>
@@ -138,6 +139,8 @@
                             <TextBlock VerticalAlignment="Center"
                                    HorizontalAlignment="Left">
                                 <Hyperlink IsEnabled="{Binding Options.HasAndroid}"
+                                           TextDecorations="None"
+                                           Cursor="Arrow"
                                            Style="{StaticResource MaterialDesignBody1Hyperlink}">Unit Test Project</Hyperlink>
                             </TextBlock>
                             <ToggleButton Margin="8 0 0 0"
@@ -151,6 +154,8 @@
                             <TextBlock VerticalAlignment="Center"
                                    HorizontalAlignment="Left">
                                 <Hyperlink IsEnabled="{Binding Options.HasAndroid}"
+                                           TextDecorations="None"
+                                           Cursor="Arrow"
                                            Style="{StaticResource MaterialDesignBody1Hyperlink}">UI Test Project</Hyperlink>
                             </TextBlock>
                             <ToggleButton Margin="8 0 0 0"
@@ -164,7 +169,12 @@
                             <TextBlock VerticalAlignment="Center"
                                    HorizontalAlignment="Left">
                                 <Hyperlink IsEnabled="{Binding Options.HasAndroid}"
-                                           Style="{StaticResource MaterialDesignBody1Hyperlink}">XML Layouts
+                                           TextDecorations="None"
+                                           Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                           Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}">
+                                    <Hyperlink.CommandParameter>
+                                        <dialogs:SimpleInfoViewModel Title="XML Layouts" Message="Enable to use XML layouts instead of Xamarin default AXML layouts."/>
+                                    </Hyperlink.CommandParameter> XML Layouts
                                     <materialDesign:PackIcon Kind="InformationOutline"
                                                  VerticalAlignment="Center"
                                                  Margin="4 0" />
@@ -250,6 +260,8 @@
                             <TextBlock VerticalAlignment="Center"
                                    HorizontalAlignment="Left">
                                 <Hyperlink IsEnabled="{Binding Options.HasIos}"
+                                           TextDecorations="None"
+                                           Cursor="Arrow"
                                            Style="{StaticResource MaterialDesignBody1Hyperlink}">Unit Test Project</Hyperlink>
                             </TextBlock>
                             <ToggleButton Margin="8 0 0 0"
@@ -263,6 +275,8 @@
                             <TextBlock VerticalAlignment="Center"
                                    HorizontalAlignment="Left">
                                 <Hyperlink IsEnabled="{Binding Options.HasIos}"
+                                           TextDecorations="None"
+                                           Cursor="Arrow"
                                            Style="{StaticResource MaterialDesignBody1Hyperlink}">UI Test Project</Hyperlink>
                             </TextBlock>
                             <ToggleButton Margin="8 0 0 0"
@@ -276,7 +290,14 @@
                             <TextBlock VerticalAlignment="Center"
                                    HorizontalAlignment="Left">
                                 <Hyperlink IsEnabled="{Binding Options.HasIos}"
-                                           Style="{StaticResource MaterialDesignBody1Hyperlink}">Fluent Layouts<materialDesign:PackIcon Kind="InformationOutline"
+                                           TextDecorations="None"
+                                           Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                           Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}">
+                                    <Hyperlink.CommandParameter>
+                                        <dialogs:SimpleInfoViewModel Title="Fluent Layouts"
+                                                                     Message="Enable to include FluentLayout, a fluent API for creating constraint-based layouts."
+                                                                     ReadMoreLink="https://github.com/FluentLayout/Cirrious.FluentLayout"/>
+                                    </Hyperlink.CommandParameter>Fluent Layouts<materialDesign:PackIcon Kind="InformationOutline"
                                                  VerticalAlignment="Center"
                                                  Margin="4 0" />
                                 </Hyperlink>
@@ -292,12 +313,19 @@
                             <TextBlock VerticalAlignment="Center"
                                    HorizontalAlignment="Left">
                                 <Hyperlink IsEnabled="{Binding Options.HasIos}"
-                                           Style="{StaticResource MaterialDesignBody1Hyperlink}">Hyperion<materialDesign:PackIcon Kind="InformationOutline"
+                                           TextDecorations="None"
+                                           Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                           Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}">
+                                    <Hyperlink.CommandParameter>
+                                        <dialogs:SimpleInfoViewModel Title="Hyperion"
+                                                                     Message="Enable to include Hyperion, an in app design review tool."
+                                                                     ReadMoreLink="https://github.com/willowtreeapps/Hyperion-iOS"/>
+                                    </Hyperlink.CommandParameter>Hyperion<materialDesign:PackIcon Kind="InformationOutline"
                                                  VerticalAlignment="Center"
                                                  Margin="4 0" />
                                 </Hyperlink>
                             </TextBlock>
-                            
+
                             <ToggleButton Margin="8 0 0 0"
                                           IsChecked="{Binding Options.HasIosHyperion}"
                                           IsEnabled="{Binding Options.HasIos}"
@@ -382,6 +410,8 @@
                             <TextBlock VerticalAlignment="Center"
                                    HorizontalAlignment="Left">
                                 <Hyperlink IsEnabled="{Binding Options.HasUwp}"
+                                           TextDecorations="None"
+                                           Cursor="Arrow"
                                            Style="{StaticResource MaterialDesignBody1Hyperlink}">Unit Test Project</Hyperlink>
                             </TextBlock>
                             <ToggleButton Margin="8 0 0 0"
@@ -395,6 +425,8 @@
                             <TextBlock VerticalAlignment="Center"
                                    HorizontalAlignment="Left">
                                 <Hyperlink IsEnabled="{Binding Options.HasUwp}"
+                                           TextDecorations="None"
+                                           Cursor="Arrow"
                                            Style="{StaticResource MaterialDesignBody1Hyperlink}">UI Test Project</Hyperlink>
                             </TextBlock>
                             <ToggleButton Margin="8 0 0 0"

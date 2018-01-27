@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MvxScaffolding.UI.Views"
+             xmlns:dialogs="clr-namespace:MvxScaffolding.UI.ViewModels.Dialogs"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d"
              Background="{DynamicResource MaterialDesignPaper}"
@@ -117,23 +118,49 @@
                                 </ItemsPanelTemplate>
                             </ComboBox.ItemsPanel>
                         </ComboBox>
-                        <materialDesign:PackIcon Kind="InformationOutline"
-                                                 VerticalAlignment="Center"
-                                                 HorizontalAlignment="Right"
-                                                 Margin="4 0" />
+                        <TextBlock HorizontalAlignment="Right" Margin="0 8 0 0">
+                            <Hyperlink Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                       TextDecorations="None"
+                                   Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}">
+                            <Hyperlink.CommandParameter>
+                                <dialogs:SimpleInfoViewModel Title="Project Grouping"
+                                                             Message="The grouping for projects into folders inside of the solution.&#x0a;&#x0a;• Select &quot;Flat&quot; for when you want all projects to be placed at the root of the solution.&#x0a;&#x0a;• Select &quot;Test Group&quot; for when you want all test projects to be placed in a test folder, other projects are placed at the root of the solution.&#x0a;&#x0a;• Select &quot;Platform&quot; if you want projects to be grouped based on their target platform."/>
+                            </Hyperlink.CommandParameter>
+                            <materialDesign:PackIcon Kind="Information"
+                                                     VerticalAlignment="Center"
+                                                     HorizontalAlignment="Right"
+                                                     Height="20"
+                                                     Width="20"/>
+                            </Hyperlink>
+                        </TextBlock>
                     </DockPanel>
                     <DockPanel Grid.Row="1"
                                 Margin="0 12 0 8"
                                 HorizontalAlignment="Stretch">
                         <TextBlock VerticalAlignment="Center"
-                                   HorizontalAlignment="Left">EditorConfig
-                            <materialDesign:PackIcon Kind="InformationOutline"
-                                                 VerticalAlignment="Center"
-                                                 Margin="4 0" />
+                                   HorizontalAlignment="Left"
+                                   Width="260">EditorConfig
                         </TextBlock>
                         <ToggleButton Margin="8 0 0 0"
                                       IsChecked="{Binding Options.HasEditorConfig}"
-                                      HorizontalAlignment="Right"></ToggleButton>
+                                      HorizontalAlignment="Right"/>
+
+                        <TextBlock HorizontalAlignment="Right">
+                            <Hyperlink Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                       TextDecorations="None"
+                                       Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}">
+                            <Hyperlink.CommandParameter>
+                                <dialogs:SimpleInfoViewModel Title="EditorConfig"
+                                                             Message="Enable to include an EditorConfig file at the root of the solution. EditorConfig is used to define coding styles enforced within Visual Studio."
+                                                             ReadMoreLink="https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options"/>
+                            </Hyperlink.CommandParameter>
+                            <materialDesign:PackIcon Kind="Information"
+                                                     VerticalAlignment="Center"
+                                                     HorizontalAlignment="Right"
+                                                     Height="20"
+                                                     Width="20"/>
+                            </Hyperlink>
+                        </TextBlock>
                     </DockPanel>
                 </StackPanel>
             </materialDesign:Card>

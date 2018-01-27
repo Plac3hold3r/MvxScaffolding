@@ -8,6 +8,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:MvxScaffolding.UI.Views"
         xmlns:viewModels="clr-namespace:MvxScaffolding.UI.ViewModels"
+        xmlns:dialogs="clr-namespace:MvxScaffolding.UI.ViewModels.Dialogs"
         mc:Ignorable="d"
         Icon="../Resources/Images/mvxscaffolding_logo_transparent.png"
         Title="MvxScaffolding"
@@ -42,6 +43,27 @@
             <DataTemplate DataType="{x:Type viewModels:SummaryViewModel}">
                 <local:SummaryView/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type dialogs:SimpleInfoViewModel}">
+                <StackPanel Margin="16" Width="300">
+                    <TextBlock FontWeight="Medium"
+                               Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                               Text="{Binding Title}"/>
+                    <TextBlock Margin="0 12 0 0"
+                               Text="{Binding Message}"
+                               TextWrapping="WrapWithOverflow"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                        <Button Margin="0 8 8 0"
+                                Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                                CommandParameter="{Binding ReadMoreLink}"
+                                Visibility="{Binding ReadMoreLink,
+                                    Converter={StaticResource StringToVisibilityConverter}}"
+                                Style="{DynamicResource MaterialDesignFlatButton}">MORE DETAILS</Button>
+                        <Button Margin="0 8 8 0"
+                                Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                                Style="{DynamicResource MaterialDesignFlatButton}">CLOSE</Button>
+                    </StackPanel>
+                </StackPanel>
+            </DataTemplate>
         </ResourceDictionary>
     </Window.Resources>
 
@@ -56,63 +78,65 @@
         </metro:WindowCommands>
     </metro:MetroWindow.RightWindowCommands>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="auto" />
-        </Grid.RowDefinitions>
+    <materialDesign:DialogHost Identifier="RootDialog" DialogClosingCallback="OnDialogClosing">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
 
-        <Grid Margin="12">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="0.5*" />
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="0.5*" />
-                <ColumnDefinition Width="1*" />
-            </Grid.ColumnDefinitions>
-            <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+            <Grid Margin="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
                        HorizontalAlignment="Center"
                        Foreground="{Binding SelectedViewModelIndex, Converter={StaticResource SectionHighlightColorConverter}, ConverterParameter=0}"
                        Grid.Column="0">App Details</TextBlock>
-            <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
                        HorizontalAlignment="Center"
                        Grid.Column="1">></TextBlock>
-            <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
                        HorizontalAlignment="Center"
                        Foreground="{Binding SelectedViewModelIndex, Converter={StaticResource SectionHighlightColorConverter}, ConverterParameter=1}"
                        Grid.Column="2">Platforms Options</TextBlock>
-            <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
                        HorizontalAlignment="Center"
                        Grid.Column="3">></TextBlock>
-            <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}"
                        HorizontalAlignment="Center"
                        Foreground="{Binding SelectedViewModelIndex, Converter={StaticResource SectionHighlightColorConverter}, ConverterParameter=2}"
                        Grid.Column="4">Summary</TextBlock>
-        </Grid>
+            </Grid>
 
-        <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0 0 0 1"/>
+            <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0 0 0 1"/>
 
-        <ContentControl x:Name="Pages" DockPanel.Dock="Right" Content="{Binding SelectedNavigationalItem.ViewModel}" Grid.Row="1"/>
+            <ContentControl x:Name="Pages" DockPanel.Dock="Right" Content="{Binding SelectedNavigationalItem.ViewModel}" Grid.Row="1"/>
 
-        <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0 0 0 1" Grid.Row="2" VerticalAlignment="Top"/>
+            <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0 0 0 1" Grid.Row="2" VerticalAlignment="Top"/>
 
-        <StackPanel HorizontalAlignment="Right"  Orientation="Horizontal" Grid.Row="2">
+            <StackPanel HorizontalAlignment="Right"  Orientation="Horizontal" Grid.Row="2">
 
-            <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
                     Width="100"
                     Margin="12 8"
                     Content="{Binding SelectedNavigationalItem.SecondaryActionText}"
                     Visibility="{Binding SelectedNavigationalItem.SecondaryActionText, 
                         Converter={StaticResource StringToVisibilityConverter}}"
                     Command="{Binding BackCommand}"/>
-            <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                <Button Style="{StaticResource MaterialDesignRaisedButton}"
                     Width="100"
                     Margin="16"
                     Content="{Binding SelectedNavigationalItem.PrimaryActionText}"
                     Command="{Binding ForwardCommand}" />
-        </StackPanel>
+            </StackPanel>
 
-    </Grid>
+        </Grid>
+    </materialDesign:DialogHost>
 </metro:MetroWindow>
     

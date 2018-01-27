@@ -49,7 +49,7 @@ namespace MvxScaffolding.UI.ViewModels
             {
                 new NavigationalViewModel { SecondaryActionText = string.Empty, ViewModel = new AppDetailsViewModel(options) },
                 new NavigationalViewModel { ViewModel = new PlatformOptionsViewModel(options) },
-                new NavigationalViewModel { PrimaryActionText = "Done", ViewModel = new SummaryViewModel(options) }
+                new NavigationalViewModel { PrimaryActionText = "DONE", ViewModel = new SummaryViewModel(options) }
             };
 
             NavigateFirst();

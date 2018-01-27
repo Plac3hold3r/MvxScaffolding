@@ -155,9 +155,10 @@
     <Compile Include="Styles\MvxScaffoldingColorResource.cs" />
     <Compile Include="ViewModels\AppDetailsViewModel.cs" />
     <Compile Include="ViewModels\!Base\BaseViewModel.cs" />
-    <Compile Include="ViewModels\IViewModel.cs" />
+    <Compile Include="ViewModels\Interfaces\IViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\NavigationalViewModel.cs" />
+    <Compile Include="ViewModels\Dialogs\SimpleInfoViewModel.cs" />
     <Compile Include="ViewModels\WizardOptionViewModel.cs" />
     <Compile Include="ViewModels\PlatformOptionsViewModel.cs" />
     <Compile Include="ViewModels\SummaryViewModel.cs" />

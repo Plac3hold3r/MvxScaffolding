@@ -1,4 +1,5 @@
 ﻿using MvxScaffolding.UI.Helpers;
+using MvxScaffolding.UI.ViewModels.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
