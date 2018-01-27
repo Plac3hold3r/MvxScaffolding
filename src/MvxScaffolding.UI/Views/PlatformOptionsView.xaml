@@ -157,7 +157,7 @@
                                 HorizontalAlignment="Stretch">
                             <TextBlock VerticalAlignment="Center"
                                    HorizontalAlignment="Left">XML Layouts</TextBlock>
-                            <materialDesign:PackIcon Kind="Information"
+                            <materialDesign:PackIcon Kind="InformationOutline"
                                                  VerticalAlignment="Center"
                                                  Margin="4 0" />
                             <ToggleButton Margin="8 0 0 0"
@@ -259,7 +259,7 @@
                                 HorizontalAlignment="Stretch">
                             <TextBlock VerticalAlignment="Center"
                                    HorizontalAlignment="Left">Fluent Layouts</TextBlock>
-                            <materialDesign:PackIcon Kind="Information"
+                            <materialDesign:PackIcon Kind="InformationOutline"
                                                  VerticalAlignment="Center"
                                                  Margin="4 0" />
                             <ToggleButton Margin="8 0 0 0"
@@ -272,7 +272,7 @@
                                 HorizontalAlignment="Stretch">
                             <TextBlock VerticalAlignment="Center"
                                    HorizontalAlignment="Left">Hyperion</TextBlock>
-                            <materialDesign:PackIcon Kind="Information"
+                            <materialDesign:PackIcon Kind="InformationOutline"
                                                  VerticalAlignment="Center"
                                                  Margin="4 0" />
                             <ToggleButton Margin="8 0 0 0"

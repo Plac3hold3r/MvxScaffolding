@@ -17,6 +17,8 @@ namespace MvxScaffolding.UI.ViewModels
 
         public ICommand GoToGitHubPrivacyPolicyCommand { get; }
 
+        public ICommand AboutCommand { get; }
+
         private string _appVersion;
 
         public string AppVersion
@@ -39,6 +41,7 @@ namespace MvxScaffolding.UI.ViewModels
 
             GoToGitHubCommand = new RelayCommand(GoToGitHubLink);
             GoToGitHubPrivacyPolicyCommand = new RelayCommand(GoToGitHubPrivacyPolicy);
+            AboutCommand = new RelayCommand(NavigateToAbout);
 
             AppVersion = "0.4.5";
             MvvmCrossVersion = "5.6.3";
@@ -55,6 +58,11 @@ namespace MvxScaffolding.UI.ViewModels
         private void GoToGitHubLink()
         {
             Process.Start("https://github.com/Plac3hold3r/MvxScaffolding");
+        }
+
+        private void NavigateToAbout()
+        {
+
         }
     }
 }

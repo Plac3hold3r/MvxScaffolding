@@ -44,6 +44,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <TextBlock TextWrapping="Wrap"
                                    Foreground="{DynamicResource MaterialDesignBodyLight}"
@@ -68,6 +69,16 @@
                             <StackPanel Orientation="Horizontal" >
                                 <materialDesign:PackIcon Kind="Lock" VerticalAlignment="Center"/>
                                 <TextBlock Margin="6 0 0 0" VerticalAlignment="Center">Privacy Policy</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button Style="{DynamicResource MaterialDesignFlatButton}"
+                                Grid.Row="2"
+                                Grid.ColumnSpan="2"
+                                HorizontalAlignment="Center"
+                                Command="{Binding AboutCommand}">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="Information" VerticalAlignment="Center"/>
+                                <TextBlock Margin="6 0 0 0" VerticalAlignment="Center">About</TextBlock>
                             </StackPanel>
                         </Button>
                     </Grid>
