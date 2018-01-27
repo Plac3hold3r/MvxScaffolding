@@ -287,7 +287,7 @@ namespace MvxScaffolding.UI.ViewModels
             HasIosUnitTestProject = false;
             HasIosUiTestProject = false;
             HasIosFluentLayout = false;
-            HasIosHyperion = true;
+            HasIosHyperion = false;
 
             MinUwpSDKOptions = new Dictionary<string, string>
             {

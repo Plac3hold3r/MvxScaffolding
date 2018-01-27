@@ -276,7 +276,7 @@ dotnet new mvxnative -n MyXamarinApp --solution-project-grouping platform
 
   -ios-h|--ios-include-hyperion        Whether to include Hyperion, in app design review tool, in the iOS project.
                                        bool - Optional
-                                       Default: true
+                                       Default: false
 
   --uwp-app-description                The UWP application description.
                                        string - Optional

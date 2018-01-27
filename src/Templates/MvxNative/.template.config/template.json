@@ -511,7 +511,7 @@
       "type": "parameter",
       "datatype": "bool",
       "description": "Whether to include Hyperion, in app design review tool, in the iOS project.",
-      "defaultValue": "true"
+      "defaultValue": "false"
     },
     "HasFluentLayouts": {
       "type": "parameter",
