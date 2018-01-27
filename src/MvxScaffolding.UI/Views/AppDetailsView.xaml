@@ -99,26 +99,38 @@
                              Margin="0 4 0 0"
                              Text="{Binding Options.AppId}"></TextBox>
                     <TextBlock FontWeight="Bold" Margin="0 16 0 0">Solution</TextBlock>
-                    <ComboBox Grid.Row="0"
+                    <DockPanel Grid.Row="0"
+                               Margin="0 4 0 0"
+                               HorizontalAlignment="Stretch">
+                        <ComboBox
                               materialDesign:HintAssist.Hint="Project Grouping"
                               ItemsSource="{Binding Options.ProjectGroupingOptions}"
                               SelectedValue="{Binding Options.SelectedProjectGrouping}"
-                              Margin="0 4 0 0"
                               SelectedValuePath="Key"
                               DisplayMemberPath="Value"
+                              Width="300"
                               materialDesign:ComboBoxAssist.ClassicMode="true"
                               Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-                        <ComboBox.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <VirtualizingStackPanel />
-                            </ItemsPanelTemplate>
-                        </ComboBox.ItemsPanel>
-                    </ComboBox>
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel />
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+                        </ComboBox>
+                        <materialDesign:PackIcon Kind="InformationOutline"
+                                                 VerticalAlignment="Center"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="4 0" />
+                    </DockPanel>
                     <DockPanel Grid.Row="1"
                                 Margin="0 12 0 8"
                                 HorizontalAlignment="Stretch">
                         <TextBlock VerticalAlignment="Center"
-                                   HorizontalAlignment="Left">EditorConfig</TextBlock>
+                                   HorizontalAlignment="Left">EditorConfig
+                            <materialDesign:PackIcon Kind="InformationOutline"
+                                                 VerticalAlignment="Center"
+                                                 Margin="4 0" />
+                        </TextBlock>
                         <ToggleButton Margin="8 0 0 0"
                                       IsChecked="{Binding Options.HasEditorConfig}"
                                       HorizontalAlignment="Right"></ToggleButton>

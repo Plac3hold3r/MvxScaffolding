@@ -136,7 +136,10 @@
                                 Margin="0 12 0 0"
                                 HorizontalAlignment="Stretch">
                             <TextBlock VerticalAlignment="Center"
-                                   HorizontalAlignment="Left">Unit Test Project</TextBlock>
+                                   HorizontalAlignment="Left">
+                                <Hyperlink IsEnabled="{Binding Options.HasAndroid}"
+                                           Style="{StaticResource MaterialDesignBody1Hyperlink}">Unit Test Project</Hyperlink>
+                            </TextBlock>
                             <ToggleButton Margin="8 0 0 0"
                                           IsChecked="{Binding Options.HasAndroidUnitTestProject}"
                                           IsEnabled="{Binding Options.HasAndroid}"
@@ -146,7 +149,10 @@
                                 Margin="0 12 0 0"
                                 HorizontalAlignment="Stretch">
                             <TextBlock VerticalAlignment="Center"
-                                   HorizontalAlignment="Left">UI Test Project</TextBlock>
+                                   HorizontalAlignment="Left">
+                                <Hyperlink IsEnabled="{Binding Options.HasAndroid}"
+                                           Style="{StaticResource MaterialDesignBody1Hyperlink}">UI Test Project</Hyperlink>
+                            </TextBlock>
                             <ToggleButton Margin="8 0 0 0"
                                           IsChecked="{Binding Options.HasAndroidUiTestProject}"
                                           IsEnabled="{Binding Options.HasAndroid}"
@@ -156,10 +162,14 @@
                                 Margin="0 12 0 8"
                                 HorizontalAlignment="Stretch">
                             <TextBlock VerticalAlignment="Center"
-                                   HorizontalAlignment="Left">XML Layouts</TextBlock>
-                            <materialDesign:PackIcon Kind="InformationOutline"
+                                   HorizontalAlignment="Left">
+                                <Hyperlink IsEnabled="{Binding Options.HasAndroid}"
+                                           Style="{StaticResource MaterialDesignBody1Hyperlink}">XML Layouts
+                                    <materialDesign:PackIcon Kind="InformationOutline"
                                                  VerticalAlignment="Center"
                                                  Margin="4 0" />
+                                </Hyperlink>
+                            </TextBlock>
                             <ToggleButton Margin="8 0 0 0"
                                           IsChecked="{Binding Options.HasAndroidXml}"
                                           IsEnabled="{Binding Options.HasAndroid}"
@@ -238,7 +248,10 @@
                                 Margin="0 12 0 0"
                                 HorizontalAlignment="Stretch">
                             <TextBlock VerticalAlignment="Center"
-                                   HorizontalAlignment="Left">Unit Test Project</TextBlock>
+                                   HorizontalAlignment="Left">
+                                <Hyperlink IsEnabled="{Binding Options.HasIos}"
+                                           Style="{StaticResource MaterialDesignBody1Hyperlink}">Unit Test Project</Hyperlink>
+                            </TextBlock>
                             <ToggleButton Margin="8 0 0 0"
                                           IsChecked="{Binding Options.HasIosUnitTestProject}"
                                           IsEnabled="{Binding Options.HasIos}"
@@ -248,7 +261,10 @@
                                 Margin="0 12 0 0"
                                 HorizontalAlignment="Stretch">
                             <TextBlock VerticalAlignment="Center"
-                                   HorizontalAlignment="Left">UI Test Project</TextBlock>
+                                   HorizontalAlignment="Left">
+                                <Hyperlink IsEnabled="{Binding Options.HasIos}"
+                                           Style="{StaticResource MaterialDesignBody1Hyperlink}">UI Test Project</Hyperlink>
+                            </TextBlock>
                             <ToggleButton Margin="8 0 0 0"
                                           IsChecked="{Binding Options.HasIosUiTestProject}"
                                           IsEnabled="{Binding Options.HasIos}"
@@ -258,10 +274,13 @@
                                 Margin="0 12 0 0"
                                 HorizontalAlignment="Stretch">
                             <TextBlock VerticalAlignment="Center"
-                                   HorizontalAlignment="Left">Fluent Layouts</TextBlock>
-                            <materialDesign:PackIcon Kind="InformationOutline"
+                                   HorizontalAlignment="Left">
+                                <Hyperlink IsEnabled="{Binding Options.HasIos}"
+                                           Style="{StaticResource MaterialDesignBody1Hyperlink}">Fluent Layouts<materialDesign:PackIcon Kind="InformationOutline"
                                                  VerticalAlignment="Center"
                                                  Margin="4 0" />
+                                </Hyperlink>
+                            </TextBlock>
                             <ToggleButton Margin="8 0 0 0"
                                           IsChecked="{Binding Options.HasIosFluentLayout}"
                                           IsEnabled="{Binding Options.HasIos}"
@@ -271,10 +290,14 @@
                                 Margin="0 12 0 8"
                                 HorizontalAlignment="Stretch">
                             <TextBlock VerticalAlignment="Center"
-                                   HorizontalAlignment="Left">Hyperion</TextBlock>
-                            <materialDesign:PackIcon Kind="InformationOutline"
+                                   HorizontalAlignment="Left">
+                                <Hyperlink IsEnabled="{Binding Options.HasIos}"
+                                           Style="{StaticResource MaterialDesignBody1Hyperlink}">Hyperion<materialDesign:PackIcon Kind="InformationOutline"
                                                  VerticalAlignment="Center"
                                                  Margin="4 0" />
+                                </Hyperlink>
+                            </TextBlock>
+                            
                             <ToggleButton Margin="8 0 0 0"
                                           IsChecked="{Binding Options.HasIosHyperion}"
                                           IsEnabled="{Binding Options.HasIos}"
@@ -357,7 +380,10 @@
                                 Margin="0 12 0 0"
                                 HorizontalAlignment="Stretch">
                             <TextBlock VerticalAlignment="Center"
-                                   HorizontalAlignment="Left">Unit Test Project</TextBlock>
+                                   HorizontalAlignment="Left">
+                                <Hyperlink IsEnabled="{Binding Options.HasUwp}"
+                                           Style="{StaticResource MaterialDesignBody1Hyperlink}">Unit Test Project</Hyperlink>
+                            </TextBlock>
                             <ToggleButton Margin="8 0 0 0"
                                           IsChecked="{Binding Options.HasUwpUnitTestProject}"
                                           IsEnabled="{Binding Options.HasUwp}"
@@ -367,7 +393,10 @@
                                 Margin="0 12 0 8"
                                 HorizontalAlignment="Stretch">
                             <TextBlock VerticalAlignment="Center"
-                                   HorizontalAlignment="Left">UI Test Project</TextBlock>
+                                   HorizontalAlignment="Left">
+                                <Hyperlink IsEnabled="{Binding Options.HasUwp}"
+                                           Style="{StaticResource MaterialDesignBody1Hyperlink}">UI Test Project</Hyperlink>
+                            </TextBlock>
                             <ToggleButton Margin="8 0 0 0"
                                           IsEnabled="{Binding Options.HasUwp}"
                                           IsChecked="{Binding Options.HasUwpUiTestProject}"
