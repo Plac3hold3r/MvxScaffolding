@@ -43,40 +43,70 @@
     <SolidColorBrush x:Key="PrimaryLightColorBrush" Color="{StaticResource Primary300}" />
 
     <SolidColorBrush x:Key="AccentHueColorBrush" Color="{StaticResource Accent500}" />
-    <SolidColorBrush x:Key="AccentHueColorForegroundBrush" Color="{StaticResource Accent500Foreground}" po:Freeze="True" />
+    <SolidColorBrush
+        x:Key="AccentHueColorForegroundBrush"
+        po:Freeze="True"
+        Color="{StaticResource Accent500Foreground}" />
     <SolidColorBrush x:Key="AccentHueDarkColorBrush" Color="{StaticResource Accent700}" />
     <SolidColorBrush x:Key="AccentHueLightColorBrush" Color="{StaticResource Accent200}" />
 
     <SolidColorBrush x:Key="PrimaryTextColorBrush" Color="{StaticResource PrimaryTextColor}" />
     <SolidColorBrush x:Key="SecondaryTextColorBrush" Color="{StaticResource SecondaryTextColor}" />
 
-    <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="{StaticResource Primary200}" po:Freeze="True" />
-    <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="{StaticResource Primary200Foreground}" po:Freeze="True" />
-    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="{StaticResource Primary500}" po:Freeze="True" />
-    <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="{StaticResource Primary500Foreground}" po:Freeze="True" />
-    <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="{StaticResource Primary700}" po:Freeze="True" />
-    <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="{StaticResource Primary700Foreground}" po:Freeze="True" />
+    <SolidColorBrush
+        x:Key="PrimaryHueLightBrush"
+        po:Freeze="True"
+        Color="{StaticResource Primary200}" />
+    <SolidColorBrush
+        x:Key="PrimaryHueLightForegroundBrush"
+        po:Freeze="True"
+        Color="{StaticResource Primary200Foreground}" />
+    <SolidColorBrush
+        x:Key="PrimaryHueMidBrush"
+        po:Freeze="True"
+        Color="{StaticResource Primary500}" />
+    <SolidColorBrush
+        x:Key="PrimaryHueMidForegroundBrush"
+        po:Freeze="True"
+        Color="{StaticResource Primary500Foreground}" />
+    <SolidColorBrush
+        x:Key="PrimaryHueDarkBrush"
+        po:Freeze="True"
+        Color="{StaticResource Primary700}" />
+    <SolidColorBrush
+        x:Key="PrimaryHueDarkForegroundBrush"
+        po:Freeze="True"
+        Color="{StaticResource Primary700Foreground}" />
 
-    <SolidColorBrush x:Key="SecondaryAccentBrush" Color="{StaticResource Accent700}" po:Freeze="True" />
-    <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="{StaticResource Accent700Foreground}" po:Freeze="True" />
+    <SolidColorBrush
+        x:Key="SecondaryAccentBrush"
+        po:Freeze="True"
+        Color="{StaticResource Accent700}" />
+    <SolidColorBrush
+        x:Key="SecondaryAccentForegroundBrush"
+        po:Freeze="True"
+        Color="{StaticResource Accent700Foreground}" />
 
-    <!-- MahApps Brushes -->
-    <SolidColorBrush x:Key="HighlightBrush" Color="{DynamicResource Primary700}"/>
+    <!--  MahApps Brushes  -->
+    <SolidColorBrush x:Key="HighlightBrush" Color="{DynamicResource Primary700}" />
     <SolidColorBrush x:Key="AccentBaseColorBrush" Color="{DynamicResource Primary600}" />
-    <SolidColorBrush x:Key="AccentColorBrush" Color="{DynamicResource Primary500}"/>
-    <SolidColorBrush x:Key="AccentColorBrush2" Color="{DynamicResource Primary400}"/>
-    <SolidColorBrush x:Key="AccentColorBrush3" Color="{DynamicResource Primary300}"/>
-    <SolidColorBrush x:Key="AccentColorBrush4" Color="{DynamicResource Primary200}"/>
-    <SolidColorBrush x:Key="WindowTitleColorBrush" Color="{DynamicResource Primary700}"/>
-    <SolidColorBrush x:Key="AccentSelectedColorBrush" Color="{DynamicResource Primary500Foreground}"/>
-    <LinearGradientBrush x:Key="ProgressBrush" EndPoint="0.001,0.5" StartPoint="1.002,0.5">
-        <GradientStop Color="{DynamicResource Primary700}" Offset="0"/>
-        <GradientStop Color="{DynamicResource Primary300}" Offset="1"/>
+    <SolidColorBrush x:Key="AccentColorBrush" Color="{DynamicResource Primary500}" />
+    <SolidColorBrush x:Key="AccentColorBrush2" Color="{DynamicResource Primary400}" />
+    <SolidColorBrush x:Key="AccentColorBrush3" Color="{DynamicResource Primary300}" />
+    <SolidColorBrush x:Key="AccentColorBrush4" Color="{DynamicResource Primary200}" />
+    <SolidColorBrush x:Key="WindowTitleColorBrush" Color="{DynamicResource Primary700}" />
+    <SolidColorBrush x:Key="AccentSelectedColorBrush" Color="{DynamicResource Primary500Foreground}" />
+    <LinearGradientBrush x:Key="ProgressBrush" StartPoint="1.002,0.5" EndPoint="0.001,0.5">
+        <GradientStop Offset="0" Color="{DynamicResource Primary700}" />
+        <GradientStop Offset="1" Color="{DynamicResource Primary300}" />
     </LinearGradientBrush>
-    <SolidColorBrush x:Key="CheckmarkFill" Color="{DynamicResource Primary500}"/>
-    <SolidColorBrush x:Key="RightArrowFill" Color="{DynamicResource Primary500}"/>
-    <SolidColorBrush x:Key="IdealForegroundColorBrush" Color="{DynamicResource Primary500Foreground}"/>
-    <SolidColorBrush x:Key="IdealForegroundDisabledBrush" Color="{DynamicResource Primary500}" Opacity="0.4"/>
+    <SolidColorBrush x:Key="CheckmarkFill" Color="{DynamicResource Primary500}" />
+    <SolidColorBrush x:Key="RightArrowFill" Color="{DynamicResource Primary500}" />
+    <SolidColorBrush x:Key="IdealForegroundColorBrush" Color="{DynamicResource Primary500Foreground}" />
+    <SolidColorBrush
+        x:Key="IdealForegroundDisabledBrush"
+        Opacity="0.4"
+        Color="{DynamicResource Primary500}" />
     <SolidColorBrush x:Key="MahApps.Metro.Brushes.ToggleSwitchButton.OnSwitchBrush.Win10" Color="{DynamicResource Primary500}" />
     <SolidColorBrush x:Key="MahApps.Metro.Brushes.ToggleSwitchButton.OnSwitchMouseOverBrush.Win10" Color="{DynamicResource Primary400}" />
     <SolidColorBrush x:Key="MahApps.Metro.Brushes.ToggleSwitchButton.ThumbIndicatorCheckedBrush.Win10" Color="{DynamicResource Primary500Foreground}" />

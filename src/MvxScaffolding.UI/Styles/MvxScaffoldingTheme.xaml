@@ -4,16 +4,16 @@
     xmlns:converters="clr-namespace:MvxScaffolding.UI.Converters">
 
     <ResourceDictionary.MergedDictionaries>
-        <!-- Custom Theme -->
+        <!--  Custom Theme  -->
         <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingColors.xaml" />
 
-        <!-- MahApps.Metro resource dictionaries. -->
+        <!--  MahApps.Metro resource dictionaries.  -->
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
 
-        <!-- Material Design -->
+        <!--  Material Design  -->
         <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
@@ -24,21 +24,24 @@
         <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Shadows.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBox.xaml" />
 
-        <!-- Material Design: MahApps Compatibility -->
+        <!--  Material Design: MahApps Compatibility  -->
         <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.MahApps;component/Themes/MaterialDesignTheme.MahApps.Fonts.xaml" />
-        
+
     </ResourceDictionary.MergedDictionaries>
 
-    <converters:ActiveColorZoneModeConverter x:Key="ActiveColorZoneModeConverter"/>
-    <converters:SectionHighlightColorConverter x:Key="SectionHighlightColorConverter"/>
-    <converters:SummaryHighlightColorConverter x:Key="SummaryHighlightColorConverter"/>
-    <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
+    <converters:ActiveColorZoneModeConverter x:Key="ActiveColorZoneModeConverter" />
+    <converters:SectionHighlightColorConverter x:Key="SectionHighlightColorConverter" />
+    <converters:SummaryHighlightColorConverter x:Key="SummaryHighlightColorConverter" />
+    <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
     <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
-    <Style x:Key="MaterialDesignFloatingActionMiniPrimaryButton" TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFloatingActionMiniDarkButton}">
-        <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}"/>
-        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}"/>
+    <Style
+        x:Key="MaterialDesignFloatingActionMiniPrimaryButton"
+        BasedOn="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
+        TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}" />
     </Style>
 
 </ResourceDictionary>
