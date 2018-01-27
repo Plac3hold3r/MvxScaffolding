@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Data;
-using MvxScaffolding.UI.Styles;
 
 namespace MvxScaffolding.UI.Converters
 {
-    public class SectionHighlightColorConverter : IValueConverter
+    public class SectionHighlightColorConverter : IMultiValueConverter
     {
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value is int valueInt
+            if (values[0] is int valueInt
                 && int.TryParse(parameter?.ToString(), out int parameterInt))
                 return valueInt == parameterInt
-                    ? MvxScaffoldingColorResource.PrimaryBrush
-                    : MvxScaffoldingColorResource.MaterialDesignBodyLightBrush;
+                    ? values[1]
+                    : values[2];
 
-            return MvxScaffoldingColorResource.MaterialDesignBodyLightBrush;
+            return values[2];
         }
 
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
         {
             throw new NotSupportedException();
         }

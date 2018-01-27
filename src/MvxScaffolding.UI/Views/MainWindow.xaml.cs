@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Media;
 using MahApps.Metro.Controls;
 using MaterialDesignColors;
@@ -31,6 +32,14 @@ namespace MvxScaffolding.UI.Views
             if (eventArgs.Parameter is string stringParameter && !string.IsNullOrWhiteSpace(stringParameter))
             {
                 Process.Start(stringParameter);
+            }
+        }
+
+        private void OnKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                Close();
             }
         }
     }

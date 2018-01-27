@@ -42,22 +42,25 @@ namespace MvxScaffolding.UI.Wizards
 
         public void RunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, WizardRunKind runKind, object[] customParams)
         {
-            // Close new solution
-            var dte = (DTE)automationObject;
-            var solution = (Solution2)dte.Solution;
-            solution.Close();
-
-            // Delete old directory(in my case VS creating it) and change destination
-            var oldDestinationDirectory = replacementsDictionary["$destinationdirectory$"];
-            if (Directory.Exists(oldDestinationDirectory))
+            if (runKind == WizardRunKind.AsNewProject || runKind == WizardRunKind.AsMultiProject)
             {
-                Directory.Delete(oldDestinationDirectory, true);
+                // Close new solution
+                var dte = (DTE)automationObject;
+                var solution = (Solution2)dte.Solution;
+                solution.Close();
+
+                // Delete old directory and change destination
+                var oldDestinationDirectory = replacementsDictionary["$destinationdirectory$"];
+                if (Directory.Exists(oldDestinationDirectory))
+                {
+                    Directory.Delete(oldDestinationDirectory, true);
+                }
+
+                var newDestinationDirectory = Path.Combine($"{oldDestinationDirectory}", @"..\");
+                replacementsDictionary["$destinationdirectory$"] = Path.GetFullPath(newDestinationDirectory);
+
+                ShowModal(new MainWindow());
             }
-
-            var newDestinationDirectory = Path.Combine($"{oldDestinationDirectory}", @"..\");
-            replacementsDictionary["$destinationdirectory$"] = Path.GetFullPath(newDestinationDirectory);
-
-            ShowModal(new MainWindow());
         }
 
         public bool ShouldAddProjectItem(string filePath)

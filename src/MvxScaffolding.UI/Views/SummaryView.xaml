@@ -69,8 +69,15 @@
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Foreground="{Binding Options.HasEditorConfig, Converter={StaticResource SummaryHighlightColorConverter}}"
-                                    Text="{Binding Options.HasEditorConfig}" />
+                                    Text="{Binding Options.HasEditorConfig}">
+                                    <TextBlock.Foreground>
+                                        <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                            <Binding Path="Options.HasEditorConfig" />
+                                            <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                            <Binding Source="{StaticResource MaterialDesignBody}" />
+                                        </MultiBinding>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
                             </DockPanel>
 
                         </StackPanel>
@@ -116,8 +123,15 @@
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Foreground="{Binding Options.HasCoreUnitTestProject, Converter={StaticResource SummaryHighlightColorConverter}}"
-                                    Text="{Binding Options.HasCoreUnitTestProject}" />
+                                    Text="{Binding Options.HasCoreUnitTestProject}">
+                                    <TextBlock.Foreground>
+                                        <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                            <Binding Path="Options.HasCoreUnitTestProject" />
+                                            <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                            <Binding Source="{StaticResource MaterialDesignBody}" />
+                                        </MultiBinding>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
                             </DockPanel>
                         </StackPanel>
                     </StackPanel>
@@ -166,24 +180,45 @@
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Foreground="{Binding Options.HasAndroidUnitTestProject, Converter={StaticResource SummaryHighlightColorConverter}}"
-                                    Text="{Binding Options.HasAndroidUnitTestProject}" />
+                                    Text="{Binding Options.HasAndroidUnitTestProject}">
+                                    <TextBlock.Foreground>
+                                        <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                            <Binding Path="Options.HasAndroidUnitTestProject" />
+                                            <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                            <Binding Source="{StaticResource MaterialDesignBody}" />
+                                        </MultiBinding>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
                             </DockPanel>
                             <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
                                 <TextBlock>UI Test Project</TextBlock>
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Foreground="{Binding Options.HasAndroidUiTestProject, Converter={StaticResource SummaryHighlightColorConverter}}"
-                                    Text="{Binding Options.HasAndroidUiTestProject}" />
+                                    Text="{Binding Options.HasAndroidUiTestProject}">
+                                    <TextBlock.Foreground>
+                                        <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                            <Binding Path="Options.HasAndroidUiTestProject" />
+                                            <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                            <Binding Source="{StaticResource MaterialDesignBody}" />
+                                        </MultiBinding>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
                             </DockPanel>
                             <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
                                 <TextBlock>XML Layouts</TextBlock>
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Foreground="{Binding Options.HasAndroidXml, Converter={StaticResource SummaryHighlightColorConverter}}"
-                                    Text="{Binding Options.HasAndroidXml}" />
+                                    Text="{Binding Options.HasAndroidXml}">
+                                    <TextBlock.Foreground>
+                                        <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                            <Binding Path="Options.HasAndroidXml" />
+                                            <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                            <Binding Source="{StaticResource MaterialDesignBody}" />
+                                        </MultiBinding>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
                             </DockPanel>
                         </StackPanel>
                     </StackPanel>
@@ -232,32 +267,60 @@
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Foreground="{Binding Options.HasIosUnitTestProject, Converter={StaticResource SummaryHighlightColorConverter}}"
-                                    Text="{Binding Options.HasIosUnitTestProject}" />
+                                    Text="{Binding Options.HasIosUnitTestProject}">
+                                    <TextBlock.Foreground>
+                                        <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                            <Binding Path="Options.HasIosUnitTestProject" />
+                                            <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                            <Binding Source="{StaticResource MaterialDesignBody}" />
+                                        </MultiBinding>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
                             </DockPanel>
                             <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
                                 <TextBlock>UI Test Project</TextBlock>
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Foreground="{Binding Options.HasIosUiTestProject, Converter={StaticResource SummaryHighlightColorConverter}}"
-                                    Text="{Binding Options.HasIosUiTestProject}" />
+                                    Text="{Binding Options.HasIosUiTestProject}">
+                                    <TextBlock.Foreground>
+                                        <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                            <Binding Path="Options.HasIosUiTestProject" />
+                                            <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                            <Binding Source="{StaticResource MaterialDesignBody}" />
+                                        </MultiBinding>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
                             </DockPanel>
                             <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
                                 <TextBlock>Fluent Layouts</TextBlock>
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Foreground="{Binding Options.HasIosFluentLayout, Converter={StaticResource SummaryHighlightColorConverter}}"
-                                    Text="{Binding Options.HasIosFluentLayout}" />
+                                    Text="{Binding Options.HasIosFluentLayout}">
+                                    <TextBlock.Foreground>
+                                        <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                            <Binding Path="Options.HasIosFluentLayout" />
+                                            <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                            <Binding Source="{StaticResource MaterialDesignBody}" />
+                                        </MultiBinding>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
                             </DockPanel>
                             <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
                                 <TextBlock>Hyperion</TextBlock>
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Foreground="{Binding Options.HasIosHyperion, Converter={StaticResource SummaryHighlightColorConverter}}"
-                                    Text="{Binding Options.HasIosHyperion}" />
+                                    Text="{Binding Options.HasIosHyperion}">
+                                    <TextBlock.Foreground>
+                                        <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                            <Binding Path="Options.HasIosHyperion" />
+                                            <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                            <Binding Source="{StaticResource MaterialDesignBody}" />
+                                        </MultiBinding>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
                             </DockPanel>
                         </StackPanel>
                     </StackPanel>
@@ -314,16 +377,30 @@
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Foreground="{Binding Options.HasUwpUnitTestProject, Converter={StaticResource SummaryHighlightColorConverter}}"
-                                    Text="{Binding Options.HasUwpUnitTestProject}" />
+                                    Text="{Binding Options.HasUwpUnitTestProject}">
+                                    <TextBlock.Foreground>
+                                        <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                            <Binding Path="Options.HasUwpUnitTestProject" />
+                                            <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                            <Binding Source="{StaticResource MaterialDesignBody}" />
+                                        </MultiBinding>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
                             </DockPanel>
                             <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
                                 <TextBlock>UI Test Project</TextBlock>
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Foreground="{Binding Options.HasUwpUiTestProject, Converter={StaticResource SummaryHighlightColorConverter}}"
-                                    Text="{Binding Options.HasUwpUiTestProject}" />
+                                    Text="{Binding Options.HasUwpUiTestProject}">
+                                    <TextBlock.Foreground>
+                                        <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                            <Binding Path="Options.HasUwpUiTestProject" />
+                                            <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                            <Binding Source="{StaticResource MaterialDesignBody}" />
+                                        </MultiBinding>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
                             </DockPanel>
                         </StackPanel>
                     </StackPanel>

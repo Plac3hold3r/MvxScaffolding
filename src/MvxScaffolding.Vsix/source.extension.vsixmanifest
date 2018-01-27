@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="3574903F-FB0F-4938-B24C-D01830783CAF" Version="0.1.0" Language="en-US" Publisher="Plac3Hold3r" />
+        <Identity Id="3574903F-FB0F-4938-B24C-D01830783CAF" Version="0.4.5.0" Language="en-US" Publisher="Plac3Hold3r" />
         <DisplayName>MvxScaffolding</DisplayName>
         <Description xml:space="preserve">A customizable template used to scaffold a cross platform MvvmCross application using Xamarin Navtive </Description>
         <Tags>MvvmCross;Xamarin;.NET Standard</Tags>
     </Metadata>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.5]" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.5.27130.0,16.0]" />
     </Installation>
     <Dependencies>
         <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.7.1,)" d:InstallSource="Download" Location="https://www.microsoft.com/net/download/windows" />
     </Dependencies>
     <Prerequisites>
-        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.5,16.0)" DisplayName="Visual Studio core editor" />
-        <Prerequisite Id="Component.Xamarin" Version="[15.5,16.0)" DisplayName="Xamarin" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.5.27130.0,16.0)" DisplayName="Visual Studio core editor" />
+        <Prerequisite Id="Component.Xamarin" Version="[15.5.27130.0,16.0)" DisplayName="Xamarin" />
     </Prerequisites>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />

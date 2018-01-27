@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Data;
-using MvxScaffolding.UI.Styles;
 
 namespace MvxScaffolding.UI.Converters
 {
-    public class SummaryHighlightColorConverter : IValueConverter
+    public class SummaryHighlightColorConverter : IMultiValueConverter
     {
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value is bool valueBool)
+            if (values[0] is bool valueBool)
                 return valueBool
-                    ? MvxScaffoldingColorResource.PrimaryBrush
-                    : MvxScaffoldingColorResource.MaterialDesignBodyBrush;
+                    ? values[1]
+                    : values[2];
 
-            return MvxScaffoldingColorResource.MaterialDesignBodyBrush;
+            return values[2];
         }
 
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
         {
             throw new NotSupportedException();
         }

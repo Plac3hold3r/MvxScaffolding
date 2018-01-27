@@ -17,7 +17,9 @@
     Background="{DynamicResource MaterialDesignPaper}"
     FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
     Icon="../Resources/Images/mvxscaffolding_logo_transparent.png"
+    KeyDown="OnKeyDown"
     ShowIconOnTitleBar="True"
+    ShowInTaskbar="False"
     TextElement.FontSize="13"
     TextElement.FontWeight="Regular"
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -79,8 +81,14 @@
                 <TextBlock
                     Grid.Column="0"
                     HorizontalAlignment="Center"
-                    Foreground="{Binding SelectedViewModelIndex, Converter={StaticResource SectionHighlightColorConverter}, ConverterParameter=0}"
                     Style="{StaticResource MaterialDesignHeadlineTextBlock}">
+                    <TextBlock.Foreground>
+                        <MultiBinding Converter="{StaticResource SectionHighlightColorConverter}" ConverterParameter="0">
+                            <Binding Path="SelectedViewModelIndex" />
+                            <Binding Source="{StaticResource PrimaryColorBrush}" />
+                            <Binding Source="{StaticResource MaterialDesignBodyLight}" />
+                        </MultiBinding>
+                    </TextBlock.Foreground>
                     App Details
                 </TextBlock>
                 <TextBlock
@@ -92,8 +100,14 @@
                 <TextBlock
                     Grid.Column="2"
                     HorizontalAlignment="Center"
-                    Foreground="{Binding SelectedViewModelIndex, Converter={StaticResource SectionHighlightColorConverter}, ConverterParameter=1}"
                     Style="{StaticResource MaterialDesignHeadlineTextBlock}">
+                    <TextBlock.Foreground>
+                        <MultiBinding Converter="{StaticResource SectionHighlightColorConverter}" ConverterParameter="1">
+                            <Binding Path="SelectedViewModelIndex" />
+                            <Binding Source="{StaticResource PrimaryColorBrush}" />
+                            <Binding Source="{StaticResource MaterialDesignBodyLight}" />
+                        </MultiBinding>
+                    </TextBlock.Foreground>
                     Platforms Options
                 </TextBlock>
                 <TextBlock
@@ -105,8 +119,14 @@
                 <TextBlock
                     Grid.Column="4"
                     HorizontalAlignment="Center"
-                    Foreground="{Binding SelectedViewModelIndex, Converter={StaticResource SectionHighlightColorConverter}, ConverterParameter=2}"
                     Style="{StaticResource MaterialDesignHeadlineTextBlock}">
+                    <TextBlock.Foreground>
+                        <MultiBinding Converter="{StaticResource SectionHighlightColorConverter}" ConverterParameter="2">
+                            <Binding Path="SelectedViewModelIndex" />
+                            <Binding Source="{StaticResource PrimaryColorBrush}" />
+                            <Binding Source="{StaticResource MaterialDesignBodyLight}" />
+                        </MultiBinding>
+                    </TextBlock.Foreground>
                     Summary
                 </TextBlock>
             </Grid>

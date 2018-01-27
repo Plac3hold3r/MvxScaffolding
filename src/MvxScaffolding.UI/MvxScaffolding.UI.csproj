@@ -157,7 +157,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Styles\MvxScaffoldingColorResource.cs" />
     <Compile Include="ViewModels\AppDetailsViewModel.cs" />
     <Compile Include="ViewModels\!Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Dialogs\AboutViewModel.cs" />
