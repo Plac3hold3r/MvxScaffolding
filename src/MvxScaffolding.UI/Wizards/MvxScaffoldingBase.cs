@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using EnvDTE;
 using EnvDTE80;
 using Microsoft.Internal.VisualStudio.PlatformUI;
@@ -60,6 +61,16 @@ namespace MvxScaffolding.UI.Wizards
                 replacementsDictionary["$destinationdirectory$"] = Path.GetFullPath(newDestinationDirectory);
 
                 ShowModal(new MainWindow());
+
+                if (MvxScaffoldingContext.UserSelectedOptions is null)
+                {
+                    var projectDirectory = replacementsDictionary["$destinationdirectory$"];
+                    var solutionDirectory = replacementsDictionary["$solutiondirectory$"];
+
+                    CleanupDirectories(projectDirectory, solutionDirectory);
+
+                    throw new WizardBackoutException();
+                }
             }
         }
 
@@ -96,11 +107,17 @@ namespace MvxScaffolding.UI.Wizards
 
         private IVsUIShell UIShell => _uiShell.Value;
 
-        private readonly Lazy<IVsSolution> _vssolution = new Lazy<IVsSolution>(() =>
+        private void CleanupDirectories(string projectDirectory, string solutionDirectory)
         {
-            SafeThreading.JoinableTaskFactory.SwitchToMainThreadAsync();
-            return ServiceProvider.GlobalProvider.GetService(typeof(SVsSolution)) as IVsSolution;
-        }, true);
+            FileSystemUtils.SafeDeleteDirectory(projectDirectory);
+
+            if (Directory.Exists(solutionDirectory)
+                && !Directory.EnumerateDirectories(solutionDirectory).Any()
+                && !Directory.EnumerateFiles(solutionDirectory).Any())
+            {
+                FileSystemUtils.SafeDeleteDirectory(solutionDirectory);
+            }
+        }
 
         public static class SafeThreading
         {

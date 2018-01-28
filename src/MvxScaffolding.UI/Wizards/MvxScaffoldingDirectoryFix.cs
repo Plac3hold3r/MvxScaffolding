@@ -29,7 +29,6 @@ namespace MvxScaffolding.UI.Wizards
 
         public void RunFinished()
         {
-            // Open "old" solution
             var solution = (Solution2)dte.Solution;
             var pathToOldSolution = Path.Combine(destinationDirectory, solutionName + ".sln");
             solution.Open(pathToOldSolution);

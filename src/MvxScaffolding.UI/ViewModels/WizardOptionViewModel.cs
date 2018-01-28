@@ -85,7 +85,13 @@ namespace MvxScaffolding.UI.ViewModels
         public bool HasAndroidUiTestProject
         {
             get => _hasAndroidUiTestProject;
-            set { _hasAndroidUiTestProject = value; OnPropertyChanged(nameof(HasAndroidUiTestProject)); }
+            set
+            {
+                if (SetProperty(ref _hasAndroidUiTestProject, value) && IsFormsTemplate)
+                {
+                    HasIosUiTestProject = value;
+                }
+            }
         }
 
         private bool _hasAndroidXml;
@@ -119,7 +125,13 @@ namespace MvxScaffolding.UI.ViewModels
         public bool HasIosUiTestProject
         {
             get => _hasIosUiTestProject;
-            set { _hasIosUiTestProject = value; OnPropertyChanged(nameof(HasIosUiTestProject)); }
+            set
+            {
+                if (SetProperty(ref _hasIosUiTestProject, value) && IsFormsTemplate)
+                {
+                    HasAndroidUiTestProject = value;
+                }
+            }
         }
 
         private bool _hasIosFluentLayout;

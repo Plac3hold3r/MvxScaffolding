@@ -24,7 +24,7 @@
 
         <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:1}">
             <materialDesign:Card
-                Width="350"
+                Width="400"
                 Margin="16"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center">
@@ -65,9 +65,8 @@
                             VerticalAlignment="Top"
                             Foreground="{DynamicResource MaterialDesignBodyLight}"
                             TextWrapping="Wrap">
-                            MvxScaffolding GitHub Star button
+                            For issues and feature requests visit MvxScaffolding project on GitHub. This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more details.
                         </TextBlock>
-
                         <Button
                             Grid.Row="1"
                             HorizontalAlignment="Stretch"

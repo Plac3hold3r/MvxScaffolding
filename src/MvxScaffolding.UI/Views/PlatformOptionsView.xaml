@@ -200,7 +200,8 @@
                         <DockPanel
                             Grid.Row="3"
                             Margin="0,12,0,8"
-                            HorizontalAlignment="Stretch">
+                            HorizontalAlignment="Stretch"
+                            Visibility="{Binding IsNativeTemplate, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
                                 <Hyperlink
                                     Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
@@ -345,7 +346,8 @@
                         <DockPanel
                             Grid.Row="3"
                             Margin="0,12,0,0"
-                            HorizontalAlignment="Stretch">
+                            HorizontalAlignment="Stretch"
+                            Visibility="{Binding IsNativeTemplate, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
                                 <Hyperlink
                                     Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
