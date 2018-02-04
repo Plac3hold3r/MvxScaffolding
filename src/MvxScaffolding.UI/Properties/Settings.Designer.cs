@@ -32,15 +32,21 @@ namespace MvxScaffolding.UI.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("https://github.com/Plac3hold3r/MvxScaffolding")]
         public string GitHubUri {
             get {
                 return ((string)(this["GitHubUri"]));
             }
-            set {
-                this["GitHubUri"] = value;
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.5.0")]
+        public string TemplateVersion {
+            get {
+                return ((string)(this["TemplateVersion"]));
             }
         }
     }
