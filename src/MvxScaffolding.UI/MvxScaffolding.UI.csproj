@@ -128,6 +128,7 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -158,9 +159,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Validation\RequiredIfAttribute.cs" />
     <Compile Include="ViewModels\AppDetailsViewModel.cs" />
     <Compile Include="ViewModels\!Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Dialogs\AboutViewModel.cs" />
+    <Compile Include="ViewModels\Interfaces\IValidationViewModel.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\NavigationalViewModel.cs" />

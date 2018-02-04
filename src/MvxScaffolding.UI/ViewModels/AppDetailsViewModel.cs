@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using System.Windows.Input;
 using MvxScaffolding.UI.Commands;
-using MvxScaffolding.UI.Helpers;
 using MvxScaffolding.UI.Properties;
+using MvxScaffolding.UI.ViewModels.Interfaces;
 
 namespace MvxScaffolding.UI.ViewModels
 {
-    public class AppDetailsViewModel : BaseViewModel
+    public class AppDetailsViewModel : BaseViewModel, IValidationViewModel
     {
         public ICommand GoToGitHubCommand { get; }
 
@@ -37,6 +31,14 @@ namespace MvxScaffolding.UI.ViewModels
         private void GoToGitHubLink()
         {
             Process.Start(Settings.Default.GitHubUri);
+        }
+
+        public bool Validate()
+        {
+            Options.ValidateModelProperty(Options.AppId, nameof(WizardOptionViewModel.AppId));
+            Options.ValidateModelProperty(Options.AppName, nameof(WizardOptionViewModel.AppName));
+
+            return !Options.HasErrors;
         }
     }
 }

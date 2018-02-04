@@ -471,10 +471,10 @@
                             materialDesign:HintAssist.Hint="Description"
                             materialDesign:HintAssist.IsFloating="True"
                             IsEnabled="{Binding Options.HasUwp}"
-                            Text="{Binding Options.UwpDescription}" />
+                            Text="{Binding Options.UwpDescription, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
                         <ComboBox
                             Grid.Row="1"
-                            Margin="0,4,0,0"
+                            Margin="0,16,0,0"
                             materialDesign:ComboBoxAssist.ClassicMode="true"
                             materialDesign:HintAssist.Hint="Min SDK version"
                             DisplayMemberPath="Value"

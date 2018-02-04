@@ -9,6 +9,7 @@ using System.Windows.Input;
 using MvxScaffolding.UI.Commands;
 using MvxScaffolding.UI.Helpers;
 using MvxScaffolding.UI.Properties;
+using MvxScaffolding.UI.ViewModels.Interfaces;
 
 namespace MvxScaffolding.UI.ViewModels
 {
@@ -64,7 +65,12 @@ namespace MvxScaffolding.UI.ViewModels
         private void NavigateForward()
         {
             if (SelectedViewModelIndex + 1 < _navigationalViewModels.Count)
+            {
+                if (_navigationalViewModels[SelectedViewModelIndex].ViewModel is IValidationViewModel validationViewModel && !validationViewModel.Validate())
+                    return;
+
                 SelectedNavigationalItem = _navigationalViewModels[++SelectedViewModelIndex];
+            }
         }
 
         private void NavigateBackward()

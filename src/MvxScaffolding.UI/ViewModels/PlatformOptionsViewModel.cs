@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using MaterialDesignThemes.Wpf;
 using MvxScaffolding.UI.Commands;
+using MvxScaffolding.UI.ViewModels.Interfaces;
 
 namespace MvxScaffolding.UI.ViewModels
 {
-    public class PlatformOptionsViewModel : BaseViewModel
+    public class PlatformOptionsViewModel : BaseViewModel, IValidationViewModel
     {
         public PlatformOptionsViewModel(WizardOptionViewModel options)
         {
@@ -42,6 +38,13 @@ namespace MvxScaffolding.UI.ViewModels
         {
             Options.HasUwp = !Options.HasUwp;
             Options.UwpIncludeIcon = Options.HasUwp ? PackIconKind.Close : PackIconKind.Check;
+        }
+
+        public bool Validate()
+        {
+            Options.ValidateModelProperty(Options.UwpDescription, nameof(WizardOptionViewModel.UwpDescription));
+
+            return !Options.HasErrors;
         }
     }
 }

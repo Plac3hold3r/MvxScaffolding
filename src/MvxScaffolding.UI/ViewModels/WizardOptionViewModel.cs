@@ -1,29 +1,45 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
 using MaterialDesignThemes.Wpf;
+using MvxScaffolding.UI.Validation;
 
 namespace MvxScaffolding.UI.ViewModels
 {
-    public class WizardOptionViewModel : BaseViewModel
+    public class WizardOptionViewModel : BaseViewModel, INotifyDataErrorInfo
     {
-        private string _appName;
+        private readonly Dictionary<string, ICollection<string>>
+            _validationErrors = new Dictionary<string, ICollection<string>>();
 
+        private string _appName;
+        [Required(ErrorMessage = "Application name required")]
         public string AppName
         {
             get => _appName;
-            set { _appName = value; OnPropertyChanged(nameof(AppName)); }
+            set
+            {
+                _appName = value;
+                OnPropertyChanged(nameof(AppName));
+                ValidateModelProperty(value, nameof(AppName));
+            }
         }
 
         private string _appId;
-
+        [Required(ErrorMessage = "Application identifier required")]
         public string AppId
         {
             get => _appId;
-            set { _appId = value; OnPropertyChanged(nameof(AppId)); }
+            set
+            {
+                _appId = value;
+                OnPropertyChanged(nameof(AppId));
+                ValidateModelProperty(value, nameof(AppId));
+            }
         }
 
         private bool _hasEditorConfig;
@@ -151,11 +167,16 @@ namespace MvxScaffolding.UI.ViewModels
         }
 
         private string _uwpDescription;
-
+        [RequiredIf(nameof(HasUwp), true, ErrorMessage = "Description required")]
         public string UwpDescription
         {
             get => _uwpDescription;
-            set { _uwpDescription = value; OnPropertyChanged(nameof(UwpDescription)); }
+            set
+            {
+                _uwpDescription = value;
+                OnPropertyChanged(nameof(UwpDescription));
+                ValidateModelProperty(value, nameof(UwpDescription));
+            }
         }
 
         private string _selectedMinUwpSDK;
@@ -221,7 +242,13 @@ namespace MvxScaffolding.UI.ViewModels
         public bool HasUwp
         {
             get => _hasUwp;
-            set { _hasUwp = value; OnPropertyChanged(nameof(HasUwp)); }
+            set
+            {
+                _hasUwp = value;
+                OnPropertyChanged(nameof(HasUwp));
+                if (!value)
+                    ValidateModelProperty(value, nameof(UwpDescription));
+            }
         }
 
         private PackIconKind _uwpIncludeIcon;
@@ -230,6 +257,43 @@ namespace MvxScaffolding.UI.ViewModels
         {
             get => _uwpIncludeIcon;
             set { _uwpIncludeIcon = value; OnPropertyChanged(nameof(UwpIncludeIcon)); }
+        }
+
+        public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
+
+        private void RaiseErrorsChanged(string propertyName)
+        {
+            ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
+        }
+
+        public bool HasErrors
+            => _validationErrors.Count > 0;
+
+        public IEnumerable GetErrors(string propertyName)
+        {
+            if (string.IsNullOrEmpty(propertyName)
+            || !_validationErrors.ContainsKey(propertyName))
+                return new Collection<string>();
+
+            return _validationErrors[propertyName];
+        }
+
+        public void ValidateModelProperty(object value, string propertyName)
+        {
+            if (_validationErrors.ContainsKey(propertyName))
+                _validationErrors.Remove(propertyName);
+
+            PropertyInfo propertyInfo = GetType().GetProperty(propertyName);
+            IList<string> validationErrors =
+                  (from validationAttribute in propertyInfo.GetCustomAttributes(true).OfType<ValidationAttribute>()
+                   where validationAttribute.GetValidationResult(value, new ValidationContext(this)) != ValidationResult.Success
+                   select validationAttribute.FormatErrorMessage(string.Empty))
+                   .ToList();
+
+            if (validationErrors.Count != 0)
+                _validationErrors.Add(propertyName, validationErrors);
+
+            RaiseErrorsChanged(propertyName);
         }
 
         public WizardOptionViewModel()
