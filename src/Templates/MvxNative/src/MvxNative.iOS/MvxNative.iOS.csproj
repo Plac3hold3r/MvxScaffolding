@@ -238,14 +238,14 @@
     </ImageAsset>
   </ItemGroup>
   <!--#if (HasHyperion)-->
-  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+  <ItemGroup>
     <NativeReference Include="Native References/HyperionCore.framework">
       <Kind>Framework</Kind>
     </NativeReference>
-    <NativeReference Include="Native References/SlowAnimations.framework">
+    <NativeReference Include="Native References/AttributesInspector.framework">
       <Kind>Framework</Kind>
     </NativeReference>
-    <NativeReference Include="Native References/AttributesInspector.framework">
+    <NativeReference Include="Native References/SlowAnimations.framework">
       <Kind>Framework</Kind>
     </NativeReference>
     <NativeReference Include="Native References/Measurements.framework">
