@@ -243,7 +243,7 @@
     </ImageAsset>
   </ItemGroup>
   <!--#if (HasHyperion)-->
-  <ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
     <NativeReference Include="Native References/HyperionCore.framework">
       <Kind>Framework</Kind>
     </NativeReference>
