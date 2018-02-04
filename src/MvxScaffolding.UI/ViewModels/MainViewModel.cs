@@ -9,6 +9,7 @@ using System.Windows.Input;
 using MvxScaffolding.UI.Commands;
 using MvxScaffolding.UI.Helpers;
 using MvxScaffolding.UI.Properties;
+using MvxScaffolding.UI.ViewModels.Dialogs;
 using MvxScaffolding.UI.ViewModels.Interfaces;
 
 namespace MvxScaffolding.UI.ViewModels
@@ -38,6 +39,10 @@ namespace MvxScaffolding.UI.ViewModels
             get => _selectedNavigationalItem;
             set { _selectedNavigationalItem = value; OnPropertyChanged(nameof(SelectedNavigationalItem)); }
         }
+
+        private SimpleInfoViewModel _privacyInfoModel;
+        public SimpleInfoViewModel PrivacyInfoModel
+            => _privacyInfoModel ?? (_privacyInfoModel = SimpleInfoViewModel.PrivacyInfo());
 
         public MainViewModel()
         {

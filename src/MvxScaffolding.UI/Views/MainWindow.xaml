@@ -165,21 +165,38 @@
                     Style="{StaticResource MaterialDesignRaisedButton}" />
             </StackPanel>
 
-            <Button
+            <StackPanel
                 Grid.Row="2"
-                Margin="8,0,0,0"
                 HorizontalAlignment="Left"
-                Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
-                Style="{DynamicResource MaterialDesignFlatButton}">
-                <Button.CommandParameter>
-                    <dialogs:AboutViewModel />
-                </Button.CommandParameter>
-                <StackPanel Orientation="Horizontal">
-                    <materialDesign:PackIcon VerticalAlignment="Center" Kind="Information" />
-                    <TextBlock Margin="6,0,0,0" VerticalAlignment="Center">ABOUT</TextBlock>
-                </StackPanel>
-            </Button>
+                Orientation="Horizontal">
+                <Button
+                    Grid.Row="2"
+                    Margin="8,0,0,0"
+                    HorizontalAlignment="Left"
+                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                    Style="{DynamicResource MaterialDesignFlatButton}">
+                    <Button.CommandParameter>
+                        <dialogs:AboutViewModel />
+                    </Button.CommandParameter>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon VerticalAlignment="Center" Kind="Information" />
+                        <TextBlock Margin="6,0,0,0" VerticalAlignment="Center">ABOUT</TextBlock>
+                    </StackPanel>
+                </Button>
 
+                <Button
+                    Grid.Row="2"
+                    Margin="8,0,0,0"
+                    HorizontalAlignment="Left"
+                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                    CommandParameter="{Binding PrivacyInfoModel}"
+                    Style="{DynamicResource MaterialDesignFlatButton}">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon VerticalAlignment="Center" Kind="Lock" />
+                        <TextBlock Margin="6,0,0,0" VerticalAlignment="Center">PRIVACY</TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
         </Grid>
     </materialDesign:DialogHost>
 </metro:MetroWindow>

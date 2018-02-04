@@ -10,23 +10,14 @@ namespace MvxScaffolding.UI.ViewModels
     {
         public ICommand GoToGitHubCommand { get; }
 
-        public ICommand GoToGitHubPrivacyPolicyCommand { get; }
-
         public AppDetailsViewModel(WizardOptionViewModel options)
         {
             Options = options;
 
             GoToGitHubCommand = new RelayCommand(GoToGitHubLink);
-            GoToGitHubPrivacyPolicyCommand = new RelayCommand(GoToGitHubPrivacyPolicy);
         }
 
         public WizardOptionViewModel Options { get; private set; }
-
-        private void GoToGitHubPrivacyPolicy()
-        {
-            // TODO [JF] :: get the correct policy Uri
-            Process.Start(Settings.Default.PrivacyPolicyUri);
-        }
 
         private void GoToGitHubLink()
         {

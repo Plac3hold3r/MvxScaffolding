@@ -9,7 +9,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <DataTemplate DataType="{x:Type dialogs:AboutViewModel}">
-        <StackPanel>
+        <StackPanel Width="400">
             <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="{Binding IsNativeTemplate, Converter={StaticResource ActiveColorZoneModeConverter}}">
                 <Grid Margin="12">
                     <Grid.ColumnDefinitions>
@@ -46,7 +46,7 @@
                     VerticalAlignment="Top"
                     Foreground="{DynamicResource MaterialDesignBodyLight}"
                     TextWrapping="Wrap">
-                    MvxScaffolding GitHub Star button
+                    For issues and feature requests visit MvxScaffolding project on GitHub. This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more details.
                 </TextBlock>
                 <Button
                     Grid.Row="1"
