@@ -163,6 +163,7 @@
     <Compile Include="ViewModels\AppDetailsViewModel.cs" />
     <Compile Include="ViewModels\!Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Dialogs\AboutViewModel.cs" />
+    <Compile Include="ViewModels\Dialogs\ProjectGroupInfoViewModel.cs" />
     <Compile Include="ViewModels\Interfaces\IValidationViewModel.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -191,6 +192,10 @@
   <ItemGroup />
   <ItemGroup>
     <Page Include="DataTemplates\AboutDataTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTemplates\ProjectGroupInfoDataTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

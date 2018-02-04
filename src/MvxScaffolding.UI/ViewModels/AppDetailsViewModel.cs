@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using MvxScaffolding.UI.Commands;
 using MvxScaffolding.UI.Properties;
+using MvxScaffolding.UI.ViewModels.Dialogs;
 using MvxScaffolding.UI.ViewModels.Interfaces;
 
 namespace MvxScaffolding.UI.ViewModels
@@ -18,6 +19,15 @@ namespace MvxScaffolding.UI.ViewModels
         }
 
         public WizardOptionViewModel Options { get; private set; }
+
+        private SimpleInfoViewModel _projectGroupModel;
+
+        public SimpleInfoViewModel ProjectGroupModel
+            => _projectGroupModel ?? (_projectGroupModel = SimpleInfoViewModel.ProjectGroupInfo());
+
+        private SimpleInfoViewModel _editorConfigInfoModel;
+        public SimpleInfoViewModel EditorConfigInfoModel
+            => _editorConfigInfoModel ?? (_editorConfigInfoModel = SimpleInfoViewModel.EditorConfigInfo());
 
         private void GoToGitHubLink()
         {

@@ -36,6 +36,7 @@
                 <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
                 <ResourceDictionary Source="/MvxScaffolding.UI;component/DataTemplates/SimpleInfoDataTemplate.xaml" />
                 <ResourceDictionary Source="/MvxScaffolding.UI;component/DataTemplates/AboutDataTemplate.xaml" />
+                <ResourceDictionary Source="/MvxScaffolding.UI;component/DataTemplates/ProjectGroupInfoDataTemplate.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModels:AppDetailsViewModel}">

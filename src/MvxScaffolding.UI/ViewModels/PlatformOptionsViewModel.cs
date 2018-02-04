@@ -1,6 +1,7 @@
 ﻿using System.Windows.Input;
 using MaterialDesignThemes.Wpf;
 using MvxScaffolding.UI.Commands;
+using MvxScaffolding.UI.ViewModels.Dialogs;
 using MvxScaffolding.UI.ViewModels.Interfaces;
 
 namespace MvxScaffolding.UI.ViewModels
@@ -39,6 +40,18 @@ namespace MvxScaffolding.UI.ViewModels
             Options.HasUwp = !Options.HasUwp;
             Options.UwpIncludeIcon = Options.HasUwp ? PackIconKind.Close : PackIconKind.Check;
         }
+
+        private SimpleInfoViewModel _androidXmlLayoutInfoModel;
+        public SimpleInfoViewModel AndroidXmlLayoutInfoModel
+            => _androidXmlLayoutInfoModel ?? (_androidXmlLayoutInfoModel = SimpleInfoViewModel.AndroidXmlLayoutInfo());
+
+        private SimpleInfoViewModel _iosFluentLayoutsInfoModel;
+        public SimpleInfoViewModel IosFluentLayoutsInfoModel
+            => _iosFluentLayoutsInfoModel ?? (_iosFluentLayoutsInfoModel = SimpleInfoViewModel.IosFluentLayoutsInfo());
+
+        private SimpleInfoViewModel _iosHyperionInfoModel;
+        public SimpleInfoViewModel IosHyperionInfoModel
+            => _iosHyperionInfoModel ?? (_iosHyperionInfoModel = SimpleInfoViewModel.IosHyperionInfo());
 
         public bool Validate()
         {

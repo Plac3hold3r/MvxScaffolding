@@ -65,7 +65,7 @@
                                 Style="{StaticResource MaterialDesignBody1Hyperlink}"
                                 TextDecorations="None">
                                 <Hyperlink.CommandParameter>
-                                    <dialogs:SimpleInfoViewModel Title="Project Grouping" Message="The grouping for projects into folders inside of the solution.&#x0a;&#x0a;• Select &quot;Flat&quot; for when you want all projects to be placed at the root of the solution.&#x0a;&#x0a;• Select &quot;Test Group&quot; for when you want all test projects to be placed in a test folder, other projects are placed at the root of the solution.&#x0a;&#x0a;• Select &quot;Platform&quot; if you want projects to be grouped based on their target platform." />
+                                    <dialogs:ProjectGroupInfoViewModel />
                                 </Hyperlink.CommandParameter>
                                 <materialDesign:PackIcon
                                     Width="20"
@@ -94,14 +94,9 @@
                         <TextBlock HorizontalAlignment="Right">
                             <Hyperlink
                                 Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                                CommandParameter="{Binding EditorConfigInfoModel}"
                                 Style="{StaticResource MaterialDesignBody1Hyperlink}"
                                 TextDecorations="None">
-                                <Hyperlink.CommandParameter>
-                                    <dialogs:SimpleInfoViewModel
-                                        Title="EditorConfig"
-                                        Message="Enable to include an EditorConfig file at the root of the solution. EditorConfig is used to define coding styles enforced within Visual Studio."
-                                        ReadMoreLink="https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options" />
-                                </Hyperlink.CommandParameter>
                                 <materialDesign:PackIcon
                                     Width="20"
                                     Height="20"
