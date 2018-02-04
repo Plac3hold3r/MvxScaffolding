@@ -24,88 +24,96 @@
         <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
             <materialDesign:Card
                 Width="400"
-                Margin="16"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
-                <StackPanel Margin="16">
-                    <TextBlock FontWeight="Bold">Application</TextBlock>
-                    <TextBox
-                        Margin="0,4,0,0"
-                        materialDesign:HintAssist.Hint="Identifier"
-                        materialDesign:HintAssist.IsFloating="True"
-                        Text="{Binding Options.AppId, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
-                    <TextBox
-                        Margin="0,16,0,0"
-                        materialDesign:HintAssist.Hint="Display Name"
-                        materialDesign:HintAssist.IsFloating="True"
-                        Text="{Binding Options.AppName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
-                    <TextBlock Margin="0,16,0,0" FontWeight="Bold">Solution</TextBlock>
-                    <DockPanel
-                        Grid.Row="0"
-                        Margin="0,4,0,0"
-                        HorizontalAlignment="Stretch">
-                        <ComboBox
-                            Width="300"
-                            materialDesign:ComboBoxAssist.ClassicMode="true"
-                            materialDesign:HintAssist.Hint="Project Grouping"
-                            DisplayMemberPath="Value"
-                            ItemsSource="{Binding Options.ProjectGroupingOptions}"
-                            SelectedValue="{Binding Options.SelectedProjectGrouping}"
-                            SelectedValuePath="Key"
-                            Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-                            <ComboBox.ItemsPanel>
-                                <ItemsPanelTemplate>
-                                    <VirtualizingStackPanel />
-                                </ItemsPanelTemplate>
-                            </ComboBox.ItemsPanel>
-                        </ComboBox>
-                        <TextBlock Margin="0,8,0,0" HorizontalAlignment="Right">
-                            <Hyperlink
-                                Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
-                                Style="{StaticResource MaterialDesignBody1Hyperlink}"
-                                TextDecorations="None">
-                                <Hyperlink.CommandParameter>
-                                    <dialogs:ProjectGroupInfoViewModel />
-                                </Hyperlink.CommandParameter>
-                                <materialDesign:PackIcon
-                                    Width="20"
-                                    Height="20"
-                                    HorizontalAlignment="Right"
-                                    VerticalAlignment="Center"
-                                    Kind="Information" />
-                            </Hyperlink>
-                        </TextBlock>
-                    </DockPanel>
-                    <DockPanel
-                        Grid.Row="1"
-                        Margin="0,12,0,8"
-                        HorizontalAlignment="Stretch">
+                <StackPanel>
+                    <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="{Binding IsNativeTemplate, Converter={StaticResource ActiveColorZoneModeConverter}}">
                         <TextBlock
-                            Width="260"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Center">
-                            EditorConfig
-                        </TextBlock>
-                        <ToggleButton
-                            Margin="8,0,0,0"
-                            HorizontalAlignment="Right"
-                            IsChecked="{Binding Options.HasEditorConfig}" />
+                            Margin="16,8"
+                            FontWeight="Medium"
+                            Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                            Text="{Binding TemplateTypeName, StringFormat={}MvxScaffolding - {0}}" />
+                    </materialDesign:ColorZone>
+                    <StackPanel Margin="16">
+                        <TextBlock FontWeight="Bold">Application</TextBlock>
+                        <TextBox
+                            Margin="0,4,0,0"
+                            materialDesign:HintAssist.Hint="Identifier"
+                            materialDesign:HintAssist.IsFloating="True"
+                            Text="{Binding Options.AppId, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
+                        <TextBox
+                            Margin="0,16,0,0"
+                            materialDesign:HintAssist.Hint="Display Name"
+                            materialDesign:HintAssist.IsFloating="True"
+                            Text="{Binding Options.AppName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
+                        <TextBlock Margin="0,16,0,0" FontWeight="Bold">Solution</TextBlock>
+                        <DockPanel
+                            Grid.Row="0"
+                            Margin="0,4,0,0"
+                            HorizontalAlignment="Stretch">
+                            <ComboBox
+                                Width="300"
+                                materialDesign:ComboBoxAssist.ClassicMode="true"
+                                materialDesign:HintAssist.Hint="Project Grouping"
+                                DisplayMemberPath="Value"
+                                ItemsSource="{Binding Options.ProjectGroupingOptions}"
+                                SelectedValue="{Binding Options.SelectedProjectGrouping}"
+                                SelectedValuePath="Key"
+                                Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                                <ComboBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel />
+                                    </ItemsPanelTemplate>
+                                </ComboBox.ItemsPanel>
+                            </ComboBox>
+                            <TextBlock Margin="0,8,0,0" HorizontalAlignment="Right">
+                                <Hyperlink
+                                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                    TextDecorations="None">
+                                    <Hyperlink.CommandParameter>
+                                        <dialogs:ProjectGroupInfoViewModel />
+                                    </Hyperlink.CommandParameter>
+                                    <materialDesign:PackIcon
+                                        Width="20"
+                                        Height="20"
+                                        HorizontalAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        Kind="Information" />
+                                </Hyperlink>
+                            </TextBlock>
+                        </DockPanel>
+                        <DockPanel
+                            Grid.Row="1"
+                            Margin="0,12,0,8"
+                            HorizontalAlignment="Stretch">
+                            <TextBlock
+                                Width="260"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center">
+                                EditorConfig
+                            </TextBlock>
+                            <ToggleButton
+                                Margin="8,0,0,0"
+                                HorizontalAlignment="Right"
+                                IsChecked="{Binding Options.HasEditorConfig}" />
 
-                        <TextBlock HorizontalAlignment="Right">
-                            <Hyperlink
-                                Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
-                                CommandParameter="{Binding EditorConfigInfoModel}"
-                                Style="{StaticResource MaterialDesignBody1Hyperlink}"
-                                TextDecorations="None">
-                                <materialDesign:PackIcon
-                                    Width="20"
-                                    Height="20"
-                                    HorizontalAlignment="Right"
-                                    VerticalAlignment="Center"
-                                    Kind="Information" />
-                            </Hyperlink>
-                        </TextBlock>
-                    </DockPanel>
+                            <TextBlock HorizontalAlignment="Right">
+                                <Hyperlink
+                                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                                    CommandParameter="{Binding EditorConfigInfoModel}"
+                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                    TextDecorations="None">
+                                    <materialDesign:PackIcon
+                                        Width="20"
+                                        Height="20"
+                                        HorizontalAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        Kind="Information" />
+                                </Hyperlink>
+                            </TextBlock>
+                        </DockPanel>
+                    </StackPanel>
                 </StackPanel>
             </materialDesign:Card>
         </materialDesign:TransitioningContent>

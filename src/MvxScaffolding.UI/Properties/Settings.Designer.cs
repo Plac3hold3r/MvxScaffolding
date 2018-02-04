@@ -49,5 +49,14 @@ namespace MvxScaffolding.UI.Properties {
                 return ((string)(this["TemplateVersion"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://github.com/Plac3hold3r")]
+        public string AuthorGitHubUri {
+            get {
+                return ((string)(this["AuthorGitHubUri"]));
+            }
+        }
     }
 }

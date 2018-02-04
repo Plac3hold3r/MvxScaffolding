@@ -1,4 +1,5 @@
 ﻿using MvxScaffolding.UI.Helpers;
+using MvxScaffolding.UI.Properties;
 using MvxScaffolding.UI.ViewModels.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -19,20 +20,13 @@ namespace MvxScaffolding.UI.ViewModels
            => MvxScaffoldingContext.CurrentTemplateType == TemplateType.MvxForms;
 
         public string TemplateTypeName
-            => IsNativeTemplate ? "Native" : "Forms";
-
-        private string _appVersion;
+            => IsNativeTemplate ? "MvxNative" : "MvxForms";
 
         public string AppVersion
-        {
-            get => _appVersion;
-            set { _appVersion = value; OnPropertyChanged(nameof(AppVersion)); }
-        }
+            => System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
-        protected BaseViewModel()
-        {
-            AppVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-        }
+        public string TemplateVersion
+            => Settings.Default.TemplateVersion;
 
         public event PropertyChangedEventHandler PropertyChanged;
 

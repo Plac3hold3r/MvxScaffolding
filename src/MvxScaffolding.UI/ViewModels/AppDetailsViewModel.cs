@@ -20,11 +20,6 @@ namespace MvxScaffolding.UI.ViewModels
 
         public WizardOptionViewModel Options { get; private set; }
 
-        private SimpleInfoViewModel _projectGroupModel;
-
-        public SimpleInfoViewModel ProjectGroupModel
-            => _projectGroupModel ?? (_projectGroupModel = SimpleInfoViewModel.ProjectGroupInfo());
-
         private SimpleInfoViewModel _editorConfigInfoModel;
         public SimpleInfoViewModel EditorConfigInfoModel
             => _editorConfigInfoModel ?? (_editorConfigInfoModel = SimpleInfoViewModel.EditorConfigInfo());

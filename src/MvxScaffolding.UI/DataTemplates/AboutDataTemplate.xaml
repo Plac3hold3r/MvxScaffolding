@@ -26,38 +26,48 @@
                         Margin="8"
                         VerticalAlignment="Center">
                         <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}">MvxScaffolding</TextBlock>
-                        <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{Binding TemplateTypeName}" />
-                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="{Binding AppVersion, StringFormat={}v{0}}" />
+                        <TextBlock xml:space="preserve" Style="{StaticResource MaterialDesignCaptionTextBlock}">Created by: <Hyperlink
+                                Command="{Binding GoToAuthorGitHubCommand}"
+                                Foreground="White"
+                                Style="{StaticResource MaterialDesignBody1Hyperlink}">Plac3hold3r</Hyperlink></TextBlock>
+                        <TextBlock
+                            Margin="0,8,0,0"
+                            Style="{StaticResource MaterialDesignCaptionTextBlock}"
+                            Text="{Binding AppVersion, StringFormat={}Extension v{0}}" />
+                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="{Binding TemplateVersion, StringFormat={}Template v{0}}" />
                     </StackPanel>
                 </Grid>
             </materialDesign:ColorZone>
-            <Grid Margin="12">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
+            <StackPanel Margin="12">
                 <TextBlock
-                    Grid.ColumnSpan="2"
                     Margin="0,0,0,8"
-                    VerticalAlignment="Top"
                     Foreground="{DynamicResource MaterialDesignBodyLight}"
                     TextWrapping="Wrap">
-                    For issues and feature requests visit MvxScaffolding project on GitHub. This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more details.
+                    A customizable template used to scaffold a cross platform MvvmCross application. Includes a .NET Standard class library and NuGet package references. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.
+                </TextBlock>
+                <TextBlock
+                    Margin="0,0,0,8"
+                    xml:space="preserve"
+                    Foreground="{DynamicResource MaterialDesignBodyLight}"
+                    TextWrapping="Wrap">For issues and feature requests visit MvxScaffolding project on <Hyperlink
+                        Command="{Binding GoToGitHubCommand}"
+                        Foreground="{StaticResource PrimaryColorBrush}"
+                        Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                        TextDecorations="None">GitHub</Hyperlink>.</TextBlock>
+                <TextBlock
+                    Margin="0,0,0,8"
+                    Foreground="{DynamicResource MaterialDesignBodyLight}"
+                    TextWrapping="Wrap">
+                    This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more details.
                 </TextBlock>
                 <Button
-                    Grid.Row="1"
-                    Grid.Column="1"
                     Margin="0,8,8,0"
                     HorizontalAlignment="Right"
                     Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
                     Style="{DynamicResource MaterialDesignFlatButton}">
                     CLOSE
                 </Button>
-            </Grid>
+            </StackPanel>
         </StackPanel>
     </DataTemplate>
 </ResourceDictionary>
