@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using MvxScaffolding.UI.Commands;
 using MvxScaffolding.UI.Helpers;
@@ -17,6 +13,7 @@ namespace MvxScaffolding.UI.ViewModels
     public class MainViewModel : BaseViewModel
     {
         private readonly List<NavigationalViewModel> _navigationalViewModels;
+        private readonly WizardOptionViewModel _options;
 
         public ICommand ForwardCommand { get; }
 
@@ -46,17 +43,17 @@ namespace MvxScaffolding.UI.ViewModels
 
         public MainViewModel()
         {
-            ForwardCommand = new RelayCommand(NavigateForward);
+            ForwardCommand = new RelayCommand<IClosable>(NavigateForward);
             BackCommand = new RelayCommand(NavigateBackward);
             GoToGitHubCommand = new RelayCommand(GoToGitHubLink);
 
-            var options = new WizardOptionViewModel();
+            _options = new WizardOptionViewModel();
 
             _navigationalViewModels = new List<NavigationalViewModel>
             {
-                new NavigationalViewModel { SecondaryActionText = string.Empty, ViewModel = new AppDetailsViewModel(options) },
-                new NavigationalViewModel { ViewModel = new PlatformOptionsViewModel(options) },
-                new NavigationalViewModel { PrimaryActionText = "DONE", ViewModel = new SummaryViewModel(options) }
+                new NavigationalViewModel { SecondaryActionText = string.Empty, ViewModel = new AppDetailsViewModel(_options) },
+                new NavigationalViewModel { ViewModel = new PlatformOptionsViewModel(_options) },
+                new NavigationalViewModel { PrimaryActionText = "DONE", ViewModel = new SummaryViewModel(_options) }
             };
 
             NavigateFirst();
@@ -67,7 +64,7 @@ namespace MvxScaffolding.UI.ViewModels
             SelectedNavigationalItem = _navigationalViewModels.First();
         }
 
-        private void NavigateForward()
+        private void NavigateForward(IClosable window)
         {
             if (SelectedViewModelIndex + 1 < _navigationalViewModels.Count)
             {
@@ -75,6 +72,11 @@ namespace MvxScaffolding.UI.ViewModels
                     return;
 
                 SelectedNavigationalItem = _navigationalViewModels[++SelectedViewModelIndex];
+            }
+            else
+            {
+                MvxScaffoldingContext.UserSelectedOptions = _options;
+                window.Close();
             }
         }
 

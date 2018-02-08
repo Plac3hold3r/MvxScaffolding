@@ -9,6 +9,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:viewModels="clr-namespace:MvxScaffolding.UI.ViewModels"
+    x:Name="RootWindow"
     Title="MvxScaffolding"
     Width="950"
     Height="700"
@@ -162,6 +163,7 @@
                     Width="100"
                     Margin="16"
                     Command="{Binding ForwardCommand}"
+                    CommandParameter="{Binding ElementName=RootWindow}"
                     Content="{Binding SelectedNavigationalItem.PrimaryActionText}"
                     Style="{StaticResource MaterialDesignRaisedButton}" />
             </StackPanel>

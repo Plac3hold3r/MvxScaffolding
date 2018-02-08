@@ -8,10 +8,11 @@ using MaterialDesignColors;
 using MaterialDesignThemes.Wpf;
 using MvxScaffolding.UI.Helpers;
 using MvxScaffolding.UI.ViewModels;
+using MvxScaffolding.UI.ViewModels.Interfaces;
 
 namespace MvxScaffolding.UI.Views
 {
-    public partial class MainWindow : MetroWindow
+    public partial class MainWindow : MetroWindow, IClosable
     {
         public MainWindow()
         {
