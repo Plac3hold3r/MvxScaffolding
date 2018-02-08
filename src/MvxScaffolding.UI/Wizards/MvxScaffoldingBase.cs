@@ -45,12 +45,10 @@ namespace MvxScaffolding.UI.Wizards
         {
             if (runKind == WizardRunKind.AsNewProject || runKind == WizardRunKind.AsMultiProject)
             {
-                // Close new solution
                 var dte = (DTE)automationObject;
                 var solution = (Solution2)dte.Solution;
                 solution.Close();
 
-                // Delete old directory and change destination
                 var oldDestinationDirectory = replacementsDictionary["$destinationdirectory$"];
                 if (Directory.Exists(oldDestinationDirectory))
                 {
@@ -71,12 +69,46 @@ namespace MvxScaffolding.UI.Wizards
 
                     throw new WizardBackoutException();
                 }
+                else
+                {
+                    UpdateReplacementsDictionary(replacementsDictionary);
+                }
             }
         }
 
         public bool ShouldAddProjectItem(string filePath)
         {
             return true;
+        }
+
+        protected virtual void UpdateReplacementsDictionary(Dictionary<string, string> replacementsDictionary)
+        {
+            replacementsDictionary.Add("$passthrough:HasAndroidProject$", MvxScaffoldingContext.UserSelectedOptions.HasAndroid.ToString().ToLowerInvariant());
+            replacementsDictionary.Add("$passthrough:HasiOSProject$", MvxScaffoldingContext.UserSelectedOptions.HasIos.ToString().ToLowerInvariant());
+            replacementsDictionary.Add("$passthrough:HasUWPProject$", MvxScaffoldingContext.UserSelectedOptions.HasUwp.ToString().ToLowerInvariant());
+
+            replacementsDictionary.Add("$passthrough:HasCoreTestProject$", MvxScaffoldingContext.UserSelectedOptions.HasCoreUnitTestProject.ToString().ToLowerInvariant());
+            replacementsDictionary.Add("$passthrough:HasAndroidTestProject$", MvxScaffoldingContext.UserSelectedOptions.HasAndroidUnitTestProject.ToString().ToLowerInvariant());
+            replacementsDictionary.Add("$passthrough:HasiOSTestProject$", MvxScaffoldingContext.UserSelectedOptions.HasIosUnitTestProject.ToString().ToLowerInvariant());
+            replacementsDictionary.Add("$passthrough:HasUWPTestProject$", MvxScaffoldingContext.UserSelectedOptions.HasUwpUnitTestProject.ToString().ToLowerInvariant());
+            replacementsDictionary.Add("$passthrough:HasUWPUITestProject$", MvxScaffoldingContext.UserSelectedOptions.HasUwpUiTestProject.ToString().ToLowerInvariant());
+
+            replacementsDictionary.Add("$passthrough:HasEditorConfig$", MvxScaffoldingContext.UserSelectedOptions.HasEditorConfig.ToString().ToLowerInvariant());
+            replacementsDictionary.Add("$passthrough:SolutionProjectGrouping$", MvxScaffoldingContext.UserSelectedOptions.SelectedProjectGrouping);
+
+            replacementsDictionary.Add("$passthrough:AppId$", MvxScaffoldingContext.UserSelectedOptions.AppId);
+            replacementsDictionary.Add("$passthrough:AppName$", MvxScaffoldingContext.UserSelectedOptions.AppName);
+            replacementsDictionary.Add("$passthrough:NETStandardVersion$", MvxScaffoldingContext.UserSelectedOptions.SelectedNetStandard);
+
+            replacementsDictionary.Add("$passthrough:AndroidMinSDKVersion$", MvxScaffoldingContext.UserSelectedOptions.SelectedMinAndroidSDK);
+
+            replacementsDictionary.Add("$passthrough:iOSMinSDKVersion$", MvxScaffoldingContext.UserSelectedOptions.SelectedMinIosSDK);
+            replacementsDictionary.Add("$passthrough:HasHyperion$", MvxScaffoldingContext.UserSelectedOptions.HasIosHyperion.ToString().ToLowerInvariant());
+
+            replacementsDictionary.Add("$passthrough:UWPMinSDKVersion$", MvxScaffoldingContext.UserSelectedOptions.SelectedMinUwpSDK);
+
+            if (!string.IsNullOrWhiteSpace(MvxScaffoldingContext.UserSelectedOptions.UwpDescription))
+                replacementsDictionary.Add("$passthrough:UWPAppDescription$", MvxScaffoldingContext.UserSelectedOptions.UwpDescription);
         }
 
         public void ShowModal(System.Windows.Window dialog)
