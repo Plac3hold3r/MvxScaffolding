@@ -1,4 +1,4 @@
-﻿using MvxScaffolding.UI.Properties;
+﻿using MvxScaffolding.UI.Configuration;
 
 namespace MvxScaffolding.UI.ViewModels.Dialogs
 {
@@ -14,7 +14,7 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
             {
                 Title = "Privacy",
                 Message = "This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more details.",
-                ReadMoreLink = Settings.Default.PrivacyPolicyUri // TODO [JF] :: get the correct policy Uri
+                ReadMoreLink = Config.Current.PrivacyPolicyUri // TODO [JF] :: get the correct policy Uri
             };
         }
 
@@ -24,7 +24,7 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
             {
                 Title = "EditorConfig",
                 Message = "Enable to include an EditorConfig file at the root of the solution. EditorConfig is used to define coding styles highlighted within Visual Studio.",
-                ReadMoreLink = "https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options"
+                ReadMoreLink = Config.Current.EditorConfigUri
             };
         }
 
@@ -43,7 +43,7 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
             {
                 Title = "Fluent Layouts",
                 Message = "Enable to include FluentLayout, a fluent API for creating constraint-based layouts.",
-                ReadMoreLink = "https://github.com/FluentLayout/Cirrious.FluentLayout"
+                ReadMoreLink = Config.Current.FluentLayoutUri
             };
         }
 
@@ -53,7 +53,7 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
             {
                 Title = "Hyperion",
                 Message = "Enable to include Hyperion, an in app design review tool.",
-                ReadMoreLink = "https://github.com/willowtreeapps/Hyperion-iOS"
+                ReadMoreLink = Config.Current.HyperioniOSUri
             };
         }
     }

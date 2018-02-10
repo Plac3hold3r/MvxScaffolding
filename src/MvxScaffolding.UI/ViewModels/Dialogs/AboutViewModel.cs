@@ -1,6 +1,5 @@
 ﻿using MvxScaffolding.UI.Commands;
-using MvxScaffolding.UI.Properties;
-using System;
+using MvxScaffolding.UI.Configuration;
 using System.Diagnostics;
 using System.Windows.Input;
 
@@ -19,12 +18,12 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
 
         private void GoToGitHubLink()
         {
-            Process.Start(Settings.Default.GitHubUri);
+            Process.Start(Config.Current.GitHubUri);
         }
 
         private void GoToAuthorGitHubLink()
         {
-            Process.Start(Settings.Default.AuthorGitHubUri);
+            Process.Start(Config.Current.AuthorGitHubUri);
         }
     }
 }

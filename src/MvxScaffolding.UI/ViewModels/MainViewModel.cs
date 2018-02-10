@@ -3,8 +3,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Windows.Input;
 using MvxScaffolding.UI.Commands;
+using MvxScaffolding.UI.Configuration;
 using MvxScaffolding.UI.Helpers;
-using MvxScaffolding.UI.Properties;
 using MvxScaffolding.UI.ViewModels.Dialogs;
 using MvxScaffolding.UI.ViewModels.Interfaces;
 
@@ -88,7 +88,7 @@ namespace MvxScaffolding.UI.ViewModels
 
         private void GoToGitHubLink()
         {
-            Process.Start(Settings.Default.GitHubUri);
+            Process.Start(Config.Current.GitHubUri);
         }
     }
 }
