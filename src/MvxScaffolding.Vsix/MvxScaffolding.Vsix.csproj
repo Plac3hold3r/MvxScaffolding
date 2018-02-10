@@ -68,7 +68,10 @@
     <None Include="template\templatepack.MvxScaffolding.Vsix.proj" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\project-icon.png" />
+    <Content Include="Properties\project-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="template.pkgdef">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

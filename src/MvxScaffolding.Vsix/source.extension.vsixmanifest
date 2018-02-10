@@ -3,14 +3,17 @@
     <Metadata>
         <Identity Id="3574903F-FB0F-4938-B24C-D01830783CAF" Version="0.4.5.0" Language="en-US" Publisher="Plac3Hold3r" />
         <DisplayName>MvxScaffolding</DisplayName>
-        <Description xml:space="preserve">A customizable template used to scaffold a cross platform MvvmCross application using Xamarin Navtive </Description>
-        <Tags>MvvmCross;Xamarin;.NET Standard</Tags>
+        <Description xml:space="preserve">A customizable template used to scaffold a cross platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.</Description>
+        <MoreInfo>https://github.com/Plac3hold3r/MvxScaffolding</MoreInfo>
+        <Icon>Properties\project-icon.png</Icon>
+        <Tags>MvvmCross;Xamarin;Xamarin.Forms;.NET Standard;C#;Android;iOS;UWP;Template;</Tags>
     </Metadata>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.5.27130.0,16.0]" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,16.0)" />
     </Installation>
     <Dependencies>
-        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.7.1,)" d:InstallSource="Download" Location="https://www.microsoft.com/net/download/windows" />
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework 4.7 or higher" d:Source="Manual" Version="[4.7,)" d:InstallSource="Download" Location="http://go.microsoft.com/fwlink/?LinkId=825319" />
+        <Dependency d:Source="Installed" Version="[15.5.27130.0,16.0)" d:InstallSource="Download" Id="8EAF6C8E-1283-4EEE-AB6E-F0F087BFCBFD" DisplayName="Visual Studio 2017 Update 5 or higher" Location="https://www.visualstudio.com/downloads" />
     </Dependencies>
     <Prerequisites>
         <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.5.27130.0,16.0)" DisplayName="Visual Studio core editor" />
