@@ -4,7 +4,7 @@
     {
         public static string HasValue(this string value)
         {
-            return (!string.IsNullOrWhiteSpace(value)).ToString();
+            return (!string.IsNullOrWhiteSpace(value)).ToString().ToLowerInvariant();
         }
     }
 }
