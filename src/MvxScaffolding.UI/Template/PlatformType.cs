@@ -1,6 +1,6 @@
 ﻿namespace MvxScaffolding.UI.Template
 {
-    public enum PlatformTypes
+    public enum PlatformType
     {
         Android,
         Ios,

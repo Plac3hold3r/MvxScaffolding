@@ -6,6 +6,7 @@
     xmlns:dialogs="clr-namespace:MvxScaffolding.UI.ViewModels.Dialogs"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:template="clr-namespace:MvxScaffolding.UI.Template"
     d:DesignHeight="700"
     d:DesignWidth="950"
     Background="{DynamicResource MaterialDesignPaper}"
@@ -170,7 +171,10 @@
                             HorizontalAlignment="Right"
                             VerticalAlignment="Top"
                             Style="{StaticResource MaterialDesignCaptionTextBlock}">
-                            <Hyperlink IsEnabled="{Binding Options.HasAndroid}">
+                            <Hyperlink
+                                Command="{Binding ShowPlatformMarketShareCommand}"
+                                CommandParameter="{x:Static template:PlatformType.Android}"
+                                IsEnabled="{Binding Options.HasAndroid}">
                                 Market Share
                             </Hyperlink>
                         </TextBlock>
@@ -323,7 +327,10 @@
                             HorizontalAlignment="Right"
                             VerticalAlignment="Top"
                             Style="{StaticResource MaterialDesignCaptionTextBlock}">
-                            <Hyperlink IsEnabled="{Binding Options.HasIos}">
+                            <Hyperlink
+                                Command="{Binding ShowPlatformMarketShareCommand}"
+                                CommandParameter="{x:Static template:PlatformType.Ios}"
+                                IsEnabled="{Binding Options.HasIos}">
                                 Market Share
                             </Hyperlink>
                         </TextBlock>
@@ -490,7 +497,10 @@
                             HorizontalAlignment="Right"
                             VerticalAlignment="Top"
                             Style="{StaticResource MaterialDesignCaptionTextBlock}">
-                            <Hyperlink IsEnabled="{Binding Options.HasUwp}">
+                            <Hyperlink
+                                Command="{Binding ShowPlatformMarketShareCommand}"
+                                CommandParameter="{x:Static template:PlatformType.Uwp}"
+                                IsEnabled="{Binding Options.HasUwp}">
                                 Market Share
                             </Hyperlink>
                         </TextBlock>

@@ -7,5 +7,8 @@
   "AuthorGitHubUri": "https://github.com/Plac3hold3r",
   "EditorConfigUri": "https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options",
   "FluentLayoutUri": "https://github.com/FluentLayout/Cirrious.FluentLayout",
-  "HyperioniOSUri": "https://github.com/willowtreeapps/Hyperion-iOS"
+  "HyperioniOSUri": "https://github.com/willowtreeapps/Hyperion-iOS",
+  "MarketShareAndroidUri": "https://developer.android.com/about/dashboards/index.html",
+  "MarketShareiOSUri": "https://developer.apple.com/support/app-store/",
+  "MarketShareWindowsUri": "http://reports.adduplex.com/"
 }

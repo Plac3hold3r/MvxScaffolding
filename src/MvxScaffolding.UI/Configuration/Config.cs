@@ -29,6 +29,12 @@ namespace MvxScaffolding.UI.Configuration
 
         public string HyperioniOSUri { get; set; }
 
+        public string MarketShareAndroidUri { get; set; }
+
+        public string MarketShareiOSUri { get; set; }
+
+        public string MarketShareWindowsUri { get; set; }
+
         private const string DefaultJsonConfigFileName = "MvxScaffolding.config.json";
 
         private static Config _current;

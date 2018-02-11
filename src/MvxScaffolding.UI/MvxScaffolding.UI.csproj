@@ -223,7 +223,7 @@
     <Compile Include="Extensions\TaskExtensions.cs" />
     <Compile Include="Files\FileSystemUtils.cs" />
     <Compile Include="Contexts\MvxScaffoldingContext.cs" />
-    <Compile Include="Template\PlatformTypes.cs" />
+    <Compile Include="Template\PlatformType.cs" />
     <Compile Include="Template\TemplateOptions.cs" />
     <Compile Include="Template\TemplateType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
