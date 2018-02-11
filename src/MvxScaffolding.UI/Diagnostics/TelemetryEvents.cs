@@ -9,5 +9,7 @@
         public const string SessionStart = "SessionStart";
 
         public const string SessionEnd = "SessionEnd";
+
+        public const string OpenLink = "OpenLink";
     }
 }

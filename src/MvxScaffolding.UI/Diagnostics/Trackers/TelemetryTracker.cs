@@ -30,6 +30,18 @@ namespace MvxScaffolding.UI.Diagnostics.Trackers
                 .ConfigureAwait(false);
         }
 
+        public async Task TrackLinkOpenAsync(string linkName)
+        {
+            var properties = new Dictionary<string, string>()
+            {
+                [TelemetryProperties.LinkName] = linkName,
+            };
+
+            RemoteWriter.Current.SetContentVsProductVersionToContext(GetVsVersion());
+            await RemoteWriter.Current.TrackEventAsync(TelemetryEvents.OpenLink, properties)
+                .ConfigureAwait(false);
+        }
+
         public async Task TrackEndSessionAsync()
         {
             RemoteWriter.Current.SetContentVsProductVersionToContext(GetVsVersion());

@@ -8,6 +8,7 @@ using MvxScaffolding.UI.ViewModels.Dialogs;
 using MvxScaffolding.UI.ViewModels.Interfaces;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
@@ -35,6 +36,14 @@ namespace MvxScaffolding.UI.ViewModels
         protected BaseViewModel()
         {
             ShowDialogCommand = new RelayCommand<IViewModel>(ShowDialog);
+        }
+
+        protected void OpenLink(string url, string linkName)
+        {
+            Logger.Current.Telemetry.TrackLinkOpenAsync(linkName)
+                .FireAndForget();
+
+            Process.Start(url);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -30,6 +30,7 @@ namespace MvxScaffolding.UI.Views
         {
             if (eventArgs.Parameter is string stringParameter && !string.IsNullOrWhiteSpace(stringParameter))
             {
+                // TODO [JF] :: add url open tracking
                 Process.Start(stringParameter);
             }
         }

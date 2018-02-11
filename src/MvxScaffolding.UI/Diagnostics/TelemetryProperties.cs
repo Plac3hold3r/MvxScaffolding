@@ -25,5 +25,7 @@
         public const string VisualStudioManifestId = "VsManifestId";
 
         public const string NewProject = "NewProject";
+
+        public const string LinkName = "LinkName";
     }
 }

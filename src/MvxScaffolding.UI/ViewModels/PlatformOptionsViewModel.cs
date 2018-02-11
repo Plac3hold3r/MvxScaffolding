@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using MaterialDesignThemes.Wpf;
 using MvxScaffolding.UI.Commands;
 using MvxScaffolding.UI.Configuration;
@@ -53,13 +51,13 @@ namespace MvxScaffolding.UI.ViewModels
             switch (platform)
             {
                 case PlatformType.Android:
-                    Process.Start(Config.Current.MarketShareAndroidUri);
+                    OpenLink(Config.Current.MarketShareAndroidUri, TemplateLinks.MarketShareAndroid);
                     break;
                 case PlatformType.Ios:
-                    Process.Start(Config.Current.MarketShareiOSUri);
+                    OpenLink(Config.Current.MarketShareiOSUri, TemplateLinks.MarketShareIos);
                     break;
                 case PlatformType.Uwp:
-                    Process.Start(Config.Current.MarketShareWindowsUri);
+                    OpenLink(Config.Current.MarketShareWindowsUri, TemplateLinks.MarketShareWindows);
                     break;
             }
         }
