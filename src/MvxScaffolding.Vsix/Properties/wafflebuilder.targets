@@ -21,7 +21,7 @@
   
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)'=='' ">Debug</Configuration>
-    <TemplateSourceRoot Condition=" '$(TemplateSourceRoot)'=='' ">$(MSBuildProjectDirectory)\..\</TemplateSourceRoot>
+    <TemplateSourceRoot Condition=" '$(TemplateSourceRoot)'=='' ">$(MSBuildProjectDirectory)\..\Templates\</TemplateSourceRoot>
     <TemplateOutputPath Condition=" '$(TemplateOutputPath)'=='' ">bin\$(Configuration)\templates\</TemplateOutputPath>
     <DefaultNewProjectNode Condition=" '$(DefaultNewProjectNode)'=='' ">CSharp\Web\SideWaffle</DefaultNewProjectNode>
   </PropertyGroup>
