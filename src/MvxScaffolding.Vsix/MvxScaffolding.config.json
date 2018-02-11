@@ -1,9 +1,9 @@
 ﻿{
-  "Environment": "LocalVsixEnv",
-  "RemoteTelemetryKey": "VSIX Key",
+  "RemoteTelemetryKey": "AI Key",
   "PrivacyPolicyUri": "https://github.com/Plac3hold3r/MvxScaffolding",
   "GitHubUri": "https://github.com/Plac3hold3r/MvxScaffolding",
   "TemplateVersion": "0.5.0",
+  "DiagnosticsTraceLevel": "Verbose",
   "AuthorGitHubUri": "https://github.com/Plac3hold3r",
   "EditorConfigUri": "https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options",
   "FluentLayoutUri": "https://github.com/FluentLayout/Cirrious.FluentLayout",

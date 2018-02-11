@@ -59,7 +59,19 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="key.snk" />
-    <None Include="MvxScaffolding.config.json" />
+    <Content Include="MvxScaffolding.config.json">
+      <TransformOnBuild>true</TransformOnBuild>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <None Include="MvxScaffolding.config.Debug.json">
+      <DependentUpon>MvxScaffolding.config.json</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="MvxScaffolding.config.Release.json">
+      <DependentUpon>MvxScaffolding.config.json</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\wafflebuilder.targets">
       <SubType>Designer</SubType>
     </None>
@@ -85,6 +97,7 @@
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="..\..\packages\Microsoft.VisualStudio.SlowCheetah.3.0.61\build\Microsoft.VisualStudio.SlowCheetah.targets" Condition="Exists('..\..\packages\Microsoft.VisualStudio.SlowCheetah.3.0.61\build\Microsoft.VisualStudio.SlowCheetah.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup>
@@ -96,6 +109,12 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Warn Condition="!Exists('$(WaffleBuilderTargetsPath)')" Text="wafflebuilder.targets not found at [$(WaffleBuilderTargetsPath)]" />
+  </Target>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.VisualStudio.SlowCheetah.3.0.61\build\Microsoft.VisualStudio.SlowCheetah.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.VisualStudio.SlowCheetah.3.0.61\build\Microsoft.VisualStudio.SlowCheetah.targets'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

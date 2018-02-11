@@ -11,8 +11,6 @@ namespace MvxScaffolding.UI.Configuration
 {
     public class Config
     {
-        public string Environment { get; set; }
-
         public string RemoteTelemetryKey { get; set; }
 
         public string PrivacyPolicyUri { get; set; }
@@ -20,6 +18,8 @@ namespace MvxScaffolding.UI.Configuration
         public string GitHubUri { get; set; }
 
         public string TemplateVersion { get; set; }
+
+        public TraceEventType DiagnosticsTraceLevel { get; set; } = TraceEventType.Verbose;
 
         public string AuthorGitHubUri { get; set; }
 

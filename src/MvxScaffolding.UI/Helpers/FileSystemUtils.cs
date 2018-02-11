@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using MvxScaffolding.UI.Diagnostics;
 
 namespace MvxScaffolding.UI.Helpers
 {
@@ -16,7 +17,7 @@ namespace MvxScaffolding.UI.Helpers
             }
             catch (Exception ex)
             {
-                // TODO [JF] :: log exception
+                Logger.Current.Exception.TrackAsync(ex, "Error deleting directory").FireAndForget();
             }
         }
     }

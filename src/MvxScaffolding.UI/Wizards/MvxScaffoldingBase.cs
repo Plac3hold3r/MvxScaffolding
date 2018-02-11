@@ -9,6 +9,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TemplateWizard;
 using Microsoft.VisualStudio.Threading;
+using MvxScaffolding.UI.Diagnostics;
 using MvxScaffolding.UI.Helpers;
 using MvxScaffolding.UI.Views;
 
@@ -45,35 +46,49 @@ namespace MvxScaffolding.UI.Wizards
         {
             if (runKind == WizardRunKind.AsNewProject || runKind == WizardRunKind.AsMultiProject)
             {
-                var dte = (DTE)automationObject;
-                var solution = (Solution2)dte.Solution;
-                solution.Close();
+                UpdateSolutionDirectory(automationObject, replacementsDictionary);
 
-                var oldDestinationDirectory = replacementsDictionary["$destinationdirectory$"];
-                if (Directory.Exists(oldDestinationDirectory))
+                try
                 {
-                    Directory.Delete(oldDestinationDirectory, true);
+                    ShowModal(new MainWindow());
+
+                    if (MvxScaffoldingContext.UserSelectedOptions is null)
+                    {
+                        var projectDirectory = replacementsDictionary["$destinationdirectory$"];
+                        var solutionDirectory = replacementsDictionary["$solutiondirectory$"];
+
+                        CleanupDirectories(projectDirectory, solutionDirectory);
+                        Logger.Current.Telemetry.TrackWizardStatusAsync(WizardStatus.Cancelled).FireAndForget();
+
+                        throw new WizardBackoutException();
+                    }
+                    else
+                    {
+                        UpdateReplacementsDictionary(replacementsDictionary);
+                        Logger.Current.Telemetry.TrackWizardStatusAsync(WizardStatus.Completed).FireAndForget();
+                    }
                 }
-
-                var newDestinationDirectory = Path.Combine($"{oldDestinationDirectory}", @"..\");
-                replacementsDictionary["$destinationdirectory$"] = Path.GetFullPath(newDestinationDirectory);
-
-                ShowModal(new MainWindow());
-
-                if (MvxScaffoldingContext.UserSelectedOptions is null)
+                finally
                 {
-                    var projectDirectory = replacementsDictionary["$destinationdirectory$"];
-                    var solutionDirectory = replacementsDictionary["$solutiondirectory$"];
-
-                    CleanupDirectories(projectDirectory, solutionDirectory);
-
-                    throw new WizardBackoutException();
-                }
-                else
-                {
-                    UpdateReplacementsDictionary(replacementsDictionary);
+                    Logger.Current.Telemetry.TrackEndSessionAsync().FireAndForget();
                 }
             }
+        }
+
+        private static void UpdateSolutionDirectory(object automationObject, Dictionary<string, string> replacementsDictionary)
+        {
+            var dte = (DTE)automationObject;
+            var solution = (Solution2)dte.Solution;
+            solution.Close();
+
+            var oldDestinationDirectory = replacementsDictionary["$destinationdirectory$"];
+            if (Directory.Exists(oldDestinationDirectory))
+            {
+                Directory.Delete(oldDestinationDirectory, true);
+            }
+
+            var newDestinationDirectory = Path.Combine($"{oldDestinationDirectory}", @"..\");
+            replacementsDictionary["$destinationdirectory$"] = Path.GetFullPath(newDestinationDirectory);
         }
 
         public bool ShouldAddProjectItem(string filePath)
@@ -83,32 +98,30 @@ namespace MvxScaffolding.UI.Wizards
 
         protected virtual void UpdateReplacementsDictionary(Dictionary<string, string> replacementsDictionary)
         {
-            replacementsDictionary.Add("$passthrough:HasAndroidProject$", MvxScaffoldingContext.UserSelectedOptions.HasAndroid.ToString().ToLowerInvariant());
-            replacementsDictionary.Add("$passthrough:HasiOSProject$", MvxScaffoldingContext.UserSelectedOptions.HasIos.ToString().ToLowerInvariant());
-            replacementsDictionary.Add("$passthrough:HasUWPProject$", MvxScaffoldingContext.UserSelectedOptions.HasUwp.ToString().ToLowerInvariant());
+            replacementsDictionary.AddParameter(TemplateOptions.HasAndroidProject, MvxScaffoldingContext.UserSelectedOptions.HasAndroid);
+            replacementsDictionary.AddParameter(TemplateOptions.HasIosProject, MvxScaffoldingContext.UserSelectedOptions.HasIos);
+            replacementsDictionary.AddParameter(TemplateOptions.HasUwpProject, MvxScaffoldingContext.UserSelectedOptions.HasUwp);
 
-            replacementsDictionary.Add("$passthrough:HasCoreTestProject$", MvxScaffoldingContext.UserSelectedOptions.HasCoreUnitTestProject.ToString().ToLowerInvariant());
-            replacementsDictionary.Add("$passthrough:HasAndroidTestProject$", MvxScaffoldingContext.UserSelectedOptions.HasAndroidUnitTestProject.ToString().ToLowerInvariant());
-            replacementsDictionary.Add("$passthrough:HasiOSTestProject$", MvxScaffoldingContext.UserSelectedOptions.HasIosUnitTestProject.ToString().ToLowerInvariant());
-            replacementsDictionary.Add("$passthrough:HasUWPTestProject$", MvxScaffoldingContext.UserSelectedOptions.HasUwpUnitTestProject.ToString().ToLowerInvariant());
-            replacementsDictionary.Add("$passthrough:HasUWPUITestProject$", MvxScaffoldingContext.UserSelectedOptions.HasUwpUiTestProject.ToString().ToLowerInvariant());
+            replacementsDictionary.AddParameter(TemplateOptions.HasCoreTestProject, MvxScaffoldingContext.UserSelectedOptions.HasCoreUnitTestProject);
+            replacementsDictionary.AddParameter(TemplateOptions.HasAndroidTestProject, MvxScaffoldingContext.UserSelectedOptions.HasAndroidUnitTestProject);
+            replacementsDictionary.AddParameter(TemplateOptions.HasIosTestProject, MvxScaffoldingContext.UserSelectedOptions.HasIosUnitTestProject);
+            replacementsDictionary.AddParameter(TemplateOptions.HasUwpTestProject, MvxScaffoldingContext.UserSelectedOptions.HasUwpUnitTestProject);
+            replacementsDictionary.AddParameter(TemplateOptions.HasUwpUITestProject, MvxScaffoldingContext.UserSelectedOptions.HasUwpUiTestProject);
 
-            replacementsDictionary.Add("$passthrough:HasEditorConfig$", MvxScaffoldingContext.UserSelectedOptions.HasEditorConfig.ToString().ToLowerInvariant());
-            replacementsDictionary.Add("$passthrough:SolutionProjectGrouping$", MvxScaffoldingContext.UserSelectedOptions.SelectedProjectGrouping);
+            replacementsDictionary.AddParameter(TemplateOptions.HasEditorConfig, MvxScaffoldingContext.UserSelectedOptions.HasEditorConfig);
+            replacementsDictionary.AddParameter(TemplateOptions.SolutionProjectGrouping, MvxScaffoldingContext.UserSelectedOptions.SelectedProjectGrouping);
 
-            replacementsDictionary.Add("$passthrough:AppId$", MvxScaffoldingContext.UserSelectedOptions.AppId);
-            replacementsDictionary.Add("$passthrough:AppName$", MvxScaffoldingContext.UserSelectedOptions.AppName);
-            replacementsDictionary.Add("$passthrough:NETStandardVersion$", MvxScaffoldingContext.UserSelectedOptions.SelectedNetStandard);
+            replacementsDictionary.AddParameter(TemplateOptions.AppId, MvxScaffoldingContext.UserSelectedOptions.AppId);
+            replacementsDictionary.AddParameter(TemplateOptions.AppName, MvxScaffoldingContext.UserSelectedOptions.AppName);
+            replacementsDictionary.AddParameter(TemplateOptions.NetStandardVersion, MvxScaffoldingContext.UserSelectedOptions.SelectedNetStandard);
 
-            replacementsDictionary.Add("$passthrough:AndroidMinSDKVersion$", MvxScaffoldingContext.UserSelectedOptions.SelectedMinAndroidSDK);
+            replacementsDictionary.AddParameter(TemplateOptions.AndroidMinSdkVersion, MvxScaffoldingContext.UserSelectedOptions.SelectedMinAndroidSDK);
 
-            replacementsDictionary.Add("$passthrough:iOSMinSDKVersion$", MvxScaffoldingContext.UserSelectedOptions.SelectedMinIosSDK);
-            replacementsDictionary.Add("$passthrough:HasHyperion$", MvxScaffoldingContext.UserSelectedOptions.HasIosHyperion.ToString().ToLowerInvariant());
+            replacementsDictionary.AddParameter(TemplateOptions.IosMinSdkVersion, MvxScaffoldingContext.UserSelectedOptions.SelectedMinIosSDK);
+            replacementsDictionary.AddParameter(TemplateOptions.HasHyperion, MvxScaffoldingContext.UserSelectedOptions.HasIosHyperion);
 
-            replacementsDictionary.Add("$passthrough:UWPMinSDKVersion$", MvxScaffoldingContext.UserSelectedOptions.SelectedMinUwpSDK);
-
-            if (!string.IsNullOrWhiteSpace(MvxScaffoldingContext.UserSelectedOptions.UwpDescription))
-                replacementsDictionary.Add("$passthrough:UWPAppDescription$", MvxScaffoldingContext.UserSelectedOptions.UwpDescription);
+            replacementsDictionary.AddParameter(TemplateOptions.UwpMinSdkVersion, MvxScaffoldingContext.UserSelectedOptions.SelectedMinUwpSDK);
+            replacementsDictionary.AddParameter(TemplateOptions.UwpAppDescription, MvxScaffoldingContext.UserSelectedOptions.UwpDescription);
         }
 
         public void ShowModal(System.Windows.Window dialog)

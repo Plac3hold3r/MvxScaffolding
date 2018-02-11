@@ -14,7 +14,7 @@ namespace MvxScaffolding.UI.Wizards
         {
             base.UpdateReplacementsDictionary(replacementsDictionary);
 
-            replacementsDictionary.Add("passthrough:HasXamarinUITestProject", MvxScaffoldingContext.UserSelectedOptions.HasAndroidUiTestProject.ToString().ToLowerInvariant());
+            replacementsDictionary.AddParameter(TemplateOptions.Forms.HasXamarinUITestProject, MvxScaffoldingContext.UserSelectedOptions.HasAndroidUiTestProject);
         }
     }
 }

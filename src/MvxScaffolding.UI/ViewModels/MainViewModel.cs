@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Input;
 using MvxScaffolding.UI.Commands;
 using MvxScaffolding.UI.Configuration;
+using MvxScaffolding.UI.Diagnostics;
 using MvxScaffolding.UI.Helpers;
 using MvxScaffolding.UI.ViewModels.Dialogs;
 using MvxScaffolding.UI.ViewModels.Interfaces;
@@ -14,6 +15,7 @@ namespace MvxScaffolding.UI.ViewModels
     {
         private readonly List<NavigationalViewModel> _navigationalViewModels;
         private readonly WizardOptionViewModel _options;
+        private readonly Stopwatch _timer;
 
         public ICommand ForwardCommand { get; }
 
@@ -34,7 +36,14 @@ namespace MvxScaffolding.UI.ViewModels
         public NavigationalViewModel SelectedNavigationalItem
         {
             get => _selectedNavigationalItem;
-            set { _selectedNavigationalItem = value; OnPropertyChanged(nameof(SelectedNavigationalItem)); }
+            set
+            {
+                if (SetProperty(ref _selectedNavigationalItem, value))
+                {
+                    Logger.Current.Telemetry.TrackWizardPageAsync(SelectedNavigationalItem.ViewModel.GetType().Name)
+                        .FireAndForget();
+                }
+            }
         }
 
         private SimpleInfoViewModel _privacyInfoModel;
@@ -43,6 +52,8 @@ namespace MvxScaffolding.UI.ViewModels
 
         public MainViewModel()
         {
+            _timer = Stopwatch.StartNew();
+
             ForwardCommand = new RelayCommand<IClosable>(NavigateForward);
             BackCommand = new RelayCommand(NavigateBackward);
             GoToGitHubCommand = new RelayCommand(GoToGitHubLink);
@@ -76,6 +87,11 @@ namespace MvxScaffolding.UI.ViewModels
             else
             {
                 MvxScaffoldingContext.UserSelectedOptions = _options;
+                _timer.Stop();
+
+                Logger.Current.Telemetry.TrackProjectGenAsync(_options, _timer.Elapsed.TotalSeconds)
+                    .FireAndForget();
+
                 window.Close();
             }
         }

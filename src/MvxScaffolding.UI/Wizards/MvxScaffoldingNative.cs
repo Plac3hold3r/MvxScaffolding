@@ -14,11 +14,11 @@ namespace MvxScaffolding.UI.Wizards
         {
             base.UpdateReplacementsDictionary(replacementsDictionary);
 
-            replacementsDictionary.Add("$passthrough:HasAndroidUITestProject$", MvxScaffoldingContext.UserSelectedOptions.HasAndroidUiTestProject.ToString().ToLowerInvariant());
-            replacementsDictionary.Add("$passthrough:HasiOSUITestProject$", MvxScaffoldingContext.UserSelectedOptions.HasIosUiTestProject.ToString().ToLowerInvariant());
+            replacementsDictionary.AddParameter(TemplateOptions.Native.HasAndroidUITestProject, MvxScaffoldingContext.UserSelectedOptions.HasAndroidUiTestProject);
+            replacementsDictionary.AddParameter(TemplateOptions.Native.HasIosUITestProject, MvxScaffoldingContext.UserSelectedOptions.HasIosUiTestProject);
 
-            replacementsDictionary.Add("$passthrough:UseAndroidXMLLayouts$", MvxScaffoldingContext.UserSelectedOptions.HasAndroidXml.ToString().ToLowerInvariant());
-            replacementsDictionary.Add("$passthrough:HasFluentLayouts$", MvxScaffoldingContext.UserSelectedOptions.HasIosFluentLayout.ToString().ToLowerInvariant());
+            replacementsDictionary.AddParameter(TemplateOptions.Native.UseAndroidXmlLayouts, MvxScaffoldingContext.UserSelectedOptions.HasAndroidXml);
+            replacementsDictionary.AddParameter(TemplateOptions.Native.HasFluentLayouts, MvxScaffoldingContext.UserSelectedOptions.HasIosFluentLayout);
         }
     }
 }

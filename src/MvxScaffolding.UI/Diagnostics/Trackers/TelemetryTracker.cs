@@ -1,0 +1,144 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.VisualStudio.Setup.Configuration;
+using MvxScaffolding.UI.Configuration;
+using MvxScaffolding.UI.Diagnostics.Writers;
+using MvxScaffolding.UI.Helpers;
+using MvxScaffolding.UI.ViewModels;
+
+namespace MvxScaffolding.UI.Diagnostics.Trackers
+{
+    public class TelemetryTracker : IDisposable
+    {
+        private string _vsProductVersion = string.Empty;
+
+        public TelemetryTracker()
+        {
+        }
+
+        public TelemetryTracker(Config config)
+        {
+            RemoteWriter.SetConfiguration(config);
+        }
+
+        public async Task TrackWizardPageAsync(string pageName)
+        {
+            RemoteWriter.Current.SetContentVsProductVersionToContext(GetVsVersion());
+            await RemoteWriter.Current.TrackPageViewAsync(pageName)
+                .ConfigureAwait(false);
+        }
+
+        public async Task TrackEndSessionAsync()
+        {
+            RemoteWriter.Current.SetContentVsProductVersionToContext(GetVsVersion());
+            await RemoteWriter.Current.TrackEventAsync(TelemetryEvents.SessionEnd)
+                .ConfigureAwait(false);
+        }
+
+        public async Task TrackWizardStatusAsync(WizardStatus status)
+        {
+            var properties = new Dictionary<string, string>()
+            {
+                [TelemetryProperties.WizardStatus] = status.ToString(),
+                [TelemetryProperties.WizardType] = TelemetryProperties.NewProject,
+                [TelemetryProperties.EventName] = TelemetryEvents.Wizard
+            };
+
+            RemoteWriter.Current.SetContentVsProductVersionToContext(GetVsVersion());
+            await RemoteWriter.Current.TrackEventAsync(TelemetryEvents.Wizard, properties)
+                .ConfigureAwait(false);
+        }
+
+        public async Task TrackProjectGenAsync(WizardOptionViewModel options, double seconds)
+        {
+            var properties = new Dictionary<string, string>
+            {
+                [TelemetryProperties.ProjectType] = MvxScaffoldingContext.CurrentTemplateType.ToString(),
+                [TelemetryProperties.EventName] = TelemetryEvents.ProjectGen,
+                [TemplateOptions.HasAndroidProject] = options.HasAndroid.ToString(),
+                [TemplateOptions.HasIosProject] = options.HasIos.ToString(),
+                [TemplateOptions.HasUwpProject] = options.HasUwp.ToString(),
+                [TemplateOptions.HasCoreTestProject] = options.HasCoreUnitTestProject.ToString(),
+                [TemplateOptions.HasAndroidTestProject] = options.HasAndroidUnitTestProject.ToString(),
+                [TemplateOptions.HasIosTestProject] = options.HasIosUnitTestProject.ToString(),
+                [TemplateOptions.HasUwpTestProject] = options.HasUwpUnitTestProject.ToString(),
+                [TemplateOptions.HasUwpUITestProject] = options.HasUwpUiTestProject.ToString(),
+                [TemplateOptions.HasEditorConfig] = options.HasEditorConfig.ToString(),
+                [TemplateOptions.SolutionProjectGrouping] = options.SelectedProjectGrouping,
+                [TemplateOptions.AppId] = options.AppId.HasValue(),
+                [TemplateOptions.AppName] = options.AppName.HasValue(),
+                [TemplateOptions.NetStandardVersion] = options.SelectedNetStandard,
+                [TemplateOptions.AndroidMinSdkVersion] = options.SelectedMinAndroidSDK,
+                [TemplateOptions.IosMinSdkVersion] = options.SelectedMinIosSDK,
+                [TemplateOptions.HasHyperion] = options.HasIosHyperion.ToString(),
+                [TemplateOptions.UwpMinSdkVersion] = options.SelectedMinUwpSDK,
+                [TemplateOptions.UwpAppDescription] = options.UwpDescription.HasValue()
+            };
+
+            if (MvxScaffoldingContext.CurrentTemplateType == TemplateType.MvxNative)
+                properties = AddNativeProjectProperties(properties, options);
+            else
+                properties = AddFormsProjectProperties(properties, options);
+
+            var metrics = new Dictionary<string, double>
+            {
+                [TelemetryMetrics.TimeSpent] = seconds
+            };
+
+            await RemoteWriter.Current.TrackEventAsync(TelemetryEvents.ProjectGen, properties, metrics)
+                .ConfigureAwait(false);
+        }
+
+        public string GetVsVersion()
+        {
+            if (string.IsNullOrEmpty(_vsProductVersion))
+            {
+                var configuration = new SetupConfiguration() as ISetupConfiguration;
+                ISetupInstance instance = configuration.GetInstanceForCurrentProcess();
+                _vsProductVersion = instance.GetInstallationVersion();
+            }
+
+            return _vsProductVersion;
+        }
+
+        private Dictionary<string, string> AddNativeProjectProperties(Dictionary<string, string> properties, WizardOptionViewModel options)
+        {
+            properties.Add(TemplateOptions.Native.HasAndroidUITestProject, options.HasAndroidUiTestProject.ToString());
+            properties.Add(TemplateOptions.Native.HasIosUITestProject, options.HasIosUiTestProject.ToString());
+            properties.Add(TemplateOptions.Native.UseAndroidXmlLayouts, options.HasAndroidXml.ToString());
+            properties.Add(TemplateOptions.Native.HasFluentLayouts, options.HasIosFluentLayout.ToString());
+
+            return properties;
+        }
+
+        private Dictionary<string, string> AddFormsProjectProperties(Dictionary<string, string> properties, WizardOptionViewModel options)
+        {
+            properties.Add(TemplateOptions.Forms.HasXamarinUITestProject, options.HasAndroidUiTestProject.ToString());
+
+            return properties;
+        }
+
+        ~TelemetryTracker()
+        {
+            Dispose(false);
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                // free managed resources
+                RemoteWriter.Current.Dispose();
+            }
+
+            // free native resources if any.
+        }
+    }
+}
