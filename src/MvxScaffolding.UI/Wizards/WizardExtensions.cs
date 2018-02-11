@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using MvxScaffolding.UI.Helpers;
 
 namespace MvxScaffolding.UI.Wizards
 {
@@ -17,6 +16,11 @@ namespace MvxScaffolding.UI.Wizards
                     replacementsDictionary.Add(key.AsParameter(), stringValue);
                     break;
             }
+        }
+
+        public static string AsParameter(this string templateOption)
+        {
+            return $"$passthrough:{templateOption}$";
         }
     }
 }

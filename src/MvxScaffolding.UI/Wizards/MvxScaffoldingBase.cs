@@ -9,8 +9,10 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TemplateWizard;
 using Microsoft.VisualStudio.Threading;
+using MvxScaffolding.UI.Contexts;
 using MvxScaffolding.UI.Diagnostics;
-using MvxScaffolding.UI.Helpers;
+using MvxScaffolding.UI.Files;
+using MvxScaffolding.UI.Template;
 using MvxScaffolding.UI.Views;
 
 namespace MvxScaffolding.UI.Wizards

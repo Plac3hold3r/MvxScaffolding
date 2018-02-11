@@ -1,4 +1,4 @@
-﻿namespace MvxScaffolding.UI.Helpers
+﻿namespace MvxScaffolding.UI.Template
 {
     public static class TemplateOptions
     {
@@ -52,11 +52,6 @@
         public static class Forms
         {
             public const string HasXamarinUITestProject = "HasXamarinUITestProject";
-        }
-
-        public static string AsParameter(this string templateOption)
-        {
-            return $"$passthrough:{templateOption}$";
         }
     }
 }

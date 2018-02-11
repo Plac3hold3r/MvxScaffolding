@@ -221,10 +221,11 @@
     <Compile Include="Diagnostics\Writers\RemoteWriter.cs" />
     <Compile Include="Diagnostics\Trackers\TraceTracker.cs" />
     <Compile Include="Extensions\TaskExtensions.cs" />
-    <Compile Include="Helpers\FileSystemUtils.cs" />
-    <Compile Include="Helpers\MvxScaffoldingContext.cs" />
-    <Compile Include="Helpers\TemplateOptions.cs" />
-    <Compile Include="Helpers\TemplateType.cs" />
+    <Compile Include="Files\FileSystemUtils.cs" />
+    <Compile Include="Contexts\MvxScaffoldingContext.cs" />
+    <Compile Include="Template\PlatformTypes.cs" />
+    <Compile Include="Template\TemplateOptions.cs" />
+    <Compile Include="Template\TemplateType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validation\RequiredIfAttribute.cs" />
     <Compile Include="ViewModels\AppDetailsViewModel.cs" />

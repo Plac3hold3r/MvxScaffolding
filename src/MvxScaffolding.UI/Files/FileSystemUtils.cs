@@ -2,7 +2,7 @@
 using System.IO;
 using MvxScaffolding.UI.Diagnostics;
 
-namespace MvxScaffolding.UI.Helpers
+namespace MvxScaffolding.UI.Files
 {
     public static class FileSystemUtils
     {

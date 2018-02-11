@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.Setup.Configuration;
 using MvxScaffolding.UI.Configuration;
+using MvxScaffolding.UI.Contexts;
 using MvxScaffolding.UI.Diagnostics.Writers;
-using MvxScaffolding.UI.Helpers;
+using MvxScaffolding.UI.Template;
 using MvxScaffolding.UI.ViewModels;
 
 namespace MvxScaffolding.UI.Diagnostics.Trackers

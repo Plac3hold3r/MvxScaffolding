@@ -73,7 +73,13 @@
                             Grid.Row="1"
                             Margin="0,12,0,8"
                             HorizontalAlignment="Stretch">
-                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">Unit Test Project</TextBlock>
+                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Hyperlink
+                                    Cursor="Arrow"
+                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                    TextDecorations="None">
+                                    Unit Test Project
+                                </Hyperlink></TextBlock>
                             <ToggleButton
                                 Margin="8,0,0,0"
                                 HorizontalAlignment="Right"
@@ -159,6 +165,15 @@
                                 </ItemsPanelTemplate>
                             </ComboBox.ItemsPanel>
                         </ComboBox>
+                        <TextBlock
+                            Grid.Row="0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Style="{StaticResource MaterialDesignCaptionTextBlock}">
+                            <Hyperlink IsEnabled="{Binding Options.HasAndroid}">
+                                Market Share
+                            </Hyperlink>
+                        </TextBlock>
                         <DockPanel
                             Grid.Row="1"
                             Margin="0,12,0,0"
@@ -303,6 +318,15 @@
                                 </ItemsPanelTemplate>
                             </ComboBox.ItemsPanel>
                         </ComboBox>
+                        <TextBlock
+                            Grid.Row="0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Style="{StaticResource MaterialDesignCaptionTextBlock}">
+                            <Hyperlink IsEnabled="{Binding Options.HasIos}">
+                                Market Share
+                            </Hyperlink>
+                        </TextBlock>
                         <DockPanel
                             Grid.Row="1"
                             Margin="0,12,0,0"
@@ -460,6 +484,16 @@
                             materialDesign:HintAssist.IsFloating="True"
                             IsEnabled="{Binding Options.HasUwp}"
                             Text="{Binding Options.UwpDescription, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
+                        <TextBlock
+                            Grid.Row="1"
+                            Margin="0,14,0,0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Style="{StaticResource MaterialDesignCaptionTextBlock}">
+                            <Hyperlink IsEnabled="{Binding Options.HasUwp}">
+                                Market Share
+                            </Hyperlink>
+                        </TextBlock>
                         <ComboBox
                             Grid.Row="1"
                             Margin="0,16,0,0"

@@ -1,4 +1,4 @@
-﻿namespace MvxScaffolding.UI.Helpers
+﻿namespace MvxScaffolding.UI.Template
 {
     public enum TemplateType
     {

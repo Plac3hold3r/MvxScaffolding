@@ -1,12 +1,10 @@
-﻿using System;
-using System.Diagnostics;
-using System.Windows;
+﻿using System.Diagnostics;
 using System.Windows.Input;
 using System.Windows.Media;
 using MahApps.Metro.Controls;
-using MaterialDesignColors;
 using MaterialDesignThemes.Wpf;
-using MvxScaffolding.UI.Helpers;
+using MvxScaffolding.UI.Contexts;
+using MvxScaffolding.UI.Template;
 using MvxScaffolding.UI.ViewModels;
 using MvxScaffolding.UI.ViewModels.Interfaces;
 

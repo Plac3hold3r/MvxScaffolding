@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
-using MvxScaffolding.UI.Helpers;
+using MvxScaffolding.UI.Contexts;
+using MvxScaffolding.UI.Template;
 
 namespace MvxScaffolding.UI.Wizards
 {

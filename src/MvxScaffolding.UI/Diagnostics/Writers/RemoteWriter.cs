@@ -7,7 +7,7 @@ using Microsoft.ApplicationInsights;
 using Microsoft.ApplicationInsights.Extensibility;
 using MvxScaffolding.UI.Configuration;
 using Microsoft.VisualStudio.Telemetry;
-using MvxScaffolding.UI.Helpers;
+using MvxScaffolding.UI.Contexts;
 
 namespace MvxScaffolding.UI.Diagnostics.Writers
 {

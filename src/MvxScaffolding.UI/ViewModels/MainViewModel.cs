@@ -4,8 +4,8 @@ using System.Linq;
 using System.Windows.Input;
 using MvxScaffolding.UI.Commands;
 using MvxScaffolding.UI.Configuration;
+using MvxScaffolding.UI.Contexts;
 using MvxScaffolding.UI.Diagnostics;
-using MvxScaffolding.UI.Helpers;
 using MvxScaffolding.UI.ViewModels.Dialogs;
 using MvxScaffolding.UI.ViewModels.Interfaces;
 
