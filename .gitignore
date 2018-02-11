@@ -262,3 +262,5 @@ __pycache__/
 
 # Android Auto-generated files
 **/Resources/Resource.designer.cs
+
+**/MvxScaffolding.Vsix.csproj-sc.App.config
