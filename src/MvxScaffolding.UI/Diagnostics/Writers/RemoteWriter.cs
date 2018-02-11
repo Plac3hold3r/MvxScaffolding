@@ -7,6 +7,7 @@ using Microsoft.ApplicationInsights;
 using Microsoft.ApplicationInsights.Extensibility;
 using MvxScaffolding.UI.Configuration;
 using Microsoft.VisualStudio.Telemetry;
+using MvxScaffolding.UI.Helpers;
 
 namespace MvxScaffolding.UI.Diagnostics.Writers
 {
@@ -31,6 +32,12 @@ namespace MvxScaffolding.UI.Diagnostics.Writers
                 return _current;
             }
             private set => _current = value;
+        }
+
+        public static void Reset()
+        {
+            _current.Dispose();
+            _current = null;
         }
 
         private RemoteWriter(Config config)
@@ -192,6 +199,7 @@ namespace MvxScaffolding.UI.Diagnostics.Writers
             _client.Context.Session.Id = Guid.NewGuid().ToString();
             _client.Context.Component.Version = GetVersion();
             _client.Context.Properties.Add(TelemetryProperties.WizardFileVersion, GetFileVersion());
+            _client.Context.Properties.Add(TelemetryProperties.ProjectType, MvxScaffoldingContext.CurrentTemplateType.ToString());
         }
 
         public void SetContentVsProductVersionToContext(string vsProductVersion)
@@ -205,6 +213,11 @@ namespace MvxScaffolding.UI.Diagnostics.Writers
                 else
                 {
                     _client.Context.Properties[TelemetryProperties.VisualStudioProductVersion] = vsProductVersion;
+                }
+
+                if (!_client.Context.Properties.ContainsKey(TelemetryProperties.ProjectType))
+                {
+                    _client.Context.Properties.Add(TelemetryProperties.ProjectType, MvxScaffoldingContext.CurrentTemplateType.ToString());
                 }
             }
         }

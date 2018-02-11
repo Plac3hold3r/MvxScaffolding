@@ -34,12 +34,18 @@ namespace MvxScaffolding.UI.Diagnostics.Trackers
             RemoteWriter.Current.SetContentVsProductVersionToContext(GetVsVersion());
             await RemoteWriter.Current.TrackEventAsync(TelemetryEvents.SessionEnd)
                 .ConfigureAwait(false);
+
+            await RemoteWriter.Current.FlushAsync()
+                .ConfigureAwait(false);
+
+            RemoteWriter.Reset();
         }
 
         public async Task TrackWizardStatusAsync(WizardStatus status)
         {
             var properties = new Dictionary<string, string>()
             {
+                [TelemetryProperties.ProjectType] = MvxScaffoldingContext.CurrentTemplateType.ToString(),
                 [TelemetryProperties.WizardStatus] = status.ToString(),
                 [TelemetryProperties.WizardType] = TelemetryProperties.NewProject,
                 [TelemetryProperties.EventName] = TelemetryEvents.Wizard
@@ -56,22 +62,22 @@ namespace MvxScaffolding.UI.Diagnostics.Trackers
             {
                 [TelemetryProperties.ProjectType] = MvxScaffoldingContext.CurrentTemplateType.ToString(),
                 [TelemetryProperties.EventName] = TelemetryEvents.ProjectGen,
-                [TemplateOptions.HasAndroidProject] = options.HasAndroid.ToString(),
-                [TemplateOptions.HasIosProject] = options.HasIos.ToString(),
-                [TemplateOptions.HasUwpProject] = options.HasUwp.ToString(),
-                [TemplateOptions.HasCoreTestProject] = options.HasCoreUnitTestProject.ToString(),
-                [TemplateOptions.HasAndroidTestProject] = options.HasAndroidUnitTestProject.ToString(),
-                [TemplateOptions.HasIosTestProject] = options.HasIosUnitTestProject.ToString(),
-                [TemplateOptions.HasUwpTestProject] = options.HasUwpUnitTestProject.ToString(),
-                [TemplateOptions.HasUwpUITestProject] = options.HasUwpUiTestProject.ToString(),
-                [TemplateOptions.HasEditorConfig] = options.HasEditorConfig.ToString(),
+                [TemplateOptions.HasAndroidProject] = options.HasAndroid.ToStringLowerCase(),
+                [TemplateOptions.HasIosProject] = options.HasIos.ToStringLowerCase(),
+                [TemplateOptions.HasUwpProject] = options.HasUwp.ToStringLowerCase(),
+                [TemplateOptions.HasCoreTestProject] = options.HasCoreUnitTestProject.ToStringLowerCase(),
+                [TemplateOptions.HasAndroidTestProject] = options.HasAndroidUnitTestProject.ToStringLowerCase(),
+                [TemplateOptions.HasIosTestProject] = options.HasIosUnitTestProject.ToStringLowerCase(),
+                [TemplateOptions.HasUwpTestProject] = options.HasUwpUnitTestProject.ToStringLowerCase(),
+                [TemplateOptions.HasUwpUITestProject] = options.HasUwpUiTestProject.ToStringLowerCase(),
+                [TemplateOptions.HasEditorConfig] = options.HasEditorConfig.ToStringLowerCase(),
                 [TemplateOptions.SolutionProjectGrouping] = options.SelectedProjectGrouping,
                 [TemplateOptions.AppId] = options.AppId.HasValue(),
                 [TemplateOptions.AppName] = options.AppName.HasValue(),
                 [TemplateOptions.NetStandardVersion] = options.SelectedNetStandard,
                 [TemplateOptions.AndroidMinSdkVersion] = options.SelectedMinAndroidSDK,
                 [TemplateOptions.IosMinSdkVersion] = options.SelectedMinIosSDK,
-                [TemplateOptions.HasHyperion] = options.HasIosHyperion.ToString(),
+                [TemplateOptions.HasHyperion] = options.HasIosHyperion.ToStringLowerCase(),
                 [TemplateOptions.UwpMinSdkVersion] = options.SelectedMinUwpSDK,
                 [TemplateOptions.UwpAppDescription] = options.UwpDescription.HasValue()
             };
@@ -104,17 +110,17 @@ namespace MvxScaffolding.UI.Diagnostics.Trackers
 
         private Dictionary<string, string> AddNativeProjectProperties(Dictionary<string, string> properties, WizardOptionViewModel options)
         {
-            properties.Add(TemplateOptions.Native.HasAndroidUITestProject, options.HasAndroidUiTestProject.ToString());
-            properties.Add(TemplateOptions.Native.HasIosUITestProject, options.HasIosUiTestProject.ToString());
-            properties.Add(TemplateOptions.Native.UseAndroidXmlLayouts, options.HasAndroidXml.ToString());
-            properties.Add(TemplateOptions.Native.HasFluentLayouts, options.HasIosFluentLayout.ToString());
+            properties.Add(TemplateOptions.Native.HasAndroidUITestProject, options.HasAndroidUiTestProject.ToStringLowerCase());
+            properties.Add(TemplateOptions.Native.HasIosUITestProject, options.HasIosUiTestProject.ToStringLowerCase());
+            properties.Add(TemplateOptions.Native.UseAndroidXmlLayouts, options.HasAndroidXml.ToStringLowerCase());
+            properties.Add(TemplateOptions.Native.HasFluentLayouts, options.HasIosFluentLayout.ToStringLowerCase());
 
             return properties;
         }
 
         private Dictionary<string, string> AddFormsProjectProperties(Dictionary<string, string> properties, WizardOptionViewModel options)
         {
-            properties.Add(TemplateOptions.Forms.HasXamarinUITestProject, options.HasAndroidUiTestProject.ToString());
+            properties.Add(TemplateOptions.Forms.HasXamarinUITestProject, options.HasAndroidUiTestProject.ToStringLowerCase());
 
             return properties;
         }

@@ -6,5 +6,10 @@
         {
             return (!string.IsNullOrWhiteSpace(value)).ToString().ToLowerInvariant();
         }
+
+        public static string ToStringLowerCase(this bool value)
+        {
+            return value.ToString().ToLowerInvariant();
+        }
     }
 }
