@@ -204,7 +204,7 @@
                             Visibility="{Binding IsNativeTemplate, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Bottom">
                                 <Hyperlink
-                                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                                    Command="{Binding ShowDialogCommand}"
                                     CommandParameter="{Binding AndroidXmlLayoutInfoModel}"
                                     IsEnabled="{Binding Options.HasAndroid}"
                                     Style="{StaticResource MaterialDesignBody1Hyperlink}"
@@ -348,7 +348,7 @@
                             Visibility="{Binding IsNativeTemplate, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
                                 <Hyperlink
-                                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                                    Command="{Binding ShowDialogCommand}"
                                     CommandParameter="{Binding IosFluentLayoutsInfoModel}"
                                     IsEnabled="{Binding Options.HasIos}"
                                     Style="{StaticResource MaterialDesignBody1Hyperlink}"
@@ -372,7 +372,7 @@
                             HorizontalAlignment="Stretch">
                             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
                                 <Hyperlink
-                                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                                    Command="{Binding ShowDialogCommand}"
                                     CommandParameter="{Binding IosHyperionInfoModel}"
                                     IsEnabled="{Binding Options.HasIos}"
                                     Style="{StaticResource MaterialDesignBody1Hyperlink}"

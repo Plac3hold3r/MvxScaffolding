@@ -1,9 +1,14 @@
-﻿using MvxScaffolding.UI.Configuration;
+﻿using MaterialDesignThemes.Wpf;
+using MvxScaffolding.UI.Commands;
+using MvxScaffolding.UI.Configuration;
+using MvxScaffolding.UI.Diagnostics;
 using MvxScaffolding.UI.Helpers;
+using MvxScaffolding.UI.ViewModels.Dialogs;
 using MvxScaffolding.UI.ViewModels.Interfaces;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 
 namespace MvxScaffolding.UI.ViewModels
 {
@@ -24,6 +29,13 @@ namespace MvxScaffolding.UI.ViewModels
         public string TemplateVersion
             => Config.Current.TemplateVersion;
 
+        public ICommand ShowDialogCommand { get; }
+
+        protected BaseViewModel()
+        {
+            ShowDialogCommand = new RelayCommand<IViewModel>(ShowDialog);
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string propName)
@@ -41,6 +53,21 @@ namespace MvxScaffolding.UI.ViewModels
             storage = value;
             OnPropertyChanged(propertyName);
             return true;
+        }
+
+        private void ShowDialog(IViewModel viewModel)
+        {
+            string dialogPageName;
+
+            if (viewModel is SimpleInfoViewModel infoViewModel)
+                dialogPageName = $"{nameof(SimpleInfoViewModel)} - {infoViewModel.Title}";
+            else
+                dialogPageName = viewModel.GetType().Name;
+
+            Logger.Current.Telemetry.TrackWizardPageAsync(dialogPageName)
+                    .FireAndForget();
+
+            DialogHost.Show(viewModel);
         }
     }
 }

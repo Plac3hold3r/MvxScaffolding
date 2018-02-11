@@ -68,7 +68,7 @@
                             </ComboBox>
                             <TextBlock Margin="0,8,0,0" HorizontalAlignment="Right">
                                 <Hyperlink
-                                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                                    Command="{Binding ShowDialogCommand}"
                                     Style="{StaticResource MaterialDesignBody1Hyperlink}"
                                     TextDecorations="None">
                                     <Hyperlink.CommandParameter>
@@ -100,7 +100,7 @@
 
                             <TextBlock HorizontalAlignment="Right">
                                 <Hyperlink
-                                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                                    Command="{Binding ShowDialogCommand}"
                                     CommandParameter="{Binding EditorConfigInfoModel}"
                                     Style="{StaticResource MaterialDesignBody1Hyperlink}"
                                     TextDecorations="None">

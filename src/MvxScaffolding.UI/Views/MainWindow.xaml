@@ -176,7 +176,7 @@
                     Grid.Row="2"
                     Margin="8,0,0,0"
                     HorizontalAlignment="Left"
-                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                    Command="{Binding ShowDialogCommand}"
                     Style="{DynamicResource MaterialDesignFlatButton}">
                     <Button.CommandParameter>
                         <dialogs:AboutViewModel />
@@ -191,7 +191,7 @@
                     Grid.Row="2"
                     Margin="8,0,0,0"
                     HorizontalAlignment="Left"
-                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                    Command="{Binding ShowDialogCommand}"
                     CommandParameter="{Binding PrivacyInfoModel}"
                     Style="{DynamicResource MaterialDesignFlatButton}">
                     <StackPanel Orientation="Horizontal">
