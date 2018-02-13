@@ -367,11 +367,11 @@ namespace MvxScaffolding.UI.ViewModels
 
             MinUwpSDKOptions = new Dictionary<string, string>
             {
-                ["16299"] = "16299 - Fall Creators Update",
-                ["15063"] = "15063 - Creators Update",
-                ["14393"] = "14393 - Anniversary Update",
-                ["10586"] = "10586 - November Update",
-                ["10240"] = "10240 - RTM",
+                ["16299"] = "1709 - Fall Creators Update",
+                ["15063"] = "1703 - Creators Update",
+                ["14393"] = "1607 - Anniversary Update",
+                ["10586"] = "1511 - November Update",
+                ["10240"] = "1507 - RTM",
             };
             SelectedMinUwpSDK = "16299";
 

@@ -486,23 +486,23 @@
       "choices": [
         {
           "choice": "16299",
-          "description": "Fall Creators Update"
+          "description": "1709 - Fall Creators Update"
         },
         {
           "choice": "15063",
-          "description": "Creators Update"
+          "description": "1703 - Creators Update"
         },
         {
           "choice": "14393",
-          "description": "Anniversary Update"
+          "description": "1607 - Anniversary Update"
         },
         {
           "choice": "10586",
-          "description": "November Update"
+          "description": "1511 - November Update"
         },
         {
           "choice": "10240",
-          "description": "RTM"
+          "description": "1507 - RTM"
         }
       ],
       "replaces": "16299",
