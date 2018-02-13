@@ -31,19 +31,19 @@ namespace MvxScaffolding.UI.ViewModels
         private void ToggleAndroid()
         {
             Options.HasAndroid = !Options.HasAndroid;
-            Options.AndroidIncludeIcon = Options.HasAndroid ? PackIconKind.Close : PackIconKind.Check;
+            Options.AndroidIncludeIcon = Options.HasAndroid ? PackIconKind.Check : PackIconKind.Plus;
         }
 
         private void ToggleIos()
         {
             Options.HasIos = !Options.HasIos;
-            Options.IosIncludeIcon = Options.HasIos ? PackIconKind.Close : PackIconKind.Check;
+            Options.IosIncludeIcon = Options.HasIos ? PackIconKind.Check : PackIconKind.Plus;
         }
 
         private void ToggleUwp()
         {
             Options.HasUwp = !Options.HasUwp;
-            Options.UwpIncludeIcon = Options.HasUwp ? PackIconKind.Close : PackIconKind.Check;
+            Options.UwpIncludeIcon = Options.HasUwp ? PackIconKind.Check : PackIconKind.Plus;
         }
 
         private void ShowPlatformMarketShare(PlatformType platform)

@@ -379,11 +379,11 @@ namespace MvxScaffolding.UI.ViewModels
             HasUwpUiTestProject = false;
 
             HasAndroid = true;
-            AndroidIncludeIcon = PackIconKind.Close;
+            AndroidIncludeIcon = PackIconKind.Check;
             HasIos = true;
-            IosIncludeIcon = PackIconKind.Close;
+            IosIncludeIcon = PackIconKind.Check;
             HasUwp = false;
-            UwpIncludeIcon = PackIconKind.Check;
+            UwpIncludeIcon = PackIconKind.Plus;
 
         }
     }
