@@ -1,7 +1,6 @@
 ﻿using MvxScaffolding.UI.Commands;
 using MvxScaffolding.UI.Configuration;
 using MvxScaffolding.UI.Template;
-using System.Diagnostics;
 using System.Windows.Input;
 
 namespace MvxScaffolding.UI.ViewModels.Dialogs

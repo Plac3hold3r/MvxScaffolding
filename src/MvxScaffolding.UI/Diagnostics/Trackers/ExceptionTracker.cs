@@ -7,10 +7,6 @@ namespace MvxScaffolding.UI.Diagnostics.Trackers
 {
     public class ExceptionTracker
     {
-        public ExceptionTracker()
-        {
-        }
-
         public async Task TrackAsync(Exception ex, string message = null)
         {
             try

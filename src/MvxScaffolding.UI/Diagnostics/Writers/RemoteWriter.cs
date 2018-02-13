@@ -87,11 +87,6 @@ namespace MvxScaffolding.UI.Diagnostics.Writers
             await Current.TrackExceptionAsync(ex, properties);
         }
 
-        public bool AllowMultipleInstances()
-        {
-            return false;
-        }
-
         private void IntializeTelemetryClient()
         {
             try

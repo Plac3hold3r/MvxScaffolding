@@ -493,7 +493,7 @@
                             Text="{Binding Options.UwpDescription, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
                         <TextBlock
                             Grid.Row="1"
-                            Margin="0,14,0,0"
+                            Margin="0,12,0,0"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Top"
                             Style="{StaticResource MaterialDesignCaptionTextBlock}">

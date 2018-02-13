@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using MvxScaffolding.UI.Commands;
 using MvxScaffolding.UI.Configuration;
 using MvxScaffolding.UI.Template;
