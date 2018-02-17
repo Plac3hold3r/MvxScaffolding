@@ -60,13 +60,15 @@ namespace MvxScaffolding.UI.Wizards
                 {
                     ShowModal(new MainWindow());
 
+                    MvxScaffoldingContext.RunningTimer.Stop();
+
                     if (MvxScaffoldingContext.UserSelectedOptions is null)
                     {
-                        var projectDirectory = replacementsDictionary["$destinationdirectory$"];
-                        var solutionDirectory = replacementsDictionary["$solutiondirectory$"];
+                        var projectDirectory = replacementsDictionary[VSTemplateKeys.DestinationDirectory];
+                        var solutionDirectory = replacementsDictionary[VSTemplateKeys.SolutionDirectory];
 
                         CleanupDirectories(projectDirectory, solutionDirectory);
-                        Logger.Current.Telemetry.TrackWizardStatusAsync(WizardStatus.Cancelled)
+                        Logger.Current.Telemetry.TrackWizardCancelledAsync(MvxScaffoldingContext.RunningTimer.Elapsed.TotalSeconds)
                             .FireAndForget();
 
                         throw new WizardBackoutException();
@@ -75,10 +77,10 @@ namespace MvxScaffolding.UI.Wizards
                     {
                         UpdateReplacementsDictionary(replacementsDictionary);
 
-                        MvxScaffoldingContext.UserSelectedOptions = null;
-
-                        Logger.Current.Telemetry.TrackWizardStatusAsync(WizardStatus.Completed)
+                        Logger.Current.Telemetry.TrackProjectGenAsync(MvxScaffoldingContext.UserSelectedOptions, MvxScaffoldingContext.RunningTimer.Elapsed.TotalSeconds)
                             .FireAndForget();
+
+                        MvxScaffoldingContext.UserSelectedOptions = null;
                     }
                 }
                 finally
@@ -95,14 +97,14 @@ namespace MvxScaffolding.UI.Wizards
             var solution = (Solution2)dte.Solution;
             solution.Close();
 
-            var oldDestinationDirectory = replacementsDictionary["$destinationdirectory$"];
+            var oldDestinationDirectory = replacementsDictionary[VSTemplateKeys.DestinationDirectory];
             if (Directory.Exists(oldDestinationDirectory))
             {
                 Directory.Delete(oldDestinationDirectory, true);
             }
 
             var newDestinationDirectory = Path.Combine($"{oldDestinationDirectory}", @"..\");
-            replacementsDictionary["$destinationdirectory$"] = Path.GetFullPath(newDestinationDirectory);
+            replacementsDictionary[VSTemplateKeys.DestinationDirectory] = Path.GetFullPath(newDestinationDirectory);
         }
 
         public bool ShouldAddProjectItem(string filePath)

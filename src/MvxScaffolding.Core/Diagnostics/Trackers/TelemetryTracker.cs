@@ -42,7 +42,7 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
             };
 
             RemoteWriter.Current.SetContentVsProductVersionToContext(GetVsVersion());
-            await RemoteWriter.Current.TrackEventAsync(TelemetryEvents.OpenLink, properties)
+            await RemoteWriter.Current.TrackEventAsync($"{TelemetryEvents.OpenLink} - {linkName}", properties)
                 .ConfigureAwait(false);
         }
 
@@ -58,17 +58,22 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
             RemoteWriter.Reset();
         }
 
-        public async Task TrackWizardStatusAsync(WizardStatus status)
+        public async Task TrackWizardCancelledAsync(double seconds)
         {
             var properties = new Dictionary<string, string>()
             {
-                [TelemetryProperties.WizardStatus] = status.ToString(),
+                [TelemetryProperties.WizardStatus] = WizardStatus.Cancelled.ToString(),
                 [TelemetryProperties.WizardType] = TelemetryProperties.NewProject,
-                [TelemetryProperties.EventName] = TelemetryEvents.Wizard
+                [TelemetryProperties.EventName] = TelemetryEvents.WizardCancelled
+            };
+
+            var metrics = new Dictionary<string, double>
+            {
+                [TelemetryMetrics.TimeSpent] = seconds
             };
 
             RemoteWriter.Current.SetContentVsProductVersionToContext(GetVsVersion());
-            await RemoteWriter.Current.TrackEventAsync(TelemetryEvents.Wizard, properties)
+            await RemoteWriter.Current.TrackEventAsync(TelemetryEvents.WizardCancelled, properties, metrics)
                 .ConfigureAwait(false);
         }
 
@@ -155,12 +160,7 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
         protected virtual void Dispose(bool disposing)
         {
             if (disposing)
-            {
-                // free managed resources
                 RemoteWriter.Current.Dispose();
-            }
-
-            // free native resources if any.
         }
     }
 }

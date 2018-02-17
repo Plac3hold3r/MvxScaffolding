@@ -10,8 +10,8 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.ApplicationInsights;
 using Microsoft.ApplicationInsights.Extensibility;
-using MvxScaffolding.Core.Configuration;
 using Microsoft.VisualStudio.Telemetry;
+using MvxScaffolding.Core.Configuration;
 using MvxScaffolding.Core.Contexts;
 
 namespace MvxScaffolding.Core.Diagnostics.Writers
@@ -333,12 +333,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
         protected virtual void Dispose(bool disposing)
         {
             if (disposing)
-            {
-                // free managed resources
                 Flush();
-            }
-
-            // free native resources if any
         }
     }
 }

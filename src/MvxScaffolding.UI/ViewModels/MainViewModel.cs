@@ -22,7 +22,6 @@ namespace MvxScaffolding.UI.ViewModels
     {
         private readonly List<NavigationalViewModel> _navigationalViewModels;
         private readonly WizardOptionViewModel _options;
-        private readonly Stopwatch _timer;
 
         public ICommand ForwardCommand { get; }
 
@@ -59,7 +58,7 @@ namespace MvxScaffolding.UI.ViewModels
 
         public MainViewModel()
         {
-            _timer = Stopwatch.StartNew();
+            MvxScaffoldingContext.RunningTimer = Stopwatch.StartNew();
 
             ForwardCommand = new RelayCommand<IClosable>(NavigateForward);
             BackCommand = new RelayCommand(NavigateBackward);
@@ -94,10 +93,6 @@ namespace MvxScaffolding.UI.ViewModels
             else
             {
                 MvxScaffoldingContext.UserSelectedOptions = _options;
-                _timer.Stop();
-
-                Logger.Current.Telemetry.TrackProjectGenAsync(_options, _timer.Elapsed.TotalSeconds)
-                    .FireAndForget();
 
                 window.Close();
             }

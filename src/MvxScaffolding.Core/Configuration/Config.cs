@@ -98,8 +98,7 @@ namespace MvxScaffolding.Core.Configuration
             catch (Exception ex)
             {
                 TraceUsingDefault($"Error deserializing configuration from file '{path}'. Exception:\n\r{ex.ToString()}");
-                //throw new ConfigurationErrorsException($"Error deserializing configuration data from file '{path}'.", ex);
-                // TODO [JF] :: fix exception
+                throw new ConfigurationErrorsException($"Error deserializing configuration data from file '{path}'.", ex);
                 throw;
             }
         }

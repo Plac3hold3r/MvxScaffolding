@@ -3,6 +3,7 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
+using System.Diagnostics;
 using MvxScaffolding.Core.Template;
 
 namespace MvxScaffolding.Core.Contexts
@@ -12,5 +13,7 @@ namespace MvxScaffolding.Core.Contexts
         public static TemplateType CurrentTemplateType { get; set; }
 
         public static ITemplateOptions UserSelectedOptions { get; set; }
+
+        public static Stopwatch RunningTimer { get; set; }
     }
 }

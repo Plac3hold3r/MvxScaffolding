@@ -9,7 +9,7 @@ namespace MvxScaffolding.Core.Diagnostics
     {
         public const string ProjectGen = "ProjectGen";
 
-        public const string Wizard = "Wizard";
+        public const string WizardCancelled = "WizardCancelled";
 
         public const string SessionStart = "SessionStart";
 

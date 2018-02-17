@@ -8,14 +8,15 @@ using System.IO;
 using EnvDTE;
 using EnvDTE80;
 using Microsoft.VisualStudio.TemplateWizard;
+using MvxScaffolding.Core.Template;
 
 namespace MvxScaffolding.UI.Wizards
 {
     public class MvxScaffoldingDirectoryFix : IWizard
     {
-        private DTE dte;
-        private string destinationDirectory;
-        private string solutionName;
+        private DTE _dte;
+        private string _destinationDirectory;
+        private string _solutionName;
 
         public void BeforeOpeningFile(ProjectItem projectItem)
         {
@@ -34,16 +35,16 @@ namespace MvxScaffolding.UI.Wizards
 
         public void RunFinished()
         {
-            var solution = (Solution2)dte.Solution;
-            var pathToOldSolution = Path.Combine(destinationDirectory, solutionName + ".sln");
+            var solution = (Solution2)_dte.Solution;
+            var pathToOldSolution = Path.Combine(_destinationDirectory, _solutionName + ".sln");
             solution.Open(pathToOldSolution);
         }
 
         public void RunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, WizardRunKind runKind, object[] customParams)
         {
-            dte = (DTE)automationObject;
-            destinationDirectory = replacementsDictionary["$destinationdirectory$"];
-            solutionName = replacementsDictionary["$safeprojectname$"];
+            _dte = (DTE)automationObject;
+            _destinationDirectory = replacementsDictionary[VSTemplateKeys.DestinationDirectory];
+            _solutionName = replacementsDictionary[VSTemplateKeys.SafeProjectName];
         }
 
         public bool ShouldAddProjectItem(string filePath)

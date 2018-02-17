@@ -113,6 +113,7 @@
     <Compile Include="Template\TemplateLinks.cs" />
     <Compile Include="Template\TemplateOptions.cs" />
     <Compile Include="Template\TemplateType.cs" />
+    <Compile Include="Template\VSTemplateKeys.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
