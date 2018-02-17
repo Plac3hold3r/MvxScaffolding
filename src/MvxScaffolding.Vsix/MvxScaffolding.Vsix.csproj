@@ -93,6 +93,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MvxScaffolding.Core\MvxScaffolding.Core.csproj">
+      <Project>{079C1EB3-7123-4571-90DD-E4F298B78FB7}</Project>
+      <Name>MvxScaffolding.Core</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
     <ProjectReference Include="..\MvxScaffolding.UI\MvxScaffolding.UI.csproj">
       <Project>{c727cc5b-1154-4de7-8654-5038bde92ebd}</Project>
       <Name>MvxScaffolding.UI</Name>

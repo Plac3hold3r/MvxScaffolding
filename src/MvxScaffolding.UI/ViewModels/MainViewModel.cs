@@ -7,11 +7,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Input;
+using MvxScaffolding.Core.Configuration;
+using MvxScaffolding.Core.Contexts;
+using MvxScaffolding.Core.Diagnostics;
+using MvxScaffolding.Core.Tasks;
+using MvxScaffolding.Core.Template;
 using MvxScaffolding.UI.Commands;
-using MvxScaffolding.UI.Configuration;
-using MvxScaffolding.UI.Contexts;
-using MvxScaffolding.UI.Diagnostics;
-using MvxScaffolding.UI.Template;
 using MvxScaffolding.UI.ViewModels.Dialogs;
 using MvxScaffolding.UI.ViewModels.Interfaces;
 

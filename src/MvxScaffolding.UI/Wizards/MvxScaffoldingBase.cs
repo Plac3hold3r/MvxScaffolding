@@ -14,10 +14,11 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TemplateWizard;
 using Microsoft.VisualStudio.Threading;
-using MvxScaffolding.UI.Contexts;
-using MvxScaffolding.UI.Diagnostics;
-using MvxScaffolding.UI.Files;
-using MvxScaffolding.UI.Template;
+using MvxScaffolding.Core.Contexts;
+using MvxScaffolding.Core.Diagnostics;
+using MvxScaffolding.Core.Files;
+using MvxScaffolding.Core.Tasks;
+using MvxScaffolding.Core.Template;
 using MvxScaffolding.UI.Views;
 
 namespace MvxScaffolding.UI.Wizards
@@ -65,19 +66,25 @@ namespace MvxScaffolding.UI.Wizards
                         var solutionDirectory = replacementsDictionary["$solutiondirectory$"];
 
                         CleanupDirectories(projectDirectory, solutionDirectory);
-                        Logger.Current.Telemetry.TrackWizardStatusAsync(WizardStatus.Cancelled).FireAndForget();
+                        Logger.Current.Telemetry.TrackWizardStatusAsync(WizardStatus.Cancelled)
+                            .FireAndForget();
 
                         throw new WizardBackoutException();
                     }
                     else
                     {
                         UpdateReplacementsDictionary(replacementsDictionary);
-                        Logger.Current.Telemetry.TrackWizardStatusAsync(WizardStatus.Completed).FireAndForget();
+
+                        MvxScaffoldingContext.UserSelectedOptions = null;
+
+                        Logger.Current.Telemetry.TrackWizardStatusAsync(WizardStatus.Completed)
+                            .FireAndForget();
                     }
                 }
                 finally
                 {
-                    Logger.Current.Telemetry.TrackEndSessionAsync().FireAndForget();
+                    Logger.Current.Telemetry.TrackEndSessionAsync()
+                        .FireAndForget();
                 }
             }
         }

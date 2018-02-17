@@ -3,8 +3,8 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
-using MvxScaffolding.UI.Configuration;
-using MvxScaffolding.UI.Template;
+using MvxScaffolding.Core.Configuration;
+using MvxScaffolding.Core.Template;
 
 namespace MvxScaffolding.UI.ViewModels.Dialogs
 {

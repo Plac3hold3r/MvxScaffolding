@@ -12,11 +12,12 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
 using MaterialDesignThemes.Wpf;
+using MvxScaffolding.Core.Template;
 using MvxScaffolding.UI.Validation;
 
 namespace MvxScaffolding.UI.ViewModels
 {
-    public class WizardOptionViewModel : BaseViewModel, INotifyDataErrorInfo
+    public class WizardOptionViewModel : BaseViewModel, ITemplateOptions, INotifyDataErrorInfo
     {
         private readonly Dictionary<string, ICollection<string>>
             _validationErrors = new Dictionary<string, ICollection<string>>();

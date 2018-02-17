@@ -3,10 +3,10 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
-using MvxScaffolding.UI.Commands;
-using MvxScaffolding.UI.Configuration;
-using MvxScaffolding.UI.Template;
 using System.Windows.Input;
+using MvxScaffolding.Core.Configuration;
+using MvxScaffolding.Core.Template;
+using MvxScaffolding.UI.Commands;
 
 namespace MvxScaffolding.UI.ViewModels.Dialogs
 {

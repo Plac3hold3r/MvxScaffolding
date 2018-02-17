@@ -4,8 +4,8 @@
 //---------------------------------------------------------------------------------
 
 using System.Collections.Generic;
-using MvxScaffolding.UI.Contexts;
-using MvxScaffolding.UI.Template;
+using MvxScaffolding.Core.Contexts;
+using MvxScaffolding.Core.Template;
 
 namespace MvxScaffolding.UI.Wizards
 {
@@ -13,7 +13,6 @@ namespace MvxScaffolding.UI.Wizards
     {
         public MvxScaffoldingNative() : base(TemplateType.MvxNative)
         {
-
         }
 
         protected override void UpdateReplacementsDictionary(Dictionary<string, string> replacementsDictionary)

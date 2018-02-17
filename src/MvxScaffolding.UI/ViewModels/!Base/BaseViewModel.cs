@@ -3,19 +3,20 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
-using MaterialDesignThemes.Wpf;
-using MvxScaffolding.UI.Commands;
-using MvxScaffolding.UI.Configuration;
-using MvxScaffolding.UI.Contexts;
-using MvxScaffolding.UI.Diagnostics;
-using MvxScaffolding.UI.Template;
-using MvxScaffolding.UI.ViewModels.Dialogs;
-using MvxScaffolding.UI.ViewModels.Interfaces;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using MaterialDesignThemes.Wpf;
+using MvxScaffolding.Core.Configuration;
+using MvxScaffolding.Core.Contexts;
+using MvxScaffolding.Core.Diagnostics;
+using MvxScaffolding.Core.Tasks;
+using MvxScaffolding.Core.Template;
+using MvxScaffolding.UI.Commands;
+using MvxScaffolding.UI.ViewModels.Dialogs;
+using MvxScaffolding.UI.ViewModels.Interfaces;
 
 namespace MvxScaffolding.UI.ViewModels
 {

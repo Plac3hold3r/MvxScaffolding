@@ -3,9 +3,9 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
-using MvxScaffolding.UI.Contexts;
-using MvxScaffolding.UI.Template;
 using System.Collections.Generic;
+using MvxScaffolding.Core.Contexts;
+using MvxScaffolding.Core.Template;
 
 namespace MvxScaffolding.UI.Wizards
 {
@@ -13,7 +13,6 @@ namespace MvxScaffolding.UI.Wizards
     {
         public MvxScaffoldingForms() : base(TemplateType.MvxForms)
         {
-
         }
 
         protected override void UpdateReplacementsDictionary(Dictionary<string, string> replacementsDictionary)

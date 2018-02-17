@@ -5,9 +5,9 @@
 
 using System.Windows.Input;
 using MaterialDesignThemes.Wpf;
+using MvxScaffolding.Core.Configuration;
+using MvxScaffolding.Core.Template;
 using MvxScaffolding.UI.Commands;
-using MvxScaffolding.UI.Configuration;
-using MvxScaffolding.UI.Template;
 using MvxScaffolding.UI.ViewModels.Dialogs;
 using MvxScaffolding.UI.ViewModels.Interfaces;
 
