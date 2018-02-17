@@ -19,7 +19,7 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
             {
                 Title = "Privacy",
                 Message = "This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more details.",
-                ReadMoreLink = Config.Current.PrivacyPolicyUri, // TODO [JF] :: get the correct policy Uri
+                ReadMoreLink = Config.Current.PrivacyPolicyUri,
                 TemplateLink = TemplateLinks.PrivacyPolicy
             };
         }
