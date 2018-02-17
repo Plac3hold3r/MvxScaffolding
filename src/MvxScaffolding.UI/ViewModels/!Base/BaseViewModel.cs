@@ -38,7 +38,7 @@ namespace MvxScaffolding.UI.ViewModels
             ShowDialogCommand = new RelayCommand<IViewModel>(ShowDialog);
         }
 
-        protected void OpenLink(string url, string linkName)
+        public void OpenLink(string url, string linkName)
         {
             Logger.Current.Telemetry.TrackLinkOpenAsync(linkName)
                 .FireAndForget();

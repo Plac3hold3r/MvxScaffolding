@@ -6,6 +6,7 @@ using MaterialDesignThemes.Wpf;
 using MvxScaffolding.UI.Contexts;
 using MvxScaffolding.UI.Template;
 using MvxScaffolding.UI.ViewModels;
+using MvxScaffolding.UI.ViewModels.Dialogs;
 using MvxScaffolding.UI.ViewModels.Interfaces;
 
 namespace MvxScaffolding.UI.Views
@@ -28,10 +29,11 @@ namespace MvxScaffolding.UI.Views
 
         private void OnDialogClosing(object sender, DialogClosingEventArgs eventArgs)
         {
-            if (eventArgs.Parameter is string stringParameter && !string.IsNullOrWhiteSpace(stringParameter))
+            if (eventArgs.Parameter is SimpleInfoViewModel infoViewModel
+                && !string.IsNullOrWhiteSpace(infoViewModel.ReadMoreLink)
+                && !string.IsNullOrWhiteSpace(infoViewModel.TemplateLink))
             {
-                // TODO [JF] :: add url open tracking
-                Process.Start(stringParameter);
+                (DataContext as MainViewModel).OpenLink(infoViewModel.ReadMoreLink, infoViewModel.TemplateLink);
             }
         }
 

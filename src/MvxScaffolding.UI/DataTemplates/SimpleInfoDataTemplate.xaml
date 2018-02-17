@@ -22,7 +22,7 @@
                 <Button
                     Margin="0,8,8,0"
                     Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
-                    CommandParameter="{Binding ReadMoreLink}"
+                    CommandParameter="{Binding .}"
                     Style="{DynamicResource MaterialDesignFlatButton}"
                     Visibility="{Binding ReadMoreLink, Converter={StaticResource StringToVisibilityConverter}}">
                     MORE DETAILS
