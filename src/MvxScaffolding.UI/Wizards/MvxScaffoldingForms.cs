@@ -1,4 +1,9 @@
-﻿using MvxScaffolding.UI.Contexts;
+﻿//---------------------------------------------------------------------------------
+// Copyright (c) 2018 Jonathan Froon, Plac3hold3r+github@outlook.com
+// MvxScaffolding is licensed using the MIT License
+//---------------------------------------------------------------------------------
+
+using MvxScaffolding.UI.Contexts;
 using MvxScaffolding.UI.Template;
 using System.Collections.Generic;
 

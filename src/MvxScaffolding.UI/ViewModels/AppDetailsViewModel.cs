@@ -1,4 +1,9 @@
-﻿using System.Windows.Input;
+﻿//---------------------------------------------------------------------------------
+// Copyright (c) 2018 Jonathan Froon, Plac3hold3r+github@outlook.com
+// MvxScaffolding is licensed using the MIT License
+//---------------------------------------------------------------------------------
+
+using System.Windows.Input;
 using MvxScaffolding.UI.Commands;
 using MvxScaffolding.UI.Configuration;
 using MvxScaffolding.UI.Template;

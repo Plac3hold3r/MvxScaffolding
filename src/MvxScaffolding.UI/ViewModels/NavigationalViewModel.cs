@@ -1,4 +1,9 @@
-﻿using MvxScaffolding.UI.ViewModels.Interfaces;
+﻿//---------------------------------------------------------------------------------
+// Copyright (c) 2018 Jonathan Froon, Plac3hold3r+github@outlook.com
+// MvxScaffolding is licensed using the MIT License
+//---------------------------------------------------------------------------------
+
+using MvxScaffolding.UI.ViewModels.Interfaces;
 
 namespace MvxScaffolding.UI.ViewModels
 {

@@ -205,6 +205,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Commands\RelayParameterCommand.cs" />
     <Compile Include="Configuration\Config.cs" />
     <Compile Include="Converters\ActiveColorZoneModeConverter.cs" />
     <Compile Include="Converters\SummaryHighlightColorConverter.cs" />

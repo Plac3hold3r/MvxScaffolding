@@ -1,4 +1,9 @@
-﻿{
+﻿//---------------------------------------------------------------------------------
+// Copyright (c) 2018 Jonathan Froon, Plac3hold3r+github@outlook.com
+// MvxScaffolding is licensed using the MIT License
+//---------------------------------------------------------------------------------
+
+{
   "RemoteTelemetryKey": "AI Key",
   "PrivacyPolicyUri": "https://github.com/Plac3hold3r/MvxScaffolding/blob/master/PrivacyPolicy",
   "GitHubUri": "https://github.com/Plac3hold3r/MvxScaffolding",

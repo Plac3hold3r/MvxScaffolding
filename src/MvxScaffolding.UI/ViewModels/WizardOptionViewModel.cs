@@ -1,4 +1,9 @@
-﻿using System;
+﻿//---------------------------------------------------------------------------------
+// Copyright (c) 2018 Jonathan Froon, Plac3hold3r+github@outlook.com
+// MvxScaffolding is licensed using the MIT License
+//---------------------------------------------------------------------------------
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

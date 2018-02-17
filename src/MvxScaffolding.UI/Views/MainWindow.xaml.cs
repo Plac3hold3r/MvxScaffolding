@@ -1,4 +1,8 @@
-﻿using System.Diagnostics;
+﻿//---------------------------------------------------------------------------------
+// Copyright (c) 2018 Jonathan Froon, Plac3hold3r+github@outlook.com
+// MvxScaffolding is licensed using the MIT License
+//---------------------------------------------------------------------------------
+
 using System.Windows.Input;
 using System.Windows.Media;
 using MahApps.Metro.Controls;

@@ -1,4 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿//---------------------------------------------------------------------------------
+// Copyright (c) 2018 Jonathan Froon, Plac3hold3r+github@outlook.com
+// MvxScaffolding is licensed using the MIT License
+//---------------------------------------------------------------------------------
+
+using System.Threading.Tasks;
 
 namespace MvxScaffolding.UI
 {

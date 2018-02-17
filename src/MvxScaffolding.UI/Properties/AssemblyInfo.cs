@@ -1,9 +1,12 @@
-﻿using System.Reflection;
+﻿//---------------------------------------------------------------------------------
+// Copyright (c) 2018 Jonathan Froon, Plac3hold3r+github@outlook.com
+// MvxScaffolding is licensed using the MIT License
+//---------------------------------------------------------------------------------
+
+using System.Reflection;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
+
 [assembly: AssemblyTitle("MvxScaffolding.UI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
