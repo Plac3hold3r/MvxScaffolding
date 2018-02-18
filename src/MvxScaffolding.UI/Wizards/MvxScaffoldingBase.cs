@@ -68,6 +68,7 @@ namespace MvxScaffolding.UI.Wizards
                         var solutionDirectory = replacementsDictionary[VSTemplateKeys.SolutionDirectory];
 
                         CleanupDirectories(projectDirectory, solutionDirectory);
+
                         Logger.Current.Telemetry.TrackWizardCancelledAsync(MvxScaffoldingContext.RunningTimer.Elapsed.TotalSeconds)
                             .FireAndForget();
 
@@ -75,10 +76,10 @@ namespace MvxScaffolding.UI.Wizards
                     }
                     else
                     {
-                        UpdateReplacementsDictionary(replacementsDictionary);
-
                         Logger.Current.Telemetry.TrackProjectGenAsync(MvxScaffoldingContext.UserSelectedOptions, MvxScaffoldingContext.RunningTimer.Elapsed.TotalSeconds)
                             .FireAndForget();
+
+                        UpdateReplacementsDictionary(replacementsDictionary);
 
                         MvxScaffoldingContext.UserSelectedOptions = null;
                     }
