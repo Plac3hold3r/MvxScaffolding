@@ -264,3 +264,4 @@ __pycache__/
 **/Resources/Resource.designer.cs
 
 **/MvxScaffolding.Vsix.csproj-sc.App.config
+**/*Release.pfx
