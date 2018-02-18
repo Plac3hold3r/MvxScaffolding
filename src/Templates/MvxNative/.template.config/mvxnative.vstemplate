@@ -25,15 +25,15 @@
         </CustomParameters>
     </TemplateContent>
     <WizardExtension>
-        <Assembly>MvxScaffolding.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=757ce2d2c6a4ca8b</Assembly>
-        <FullClassName>MvxScaffolding.UI.Wizards.MvxScaffoldingNative</FullClassName>
+        <Assembly>MvxScaffolding.Vsix, Version=1.0.0.0, Culture=neutral, PublicKeyToken=204bf14e50e65313</Assembly>
+        <FullClassName>MvxScaffolding.Vsix.Wizards.MvxScaffoldingNative</FullClassName>
     </WizardExtension>
     <WizardExtension>
         <Assembly>Microsoft.VisualStudio.TemplateEngine.Wizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
         <FullClassName>Microsoft.VisualStudio.TemplateEngine.Wizard.TemplateEngineWizard</FullClassName>
     </WizardExtension>
     <WizardExtension>
-        <Assembly>MvxScaffolding.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=757ce2d2c6a4ca8b</Assembly>
-        <FullClassName>MvxScaffolding.UI.Wizards.MvxScaffoldingDirectoryFix</FullClassName>
+        <Assembly>MvxScaffolding.Vsix, Version=1.0.0.0, Culture=neutral, PublicKeyToken=204bf14e50e65313</Assembly>
+        <FullClassName>MvxScaffolding.Vsix.Wizards.MvxScaffoldingDirectoryFix</FullClassName>
     </WizardExtension>
 </VSTemplate>

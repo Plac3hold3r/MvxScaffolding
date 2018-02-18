@@ -5,7 +5,7 @@
 
 using System.Collections.Generic;
 
-namespace MvxScaffolding.UI.Wizards
+namespace MvxScaffolding.Vsix.Wizards
 {
     public static class WizardExtensions
     {

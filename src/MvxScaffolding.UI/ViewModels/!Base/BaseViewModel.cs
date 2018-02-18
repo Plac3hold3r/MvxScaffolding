@@ -32,7 +32,7 @@ namespace MvxScaffolding.UI.ViewModels
             => IsNativeTemplate ? "MvxNative" : "MvxForms";
 
         public string AppVersion
-            => System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            => MvxScaffoldingContext.WizardVersion;
 
         public string TemplateVersion
             => Config.Current.TemplateVersion;

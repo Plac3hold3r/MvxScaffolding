@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using MvxScaffolding.Core.Contexts;
 using MvxScaffolding.Core.Template;
 
-namespace MvxScaffolding.UI.Wizards
+namespace MvxScaffolding.Vsix.Wizards
 {
     public class MvxScaffoldingForms : MvxScaffoldingBase
     {

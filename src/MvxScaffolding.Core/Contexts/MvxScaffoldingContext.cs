@@ -15,5 +15,7 @@ namespace MvxScaffolding.Core.Contexts
         public static ITemplateOptions UserSelectedOptions { get; set; }
 
         public static Stopwatch RunningTimer { get; set; }
+
+        public static string WizardVersion { get; set; } = "Local";
     }
 }

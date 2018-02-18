@@ -13,15 +13,15 @@ using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TemplateWizard;
-using Microsoft.VisualStudio.Threading;
 using MvxScaffolding.Core.Contexts;
 using MvxScaffolding.Core.Diagnostics;
 using MvxScaffolding.Core.Files;
 using MvxScaffolding.Core.Tasks;
 using MvxScaffolding.Core.Template;
-using MvxScaffolding.UI.Views;
+using MvxScaffolding.UI;
+using MvxScaffolding.UI.Threading;
 
-namespace MvxScaffolding.UI.Wizards
+namespace MvxScaffolding.Vsix.Wizards
 {
     public abstract class MvxScaffoldingBase : IWizard
     {
@@ -54,11 +54,13 @@ namespace MvxScaffolding.UI.Wizards
         {
             if (runKind == WizardRunKind.AsNewProject || runKind == WizardRunKind.AsMultiProject)
             {
+                MvxScaffoldingContext.WizardVersion = ThisAssembly.Vsix.Version;
+
                 UpdateSolutionDirectory(automationObject, replacementsDictionary);
 
                 try
                 {
-                    ShowModal(new MainWindow());
+                    ShowModal(Startup.FirstView());
 
                     MvxScaffoldingContext.RunningTimer.Stop();
 
@@ -178,25 +180,6 @@ namespace MvxScaffolding.UI.Wizards
                 && !Directory.EnumerateFiles(solutionDirectory).Any())
             {
                 FileSystemUtils.SafeDeleteDirectory(solutionDirectory);
-            }
-        }
-
-        public static class SafeThreading
-        {
-            public static JoinableTaskFactory JoinableTaskFactory { get; set; }
-
-            static SafeThreading()
-            {
-                try
-                {
-                    JoinableTaskFactory = ThreadHelper.JoinableTaskFactory;
-                }
-                catch (NullReferenceException)
-                {
-                    var context = new JoinableTaskContext(System.Threading.Thread.CurrentThread);
-                    JoinableTaskCollection collection = context.CreateCollection();
-                    JoinableTaskFactory = context.CreateFactory(collection);
-                }
             }
         }
     }

@@ -10,7 +10,7 @@ using EnvDTE80;
 using Microsoft.VisualStudio.TemplateWizard;
 using MvxScaffolding.Core.Template;
 
-namespace MvxScaffolding.UI.Wizards
+namespace MvxScaffolding.Vsix.Wizards
 {
     public class MvxScaffoldingDirectoryFix : IWizard
     {
