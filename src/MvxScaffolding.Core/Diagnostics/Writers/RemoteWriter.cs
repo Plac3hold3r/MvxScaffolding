@@ -197,8 +197,8 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             _client.Context.Cloud.RoleName = TelemetryProperties.RoleInstanceName;
 
             _client.Context.Session.Id = Guid.NewGuid().ToString();
-            _client.Context.Component.Version = GetVersion();
-            _client.Context.Properties.Add(TelemetryProperties.WizardFileVersion, GetFileVersion());
+            _client.Context.Component.Version = MvxScaffoldingContext.WizardVersion;
+            _client.Context.Properties.Add(TelemetryProperties.WizardVersion, MvxScaffoldingContext.WizardVersion);
             _client.Context.Properties.Add(TelemetryProperties.ProjectType, MvxScaffoldingContext.CurrentTemplateType.ToString());
         }
 
@@ -302,21 +302,6 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             var validGuid = Guid.TryParse(_currentConfig.RemoteTelemetryKey, out Guid auxA);
             var taggedGuid = Guid.TryParse(_currentConfig.RemoteTelemetryKey.Substring(4), out Guid auxB);
             return validGuid || taggedGuid;
-        }
-
-        private static string GetVersion()
-        {
-            var assembly = Assembly.GetExecutingAssembly();
-
-            return assembly.GetName().Version.ToString();
-        }
-
-        private static string GetFileVersion()
-        {
-            var assembly = Assembly.GetExecutingAssembly();
-            var fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
-
-            return fvi.FileVersion;
         }
 
         ~RemoteWriter()

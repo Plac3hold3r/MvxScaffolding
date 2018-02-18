@@ -7,7 +7,7 @@ namespace MvxScaffolding.Core.Diagnostics
 {
     public static class TelemetryProperties
     {
-        public const string WizardFileVersion = "WizardFileVersion";
+        public const string WizardVersion = "WizardVersion";
 
         public const string RoleInstanceName = "WizardClient";
 
@@ -15,7 +15,7 @@ namespace MvxScaffolding.Core.Diagnostics
 
         public const string WizardType = "WizardType";
 
-        public const string WizardStatus ="WizardStatus";
+        public const string WizardStatus = "WizardStatus";
 
         public const string EventName = "EventName";
 
