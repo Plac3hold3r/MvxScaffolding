@@ -23,7 +23,7 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
             return new SimpleInfoViewModel
             {
                 Title = "Privacy",
-                Message = "This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more details.",
+                Message = "This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more information.",
                 ReadMoreLink = Config.Current.PrivacyPolicyUri,
                 TemplateLink = TemplateLinks.PrivacyPolicy
             };

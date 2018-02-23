@@ -1,14 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solution Items", "{CD685E50-2396-43CA-AE14-6F4A5019EFDA}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
 		Nuget.Config = Nuget.Config
-		PrivacyPolicy.md = PrivacyPolicy.md
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -104,6 +103,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxScaffolding.VsEmulator", "src\MvxScaffolding.VsEmulator\MvxScaffolding.VsEmulator.csproj", "{59B4974D-C88F-432C-B013-7F838A0A218E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxScaffolding.Core", "src\MvxScaffolding.Core\MvxScaffolding.Core.csproj", "{079C1EB3-7123-4571-90DD-E4F298B78FB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Docs", "!Docs", "{D6F40415-D292-4A46-AEFF-2AE4BC185BE6}"
+	ProjectSection(SolutionItems) = preProject
+		docs\privacy_policy.md = docs\privacy_policy.md
+		docs\template_dotnet_cli.md = docs\template_dotnet_cli.md
+		docs\template_vs.md = docs\template_vs.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

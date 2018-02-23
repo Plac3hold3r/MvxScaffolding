@@ -32,11 +32,24 @@
                 VerticalAlignment="Center">
                 <StackPanel>
                     <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="{Binding IsNativeTemplate, Converter={StaticResource ActiveColorZoneModeConverter}}">
-                        <TextBlock
-                            Margin="16,8"
-                            FontWeight="Medium"
-                            Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                            Text="{Binding TemplateTypeName, StringFormat={}MvxScaffolding - {0}}" />
+                        <Grid Margin="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                Width="70"
+                                Height="70"
+                                Source="../Resources/Images/mvxscaffolding_logo_transparent.png"
+                                Stretch="Uniform" />
+                            <StackPanel
+                                Grid.Column="1"
+                                Margin="8"
+                                VerticalAlignment="Center">
+                                <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}">MvxScaffolding</TextBlock>
+                                <TextBlock Style="{StaticResource MaterialDesignSubheadingTextBlock}" Text="{Binding TemplateTypeName}" />
+                            </StackPanel>
+                        </Grid>
                     </materialDesign:ColorZone>
                     <StackPanel Margin="16">
                         <TextBlock FontWeight="Bold">Application</TextBlock>

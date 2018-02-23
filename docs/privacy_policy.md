@@ -1,14 +1,14 @@
 # Privacy Policy
 
-Plac3hold3r built MvxScaffolding as an Open Source MvvmCross template. This template is provided by Plac3hold3r at no cost and is intended for use as is.
+MvxScaffolding was built as an Open Source MvvmCross template. This template is provided by [Jonathan Froon (Plac3hold3r)](https://github.com/Plac3hold3r) at no cost and is intended for use as is.
 
-This page is used to inform users regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our template.
+This page is used to inform users regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our template wizards.
 
-If you choose to use our template, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the template. We will not use or share your information with anyone except as described in this Privacy Policy.
+If you choose to use our template wizards, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the template wizards. We will not use or share your information with anyone except as described in this Privacy Policy.
 
 ### Information Collection and Use
 
-For a better experience, while using the template, we may require you to provide us with certain personally identifiable information.
+For a better experience, while using the template wizards, we may require you to provide us with certain personally identifiable information.
 
 The template wizard does use third party services that may collect information used to identify you.
 
@@ -18,7 +18,7 @@ Link to privacy policy of third party service providers used by the template wiz
 
 ### Log Data
 
-We want to inform you that whenever you use our template, in a case of an error in the wizard we collect data and information (through third party products) called Log Data. This Log Data may include information such as your device name, operating system version, the configuration of the wizard when utilizing our template, the time and date of your use of the template, and other statistics.
+We want to inform you that whenever you use our template wizards, in a case of an error in the wizard we collect data and information (through third party products) called Log Data. This Log Data may include information such as your device name, operating system version, the configuration of the wizard when utilizing our template, the time and date of your use of the template wizards, and other statistics.
 
 ### Security
 
@@ -36,6 +36,6 @@ We may update our Privacy Policy from time to time. Thus, you are advised to rev
 
 If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.
 
-This privacy policy page was created at privacypolicytemplate.net
+This privacy policy page was originally created at [privacypolicytemplate.net](https://privacypolicytemplate.net/)
 
-Date: ___17 February 2018___
+Last Update Date: ___23 February 2018___

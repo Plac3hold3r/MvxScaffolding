@@ -63,7 +63,7 @@
                     Margin="0,0,0,8"
                     Foreground="{DynamicResource MaterialDesignBodyLight}"
                     TextWrapping="Wrap">
-                    This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more details.
+                    This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more information.
                 </TextBlock>
                 <Button
                     Margin="0,8,8,0"

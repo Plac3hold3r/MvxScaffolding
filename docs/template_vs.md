@@ -1,0 +1,1 @@
+# Template - Visual Studio Extension

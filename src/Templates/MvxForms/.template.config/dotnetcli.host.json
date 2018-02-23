@@ -71,7 +71,7 @@
     },
     "UWPAppDescription": {
       "longName": "uwp-app-description",
-      "shortName": ""
+      "shortName": "uwp-desc"
     },
     "UWPMinSDKVersion": {
       "longName": "uwp-min-sdk",

@@ -22,7 +22,7 @@
     MinHeight="700"
     Background="{DynamicResource MaterialDesignPaper}"
     FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
-    Icon="../Resources/Images/mvxscaffolding_logo_transparent.png"
+    Icon="../Resources/Images/mvxscaffolding_logo_transparent_padding.png"
     KeyDown="OnKeyDown"
     ShowIconOnTitleBar="True"
     ShowInTaskbar="False"
