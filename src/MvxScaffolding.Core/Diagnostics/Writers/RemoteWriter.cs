@@ -13,6 +13,7 @@ using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.VisualStudio.Telemetry;
 using MvxScaffolding.Core.Configuration;
 using MvxScaffolding.Core.Contexts;
+using MvxScaffolding.Core.Properties;
 
 namespace MvxScaffolding.Core.Diagnostics.Writers
 {
@@ -183,8 +184,20 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
 
         private void SetSessionData()
         {
-            var userToTrack = Guid.NewGuid().ToString();
-            var machineToTrack = Guid.NewGuid().ToString();
+            if (Settings.Default.AiUserId == Guid.Empty)
+            {
+                Settings.Default.AiUserId = Guid.NewGuid();
+                Settings.Default.Save();
+            }
+
+            if (Settings.Default.AiDeviceId == Guid.Empty)
+            {
+                Settings.Default.AiDeviceId = Guid.NewGuid();
+                Settings.Default.Save();
+            }
+
+            var userToTrack = Settings.Default.AiUserId.ToString();
+            var machineToTrack = Settings.Default.AiDeviceId.ToString();
 
             _client.Context.User.Id = userToTrack;
             _client.Context.User.AccountId = userToTrack;

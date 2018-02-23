@@ -181,6 +181,7 @@
     </None>
     <None Include="Targets\MSBuilder.ThisAssembly.Vsix.cs.pp" />
     <None Include="Targets\MSBuilder.ThisAssembly.Vsix.targets" />
+    <None Include="template\templatepack.MvxScaffolding.Vsix.proj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\project-icon.png">

@@ -111,6 +111,11 @@
     <Compile Include="Extensions\TaskExtensions.cs" />
     <Compile Include="Files\FileSystemUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Template\ITemplateOptions.cs" />
     <Compile Include="Template\PlatformType.cs" />
     <Compile Include="Template\TemplateLinks.cs" />
@@ -125,6 +130,10 @@
     </None>
     <None Include="key.snk" />
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\..\packages\SonarAnalyzer.CSharp.6.8.1.4648\analyzers\Google.Protobuf.dll" />
