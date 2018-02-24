@@ -6,19 +6,21 @@
 using System;
 using System.Globalization;
 using System.Windows.Data;
+using MvxScaffolding.Core.Template;
 
 namespace MvxScaffolding.UI.Converters
 {
-    public class StringToUpperConverter : IValueConverter
+    public class ProjectGroupToLocalizedString : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value != null && value is string valueString)
+            if (value is string projectGroupOption
+                && TemplateChoices.ProjectGroupingOptions.TryGetValue(projectGroupOption, out string displayOption))
             {
-                return valueString.ToUpper();
+                return displayOption;
             }
 
-            return value;
+            return value?.ToString();
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

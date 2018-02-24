@@ -529,7 +529,7 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to • Select &quot;Flat&quot; for when you want all projects to be placed at the root of the solution..
+        ///   Looks up a localized string similar to Select &quot;Flat&quot; for when you want all projects to be placed at the root of the solution..
         /// </summary>
         public static string ProjectGrouping_Select_Flat {
             get {
@@ -538,7 +538,7 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to • Select &quot;Platform&quot; if you want projects to be grouped based on their target platform..
+        ///   Looks up a localized string similar to Select &quot;Platform&quot;for when you want projects to be grouped based on their target platform..
         /// </summary>
         public static string ProjectGrouping_Select_Platform {
             get {
@@ -547,7 +547,7 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to • Select &quot;Test Group&quot; for when you want all test projects to be placed in a test folder, other projects are placed at the root of the solution..
+        ///   Looks up a localized string similar to Select &quot;Test Group&quot; for when you want all test projects to be placed in a test folder, other projects are placed at the root of the solution..
         /// </summary>
         public static string ProjectGrouping_Select_TestGroup {
             get {
@@ -885,6 +885,51 @@ namespace MvxScaffolding.Localization.Resources {
         public static string Summary_Uwp_UnitTestProject {
             get {
                 return ResourceManager.GetString("Summary_Uwp_UnitTestProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to False.
+        /// </summary>
+        public static string Template_Choice_False {
+            get {
+                return ResourceManager.GetString("Template_Choice_False", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flat.
+        /// </summary>
+        public static string Template_Choice_ProjectGroup_Flat {
+            get {
+                return ResourceManager.GetString("Template_Choice_ProjectGroup_Flat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Platform.
+        /// </summary>
+        public static string Template_Choice_ProjectGroup_Platform {
+            get {
+                return ResourceManager.GetString("Template_Choice_ProjectGroup_Platform", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Test Group.
+        /// </summary>
+        public static string Template_Choice_ProjectGroup_TestGroup {
+            get {
+                return ResourceManager.GetString("Template_Choice_ProjectGroup_TestGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        public static string Template_Choice_True {
+            get {
+                return ResourceManager.GetString("Template_Choice_True", resourceCulture);
             }
         }
     }

@@ -6,19 +6,22 @@
 using System;
 using System.Globalization;
 using System.Windows.Data;
+using MvxScaffolding.Localization.Resources;
 
 namespace MvxScaffolding.UI.Converters
 {
-    public class StringToUpperConverter : IValueConverter
+    public class BoolToLocalizedStringConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value != null && value is string valueString)
+            if (value is bool boolValue)
             {
-                return valueString.ToUpper();
+                return boolValue
+                    ? LocalResources.Template_Choice_True
+                    : LocalResources.Template_Choice_False;
             }
 
-            return value;
+            return value?.ToString();
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

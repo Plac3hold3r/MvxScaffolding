@@ -66,14 +66,14 @@
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
                                     Foreground="{StaticResource PrimaryColorBrush}"
-                                    Text="{Binding Options.SelectedProjectGrouping}" />
+                                    Text="{Binding Options.SelectedProjectGrouping, Converter={StaticResource ProjectGroupToLocalizedString}}" />
                             </DockPanel>
                             <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
                                 <TextBlock Text="{x:Static i18n:LocalResources.Summary_EditorConfig}" />
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Text="{Binding Options.HasEditorConfig}">
+                                    Text="{Binding Options.HasEditorConfig, Converter={StaticResource BoolToLocalizedStringConverter}}">
                                     <TextBlock.Foreground>
                                         <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
                                             <Binding Path="Options.HasEditorConfig" />
@@ -126,7 +126,7 @@
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Text="{Binding Options.HasCoreUnitTestProject}">
+                                    Text="{Binding Options.HasCoreUnitTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
                                     <TextBlock.Foreground>
                                         <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
                                             <Binding Path="Options.HasCoreUnitTestProject" />
@@ -182,7 +182,7 @@
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Text="{Binding Options.HasAndroidUnitTestProject}">
+                                    Text="{Binding Options.HasAndroidUnitTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
                                     <TextBlock.Foreground>
                                         <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
                                             <Binding Path="Options.HasAndroidUnitTestProject" />
@@ -197,7 +197,7 @@
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Text="{Binding Options.HasAndroidUiTestProject}">
+                                    Text="{Binding Options.HasAndroidUiTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
                                     <TextBlock.Foreground>
                                         <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
                                             <Binding Path="Options.HasAndroidUiTestProject" />
@@ -215,7 +215,7 @@
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Text="{Binding Options.HasAndroidXml}">
+                                    Text="{Binding Options.HasAndroidXml, Converter={StaticResource BoolToLocalizedStringConverter}}">
                                     <TextBlock.Foreground>
                                         <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
                                             <Binding Path="Options.HasAndroidXml" />
@@ -271,7 +271,7 @@
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Text="{Binding Options.HasIosUnitTestProject}">
+                                    Text="{Binding Options.HasIosUnitTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
                                     <TextBlock.Foreground>
                                         <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
                                             <Binding Path="Options.HasIosUnitTestProject" />
@@ -286,7 +286,7 @@
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Text="{Binding Options.HasIosUiTestProject}">
+                                    Text="{Binding Options.HasIosUiTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
                                     <TextBlock.Foreground>
                                         <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
                                             <Binding Path="Options.HasIosUiTestProject" />
@@ -304,7 +304,7 @@
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Text="{Binding Options.HasIosFluentLayout}">
+                                    Text="{Binding Options.HasIosFluentLayout, Converter={StaticResource BoolToLocalizedStringConverter}}">
                                     <TextBlock.Foreground>
                                         <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
                                             <Binding Path="Options.HasIosFluentLayout" />
@@ -319,7 +319,7 @@
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Text="{Binding Options.HasIosHyperion}">
+                                    Text="{Binding Options.HasIosHyperion, Converter={StaticResource BoolToLocalizedStringConverter}}">
                                     <TextBlock.Foreground>
                                         <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
                                             <Binding Path="Options.HasIosHyperion" />
@@ -383,7 +383,7 @@
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Text="{Binding Options.HasUwpUnitTestProject}">
+                                    Text="{Binding Options.HasUwpUnitTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
                                     <TextBlock.Foreground>
                                         <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
                                             <Binding Path="Options.HasUwpUnitTestProject" />
@@ -398,7 +398,7 @@
                                 <TextBlock
                                     Margin="0,4,0,0"
                                     HorizontalAlignment="Right"
-                                    Text="{Binding Options.HasUwpUiTestProject}">
+                                    Text="{Binding Options.HasUwpUiTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
                                     <TextBlock.Foreground>
                                         <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
                                             <Binding Path="Options.HasUwpUiTestProject" />

@@ -118,6 +118,7 @@
     </Compile>
     <Compile Include="Template\ITemplateOptions.cs" />
     <Compile Include="Template\PlatformType.cs" />
+    <Compile Include="Template\TemplateChoices.cs" />
     <Compile Include="Template\TemplateLinks.cs" />
     <Compile Include="Template\TemplateOptions.cs" />
     <Compile Include="Template\TemplateType.cs" />
@@ -139,6 +140,12 @@
     <Analyzer Include="..\..\packages\SonarAnalyzer.CSharp.6.8.1.4648\analyzers\Google.Protobuf.dll" />
     <Analyzer Include="..\..\packages\SonarAnalyzer.CSharp.6.8.1.4648\analyzers\SonarAnalyzer.CSharp.dll" />
     <Analyzer Include="..\..\packages\SonarAnalyzer.CSharp.6.8.1.4648\analyzers\SonarAnalyzer.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvxScaffolding.Localization\MvxScaffolding.Localization.csproj">
+      <Project>{c8615a68-1b7f-4798-bf54-430973e457ec}</Project>
+      <Name>MvxScaffolding.Localization</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

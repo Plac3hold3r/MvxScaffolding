@@ -295,13 +295,13 @@
     <value>The grouping for projects into folders inside of the solution.</value>
   </data>
   <data name="ProjectGrouping_Select_Flat" xml:space="preserve">
-    <value>• Select "Flat" for when you want all projects to be placed at the root of the solution.</value>
+    <value>Select "Flat" for when you want all projects to be placed at the root of the solution.</value>
   </data>
   <data name="ProjectGrouping_Select_Platform" xml:space="preserve">
-    <value>• Select "Platform" if you want projects to be grouped based on their target platform.</value>
+    <value>Select "Platform"for when you want projects to be grouped based on their target platform.</value>
   </data>
   <data name="ProjectGrouping_Select_TestGroup" xml:space="preserve">
-    <value>• Select "Test Group" for when you want all test projects to be placed in a test folder, other projects are placed at the root of the solution.</value>
+    <value>Select "Test Group" for when you want all test projects to be placed in a test folder, other projects are placed at the root of the solution.</value>
   </data>
   <data name="ProjectGrouping_Title" xml:space="preserve">
     <value>Project Grouping</value>
@@ -392,5 +392,20 @@
   </data>
   <data name="Application_Name" xml:space="preserve">
     <value>MvxScaffolding</value>
+  </data>
+  <data name="Template_Choice_False" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="Template_Choice_ProjectGroup_Flat" xml:space="preserve">
+    <value>Flat</value>
+  </data>
+  <data name="Template_Choice_ProjectGroup_Platform" xml:space="preserve">
+    <value>Platform</value>
+  </data>
+  <data name="Template_Choice_ProjectGroup_TestGroup" xml:space="preserve">
+    <value>Test Group</value>
+  </data>
+  <data name="Template_Choice_True" xml:space="preserve">
+    <value>True</value>
   </data>
 </root>

@@ -39,6 +39,8 @@
     <converters:SummaryHighlightColorConverter x:Key="SummaryHighlightColorConverter" />
     <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
     <converters:StringToUpperConverter x:Key="StringToUpperConverter" />
+    <converters:BoolToLocalizedStringConverter x:Key="BoolToLocalizedStringConverter" />
+    <converters:ProjectGroupToLocalizedString x:Key="ProjectGroupToLocalizedString" />
     <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
     <Style

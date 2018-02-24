@@ -305,82 +305,33 @@ namespace MvxScaffolding.UI.ViewModels
 
         public WizardOptionViewModel()
         {
-            ProjectGroupingOptions = new Dictionary<string, string>
-            {
-                ["flat"] = "Flat",
-                ["test-group"] = "Test Group",
-                ["platform"] = "Platform"
-            };
-            SelectedProjectGrouping = "flat";
+            ProjectGroupingOptions = TemplateChoices.ProjectGroupingOptions;
+            SelectedProjectGrouping = TemplateChoices.ProjectGroupingOptionDefault; ;
 
             HasEditorConfig = true;
 
-            NetStandardOptions = new Dictionary<string, string>
-            {
-                ["2.0"] = ".NET Standard 2.0",
-                ["1.6"] = ".NET Standard 1.6",
-                ["1.5"] = ".NET Standard 1.5",
-                ["1.4"] = ".NET Standard 1.4",
-                ["1.3"] = ".NET Standard 1.3",
-                ["1.2"] = ".NET Standard 1.2",
-                ["1.1"] = ".NET Standard 1.1",
-                ["1.0"] = ".NET Standard 1.0"
-            };
-            SelectedNetStandard = "2.0";
+            NetStandardOptions = TemplateChoices.NetStandardOptions;
+            SelectedNetStandard = TemplateChoices.NetStandardOptionDefault;
 
             HasCoreUnitTestProject = false;
 
-            MinAndroidSDKOptions = new Dictionary<string, string>
-            {
-                ["26"] = "Android 8 - Oreo v26",
-                ["25"] = "Android 7.1 - Nougat v25",
-                ["24"] = "Android 7 - Nougat v24",
-                ["23"] = "Android 6 - Marshmallow v23",
-                ["22"] = "Android 5.1 - Lollipop v22",
-                ["21"] = "Android 5 - Lollipop v21",
-                ["19"] = "Android 4 - KitKat v19",
-                ["18"] = "Android 4.3 - Jelly Bean v18",
-                ["17"] = "Android 4.2 - Jelly Bean v17",
-                ["16"] = "Android 4.1 - Jelly Bean v16",
-                ["15"] = "Android 4.0.3 - Ice Cream Sandwich v15",
-                ["14"] = "Android 4 - Ice Cream Sandwich v14",
-            };
-            SelectedMinAndroidSDK = "19";
+            MinAndroidSDKOptions = TemplateChoices.MinAndroidSDKOptions;
+            SelectedMinAndroidSDK = TemplateChoices.MinAndroidSDKOptionDefault;
 
             HasAndroidUnitTestProject = false;
             HasAndroidUiTestProject = false;
             HasAndroidXml = false;
 
-            MinIosSDKOptions = new Dictionary<string, string>
-            {
-                ["11.2"] = "iOS 11.2",
-                ["11.1"] = "iOS 11.1",
-                ["11.0"] = "iOS 11",
-                ["10.3"] = "iOS 10.3",
-                ["10.2"] = "iOS 10.2",
-                ["10.1"] = "iOS 10.1",
-                ["10.0"] = "iOS 10",
-                ["9.3"] = "iOS 9.3",
-                ["9.2"] = "iOS 9.2",
-                ["9.1"] = "iOS 9.1",
-                ["9.0"] = "iOS 9.0",
-            };
-            SelectedMinIosSDK = "10.0";
+            MinIosSDKOptions = TemplateChoices.MinIosSDKOptions;
+            SelectedMinIosSDK = TemplateChoices.MinIosSDKOptionDefault;
 
             HasIosUnitTestProject = false;
             HasIosUiTestProject = false;
             HasIosFluentLayout = false;
             HasIosHyperion = false;
 
-            MinUwpSDKOptions = new Dictionary<string, string>
-            {
-                ["16299"] = "1709 - Fall Creators Update",
-                ["15063"] = "1703 - Creators Update",
-                ["14393"] = "1607 - Anniversary Update",
-                ["10586"] = "1511 - November Update",
-                ["10240"] = "1507 - RTM",
-            };
-            SelectedMinUwpSDK = "16299";
+            MinUwpSDKOptions = TemplateChoices.MinUwpSDKOptions;
+            SelectedMinUwpSDK = TemplateChoices.MinUwpSDKOptionDefault;
 
             HasUwpUnitTestProject = false;
             HasUwpUiTestProject = false;

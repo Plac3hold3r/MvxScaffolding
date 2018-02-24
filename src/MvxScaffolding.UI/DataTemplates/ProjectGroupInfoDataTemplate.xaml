@@ -26,7 +26,7 @@
                 TextWrapping="WrapWithOverflow" />
             <TextBlock
                 Margin="0,12,0,0"
-                Text="{x:Static i18n:LocalResources.ProjectGrouping_Select_Flat}"
+                Text="{Binding Source={x:Static i18n:LocalResources.ProjectGrouping_Select_Flat}, StringFormat={}• {0}}"
                 TextWrapping="WrapWithOverflow" />
             <TextBlock
                 Margin="0,12,0,0"
