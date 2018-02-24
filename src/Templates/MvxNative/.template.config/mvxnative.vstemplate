@@ -1,7 +1,7 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
     <TemplateData>
         <Name>MvxScaffolding MvvmCross Native</Name>
-        <Description>A customizable template used to scaffold a cross platform MvvmCross application using Xamarin Navtive</Description>
+        <Description>A customizable template used to scaffold a cross platform MvvmCross application using Xamarin Native</Description>
         <TemplateID>MvxScaffolding.Native</TemplateID>
         <DefaultName>MyMvvmCrossApp</DefaultName>
 
