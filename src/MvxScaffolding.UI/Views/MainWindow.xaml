@@ -9,6 +9,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:dialogs="clr-namespace:MvxScaffolding.UI.ViewModels.Dialogs"
+    xmlns:i18n="clr-namespace:MvxScaffolding.Localization.Resources;assembly=MvxScaffolding.Localization"
     xmlns:local="clr-namespace:MvxScaffolding.UI.Views"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -64,7 +65,7 @@
                     Width="22"
                     Height="22"
                     Kind="GithubCircle"
-                    ToolTip="MvxScaffolding on GitHub" />
+                    ToolTip="{x:Static i18n:LocalResources.Main_Window_Link_GitHub}" />
             </Button>
         </metro:WindowCommands>
     </metro:MetroWindow.RightWindowCommands>
@@ -88,7 +89,8 @@
                 <TextBlock
                     Grid.Column="0"
                     HorizontalAlignment="Center"
-                    Style="{StaticResource MaterialDesignHeadlineTextBlock}">
+                    Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                    Text="{x:Static i18n:LocalResources.Main_Window_SectionHeader_AppDetails}">
                     <TextBlock.Foreground>
                         <MultiBinding Converter="{StaticResource SectionHighlightColorConverter}" ConverterParameter="0">
                             <Binding Path="SelectedViewModelIndex" />
@@ -96,7 +98,6 @@
                             <Binding Source="{StaticResource MaterialDesignBodyLight}" />
                         </MultiBinding>
                     </TextBlock.Foreground>
-                    App Details
                 </TextBlock>
                 <TextBlock
                     Grid.Column="1"
@@ -107,7 +108,8 @@
                 <TextBlock
                     Grid.Column="2"
                     HorizontalAlignment="Center"
-                    Style="{StaticResource MaterialDesignHeadlineTextBlock}">
+                    Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                    Text="{x:Static i18n:LocalResources.Main_Window_SectionHeader_PlatformOptions}">
                     <TextBlock.Foreground>
                         <MultiBinding Converter="{StaticResource SectionHighlightColorConverter}" ConverterParameter="1">
                             <Binding Path="SelectedViewModelIndex" />
@@ -115,7 +117,6 @@
                             <Binding Source="{StaticResource MaterialDesignBodyLight}" />
                         </MultiBinding>
                     </TextBlock.Foreground>
-                    Platforms Options
                 </TextBlock>
                 <TextBlock
                     Grid.Column="3"
@@ -126,7 +127,8 @@
                 <TextBlock
                     Grid.Column="4"
                     HorizontalAlignment="Center"
-                    Style="{StaticResource MaterialDesignHeadlineTextBlock}">
+                    Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                    Text="{x:Static i18n:LocalResources.Main_Window_SectionHeader_Summary}">
                     <TextBlock.Foreground>
                         <MultiBinding Converter="{StaticResource SectionHighlightColorConverter}" ConverterParameter="2">
                             <Binding Path="SelectedViewModelIndex" />
@@ -134,7 +136,6 @@
                             <Binding Source="{StaticResource MaterialDesignBodyLight}" />
                         </MultiBinding>
                     </TextBlock.Foreground>
-                    Summary
                 </TextBlock>
             </Grid>
 
@@ -161,7 +162,7 @@
                     Width="100"
                     Margin="12,8"
                     Command="{Binding BackCommand}"
-                    Content="{Binding SelectedNavigationalItem.SecondaryActionText}"
+                    Content="{Binding SelectedNavigationalItem.SecondaryActionText, Converter={StaticResource StringToUpperConverter}}"
                     Style="{StaticResource MaterialDesignRaisedAccentButton}"
                     Visibility="{Binding SelectedNavigationalItem.SecondaryActionText, Converter={StaticResource StringToVisibilityConverter}}" />
                 <Button
@@ -169,7 +170,7 @@
                     Margin="16"
                     Command="{Binding ForwardCommand}"
                     CommandParameter="{Binding ElementName=RootWindow}"
-                    Content="{Binding SelectedNavigationalItem.PrimaryActionText}"
+                    Content="{Binding SelectedNavigationalItem.PrimaryActionText, Converter={StaticResource StringToUpperConverter}}"
                     Style="{StaticResource MaterialDesignRaisedButton}" />
             </StackPanel>
 
@@ -188,7 +189,10 @@
                     </Button.CommandParameter>
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon VerticalAlignment="Center" Kind="Information" />
-                        <TextBlock Margin="6,0,0,0" VerticalAlignment="Center">ABOUT</TextBlock>
+                        <TextBlock
+                            Margin="6,0,0,0"
+                            VerticalAlignment="Center"
+                            Text="{Binding Source={x:Static i18n:LocalResources.Main_Window_Button_About}, Converter={StaticResource StringToUpperConverter}}" />
                     </StackPanel>
                 </Button>
 
@@ -201,7 +205,10 @@
                     Style="{DynamicResource MaterialDesignFlatButton}">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon VerticalAlignment="Center" Kind="Lock" />
-                        <TextBlock Margin="6,0,0,0" VerticalAlignment="Center">PRIVACY</TextBlock>
+                        <TextBlock
+                            Margin="6,0,0,0"
+                            VerticalAlignment="Center"
+                            Text="{Binding Source={x:Static i18n:LocalResources.Main_Window_Button_Privacy}, Converter={StaticResource StringToUpperConverter}}" />
                     </StackPanel>
                 </Button>
             </StackPanel>

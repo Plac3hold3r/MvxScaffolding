@@ -199,6 +199,12 @@
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
+    <ProjectReference Include="..\MvxScaffolding.Localization\MvxScaffolding.Localization.csproj">
+      <Project>{C8615A68-1B7F-4798-BF54-430973E457EC}</Project>
+      <Name>MvxScaffolding.Localization</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
     <ProjectReference Include="..\MvxScaffolding.UI\MvxScaffolding.UI.csproj">
       <Project>{c727cc5b-1154-4de7-8654-5038bde92ebd}</Project>
       <Name>MvxScaffolding.UI</Name>

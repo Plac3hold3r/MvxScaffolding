@@ -7,6 +7,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:dialogs="clr-namespace:MvxScaffolding.UI.ViewModels.Dialogs"
+    xmlns:i18n="clr-namespace:MvxScaffolding.Localization.Resources;assembly=MvxScaffolding.Localization"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
 
     <ResourceDictionary.MergedDictionaries>
@@ -18,30 +19,29 @@
             <TextBlock
                 FontWeight="Medium"
                 Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                Text="Project Grouping" />
+                Text="{x:Static i18n:LocalResources.ProjectGrouping_Title}" />
             <TextBlock
                 Margin="0,12,0,0"
-                Text="The grouping for projects into folders inside of the solution."
+                Text="{x:Static i18n:LocalResources.ProjectGrouping_Description}"
                 TextWrapping="WrapWithOverflow" />
             <TextBlock
                 Margin="0,12,0,0"
-                Text="• Select &quot;Flat&quot; for when you want all projects to be placed at the root of the solution."
+                Text="{x:Static i18n:LocalResources.ProjectGrouping_Select_Flat}"
                 TextWrapping="WrapWithOverflow" />
             <TextBlock
                 Margin="0,12,0,0"
-                Text="• Select &quot;Test Group&quot; for when you want all test projects to be placed in a test folder, other projects are placed at the root of the solution."
+                Text="{x:Static i18n:LocalResources.ProjectGrouping_Select_TestGroup}"
                 TextWrapping="WrapWithOverflow" />
             <TextBlock
                 Margin="0,12,0,0"
-                Text="• Select &quot;Platform&quot; if you want projects to be grouped based on their target platform."
+                Text="{x:Static i18n:LocalResources.ProjectGrouping_Select_Platform}"
                 TextWrapping="WrapWithOverflow" />
             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                 <Button
                     Margin="0,8,8,0"
                     Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
-                    Style="{DynamicResource MaterialDesignFlatButton}">
-                    CLOSE
-                </Button>
+                    Content="{Binding Source={x:Static i18n:LocalResources.ProjectGrouping_Button_Close}, Converter={StaticResource StringToUpperConverter}}"
+                    Style="{DynamicResource MaterialDesignFlatButton}" />
             </StackPanel>
         </StackPanel>
     </DataTemplate>

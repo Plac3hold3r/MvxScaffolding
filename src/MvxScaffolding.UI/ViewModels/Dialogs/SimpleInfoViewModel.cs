@@ -5,6 +5,7 @@
 
 using MvxScaffolding.Core.Configuration;
 using MvxScaffolding.Core.Template;
+using MvxScaffolding.Localization.Resources;
 
 namespace MvxScaffolding.UI.ViewModels.Dialogs
 {
@@ -22,8 +23,8 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
         {
             return new SimpleInfoViewModel
             {
-                Title = "Privacy",
-                Message = "This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more information.",
+                Title = LocalResources.SimpleInfo_Privacy_Title,
+                Message = LocalResources.SimpleInfo_Privacy_Desc,
                 ReadMoreLink = Config.Current.PrivacyPolicyUri,
                 TemplateLink = TemplateLinks.PrivacyPolicy
             };
@@ -33,8 +34,8 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
         {
             return new SimpleInfoViewModel
             {
-                Title = "EditorConfig",
-                Message = "Enable to include an EditorConfig file at the root of the solution. EditorConfig is used to define coding styles highlighted within Visual Studio.",
+                Title = LocalResources.SimpleInfo_EditorConfig_Title,
+                Message = LocalResources.SimpleInfo_EditorConfig_Desc,
                 ReadMoreLink = Config.Current.EditorConfigUri,
                 TemplateLink = TemplateLinks.EditorConfig
             };
@@ -44,8 +45,8 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
         {
             return new SimpleInfoViewModel
             {
-                Title = "XML Layouts",
-                Message = "Enable to use XML layouts instead of Xamarin default AXML layouts."
+                Title = LocalResources.SimpleInfo_Xml_Layouts_Title,
+                Message = LocalResources.SimpleInfo_Xml_Layouts_Desc
             };
         }
 
@@ -53,8 +54,8 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
         {
             return new SimpleInfoViewModel
             {
-                Title = "Fluent Layouts",
-                Message = "Enable to include FluentLayout, a fluent API for creating constraint-based layouts.",
+                Title = LocalResources.SimpleInfo_Fluent_Layouts_Title,
+                Message = LocalResources.SimpleInfo_Fluent_Layouts_Desc,
                 ReadMoreLink = Config.Current.FluentLayoutUri,
                 TemplateLink = TemplateLinks.FluentLayout
             };
@@ -64,8 +65,8 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
         {
             return new SimpleInfoViewModel
             {
-                Title = "Hyperion",
-                Message = "Enable to include Hyperion, an in app design review tool.",
+                Title = LocalResources.SimpleInfo_Hyperion_Title,
+                Message = LocalResources.SimpleInfo_Hyperion_Desc,
                 ReadMoreLink = Config.Current.HyperioniOSUri,
                 TemplateLink = TemplateLinks.HyperioniOS
             };

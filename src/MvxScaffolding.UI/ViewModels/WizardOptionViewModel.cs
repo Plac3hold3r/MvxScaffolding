@@ -13,6 +13,7 @@ using System.Linq;
 using System.Reflection;
 using MaterialDesignThemes.Wpf;
 using MvxScaffolding.Core.Template;
+using MvxScaffolding.Localization.Resources;
 using MvxScaffolding.UI.Validation;
 
 namespace MvxScaffolding.UI.ViewModels
@@ -23,7 +24,7 @@ namespace MvxScaffolding.UI.ViewModels
             _validationErrors = new Dictionary<string, ICollection<string>>();
 
         private string _appName;
-        [Required(ErrorMessage = "Application name required")]
+        [Required(ErrorMessageResourceName = nameof(LocalResources.AppDetails_Validation_Display_Name), ErrorMessageResourceType = typeof(LocalResources))]
         public string AppName
         {
             get => _appName;
@@ -36,7 +37,7 @@ namespace MvxScaffolding.UI.ViewModels
         }
 
         private string _appId;
-        [Required(ErrorMessage = "Application identifier required")]
+        [Required(ErrorMessageResourceName = nameof(LocalResources.AppDetails_Validation_Identifier), ErrorMessageResourceType = typeof(LocalResources))]
         public string AppId
         {
             get => _appId;
@@ -173,7 +174,7 @@ namespace MvxScaffolding.UI.ViewModels
         }
 
         private string _uwpDescription;
-        [RequiredIf(nameof(HasUwp), true, ErrorMessage = "Description required")]
+        [RequiredIf(nameof(HasUwp), true, ErrorMessageResourceName = nameof(LocalResources.PlatformOptions_Validation_Uwp_Description), ErrorMessageResourceType = typeof(LocalResources))]
         public string UwpDescription
         {
             get => _uwpDescription;

@@ -12,6 +12,7 @@ using MvxScaffolding.Core.Contexts;
 using MvxScaffolding.Core.Diagnostics;
 using MvxScaffolding.Core.Tasks;
 using MvxScaffolding.Core.Template;
+using MvxScaffolding.Localization.Resources;
 using MvxScaffolding.UI.Commands;
 using MvxScaffolding.UI.ViewModels.Dialogs;
 using MvxScaffolding.UI.ViewModels.Interfaces;
@@ -70,7 +71,7 @@ namespace MvxScaffolding.UI.ViewModels
             {
                 new NavigationalViewModel { SecondaryActionText = string.Empty, ViewModel = new AppDetailsViewModel(_options) },
                 new NavigationalViewModel { ViewModel = new PlatformOptionsViewModel(_options) },
-                new NavigationalViewModel { PrimaryActionText = "DONE", ViewModel = new SummaryViewModel(_options) }
+                new NavigationalViewModel { PrimaryActionText = LocalResources.Main_Window_Button_Done, ViewModel = new SummaryViewModel(_options) }
             };
 
             NavigateFirst();

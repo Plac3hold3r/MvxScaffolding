@@ -38,6 +38,7 @@
     <converters:SectionHighlightColorConverter x:Key="SectionHighlightColorConverter" />
     <converters:SummaryHighlightColorConverter x:Key="SummaryHighlightColorConverter" />
     <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
+    <converters:StringToUpperConverter x:Key="StringToUpperConverter" />
     <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
     <Style
