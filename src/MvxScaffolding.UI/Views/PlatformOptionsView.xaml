@@ -1,5 +1,5 @@
 ﻿<!--
-    Copyright (c) 2018 Jonathan Froon, Plac3hold3r+github@outlook.com
+    Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
     MvxScaffolding is licensed using the MIT License
 -->
 
@@ -179,6 +179,18 @@
                                 Command="{Binding ShowPlatformMarketShareCommand}"
                                 CommandParameter="{x:Static template:PlatformType.Android}"
                                 IsEnabled="{Binding Options.HasAndroid}">
+                                <Hyperlink.Style>
+                                    <Style BasedOn="{StaticResource MaterialDesignBody1Hyperlink}" TargetType="Hyperlink">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Options.HasAndroid}" Value="True">
+                                                <Setter Property="Foreground" Value="{DynamicResource PrimaryColorBrush}" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Options.HasAndroid}" Value="False">
+                                                <Setter Property="Foreground" Value="{DynamicResource MaterialDesignCheckBoxDisabled}" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Hyperlink.Style>
                                 Market Share
                             </Hyperlink>
                         </TextBlock>
@@ -335,6 +347,18 @@
                                 Command="{Binding ShowPlatformMarketShareCommand}"
                                 CommandParameter="{x:Static template:PlatformType.Ios}"
                                 IsEnabled="{Binding Options.HasIos}">
+                                <Hyperlink.Style>
+                                    <Style BasedOn="{StaticResource MaterialDesignBody1Hyperlink}" TargetType="Hyperlink">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Options.HasIos}" Value="True">
+                                                <Setter Property="Foreground" Value="{DynamicResource PrimaryColorBrush}" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Options.HasIos}" Value="False">
+                                                <Setter Property="Foreground" Value="{DynamicResource MaterialDesignCheckBoxDisabled}" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Hyperlink.Style>
                                 Market Share
                             </Hyperlink>
                         </TextBlock>
@@ -505,6 +529,18 @@
                                 Command="{Binding ShowPlatformMarketShareCommand}"
                                 CommandParameter="{x:Static template:PlatformType.Uwp}"
                                 IsEnabled="{Binding Options.HasUwp}">
+                                <Hyperlink.Style>
+                                    <Style BasedOn="{StaticResource MaterialDesignBody1Hyperlink}" TargetType="Hyperlink">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Options.HasUwp}" Value="True">
+                                                <Setter Property="Foreground" Value="{DynamicResource PrimaryColorBrush}" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Options.HasUwp}" Value="False">
+                                                <Setter Property="Foreground" Value="{DynamicResource MaterialDesignCheckBoxDisabled}" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Hyperlink.Style>
                                 Market Share
                             </Hyperlink>
                         </TextBlock>
