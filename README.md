@@ -1,7 +1,7 @@
 ﻿# MvxScaffolding (Preview)
 
 [![NuGet](https://img.shields.io/nuget/v/MvxScaffolding.Templates.svg?style=flat-square)](https://www.nuget.org/packages/MvxScaffolding.Templates/)
-[![Visual Studio Marketplace](https://img.shields.io/vscode-marketplace/v/ritwickdey.LiveServer.svg?style=flat-square)]()
+[![Visual Studio Marketplace](https://img.shields.io/vscode-marketplace/v/Plac3Hold3r.MvxScaffolding.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding)
 
 A customizable template used to scaffold a cross platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.
 
@@ -28,8 +28,8 @@ iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.Fluen
 
  Platform  |  Installation and System Requirements | Documentation           | Download           |
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-dotnet CLI | [Installation Guide](#dotnet-CLI) | [Documentation](docs/template_dotnet_cli.md) | [NuGet](https://www.nuget.org/packages/MvxScaffolding.Templates/)
-Visual Studio Extension | [Installation Guide](#visual-studio-extension) | [Documentation](docs/template_vs.md) | [Visual Studio Marketplace]()
+dotnet CLI | [Installation Guide](#dotnet-cli) | [Documentation](docs/template_dotnet_cli.md) | [NuGet](https://www.nuget.org/packages/MvxScaffolding.Templates/)
+Visual Studio Extension | [Installation Guide](#visual-studio-extension) | [Documentation](docs/template_vs.md) | [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding)
 
 ## dotnet CLI
 
@@ -57,7 +57,7 @@ dotnet new --install MvxScaffolding.Templates::*
 
 ### Usage
 
-See [documentation](docs/template_dotnet_cli) for how to generate a solution.
+See [documentation](docs/template_dotnet_cli.md) for how to generate a solution.
 
 ## Visual Studio Extension
 
@@ -78,7 +78,7 @@ __Required__
 
 ### Installation
 
-Download and install the VSIX from [Visual Studio Marketplace]() or search in Visual Studio extensions for `MvxScaffolding`.
+Download and install the VSIX from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding) or search in Visual Studio extensions for `MvxScaffolding`.
 
 ### Usage
 
