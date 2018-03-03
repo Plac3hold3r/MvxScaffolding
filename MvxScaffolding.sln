@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solutio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Nuspec", "!Nuspec", "{4AEE0797-5D79-4C6B-86FB-85778D650F22}"
 	ProjectSection(SolutionItems) = preProject
-		nuspecs\MvxScaffolding.Templates.nuspec = nuspecs\MvxScaffolding.Templates.nuspec
+		nuspec\MvxScaffolding.Templates.nuspec = nuspec\MvxScaffolding.Templates.nuspec
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxScaffolding.Vsix", "src\MvxScaffolding.Vsix\MvxScaffolding.Vsix.csproj", "{5F73E421-52CF-464D-A53D-F9B76A87B31D}"
@@ -111,7 +111,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Docs", "!Docs", "{D6F40415
 		docs\template_vs.md = docs\template_vs.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxScaffolding.Localization", "src\MvxScaffolding.Localization\MvxScaffolding.Localization.csproj", "{C8615A68-1B7F-4798-BF54-430973E457EC}"
+Project("{FAE04EC0-301F-11d3-BF4B-00C04F79EFBC}") = "MvxScaffolding.Localization", "src\MvxScaffolding.Localization\MvxScaffolding.Localization.csproj", "{C8615A68-1B7F-4798-BF54-430973E457EC}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
