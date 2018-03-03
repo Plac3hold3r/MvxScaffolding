@@ -13,7 +13,7 @@ You can select between
 
 ### 2. Enter application details
 
-Enter in your relevant application details. 
+Enter in your relevant application details. Then select `Next` to continue.
 
 You can select the ℹ️ to get more details about a specific option.
 
@@ -26,6 +26,8 @@ Select which platforms you want to support for your scaffolded application. By d
 You can select the ℹ️ or row to get more details about a specific option.
 
 ![Windows Template Studio screenshot](../docs/resources/vs_template_native_platform_options.png)
+
+Once you are satisfied with your choices select `Next` to continue.
 
 ### 4. Confirmation summary
 
