@@ -1,0 +1,48 @@
+﻿<!--
+    Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
+    MvxScaffolding is licensed using the MIT License
+-->
+
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dialogs="clr-namespace:MvxScaffolding.UI.ViewModels.Dialogs"
+    xmlns:i18n="clr-namespace:MvxScaffolding.Localization.Resources;assembly=MvxScaffolding.Localization"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <DataTemplate DataType="{x:Type dialogs:ProjectGroupInfoViewModel}">
+        <StackPanel Width="300" Margin="16">
+            <TextBlock
+                FontWeight="Medium"
+                Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                Text="{x:Static i18n:LocalResources.ProjectGrouping_Title}" />
+            <TextBlock
+                Margin="0,12,0,0"
+                Text="{x:Static i18n:LocalResources.ProjectGrouping_Description}"
+                TextWrapping="WrapWithOverflow" />
+            <TextBlock
+                Margin="0,12,0,0"
+                Text="{Binding Source={x:Static i18n:LocalResources.ProjectGrouping_Select_Flat}, StringFormat={}• {0}}"
+                TextWrapping="WrapWithOverflow" />
+            <TextBlock
+                Margin="0,12,0,0"
+                Text="{Binding Source={x:Static i18n:LocalResources.ProjectGrouping_Select_TestGroup}, StringFormat={}• {0}}"
+                TextWrapping="WrapWithOverflow" />
+            <TextBlock
+                Margin="0,12,0,0"
+                Text="{Binding Source={x:Static i18n:LocalResources.ProjectGrouping_Select_Platform}, StringFormat={}• {0}}"
+                TextWrapping="WrapWithOverflow" />
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button
+                    Margin="0,8,8,0"
+                    Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                    Content="{Binding Source={x:Static i18n:LocalResources.ProjectGrouping_Button_Close}, Converter={StaticResource StringToUpperConverter}}"
+                    Style="{DynamicResource MaterialDesignFlatButton}" />
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+</ResourceDictionary>

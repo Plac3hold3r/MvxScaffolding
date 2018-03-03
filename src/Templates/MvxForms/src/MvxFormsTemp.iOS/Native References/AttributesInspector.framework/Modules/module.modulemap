@@ -1,0 +1,6 @@
+framework module AttributesInspector {
+  umbrella header "AttributesInspector.h"
+
+  export *
+  module * { export * }
+}

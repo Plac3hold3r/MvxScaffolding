@@ -1,0 +1,19 @@
+﻿//---------------------------------------------------------------------------------
+// Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
+// MvxScaffolding is licensed using the MIT License
+//---------------------------------------------------------------------------------
+
+{
+  "RemoteTelemetryKey": "AI Key",
+  "PrivacyPolicyUri": "https://github.com/Plac3hold3r/MvxScaffolding/blob/master/docs/privacy_policy.md",
+  "GitHubUri": "https://github.com/Plac3hold3r/MvxScaffolding",
+  "TemplateVersion": "0.5.1",
+  "DiagnosticsTraceLevel": "Verbose",
+  "AuthorGitHubUri": "https://github.com/Plac3hold3r",
+  "EditorConfigUri": "https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options",
+  "FluentLayoutUri": "https://github.com/FluentLayout/Cirrious.FluentLayout",
+  "HyperioniOSUri": "https://github.com/willowtreeapps/Hyperion-iOS",
+  "MarketShareAndroidUri": "https://developer.android.com/about/dashboards/index.html",
+  "MarketShareiOSUri": "https://developer.apple.com/support/app-store/",
+  "MarketShareWindowsUri": "http://reports.adduplex.com/"
+}

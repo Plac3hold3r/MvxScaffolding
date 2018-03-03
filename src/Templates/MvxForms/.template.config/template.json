@@ -1,0 +1,517 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Plac3hold3r",
+  "classifications": [ "Xamarin", "Xamarin Forms", "MvvmCross" ],
+  "description": "A customizable template used to scaffold a cross platform MvvmCross application with Xamarin Forms.",
+  "name": "MvxScaffolding MvvmCross Forms",
+  "defaultName": "MyMvvmCrossApp",
+  "identity": "MvxScaffolding.Forms",
+  "groupIdentity": "MvxScaffolding.Forms",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "shortName": "mvxforms",
+  "sourceName": "MvxFormsTemp",
+  "preferNameDirectory": true,
+  "guids": [
+    "{00000000-1111-0000-0000-000000000001}", // Core Project
+    "{00000000-1111-0000-0000-000000000002}", // Android Project
+    "{00000000-1111-0000-0000-000000000003}", // iOS Project
+    "{00000000-1111-0000-0000-000000000004}", // UWP Project
+    "{00000000-1111-0000-0000-000000000005}", // UI Project
+    "{00000000-1111-0000-0001-000000000001}", // Core Unit Test Project
+    "{00000000-1111-0000-0001-000000000002}", // Android Unit Test Project
+    "{00000000-1111-0000-0001-000000000003}", // iOS Unit Test Project
+    "{00000000-1111-0000-0001-000000000004}", // UWP Unit Test Project
+    "{00000000-1111-0000-0002-000000000004}", // UWP UI Test Project
+    "{00000000-1111-0000-0002-000000000005}", // Android and iOS UI Test Project
+    "{00000001-1111-0000-0000-000000000000}", // Solution items folder
+    "{00000002-1111-0000-0000-000000000000}", // Tests folder
+    "{00000003-1111-0000-0000-000000000000}", // Android folder
+    "{00000004-1111-0000-0000-000000000000}", // iOS folder
+    "{00000005-1111-0000-0000-000000000000}", // UWP folder
+    "{1650E742-2D5F-44C4-A42E-14B7AC4C6030}" // Solution GUID
+  ],
+  "primaryOutputs": [
+    {
+      "path": "src\\MvxFormsTemp.Core\\MvxFormsTemp.Core.csproj"
+    },
+    {
+      "path": "src\\MvxFormsTemp.UI\\MvxFormsTemp.UI.csproj"
+    },
+    {
+      "condition": "(HasAndroidProject)",
+      "path": "src\\MvxFormsTemp.Droid\\MvxFormsTemp.Droid.csproj"
+    },
+    {
+      "condition": "(HasiOSProject)",
+      "path": "src\\MvxFormsTemp.iOS\\MvxFormsTemp.iOS.csproj"
+    },
+    {
+      "condition": "(HasUWPProject)",
+      "path": "src\\MvxFormsTemp.UWP\\MvxFormsTemp.UWP.csproj"
+    },
+    {
+      "condition": "(HasCoreTestProject)",
+      "path": "test\\MvxFormsTemp.Core.Test\\MvxFormsTemp.Core.Test.csproj"
+    },
+    {
+      "condition": "(HasAndroidTestProject)",
+      "path": "test\\MvxFormsTemp.Droid.Test\\MvxFormsTemp.Droid.Test.csproj"
+    },
+    {
+      "condition": "(HasAndroidTestProject)",
+      "path": "src\\MvxFormsTemp.Droid.Shared\\MvxFormsTemp.Droid.Shared.shproj"
+    },
+    {
+      "condition": "(HasiOSTestProject)",
+      "path": "test\\MvxFormsTemp.iOS.Test\\MvxFormsTemp.iOS.Test.csproj"
+    },
+    {
+      "condition": "(HasXamarinUITestProject)",
+      "path": "test\\MvxFormsTemp.UI.Test\\MvxFormsTemp.UI.Test.csproj"
+    },
+    {
+      "condition": "(HasUWPTestProject)",
+      "path": "test\\MvxFormsTemp.UWP.Test\\MvxFormsTemp.UWP.Test.csproj"
+    },
+    {
+      "condition": "(HasUWPUITestProject)",
+      "path": "test\\MvxFormsTemp.UWP.UI.Test\\MvxFormsTemp.UWP.UI.Test.csproj"
+    }
+  ],
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!HasAndroidProject)",
+          "exclude": [
+            "src/MvxFormsTemp.Droid/**"
+          ]
+        },
+        {
+          "condition": "(!HasiOSProject)",
+          "exclude": [
+            "src/MvxFormsTemp.iOS/**"
+          ]
+        },
+        {
+          "condition": "(!HasUWPProject)",
+          "exclude": [
+            "src/MvxFormsTemp.UWP/**"
+          ]
+        },
+        {
+          "condition": "(!HasCoreTestProject)",
+          "exclude": [
+            "test/MvxFormsTemp.Core.Test/**"
+          ]
+        },
+        {
+          "condition": "(!HasAndroidTestProject)",
+          "exclude": [
+            "test/MvxFormsTemp.Droid.Test/**",
+            "src/MvxFormsTemp.Droid.Shared/**"
+          ]
+        },
+        {
+          "condition": "(!HasiOSTestProject)",
+          "exclude": [
+            "test/MvxFormsTemp.iOS.Test/**"
+          ]
+        },
+        {
+          "condition": "(!HasXamarinUITestProject)",
+          "exclude": [
+            "test/MvxFormsTemp.UI.Test/**"
+          ]
+        },
+        {
+          "condition": "(!HasUWPTestProject)",
+          "exclude": [
+            "test/MvxFormsTemp.UWP.Test/**"
+          ]
+        },
+        {
+          "condition": "(!HasUWPUITestProject)",
+          "exclude": [
+            "test/MvxFormsTemp.UWP.UI.Test/**"
+          ]
+        },
+        {
+          "condition": "(!HasHyperion)",
+          "exclude": [
+            "src/MvxNative.iOS/Native References/**"
+          ]
+        },
+        {
+          "condition": "(!HasEditorConfig)",
+          "exclude": [
+            "editor.config"
+          ]
+        },
+        {
+          "condition": "(HasEditorConfig)",
+          "rename": {
+            "editor.config": ".editorconfig"
+          }
+        }
+      ]
+    }
+  ],
+  "symbols": {
+    /*
+    || Project include flags
+    =========================================================================================== */
+    "HasAndroidProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Whether to include Xamarin Android Project."
+    },
+    "HasiOSProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Whether to include Xamarin iOS Project."
+    },
+    "HasUWPProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include UWP Project."
+    },
+    "HasCoreTestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include Core unit test project."
+    },
+    "HasAndroidTestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include Xamarin Android unit test project."
+    },
+    "HasiOSTestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include Xamarin iOS unit test project."
+    },
+    "HasXamarinUITestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include Xamarin Android and iOS UI test project."
+    },
+    "HasUWPTestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include UWP unit test project."
+    },
+    "HasUWPUITestProject": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include UWP UI test project."
+    },
+    "HasEditorConfig": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Whether to include an EditorConfig in the root directory."
+    },
+    "SolutionProjectGrouping": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "flat",
+      "description": "The grouping for projects into folders inside of the solution.",
+      "choices": [
+        {
+          "choice": "flat",
+          "description": "All projects are placed at the root of the solution"
+        },
+        {
+          "choice": "test-group",
+          "description": "All test projects are placed in a test folder, other projects are placed at the root of the solution"
+        },
+        {
+          "choice": "platform",
+          "description": "Projects are grouped based on their target platform"
+        }
+      ]
+    },
+    "HasTests": {
+      "type": "computed",
+      "value": "(HasCoreTestProject || HasAndroidTestProject || HasiOSTestProject || HasXamarinUITestProject || HasUWPTestProject || HasUWPUITestProject)"
+    },
+    "IsFlatDir": {
+      "type": "computed",
+      "value": "(SolutionProjectGrouping == \"flat\")"
+    },
+    "IsTestGroupDir": {
+      "type": "computed",
+      "value": "(HasTests && SolutionProjectGrouping == \"test-group\")"
+    },
+    "IsPlatformDir": {
+      "type": "computed",
+      "value": "(SolutionProjectGrouping == \"platform\" && (HasAndroidProject || HasiOSProject || HasUWPProject))"
+    },
+    /*
+    || All project flags
+    =========================================================================================== */
+    "AppId": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "com.mvxscaffolding.app",
+      "description": "The Android package name or iOS bundle Id <com.company.appname>.",
+      "replaces": "com.mvxscaffolding.app",
+      "onlyIf": [
+        {
+          "after": "<string>",
+          "before": "</string>"
+        },
+        {
+          "after": "package=\""
+        }
+      ]
+    },
+    "AppName": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "Mvx Scaffolding",
+      "replaces": "APP_NAME",
+      "description": "The application display name."
+    },
+    /*
+    || Core project flags
+    =========================================================================================== */
+    "NETStandardVersion": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "2.0",
+      "description": "The version of .NET Standard to use in the Core project.",
+      "choices": [
+        {
+          "choice": "2.0",
+          "description": ".NET Standard 2.0"
+        },
+        {
+          "choice": "1.6",
+          "description": ".NET Standard 1.6"
+        },
+        {
+          "choice": "1.5",
+          "description": ".NET Standard 1.5"
+        },
+        {
+          "choice": "1.4",
+          "description": ".NET Standard 1.4"
+        },
+        {
+          "choice": "1.3",
+          "description": ".NET Standard 1.3"
+        },
+        {
+          "choice": "1.2",
+          "description": ".NET Standard 1.2"
+        },
+        {
+          "choice": "1.1",
+          "description": ".NET Standard 1.1"
+        },
+        {
+          "choice": "1.0",
+          "description": ".NET Standard 1.0"
+        }
+      ],
+      "replaces": "2.0",
+      "onlyIf": [
+        {
+          "after": "netstandard"
+        }
+      ]
+    },
+    /*
+    || Android project flags
+    =========================================================================================== */
+    "AndroidMinSDKVersion": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "19",
+      "description": "Minimum Android target SDK version.",
+      "choices": [
+        {
+          "choice": "26",
+          "description": "Android 8 - Oreo v26"
+        },
+        {
+          "choice": "25",
+          "description": "Android 7.1 - Nougat v25"
+        },
+        {
+          "choice": "24",
+          "description": "Android 7 - Nougat v24"
+        },
+        {
+          "choice": "23",
+          "description": "Android 6 - Marshmallow v23"
+        },
+        {
+          "choice": "22",
+          "description": "Android 5.1 - Lollipop v22"
+        },
+        {
+          "choice": "21",
+          "description": "Android 5 - Lollipop v21"
+        },
+        {
+          "choice": "19",
+          "description": "Android 4 - KitKat v19"
+        },
+        {
+          "choice": "18",
+          "description": "Android 4.3 - Jelly Bean v18"
+        },
+        {
+          "choice": "17",
+          "description": "Android 4.2 - Jelly Bean v17"
+        },
+        {
+          "choice": "16",
+          "description": "Android 4.1 - Jelly Bean v16"
+        },
+        {
+          "choice": "15",
+          "description": "Android 4.0.3 - Ice Cream Sandwich v15"
+        },
+        {
+          "choice": "14",
+          "description": "Android 4 - Ice Cream Sandwich v14"
+        }
+      ],
+      "replaces": "19",
+      "onlyIf": [
+        {
+          "after": "android:minSdkVersion=\""
+        }
+      ]
+    },
+    /*
+    || iOS project flags
+    =========================================================================================== */
+    "iOSMinSDKVersion": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "10.0",
+      "description": "Minimum iOS target SDK version.",
+      "choices": [
+        {
+          "choice": "11.2",
+          "description": "iOS 11.2"
+        },
+        {
+          "choice": "11.1",
+          "description": "iOS 11.1"
+        },
+        {
+          "choice": "11.0",
+          "description": "iOS 11"
+        },
+        {
+          "choice": "10.3",
+          "description": "iOS 10.3"
+        },
+        {
+          "choice": "10.2",
+          "description": "iOS 10.2"
+        },
+        {
+          "choice": "10.1",
+          "description": "iOS 10.1"
+        },
+        {
+          "choice": "10.0",
+          "description": "iOS 10"
+        },
+        {
+          "choice": "9.3",
+          "description": "iOS 9.3"
+        },
+        {
+          "choice": "9.2",
+          "description": "iOS 9.2"
+        },
+        {
+          "choice": "9.1",
+          "description": "iOS 9.1"
+        },
+        {
+          "choice": "9.0",
+          "description": "iOS 9"
+        }
+      ],
+      "replaces": "10.0",
+      "onlyIf": [
+        {
+          "after": "<string>",
+          "before": "</string>"
+        }
+      ]
+    },
+    "HasHyperion": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Whether to include Hyperion, an in app design review tool, in the iOS project.",
+      "defaultValue": "false"
+    },
+    /*
+    || UWP project flags
+    =========================================================================================== */
+    "UWPAppDescription": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "Laying the foundation with Mvx Scaffolding",
+      "replaces": "UWP_APP_DESCRIPTION",
+      "description": "The UWP application description."
+    },
+    "UWPMinSDKVersion": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "16299",
+      "description": "Minimum UWP target SDK version.",
+      "choices": [
+        {
+          "choice": "16299",
+          "description": "1709 - Fall Creators Update"
+        },
+        {
+          "choice": "15063",
+          "description": "1703 - Creators Update"
+        },
+        {
+          "choice": "14393",
+          "description": "1607 - Anniversary Update"
+        },
+        {
+          "choice": "10586",
+          "description": "1511 - November Update"
+        },
+        {
+          "choice": "10240",
+          "description": "1507 - RTM"
+        }
+      ],
+      "replaces": "16299",
+      "onlyIf": [
+        {
+          "after": "<TargetPlatformMinVersion>10.0.",
+          "before": ".0</TargetPlatformMinVersion>"
+        }
+      ]
+    }
+  }
+}

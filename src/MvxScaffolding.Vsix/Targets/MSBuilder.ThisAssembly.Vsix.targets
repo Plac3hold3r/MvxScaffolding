@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Language)' == 'C#' Or '$(Language)' == 'VB'">
+    <CoreCompileDependsOn>
+      FindSourceVsixManifest;
+      EnsureSourceVsixManifest;
+      VsixThisAssembly;
+      $(CoreCompileDependsOn)
+    </CoreCompileDependsOn>
+    <ThisVsixInfoFile>$(IntermediateOutputPath)ThisAssembly.Vsix.g$(DefaultLanguageSourceExtension)</ThisVsixInfoFile>
+    <Vsix2011>&lt;Namespace Prefix='vs' Uri='http://schemas.microsoft.com/developer/vsx-schema/2011'/&gt;</Vsix2011>
+  </PropertyGroup>
+
+  <Target Name="EnsureSourceVsixManifest" Condition="'@(SourceVsixManifest)' == ''">
+    <FindVsixManifest ItemsToConsider="@(None)"
+              ProjectName="$(MSBuildProjectName)">
+      <Output TaskParameter="VsixManifest" ItemName="SourceVsixManifest"/>
+    </FindVsixManifest>
+  </Target>
+  
+  <Target Name="VsixInfo" DependsOnTargets="FindSourceVsixManifest" Condition="Exists('@(SourceVsixManifest)')">
+    <XmlPeek Condition="'$(VsixID)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="@(SourceVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:Identity/@Id">
+      <Output TaskParameter="Result" PropertyName="VsixID" />
+    </XmlPeek>
+    <XmlPeek Condition="'$(VsixName)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="@(SourceVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:DisplayName/text()">
+      <Output TaskParameter="Result" PropertyName="VsixName" />
+    </XmlPeek>
+    <XmlPeek Condition="'$(VsixDescription)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="@(SourceVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:Description/text()">
+      <Output TaskParameter="Result" PropertyName="VsixDescription" />
+    </XmlPeek>
+    <XmlPeek Condition="'$(VsixAuthor)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="@(SourceVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:Identity/@Publisher">
+      <Output TaskParameter="Result" PropertyName="VsixAuthor" />
+    </XmlPeek>
+    <XmlPeek Condition="'$(VsixVersion)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="@(SourceVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:Identity/@Version">
+      <Output TaskParameter="Result" PropertyName="VsixVersion" />
+    </XmlPeek>
+  </Target>
+
+  <Target Name="VsixThisAssembly" DependsOnTargets="_VsixGenerateThisAssembly"
+      Condition="'$(Language)' == 'C#' Or '$(Language)' == 'VB'">
+    <ItemGroup>
+      <Compile Include="$(ThisVsixInfoFile)" />
+    </ItemGroup>
+  </Target>
+
+  <Target Name="_VsixGenerateThisAssembly" DependsOnTargets="VsixInfo"
+      Condition="'$(Language)' == 'C#' Or '$(Language)' == 'VB'"
+      Inputs="@(SourceVsixManifest)" Outputs="$(ThisVsixInfoFile)">
+
+    <PropertyGroup>
+      <_ThisVsixInfoContent>$([System.IO.File]::ReadAllText('$(MSBuildThisFileDirectory)MSBuilder.ThisAssembly.Vsix$(DefaultLanguageSourceExtension).pp'))</_ThisVsixInfoContent>
+
+      <_ThisVsixInfoContent Condition="'$(ThisAssemblyNamespace)' != ''">$(_ThisVsixInfoContent.Replace('$NamespaceDefine$', 'LOCALNAMESPACE'))</_ThisVsixInfoContent>
+      <_ThisVsixInfoContent Condition="'$(ThisAssemblyNamespace)' == ''">$(_ThisVsixInfoContent.Replace('$NamespaceDefine$', 'GLOBALNAMESPACE'))</_ThisVsixInfoContent>
+
+      <_ThisVsixInfoContent Condition="'$(ThisAssemblyNamespace)' != ''">$(_ThisVsixInfoContent.Replace('RootNamespace.', '$(ThisAssemblyNamespace).'))</_ThisVsixInfoContent>
+      <_ThisVsixInfoContent Condition="'$(ThisAssemblyNamespace)' == ''">$(_ThisVsixInfoContent.Replace('RootNamespace.', ''))</_ThisVsixInfoContent>
+
+      <_ThisVsixInfoContent>$(_ThisVsixInfoContent.Replace('_RootNamespace_', '$(ThisAssemblyNamespace)'))</_ThisVsixInfoContent>
+
+      <_ThisVsixInfoContent>$(_ThisVsixInfoContent.Replace('$VsixID$', '$(VsixID)'))</_ThisVsixInfoContent>
+      <_ThisVsixInfoContent>$(_ThisVsixInfoContent.Replace('$VsixName$', '$(VsixName)'))</_ThisVsixInfoContent>
+      <_ThisVsixInfoContent>$(_ThisVsixInfoContent.Replace('$VsixDescription$', '$(VsixDescription)'))</_ThisVsixInfoContent>
+      <_ThisVsixInfoContent>$(_ThisVsixInfoContent.Replace('$VsixAuthor$', '$(VsixAuthor)'))</_ThisVsixInfoContent>
+      <_ThisVsixInfoContent>$(_ThisVsixInfoContent.Replace('$VsixVersion$', '$(VsixVersion)'))</_ThisVsixInfoContent>
+    </PropertyGroup>
+
+    <WriteLinesToFile File="$(ThisVsixInfoFile)" Lines="$(_ThisVsixInfoContent)" Overwrite="true" />
+  </Target>
+
+</Project>

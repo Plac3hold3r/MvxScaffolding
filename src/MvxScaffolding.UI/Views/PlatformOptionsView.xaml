@@ -1,0 +1,621 @@
+﻿<!--
+    Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
+    MvxScaffolding is licensed using the MIT License
+-->
+
+<UserControl
+    x:Class="MvxScaffolding.UI.Views.PlatformOptionsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i18n="clr-namespace:MvxScaffolding.Localization.Resources;assembly=MvxScaffolding.Localization"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:template="clr-namespace:MvxScaffolding.Core.Template;assembly=MvxScaffolding.Core"
+    d:DesignHeight="700"
+    d:DesignWidth="950"
+    Background="{DynamicResource MaterialDesignPaper}"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
+    </UserControl.Resources>
+
+    <ItemsControl>
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <UniformGrid Columns="4" />
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+
+        <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
+            <materialDesign:Card
+                Width="230"
+                Margin="8"
+                HorizontalAlignment="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="PrimaryMid">
+                        <Image
+                            Width="196"
+                            Height="140"
+                            Source="../Resources/Images/mvxscaffolding_logo_transparent.png"
+                            Stretch="Uniform" />
+                    </materialDesign:ColorZone>
+                    <StackPanel Grid.Row="1" Margin="8,24,8,0">
+                        <TextBlock
+                            FontWeight="Medium"
+                            Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                            Text="{x:Static i18n:LocalResources.PlatformOptions_Core_Title}" />
+                    </StackPanel>
+                    <Grid
+                        Grid.Row="2"
+                        Height="180"
+                        Margin="8"
+                        HorizontalAlignment="Stretch">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <ComboBox
+                            Grid.Row="0"
+                            Margin="0,4,0,0"
+                            materialDesign:ComboBoxAssist.ClassicMode="true"
+                            materialDesign:HintAssist.Hint="{x:Static i18n:LocalResources.PlatformOptions_Core_dotNetStandard}"
+                            DisplayMemberPath="Value"
+                            ItemsSource="{Binding Options.NetStandardOptions}"
+                            SelectedValue="{Binding Options.SelectedNetStandard}"
+                            SelectedValuePath="Key"
+                            Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel />
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+                        </ComboBox>
+                        <DockPanel
+                            Grid.Row="1"
+                            Margin="0,12,0,8"
+                            HorizontalAlignment="Stretch">
+                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Hyperlink
+                                    Cursor="Arrow"
+                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                    TextDecorations="None">
+                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Core_UnitTestProject}" />
+                                </Hyperlink></TextBlock>
+                            <ToggleButton
+                                Margin="8,0,0,0"
+                                HorizontalAlignment="Right"
+                                IsChecked="{Binding Options.HasCoreUnitTestProject}" />
+                        </DockPanel>
+                    </Grid>
+                </Grid>
+            </materialDesign:Card>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}" OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}">
+            <materialDesign:Card
+                Width="230"
+                Margin="8"
+                HorizontalAlignment="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="{Binding Options.HasAndroid, Converter={StaticResource ActiveColorZoneModeConverter}}">
+                        <materialDesign:PackIcon
+                            Width="128"
+                            Height="128"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Kind="Android" />
+                    </materialDesign:ColorZone>
+                    <Button
+                        Grid.Row="0"
+                        Margin="0,0,16,-20"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        Command="{Binding ToggleAndroidCommand}">
+                        <Button.Style>
+                            <Style BasedOn="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" TargetType="Button">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Options.HasAndroid}" Value="True">
+                                        <Setter Property="Background" Value="{DynamicResource AccentHueColorBrush}" />
+                                        <Setter Property="BorderBrush" Value="{DynamicResource AccentHueColorBrush}" />
+                                        <Setter Property="Foreground" Value="{DynamicResource AccentHueColorForegroundBrush}" />
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Options.HasAndroid}" Value="False">
+                                        <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}" />
+                                        <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}" />
+                                        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <materialDesign:PackIcon Kind="{Binding Options.AndroidIncludeIcon}" />
+                    </Button>
+                    <StackPanel Grid.Row="1" Margin="8,24,8,0">
+                        <TextBlock
+                            FontWeight="Medium"
+                            Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                            Text="{x:Static i18n:LocalResources.PlatformOptions_Android_Title}" />
+                    </StackPanel>
+                    <Grid
+                        Grid.Row="2"
+                        Height="180"
+                        Margin="8"
+                        HorizontalAlignment="Stretch">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <ComboBox
+                            Grid.Row="0"
+                            Margin="0,4,0,0"
+                            materialDesign:ComboBoxAssist.ClassicMode="true"
+                            materialDesign:HintAssist.Hint="{x:Static i18n:LocalResources.PlatformOptions_Android_MinSdk}"
+                            DisplayMemberPath="Value"
+                            IsEnabled="{Binding Options.HasAndroid}"
+                            ItemsSource="{Binding Options.MinAndroidSDKOptions}"
+                            SelectedValue="{Binding Options.SelectedMinAndroidSDK}"
+                            SelectedValuePath="Key"
+                            Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel />
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+                        </ComboBox>
+                        <TextBlock
+                            Grid.Row="0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Style="{StaticResource MaterialDesignCaptionTextBlock}">
+                            <Hyperlink
+                                Command="{Binding ShowPlatformMarketShareCommand}"
+                                CommandParameter="{x:Static template:PlatformType.Android}"
+                                IsEnabled="{Binding Options.HasAndroid}">
+                                <Hyperlink.Style>
+                                    <Style BasedOn="{StaticResource MaterialDesignBody1Hyperlink}" TargetType="Hyperlink">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Options.HasAndroid}" Value="True">
+                                                <Setter Property="Foreground" Value="{DynamicResource PrimaryColorBrush}" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Options.HasAndroid}" Value="False">
+                                                <Setter Property="Foreground" Value="{DynamicResource MaterialDesignCheckBoxDisabled}" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Hyperlink.Style>
+                                <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Android_MarketShare}" />
+                            </Hyperlink>
+                        </TextBlock>
+                        <DockPanel
+                            Grid.Row="1"
+                            Margin="0,12,0,0"
+                            HorizontalAlignment="Stretch">
+                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Hyperlink
+                                    Cursor="Arrow"
+                                    IsEnabled="{Binding Options.HasAndroid}"
+                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                    TextDecorations="None">
+                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Android_UnitTestProject}" />
+                                </Hyperlink>
+                            </TextBlock>
+                            <ToggleButton
+                                Margin="8,0,0,0"
+                                HorizontalAlignment="Right"
+                                IsChecked="{Binding Options.HasAndroidUnitTestProject}"
+                                IsEnabled="{Binding Options.HasAndroid}" />
+                        </DockPanel>
+                        <DockPanel
+                            Grid.Row="2"
+                            Margin="0,12,0,0"
+                            HorizontalAlignment="Stretch">
+                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Hyperlink
+                                    Cursor="Arrow"
+                                    IsEnabled="{Binding Options.HasAndroid}"
+                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                    TextDecorations="None">
+                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Android_UITestProject}" />
+                                </Hyperlink>
+                            </TextBlock>
+                            <ToggleButton
+                                Margin="8,0,0,0"
+                                HorizontalAlignment="Right"
+                                IsChecked="{Binding Options.HasAndroidUiTestProject}"
+                                IsEnabled="{Binding Options.HasAndroid}" />
+                        </DockPanel>
+                        <DockPanel
+                            Grid.Row="3"
+                            Margin="0,12,0,8"
+                            HorizontalAlignment="Stretch"
+                            Visibility="{Binding IsNativeTemplate, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                                <Hyperlink
+                                    Command="{Binding ShowDialogCommand}"
+                                    CommandParameter="{Binding AndroidXmlLayoutInfoModel}"
+                                    IsEnabled="{Binding Options.HasAndroid}"
+                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                    TextDecorations="None">
+                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Android_XmlLayouts}" />
+                                    <materialDesign:PackIcon
+                                        Margin="4,0"
+                                        VerticalAlignment="Center"
+                                        Kind="Information" />
+                                </Hyperlink>
+                            </TextBlock>
+                            <ToggleButton
+                                Margin="8,0,0,0"
+                                HorizontalAlignment="Right"
+                                IsChecked="{Binding Options.HasAndroidXml}"
+                                IsEnabled="{Binding Options.HasAndroid}" />
+                        </DockPanel>
+                    </Grid>
+                </Grid>
+            </materialDesign:Card>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}" OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}">
+            <materialDesign:Card
+                Width="230"
+                Margin="8"
+                HorizontalAlignment="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="{Binding Options.HasIos, Converter={StaticResource ActiveColorZoneModeConverter}}">
+                        <materialDesign:PackIcon
+                            Width="128"
+                            Height="128"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Kind="Apple" />
+                    </materialDesign:ColorZone>
+                    <Button
+                        Grid.Row="0"
+                        Margin="0,0,16,-20"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        Command="{Binding ToggleIosCommand}">
+                        <Button.Style>
+                            <Style BasedOn="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" TargetType="Button">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Options.HasIos}" Value="True">
+                                        <Setter Property="Background" Value="{DynamicResource AccentHueColorBrush}" />
+                                        <Setter Property="BorderBrush" Value="{DynamicResource AccentHueColorBrush}" />
+                                        <Setter Property="Foreground" Value="{DynamicResource AccentHueColorForegroundBrush}" />
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Options.HasIos}" Value="False">
+                                        <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}" />
+                                        <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}" />
+                                        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <materialDesign:PackIcon Kind="{Binding Options.IosIncludeIcon}" />
+                    </Button>
+                    <StackPanel Grid.Row="1" Margin="8,24,8,0">
+                        <TextBlock
+                            FontWeight="Medium"
+                            Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                            Text="{x:Static i18n:LocalResources.PlatformOptions_Ios_Title}" />
+                    </StackPanel>
+                    <Grid
+                        Grid.Row="2"
+                        Height="180"
+                        Margin="8"
+                        HorizontalAlignment="Stretch">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <ComboBox
+                            Grid.Row="0"
+                            Margin="0,4,0,0"
+                            materialDesign:ComboBoxAssist.ClassicMode="true"
+                            materialDesign:HintAssist.Hint="{x:Static i18n:LocalResources.PlatformOptions_Ios_MinSdk}"
+                            DisplayMemberPath="Value"
+                            IsEnabled="{Binding Options.HasIos}"
+                            ItemsSource="{Binding Options.MinIosSDKOptions}"
+                            SelectedValue="{Binding Options.SelectedMinIosSDK}"
+                            SelectedValuePath="Key"
+                            Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel />
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+                        </ComboBox>
+                        <TextBlock
+                            Grid.Row="0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Style="{StaticResource MaterialDesignCaptionTextBlock}">
+                            <Hyperlink
+                                Command="{Binding ShowPlatformMarketShareCommand}"
+                                CommandParameter="{x:Static template:PlatformType.Ios}"
+                                IsEnabled="{Binding Options.HasIos}">
+                                <Hyperlink.Style>
+                                    <Style BasedOn="{StaticResource MaterialDesignBody1Hyperlink}" TargetType="Hyperlink">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Options.HasIos}" Value="True">
+                                                <Setter Property="Foreground" Value="{DynamicResource PrimaryColorBrush}" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Options.HasIos}" Value="False">
+                                                <Setter Property="Foreground" Value="{DynamicResource MaterialDesignCheckBoxDisabled}" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Hyperlink.Style>
+                                <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Ios_MarketShare}" />
+                            </Hyperlink>
+                        </TextBlock>
+                        <DockPanel
+                            Grid.Row="1"
+                            Margin="0,12,0,0"
+                            HorizontalAlignment="Stretch">
+                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Hyperlink
+                                    Cursor="Arrow"
+                                    IsEnabled="{Binding Options.HasIos}"
+                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                    TextDecorations="None">
+                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Ios_UnitTestProject}" />
+                                </Hyperlink>
+                            </TextBlock>
+                            <ToggleButton
+                                Margin="8,0,0,0"
+                                HorizontalAlignment="Right"
+                                IsChecked="{Binding Options.HasIosUnitTestProject}"
+                                IsEnabled="{Binding Options.HasIos}" />
+                        </DockPanel>
+                        <DockPanel
+                            Grid.Row="2"
+                            Margin="0,12,0,0"
+                            HorizontalAlignment="Stretch">
+                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Hyperlink
+                                    Cursor="Arrow"
+                                    IsEnabled="{Binding Options.HasIos}"
+                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                    TextDecorations="None">
+                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Ios_UITestProject}" />
+                                </Hyperlink>
+                            </TextBlock>
+                            <ToggleButton
+                                Margin="8,0,0,0"
+                                HorizontalAlignment="Right"
+                                IsChecked="{Binding Options.HasIosUiTestProject}"
+                                IsEnabled="{Binding Options.HasIos}" />
+                        </DockPanel>
+                        <DockPanel
+                            Grid.Row="3"
+                            Margin="0,12,0,0"
+                            HorizontalAlignment="Stretch"
+                            Visibility="{Binding IsNativeTemplate, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Hyperlink
+                                    Command="{Binding ShowDialogCommand}"
+                                    CommandParameter="{Binding IosFluentLayoutsInfoModel}"
+                                    IsEnabled="{Binding Options.HasIos}"
+                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                    TextDecorations="None">
+                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Ios_FluentLayouts}" />
+                                    <materialDesign:PackIcon
+                                        Margin="4,0"
+                                        VerticalAlignment="Center"
+                                        Kind="Information" />
+                                </Hyperlink>
+                            </TextBlock>
+                            <ToggleButton
+                                Margin="8,0,0,0"
+                                HorizontalAlignment="Right"
+                                IsChecked="{Binding Options.HasIosFluentLayout}"
+                                IsEnabled="{Binding Options.HasIos}" />
+                        </DockPanel>
+                        <DockPanel
+                            Grid.Row="4"
+                            Margin="0,12,0,8"
+                            HorizontalAlignment="Stretch">
+                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Hyperlink
+                                    Command="{Binding ShowDialogCommand}"
+                                    CommandParameter="{Binding IosHyperionInfoModel}"
+                                    IsEnabled="{Binding Options.HasIos}"
+                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                    TextDecorations="None">
+                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Ios_Hyperion}" />
+                                    <materialDesign:PackIcon
+                                        Margin="4,0"
+                                        VerticalAlignment="Center"
+                                        Kind="Information" />
+                                </Hyperlink>
+                            </TextBlock>
+
+                            <ToggleButton
+                                Margin="8,0,0,0"
+                                HorizontalAlignment="Right"
+                                IsChecked="{Binding Options.HasIosHyperion}"
+                                IsEnabled="{Binding Options.HasIos}" />
+                        </DockPanel>
+                    </Grid>
+                </Grid>
+            </materialDesign:Card>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}" OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}">
+            <materialDesign:Card
+                Width="230"
+                Margin="8"
+                HorizontalAlignment="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="{Binding Options.HasUwp, Converter={StaticResource ActiveColorZoneModeConverter}}">
+                        <materialDesign:PackIcon
+                            Width="128"
+                            Height="128"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Kind="Windows" />
+                    </materialDesign:ColorZone>
+                    <Button
+                        Grid.Row="0"
+                        Margin="0,0,16,-20"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        Command="{Binding ToggleUwpCommand}">
+                        <Button.Style>
+                            <Style BasedOn="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" TargetType="Button">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Options.HasUwp}" Value="True">
+                                        <Setter Property="Background" Value="{DynamicResource AccentHueColorBrush}" />
+                                        <Setter Property="BorderBrush" Value="{DynamicResource AccentHueColorBrush}" />
+                                        <Setter Property="Foreground" Value="{DynamicResource AccentHueColorForegroundBrush}" />
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Options.HasUwp}" Value="False">
+                                        <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}" />
+                                        <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}" />
+                                        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <materialDesign:PackIcon Kind="{Binding Options.UwpIncludeIcon}" />
+                    </Button>
+                    <StackPanel Grid.Row="1" Margin="8,24,8,0">
+                        <TextBlock
+                            FontWeight="Medium"
+                            Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                            Text="{x:Static i18n:LocalResources.PlatformOptions_Uwp_Title}" />
+                    </StackPanel>
+                    <Grid
+                        Grid.Row="2"
+                        Height="180"
+                        Margin="8"
+                        HorizontalAlignment="Stretch">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <TextBox
+                            Margin="0,4,0,0"
+                            materialDesign:HintAssist.Hint="{x:Static i18n:LocalResources.PlatformOptions_Uwp_Description}"
+                            materialDesign:HintAssist.IsFloating="True"
+                            IsEnabled="{Binding Options.HasUwp}"
+                            Text="{Binding Options.UwpDescription, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
+                        <TextBlock
+                            Grid.Row="1"
+                            Margin="0,14,0,0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Style="{StaticResource MaterialDesignCaptionTextBlock}">
+                            <Hyperlink
+                                Command="{Binding ShowPlatformMarketShareCommand}"
+                                CommandParameter="{x:Static template:PlatformType.Uwp}"
+                                IsEnabled="{Binding Options.HasUwp}">
+                                <Hyperlink.Style>
+                                    <Style BasedOn="{StaticResource MaterialDesignBody1Hyperlink}" TargetType="Hyperlink">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Options.HasUwp}" Value="True">
+                                                <Setter Property="Foreground" Value="{DynamicResource PrimaryColorBrush}" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Options.HasUwp}" Value="False">
+                                                <Setter Property="Foreground" Value="{DynamicResource MaterialDesignCheckBoxDisabled}" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Hyperlink.Style>
+                                <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Uwp_MarketShare}" />
+                            </Hyperlink>
+                        </TextBlock>
+                        <ComboBox
+                            Grid.Row="1"
+                            Margin="0,18,0,0"
+                            materialDesign:ComboBoxAssist.ClassicMode="true"
+                            materialDesign:HintAssist.Hint="{x:Static i18n:LocalResources.PlatformOptions_Uwp_MinSdk}"
+                            DisplayMemberPath="Value"
+                            IsEnabled="{Binding Options.HasUwp}"
+                            ItemsSource="{Binding Options.MinUwpSDKOptions}"
+                            SelectedValue="{Binding Options.SelectedMinUwpSDK}"
+                            SelectedValuePath="Key"
+                            Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel />
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+                        </ComboBox>
+                        <DockPanel
+                            Grid.Row="2"
+                            Margin="0,12,0,0"
+                            HorizontalAlignment="Stretch">
+                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Hyperlink
+                                    Cursor="Arrow"
+                                    IsEnabled="{Binding Options.HasUwp}"
+                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                    TextDecorations="None">
+                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Uwp_UnitTestProject}" />
+                                </Hyperlink>
+                            </TextBlock>
+                            <ToggleButton
+                                Margin="8,0,0,0"
+                                HorizontalAlignment="Right"
+                                IsChecked="{Binding Options.HasUwpUnitTestProject}"
+                                IsEnabled="{Binding Options.HasUwp}" />
+                        </DockPanel>
+                        <DockPanel
+                            Grid.Row="3"
+                            Margin="0,12,0,8"
+                            HorizontalAlignment="Stretch">
+                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Hyperlink
+                                    Cursor="Arrow"
+                                    IsEnabled="{Binding Options.HasUwp}"
+                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
+                                    TextDecorations="None">
+                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Uwp_UITestProject}" />
+                                </Hyperlink>
+                            </TextBlock>
+                            <ToggleButton
+                                Margin="8,0,0,0"
+                                HorizontalAlignment="Right"
+                                IsChecked="{Binding Options.HasUwpUiTestProject}"
+                                IsEnabled="{Binding Options.HasUwp}" />
+                        </DockPanel>
+                    </Grid>
+
+                </Grid>
+            </materialDesign:Card>
+        </materialDesign:TransitioningContent>
+    </ItemsControl>
+</UserControl>
