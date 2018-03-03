@@ -57,7 +57,7 @@ dotnet new --install MvxScaffolding.Templates::*
 
 ### Usage
 
-See [documentation](docs/template_vs.md) for how to generate a solution.
+See [documentation](docs/template_dotnet_cli) for how to generate a solution.
 
 ## Visual Studio Extension
 
@@ -82,7 +82,7 @@ Download and install the VSIX from [Visual Studio Marketplace]() or search in Vi
 
 ### Usage
 
-See [documentation](docs/template_dotnet_cli.md) for how to generate a solution.
+See [documentation](docs/template_vs.md) for how to generate a solution.
 
 ## Known issues
 
