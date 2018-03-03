@@ -30,11 +30,11 @@
                 TextWrapping="WrapWithOverflow" />
             <TextBlock
                 Margin="0,12,0,0"
-                Text="{x:Static i18n:LocalResources.ProjectGrouping_Select_TestGroup}"
+                Text="{Binding Source={x:Static i18n:LocalResources.ProjectGrouping_Select_TestGroup}, StringFormat={}• {0}}"
                 TextWrapping="WrapWithOverflow" />
             <TextBlock
                 Margin="0,12,0,0"
-                Text="{x:Static i18n:LocalResources.ProjectGrouping_Select_Platform}"
+                Text="{Binding Source={x:Static i18n:LocalResources.ProjectGrouping_Select_Platform}, StringFormat={}• {0}}"
                 TextWrapping="WrapWithOverflow" />
             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                 <Button
