@@ -17,7 +17,7 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
     <JavaMaximumHeapSize />
@@ -59,10 +59,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
-    <Compile Include="Setup.cs" />
-    <Compile Include="Views\MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="Views\MainActivity.cs" />
     <Compile Include="Views\SplashActivity.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,30 +73,38 @@
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj">
-      <Project>{00000000-1111-0000-0000-000000000001}</Project>
-      <Name>MvxFormsTemp.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj">
-      <Project>{00000000-1111-0000-0000-000000000005}</Project>
-      <Name>MvxFormsTemp.UI</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="MvvmCross">
-      <Version>5.6.3</Version>
+      <Version>5.7.0</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.CodeAnalysis">
-      <Version>5.6.3</Version>
+      <Version>5.7.0</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.Design">
-      <Version>5.6.3</Version>
+      <Version>5.7.0</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.V7.AppCompat">
-      <Version>5.6.3</Version>
+      <Version>5.7.0</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Forms">
-      <Version>5.6.3</Version>
+      <Version>5.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Annotations">
+      <Version>27.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Compat">
+      <Version>27.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Core.UI">
+      <Version>27.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils">
+      <Version>27.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Fragment">
+      <Version>27.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Media.Compat">
+      <Version>27.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
       <Version>2.5.0.280555</Version>
@@ -129,6 +137,17 @@
     <AndroidResource Include="Resources\drawable\ic_launcher_foreground.xml" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_mvvmcross_logo.png" />
     <AndroidResource Include="Resources\values-v19\styles.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj">
+      <Project>{00000000-1111-0000-0000-000000000001}</Project>
+      <Name>MvxFormsTemp.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj">
+      <Project>{00000000-1111-0000-0000-000000000005}</Project>
+      <Name>MvxFormsTemp.UI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.projitems" Label="Shared" Condition=" '$(HasAndroidTestProject)' != 'false' " />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

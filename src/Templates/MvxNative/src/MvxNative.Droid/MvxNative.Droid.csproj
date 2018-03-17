@@ -17,7 +17,7 @@
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -73,16 +73,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MvvmCross">
-      <Version>5.6.3</Version>
+      <Version>5.7.0</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.CodeAnalysis">
-      <Version>5.6.3</Version>
+      <Version>5.7.0</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.Design">
-      <Version>5.6.3</Version>
+      <Version>5.7.0</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.V7.AppCompat">
-      <Version>5.6.3</Version>
+      <Version>5.7.0</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Constraint.Layout">
       <Version>1.0.2.2</Version>
