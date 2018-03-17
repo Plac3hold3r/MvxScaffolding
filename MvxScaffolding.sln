@@ -106,12 +106,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxScaffolding.Core", "src\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Docs", "!Docs", "{D6F40415-D292-4A46-AEFF-2AE4BC185BE6}"
 	ProjectSection(SolutionItems) = preProject
+		docs\nuget_docs.md = docs\nuget_docs.md
 		docs\privacy_policy.md = docs\privacy_policy.md
 		docs\template_dotnet_cli.md = docs\template_dotnet_cli.md
 		docs\template_vs.md = docs\template_vs.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11d3-BF4B-00C04F79EFBC}") = "MvxScaffolding.Localization", "src\MvxScaffolding.Localization\MvxScaffolding.Localization.csproj", "{C8615A68-1B7F-4798-BF54-430973E457EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxScaffolding.Localization", "src\MvxScaffolding.Localization\MvxScaffolding.Localization.csproj", "{C8615A68-1B7F-4798-BF54-430973E457EC}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
