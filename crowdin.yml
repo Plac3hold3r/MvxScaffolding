@@ -2,3 +2,5 @@ files:
   - source: /src/MvxScaffolding.Localization/Resources/LocalResources.resx
     translation: >-
       /src/MvxScaffolding.Localization/Resources/%file_name%.%locale%.%file_extension%
+    translation_replace:
+      ".en-US": ''
