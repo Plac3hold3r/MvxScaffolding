@@ -139,7 +139,7 @@
     <value>De naam van de toepassing vereist</value>
   </data>
   <data name="AppDetails_Validation_Identifier" xml:space="preserve">
-    <value>Application identifier required</value>
+    <value>De identifier van de toepassing vereist</value>
   </data>
   <data name="Main_Window_Button_About" xml:space="preserve">
     <value>Over</value>
@@ -247,7 +247,7 @@
     <value>Uitbreiding v{0}</value>
   </data>
   <data name="About_Version_Template" xml:space="preserve">
-    <value>Template v{0}</value>
+    <value>Sjabloon v{0}</value>
   </data>
   <data name="PlatformOptions_Ios_FluentLayouts" xml:space="preserve">
     <value>Fluent Layouts</value>
@@ -370,7 +370,7 @@
     <value>Project Grouping</value>
   </data>
   <data name="Summary_Uwp_Description" xml:space="preserve">
-    <value>Description</value>
+    <value>Beschrijving</value>
   </data>
   <data name="Summary_Uwp_MinSdk" xml:space="preserve">
     <value>Min SDK version</value>
@@ -388,16 +388,16 @@
     <value>GitHub</value>
   </data>
   <data name="About_Privacy_Link" xml:space="preserve">
-    <value>Privacy Policy</value>
+    <value>Privacybeleid</value>
   </data>
   <data name="Application_Name" xml:space="preserve">
     <value>MvxScaffolding</value>
   </data>
   <data name="Template_Choice_False" xml:space="preserve">
-    <value>False</value>
+    <value>Vals</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Flat" xml:space="preserve">
-    <value>Flat</value>
+    <value>Vlak</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Platform" xml:space="preserve">
     <value>Platform</value>
@@ -406,6 +406,6 @@
     <value>Test Group</value>
   </data>
   <data name="Template_Choice_True" xml:space="preserve">
-    <value>True</value>
+    <value>Waar</value>
   </data>
 </root>
