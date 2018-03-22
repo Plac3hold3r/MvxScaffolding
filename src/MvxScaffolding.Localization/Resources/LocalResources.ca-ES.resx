@@ -420,4 +420,7 @@
   <data name="About_Translate_Link" xml:space="preserve">
     <value>Help Translate</value>
   </data>
+  <data name="About_Changelog_Link" xml:space="preserve">
+    <value>Changelog</value>
+  </data>
 </root>
