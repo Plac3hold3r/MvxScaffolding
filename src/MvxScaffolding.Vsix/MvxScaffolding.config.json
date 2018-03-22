@@ -15,5 +15,6 @@
   "HyperioniOSUri": "https://github.com/willowtreeapps/Hyperion-iOS",
   "MarketShareAndroidUri": "https://developer.android.com/about/dashboards/index.html",
   "MarketShareiOSUri": "https://developer.apple.com/support/app-store/",
-  "MarketShareWindowsUri": "http://reports.adduplex.com/"
+  "MarketShareWindowsUri": "http://reports.adduplex.com/",
+  "HelpTranslateUri": "https://crowdin.com/project/mvxscaffolding"
 }

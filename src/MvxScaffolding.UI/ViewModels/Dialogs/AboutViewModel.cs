@@ -14,12 +14,14 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
     {
         public ICommand GoToGitHubCommand { get; }
         public ICommand GoToAuthorGitHubCommand { get; }
+        public ICommand GoToHelpTranslateCommand { get; }
         public ICommand GoToPrivacyPolicyCommand { get; }
 
         public AboutViewModel()
         {
             GoToGitHubCommand = new RelayCommand(GoToGitHubLink);
             GoToAuthorGitHubCommand = new RelayCommand(GoToAuthorGitHubLink);
+            GoToHelpTranslateCommand = new RelayCommand(GoToHelpTranslateLink);
             GoToPrivacyPolicyCommand = new RelayCommand(GoToPrivacyPolicyLink);
         }
 
@@ -31,6 +33,11 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
         private void GoToAuthorGitHubLink()
         {
             OpenLink(Config.Current.AuthorGitHubUri, TemplateLinks.AuthorGitHub);
+        }
+
+        private void GoToHelpTranslateLink()
+        {
+            OpenLink(Config.Current.HelpTranslateUri, TemplateLinks.HelpTranslate);
         }
 
         private void GoToPrivacyPolicyLink()

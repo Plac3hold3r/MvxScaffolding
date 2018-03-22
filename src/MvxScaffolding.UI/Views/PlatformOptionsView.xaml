@@ -8,7 +8,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:i18n="clr-namespace:MvxScaffolding.Localization.Resources;assembly=MvxScaffolding.Localization"
+    xmlns:l10n="clr-namespace:MvxScaffolding.Localization.Resources;assembly=MvxScaffolding.Localization"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:template="clr-namespace:MvxScaffolding.Core.Template;assembly=MvxScaffolding.Core"
@@ -50,7 +50,7 @@
                         <TextBlock
                             FontWeight="Medium"
                             Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                            Text="{x:Static i18n:LocalResources.PlatformOptions_Core_Title}" />
+                            Text="{x:Static l10n:LocalResources.PlatformOptions_Core_Title}" />
                     </StackPanel>
                     <Grid
                         Grid.Row="2"
@@ -66,7 +66,7 @@
                             Grid.Row="0"
                             Margin="0,4,0,0"
                             materialDesign:ComboBoxAssist.ClassicMode="true"
-                            materialDesign:HintAssist.Hint="{x:Static i18n:LocalResources.PlatformOptions_Core_dotNetStandard}"
+                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.PlatformOptions_Core_dotNetStandard}"
                             DisplayMemberPath="Value"
                             ItemsSource="{Binding Options.NetStandardOptions}"
                             SelectedValue="{Binding Options.SelectedNetStandard}"
@@ -87,7 +87,7 @@
                                     Cursor="Arrow"
                                     Style="{StaticResource MaterialDesignBody1Hyperlink}"
                                     TextDecorations="None">
-                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Core_UnitTestProject}" />
+                                    <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Core_UnitTestProject}" />
                                 </Hyperlink></TextBlock>
                             <ToggleButton
                                 Margin="8,0,0,0"
@@ -146,7 +146,7 @@
                         <TextBlock
                             FontWeight="Medium"
                             Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                            Text="{x:Static i18n:LocalResources.PlatformOptions_Android_Title}" />
+                            Text="{x:Static l10n:LocalResources.PlatformOptions_Android_Title}" />
                     </StackPanel>
                     <Grid
                         Grid.Row="2"
@@ -164,7 +164,7 @@
                             Grid.Row="0"
                             Margin="0,4,0,0"
                             materialDesign:ComboBoxAssist.ClassicMode="true"
-                            materialDesign:HintAssist.Hint="{x:Static i18n:LocalResources.PlatformOptions_Android_MinSdk}"
+                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.PlatformOptions_Android_MinSdk}"
                             DisplayMemberPath="Value"
                             IsEnabled="{Binding Options.HasAndroid}"
                             ItemsSource="{Binding Options.MinAndroidSDKOptions}"
@@ -198,7 +198,7 @@
                                         </Style.Triggers>
                                     </Style>
                                 </Hyperlink.Style>
-                                <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Android_MarketShare}" />
+                                <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Android_MarketShare}" />
                             </Hyperlink>
                         </TextBlock>
                         <DockPanel
@@ -211,7 +211,7 @@
                                     IsEnabled="{Binding Options.HasAndroid}"
                                     Style="{StaticResource MaterialDesignBody1Hyperlink}"
                                     TextDecorations="None">
-                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Android_UnitTestProject}" />
+                                    <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Android_UnitTestProject}" />
                                 </Hyperlink>
                             </TextBlock>
                             <ToggleButton
@@ -230,7 +230,7 @@
                                     IsEnabled="{Binding Options.HasAndroid}"
                                     Style="{StaticResource MaterialDesignBody1Hyperlink}"
                                     TextDecorations="None">
-                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Android_UITestProject}" />
+                                    <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Android_UITestProject}" />
                                 </Hyperlink>
                             </TextBlock>
                             <ToggleButton
@@ -251,7 +251,7 @@
                                     IsEnabled="{Binding Options.HasAndroid}"
                                     Style="{StaticResource MaterialDesignBody1Hyperlink}"
                                     TextDecorations="None">
-                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Android_XmlLayouts}" />
+                                    <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Android_XmlLayouts}" />
                                     <materialDesign:PackIcon
                                         Margin="4,0"
                                         VerticalAlignment="Center"
@@ -316,7 +316,7 @@
                         <TextBlock
                             FontWeight="Medium"
                             Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                            Text="{x:Static i18n:LocalResources.PlatformOptions_Ios_Title}" />
+                            Text="{x:Static l10n:LocalResources.PlatformOptions_Ios_Title}" />
                     </StackPanel>
                     <Grid
                         Grid.Row="2"
@@ -335,7 +335,7 @@
                             Grid.Row="0"
                             Margin="0,4,0,0"
                             materialDesign:ComboBoxAssist.ClassicMode="true"
-                            materialDesign:HintAssist.Hint="{x:Static i18n:LocalResources.PlatformOptions_Ios_MinSdk}"
+                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.PlatformOptions_Ios_MinSdk}"
                             DisplayMemberPath="Value"
                             IsEnabled="{Binding Options.HasIos}"
                             ItemsSource="{Binding Options.MinIosSDKOptions}"
@@ -369,7 +369,7 @@
                                         </Style.Triggers>
                                     </Style>
                                 </Hyperlink.Style>
-                                <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Ios_MarketShare}" />
+                                <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Ios_MarketShare}" />
                             </Hyperlink>
                         </TextBlock>
                         <DockPanel
@@ -382,7 +382,7 @@
                                     IsEnabled="{Binding Options.HasIos}"
                                     Style="{StaticResource MaterialDesignBody1Hyperlink}"
                                     TextDecorations="None">
-                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Ios_UnitTestProject}" />
+                                    <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Ios_UnitTestProject}" />
                                 </Hyperlink>
                             </TextBlock>
                             <ToggleButton
@@ -401,7 +401,7 @@
                                     IsEnabled="{Binding Options.HasIos}"
                                     Style="{StaticResource MaterialDesignBody1Hyperlink}"
                                     TextDecorations="None">
-                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Ios_UITestProject}" />
+                                    <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Ios_UITestProject}" />
                                 </Hyperlink>
                             </TextBlock>
                             <ToggleButton
@@ -422,7 +422,7 @@
                                     IsEnabled="{Binding Options.HasIos}"
                                     Style="{StaticResource MaterialDesignBody1Hyperlink}"
                                     TextDecorations="None">
-                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Ios_FluentLayouts}" />
+                                    <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Ios_FluentLayouts}" />
                                     <materialDesign:PackIcon
                                         Margin="4,0"
                                         VerticalAlignment="Center"
@@ -446,7 +446,7 @@
                                     IsEnabled="{Binding Options.HasIos}"
                                     Style="{StaticResource MaterialDesignBody1Hyperlink}"
                                     TextDecorations="None">
-                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Ios_Hyperion}" />
+                                    <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Ios_Hyperion}" />
                                     <materialDesign:PackIcon
                                         Margin="4,0"
                                         VerticalAlignment="Center"
@@ -512,7 +512,7 @@
                         <TextBlock
                             FontWeight="Medium"
                             Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                            Text="{x:Static i18n:LocalResources.PlatformOptions_Uwp_Title}" />
+                            Text="{x:Static l10n:LocalResources.PlatformOptions_Uwp_Title}" />
                     </StackPanel>
                     <Grid
                         Grid.Row="2"
@@ -528,7 +528,7 @@
                         </Grid.RowDefinitions>
                         <TextBox
                             Margin="0,4,0,0"
-                            materialDesign:HintAssist.Hint="{x:Static i18n:LocalResources.PlatformOptions_Uwp_Description}"
+                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.PlatformOptions_Uwp_Description}"
                             materialDesign:HintAssist.IsFloating="True"
                             IsEnabled="{Binding Options.HasUwp}"
                             Text="{Binding Options.UwpDescription, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
@@ -554,14 +554,14 @@
                                         </Style.Triggers>
                                     </Style>
                                 </Hyperlink.Style>
-                                <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Uwp_MarketShare}" />
+                                <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Uwp_MarketShare}" />
                             </Hyperlink>
                         </TextBlock>
                         <ComboBox
                             Grid.Row="1"
                             Margin="0,18,0,0"
                             materialDesign:ComboBoxAssist.ClassicMode="true"
-                            materialDesign:HintAssist.Hint="{x:Static i18n:LocalResources.PlatformOptions_Uwp_MinSdk}"
+                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.PlatformOptions_Uwp_MinSdk}"
                             DisplayMemberPath="Value"
                             IsEnabled="{Binding Options.HasUwp}"
                             ItemsSource="{Binding Options.MinUwpSDKOptions}"
@@ -584,7 +584,7 @@
                                     IsEnabled="{Binding Options.HasUwp}"
                                     Style="{StaticResource MaterialDesignBody1Hyperlink}"
                                     TextDecorations="None">
-                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Uwp_UnitTestProject}" />
+                                    <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Uwp_UnitTestProject}" />
                                 </Hyperlink>
                             </TextBlock>
                             <ToggleButton
@@ -603,7 +603,7 @@
                                     IsEnabled="{Binding Options.HasUwp}"
                                     Style="{StaticResource MaterialDesignBody1Hyperlink}"
                                     TextDecorations="None">
-                                    <Run Text="{x:Static i18n:LocalResources.PlatformOptions_Uwp_UITestProject}" />
+                                    <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Uwp_UITestProject}" />
                                 </Hyperlink>
                             </TextBlock>
                             <ToggleButton

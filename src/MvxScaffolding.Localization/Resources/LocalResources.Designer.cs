@@ -124,6 +124,15 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Help Translate.
+        /// </summary>
+        public static string About_Translate_Link {
+            get {
+                return ResourceManager.GetString("About_Translate_Link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Extension v{0}.
         /// </summary>
         public static string About_Version_Extension {
@@ -264,6 +273,15 @@ namespace MvxScaffolding.Localization.Resources {
         public static string Main_Window_Button_Privacy {
             get {
                 return ResourceManager.GetString("Main_Window_Button_Privacy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Translate.
+        /// </summary>
+        public static string Main_Window_Button_Translate {
+            get {
+                return ResourceManager.GetString("Main_Window_Button_Translate", resourceCulture);
             }
         }
         
@@ -651,6 +669,24 @@ namespace MvxScaffolding.Localization.Resources {
         public static string SimpleInfo_Privacy_Title {
             get {
                 return ResourceManager.GetString("SimpleInfo_Privacy_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Find an error in spelling or grammar? What MvxScaffolding translated into your native language? To help translate MvxScaffolding, please visit our Crowdin page..
+        /// </summary>
+        public static string SimpleInfo_Translate_Desc {
+            get {
+                return ResourceManager.GetString("SimpleInfo_Translate_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help Translate.
+        /// </summary>
+        public static string SimpleInfo_Translate_Title {
+            get {
+                return ResourceManager.GetString("SimpleInfo_Translate_Title", resourceCulture);
             }
         }
         
