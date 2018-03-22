@@ -412,7 +412,7 @@
     <value>Translate</value>
   </data>
   <data name="SimpleInfo_Translate_Desc" xml:space="preserve">
-    <value>Find an error in spelling or grammar? What MvxScaffolding translated into your native language? To help translate MvxScaffolding, please visit our Crowdin page.</value>
+    <value>Find an error in spelling or grammar? Want MvxScaffolding translated into your native language? To help translate MvxScaffolding, please visit our Crowdin page.</value>
   </data>
   <data name="SimpleInfo_Translate_Title" xml:space="preserve">
     <value>Help Translate</value>
