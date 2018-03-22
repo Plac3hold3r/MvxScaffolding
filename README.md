@@ -1,7 +1,8 @@
 ﻿# MvxScaffolding (Preview)
 
-[![NuGet](https://img.shields.io/nuget/v/MvxScaffolding.Templates.svg?style=flat-square)](https://www.nuget.org/packages/MvxScaffolding.Templates/)
-[![Visual Studio Marketplace](https://img.shields.io/vscode-marketplace/v/Plac3Hold3r.MvxScaffolding.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding)
+[![NuGet](https://img.shields.io/nuget/v/MvxScaffolding.Templates.svg)](https://www.nuget.org/packages/MvxScaffolding.Templates/)
+[![Visual Studio Marketplace](https://img.shields.io/vscode-marketplace/v/Plac3Hold3r.MvxScaffolding.svg)](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding)
+[![Crowdin](https://d322cqt584bo4o.cloudfront.net/mvxscaffolding/localized.svg)](https://crowdin.com/project/mvxscaffolding)
 
 A customizable template used to scaffold a cross platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.
 
@@ -30,6 +31,10 @@ iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.Fluen
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 dotnet CLI | [Installation Guide](#dotnet-cli) | [Documentation](docs/template_dotnet_cli.md) | [NuGet](https://www.nuget.org/packages/MvxScaffolding.Templates/)
 Visual Studio Extension | [Installation Guide](#visual-studio-extension) | [Documentation](docs/template_vs.md) | [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding)
+
+## Translation
+
+If you want to help translate MvxScaffolding's Visual Studio extension into your native language. Please checkout our [Crowdin project](https://crowdin.com/project/mvxscaffolding) page.
 
 ## dotnet CLI
 
@@ -94,6 +99,7 @@ See [documentation](docs/template_vs.md) for how to generate a solution.
 - To [.NET Template Engine](https://github.com/dotnet/templating) community
 - To [SideWaffle Template Creator](https://github.com/ligershark/sidewafflev2) community
 - To [MvvmCross](https://github.com/MvvmCross/MvvmCross) community
+- To [Crowdin](https://crowdin.com) for supporting localization for MvxScaffolding
 
 ## License
 

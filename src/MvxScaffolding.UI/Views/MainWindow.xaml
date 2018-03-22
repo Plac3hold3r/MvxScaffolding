@@ -9,7 +9,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:dialogs="clr-namespace:MvxScaffolding.UI.ViewModels.Dialogs"
-    xmlns:i18n="clr-namespace:MvxScaffolding.Localization.Resources;assembly=MvxScaffolding.Localization"
+    xmlns:l10n="clr-namespace:MvxScaffolding.Localization.Resources;assembly=MvxScaffolding.Localization"
     xmlns:local="clr-namespace:MvxScaffolding.UI.Views"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -65,7 +65,7 @@
                     Width="22"
                     Height="22"
                     Kind="GithubCircle"
-                    ToolTip="{x:Static i18n:LocalResources.Main_Window_Link_GitHub}" />
+                    ToolTip="{x:Static l10n:LocalResources.Main_Window_Link_GitHub}" />
             </Button>
         </metro:WindowCommands>
     </metro:MetroWindow.RightWindowCommands>
@@ -90,7 +90,7 @@
                     Grid.Column="0"
                     HorizontalAlignment="Center"
                     Style="{StaticResource MaterialDesignHeadlineTextBlock}"
-                    Text="{x:Static i18n:LocalResources.Main_Window_SectionHeader_AppDetails}">
+                    Text="{x:Static l10n:LocalResources.Main_Window_SectionHeader_AppDetails}">
                     <TextBlock.Foreground>
                         <MultiBinding Converter="{StaticResource SectionHighlightColorConverter}" ConverterParameter="0">
                             <Binding Path="SelectedViewModelIndex" />
@@ -109,7 +109,7 @@
                     Grid.Column="2"
                     HorizontalAlignment="Center"
                     Style="{StaticResource MaterialDesignHeadlineTextBlock}"
-                    Text="{x:Static i18n:LocalResources.Main_Window_SectionHeader_PlatformOptions}">
+                    Text="{x:Static l10n:LocalResources.Main_Window_SectionHeader_PlatformOptions}">
                     <TextBlock.Foreground>
                         <MultiBinding Converter="{StaticResource SectionHighlightColorConverter}" ConverterParameter="1">
                             <Binding Path="SelectedViewModelIndex" />
@@ -128,7 +128,7 @@
                     Grid.Column="4"
                     HorizontalAlignment="Center"
                     Style="{StaticResource MaterialDesignHeadlineTextBlock}"
-                    Text="{x:Static i18n:LocalResources.Main_Window_SectionHeader_Summary}">
+                    Text="{x:Static l10n:LocalResources.Main_Window_SectionHeader_Summary}">
                     <TextBlock.Foreground>
                         <MultiBinding Converter="{StaticResource SectionHighlightColorConverter}" ConverterParameter="2">
                             <Binding Path="SelectedViewModelIndex" />
@@ -179,7 +179,6 @@
                 HorizontalAlignment="Left"
                 Orientation="Horizontal">
                 <Button
-                    Grid.Row="2"
                     Margin="8,0,0,0"
                     HorizontalAlignment="Left"
                     Command="{Binding ShowDialogCommand}"
@@ -192,12 +191,26 @@
                         <TextBlock
                             Margin="6,0,0,0"
                             VerticalAlignment="Center"
-                            Text="{Binding Source={x:Static i18n:LocalResources.Main_Window_Button_About}, Converter={StaticResource StringToUpperConverter}}" />
+                            Text="{Binding Source={x:Static l10n:LocalResources.Main_Window_Button_About}, Converter={StaticResource StringToUpperConverter}}" />
                     </StackPanel>
                 </Button>
 
                 <Button
-                    Grid.Row="2"
+                    Margin="8,0,0,0"
+                    HorizontalAlignment="Left"
+                    Command="{Binding ShowDialogCommand}"
+                    CommandParameter="{Binding TranslateInfoModel}"
+                    Style="{DynamicResource MaterialDesignFlatButton}">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon VerticalAlignment="Center" Kind="Translate" />
+                        <TextBlock
+                            Margin="6,0,0,0"
+                            VerticalAlignment="Center"
+                            Text="{Binding Source={x:Static l10n:LocalResources.Main_Window_Button_Translate}, Converter={StaticResource StringToUpperConverter}}" />
+                    </StackPanel>
+                </Button>
+
+                <Button
                     Margin="8,0,0,0"
                     HorizontalAlignment="Left"
                     Command="{Binding ShowDialogCommand}"
@@ -208,7 +221,7 @@
                         <TextBlock
                             Margin="6,0,0,0"
                             VerticalAlignment="Center"
-                            Text="{Binding Source={x:Static i18n:LocalResources.Main_Window_Button_Privacy}, Converter={StaticResource StringToUpperConverter}}" />
+                            Text="{Binding Source={x:Static l10n:LocalResources.Main_Window_Button_Privacy}, Converter={StaticResource StringToUpperConverter}}" />
                     </StackPanel>
                 </Button>
             </StackPanel>

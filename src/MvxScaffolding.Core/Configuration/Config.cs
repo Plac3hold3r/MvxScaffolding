@@ -40,6 +40,8 @@ namespace MvxScaffolding.Core.Configuration
 
         public string MarketShareWindowsUri { get; set; }
 
+        public string HelpTranslateUri { get; set; }
+
         private const string DefaultJsonConfigFileName = "MvxScaffolding.config.json";
 
         private static Config _current;
