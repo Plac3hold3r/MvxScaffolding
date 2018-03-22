@@ -70,6 +70,15 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Changelog.
+        /// </summary>
+        public static string About_Changelog_Link {
+            get {
+                return ResourceManager.GetString("About_Changelog_Link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Created by.
         /// </summary>
         public static string About_CreatedBy {
