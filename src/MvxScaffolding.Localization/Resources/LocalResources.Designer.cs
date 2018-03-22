@@ -673,7 +673,7 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Find an error in spelling or grammar? What MvxScaffolding translated into your native language? To help translate MvxScaffolding, please visit our Crowdin page..
+        ///   Looks up a localized string similar to Find an error in spelling or grammar? Want MvxScaffolding translated into your native language? To help translate MvxScaffolding, please visit our Crowdin page..
         /// </summary>
         public static string SimpleInfo_Translate_Desc {
             get {
