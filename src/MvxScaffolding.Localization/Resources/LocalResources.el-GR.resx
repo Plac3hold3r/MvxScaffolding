@@ -408,4 +408,16 @@
   <data name="Template_Choice_True" xml:space="preserve">
     <value>True</value>
   </data>
+  <data name="Main_Window_Button_Translate" xml:space="preserve">
+    <value>Translate</value>
+  </data>
+  <data name="SimpleInfo_Translate_Desc" xml:space="preserve">
+    <value>Find an error in spelling or grammar? What MvxScaffolding translated into your native language? To help translate MvxScaffolding, please visit our Crowdin page.</value>
+  </data>
+  <data name="SimpleInfo_Translate_Title" xml:space="preserve">
+    <value>Help Translate</value>
+  </data>
+  <data name="About_Translate_Link" xml:space="preserve">
+    <value>Help Translate</value>
+  </data>
 </root>
