@@ -80,6 +80,14 @@
                         <Run Text="{x:Static l10n:LocalResources.About_Translate_Link}" />
                     </Hyperlink>
                 </TextBlock>
+                <TextBlock Margin="12,0,0,8">
+                    <Hyperlink
+                        Command="{Binding GoToChangelogCommand}"
+                        Foreground="{StaticResource PrimaryColorBrush}"
+                        Style="{StaticResource MaterialDesignBody1Hyperlink}">
+                        <Run Text="{x:Static l10n:LocalResources.About_Changelog_Link}" />
+                    </Hyperlink>
+                </TextBlock>
                 <TextBlock Margin="12,0,0,0">
                     <Hyperlink
                         Command="{Binding GoToPrivacyPolicyCommand}"

@@ -42,6 +42,8 @@ namespace MvxScaffolding.Core.Configuration
 
         public string HelpTranslateUri { get; set; }
 
+        public string ChangelogUri { get; set; }
+
         private const string DefaultJsonConfigFileName = "MvxScaffolding.config.json";
 
         private static Config _current;
