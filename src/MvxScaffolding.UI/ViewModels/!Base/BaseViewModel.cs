@@ -9,7 +9,6 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using MaterialDesignThemes.Wpf;
-using MvxScaffolding.Core.Configuration;
 using MvxScaffolding.Core.Contexts;
 using MvxScaffolding.Core.Diagnostics;
 using MvxScaffolding.Core.Tasks;
@@ -33,9 +32,6 @@ namespace MvxScaffolding.UI.ViewModels
 
         public string AppVersion
             => MvxScaffoldingContext.WizardVersion;
-
-        public string TemplateVersion
-            => Config.Current.TemplateVersion;
 
         public ICommand ShowDialogCommand { get; }
 

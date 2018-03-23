@@ -142,24 +142,6 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Extension v{0}.
-        /// </summary>
-        public static string About_Version_Extension {
-            get {
-                return ResourceManager.GetString("About_Version_Extension", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Template v{0}.
-        /// </summary>
-        public static string About_Version_Template {
-            get {
-                return ResourceManager.GetString("About_Version_Template", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Application.
         /// </summary>
         public static string AppDetails_Application {
