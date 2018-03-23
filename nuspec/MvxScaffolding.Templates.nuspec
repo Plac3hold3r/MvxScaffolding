@@ -13,7 +13,7 @@
     <summary>A customizable template used to scaffold a cross platform MvvmCross application.</summary>
     <copyright>Copyright ©2018</copyright>
 
-    <releaseNotes>Add support for MvvmCross 5.7.0</releaseNotes>
+    <releaseNotes>See Changelog https://github.com/Plac3hold3r/MvxScaffolding/blob/master/CHANGELOG.md</releaseNotes>
 
     <packageTypes>
       <packageType name="Template" />
