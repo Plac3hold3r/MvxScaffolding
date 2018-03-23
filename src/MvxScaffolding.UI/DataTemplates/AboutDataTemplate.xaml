@@ -40,10 +40,8 @@
                                 Foreground="White"
                                 Style="{StaticResource MaterialDesignBody1Hyperlink}">Plac3hold3r</Hyperlink></TextBlock>
                         <TextBlock
-                            Margin="0,8,0,0"
                             Style="{StaticResource MaterialDesignCaptionTextBlock}"
-                            Text="{Binding AppVersion, StringFormat={x:Static l10n:LocalResources.About_Version_Extension}}" />
-                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="{Binding TemplateVersion, StringFormat={x:Static l10n:LocalResources.About_Version_Template}}" />
+                            Text="{Binding AppVersion, StringFormat={}v{0}}" />
                     </StackPanel>
                 </Grid>
             </materialDesign:ColorZone>

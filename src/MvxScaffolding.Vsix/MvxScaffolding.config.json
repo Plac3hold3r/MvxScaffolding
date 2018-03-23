@@ -7,7 +7,6 @@
   "RemoteTelemetryKey": "AI Key",
   "PrivacyPolicyUri": "https://github.com/Plac3hold3r/MvxScaffolding/blob/master/docs/privacy_policy.md",
   "GitHubUri": "https://github.com/Plac3hold3r/MvxScaffolding",
-  "TemplateVersion": "0.6.0",
   "DiagnosticsTraceLevel": "Verbose",
   "AuthorGitHubUri": "https://github.com/Plac3hold3r",
   "EditorConfigUri": "https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options",
