@@ -9,7 +9,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:dialogs="clr-namespace:MvxScaffolding.UI.ViewModels.Dialogs"
-    xmlns:i18n="clr-namespace:MvxScaffolding.Localization.Resources;assembly=MvxScaffolding.Localization"
+    xmlns:l10n="clr-namespace:MvxScaffolding.Localization.Resources;assembly=MvxScaffolding.Localization"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     d:DesignHeight="700"
@@ -53,21 +53,30 @@
                         </Grid>
                     </materialDesign:ColorZone>
                     <StackPanel Margin="16">
-                        <TextBlock FontWeight="Bold" Text="{x:Static i18n:LocalResources.AppDetails_Application}" />
+                        <TextBlock FontWeight="Bold" Text="{x:Static l10n:LocalResources.AppDetails_Application}" />
                         <TextBox
                             Margin="0,4,0,0"
-                            materialDesign:HintAssist.Hint="{x:Static i18n:LocalResources.AppDetails_Identifier}"
+                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.AppDetails_Identifier}"
                             materialDesign:HintAssist.IsFloating="True"
                             Text="{Binding Options.AppId, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
                         <TextBox
                             Margin="0,16,0,0"
-                            materialDesign:HintAssist.Hint="{x:Static i18n:LocalResources.AppDetails_Display_Name}"
+                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.AppDetails_Display_Name}"
                             materialDesign:HintAssist.IsFloating="True"
                             Text="{Binding Options.AppName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
+                        <ComboBox
+                            Margin="0,16,0,0"
+                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.AppDetails_MvvmCross_Version}"
+                            materialDesign:HintAssist.HintOpacity="1"
+                            IsEditable="False"
+                            IsEnabled="False"
+                            Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            <ComboBoxItem IsSelected="True">5.7.0</ComboBoxItem>
+                        </ComboBox>
                         <TextBlock
                             Margin="0,16,0,0"
                             FontWeight="Bold"
-                            Text="{x:Static i18n:LocalResources.AppDetails_Solution}" />
+                            Text="{x:Static l10n:LocalResources.AppDetails_Solution}" />
                         <DockPanel
                             Grid.Row="0"
                             Margin="0,4,0,0"
@@ -75,7 +84,7 @@
                             <ComboBox
                                 Width="300"
                                 materialDesign:ComboBoxAssist.ClassicMode="true"
-                                materialDesign:HintAssist.Hint="{x:Static i18n:LocalResources.AppDetails_Project_Grouping}"
+                                materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.AppDetails_Project_Grouping}"
                                 DisplayMemberPath="Value"
                                 ItemsSource="{Binding Options.ProjectGroupingOptions}"
                                 SelectedValue="{Binding Options.SelectedProjectGrouping}"
@@ -112,7 +121,7 @@
                                 Width="260"
                                 HorizontalAlignment="Left"
                                 VerticalAlignment="Center"
-                                Text="{x:Static i18n:LocalResources.AppDetails_EditorConfig}" />
+                                Text="{x:Static l10n:LocalResources.AppDetails_EditorConfig}" />
                             <ToggleButton
                                 Margin="8,0,0,0"
                                 HorizontalAlignment="Right"

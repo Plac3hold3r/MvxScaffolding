@@ -22,8 +22,6 @@ namespace MvxScaffolding.Core.Configuration
 
         public string GitHubUri { get; set; }
 
-        public string TemplateVersion { get; set; }
-
         public TraceEventType DiagnosticsTraceLevel { get; set; } = TraceEventType.Verbose;
 
         public string AuthorGitHubUri { get; set; }
@@ -39,6 +37,10 @@ namespace MvxScaffolding.Core.Configuration
         public string MarketShareiOSUri { get; set; }
 
         public string MarketShareWindowsUri { get; set; }
+
+        public string HelpTranslateUri { get; set; }
+
+        public string ChangelogUri { get; set; }
 
         private const string DefaultJsonConfigFileName = "MvxScaffolding.config.json";
 

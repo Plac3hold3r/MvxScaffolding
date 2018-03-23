@@ -29,6 +29,10 @@ namespace MvxScaffolding.UI.Views
 
             WindowTitleBrush = themeBrush;
             GlowBrush = themeBrush;
+
+#if DEBUG
+            ShowInTaskbar = true;
+#endif
         }
 
         private void OnDialogClosing(object sender, DialogClosingEventArgs eventArgs)

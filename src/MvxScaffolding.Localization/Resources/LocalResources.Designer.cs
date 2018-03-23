@@ -70,6 +70,15 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Changelog.
+        /// </summary>
+        public static string About_Changelog_Link {
+            get {
+                return ResourceManager.GetString("About_Changelog_Link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Created by.
         /// </summary>
         public static string About_CreatedBy {
@@ -124,20 +133,11 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Extension v{0}.
+        ///   Looks up a localized string similar to Help Translate.
         /// </summary>
-        public static string About_Version_Extension {
+        public static string About_Translate_Link {
             get {
-                return ResourceManager.GetString("About_Version_Extension", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Template v{0}.
-        /// </summary>
-        public static string About_Version_Template {
-            get {
-                return ResourceManager.GetString("About_Version_Template", resourceCulture);
+                return ResourceManager.GetString("About_Translate_Link", resourceCulture);
             }
         }
         
@@ -174,6 +174,15 @@ namespace MvxScaffolding.Localization.Resources {
         public static string AppDetails_Identifier {
             get {
                 return ResourceManager.GetString("AppDetails_Identifier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MvvmCross Version.
+        /// </summary>
+        public static string AppDetails_MvvmCross_Version {
+            get {
+                return ResourceManager.GetString("AppDetails_MvvmCross_Version", resourceCulture);
             }
         }
         
@@ -264,6 +273,15 @@ namespace MvxScaffolding.Localization.Resources {
         public static string Main_Window_Button_Privacy {
             get {
                 return ResourceManager.GetString("Main_Window_Button_Privacy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Translate.
+        /// </summary>
+        public static string Main_Window_Button_Translate {
+            get {
+                return ResourceManager.GetString("Main_Window_Button_Translate", resourceCulture);
             }
         }
         
@@ -651,6 +669,24 @@ namespace MvxScaffolding.Localization.Resources {
         public static string SimpleInfo_Privacy_Title {
             get {
                 return ResourceManager.GetString("SimpleInfo_Privacy_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Find an error in spelling or grammar? Want MvxScaffolding translated into your native language? To help translate MvxScaffolding, please visit our Crowdin page..
+        /// </summary>
+        public static string SimpleInfo_Translate_Desc {
+            get {
+                return ResourceManager.GetString("SimpleInfo_Translate_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help Translate.
+        /// </summary>
+        public static string SimpleInfo_Translate_Title {
+            get {
+                return ResourceManager.GetString("SimpleInfo_Translate_Title", resourceCulture);
             }
         }
         

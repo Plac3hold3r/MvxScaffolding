@@ -30,6 +30,17 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
             };
         }
 
+        public static SimpleInfoViewModel TranslateInfo()
+        {
+            return new SimpleInfoViewModel
+            {
+                Title = LocalResources.SimpleInfo_Translate_Title,
+                Message = LocalResources.SimpleInfo_Translate_Desc,
+                ReadMoreLink = Config.Current.HelpTranslateUri,
+                TemplateLink = TemplateLinks.HelpTranslate
+            };
+        }
+
         public static SimpleInfoViewModel EditorConfigInfo()
         {
             return new SimpleInfoViewModel

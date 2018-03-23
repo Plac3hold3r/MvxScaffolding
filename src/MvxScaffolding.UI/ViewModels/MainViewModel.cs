@@ -57,6 +57,10 @@ namespace MvxScaffolding.UI.ViewModels
         public SimpleInfoViewModel PrivacyInfoModel
             => _privacyInfoModel ?? (_privacyInfoModel = SimpleInfoViewModel.PrivacyInfo());
 
+        private SimpleInfoViewModel _translateInfoModel;
+        public SimpleInfoViewModel TranslateInfoModel
+            => _translateInfoModel ?? (_translateInfoModel = SimpleInfoViewModel.TranslateInfo());
+
         public MainViewModel()
         {
             MvxScaffoldingContext.RunningTimer = Stopwatch.StartNew();

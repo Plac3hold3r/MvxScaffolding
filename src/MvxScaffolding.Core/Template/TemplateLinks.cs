@@ -15,6 +15,10 @@ namespace MvxScaffolding.Core.Template
 
         public const string PrivacyPolicy = "PrivacyPolicy";
 
+        public const string HelpTranslate = "HelpTranslate";
+
+        public const string Changelog = "Changelog";
+
         public const string GitHub = "GitHub";
 
         public const string AuthorGitHub = "AuthorGitHub";
