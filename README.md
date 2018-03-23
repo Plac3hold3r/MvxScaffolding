@@ -32,9 +32,9 @@ iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.Fluen
 dotnet CLI | [Installation Guide](#dotnet-cli) | [Documentation](docs/template_dotnet_cli.md) | [NuGet](https://www.nuget.org/packages/MvxScaffolding.Templates/)
 Visual Studio Extension | [Installation Guide](#visual-studio-extension) | [Documentation](docs/template_vs.md) | [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding)
 
-## Translation
+## Help Translate
 
-If you want to help translate MvxScaffolding's Visual Studio extension into your native language. Please checkout our [Crowdin project](https://crowdin.com/project/mvxscaffolding) page.
+If you want to help translate MvxScaffolding into your native language. Please checkout our [Crowdin project](https://crowdin.com/project/mvxscaffolding) page.
 
 ## dotnet CLI
 
