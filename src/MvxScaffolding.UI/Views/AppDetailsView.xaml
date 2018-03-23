@@ -64,6 +64,15 @@
                             materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.AppDetails_Display_Name}"
                             materialDesign:HintAssist.IsFloating="True"
                             Text="{Binding Options.AppName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
+                        <ComboBox
+                            Margin="0,16,0,0"
+                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.AppDetails_MvvmCross_Version}"
+                            materialDesign:HintAssist.HintOpacity="1"
+                            IsEditable="False"
+                            IsEnabled="False"
+                            Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            <ComboBoxItem IsSelected="True">5.7.0</ComboBoxItem>
+                        </ComboBox>
                         <TextBlock
                             Margin="0,16,0,0"
                             FontWeight="Bold"

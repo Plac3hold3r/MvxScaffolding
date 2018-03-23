@@ -178,6 +178,15 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MvvmCross Version.
+        /// </summary>
+        public static string AppDetails_MvvmCross_Version {
+            get {
+                return ResourceManager.GetString("AppDetails_MvvmCross_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Project Grouping.
         /// </summary>
         public static string AppDetails_Project_Grouping {

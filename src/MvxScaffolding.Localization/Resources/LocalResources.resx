@@ -417,4 +417,7 @@
   <data name="About_Changelog_Link" xml:space="preserve">
     <value>Changelog</value>
   </data>
+  <data name="AppDetails_MvvmCross_Version" xml:space="preserve">
+    <value>MvvmCross Version</value>
+  </data>
 </root>
