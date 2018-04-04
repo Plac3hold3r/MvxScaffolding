@@ -10,8 +10,8 @@
     <PackageReference Include="MvvmCross" Version="5.7.0" />
     <PackageReference Include="MvvmCross.CodeAnalysis" Version="5.7.0" />
     <PackageReference Include="MvvmCross.Tests" Version="5.7.0" />
-    <PackageReference Include="NUnit" Version="3.9.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.9.0" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
   </ItemGroup>
 
   <ItemGroup>
