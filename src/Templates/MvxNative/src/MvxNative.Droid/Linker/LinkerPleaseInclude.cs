@@ -2,17 +2,19 @@
 using System.Collections.Specialized;
 using System.Windows.Input;
 using Android.App;
+using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.IoC;
+using MvvmCross.IoC;
+using MvvmCross.Navigation;
+using MvvmCross.ViewModels;
 
 namespace MvxNative.Droid.Linker
 {
     // This class is never actually executed, but when Xamarin linking is enabled it does how to ensure types and properties
     // are preserved in the deployed app
+    [Preserve(AllMembers = true)]
     public class LinkerPleaseInclude
     {
         public void Include(Button button)
@@ -25,12 +27,23 @@ namespace MvxNative.Droid.Linker
             checkBox.CheckedChange += (sender, args) => checkBox.Checked = !checkBox.Checked;
         }
 
+        public void Include(Switch @switch)
+        {
+            @switch.CheckedChange += (sender, args) => @switch.Checked = !@switch.Checked;
+        }
+
         public void Include(View view)
         {
             view.Click += (s, e) => view.ContentDescription = $"{view.ContentDescription}";
         }
 
         public void Include(TextView text)
+        {
+            text.AfterTextChanged += (sender, args) => text.Text = $"{text.Text}";
+            text.Hint = $"{text.Hint}";
+        }
+
+        public void Include(CheckedTextView text)
         {
             text.AfterTextChanged += (sender, args) => text.Text = $"{text.Text}";
             text.Hint = $"{text.Hint}";
@@ -51,6 +64,11 @@ namespace MvxNative.Droid.Linker
             radioGroup.CheckedChange += (sender, args) => radioGroup.Check(args.CheckedId);
         }
 
+        public void Include(RadioButton radioButton)
+        {
+            radioButton.CheckedChange += (sender, args) => radioButton.Checked = args.IsChecked;
+        }
+
         public void Include(RatingBar ratingBar)
         {
             ratingBar.RatingBarChange += (sender, args) => ratingBar.Rating = 0 + ratingBar.Rating;
@@ -63,7 +81,7 @@ namespace MvxNative.Droid.Linker
 
         public void Include(INotifyCollectionChanged changed)
         {
-            changed.CollectionChanged += (s, e) => { var ignore = $"{e.Action}{e.NewItems}{e.NewStartingIndex}{e.OldItems}{e.OldStartingIndex}"; };
+            changed.CollectionChanged += (s, e) => { _ = $"{e.Action}{e.NewItems}{e.NewStartingIndex}{e.OldItems}{e.OldStartingIndex}"; };
         }
 
         public void Include(ICommand command)
@@ -73,12 +91,12 @@ namespace MvxNative.Droid.Linker
 
         public void Include(MvxPropertyInjector injector)
         {
-            injector = new MvxPropertyInjector();
+            _ = new MvxPropertyInjector();
         }
 
         public void Include(System.ComponentModel.INotifyPropertyChanged changed)
         {
-            changed.PropertyChanged += (sender, e) => { var ignore = e.PropertyName; };
+            changed.PropertyChanged += (sender, e) => { _ = e.PropertyName; };
         }
 
         public void Include(MvxTaskBasedBindingContext context)
@@ -90,15 +108,14 @@ namespace MvxNative.Droid.Linker
 
         public void Include(MvxNavigationService service, IMvxViewModelLoader loader)
         {
-            service = new MvxNavigationService(null, loader);
-            var ignore = new MvxNavigationServiceAppStart<MvxNullViewModel>(null);
+            _ = new MvxNavigationService(null, loader);
         }
 
         public void Include(ConsoleColor color)
         {
             Console.Write("");
             Console.WriteLine("");
-            color = Console.ForegroundColor;
+            _ = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Red;
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.ForegroundColor = ConsoleColor.Magenta;
