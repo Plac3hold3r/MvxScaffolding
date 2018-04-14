@@ -49,6 +49,7 @@
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Mono.Android.Export" />
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -56,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
+    <Compile Include="MainApplication.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\!Base\BaseActivity.cs" />
     <Compile Include="Views\!Base\BaseFragment.cs" />

@@ -1,5 +1,5 @@
-﻿using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.IoC;
+﻿using MvvmCross.IoC;
+using MvvmCross.ViewModels;
 using MvxNative.Core.ViewModels.Main;
 
 namespace MvxNative.Core
@@ -13,7 +13,7 @@ namespace MvxNative.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterNavigationServiceAppStart<MainViewModel>();
+            RegisterAppStart<MainViewModel>();
         }
     }
 }

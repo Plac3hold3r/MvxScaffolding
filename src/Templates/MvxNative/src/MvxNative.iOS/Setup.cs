@@ -1,18 +1,9 @@
-﻿using MvvmCross.Core.ViewModels;
-using MvvmCross.iOS.Platform;
+﻿using MvvmCross.Platforms.Ios.Core;
 using MvxNative.Core;
-using UIKit;
 
 namespace MvxNative.iOS
 {
-    public class Setup : MvxIosSetup
+    public class Setup : MvxIosSetup<App>
     {
-        public Setup(IMvxApplicationDelegate applicationDelegate, UIWindow window)
-            : base(applicationDelegate, window)
-        {
-        }
-
-        protected override IMvxApplication CreateApp()
-            => new App();
     }
 }

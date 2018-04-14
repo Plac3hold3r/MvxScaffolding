@@ -5,7 +5,7 @@ using System.Text;
 
 using Cirrious.FluentLayouts.Touch;
 using Foundation;
-using MvvmCross.iOS.Views.Presenters.Attributes;
+using MvvmCross.Platforms.Ios.Presenters.Attributes;
 using MvxNative.Core.ViewModels.Main;
 using UIKit;
 
