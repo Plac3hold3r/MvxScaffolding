@@ -11,7 +11,7 @@ namespace MvxNative.UWP
         }
     }
 
-    public abstract class MvxNativeApp : MvxApplication<MvxWindowsSetup<Core.App>, Core.App>
+    public abstract class MvxNativeApp : MvxApplication<Setup, Core.App>
     {
     }
 }

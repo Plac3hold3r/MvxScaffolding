@@ -5,7 +5,7 @@ using MvxNative.Core;
 namespace MvxNative.iOS
 {
     [Register(nameof(AppDelegate))]
-    public class AppDelegate : MvxApplicationDelegate<MvxIosSetup<App>, App>
+    public class AppDelegate : MvxApplicationDelegate<Setup, App>
     {
     }
 }
