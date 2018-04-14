@@ -68,11 +68,7 @@ namespace MvxScaffolding.Core.Template
 
         public static Dictionary<string, string> MinUwpSDKOptions => new Dictionary<string, string>
         {
-            ["16299"] = "1709 - Fall Creators Update",
-            ["15063"] = "1703 - Creators Update",
-            ["14393"] = "1607 - Anniversary Update",
-            ["10586"] = "1511 - November Update",
-            ["10240"] = "1507 - RTM",
+            ["16299"] = "1709 - Fall Creators Update"
         };
         public static string MinUwpSDKOptionDefault => "16299";
     }
