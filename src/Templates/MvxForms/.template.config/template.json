@@ -317,6 +317,10 @@
       "description": "Minimum Android target SDK version.",
       "choices": [
         {
+          "choice": "27",
+          "description": "Android 8.1 - Oreo v27"
+        },
+        {
           "choice": "26",
           "description": "Android 8 - Oreo v26"
         },
