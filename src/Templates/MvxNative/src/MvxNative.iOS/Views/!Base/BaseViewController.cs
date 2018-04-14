@@ -1,6 +1,6 @@
 ﻿using System;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.iOS.Views;
+using MvvmCross.Platforms.Ios.Views;
+using MvvmCross.ViewModels;
 using MvxNative.iOS.Styles;
 using UIKit;
 

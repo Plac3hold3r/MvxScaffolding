@@ -10,9 +10,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Droid.Support.V4;
-using MvxNative.Core.ViewModels;
-using MvvmCross.Binding.Droid.BindingContext;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.ViewModels;
+using MvvmCross.Platforms.Android.Binding.BindingContext;
 
 namespace MvxNative.Droid.Views
 {

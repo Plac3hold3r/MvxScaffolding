@@ -1,5 +1,6 @@
 ﻿using Android.App;
-using MvvmCross.Droid.Support.V7.AppCompat;
+using Android.OS;
+using MvvmCross.Forms.Platforms.Android.Views;
 
 namespace MvxFormsTemp.Droid.Views
 {
@@ -10,12 +11,12 @@ namespace MvxFormsTemp.Droid.Views
        Theme = "@style/AppTheme.Splash",
        Icon = "@mipmap/ic_launcher",
        RoundIcon = "@mipmap/ic_launcher_round")]
-    public class SplashActivity : MvxSplashScreenAppCompatActivity
+    public class SplashActivity : MvxFormsSplashScreenAppCompatActivity<Setup, Core.App, UI.App>
     {
-        protected override void TriggerFirstNavigate()
+        protected override void RunAppStart(Bundle bundle)
         {
             StartActivity(typeof(MainActivity));
-            base.TriggerFirstNavigate();
+            base.RunAppStart(bundle);
         }
     }
 }

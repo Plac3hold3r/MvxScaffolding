@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 
 using Foundation;
-using MvvmCross.iOS.Views;
-using MvvmCross.iOS.Views.Presenters.Attributes;
+using MvvmCross.Platforms.Ios.Presenters.Attributes;
+using MvvmCross.Platforms.Ios.Views;
 using MvxNative.Core.ViewModels.Main;
 using UIKit;
 
