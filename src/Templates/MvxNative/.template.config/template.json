@@ -431,6 +431,10 @@
       "description": "Minimum iOS SDK version.",
       "choices": [
         {
+          "choice": "11.3",
+          "description": "iOS 11.3"
+        },
+        {
           "choice": "11.2",
           "description": "iOS 11.2"
         },
