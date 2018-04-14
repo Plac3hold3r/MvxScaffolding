@@ -67,6 +67,7 @@
     <Compile Include="Views\SplashActivity.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProguardConfiguration Include="proguard.cfg" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>

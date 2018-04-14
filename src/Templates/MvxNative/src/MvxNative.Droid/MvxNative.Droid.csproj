@@ -91,6 +91,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProguardConfiguration Include="proguard.cfg" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup Condition=" '$(UseAndroidXMLLayouts)' != 'true' ">
