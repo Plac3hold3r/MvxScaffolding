@@ -21,14 +21,7 @@ namespace MvxScaffolding.Core.Template
 
         public static Dictionary<string, string> NetStandardOptions => new Dictionary<string, string>
         {
-            ["2.0"] = ".NET Standard 2.0",
-            ["1.6"] = ".NET Standard 1.6",
-            ["1.5"] = ".NET Standard 1.5",
-            ["1.4"] = ".NET Standard 1.4",
-            ["1.3"] = ".NET Standard 1.3",
-            ["1.2"] = ".NET Standard 1.2",
-            ["1.1"] = ".NET Standard 1.1",
-            ["1.0"] = ".NET Standard 1.0"
+            ["2.0"] = ".NET Standard 2.0"
         };
 
         public static string NetStandardOptionDefault => "2.0";
