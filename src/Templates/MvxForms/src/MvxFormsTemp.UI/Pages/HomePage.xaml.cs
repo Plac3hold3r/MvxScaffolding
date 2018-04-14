@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MvvmCross.Forms.Views;
-using MvvmCross.Forms.Views.Attributes;
 using MvxFormsTemp.Core.ViewModels.Home;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace MvxFormsTemp.UI.Pages
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : MvxContentPage<HomeViewModel>
     {
         public HomePage()

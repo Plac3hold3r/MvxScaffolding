@@ -1,9 +1,9 @@
 ﻿using Foundation;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.iOS.Views;
-using MvvmCross.Platform.IoC;
+using MvvmCross.IoC;
+using MvvmCross.Navigation;
+using MvvmCross.Platforms.Ios.Views;
+using MvvmCross.ViewModels;
 using System;
 using System.Collections.Specialized;
 using System.Windows.Input;

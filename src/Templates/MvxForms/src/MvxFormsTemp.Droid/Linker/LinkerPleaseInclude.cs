@@ -6,9 +6,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.IoC;
+using MvvmCross.IoC;
+using MvvmCross.Navigation;
+using MvvmCross.ViewModels;
 
 namespace MvxFormsTemp.Droid.Linker
 {
