@@ -22,28 +22,12 @@ namespace MvxNative.Droid.Linker
             button.Click += (s, e) => button.Text = $"{button.Text}";
         }
 
-        public void Include(CheckBox checkBox)
-        {
-            checkBox.CheckedChange += (sender, args) => checkBox.Checked = !checkBox.Checked;
-        }
-
-        public void Include(Switch @switch)
-        {
-            @switch.CheckedChange += (sender, args) => @switch.Checked = !@switch.Checked;
-        }
-
         public void Include(View view)
         {
             view.Click += (s, e) => view.ContentDescription = $"{view.ContentDescription}";
         }
 
         public void Include(TextView text)
-        {
-            text.AfterTextChanged += (sender, args) => text.Text = $"{text.Text}";
-            text.Hint = $"{text.Hint}";
-        }
-
-        public void Include(CheckedTextView text)
         {
             text.AfterTextChanged += (sender, args) => text.Text = $"{text.Text}";
             text.Hint = $"{text.Hint}";
@@ -62,11 +46,6 @@ namespace MvxNative.Droid.Linker
         public void Include(RadioGroup radioGroup)
         {
             radioGroup.CheckedChange += (sender, args) => radioGroup.Check(args.CheckedId);
-        }
-
-        public void Include(RadioButton radioButton)
-        {
-            radioButton.CheckedChange += (sender, args) => radioButton.Checked = args.IsChecked;
         }
 
         public void Include(RatingBar ratingBar)
