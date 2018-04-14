@@ -128,10 +128,10 @@
       <Version>6.0.8</Version>
     </PackageReference>
     <PackageReference Include="MSTest.TestAdapter">
-      <Version>1.2.0</Version>
+      <Version>1.2.1</Version>
     </PackageReference>
     <PackageReference Include="MSTest.TestFramework">
-      <Version>1.2.0</Version>
+      <Version>1.2.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
