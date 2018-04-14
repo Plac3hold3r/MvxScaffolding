@@ -2,8 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageTargetFallback Condition=" '$(NETStandardVersion)' != '2.0' ">$(PackageTargetFallback);portable-net45+win8+wpa81</PackageTargetFallback>
-    <AssetTargetFallback Condition=" '$(NETStandardVersion)' == '2.0' ">$(AssetTargetFallback);portable-net45+win8+wpa81;</AssetTargetFallback>
   </PropertyGroup>
 
   <ItemGroup>
