@@ -3,6 +3,8 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
+using System;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Media;
 using MahApps.Metro.Controls;

@@ -147,6 +147,41 @@
                 Content="{Binding SelectedNavigationalItem.ViewModel}"
                 DockPanel.Dock="Right" />
 
+            <materialDesign:TransitioningContent
+                Grid.Row="1"
+                Margin="0,0,0,16"
+                Visibility="{Binding HasUpdatedNotification, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <materialDesign:TransitioningContent.OpeningEffects>
+                    <materialDesign:TransitionEffect Kind="FadeIn" Duration="0:0:1.5" />
+                    <materialDesign:TransitionEffect Kind="SlideInFromLeft" Duration="0:0:1.5" />
+                </materialDesign:TransitioningContent.OpeningEffects>
+                <materialDesign:Card
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Background="{StaticResource MaterialDesignSnackbarBackground}"
+                    Foreground="{StaticResource MaterialDesignPaper}">
+                    <StackPanel Margin="8">
+                        <TextBlock
+                            Margin="0,4"
+                            HorizontalAlignment="Center"
+                            FontSize="16"
+                            Text="{Binding Source='MvxScaffolding', StringFormat={x:Static l10n:LocalResources.Main_Window_Notify_Updated}}" />
+                        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                            <Button
+                                Command="{Binding ShowReleaseNotesCommand}"
+                                Content="{Binding Source={x:Static l10n:LocalResources.Main_Window_Notify_ReleaseNotes}, Converter={StaticResource StringToUpperConverter}}"
+                                FontSize="12"
+                                Style="{DynamicResource MaterialDesignFlatButton}" />
+                            <Button
+                                Command="{Binding DismissNotificationCommand}"
+                                Content="{Binding Source={x:Static l10n:LocalResources.Main_Window_Notify_Dismiss}, Converter={StaticResource StringToUpperConverter}}"
+                                FontSize="12"
+                                Style="{DynamicResource MaterialDesignFlatButton}" />
+                        </StackPanel>
+                    </StackPanel>
+                </materialDesign:Card>
+            </materialDesign:TransitioningContent>
+
             <Border
                 Grid.Row="2"
                 VerticalAlignment="Top"
