@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Windows.Input;
 using Android.App;
 using Android.Runtime;
@@ -58,24 +59,24 @@ namespace MvxNative.Droid.Linker
             act.Title = $"{act.Title}";
         }
 
-        public void Include(INotifyCollectionChanged changed)
-        {
-            changed.CollectionChanged += (s, e) => { _ = $"{e.Action}{e.NewItems}{e.NewStartingIndex}{e.OldItems}{e.OldStartingIndex}"; };
-        }
-
         public void Include(ICommand command)
         {
             command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
         }
 
+        public void Include(INotifyCollectionChanged changed)
+        {
+            changed.CollectionChanged += (s, e) => { _ = $"{e.Action}{e.NewItems}{e.NewStartingIndex}{e.OldItems}{e.OldStartingIndex}"; };
+        }
+
+        public void Include(INotifyPropertyChanged changed)
+        {
+            changed.PropertyChanged += (sender, e) => { _ = e.PropertyName; };
+        }
+
         public void Include(MvxPropertyInjector injector)
         {
             _ = new MvxPropertyInjector();
-        }
-
-        public void Include(System.ComponentModel.INotifyPropertyChanged changed)
-        {
-            changed.PropertyChanged += (sender, e) => { _ = e.PropertyName; };
         }
 
         public void Include(MvxTaskBasedBindingContext context)
@@ -85,9 +86,15 @@ namespace MvxNative.Droid.Linker
             context2.Dispose();
         }
 
+        public void Include(MvxViewModelViewTypeFinder viewModelViewTypeFinder)
+        {
+            _ = new MvxViewModelViewTypeFinder(null, null);
+        }
+
         public void Include(MvxNavigationService service, IMvxViewModelLoader loader)
         {
             _ = new MvxNavigationService(null, loader);
+            _ = new MvxAppStart<MvxNullViewModel>(null, null);
         }
 
         public void Include(ConsoleColor color)
