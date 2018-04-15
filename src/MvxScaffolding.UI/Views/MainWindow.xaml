@@ -43,6 +43,7 @@
                 <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
                 <ResourceDictionary Source="/MvxScaffolding.UI;component/DataTemplates/SimpleInfoDataTemplate.xaml" />
                 <ResourceDictionary Source="/MvxScaffolding.UI;component/DataTemplates/AboutDataTemplate.xaml" />
+                <ResourceDictionary Source="/MvxScaffolding.UI;component/DataTemplates/ReleaseNotesDataTemplate.xaml" />
                 <ResourceDictionary Source="/MvxScaffolding.UI;component/DataTemplates/ProjectGroupInfoDataTemplate.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
@@ -165,7 +166,7 @@
                             Margin="0,4"
                             HorizontalAlignment="Center"
                             FontSize="16"
-                            Text="{Binding Source='MvxScaffolding', StringFormat={x:Static l10n:LocalResources.Main_Window_Notify_Updated}}" />
+                            Text="{Binding Source={x:Static l10n:LocalResources.Application_Name}, StringFormat={x:Static l10n:LocalResources.Main_Window_Notify_Updated}}" />
                         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                             <Button
                                 Command="{Binding ShowReleaseNotesCommand}"

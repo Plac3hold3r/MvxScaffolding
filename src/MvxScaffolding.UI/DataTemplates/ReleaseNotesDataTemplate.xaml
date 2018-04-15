@@ -15,90 +15,106 @@
     </ResourceDictionary.MergedDictionaries>
 
     <DataTemplate DataType="{x:Type dialogs:ReleaseNotesViewModel}">
-        <StackPanel Width="400">
-            <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="{Binding IsNativeTemplate, Converter={StaticResource ActiveColorZoneModeConverter}}">
-                <Grid Margin="12">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <Image
-                        Width="100"
-                        Height="100"
-                        Source="../Resources/Images/mvxscaffolding_logo_transparent.png"
-                        Stretch="Uniform" />
-                    <StackPanel
-                        Grid.Column="1"
-                        Margin="8"
-                        VerticalAlignment="Center">
-                        <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{x:Static l10n:LocalResources.Application_Name}" />
-                        <TextBlock
-                            xml:space="preserve"
-                            Style="{StaticResource MaterialDesignCaptionTextBlock}"
-                            Text="{Binding Source={x:Static l10n:LocalResources.About_CreatedBy}, StringFormat={}{0}:}"> <Hyperlink
-                                Command="{Binding GoToAuthorGitHubCommand}"
-                                Foreground="White"
-                                Style="{StaticResource MaterialDesignBody1Hyperlink}">Plac3hold3r</Hyperlink></TextBlock>
-                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="{Binding AppVersion, StringFormat={}v{0}}" />
-                    </StackPanel>
-                </Grid>
-            </materialDesign:ColorZone>
-            <StackPanel Margin="12">
+        <StackPanel Width="400" Margin="16">
+            <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{x:Static l10n:LocalResources.Application_Name}" />
+            <TextBlock
+                Margin="0,0,0,8"
+                Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                Text="{Binding AppVersion, StringFormat={}v{0}}" />
+            <BulletDecorator Margin="0,12,0,8">
+                <BulletDecorator.Bullet>
+                    <Ellipse
+                        Width="4"
+                        Height="4"
+                        Fill="{DynamicResource MaterialDesignBodyLight}" />
+                </BulletDecorator.Bullet>
                 <TextBlock
-                    Margin="0,0,0,8"
-                    Foreground="{DynamicResource MaterialDesignBodyLight}"
-                    Text="{x:Static l10n:LocalResources.About_General__Desc}"
+                    Margin="8,0,0,0"
+                    Text="Update templates to support MvvmCross 6.0.0."
                     TextWrapping="Wrap" />
+            </BulletDecorator>
+            <BulletDecorator Margin="0,0,0,8">
+                <BulletDecorator.Bullet>
+                    <Ellipse
+                        Width="4"
+                        Height="4"
+                        Fill="{DynamicResource MaterialDesignBodyLight}" />
+                </BulletDecorator.Bullet>
                 <TextBlock
-                    Margin="0,0,0,8"
-                    xml:space="preserve"
-                    Foreground="{DynamicResource MaterialDesignBodyLight}"
-                    Text="{x:Static l10n:LocalResources.About_GitHub_Desc}"
+                    Margin="8,0,0,0"
+                    Text="Removed support for creating a Core project targeting anything other than .NET Standard 2.0, required by MvvmCross 6.0.0.."
                     TextWrapping="Wrap" />
+            </BulletDecorator>
+            <BulletDecorator Margin="0,0,0,8">
+                <BulletDecorator.Bullet>
+                    <Ellipse
+                        Width="4"
+                        Height="4"
+                        Fill="{DynamicResource MaterialDesignBodyLight}" />
+                </BulletDecorator.Bullet>
                 <TextBlock
-                    Margin="0,0,0,8"
-                    Foreground="{DynamicResource MaterialDesignBodyLight}"
-                    Text="{x:Static l10n:LocalResources.About_Privacy_Desc}"
+                    Margin="8,0,0,0"
+                    Text="Removed support for all UWP versions prior to Fall Creators Update (1709) due to MvvmCross 6.0.0 only supporting .NET Standard 2.0."
                     TextWrapping="Wrap" />
-                <TextBlock Margin="12,16,0,8">
-                    <Hyperlink
-                        Command="{Binding GoToGitHubCommand}"
-                        Foreground="{StaticResource PrimaryColorBrush}"
-                        Style="{StaticResource MaterialDesignBody1Hyperlink}">
-                        <Run Text="{x:Static l10n:LocalResources.About_GitHub_Link}" />
-                    </Hyperlink>
-                </TextBlock>
-                <TextBlock Margin="12,0,0,8">
-                    <Hyperlink
-                        Command="{Binding GoToHelpTranslateCommand}"
-                        Foreground="{StaticResource PrimaryColorBrush}"
-                        Style="{StaticResource MaterialDesignBody1Hyperlink}">
-                        <Run Text="{x:Static l10n:LocalResources.About_Translate_Link}" />
-                    </Hyperlink>
-                </TextBlock>
-                <TextBlock Margin="12,0,0,8">
-                    <Hyperlink
-                        Command="{Binding GoToChangelogCommand}"
-                        Foreground="{StaticResource PrimaryColorBrush}"
-                        Style="{StaticResource MaterialDesignBody1Hyperlink}">
-                        <Run Text="{x:Static l10n:LocalResources.About_Changelog_Link}" />
-                    </Hyperlink>
-                </TextBlock>
-                <TextBlock Margin="12,0,0,0">
-                    <Hyperlink
-                        Command="{Binding GoToPrivacyPolicyCommand}"
-                        Foreground="{StaticResource PrimaryColorBrush}"
-                        Style="{StaticResource MaterialDesignBody1Hyperlink}">
-                        <Run Text="{x:Static l10n:LocalResources.About_Privacy_Link}" />
-                    </Hyperlink>
-                </TextBlock>
-                <Button
-                    Margin="0,8,8,0"
-                    HorizontalAlignment="Right"
-                    Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
-                    Content="{Binding Source={x:Static l10n:LocalResources.About_Button_Close}, Converter={StaticResource StringToUpperConverter}}"
-                    Style="{DynamicResource MaterialDesignFlatButton}" />
-            </StackPanel>
+            </BulletDecorator>
+            <BulletDecorator Margin="0,0,0,8">
+                <BulletDecorator.Bullet>
+                    <Ellipse
+                        Width="4"
+                        Height="4"
+                        Fill="{DynamicResource MaterialDesignBodyLight}" />
+                </BulletDecorator.Bullet>
+                <TextBlock Margin="8,0,0,0" Text="Added Android ProGuard for release builds." />
+            </BulletDecorator>
+            <BulletDecorator Margin="0,0,0,8">
+                <BulletDecorator.Bullet>
+                    <Ellipse
+                        Width="4"
+                        Height="4"
+                        Fill="{DynamicResource MaterialDesignBodyLight}" />
+                </BulletDecorator.Bullet>
+                <TextBlock Margin="8,0,0,0" Text="Added Android SDK 27 (Oreo) as a minimum SDK option." />
+            </BulletDecorator>
+            <BulletDecorator Margin="0,0,0,8">
+                <BulletDecorator.Bullet>
+                    <Ellipse
+                        Width="4"
+                        Height="4"
+                        Fill="{DynamicResource MaterialDesignBodyLight}" />
+                </BulletDecorator.Bullet>
+                <TextBlock Margin="8,0,0,0" Text="Added iOS SDK 11.3 as a minimum SDK option." />
+            </BulletDecorator>
+            <BulletDecorator Margin="0,0,0,8">
+                <BulletDecorator.Bullet>
+                    <Ellipse
+                        Width="4"
+                        Height="4"
+                        Fill="{DynamicResource MaterialDesignBodyLight}" />
+                </BulletDecorator.Bullet>
+                <TextBlock Margin="8,0,0,0" Text="General bug fixes and performance enhancements." />
+            </BulletDecorator>
+            <TextBlock Margin="0,12,0,8">
+                <Hyperlink
+                    Command="{Binding GoToGitHubCommand}"
+                    Foreground="{StaticResource PrimaryColorBrush}"
+                    Style="{StaticResource MaterialDesignBody1Hyperlink}">
+                    <Run Text="{x:Static l10n:LocalResources.About_GitHub_Link}" />
+                </Hyperlink>
+            </TextBlock>
+            <TextBlock Margin="0,0,0,8">
+                <Hyperlink
+                    Command="{Binding GoToChangelogCommand}"
+                    Foreground="{StaticResource PrimaryColorBrush}"
+                    Style="{StaticResource MaterialDesignBody1Hyperlink}">
+                    <Run Text="{x:Static l10n:LocalResources.About_Changelog_Link}" />
+                </Hyperlink>
+            </TextBlock>
+            <Button
+                Margin="0,8,8,0"
+                HorizontalAlignment="Right"
+                Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                Content="{Binding Source={x:Static l10n:LocalResources.About_Button_Close}, Converter={StaticResource StringToUpperConverter}}"
+                Style="{DynamicResource MaterialDesignFlatButton}" />
         </StackPanel>
     </DataTemplate>
 </ResourceDictionary>
