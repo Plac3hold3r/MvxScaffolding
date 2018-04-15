@@ -186,6 +186,7 @@
     <Compile Include="Validation\RequiredIfAttribute.cs" />
     <Compile Include="ViewModels\AppDetailsViewModel.cs" />
     <Compile Include="ViewModels\!Base\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Dialogs\ReleaseNotesViewModel.cs" />
     <Compile Include="ViewModels\Dialogs\AboutViewModel.cs" />
     <Compile Include="ViewModels\Dialogs\ProjectGroupInfoViewModel.cs" />
     <Compile Include="ViewModels\Interfaces\IClosable.cs" />
@@ -211,6 +212,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="DataTemplates\ReleaseNotesDataTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="DataTemplates\AboutDataTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
