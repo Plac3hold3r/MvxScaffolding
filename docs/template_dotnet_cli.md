@@ -186,16 +186,10 @@ dotnet new mvxnative -n MyXamarinApp --solution-project-grouping platform
 
   -f|--framework                         The version of .NET Standard to use in the Core project.
                                              2.0    - .NET Standard 2.0
-                                             1.6    - .NET Standard 1.6
-                                             1.5    - .NET Standard 1.5
-                                             1.4    - .NET Standard 1.4
-                                             1.3    - .NET Standard 1.3
-                                             1.2    - .NET Standard 1.2
-                                             1.1    - .NET Standard 1.1
-                                             1.0    - .NET Standard 1.0
                                          Default: 2.0
 
   -droid-sdk|--android-min-sdk           Minimum Android SDK version.
+                                             27    - Android 8.1 - Oreo v27
                                              26    - Android 8 - Oreo v26
                                              25    - Android 7.1 - Nougat v25
                                              24    - Android 7 - Nougat v24
@@ -211,6 +205,7 @@ dotnet new mvxnative -n MyXamarinApp --solution-project-grouping platform
                                          Default: 19
 
   -ios-sdk|--ios-min-sdk                 Minimum iOS SDK version.
+                                             11.3    - iOS 11.3
                                              11.2    - iOS 11.2
                                              11.1    - iOS 11.1
                                              11.0    - iOS 11
@@ -235,10 +230,6 @@ dotnet new mvxnative -n MyXamarinApp --solution-project-grouping platform
 
   -uwp-sdk|--uwp-min-sdk                 Minimum UWP target SDK version.
                                              16299    - 1709 - Fall Creators Update
-                                             15063    - 1703 - Creators Update
-                                             14393    - 1607 - Anniversary Update
-                                             10586    - 1511 - November Update
-                                             10240    - 1507 - RTM
                                          Default: 16299
 ```
 

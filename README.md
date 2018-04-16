@@ -25,6 +25,8 @@ iOS storyboard launch screen |* | *
 iOS [Hyperion](https://github.com/willowtreeapps/Hyperion-iOS) |* | *
 iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.FluentLayout) |* |
 
+Supports MvvmCross 6.0.0+
+
 ## Installation
 
  Platform  |  Installation and System Requirements | Documentation           | Download           |
