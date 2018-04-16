@@ -3,6 +3,7 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -29,6 +30,10 @@ namespace MvxScaffolding.UI.ViewModels
         public ICommand BackCommand { get; }
 
         public ICommand GoToGitHubCommand { get; }
+
+        public ICommand ShowReleaseNotesCommand { get; }
+
+        public ICommand DismissNotificationCommand { get; }
 
         private int _selectedViewModelIndex;
 
@@ -61,6 +66,14 @@ namespace MvxScaffolding.UI.ViewModels
         public SimpleInfoViewModel TranslateInfoModel
             => _translateInfoModel ?? (_translateInfoModel = SimpleInfoViewModel.TranslateInfo());
 
+        private bool _hasUpdatedNotification;
+
+        public bool HasUpdatedNotification
+        {
+            get => _hasUpdatedNotification;
+            set { _hasUpdatedNotification = value; OnPropertyChanged(nameof(HasUpdatedNotification)); }
+        }
+
         public MainViewModel()
         {
             MvxScaffoldingContext.RunningTimer = Stopwatch.StartNew();
@@ -68,6 +81,8 @@ namespace MvxScaffolding.UI.ViewModels
             ForwardCommand = new RelayCommand<IClosable>(NavigateForward);
             BackCommand = new RelayCommand(NavigateBackward);
             GoToGitHubCommand = new RelayCommand(GoToGitHubLink);
+            ShowReleaseNotesCommand = new RelayCommand(NavigateToReleaseNotes);
+            DismissNotificationCommand = new RelayCommand(DismissNotification);
 
             _options = new WizardOptionViewModel();
 
@@ -79,6 +94,18 @@ namespace MvxScaffolding.UI.ViewModels
             };
 
             NavigateFirst();
+
+            ShowUpdatedNotification();
+        }
+
+        private void ShowUpdatedNotification()
+        {
+            if (Version.TryParse(AppVersion, out Version versionInfo)
+            && (MvxScaffoldingContext.LastKnownVersion == null || MvxScaffoldingContext.LastKnownVersion < versionInfo))
+            {
+                MvxScaffoldingContext.LastKnownVersion = versionInfo;
+                HasUpdatedNotification = true;
+            }
         }
 
         private void NavigateFirst()
@@ -107,6 +134,23 @@ namespace MvxScaffolding.UI.ViewModels
         {
             if (SelectedViewModelIndex - 1 >= 0)
                 SelectedNavigationalItem = _navigationalViewModels[--SelectedViewModelIndex];
+        }
+
+        private void NavigateToReleaseNotes()
+        {
+            HasUpdatedNotification = false;
+            ShowDialogCommand.Execute(new ReleaseNotesViewModel());
+
+            Logger.Current.Telemetry.TrackUpdateVersionAsync(true)
+                .FireAndForget();
+        }
+
+        private void DismissNotification()
+        {
+            HasUpdatedNotification = false;
+
+            Logger.Current.Telemetry.TrackUpdateVersionAsync(false)
+                .FireAndForget();
         }
 
         private void GoToGitHubLink()
