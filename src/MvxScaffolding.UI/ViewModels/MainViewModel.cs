@@ -140,11 +140,17 @@ namespace MvxScaffolding.UI.ViewModels
         {
             HasUpdatedNotification = false;
             ShowDialogCommand.Execute(new ReleaseNotesViewModel());
+
+            Logger.Current.Telemetry.TrackUpdateVersionAsync(true)
+                .FireAndForget();
         }
 
         private void DismissNotification()
         {
             HasUpdatedNotification = false;
+
+            Logger.Current.Telemetry.TrackUpdateVersionAsync(false)
+                .FireAndForget();
         }
 
         private void GoToGitHubLink()

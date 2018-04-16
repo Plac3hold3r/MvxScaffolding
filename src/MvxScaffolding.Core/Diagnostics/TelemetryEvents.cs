@@ -16,5 +16,7 @@ namespace MvxScaffolding.Core.Diagnostics
         public const string SessionEnd = "SessionEnd";
 
         public const string OpenLink = "OpenLink";
+
+        public const string UpdateVersion = "UpdateVersion";
     }
 }

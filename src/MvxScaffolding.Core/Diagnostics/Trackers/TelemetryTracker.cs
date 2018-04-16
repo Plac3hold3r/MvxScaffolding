@@ -46,6 +46,18 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
                 .ConfigureAwait(false);
         }
 
+        public async Task TrackUpdateVersionAsync(bool hasShownReleaseNotes)
+        {
+            var properties = new Dictionary<string, string>()
+            {
+                [TelemetryProperties.SeenReleaseNotes] = hasShownReleaseNotes.ToStringLowerCase(),
+            };
+
+            RemoteWriter.Current.SetContentVsProductVersionToContext(GetVsVersion());
+            await RemoteWriter.Current.TrackEventAsync(TelemetryEvents.UpdateVersion, properties)
+                .ConfigureAwait(false);
+        }
+
         public async Task TrackEndSessionAsync()
         {
             RemoteWriter.Current.SetContentVsProductVersionToContext(GetVsVersion());
