@@ -42,7 +42,7 @@
                 </BulletDecorator.Bullet>
                 <TextBlock
                     Margin="8,0,0,0"
-                    Text="Removed support for creating a Core project targeting anything other than .NET Standard 2.0, required by MvvmCross 6.0.0.."
+                    Text="Removed support for creating a Core project targeting anything other than .NET Standard 2.0, required by MvvmCross 6.0.0."
                     TextWrapping="Wrap" />
             </BulletDecorator>
             <BulletDecorator Margin="0,0,0,8">
