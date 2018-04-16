@@ -420,4 +420,13 @@
   <data name="AppDetails_MvvmCross_Version" xml:space="preserve">
     <value>MvvmCross Version</value>
   </data>
+  <data name="Main_Window_Notify_Dismiss" xml:space="preserve">
+    <value>Dismiss</value>
+  </data>
+  <data name="Main_Window_Notify_ReleaseNotes" xml:space="preserve">
+    <value>Release Notes</value>
+  </data>
+  <data name="Main_Window_Notify_Updated" xml:space="preserve">
+    <value>{0} updated</value>
+  </data>
 </root>
