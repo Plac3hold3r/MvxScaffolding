@@ -295,6 +295,33 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dismiss.
+        /// </summary>
+        public static string Main_Window_Notify_Dismiss {
+            get {
+                return ResourceManager.GetString("Main_Window_Notify_Dismiss", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Release Notes.
+        /// </summary>
+        public static string Main_Window_Notify_ReleaseNotes {
+            get {
+                return ResourceManager.GetString("Main_Window_Notify_ReleaseNotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} updated.
+        /// </summary>
+        public static string Main_Window_Notify_Updated {
+            get {
+                return ResourceManager.GetString("Main_Window_Notify_Updated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to App Details.
         /// </summary>
         public static string Main_Window_SectionHeader_AppDetails {

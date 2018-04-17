@@ -2,18 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageTargetFallback Condition=" '$(NETStandardVersion)' != '2.0' ">$(PackageTargetFallback);portable-net45+win8+wpa81</PackageTargetFallback>
-    <AssetTargetFallback Condition=" '$(NETStandardVersion)' == '2.0' ">$(AssetTargetFallback);portable-net45+win8+wpa81;</AssetTargetFallback>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MvvmCross" Version="5.7.0" NoWarn="NU1701" />
-    <PackageReference Include="MvvmCross.Core" Version="5.7.0" NoWarn="NU1701" />
-    <PackageReference Include="MvvmCross.Binding" Version="5.7.0" NoWarn="NU1701" />
-    <PackageReference Include="MvvmCross.Platform" Version="5.7.0" NoWarn="NU1701" />
-    <PackageReference Include="MvvmCross.CodeAnalysis" Version="5.7.0" NoWarn="NU1701" />
-    <PackageReference Include="MvvmCross.Forms" Version="5.7.0" NoWarn="NU1701" />
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+    <PackageReference Include="MvvmCross" Version="6.0.0" />
+    <PackageReference Include="MvvmCross.CodeAnalysis" Version="6.0.0" />
+    <PackageReference Include="MvvmCross.Forms" Version="6.0.0" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.1.444934" />
   </ItemGroup>
   
   <ItemGroup>

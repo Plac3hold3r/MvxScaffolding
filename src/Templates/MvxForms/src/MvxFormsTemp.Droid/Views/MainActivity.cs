@@ -9,7 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using MvvmCross.Forms.Droid.Views;
+using MvvmCross.Forms.Platforms.Android.Views;
 using MvxFormsTemp.Core.ViewModels.Main;
 
 namespace MvxFormsTemp.Droid
@@ -24,11 +24,6 @@ namespace MvxFormsTemp.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-        }
-
-        public override void OnBackPressed()
-        {
-            MoveTaskToBack(false);
         }
     }
 }

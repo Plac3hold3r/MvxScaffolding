@@ -1,28 +1,26 @@
 ﻿using System;
 using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Windows.Input;
 using Android.App;
+using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.IoC;
+using MvvmCross.IoC;
+using MvvmCross.Navigation;
+using MvvmCross.ViewModels;
 
 namespace MvxFormsTemp.Droid.Linker
 {
     // This class is never actually executed, but when Xamarin linking is enabled it does how to ensure types and properties
     // are preserved in the deployed app
+    [Preserve(AllMembers = true)]
     public class LinkerPleaseInclude
     {
         public void Include(Button button)
         {
             button.Click += (s, e) => button.Text = $"{button.Text}";
-        }
-
-        public void Include(CheckBox checkBox)
-        {
-            checkBox.CheckedChange += (sender, args) => checkBox.Checked = !checkBox.Checked;
         }
 
         public void Include(View view)
@@ -61,22 +59,24 @@ namespace MvxFormsTemp.Droid.Linker
             act.Title = $"{act.Title}";
         }
 
-        public void Include(INotifyCollectionChanged changed)
-        {
-            changed.CollectionChanged += (s, e) => { var ignore = $"{e.Action}{e.NewItems}{e.NewStartingIndex}{e.OldItems}{e.OldStartingIndex}"; };
-        }
         public void Include(ICommand command)
         {
             command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
         }
 
+        public void Include(INotifyCollectionChanged changed)
+        {
+            changed.CollectionChanged += (s, e) => { _ = $"{e.Action}{e.NewItems}{e.NewStartingIndex}{e.OldItems}{e.OldStartingIndex}"; };
+        }
+
+        public void Include(INotifyPropertyChanged changed)
+        {
+            changed.PropertyChanged += (sender, e) => { _ = e.PropertyName; };
+        }
+
         public void Include(MvxPropertyInjector injector)
         {
-            injector = new MvxPropertyInjector();
-        }
-        public void Include(System.ComponentModel.INotifyPropertyChanged changed)
-        {
-            changed.PropertyChanged += (sender, e) => { var ignore = e.PropertyName; };
+            _ = new MvxPropertyInjector();
         }
 
         public void Include(MvxTaskBasedBindingContext context)
@@ -86,17 +86,22 @@ namespace MvxFormsTemp.Droid.Linker
             context2.Dispose();
         }
 
+        public void Include(MvxViewModelViewTypeFinder viewModelViewTypeFinder)
+        {
+            _ = new MvxViewModelViewTypeFinder(null, null);
+        }
+
         public void Include(MvxNavigationService service, IMvxViewModelLoader loader)
         {
-            service = new MvxNavigationService(null, loader);
-            var ignore = new MvxNavigationServiceAppStart<MvxNullViewModel>(null);
+            _ = new MvxNavigationService(null, loader);
+            _ = new MvxAppStart<MvxNullViewModel>(null, null);
         }
 
         public void Include(ConsoleColor color)
         {
             Console.Write("");
             Console.WriteLine("");
-            color = Console.ForegroundColor;
+            _ = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Red;
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.ForegroundColor = ConsoleColor.Magenta;

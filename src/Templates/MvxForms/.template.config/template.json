@@ -298,34 +298,6 @@
         {
           "choice": "2.0",
           "description": ".NET Standard 2.0"
-        },
-        {
-          "choice": "1.6",
-          "description": ".NET Standard 1.6"
-        },
-        {
-          "choice": "1.5",
-          "description": ".NET Standard 1.5"
-        },
-        {
-          "choice": "1.4",
-          "description": ".NET Standard 1.4"
-        },
-        {
-          "choice": "1.3",
-          "description": ".NET Standard 1.3"
-        },
-        {
-          "choice": "1.2",
-          "description": ".NET Standard 1.2"
-        },
-        {
-          "choice": "1.1",
-          "description": ".NET Standard 1.1"
-        },
-        {
-          "choice": "1.0",
-          "description": ".NET Standard 1.0"
         }
       ],
       "replaces": "2.0",
@@ -344,6 +316,10 @@
       "defaultValue": "19",
       "description": "Minimum Android target SDK version.",
       "choices": [
+        {
+          "choice": "27",
+          "description": "Android 8.1 - Oreo v27"
+        },
         {
           "choice": "26",
           "description": "Android 8 - Oreo v26"
@@ -409,6 +385,10 @@
       "defaultValue": "10.0",
       "description": "Minimum iOS target SDK version.",
       "choices": [
+        {
+          "choice": "11.3",
+          "description": "iOS 11.3"
+        },
         {
           "choice": "11.2",
           "description": "iOS 11.2"
@@ -487,22 +467,6 @@
         {
           "choice": "16299",
           "description": "1709 - Fall Creators Update"
-        },
-        {
-          "choice": "15063",
-          "description": "1703 - Creators Update"
-        },
-        {
-          "choice": "14393",
-          "description": "1607 - Anniversary Update"
-        },
-        {
-          "choice": "10586",
-          "description": "1511 - November Update"
-        },
-        {
-          "choice": "10240",
-          "description": "1507 - RTM"
         }
       ],
       "replaces": "16299",

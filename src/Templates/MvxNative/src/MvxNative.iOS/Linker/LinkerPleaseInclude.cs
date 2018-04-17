@@ -1,11 +1,12 @@
 ﻿using Foundation;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.iOS.Views;
-using MvvmCross.Platform.IoC;
+using MvvmCross.IoC;
+using MvvmCross.Navigation;
+using MvvmCross.Platforms.Ios.Views;
+using MvvmCross.ViewModels;
 using System;
 using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Windows.Input;
 using UIKit;
 
@@ -52,16 +53,19 @@ namespace MvxNative.iOS.Linker
             imageView.Image = new UIImage(imageView.Image.CGImage);
         }
 
+        public void Include(UIControl control)
+        {
+            control.ValueChanged += (sender, args) => { control.ClipsToBounds = true; };
+        }
+
         public void Include(UIDatePicker date)
         {
             date.Date = date.Date.AddSeconds(1);
-            date.ValueChanged += (sender, args) => { date.Date = NSDate.DistantFuture; };
         }
 
         public void Include(UISlider slider)
         {
             slider.Value = slider.Value + 1;
-            slider.ValueChanged += (sender, args) => { slider.Value = 1; };
         }
 
         public void Include(UIProgressView progress)
@@ -72,29 +76,31 @@ namespace MvxNative.iOS.Linker
         public void Include(UISwitch sw)
         {
             sw.On = !sw.On;
-            sw.ValueChanged += (sender, args) => { sw.On = false; };
         }
 
         public void Include(MvxViewController vc)
         {
-            vc.Title = vc.Title + "";
+            vc.Title = $"{vc.Title}";
         }
 
         public void Include(UIStepper s)
         {
             s.Value = s.Value + 1;
-            s.ValueChanged += (sender, args) => { s.Value = 0; };
         }
 
         public void Include(UIPageControl s)
         {
             s.Pages = s.Pages + 1;
-            s.ValueChanged += (sender, args) => { s.Pages = 0; };
         }
 
         public void Include(INotifyCollectionChanged changed)
         {
-            changed.CollectionChanged += (s, e) => { var ignore = $"{e.Action}{e.NewItems}{e.NewStartingIndex}{e.OldItems}{e.OldStartingIndex}"; };
+            changed.CollectionChanged += (s, e) => { _ = $"{e.Action}{e.NewItems}{e.NewStartingIndex}{e.OldItems}{e.OldStartingIndex}"; };
+        }
+
+        public void Include(INotifyPropertyChanged changed)
+        {
+            changed.PropertyChanged += (sender, e) => { _ = e.PropertyName; };
         }
 
         public void Include(ICommand command)
@@ -104,12 +110,7 @@ namespace MvxNative.iOS.Linker
 
         public void Include(MvxPropertyInjector injector)
         {
-            injector = new MvxPropertyInjector();
-        }
-
-        public void Include(System.ComponentModel.INotifyPropertyChanged changed)
-        {
-            changed.PropertyChanged += (sender, e) => { var ignore = e.PropertyName; };
+            _ = new MvxPropertyInjector();
         }
 
         public void Include(MvxTaskBasedBindingContext c)
@@ -119,17 +120,22 @@ namespace MvxNative.iOS.Linker
             c2.Dispose();
         }
 
+        public void Include(MvxViewModelViewTypeFinder viewModelViewTypeFinder)
+        {
+            _ = new MvxViewModelViewTypeFinder(null, null);
+            _ = new MvxAppStart<MvxNullViewModel>(null, null);
+        }
+
         public void Include(MvxNavigationService service, IMvxViewModelLoader loader)
         {
-            service = new MvxNavigationService(null, loader);
-            var ignore = new MvxNavigationServiceAppStart<MvxNullViewModel>(null);
+            _ = new MvxNavigationService(null, loader);
         }
 
         public void Include(ConsoleColor color)
         {
             Console.Write("");
             Console.WriteLine("");
-            color = Console.ForegroundColor;
+            _ = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Red;
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.ForegroundColor = ConsoleColor.Magenta;

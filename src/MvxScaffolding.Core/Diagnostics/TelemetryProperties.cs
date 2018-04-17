@@ -32,5 +32,7 @@ namespace MvxScaffolding.Core.Diagnostics
         public const string NewProject = "NewProject";
 
         public const string LinkName = "LinkName";
+
+        public const string SeenReleaseNotes = "SeenReleaseNotes";
     }
 }

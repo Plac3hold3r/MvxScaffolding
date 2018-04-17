@@ -39,9 +39,7 @@
                                 Command="{Binding GoToAuthorGitHubCommand}"
                                 Foreground="White"
                                 Style="{StaticResource MaterialDesignBody1Hyperlink}">Plac3hold3r</Hyperlink></TextBlock>
-                        <TextBlock
-                            Style="{StaticResource MaterialDesignCaptionTextBlock}"
-                            Text="{Binding AppVersion, StringFormat={}v{0}}" />
+                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="{Binding AppVersion, StringFormat={}v{0}}" />
                     </StackPanel>
                 </Grid>
             </materialDesign:ColorZone>
