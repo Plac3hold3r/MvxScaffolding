@@ -53,7 +53,15 @@
                         </Grid>
                     </materialDesign:ColorZone>
                     <StackPanel Margin="16">
-                        <TextBlock FontWeight="Bold" Text="{x:Static l10n:LocalResources.AppDetails_Application}" />
+                        <DockPanel>
+                            <TextBlock FontWeight="Bold" Text="{x:Static l10n:LocalResources.AppDetails_Application}" />
+                            <TextBlock
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                FontSize="10"
+                                Style="{StaticResource MaterialDesignCaptionTextBlock}"
+                                Text="{Binding Source={x:Static l10n:LocalResources.AppDetails_Required}, StringFormat={}* {0}}" />
+                        </DockPanel>
                         <TextBox
                             Margin="0,4,0,0"
                             materialDesign:HintAssist.Hint="{Binding Source={x:Static l10n:LocalResources.AppDetails_Identifier}, Converter={StaticResource RequiredLabelConverter}}"
