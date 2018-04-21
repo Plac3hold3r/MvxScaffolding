@@ -173,6 +173,7 @@
   <ItemGroup>
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Commands\RelayParameterCommand.cs" />
+    <Compile Include="Converters\RequiredLabelConverter.cs" />
     <Compile Include="Converters\ActiveColorZoneModeConverter.cs" />
     <Compile Include="Converters\BoolToLocalizedStringConverter.cs" />
     <Compile Include="Converters\ProjectGroupToLocalizedString.cs" />
