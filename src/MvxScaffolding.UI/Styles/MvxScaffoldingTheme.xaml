@@ -41,6 +41,7 @@
     <converters:StringToUpperConverter x:Key="StringToUpperConverter" />
     <converters:BoolToLocalizedStringConverter x:Key="BoolToLocalizedStringConverter" />
     <converters:ProjectGroupToLocalizedString x:Key="ProjectGroupToLocalizedString" />
+    <converters:RequiredLabelConverter x:Key="RequiredLabelConverter" />
     <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
     <Style

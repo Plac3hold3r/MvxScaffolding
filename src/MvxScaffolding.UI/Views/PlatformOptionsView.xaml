@@ -531,7 +531,7 @@
                         </Grid.RowDefinitions>
                         <TextBox
                             Margin="0,4,0,0"
-                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.PlatformOptions_Uwp_Description}"
+                            materialDesign:HintAssist.Hint="{Binding Source={x:Static l10n:LocalResources.PlatformOptions_Uwp_Description}, Converter={StaticResource RequiredLabelConverter}}"
                             materialDesign:HintAssist.IsFloating="True"
                             IsEnabled="{Binding Options.HasUwp}"
                             Text="{Binding Options.UwpDescription, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />

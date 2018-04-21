@@ -196,6 +196,15 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Required.
+        /// </summary>
+        public static string AppDetails_Required {
+            get {
+                return ResourceManager.GetString("AppDetails_Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Solution.
         /// </summary>
         public static string AppDetails_Solution {

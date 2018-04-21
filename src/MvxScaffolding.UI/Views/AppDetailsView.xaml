@@ -53,15 +53,23 @@
                         </Grid>
                     </materialDesign:ColorZone>
                     <StackPanel Margin="16">
-                        <TextBlock FontWeight="Bold" Text="{x:Static l10n:LocalResources.AppDetails_Application}" />
+                        <DockPanel>
+                            <TextBlock FontWeight="Bold" Text="{x:Static l10n:LocalResources.AppDetails_Application}" />
+                            <TextBlock
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                FontSize="10"
+                                Style="{StaticResource MaterialDesignCaptionTextBlock}"
+                                Text="{Binding Source={x:Static l10n:LocalResources.AppDetails_Required}, StringFormat={}* {0}}" />
+                        </DockPanel>
                         <TextBox
                             Margin="0,4,0,0"
-                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.AppDetails_Identifier}"
+                            materialDesign:HintAssist.Hint="{Binding Source={x:Static l10n:LocalResources.AppDetails_Identifier}, Converter={StaticResource RequiredLabelConverter}}"
                             materialDesign:HintAssist.IsFloating="True"
                             Text="{Binding Options.AppId, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
                         <TextBox
                             Margin="0,16,0,0"
-                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.AppDetails_Display_Name}"
+                            materialDesign:HintAssist.Hint="{Binding Source={x:Static l10n:LocalResources.AppDetails_Display_Name}, Converter={StaticResource RequiredLabelConverter}}"
                             materialDesign:HintAssist.IsFloating="True"
                             Text="{Binding Options.AppName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
                         <ComboBox
