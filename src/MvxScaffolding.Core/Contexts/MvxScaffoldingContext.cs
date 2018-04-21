@@ -18,7 +18,9 @@ namespace MvxScaffolding.Core.Contexts
 
         public static Stopwatch RunningTimer { get; set; }
 
-        public static string WizardVersion { get; set; } = "0.0.1";
+        public static Version WizardVersion { get; set; } = new Version("0.0.1");
+
+        public static string WizardName { get; set; } = "MvxScaffolding";
 
         public static Version LastKnownVersion
         {
