@@ -54,7 +54,8 @@ namespace MvxScaffolding.Vsix.Wizards
         {
             if (runKind == WizardRunKind.AsNewProject || runKind == WizardRunKind.AsMultiProject)
             {
-                MvxScaffoldingContext.WizardVersion = ThisAssembly.Vsix.Version;
+                MvxScaffoldingContext.WizardVersion = new Version(ThisAssembly.Vsix.Version);
+                MvxScaffoldingContext.WizardName = ThisAssembly.Vsix.Name;
 
                 UpdateSolutionDirectory(automationObject, replacementsDictionary);
 

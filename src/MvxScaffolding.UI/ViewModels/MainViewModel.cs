@@ -3,7 +3,6 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -100,10 +99,9 @@ namespace MvxScaffolding.UI.ViewModels
 
         private void ShowUpdatedNotification()
         {
-            if (Version.TryParse(AppVersion, out Version versionInfo)
-            && (MvxScaffoldingContext.LastKnownVersion == null || MvxScaffoldingContext.LastKnownVersion < versionInfo))
+            if (MvxScaffoldingContext.LastKnownVersion == null || MvxScaffoldingContext.LastKnownVersion < MvxScaffoldingContext.WizardVersion)
             {
-                MvxScaffoldingContext.LastKnownVersion = versionInfo;
+                MvxScaffoldingContext.LastKnownVersion = MvxScaffoldingContext.WizardVersion;
                 HasUpdatedNotification = true;
             }
         }

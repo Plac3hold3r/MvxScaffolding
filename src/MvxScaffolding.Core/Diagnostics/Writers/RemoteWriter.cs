@@ -210,8 +210,8 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             _client.Context.Cloud.RoleName = TelemetryProperties.RoleInstanceName;
 
             _client.Context.Session.Id = Guid.NewGuid().ToString();
-            _client.Context.Component.Version = MvxScaffoldingContext.WizardVersion;
-            _client.Context.Properties.Add(TelemetryProperties.WizardVersion, MvxScaffoldingContext.WizardVersion);
+            _client.Context.Component.Version = MvxScaffoldingContext.WizardVersion.ToString();
+            _client.Context.Properties.Add(TelemetryProperties.WizardVersion, MvxScaffoldingContext.WizardVersion.ToString());
             _client.Context.Properties.Add(TelemetryProperties.ProjectType, MvxScaffoldingContext.CurrentTemplateType.ToString());
         }
 

@@ -16,11 +16,11 @@
 
     <DataTemplate DataType="{x:Type dialogs:ReleaseNotesViewModel}">
         <StackPanel Width="400" Margin="16">
-            <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{x:Static l10n:LocalResources.Application_Name}" />
+            <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{Binding WizardName}" />
             <TextBlock
                 Margin="0,0,0,8"
                 Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                Text="{Binding AppVersion, StringFormat={}v{0}}" />
+                Text="{Binding WizardVersion, StringFormat={}v{0}}" />
             <BulletDecorator Margin="0,12,0,8">
                 <BulletDecorator.Bullet>
                     <Ellipse

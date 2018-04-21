@@ -223,15 +223,6 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MvxScaffolding.
-        /// </summary>
-        public static string Application_Name {
-            get {
-                return ResourceManager.GetString("Application_Name", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to About.
         /// </summary>
         public static string Main_Window_Button_About {
