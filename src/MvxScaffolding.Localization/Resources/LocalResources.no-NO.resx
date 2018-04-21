@@ -426,4 +426,7 @@
   <data name="Main_Window_Notify_Updated" xml:space="preserve">
     <value>{0} updated</value>
   </data>
+  <data name="AppDetails_Required" xml:space="preserve">
+    <value>Required</value>
+  </data>
 </root>
