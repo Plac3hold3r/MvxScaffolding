@@ -160,7 +160,8 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="key.snk" />
-    <Content Include="Content\License.txt">
+    <Content Include="..\..\LICENSE.txt">
+      <Link>Content\LICENSE.txt</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="MvxScaffolding.config.json">
