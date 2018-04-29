@@ -8,6 +8,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:dialogs="clr-namespace:MvxScaffolding.UI.ViewModels.Dialogs"
     xmlns:l10n="clr-namespace:MvxScaffolding.Localization.Resources;assembly=MvxScaffolding.Localization"
+    xmlns:markdig="clr-namespace:Markdig.Wpf;assembly=Markdig.Wpf"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
 
     <ResourceDictionary.MergedDictionaries>
@@ -21,78 +22,7 @@
                 Margin="0,0,0,8"
                 Style="{StaticResource MaterialDesignSubheadingTextBlock}"
                 Text="{Binding WizardVersion, StringFormat={}v{0}}" />
-            <BulletDecorator Margin="0,12,0,8">
-                <BulletDecorator.Bullet>
-                    <Ellipse
-                        Width="4"
-                        Height="4"
-                        Fill="{DynamicResource MaterialDesignBodyLight}" />
-                </BulletDecorator.Bullet>
-                <TextBlock
-                    Margin="8,0,0,0"
-                    Text="Updated templates to support MvvmCross 6.0.0."
-                    TextWrapping="Wrap" />
-            </BulletDecorator>
-            <BulletDecorator Margin="0,0,0,8">
-                <BulletDecorator.Bullet>
-                    <Ellipse
-                        Width="4"
-                        Height="4"
-                        Fill="{DynamicResource MaterialDesignBodyLight}" />
-                </BulletDecorator.Bullet>
-                <TextBlock
-                    Margin="8,0,0,0"
-                    Text="Removed support for creating a Core project targeting anything other than .NET Standard 2.0, required by MvvmCross 6.0.0."
-                    TextWrapping="Wrap" />
-            </BulletDecorator>
-            <BulletDecorator Margin="0,0,0,8">
-                <BulletDecorator.Bullet>
-                    <Ellipse
-                        Width="4"
-                        Height="4"
-                        Fill="{DynamicResource MaterialDesignBodyLight}" />
-                </BulletDecorator.Bullet>
-                <TextBlock
-                    Margin="8,0,0,0"
-                    Text="Removed support for all UWP versions prior to Fall Creators Update (1709) due to MvvmCross 6.0.0 only supporting .NET Standard 2.0."
-                    TextWrapping="Wrap" />
-            </BulletDecorator>
-            <BulletDecorator Margin="0,0,0,8">
-                <BulletDecorator.Bullet>
-                    <Ellipse
-                        Width="4"
-                        Height="4"
-                        Fill="{DynamicResource MaterialDesignBodyLight}" />
-                </BulletDecorator.Bullet>
-                <TextBlock Margin="8,0,0,0" Text="Added Android ProGuard for release builds." />
-            </BulletDecorator>
-            <BulletDecorator Margin="0,0,0,8">
-                <BulletDecorator.Bullet>
-                    <Ellipse
-                        Width="4"
-                        Height="4"
-                        Fill="{DynamicResource MaterialDesignBodyLight}" />
-                </BulletDecorator.Bullet>
-                <TextBlock Margin="8,0,0,0" Text="Added Android SDK 27 (Oreo) as a minimum SDK option." />
-            </BulletDecorator>
-            <BulletDecorator Margin="0,0,0,8">
-                <BulletDecorator.Bullet>
-                    <Ellipse
-                        Width="4"
-                        Height="4"
-                        Fill="{DynamicResource MaterialDesignBodyLight}" />
-                </BulletDecorator.Bullet>
-                <TextBlock Margin="8,0,0,0" Text="Added iOS SDK 11.3 as a minimum SDK option." />
-            </BulletDecorator>
-            <BulletDecorator Margin="0,0,0,8">
-                <BulletDecorator.Bullet>
-                    <Ellipse
-                        Width="4"
-                        Height="4"
-                        Fill="{DynamicResource MaterialDesignBodyLight}" />
-                </BulletDecorator.Bullet>
-                <TextBlock Margin="8,0,0,0" Text="General bug fixes." />
-            </BulletDecorator>
+            <markdig:MarkdownViewer Markdown="{Binding ReleaseNotes}" />
             <TextBlock Margin="0,12,0,8">
                 <Hyperlink
                     Command="{Binding GoToGitHubCommand}"

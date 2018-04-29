@@ -39,6 +39,8 @@ namespace MvxScaffolding.UI.ViewModels
 
         public ICommand ShowDialogCommand { get; }
 
+        private IViewModel _selectedDialogViewModel;
+
         protected BaseViewModel()
         {
             ShowDialogCommand = new RelayCommand<IViewModel>(ShowDialog);
@@ -83,7 +85,19 @@ namespace MvxScaffolding.UI.ViewModels
             Logger.Current.Telemetry.TrackWizardPageAsync(dialogPageName)
                     .FireAndForget();
 
-            DialogHost.Show(viewModel);
+
+            _selectedDialogViewModel = viewModel;
+            DialogHost.Show(viewModel, OnDialogOpened);
+        }
+
+        private void OnDialogOpened(object sender, DialogOpenedEventArgs eventArgs)
+        {
+            _selectedDialogViewModel.OnDialogOpened();
+        }
+
+        public virtual void OnDialogOpened()
+        {
+            // Method intentionally left empty.
         }
     }
 }
