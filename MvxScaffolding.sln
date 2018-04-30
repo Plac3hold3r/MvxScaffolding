@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solutio
 		.gitignore = .gitignore
 		CHANGELOG.md = CHANGELOG.md
 		crowdin.yml = crowdin.yml
+		LICENSE.txt = LICENSE.txt
 		Nuget.Config = Nuget.Config
 		README.md = README.md
 	EndProjectSection

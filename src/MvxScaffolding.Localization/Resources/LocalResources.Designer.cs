@@ -612,6 +612,33 @@ namespace MvxScaffolding.Localization.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
+        public static string ReleaseNotes_Button_Close {
+            get {
+                return ResourceManager.GetString("ReleaseNotes_Button_Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changelog.
+        /// </summary>
+        public static string ReleaseNotes_Changelog_Link {
+            get {
+                return ResourceManager.GetString("ReleaseNotes_Changelog_Link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GitHub.
+        /// </summary>
+        public static string ReleaseNotes_GitHub_Link {
+            get {
+                return ResourceManager.GetString("ReleaseNotes_GitHub_Link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
         public static string SimpleInfo_Button_Close {
             get {
                 return ResourceManager.GetString("SimpleInfo_Button_Close", resourceCulture);
