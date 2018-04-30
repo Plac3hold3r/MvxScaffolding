@@ -465,6 +465,10 @@
       "description": "Minimum UWP target SDK version.",
       "choices": [
         {
+          "choice": "17134",
+          "description": "1803 - April 2018 Update"
+        },
+        {
           "choice": "16299",
           "description": "1709 - Fall Creators Update"
         }
