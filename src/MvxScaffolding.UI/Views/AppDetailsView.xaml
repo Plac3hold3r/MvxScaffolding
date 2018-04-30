@@ -79,7 +79,7 @@
                             IsEditable="False"
                             IsEnabled="False"
                             Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-                            <ComboBoxItem IsSelected="True">6.0.0</ComboBoxItem>
+                            <ComboBoxItem IsSelected="True">6.0.1</ComboBoxItem>
                         </ComboBox>
                         <TextBlock
                             Margin="0,16,0,0"
