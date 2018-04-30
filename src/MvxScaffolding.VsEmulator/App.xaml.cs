@@ -26,7 +26,7 @@ namespace MvxScaffolding.VsEmulator
             Target = "~M:MvxScaffolding.VsEmulator.App.CurrentDomain_AssemblyResolve(System.Object,System.ResolveEventArgs)~System.Reflection.Assembly")]
         private Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
-            if (args.Name.ToUpper().StartsWith("MATERIALDESIGNTHEMES.WPF"))
+            if (args.Name.ToUpper().StartsWith("MATERIALDESIGNTHEMES.WPF") || args.Name.ToUpper().StartsWith("MARKDIG.WPF"))
             {
                 var asmLocation = Assembly.GetExecutingAssembly().Location;
                 var debugDirectory = Path.GetDirectoryName(asmLocation);

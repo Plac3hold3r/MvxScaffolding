@@ -31,7 +31,7 @@
                         Grid.Column="1"
                         Margin="8"
                         VerticalAlignment="Center">
-                        <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{x:Static l10n:LocalResources.Application_Name}" />
+                        <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{Binding WizardName}" />
                         <TextBlock
                             xml:space="preserve"
                             Style="{StaticResource MaterialDesignCaptionTextBlock}"
@@ -39,7 +39,7 @@
                                 Command="{Binding GoToAuthorGitHubCommand}"
                                 Foreground="White"
                                 Style="{StaticResource MaterialDesignBody1Hyperlink}">Plac3hold3r</Hyperlink></TextBlock>
-                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="{Binding AppVersion, StringFormat={}v{0}}" />
+                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="{Binding WizardVersion, StringFormat={}v{0}}" />
                     </StackPanel>
                 </Grid>
             </materialDesign:ColorZone>

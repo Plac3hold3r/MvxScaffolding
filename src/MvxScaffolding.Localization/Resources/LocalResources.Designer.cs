@@ -196,6 +196,15 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Required.
+        /// </summary>
+        public static string AppDetails_Required {
+            get {
+                return ResourceManager.GetString("AppDetails_Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Solution.
         /// </summary>
         public static string AppDetails_Solution {
@@ -219,15 +228,6 @@ namespace MvxScaffolding.Localization.Resources {
         public static string AppDetails_Validation_Identifier {
             get {
                 return ResourceManager.GetString("AppDetails_Validation_Identifier", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to MvxScaffolding.
-        /// </summary>
-        public static string Application_Name {
-            get {
-                return ResourceManager.GetString("Application_Name", resourceCulture);
             }
         }
         
@@ -606,6 +606,33 @@ namespace MvxScaffolding.Localization.Resources {
         public static string ProjectGrouping_Title {
             get {
                 return ResourceManager.GetString("ProjectGrouping_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        public static string ReleaseNotes_Button_Close {
+            get {
+                return ResourceManager.GetString("ReleaseNotes_Button_Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changelog.
+        /// </summary>
+        public static string ReleaseNotes_Changelog_Link {
+            get {
+                return ResourceManager.GetString("ReleaseNotes_Changelog_Link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GitHub.
+        /// </summary>
+        public static string ReleaseNotes_GitHub_Link {
+            get {
+                return ResourceManager.GetString("ReleaseNotes_GitHub_Link", resourceCulture);
             }
         }
         

@@ -3,6 +3,7 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -30,10 +31,15 @@ namespace MvxScaffolding.UI.ViewModels
         public string TemplateTypeName
             => IsNativeTemplate ? "MvxNative" : "MvxForms";
 
-        public string AppVersion
+        public Version WizardVersion
             => MvxScaffoldingContext.WizardVersion;
 
+        public string WizardName
+           => MvxScaffoldingContext.WizardName;
+
         public ICommand ShowDialogCommand { get; }
+
+        private IViewModel _selectedDialogViewModel;
 
         protected BaseViewModel()
         {
@@ -79,7 +85,19 @@ namespace MvxScaffolding.UI.ViewModels
             Logger.Current.Telemetry.TrackWizardPageAsync(dialogPageName)
                     .FireAndForget();
 
-            DialogHost.Show(viewModel);
+
+            _selectedDialogViewModel = viewModel;
+            DialogHost.Show(viewModel, OnDialogOpened);
+        }
+
+        private void OnDialogOpened(object sender, DialogOpenedEventArgs eventArgs)
+        {
+            _selectedDialogViewModel.OnDialogOpened();
+        }
+
+        public virtual void OnDialogOpened()
+        {
+            // Method intentionally left empty.
         }
     }
 }
