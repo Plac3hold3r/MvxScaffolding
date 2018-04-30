@@ -429,4 +429,13 @@
   <data name="AppDetails_Required" xml:space="preserve">
     <value>Required</value>
   </data>
+  <data name="ReleaseNotes_Button_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ReleaseNotes_Changelog_Link" xml:space="preserve">
+    <value>Changelog</value>
+  </data>
+  <data name="ReleaseNotes_GitHub_Link" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
 </root>
