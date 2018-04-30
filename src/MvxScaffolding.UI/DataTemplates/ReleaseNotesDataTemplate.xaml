@@ -23,7 +23,7 @@
                     Command="{Binding GoToGitHubCommand}"
                     Foreground="{StaticResource PrimaryColorBrush}"
                     Style="{StaticResource MaterialDesignBody1Hyperlink}">
-                    <Run Text="{x:Static l10n:LocalResources.About_GitHub_Link}" />
+                    <Run Text="{x:Static l10n:LocalResources.ReleaseNotes_GitHub_Link}" />
                 </Hyperlink>
             </TextBlock>
             <TextBlock Margin="0,0,0,8">
@@ -31,14 +31,14 @@
                     Command="{Binding GoToChangelogCommand}"
                     Foreground="{StaticResource PrimaryColorBrush}"
                     Style="{StaticResource MaterialDesignBody1Hyperlink}">
-                    <Run Text="{x:Static l10n:LocalResources.About_Changelog_Link}" />
+                    <Run Text="{x:Static l10n:LocalResources.ReleaseNotes_Changelog_Link}" />
                 </Hyperlink>
             </TextBlock>
             <Button
                 Margin="0,8,8,0"
                 HorizontalAlignment="Right"
                 Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
-                Content="{Binding Source={x:Static l10n:LocalResources.About_Button_Close}, Converter={StaticResource StringToUpperConverter}}"
+                Content="{Binding Source={x:Static l10n:LocalResources.ReleaseNotes_Button_Close}, Converter={StaticResource StringToUpperConverter}}"
                 Style="{DynamicResource MaterialDesignFlatButton}" />
         </StackPanel>
     </DataTemplate>
