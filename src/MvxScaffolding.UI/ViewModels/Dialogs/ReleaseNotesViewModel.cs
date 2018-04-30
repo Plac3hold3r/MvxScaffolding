@@ -19,7 +19,7 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
 
         public override void OnDialogOpened()
         {
-            ReleaseNotes = File.ReadAllText("Resources/CHANGELOG.md");
+            ReleaseNotes = File.ReadAllText("Resources/release_notes.md");
         }
     }
 }

@@ -16,13 +16,8 @@
     </ResourceDictionary.MergedDictionaries>
 
     <DataTemplate DataType="{x:Type dialogs:ReleaseNotesViewModel}">
-        <StackPanel Width="400" Margin="16">
-            <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{Binding WizardName}" />
-            <TextBlock
-                Margin="0,0,0,8"
-                Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                Text="{Binding WizardVersion, StringFormat={}v{0}}" />
-            <markdig:MarkdownViewer Markdown="{Binding ReleaseNotes}" />
+        <StackPanel Width="600" Margin="16">
+            <markdig:MarkdownViewer MaxHeight="300" Markdown="{Binding ReleaseNotes}" />
             <TextBlock Margin="0,12,0,8">
                 <Hyperlink
                     Command="{Binding GoToGitHubCommand}"
