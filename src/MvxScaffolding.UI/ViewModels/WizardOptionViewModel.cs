@@ -49,6 +49,16 @@ namespace MvxScaffolding.UI.ViewModels
             }
         }
 
+        private string _selectedMvvmCrossVersion;
+
+        public string SelectedMvvmCrossVersion
+        {
+            get => _selectedMvvmCrossVersion;
+            set { _selectedMvvmCrossVersion = value; OnPropertyChanged(nameof(SelectedMvvmCrossVersion)); }
+        }
+
+        public Dictionary<string, string> MvvmCrossVersionOptions { get; }
+
         private bool _hasEditorConfig;
 
         public bool HasEditorConfig
@@ -306,7 +316,10 @@ namespace MvxScaffolding.UI.ViewModels
         public WizardOptionViewModel()
         {
             ProjectGroupingOptions = TemplateChoices.ProjectGroupingOptions;
-            SelectedProjectGrouping = TemplateChoices.ProjectGroupingOptionDefault; ;
+            SelectedProjectGrouping = TemplateChoices.ProjectGroupingOptionDefault;
+
+            MvvmCrossVersionOptions = TemplateChoices.MvvmCrossVersionOptions;
+            SelectedMvvmCrossVersion = TemplateChoices.MvvmCrossVersionOptionDefault;
 
             HasEditorConfig = true;
 

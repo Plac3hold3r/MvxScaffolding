@@ -325,6 +325,23 @@
       "replaces": "APP_NAME",
       "description": "The application display name."
     },
+    "MvvmCrossVersion": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "6.0.1",
+      "description": "The version of MvvmCross to use.",
+      "choices": [
+        {
+          "choice": "6.0.1",
+          "description": "MvvmCross 6.0.1"
+        },
+        {
+          "choice": "6.0.0",
+          "description": "MvvmCross 6.0.0"
+        }
+      ],
+      "replaces": "6.0.1"
+    },
     /*
     || Core project flags
     =========================================================================================== */
