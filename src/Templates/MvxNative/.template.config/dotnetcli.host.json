@@ -49,6 +49,10 @@
       "longName": "app-id",
       "shortName": "id"
     },
+    "MvvmCrossVersion": {
+      "longName": "mvx-version",
+      "shortName": "mvx-v"
+    },
     "SolutionProjectGrouping": {
       "longName": "solution-project-grouping",
       "shortName": "sln-gp"
