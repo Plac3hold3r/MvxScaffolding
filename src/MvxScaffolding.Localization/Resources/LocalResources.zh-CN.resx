@@ -118,85 +118,85 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppDetails_Application" xml:space="preserve">
-    <value>Application</value>
+    <value>应用程序</value>
   </data>
   <data name="AppDetails_Display_Name" xml:space="preserve">
-    <value>Display Name</value>
+    <value>显示名</value>
   </data>
   <data name="AppDetails_EditorConfig" xml:space="preserve">
-    <value>EditorConfig</value>
+    <value>编辑器配置</value>
   </data>
   <data name="AppDetails_Identifier" xml:space="preserve">
-    <value>Identifier</value>
+    <value>标识符</value>
   </data>
   <data name="AppDetails_Project_Grouping" xml:space="preserve">
-    <value>Project Grouping</value>
+    <value>项目分组</value>
   </data>
   <data name="AppDetails_Solution" xml:space="preserve">
-    <value>Solution</value>
+    <value>解决方案</value>
   </data>
   <data name="AppDetails_Validation_Display_Name" xml:space="preserve">
-    <value>Application name required</value>
+    <value>需要应用程序名</value>
   </data>
   <data name="AppDetails_Validation_Identifier" xml:space="preserve">
-    <value>Application identifier required</value>
+    <value>需要应用程序标识符</value>
   </data>
   <data name="Main_Window_Button_About" xml:space="preserve">
-    <value>About</value>
+    <value>关于</value>
   </data>
   <data name="Main_Window_Button_Done" xml:space="preserve">
-    <value>Done</value>
+    <value>完成</value>
   </data>
   <data name="Main_Window_Button_Next" xml:space="preserve">
-    <value>Next</value>
+    <value>下一页</value>
   </data>
   <data name="Main_Window_Button_Previous" xml:space="preserve">
-    <value>Previous</value>
+    <value>上一页</value>
   </data>
   <data name="Main_Window_Button_Privacy" xml:space="preserve">
-    <value>Privacy</value>
+    <value>隐私</value>
   </data>
   <data name="Main_Window_Link_GitHub" xml:space="preserve">
-    <value>Visit MvxScaffolding on GitHub</value>
+    <value>在 GitHub 上访问 MvxScaffolding</value>
   </data>
   <data name="Main_Window_SectionHeader_AppDetails" xml:space="preserve">
-    <value>App Details</value>
+    <value>应用程序详细信息</value>
   </data>
   <data name="Main_Window_SectionHeader_PlatformOptions" xml:space="preserve">
-    <value>Platforms Options</value>
+    <value>平台设置</value>
   </data>
   <data name="Main_Window_SectionHeader_Summary" xml:space="preserve">
-    <value>Summary</value>
+    <value>概要</value>
   </data>
   <data name="PlatformOptions_Android_MarketShare" xml:space="preserve">
-    <value>Market Share</value>
+    <value>市占率</value>
   </data>
   <data name="PlatformOptions_Android_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>最低 SDK 版本</value>
   </data>
   <data name="PlatformOptions_Android_Title" xml:space="preserve">
     <value>Android</value>
   </data>
   <data name="PlatformOptions_Android_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>UI 测试项目</value>
   </data>
   <data name="PlatformOptions_Android_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>单元测试项目</value>
   </data>
   <data name="PlatformOptions_Android_XmlLayouts" xml:space="preserve">
-    <value>XML Layouts</value>
+    <value>XML 布局</value>
   </data>
   <data name="PlatformOptions_Core_dotNetStandard" xml:space="preserve">
-    <value>.NET Standard</value>
+    <value>. NET 标准</value>
   </data>
   <data name="PlatformOptions_Core_Title" xml:space="preserve">
-    <value>Core</value>
+    <value>核心</value>
   </data>
   <data name="PlatformOptions_Core_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>单元测试项目</value>
   </data>
   <data name="PlatformOptions_Validation_Uwp_Description" xml:space="preserve">
-    <value>Description required</value>
+    <value>需要描述</value>
   </data>
   <data name="SimpleInfo_EditorConfig_Desc" xml:space="preserve">
     <value>Enable to include an EditorConfig file at the root of the solution. EditorConfig is used to define coding styles highlighted within Visual Studio.</value>
