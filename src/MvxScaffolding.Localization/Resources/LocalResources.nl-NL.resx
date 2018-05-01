@@ -384,9 +384,6 @@
   <data name="About_Privacy_Link" xml:space="preserve">
     <value>Privacybeleid</value>
   </data>
-  <data name="Application_Name" xml:space="preserve">
-    <value>MvxScaffolding</value>
-  </data>
   <data name="Template_Choice_False" xml:space="preserve">
     <value>Vals</value>
   </data>
@@ -428,5 +425,17 @@
   </data>
   <data name="Main_Window_Notify_Updated" xml:space="preserve">
     <value>{0} updated</value>
+  </data>
+  <data name="AppDetails_Required" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="ReleaseNotes_Button_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ReleaseNotes_Changelog_Link" xml:space="preserve">
+    <value>Changelog</value>
+  </data>
+  <data name="ReleaseNotes_GitHub_Link" xml:space="preserve">
+    <value>GitHub</value>
   </data>
 </root>
