@@ -124,7 +124,7 @@
     <value>显示名</value>
   </data>
   <data name="AppDetails_EditorConfig" xml:space="preserve">
-    <value>编辑器配置</value>
+    <value>EditorConfig</value>
   </data>
   <data name="AppDetails_Identifier" xml:space="preserve">
     <value>标识符</value>
@@ -199,46 +199,46 @@
     <value>需要描述</value>
   </data>
   <data name="SimpleInfo_EditorConfig_Desc" xml:space="preserve">
-    <value>Enable to include an EditorConfig file at the root of the solution. EditorConfig is used to define coding styles highlighted within Visual Studio.</value>
+    <value>启用以在解决方案根目录包含 EditorConfig 文件。EditorConfig 用于定义 Visual Studio 内代码高亮风格。</value>
   </data>
   <data name="SimpleInfo_EditorConfig_Title" xml:space="preserve">
     <value>EditorConfig</value>
   </data>
   <data name="SimpleInfo_Fluent_Layouts_Desc" xml:space="preserve">
-    <value>Enable to include FluentLayout, a fluent API for creating constraint-based layouts.</value>
+    <value>启用以包含 FluentLayout，一个用于创建基于约束布局的 Fluent API。</value>
   </data>
   <data name="SimpleInfo_Fluent_Layouts_Title" xml:space="preserve">
-    <value>Fluent Layouts</value>
+    <value>流畅布局</value>
   </data>
   <data name="SimpleInfo_Hyperion_Desc" xml:space="preserve">
-    <value>Enable to include Hyperion, an in app design review tool.</value>
+    <value>启用以包含 Hyperion，一个应用程序内设计检阅工具。</value>
   </data>
   <data name="SimpleInfo_Hyperion_Title" xml:space="preserve">
     <value>Hyperion</value>
   </data>
   <data name="SimpleInfo_Privacy_Desc" xml:space="preserve">
-    <value>This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more information.</value>
+    <value>此模板指南使用第三方崩溃分析报告。请参见隐私策略获取更多信息。</value>
   </data>
   <data name="SimpleInfo_Privacy_Title" xml:space="preserve">
-    <value>Privacy</value>
+    <value>隐私</value>
   </data>
   <data name="SimpleInfo_Xml_Layouts_Desc" xml:space="preserve">
-    <value>Enable to use XML layouts instead of Xamarin default AXML layouts.</value>
+    <value>启用以使用 XML 布局替换 Xamarin 默认 AXML 布局。</value>
   </data>
   <data name="SimpleInfo_Xml_Layouts_Title" xml:space="preserve">
-    <value>XML Layouts</value>
+    <value>XML 布局</value>
   </data>
   <data name="About_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>关闭</value>
   </data>
   <data name="About_CreatedBy" xml:space="preserve">
-    <value>Created by</value>
+    <value>创建者</value>
   </data>
   <data name="About_General__Desc" xml:space="preserve">
-    <value>A customizable template used to scaffold a cross platform MvvmCross application. Includes a .NET Standard class library and NuGet package references. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.</value>
+    <value>用于搭建跨平台 MvvmCross 应用程序框架的自定义模板。包括一个 .NET 标准类库和 NuGet 包引用。支持 Xamarin Android、Xamarin iOS 和 Xamarin 原生与窗体的 UWP 项目类型。</value>
   </data>
   <data name="About_GitHub_Desc" xml:space="preserve">
-    <value>For issues and feature requests visit MvxScaffolding project on GitHub.</value>
+    <value>有关功能请求与问题，请访问 GitHub 上的 MvxScaffolding 项目。</value>
   </data>
   <data name="About_Privacy_Desc" xml:space="preserve">
     <value>This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more information.</value>
