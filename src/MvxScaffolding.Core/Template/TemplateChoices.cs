@@ -42,6 +42,7 @@ namespace MvxScaffolding.Core.Template
             ["15"] = "Android 4.0.3 - Ice Cream Sandwich v15",
             ["14"] = "Android 4 - Ice Cream Sandwich v14",
         };
+
         public static string MinAndroidSDKOptionDefault => "19";
 
         public static Dictionary<string, string> MinIosSDKOptions => new Dictionary<string, string>
@@ -59,6 +60,7 @@ namespace MvxScaffolding.Core.Template
             ["9.1"] = "iOS 9.1",
             ["9.0"] = "iOS 9.0",
         };
+
         public static string MinIosSDKOptionDefault => "10.0";
 
         public static Dictionary<string, string> MinUwpSDKOptions => new Dictionary<string, string>
@@ -66,6 +68,15 @@ namespace MvxScaffolding.Core.Template
             ["17134"] = "1803 - April 2018 Update",
             ["16299"] = "1709 - Fall Creators Update"
         };
+
         public static string MinUwpSDKOptionDefault => "16299";
+
+        public static Dictionary<string, string> MvvmCrossVersionOptions => new Dictionary<string, string>
+        {
+            ["6.0.1"] = "MvvmCross 6.0.1",
+            ["6.0.0"] = "MvvmCross 6.0.0"
+        };
+
+        public static string MvvmCrossVersionOptionDefault => "6.0.1";
     }
 }
