@@ -46,7 +46,7 @@ namespace MvxNative.iOS.Styles
                         return UIColor.FromRGBA(red, green, blue, alpha);
                     }
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(hexValue), $"Invalid color value {hexValue} is invalid. It should be a hex value of the form #RBG, #RRGGBB, or #AARRGGBB");
+                    throw new ArgumentOutOfRangeException(nameof(hexValue), $"Color value {hexValue} is invalid. Expected format #RBG, #RRGGBB, or #AARRGGBB");
             }
         }
     }

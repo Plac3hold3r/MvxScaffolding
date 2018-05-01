@@ -38,6 +38,14 @@ Visual Studio Extension | [Installation Guide](#visual-studio-extension) | [Docu
 
 If you want to help translate MvxScaffolding into your native language. Please checkout our [Crowdin project](https://crowdin.com/project/mvxscaffolding) page.
 
+### Translators
+
+Thank you to the following translators
+
+Language | Code | Translators |
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+Chinese Simplified | zh-CN | [Forbidden (cptbl00dra1n)](https://crowdin.com/profile/cptbl00dra1n)
+
 ## dotnet CLI
 
 ### System Requirements
