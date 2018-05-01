@@ -4,6 +4,7 @@
 //---------------------------------------------------------------------------------
 
 using System.IO;
+using System.Reflection;
 using System.Windows.Input;
 using MvxScaffolding.Core.Configuration;
 using MvxScaffolding.Core.Template;
@@ -42,7 +43,10 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
 
         public override void OnDialogOpened()
         {
-            ReleaseNotes = File.ReadAllText("Resources/release_notes.md");
+            var asmLocation = Assembly.GetExecutingAssembly().Location;
+            var extensionDirectory = Path.GetDirectoryName(asmLocation);
+            var releaseNoteLocation = Path.Combine(extensionDirectory, "Resources/release_notes.md");
+            ReleaseNotes = File.ReadAllText(releaseNoteLocation);
         }
     }
 }
