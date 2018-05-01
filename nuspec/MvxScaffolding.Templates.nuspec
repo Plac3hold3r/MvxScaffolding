@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>MvxScaffolding.Templates</id>
-    <version>0.8.0</version>
+    <version>0.9.0</version>
     <title>MvxScaffolding MvvmCross Templates</title>
     <authors>Plac3hold3r</authors>
     <owners>Plac3hold3r</owners>
@@ -13,7 +13,11 @@
     <summary>A customizable template used to scaffold a cross platform MvvmCross application.</summary>
     <copyright>Copyright ©2018</copyright>
 
-    <releaseNotes>See Changelog https://github.com/Plac3hold3r/MvxScaffolding/blob/master/CHANGELOG.md</releaseNotes>
+    <releaseNotes>
+      See Release Notes https://github.com/Plac3hold3r/MvxScaffolding/blob/master/docs/release_notes.md
+      
+      See Changelog https://github.com/Plac3hold3r/MvxScaffolding/blob/master/CHANGELOG.md
+    </releaseNotes>
 
     <packageTypes>
       <packageType name="Template" />
