@@ -5,8 +5,10 @@
 
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using System.IO;
 using System.Reflection;
+using System.Threading;
 using System.Windows;
 
 namespace MvxScaffolding.VsEmulator
@@ -16,6 +18,11 @@ namespace MvxScaffolding.VsEmulator
         protected override void OnStartup(StartupEventArgs e)
         {
             AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(CurrentDomain_AssemblyResolve);
+
+            var testCuluture = new CultureInfo("en-ZA");
+            Thread.CurrentThread.CurrentCulture = testCuluture;
+            Thread.CurrentThread.CurrentUICulture = testCuluture;
+
             base.OnStartup(e);
         }
 
