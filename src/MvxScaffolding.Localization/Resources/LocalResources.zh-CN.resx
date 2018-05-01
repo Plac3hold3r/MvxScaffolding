@@ -292,61 +292,61 @@
     <value>若您想将所有项目放在解决方案根目录，请选择“平面”选项。</value>
   </data>
   <data name="ProjectGrouping_Select_Platform" xml:space="preserve">
-    <value>若您想将根据基于的目标平台分组，请选择“平面”选项。</value>
+    <value>若您想将根据基于的目标平台分组，请选择“平台”选项。</value>
   </data>
   <data name="ProjectGrouping_Select_TestGroup" xml:space="preserve">
-    <value>Select "Test Group" for when you want all test projects to be placed in a test folder, other projects are placed at the root of the solution.</value>
+    <value>若您想将所有测试项目放在测试目录中，而其他项目则放在解决方案根目录中，请选择“测试分组”选项。</value>
   </data>
   <data name="ProjectGrouping_Title" xml:space="preserve">
-    <value>Project Grouping</value>
+    <value>项目分组</value>
   </data>
   <data name="SimpleInfo_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>关闭</value>
   </data>
   <data name="SimpleInfo_Button_More_Info" xml:space="preserve">
-    <value>More Info</value>
+    <value>更多信息</value>
   </data>
   <data name="Summary_Android_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>最低 SDK 版本</value>
   </data>
   <data name="Summary_Android_Title" xml:space="preserve">
     <value>Android</value>
   </data>
   <data name="Summary_Android_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>UI 测试项目</value>
   </data>
   <data name="Summary_Android_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>单元测试项目</value>
   </data>
   <data name="Summary_Android_XmlLayouts" xml:space="preserve">
-    <value>XML Layouts</value>
+    <value>XML 布局</value>
   </data>
   <data name="Summary_Application" xml:space="preserve">
-    <value>Application</value>
+    <value>应用程序</value>
   </data>
   <data name="Summary_Core_dotNetStandard" xml:space="preserve">
-    <value>.NET Standard</value>
+    <value>. NET 标准</value>
   </data>
   <data name="Summary_Core_Title" xml:space="preserve">
-    <value>Core</value>
+    <value>核心</value>
   </data>
   <data name="Summary_Core_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>单元测试项目</value>
   </data>
   <data name="Summary_DisplayName" xml:space="preserve">
-    <value>Display Name</value>
+    <value>显示名</value>
   </data>
   <data name="Summary_EditorConfig" xml:space="preserve">
     <value>EditorConfig</value>
   </data>
   <data name="Summary_Identifier" xml:space="preserve">
-    <value>Identifier</value>
+    <value>标识符</value>
   </data>
   <data name="Summary_Ios" xml:space="preserve">
     <value>iOS</value>
   </data>
   <data name="Summary_Ios_FluentLayouts" xml:space="preserve">
-    <value>Fluent Layouts</value>
+    <value>流畅布局</value>
   </data>
   <data name="Summary_Ios_Hyperion" xml:space="preserve">
     <value>Hyperion</value>
@@ -388,7 +388,7 @@
     <value>假</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Flat" xml:space="preserve">
-    <value>Flat</value>
+    <value>平面</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Platform" xml:space="preserve">
     <value>平台</value>
