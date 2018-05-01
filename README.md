@@ -43,7 +43,7 @@ If you want to help translate MvxScaffolding into your native language. Please c
 Thank you to the following translators
 
 Language | Code | Translators |
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+:-------------------------:|:-------------------------:|:-------------------------:
 Chinese Simplified | zh-CN | [Forbidden (cptbl00dra1n)](https://crowdin.com/profile/cptbl00dra1n)
 
 ## dotnet CLI
