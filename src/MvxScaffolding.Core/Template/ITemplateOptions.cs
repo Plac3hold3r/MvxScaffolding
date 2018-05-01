@@ -23,6 +23,8 @@ namespace MvxScaffolding.Core.Template
 
         bool HasUwpUiTestProject { get; set; }
 
+        string SelectedMvvmCrossVersion { get; set; }
+
         bool HasEditorConfig { get; set; }
 
         string SelectedProjectGrouping { get; set; }

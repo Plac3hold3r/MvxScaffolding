@@ -128,6 +128,7 @@ namespace MvxScaffolding.Vsix.Wizards
             replacementsDictionary.AddParameter(TemplateOptions.HasUwpTestProject, MvxScaffoldingContext.UserSelectedOptions.HasUwpUnitTestProject);
             replacementsDictionary.AddParameter(TemplateOptions.HasUwpUITestProject, MvxScaffoldingContext.UserSelectedOptions.HasUwpUiTestProject);
 
+            replacementsDictionary.AddParameter(TemplateOptions.MvvmCrossVersion, MvxScaffoldingContext.UserSelectedOptions.SelectedMvvmCrossVersion);
             replacementsDictionary.AddParameter(TemplateOptions.HasEditorConfig, MvxScaffoldingContext.UserSelectedOptions.HasEditorConfig);
             replacementsDictionary.AddParameter(TemplateOptions.SolutionProjectGrouping, MvxScaffoldingContext.UserSelectedOptions.SelectedProjectGrouping);
 
