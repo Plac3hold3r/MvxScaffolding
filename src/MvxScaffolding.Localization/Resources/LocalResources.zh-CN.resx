@@ -352,88 +352,88 @@
     <value>Hyperion</value>
   </data>
   <data name="Summary_Ios_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>最低 SDK 版本</value>
   </data>
   <data name="Summary_Ios_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>UI 测试项目</value>
   </data>
   <data name="Summary_Ios_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>单元测试项目</value>
   </data>
   <data name="Summary_ProjectGrouping" xml:space="preserve">
-    <value>Project Grouping</value>
+    <value>项目分组</value>
   </data>
   <data name="Summary_Uwp_Description" xml:space="preserve">
-    <value>Description</value>
+    <value>描述</value>
   </data>
   <data name="Summary_Uwp_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>最低 SDK 版本</value>
   </data>
   <data name="Summary_Uwp_Title" xml:space="preserve">
     <value>UWP</value>
   </data>
   <data name="Summary_Uwp_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>UI 测试项目</value>
   </data>
   <data name="Summary_Uwp_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>单元测试项目</value>
   </data>
   <data name="About_GitHub_Link" xml:space="preserve">
     <value>GitHub</value>
   </data>
   <data name="About_Privacy_Link" xml:space="preserve">
-    <value>Privacy Policy</value>
+    <value>隐私政策</value>
   </data>
   <data name="Template_Choice_False" xml:space="preserve">
-    <value>False</value>
+    <value>假</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Flat" xml:space="preserve">
     <value>Flat</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Platform" xml:space="preserve">
-    <value>Platform</value>
+    <value>平台</value>
   </data>
   <data name="Template_Choice_ProjectGroup_TestGroup" xml:space="preserve">
-    <value>Test Group</value>
+    <value>测试分组</value>
   </data>
   <data name="Template_Choice_True" xml:space="preserve">
-    <value>True</value>
+    <value>真</value>
   </data>
   <data name="Main_Window_Button_Translate" xml:space="preserve">
-    <value>Translate</value>
+    <value>翻译</value>
   </data>
   <data name="SimpleInfo_Translate_Desc" xml:space="preserve">
-    <value>Find an error in spelling or grammar? Want MvxScaffolding translated into your native language? To help translate MvxScaffolding, please visit our Crowdin page.</value>
+    <value>发现了拼写或语法错误？想要 MvxScaffolding 翻译至您的语言吗？若您要帮助我们翻译 MvxScaffolding，请前往我们的 Crowdin 页面。</value>
   </data>
   <data name="SimpleInfo_Translate_Title" xml:space="preserve">
-    <value>Help Translate</value>
+    <value>帮助翻译</value>
   </data>
   <data name="About_Translate_Link" xml:space="preserve">
-    <value>Help Translate</value>
+    <value>帮助翻译</value>
   </data>
   <data name="About_Changelog_Link" xml:space="preserve">
-    <value>Changelog</value>
+    <value>更新日志</value>
   </data>
   <data name="AppDetails_MvvmCross_Version" xml:space="preserve">
-    <value>MvvmCross Version</value>
+    <value>MvvmCross 版本</value>
   </data>
   <data name="Main_Window_Notify_Dismiss" xml:space="preserve">
-    <value>Dismiss</value>
+    <value>忽略</value>
   </data>
   <data name="Main_Window_Notify_ReleaseNotes" xml:space="preserve">
-    <value>Release Notes</value>
+    <value>发布说明</value>
   </data>
   <data name="Main_Window_Notify_Updated" xml:space="preserve">
-    <value>{0} updated</value>
+    <value>{0} 更新</value>
   </data>
   <data name="AppDetails_Required" xml:space="preserve">
-    <value>Required</value>
+    <value>必填</value>
   </data>
   <data name="ReleaseNotes_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>关闭</value>
   </data>
   <data name="ReleaseNotes_Changelog_Link" xml:space="preserve">
-    <value>Changelog</value>
+    <value>更新日志</value>
   </data>
   <data name="ReleaseNotes_GitHub_Link" xml:space="preserve">
     <value>GitHub</value>
