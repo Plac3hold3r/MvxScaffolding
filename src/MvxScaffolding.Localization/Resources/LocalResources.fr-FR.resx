@@ -289,7 +289,7 @@
     <value>The grouping for projects into folders inside of the solution.</value>
   </data>
   <data name="ProjectGrouping_Select_Flat" xml:space="preserve">
-    <value>Select "Flat" for when you want all projects to be placed at the root of the solution.</value>
+    <value>Sélectionnez "Plat" quand vous voulez que tous les projets soit mis à la racine de la solution.</value>
   </data>
   <data name="ProjectGrouping_Select_Platform" xml:space="preserve">
     <value>Select "Platform"for when you want projects to be grouped based on their target platform.</value>
@@ -325,7 +325,7 @@
     <value>Application</value>
   </data>
   <data name="Summary_Core_dotNetStandard" xml:space="preserve">
-    <value>.NET Standard</value>
+    <value>.NET standard</value>
   </data>
   <data name="Summary_Core_Title" xml:space="preserve">
     <value>Core</value>
@@ -385,10 +385,10 @@
     <value>Politique de confidentialité</value>
   </data>
   <data name="Template_Choice_False" xml:space="preserve">
-    <value>False</value>
+    <value>Non</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Flat" xml:space="preserve">
-    <value>Flat</value>
+    <value>Plat</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Platform" xml:space="preserve">
     <value>Plateforme</value>
@@ -397,7 +397,7 @@
     <value>Test Group</value>
   </data>
   <data name="Template_Choice_True" xml:space="preserve">
-    <value>True</value>
+    <value>Oui</value>
   </data>
   <data name="Main_Window_Button_Translate" xml:space="preserve">
     <value>Translate</value>
@@ -406,10 +406,10 @@
     <value>Vous avez trouvé une erreur d'orthographe ou de grammaire ? Vous voulez que MvxScaffolding soit traduit dans votre langue maternelle ? Pour aider MvxScaffolding, veuillez visiter notre page Crowdin.</value>
   </data>
   <data name="SimpleInfo_Translate_Title" xml:space="preserve">
-    <value>Help Translate</value>
+    <value>Aidez-nous à traduire</value>
   </data>
   <data name="About_Translate_Link" xml:space="preserve">
-    <value>Help Translate</value>
+    <value>Aidez-nous à traduire</value>
   </data>
   <data name="About_Changelog_Link" xml:space="preserve">
     <value>Changelog</value>
@@ -424,13 +424,13 @@
     <value>Notes de version</value>
   </data>
   <data name="Main_Window_Notify_Updated" xml:space="preserve">
-    <value>{0} updated</value>
+    <value>{0} mis à jour</value>
   </data>
   <data name="AppDetails_Required" xml:space="preserve">
-    <value>Required</value>
+    <value>Obligatoire</value>
   </data>
   <data name="ReleaseNotes_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Fermer</value>
   </data>
   <data name="ReleaseNotes_Changelog_Link" xml:space="preserve">
     <value>Changelog</value>
