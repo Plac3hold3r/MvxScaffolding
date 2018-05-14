@@ -1,9 +1,15 @@
 ## Release Notes
 
+## [v0.10.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.10.0-beta) (2018-05-14)
+
+- Update to support Visual Studio 15.7.
+- Update translations
+  - Initial support for French, by Antoine Bichon (Chapelin)
+
 ## [v0.9.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.9.0-beta) (2018-05-01)
 
 - Update to support MvvmCross 6.0.1.
-- Update to support UWP Windows 10 SDK 1803, April Update.
+- Update to support UWP Windows 10 SDK 1803, April Update
 - Update translations
   - Add support for Chinese Simplified, by Forbidden (cptbl00dra1n)
 
