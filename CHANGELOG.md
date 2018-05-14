@@ -1,5 +1,19 @@
 # Change Log
 
+## [v0.10.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.10.0-beta) (2018-05-14)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.9.0-beta...v0.10.0-beta)
+
+**Fixed bugs:**
+
+- Update changelog and fix release note directory path [\#38](https://github.com/Plac3hold3r/MvxScaffolding/pull/38) ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Merged pull requests:**
+
+- Bump version [\#43](https://github.com/Plac3hold3r/MvxScaffolding/pull/43) ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update README [\#42](https://github.com/Plac3hold3r/MvxScaffolding/pull/42) ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Add support for VS 2017 15.7+ [\#41](https://github.com/Plac3hold3r/MvxScaffolding/pull/41) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- New Crowdin translations [\#39](https://github.com/Plac3hold3r/MvxScaffolding/pull/39) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
 ## [v0.9.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.9.0-beta) (2018-05-01)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.8.0-beta...v0.9.0-beta)
 
@@ -11,7 +25,6 @@
 - Update to support MvvmCross 6.0.1 [\#31](https://github.com/Plac3hold3r/MvxScaffolding/pull/31) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Update release notes to use markdown [\#30](https://github.com/Plac3hold3r/MvxScaffolding/pull/30) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Add required \* on required inputs [\#29](https://github.com/Plac3hold3r/MvxScaffolding/pull/29) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
-- New Crowdin translations [\#13](https://github.com/Plac3hold3r/MvxScaffolding/pull/13) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 
 **Fixed bugs:**
 
@@ -24,6 +37,7 @@
 - New Crowdin translations [\#28](https://github.com/Plac3hold3r/MvxScaffolding/pull/28) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Update MSBuild app versioning [\#27](https://github.com/Plac3hold3r/MvxScaffolding/pull/27) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Update changelog [\#25](https://github.com/Plac3hold3r/MvxScaffolding/pull/25) ([Plac3hold3r](https://github.com/Plac3hold3r))
+- New Crowdin translations [\#13](https://github.com/Plac3hold3r/MvxScaffolding/pull/13) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 
 ## [v0.8.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.8.0-beta) (2018-04-16)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.7.0-beta...v0.8.0-beta)
