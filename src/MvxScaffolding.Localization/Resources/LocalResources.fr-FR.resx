@@ -142,16 +142,16 @@
     <value>Application identifier required</value>
   </data>
   <data name="Main_Window_Button_About" xml:space="preserve">
-    <value>About</value>
+    <value>À propos</value>
   </data>
   <data name="Main_Window_Button_Done" xml:space="preserve">
     <value>Done</value>
   </data>
   <data name="Main_Window_Button_Next" xml:space="preserve">
-    <value>Next</value>
+    <value>Suivant</value>
   </data>
   <data name="Main_Window_Button_Previous" xml:space="preserve">
-    <value>Previous</value>
+    <value>Précédent</value>
   </data>
   <data name="Main_Window_Button_Privacy" xml:space="preserve">
     <value>Privacy</value>
@@ -160,7 +160,7 @@
     <value>Visit MvxScaffolding on GitHub</value>
   </data>
   <data name="Main_Window_SectionHeader_AppDetails" xml:space="preserve">
-    <value>App Details</value>
+    <value>Détails de l'application</value>
   </data>
   <data name="Main_Window_SectionHeader_PlatformOptions" xml:space="preserve">
     <value>Platforms Options</value>
@@ -187,13 +187,13 @@
     <value>XML Layouts</value>
   </data>
   <data name="PlatformOptions_Core_dotNetStandard" xml:space="preserve">
-    <value>.NET Standard</value>
+    <value>.NET standard</value>
   </data>
   <data name="PlatformOptions_Core_Title" xml:space="preserve">
     <value>Core</value>
   </data>
   <data name="PlatformOptions_Core_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Projet de Test unitaire</value>
   </data>
   <data name="PlatformOptions_Validation_Uwp_Description" xml:space="preserve">
     <value>Description required</value>
@@ -232,7 +232,7 @@
     <value>Close</value>
   </data>
   <data name="About_CreatedBy" xml:space="preserve">
-    <value>Created by</value>
+    <value>Créé par</value>
   </data>
   <data name="About_General__Desc" xml:space="preserve">
     <value>A customizable template used to scaffold a cross platform MvvmCross application. Includes a .NET Standard class library and NuGet package references. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.</value>
@@ -289,7 +289,7 @@
     <value>The grouping for projects into folders inside of the solution.</value>
   </data>
   <data name="ProjectGrouping_Select_Flat" xml:space="preserve">
-    <value>Select "Flat" for when you want all projects to be placed at the root of the solution.</value>
+    <value>Sélectionnez "Plat" quand vous voulez que tous les projets soit mis à la racine de la solution.</value>
   </data>
   <data name="ProjectGrouping_Select_Platform" xml:space="preserve">
     <value>Select "Platform"for when you want projects to be grouped based on their target platform.</value>
@@ -301,13 +301,13 @@
     <value>Project Grouping</value>
   </data>
   <data name="SimpleInfo_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Fermer</value>
   </data>
   <data name="SimpleInfo_Button_More_Info" xml:space="preserve">
-    <value>More Info</value>
+    <value>Plus d'informations</value>
   </data>
   <data name="Summary_Android_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Version min. du SDK</value>
   </data>
   <data name="Summary_Android_Title" xml:space="preserve">
     <value>Android</value>
@@ -325,7 +325,7 @@
     <value>Application</value>
   </data>
   <data name="Summary_Core_dotNetStandard" xml:space="preserve">
-    <value>.NET Standard</value>
+    <value>.NET standard</value>
   </data>
   <data name="Summary_Core_Title" xml:space="preserve">
     <value>Core</value>
@@ -334,7 +334,7 @@
     <value>Unit Test Project</value>
   </data>
   <data name="Summary_DisplayName" xml:space="preserve">
-    <value>Display Name</value>
+    <value>Nom affiché</value>
   </data>
   <data name="Summary_EditorConfig" xml:space="preserve">
     <value>EditorConfig</value>
@@ -352,7 +352,7 @@
     <value>Hyperion</value>
   </data>
   <data name="Summary_Ios_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Version min. du SDK</value>
   </data>
   <data name="Summary_Ios_UITestProject" xml:space="preserve">
     <value>UI Test Project</value>
@@ -382,55 +382,55 @@
     <value>GitHub</value>
   </data>
   <data name="About_Privacy_Link" xml:space="preserve">
-    <value>Privacy Policy</value>
+    <value>Politique de confidentialité</value>
   </data>
   <data name="Template_Choice_False" xml:space="preserve">
-    <value>False</value>
+    <value>Non</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Flat" xml:space="preserve">
-    <value>Flat</value>
+    <value>Plat</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Platform" xml:space="preserve">
-    <value>Platform</value>
+    <value>Plateforme</value>
   </data>
   <data name="Template_Choice_ProjectGroup_TestGroup" xml:space="preserve">
     <value>Test Group</value>
   </data>
   <data name="Template_Choice_True" xml:space="preserve">
-    <value>True</value>
+    <value>Oui</value>
   </data>
   <data name="Main_Window_Button_Translate" xml:space="preserve">
     <value>Translate</value>
   </data>
   <data name="SimpleInfo_Translate_Desc" xml:space="preserve">
-    <value>Find an error in spelling or grammar? Want MvxScaffolding translated into your native language? To help translate MvxScaffolding, please visit our Crowdin page.</value>
+    <value>Vous avez trouvé une erreur d'orthographe ou de grammaire ? Vous voulez que MvxScaffolding soit traduit dans votre langue maternelle ? Pour aider MvxScaffolding, veuillez visiter notre page Crowdin.</value>
   </data>
   <data name="SimpleInfo_Translate_Title" xml:space="preserve">
-    <value>Help Translate</value>
+    <value>Aidez-nous à traduire</value>
   </data>
   <data name="About_Translate_Link" xml:space="preserve">
-    <value>Help Translate</value>
+    <value>Aidez-nous à traduire</value>
   </data>
   <data name="About_Changelog_Link" xml:space="preserve">
     <value>Changelog</value>
   </data>
   <data name="AppDetails_MvvmCross_Version" xml:space="preserve">
-    <value>MvvmCross Version</value>
+    <value>Version de MvvmCross</value>
   </data>
   <data name="Main_Window_Notify_Dismiss" xml:space="preserve">
-    <value>Dismiss</value>
+    <value>Ignorer</value>
   </data>
   <data name="Main_Window_Notify_ReleaseNotes" xml:space="preserve">
-    <value>Release Notes</value>
+    <value>Notes de version</value>
   </data>
   <data name="Main_Window_Notify_Updated" xml:space="preserve">
-    <value>{0} updated</value>
+    <value>{0} mis à jour</value>
   </data>
   <data name="AppDetails_Required" xml:space="preserve">
-    <value>Required</value>
+    <value>Obligatoire</value>
   </data>
   <data name="ReleaseNotes_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Fermer</value>
   </data>
   <data name="ReleaseNotes_Changelog_Link" xml:space="preserve">
     <value>Changelog</value>
