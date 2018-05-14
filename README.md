@@ -27,6 +27,10 @@ iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.Fluen
 
 Supports MvvmCross 6.0.0+ (latest version supported 6.0.1)
 
+See [Release Notes](docs/release_notes.md)
+
+See [Changelog](/CHANGELOG.md)
+
 ## Installation
 
  Platform  |  Installation and System Requirements | Documentation           | Download           |
@@ -45,6 +49,7 @@ Thank you to the following translators
 Language | Code | Translators |
 :-------------------------:|:-------------------------:|:-------------------------:
 Chinese Simplified | zh-CN | [Forbidden (cptbl00dra1n)](https://crowdin.com/profile/cptbl00dra1n)
+French | fr-FR | [Antoine Bichon (Chapelin)](https://crowdin.com/profile/Chapelin)
 
 ## dotnet CLI
 
