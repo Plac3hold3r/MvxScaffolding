@@ -70,13 +70,5 @@ namespace MvxScaffolding.Core.Template
         };
 
         public static string MinUwpSDKOptionDefault => "16299";
-
-        public static Dictionary<string, string> MvvmCrossVersionOptions => new Dictionary<string, string>
-        {
-            ["6.0.1"] = "MvvmCross 6.0.1",
-            ["6.0.0"] = "MvvmCross 6.0.0"
-        };
-
-        public static string MvvmCrossVersionOptionDefault => "6.0.1";
     }
 }
