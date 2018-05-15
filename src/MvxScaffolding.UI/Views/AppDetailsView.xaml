@@ -74,18 +74,12 @@
                             Text="{Binding Options.AppName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
                         <ComboBox
                             Margin="0,16,0,0"
-                            materialDesign:ComboBoxAssist.ClassicMode="true"
                             materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.AppDetails_MvvmCross_Version}"
-                            DisplayMemberPath="Value"
-                            ItemsSource="{Binding Options.MvvmCrossVersionOptions}"
-                            SelectedValue="{Binding Options.SelectedMvvmCrossVersion}"
-                            SelectedValuePath="Key"
+                            materialDesign:HintAssist.HintOpacity="1"
+                            IsEditable="False"
+                            IsEnabled="False"
                             Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-                            <ComboBox.ItemsPanel>
-                                <ItemsPanelTemplate>
-                                    <VirtualizingStackPanel />
-                                </ItemsPanelTemplate>
-                            </ComboBox.ItemsPanel>
+                            <ComboBoxItem IsSelected="True">6.0.1</ComboBoxItem>
                         </ComboBox>
                         <TextBlock
                             Margin="0,16,0,0"

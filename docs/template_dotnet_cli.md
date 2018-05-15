@@ -184,11 +184,6 @@ dotnet new mvxnative -n MyXamarinApp --solution-project-grouping platform
                                          string - Optional
                                          Default: Mvx Scaffolding
 
-  -mvx-v|--mvx-version                   The version of MvvmCross to use.
-                                             6.0.1    - MvvmCross 6.0.1
-                                             6.0.0    - MvvmCross 6.0.0
-                                         Default: 6.0.1
-
   -f|--framework                         The version of .NET Standard to use in the Core project.
                                              2.0    - .NET Standard 2.0
                                          Default: 2.0
