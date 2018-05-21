@@ -30,7 +30,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Native", "Native", "{A4C3B6E2-92D5-478B-99DC-1CF0F489284E}"
 	ProjectSection(SolutionItems) = preProject
 		src\Templates\MvxNative\editor.config = src\Templates\MvxNative\editor.config
-		src\Templates\MvxNative\MvxNative.sln = src\Templates\MvxNative\MvxNative.sln
+		src\Templates\MvxNative\MvxNativeSolution.sln = src\Templates\MvxNative\MvxNativeSolution.sln
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{414ED55C-0665-4CCF-BD0D-26E34C2B7B16}"
@@ -68,7 +68,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{370BC50F-6FE9-4180-A1EA-90491D79B026}"
 	ProjectSection(SolutionItems) = preProject
 		src\Templates\MvxForms\editor.config = src\Templates\MvxForms\editor.config
-		src\Templates\MvxForms\MvxFormsTemp.sln = src\Templates\MvxForms\MvxFormsTemp.sln
+		src\Templates\MvxForms\MvxFormsTempSolution.sln = src\Templates\MvxForms\MvxFormsTempSolution.sln
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{4FD14B44-7E1C-4B04-ABB1-3CB9F9584DA7}"

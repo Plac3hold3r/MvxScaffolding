@@ -57,6 +57,10 @@
       "longName": "app-name",
       "shortName": "app-n"
     },
+    "SolutionName": {
+      "longName": "solution-name",
+      "shortName": "sn"
+    },
     "NETStandardVersion": {
       "longName": "framework",
       "shortName": "f"

@@ -286,6 +286,13 @@
       "replaces": "APP_NAME",
       "description": "The application display name."
     },
+    "SolutionName": {
+      "type": "parameter",
+      "datatype": "string",
+      "isRequired": true,
+      "fileRename": "MvxFormsTempSolution",
+      "description": "The solution file name."
+    },
     /*
     || Core project flags
     =========================================================================================== */
