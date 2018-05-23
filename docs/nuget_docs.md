@@ -21,12 +21,12 @@ dotnet new --install MvxScaffolding.Templates::*
 ```
 ## MvxNative - Xamarin Native Template
 
-To scaffold a new MvvmCross Xamarin application you must use the `mvxnative` command. To specify a name for the solution you can use the `-n|--name` option.
+To scaffold a new MvvmCross Xamarin application you must use the `mvxnative` command. To specify a name for the projects you can use the `-n|--name` option and `-sln|--solution-name` for the solution name.
 
-___Example command___ to create a solution named `MyXamarinApp`
+___Example command___ to create a projects prefixed with `MyXamarinApp` and a solution file named `MyXamarinApp`
 
 ```text
-dotnet new mvxnative --name MyXamarinApp
+dotnet new mvxnative --name MyXamarinApp --solution-name MyXamarinApp
 ```
 
 For details on the available customisation options for the template use the `-h|--help` option
@@ -37,12 +37,12 @@ dotnet new mvxnative --help
 
 ## MvxForms - Xamarin Forms Template
 
-To scaffold a new MvvmCross Xamarin Forms application you must use the `mvxforms` command. To specify a name for the solution you can use the `-n|--name` option.
+To scaffold a new MvvmCross Xamarin Forms application you must use the `mvxforms` command. To specify a name for the projects you can use the `-n|--name` option and `-sln|--solution-name` for the solution name.
 
-___Example command___ to create a solution named `MyXamarinFormsApp`
+___Example command___ to create a projects prefixed with `MyXamarinFormsApp` and a solution file named `MyXamarinApp`
 
 ```text
-dotnet new mvxforms --name MyXamarinFormsApp
+dotnet new mvxforms --name MyXamarinFormsApp --solution-name MyXamarinFormsApp
 ```
 
 For details on the available customisation options for the template use the `-h|--help` option
