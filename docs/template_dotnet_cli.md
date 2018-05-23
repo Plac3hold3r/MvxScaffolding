@@ -184,6 +184,9 @@ dotnet new mvxnative -n MyXamarinApp --solution-project-grouping platform
                                          string - Optional
                                          Default: Mvx Scaffolding
 
+  -sn|--solution-name                    The solution file name.
+                                         string - Required
+
   -f|--framework                         The version of .NET Standard to use in the Core project.
                                              2.0    - .NET Standard 2.0
                                          Default: 2.0
