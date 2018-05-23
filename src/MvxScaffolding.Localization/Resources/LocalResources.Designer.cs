@@ -214,6 +214,15 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Solution Name.
+        /// </summary>
+        public static string AppDetails_Solution_Name {
+            get {
+                return ResourceManager.GetString("AppDetails_Solution_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Application name required.
         /// </summary>
         public static string AppDetails_Validation_Display_Name {
@@ -228,6 +237,15 @@ namespace MvxScaffolding.Localization.Resources {
         public static string AppDetails_Validation_Identifier {
             get {
                 return ResourceManager.GetString("AppDetails_Validation_Identifier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Solution name required.
+        /// </summary>
+        public static string AppDetails_Validation_SolutionName {
+            get {
+                return ResourceManager.GetString("AppDetails_Validation_SolutionName", resourceCulture);
             }
         }
         

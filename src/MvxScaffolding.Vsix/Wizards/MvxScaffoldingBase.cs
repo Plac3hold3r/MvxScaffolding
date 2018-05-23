@@ -3,10 +3,6 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using EnvDTE;
 using EnvDTE80;
 using Microsoft.Internal.VisualStudio.PlatformUI;
@@ -20,6 +16,10 @@ using MvxScaffolding.Core.Tasks;
 using MvxScaffolding.Core.Template;
 using MvxScaffolding.UI;
 using MvxScaffolding.UI.Threading;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace MvxScaffolding.Vsix.Wizards
 {
@@ -56,6 +56,8 @@ namespace MvxScaffolding.Vsix.Wizards
             {
                 MvxScaffoldingContext.WizardVersion = new Version(ThisAssembly.Vsix.Version);
                 MvxScaffoldingContext.WizardName = ThisAssembly.Vsix.Name;
+                MvxScaffoldingContext.ProjectName = replacementsDictionary[VSTemplateKeys.SafeProjectName];
+                MvxScaffoldingContext.SolutionName = replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName];
 
                 UpdateSolutionDirectory(automationObject, replacementsDictionary);
 
@@ -133,6 +135,7 @@ namespace MvxScaffolding.Vsix.Wizards
 
             replacementsDictionary.AddParameter(TemplateOptions.AppId, MvxScaffoldingContext.UserSelectedOptions.AppId);
             replacementsDictionary.AddParameter(TemplateOptions.AppName, MvxScaffoldingContext.UserSelectedOptions.AppName);
+            replacementsDictionary.AddParameter(TemplateOptions.SolutionName, MvxScaffoldingContext.UserSelectedOptions.SolutionName);
             replacementsDictionary.AddParameter(TemplateOptions.NetStandardVersion, MvxScaffoldingContext.UserSelectedOptions.SelectedNetStandard);
 
             replacementsDictionary.AddParameter(TemplateOptions.AndroidMinSdkVersion, MvxScaffoldingContext.UserSelectedOptions.SelectedMinAndroidSDK);
@@ -142,6 +145,8 @@ namespace MvxScaffolding.Vsix.Wizards
 
             replacementsDictionary.AddParameter(TemplateOptions.UwpMinSdkVersion, MvxScaffoldingContext.UserSelectedOptions.SelectedMinUwpSDK);
             replacementsDictionary.AddParameter(TemplateOptions.UwpAppDescription, MvxScaffoldingContext.UserSelectedOptions.UwpDescription);
+
+            replacementsDictionary.Update(VSTemplateKeys.SpecifiedSolutionName, MvxScaffoldingContext.UserSelectedOptions.SolutionName);
         }
 
         public void ShowModal(System.Windows.Window dialog)

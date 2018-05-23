@@ -33,6 +33,8 @@ namespace MvxScaffolding.Core.Template
 
         public const string AppName = "AppName";
 
+        public const string SolutionName = "SolutionName";
+
         public const string NetStandardVersion = "NETStandardVersion";
 
         public const string AndroidMinSdkVersion = "AndroidMinSDKVersion";

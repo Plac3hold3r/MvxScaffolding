@@ -44,7 +44,7 @@ namespace MvxScaffolding.Vsix.Wizards
         {
             _dte = (DTE)automationObject;
             _destinationDirectory = replacementsDictionary[VSTemplateKeys.DestinationDirectory];
-            _solutionName = replacementsDictionary[VSTemplateKeys.SafeProjectName];
+            _solutionName = replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName];
         }
 
         public bool ShouldAddProjectItem(string filePath)

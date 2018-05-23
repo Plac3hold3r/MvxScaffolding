@@ -23,6 +23,20 @@ namespace MvxScaffolding.Vsix.Wizards
             }
         }
 
+        public static void Update(this Dictionary<string, string> replacementsDictionary, string key, object value)
+        {
+            switch (value)
+            {
+                case bool boolValue:
+                    replacementsDictionary[key] = boolValue.ToString().ToLowerInvariant();
+                    break;
+
+                case string stringValue:
+                    replacementsDictionary[key] = stringValue;
+                    break;
+            }
+        }
+
         public static string AsParameter(this string templateOption)
         {
             return $"$passthrough:{templateOption}$";
