@@ -15,9 +15,9 @@ namespace MvxScaffolding.Vsix.Wizards
         {
         }
 
-        protected override void UpdateReplacementsDictionary(Dictionary<string, string> replacementsDictionary)
+        protected override void AddParameters(Dictionary<string, string> replacementsDictionary)
         {
-            base.UpdateReplacementsDictionary(replacementsDictionary);
+            base.AddParameters(replacementsDictionary);
 
             replacementsDictionary.AddParameter(TemplateOptions.Forms.HasXamarinUITestProject, MvxScaffoldingContext.UserSelectedOptions.HasAndroidUiTestProject);
         }
