@@ -59,7 +59,7 @@
     },
     "SolutionName": {
       "longName": "solution-name",
-      "shortName": "sn"
+      "shortName": "sln"
     },
     "NETStandardVersion": {
       "longName": "framework",

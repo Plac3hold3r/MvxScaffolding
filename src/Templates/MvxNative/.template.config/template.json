@@ -330,7 +330,7 @@
       "datatype": "string",
       "isRequired": true,
       "fileRename": "MvxNativeSolution",
-      "description": "The solution file name."
+      "description": "The solution name."
     },
     /*
     || Core project flags

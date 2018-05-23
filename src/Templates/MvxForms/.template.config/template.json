@@ -291,7 +291,7 @@
       "datatype": "string",
       "isRequired": true,
       "fileRename": "MvxFormsTempSolution",
-      "description": "The solution file name."
+      "description": "The solution name."
     },
     /*
     || Core project flags
