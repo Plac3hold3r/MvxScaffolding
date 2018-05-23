@@ -12,6 +12,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
 using MaterialDesignThemes.Wpf;
+using MvxScaffolding.Core.Contexts;
 using MvxScaffolding.Core.Template;
 using MvxScaffolding.Localization.Resources;
 using MvxScaffolding.UI.Validation;
@@ -23,7 +24,7 @@ namespace MvxScaffolding.UI.ViewModels
         private readonly Dictionary<string, ICollection<string>>
             _validationErrors = new Dictionary<string, ICollection<string>>();
 
-        private string _appName;
+        private string _appName = MvxScaffoldingContext.ProjectName;
         [Required(ErrorMessageResourceName = nameof(LocalResources.AppDetails_Validation_Display_Name), ErrorMessageResourceType = typeof(LocalResources))]
         public string AppName
         {
@@ -36,7 +37,7 @@ namespace MvxScaffolding.UI.ViewModels
             }
         }
 
-        private string _appId;
+        private string _appId = $"com.{ MvxScaffoldingContext.ProjectName.ToLower() }";
         [Required(ErrorMessageResourceName = nameof(LocalResources.AppDetails_Validation_Identifier), ErrorMessageResourceType = typeof(LocalResources))]
         public string AppId
         {
@@ -46,6 +47,19 @@ namespace MvxScaffolding.UI.ViewModels
                 _appId = value;
                 OnPropertyChanged(nameof(AppId));
                 ValidateModelProperty(value, nameof(AppId));
+            }
+        }
+
+        private string _solutionName = MvxScaffoldingContext.SolutionName;
+        [Required(ErrorMessageResourceName = nameof(LocalResources.AppDetails_Validation_SolutionName), ErrorMessageResourceType = typeof(LocalResources))]
+        public string SolutionName
+        {
+            get => _solutionName;
+            set
+            {
+                _solutionName = value;
+                OnPropertyChanged(nameof(SolutionName));
+                ValidateModelProperty(value, nameof(SolutionName));
             }
         }
 

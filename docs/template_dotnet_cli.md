@@ -2,12 +2,12 @@
 
 ## MvxNative - Xamarin Native Template
 
-To scaffold a new MvvmCross Xamarin application you must use the `mvxnative` command. To specify a name for the solution you can use the `-n|--name` option.
+To scaffold a new MvvmCross Xamarin application you must use the `mvxnative` command. To specify a name for the projects you can use the `-n|--name` option and `-sln|--solution-name` for the solution name.
 
-___Example command___ to create a solution named `MyXamarinApp`
+___Example command___ to create a projects prefixed with `MyXamarinApp` and a solution file named `MyXamarinApp`
 
 ```text
-dotnet new mvxnative --name MyXamarinApp
+dotnet new mvxnative --name MyXamarinApp --solution-name MyXamarinApp
 ```
 
 For details on the available customisation options for the template use the `-h|--help` option
@@ -18,12 +18,12 @@ dotnet new mvxnative --help
 
 ## MvxForms - Xamarin Forms Template
 
-To scaffold a new MvvmCross Xamarin Forms application you must use the `mvxforms` command. To specify a name for the solution you can use the `-n|--name` option.
+To scaffold a new MvvmCross Xamarin Forms application you must use the `mvxforms` command. To specify a name for the projects you can use the `-n|--name` option and `-sln|--solution-name` for the solution name.
 
-___Example command___ to create a solution named `MyXamarinFormsApp`
+___Example command___ to create a projects prefixed with `MyXamarinFormsApp` and a solution file named `MyXamarinApp`
 
 ```text
-dotnet new mvxforms --name MyXamarinFormsApp
+dotnet new mvxforms --name MyXamarinFormsApp --solution-name MyXamarinFormsApp
 ```
 
 For details on the available customisation options for the template use the `-h|--help` option
@@ -41,11 +41,11 @@ MvxScaffolding provides three choices for structuring projects inside of the gen
 ___Example command___ to create a solution named `MyXamarinApp` and solution project grouping of flat
 
 ```text
-dotnet new mvxnative -n MyXamarinApp --solution-project-grouping `flat` 
+dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-grouping `flat` 
 ```
 or
 ```text
-dotnet new mvxnative -n MyXamarinApp
+dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp
 ```
 
 <pre>
@@ -73,7 +73,7 @@ dotnet new mvxnative -n MyXamarinApp
 ___Example command___ to create a solution named `MyXamarinApp` and solution project grouping of `test-group`
 
 ```text
-dotnet new mvxnative -n MyXamarinApp --solution-project-grouping test-group
+dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-grouping test-group
 ```
 
 <pre>
@@ -102,7 +102,7 @@ dotnet new mvxnative -n MyXamarinApp --solution-project-grouping test-group
 ___Example command___ to create a solution named `MyXamarinApp` and solution project grouping of `platform`
 
 ```text
-dotnet new mvxnative -n MyXamarinApp --solution-project-grouping platform
+dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-grouping platform
 ```
 
 <pre>
@@ -183,6 +183,9 @@ dotnet new mvxnative -n MyXamarinApp --solution-project-grouping platform
   -app-n|--app-name                      The application display name.
                                          string - Optional
                                          Default: Mvx Scaffolding
+
+  -sln|--solution-name                   The solution name.
+                                         string - Required
 
   -f|--framework                         The version of .NET Standard to use in the Core project.
                                              2.0    - .NET Standard 2.0

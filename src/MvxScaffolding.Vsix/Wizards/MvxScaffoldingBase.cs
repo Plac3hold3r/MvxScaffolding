@@ -56,8 +56,10 @@ namespace MvxScaffolding.Vsix.Wizards
             {
                 MvxScaffoldingContext.WizardVersion = new Version(ThisAssembly.Vsix.Version);
                 MvxScaffoldingContext.WizardName = ThisAssembly.Vsix.Name;
+                MvxScaffoldingContext.ProjectName = replacementsDictionary[VSTemplateKeys.SafeProjectName];
+                MvxScaffoldingContext.SolutionName = replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName];
 
-                UpdateSolutionDirectory(automationObject, replacementsDictionary);
+                RemoveOldSolutionDirectory(automationObject, replacementsDictionary);
 
                 try
                 {
@@ -82,6 +84,7 @@ namespace MvxScaffolding.Vsix.Wizards
                         Logger.Current.Telemetry.TrackProjectGenAsync(MvxScaffoldingContext.UserSelectedOptions, MvxScaffoldingContext.RunningTimer.Elapsed.TotalSeconds)
                             .FireAndForget();
 
+                        AddParameters(replacementsDictionary);
                         UpdateReplacementsDictionary(replacementsDictionary);
 
                         MvxScaffoldingContext.UserSelectedOptions = null;
@@ -95,20 +98,22 @@ namespace MvxScaffolding.Vsix.Wizards
             }
         }
 
-        private static void UpdateSolutionDirectory(object automationObject, Dictionary<string, string> replacementsDictionary)
+        private static void RemoveOldSolutionDirectory(object automationObject, Dictionary<string, string> replacementsDictionary)
         {
             var dte = (DTE)automationObject;
             var solution = (Solution2)dte.Solution;
             solution.Close();
 
             var oldDestinationDirectory = replacementsDictionary[VSTemplateKeys.DestinationDirectory];
-            if (Directory.Exists(oldDestinationDirectory))
+            var solutionRootDirectory = Path.GetFullPath(Path.Combine(oldDestinationDirectory, @"..\"));
+            if (Directory.Exists(solutionRootDirectory))
             {
-                Directory.Delete(oldDestinationDirectory, true);
+                Directory.Delete(solutionRootDirectory, true);
             }
 
-            var newDestinationDirectory = Path.Combine($"{oldDestinationDirectory}", @"..\");
-            replacementsDictionary[VSTemplateKeys.DestinationDirectory] = Path.GetFullPath(newDestinationDirectory);
+            var rootFolderDictionary = Path.GetFullPath(Path.Combine(solutionRootDirectory, @"..\"));
+            replacementsDictionary[VSTemplateKeys.DestinationDirectory] = rootFolderDictionary;
+            replacementsDictionary[VSTemplateKeys.SolutionDirectory] = rootFolderDictionary;
         }
 
         public bool ShouldAddProjectItem(string filePath)
@@ -116,7 +121,7 @@ namespace MvxScaffolding.Vsix.Wizards
             return true;
         }
 
-        protected virtual void UpdateReplacementsDictionary(Dictionary<string, string> replacementsDictionary)
+        protected virtual void AddParameters(Dictionary<string, string> replacementsDictionary)
         {
             replacementsDictionary.AddParameter(TemplateOptions.HasAndroidProject, MvxScaffoldingContext.UserSelectedOptions.HasAndroid);
             replacementsDictionary.AddParameter(TemplateOptions.HasIosProject, MvxScaffoldingContext.UserSelectedOptions.HasIos);
@@ -133,6 +138,7 @@ namespace MvxScaffolding.Vsix.Wizards
 
             replacementsDictionary.AddParameter(TemplateOptions.AppId, MvxScaffoldingContext.UserSelectedOptions.AppId);
             replacementsDictionary.AddParameter(TemplateOptions.AppName, MvxScaffoldingContext.UserSelectedOptions.AppName);
+            replacementsDictionary.AddParameter(TemplateOptions.SolutionName, MvxScaffoldingContext.UserSelectedOptions.SolutionName);
             replacementsDictionary.AddParameter(TemplateOptions.NetStandardVersion, MvxScaffoldingContext.UserSelectedOptions.SelectedNetStandard);
 
             replacementsDictionary.AddParameter(TemplateOptions.AndroidMinSdkVersion, MvxScaffoldingContext.UserSelectedOptions.SelectedMinAndroidSDK);
@@ -142,6 +148,13 @@ namespace MvxScaffolding.Vsix.Wizards
 
             replacementsDictionary.AddParameter(TemplateOptions.UwpMinSdkVersion, MvxScaffoldingContext.UserSelectedOptions.SelectedMinUwpSDK);
             replacementsDictionary.AddParameter(TemplateOptions.UwpAppDescription, MvxScaffoldingContext.UserSelectedOptions.UwpDescription);
+        }
+
+        public void UpdateReplacementsDictionary(Dictionary<string, string> replacementsDictionary)
+        {
+            replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName] = MvxScaffoldingContext.UserSelectedOptions.SolutionName;
+            replacementsDictionary[VSTemplateKeys.SolutionDirectory] += MvxScaffoldingContext.UserSelectedOptions.SolutionName;
+            replacementsDictionary[VSTemplateKeys.DestinationDirectory] += MvxScaffoldingContext.UserSelectedOptions.SolutionName + "\\";
         }
 
         public void ShowModal(System.Windows.Window dialog)

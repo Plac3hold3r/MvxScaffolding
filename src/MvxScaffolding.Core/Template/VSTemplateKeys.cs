@@ -12,5 +12,7 @@ namespace MvxScaffolding.Core.Template
         public const string SolutionDirectory = "$solutiondirectory$";
 
         public const string SafeProjectName = "$safeprojectname$";
+
+        public const string SpecifiedSolutionName = "$specifiedsolutionname$";
     }
 }
