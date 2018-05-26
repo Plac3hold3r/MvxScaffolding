@@ -121,6 +121,11 @@ namespace MvxScaffolding.UI.ViewModels
                 {
                     SelectedNavigationalItem = _navigationalViewModels[++SelectedViewModelIndex];
                 }
+
+                if (HasUpdatedNotification)
+                {
+                    DismissNotification();
+                }
             }
             else
             {
