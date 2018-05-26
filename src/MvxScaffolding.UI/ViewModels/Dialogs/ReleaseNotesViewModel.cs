@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -22,7 +22,7 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
         public string ReleaseNotes
         {
             get => _releaseNotes;
-            set { _releaseNotes = value; OnPropertyChanged(nameof(ReleaseNotes)); }
+            set => SetProperty(ref _releaseNotes, value);
         }
 
         public ReleaseNotesViewModel()
@@ -43,9 +43,9 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
 
         public override void OnDialogOpened()
         {
-            var asmLocation = Assembly.GetExecutingAssembly().Location;
-            var extensionDirectory = Path.GetDirectoryName(asmLocation);
-            var releaseNoteLocation = Path.Combine(extensionDirectory, "Resources/release_notes.md");
+            string asmLocation = Assembly.GetExecutingAssembly().Location;
+            string extensionDirectory = Path.GetDirectoryName(asmLocation);
+            string releaseNoteLocation = Path.Combine(extensionDirectory, "Resources/release_notes.md");
             ReleaseNotes = File.ReadAllText(releaseNoteLocation);
         }
     }
