@@ -24,9 +24,15 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-        <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
+        <materialDesign:TransitioningContent Grid.Row="1" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:1.2}">
             <materialDesign:Card
                 Width="400"
                 HorizontalAlignment="Center"
@@ -159,5 +165,173 @@
                 </StackPanel>
             </materialDesign:Card>
         </materialDesign:TransitioningContent>
+
+        <ItemsControl Grid.Row="1" Grid.Column="1">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="2" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+            <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
+                <materialDesign:Card Width="200" Margin="0,6">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <materialDesign:ColorZone VerticalAlignment="Stretch" Background="{StaticResource SingleViewColorBrush}">
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                FontSize="48"
+                                FontWeight="Bold"
+                                Text="SV" />
+                        </materialDesign:ColorZone>
+                        <Button
+                            Grid.Row="0"
+                            Margin="0,0,16,-20"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Bottom"
+                            Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}">
+                            <materialDesign:PackIcon Kind="CheckboxBlankOutline" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="8,24,8,0">
+                            <TextBlock FontWeight="Bold">Single View</TextBlock>
+                            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap">A great way to keep fit and forget about the constant grind of IT.</TextBlock>
+                        </StackPanel>
+                        <StackPanel
+                            Grid.Row="2"
+                            Margin="8"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+                            <materialDesign:PackIcon
+                                Width="30"
+                                Padding="2,0,2,0"
+                                Kind="Android"
+                                ToolTip="Android" />
+                            <materialDesign:PackIcon
+                                Width="30"
+                                Padding="2,0,2,0"
+                                Kind="AppleIos"
+                                ToolTip="iOS" />
+                            <materialDesign:PackIcon
+                                Width="30"
+                                Padding="2,0,2,0"
+                                Kind="Windows"
+                                ToolTip="UWP" />
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </materialDesign:TransitioningContent>
+
+            <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}" OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}">
+                <materialDesign:Card Width="200" Margin="0,6">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <materialDesign:ColorZone VerticalAlignment="Stretch" Background="{StaticResource NavigationMenuColorBrush}">
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                FontSize="48"
+                                FontWeight="Bold"
+                                Text="NM" />
+                        </materialDesign:ColorZone>
+                        <Button
+                            Grid.Row="0"
+                            Margin="0,0,16,-20"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Bottom"
+                            Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}">
+                            <materialDesign:PackIcon Kind="Check" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="8,24,8,0">
+                            <TextBlock FontWeight="Bold">Navigation Menu</TextBlock>
+                            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap">A great way to keep fit and forget about the constant grind of IT.</TextBlock>
+                        </StackPanel>
+                        <StackPanel
+                            Grid.Row="2"
+                            Margin="8"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+                            <materialDesign:PackIcon
+                                Width="30"
+                                Padding="2,0,2,0"
+                                Kind="Android"
+                                ToolTip="Android" />
+                            <materialDesign:PackIcon
+                                Width="30"
+                                Padding="2,0,2,0"
+                                Kind="AppleIos"
+                                ToolTip="iOS" />
+                            <materialDesign:PackIcon
+                                Width="30"
+                                Padding="2,0,2,0"
+                                Kind="Windows"
+                                ToolTip="UWP" />
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </materialDesign:TransitioningContent>
+
+            <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}" OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}">
+                <materialDesign:Card Width="200" Margin="0,6">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <materialDesign:ColorZone VerticalAlignment="Stretch" Background="{StaticResource BlankViewColorBrush}">
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                FontSize="48"
+                                FontWeight="Bold"
+                                Text="B" />
+                        </materialDesign:ColorZone>
+                        <Button
+                            Grid.Row="0"
+                            Margin="0,0,16,-20"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Bottom"
+                            Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}">
+                            <materialDesign:PackIcon Kind="CheckboxBlankOutline" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="8,24,8,0">
+                            <TextBlock FontWeight="Bold">Blank</TextBlock>
+                            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap">A great way to keep fit and forget about the constant grind of IT.</TextBlock>
+                        </StackPanel>
+                        <StackPanel
+                            Grid.Row="2"
+                            Margin="8"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+                            <materialDesign:PackIcon
+                                Width="30"
+                                Padding="2,0,2,0"
+                                Kind="Android"
+                                ToolTip="Android" />
+                            <materialDesign:PackIcon
+                                Width="30"
+                                Padding="2,0,2,0"
+                                Kind="AppleIos"
+                                ToolTip="iOS" />
+                            <materialDesign:PackIcon
+                                Width="30"
+                                Padding="2,0,2,0"
+                                Kind="Windows"
+                                ToolTip="UWP" />
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </materialDesign:TransitioningContent>
+
+        </ItemsControl>
     </Grid>
 </UserControl>
