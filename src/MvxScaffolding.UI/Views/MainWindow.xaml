@@ -150,11 +150,11 @@
 
             <materialDesign:TransitioningContent
                 Grid.Row="1"
-                Margin="0,0,0,16"
+                Margin="16,0,0,16"
                 Visibility="{Binding HasUpdatedNotification, Converter={StaticResource BooleanToVisibilityConverter}}">
                 <materialDesign:TransitioningContent.OpeningEffects>
                     <materialDesign:TransitionEffect Kind="FadeIn" Duration="0:0:1.5" />
-                    <materialDesign:TransitionEffect Kind="SlideInFromLeft" Duration="0:0:1.5" />
+                    <materialDesign:TransitionEffect Kind="SlideInFromBottom" Duration="0:0:1.5" />
                 </materialDesign:TransitioningContent.OpeningEffects>
                 <materialDesign:Card
                     HorizontalAlignment="Left"
