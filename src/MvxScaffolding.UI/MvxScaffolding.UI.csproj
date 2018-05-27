@@ -183,6 +183,7 @@
     <Compile Include="Converters\ActiveColorZoneModeConverter.cs" />
     <Compile Include="Converters\BoolToLocalizedStringConverter.cs" />
     <Compile Include="Converters\ProjectGroupToLocalizedString.cs" />
+    <Compile Include="Converters\SelectedPlatformTypeToIconConverter.cs" />
     <Compile Include="Converters\SelectedScaffoldTypeToIconConverter.cs" />
     <Compile Include="Converters\StringToUpperConverter.cs" />
     <Compile Include="Converters\SummaryHighlightColorConverter.cs" />

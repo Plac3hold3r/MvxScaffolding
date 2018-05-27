@@ -11,7 +11,6 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
-using MaterialDesignThemes.Wpf;
 using MvxScaffolding.Core.Contexts;
 using MvxScaffolding.Core.Template;
 using MvxScaffolding.Localization.Resources;
@@ -238,28 +237,12 @@ namespace MvxScaffolding.UI.ViewModels
             set => SetProperty(ref _hasAndroid, value);
         }
 
-        private PackIconKind _androidIncludeIcon;
-
-        public PackIconKind AndroidIncludeIcon
-        {
-            get => _androidIncludeIcon;
-            set => SetProperty(ref _androidIncludeIcon, value);
-        }
-
         private bool _hasIos;
 
         public bool HasIos
         {
             get => _hasIos;
             set => SetProperty(ref _hasIos, value);
-        }
-
-        private PackIconKind _iosIncludeIcon;
-
-        public PackIconKind IosIncludeIcon
-        {
-            get => _iosIncludeIcon;
-            set => SetProperty(ref _iosIncludeIcon, value);
         }
 
         private bool _hasUwp;
@@ -273,14 +256,6 @@ namespace MvxScaffolding.UI.ViewModels
                 if (!value)
                     ValidateModelProperty(value, nameof(UwpDescription));
             }
-        }
-
-        private PackIconKind _uwpIncludeIcon;
-
-        public PackIconKind UwpIncludeIcon
-        {
-            get => _uwpIncludeIcon;
-            set => SetProperty(ref _uwpIncludeIcon, value);
         }
 
         public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
@@ -355,12 +330,8 @@ namespace MvxScaffolding.UI.ViewModels
             HasUwpUiTestProject = false;
 
             HasAndroid = true;
-            AndroidIncludeIcon = PackIconKind.Check;
             HasIos = true;
-            IosIncludeIcon = PackIconKind.Check;
             HasUwp = false;
-            UwpIncludeIcon = PackIconKind.Plus;
-
         }
     }
 }

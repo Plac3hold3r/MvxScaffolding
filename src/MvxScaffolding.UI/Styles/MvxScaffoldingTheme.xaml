@@ -43,6 +43,7 @@
     <converters:ProjectGroupToLocalizedString x:Key="ProjectGroupToLocalizedString" />
     <converters:RequiredLabelConverter x:Key="RequiredLabelConverter" />
     <converters:SelectedScaffoldTypeToIconConverter x:Key="SelectedScaffoldTypeToIconConverter" />
+    <converters:SelectedPlatformTypeToIconConverter x:Key="SelectedPlatformTypeToIconConverter" />
     <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
     <Style
