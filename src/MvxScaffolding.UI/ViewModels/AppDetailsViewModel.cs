@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -15,12 +15,14 @@ namespace MvxScaffolding.UI.ViewModels
     public class AppDetailsViewModel : BaseViewModel, IValidationViewModel
     {
         public ICommand GoToGitHubCommand { get; }
+        public ICommand SelectScaffoldTypeCommand { get; }
 
         public AppDetailsViewModel(WizardOptionViewModel options)
         {
             Options = options;
 
             GoToGitHubCommand = new RelayCommand(GoToGitHubLink);
+            SelectScaffoldTypeCommand = new RelayCommand<ScaffoldType>(SelectScaffoldType);
         }
 
         public WizardOptionViewModel Options { get; private set; }
@@ -32,6 +34,11 @@ namespace MvxScaffolding.UI.ViewModels
         private void GoToGitHubLink()
         {
             OpenLink(Config.Current.GitHubUri, TemplateLinks.GitHub);
+        }
+
+        private void SelectScaffoldType(ScaffoldType scaffoldType)
+        {
+            Options.SelectedScaffoldType = scaffoldType;
         }
 
         public bool Validate()

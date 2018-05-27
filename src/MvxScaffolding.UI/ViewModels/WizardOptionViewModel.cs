@@ -68,6 +68,14 @@ namespace MvxScaffolding.UI.ViewModels
             set => SetProperty(ref _hasEditorConfig, value);
         }
 
+        private ScaffoldType _selectedScaffoldType;
+
+        public ScaffoldType SelectedScaffoldType
+        {
+            get => _selectedScaffoldType;
+            set => SetProperty(ref _selectedScaffoldType, value);
+        }
+
         private string _selectedProjectGrouping;
 
         public string SelectedProjectGrouping
@@ -318,6 +326,7 @@ namespace MvxScaffolding.UI.ViewModels
             SelectedProjectGrouping = TemplateChoices.ProjectGroupingOptionDefault;
 
             HasEditorConfig = true;
+            SelectedScaffoldType = ScaffoldType.SingleView;
 
             NetStandardOptions = TemplateChoices.NetStandardOptions;
             SelectedNetStandard = TemplateChoices.NetStandardOptionDefault;
