@@ -35,7 +35,7 @@ namespace MvxScaffolding.UI.ViewModels
             }
         }
 
-        private string _appId = $"com.{ MvxScaffoldingContext.ProjectName.ToLower() }";
+        private string _appId = $"com.{ MvxScaffoldingContext.SafeProjectName.ToLower() }";
         [Required(ErrorMessageResourceName = nameof(LocalResources.AppDetails_Validation_Identifier), ErrorMessageResourceType = typeof(LocalResources))]
         public string AppId
         {
@@ -59,7 +59,7 @@ namespace MvxScaffolding.UI.ViewModels
             }
         }
 
-        private string _projectName = MvxScaffoldingContext.ProjectName;
+        private string _projectName = MvxScaffoldingContext.SafeProjectName;
         [Required(ErrorMessageResourceName = nameof(LocalResources.AppDetails_Validation_ProjectName), ErrorMessageResourceType = typeof(LocalResources))]
         public string ProjectName
         {

@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -26,6 +26,11 @@ namespace MvxScaffolding.Vsix.Wizards
         public static string AsParameter(this string templateOption)
         {
             return $"$passthrough:{templateOption}$";
+        }
+
+        public static string MakeSafe(this string name)
+        {
+            return name.Replace(" ", "_");
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -22,7 +22,9 @@ namespace MvxScaffolding.Core.Contexts
 
         public static string WizardName { get; set; } = "MvxScaffolding";
 
-        public static string ProjectName { get; set; } = "TestProject";
+        public static string ProjectName { get; set; } = "Test Project";
+
+        public static string SafeProjectName { get; set; } = "Test_Project";
 
         public static string SolutionName { get; set; } = "SolutionProject";
 

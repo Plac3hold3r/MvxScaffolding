@@ -55,7 +55,8 @@ namespace MvxScaffolding.Vsix.Wizards
             {
                 MvxScaffoldingContext.WizardVersion = new Version(ThisAssembly.Vsix.Version);
                 MvxScaffoldingContext.WizardName = ThisAssembly.Vsix.Name;
-                MvxScaffoldingContext.ProjectName = replacementsDictionary[VSTemplateKeys.SafeProjectName];
+                MvxScaffoldingContext.ProjectName = replacementsDictionary[VSTemplateKeys.ProjectName];
+                MvxScaffoldingContext.SafeProjectName = replacementsDictionary[VSTemplateKeys.SafeProjectName];
                 MvxScaffoldingContext.SolutionName = replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName];
 
                 RemoveOldSolutionDirectory(automationObject, replacementsDictionary);
@@ -147,7 +148,7 @@ namespace MvxScaffolding.Vsix.Wizards
             replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName] = MvxScaffoldingContext.UserSelectedOptions.SolutionName;
             replacementsDictionary[VSTemplateKeys.SolutionDirectory] += MvxScaffoldingContext.UserSelectedOptions.SolutionName;
             replacementsDictionary[VSTemplateKeys.DestinationDirectory] += MvxScaffoldingContext.UserSelectedOptions.SolutionName + "\\";
-            replacementsDictionary[VSTemplateKeys.SafeProjectName] += MvxScaffoldingContext.UserSelectedOptions.ProjectName;
+            replacementsDictionary[VSTemplateKeys.ProjectName] = MvxScaffoldingContext.UserSelectedOptions.ProjectName.MakeSafe();
         }
 
         public void ShowModal(System.Windows.Window dialog)
