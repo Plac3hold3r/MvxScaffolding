@@ -438,4 +438,34 @@
   <data name="ReleaseNotes_GitHub_Link" xml:space="preserve">
     <value>GitHub</value>
   </data>
+  <data name="AppDetails_Solution_Name" xml:space="preserve">
+    <value>Solution Name</value>
+  </data>
+  <data name="AppDetails_Validation_SolutionName" xml:space="preserve">
+    <value>Solution name required</value>
+  </data>
+  <data name="AppDetails_Template_Blank" xml:space="preserve">
+    <value>Blank</value>
+  </data>
+  <data name="AppDetails_Template_Blank_Description" xml:space="preserve">
+    <value>Scaffold an app with no starting views and view models.</value>
+  </data>
+  <data name="AppDetails_Template_NavigationMenu" xml:space="preserve">
+    <value>Navigation Menu</value>
+  </data>
+  <data name="AppDetails_Template_NavigationMenu_Description" xml:space="preserve">
+    <value>Scaffold an app with a slide out menu. Template contains two starting views with view models.</value>
+  </data>
+  <data name="AppDetails_Template_SingleView" xml:space="preserve">
+    <value>Single View</value>
+  </data>
+  <data name="AppDetails_Template_SingleView_Description" xml:space="preserve">
+    <value>Scaffold an app with a single starting view and view model.</value>
+  </data>
+  <data name="AppDetails_Project_Name" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="AppDetails_Validation_ProjectName" xml:space="preserve">
+    <value>Project name required</value>
+  </data>
 </root>
