@@ -1,10 +1,9 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
 using System.Windows.Input;
-using MaterialDesignThemes.Wpf;
 using MvxScaffolding.Core.Configuration;
 using MvxScaffolding.Core.Template;
 using MvxScaffolding.UI.Commands;
@@ -36,19 +35,16 @@ namespace MvxScaffolding.UI.ViewModels
         private void ToggleAndroid()
         {
             Options.HasAndroid = !Options.HasAndroid;
-            Options.AndroidIncludeIcon = Options.HasAndroid ? PackIconKind.Check : PackIconKind.Plus;
         }
 
         private void ToggleIos()
         {
             Options.HasIos = !Options.HasIos;
-            Options.IosIncludeIcon = Options.HasIos ? PackIconKind.Check : PackIconKind.Plus;
         }
 
         private void ToggleUwp()
         {
             Options.HasUwp = !Options.HasUwp;
-            Options.UwpIncludeIcon = Options.HasUwp ? PackIconKind.Check : PackIconKind.Plus;
         }
 
         private void ShowPlatformMarketShare(PlatformType platform)

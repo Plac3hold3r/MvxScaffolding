@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -11,7 +11,6 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
-using MaterialDesignThemes.Wpf;
 using MvxScaffolding.Core.Contexts;
 using MvxScaffolding.Core.Template;
 using MvxScaffolding.Localization.Resources;
@@ -31,8 +30,7 @@ namespace MvxScaffolding.UI.ViewModels
             get => _appName;
             set
             {
-                _appName = value;
-                OnPropertyChanged(nameof(AppName));
+                SetProperty(ref _appName, value);
                 ValidateModelProperty(value, nameof(AppName));
             }
         }
@@ -44,8 +42,7 @@ namespace MvxScaffolding.UI.ViewModels
             get => _appId;
             set
             {
-                _appId = value;
-                OnPropertyChanged(nameof(AppId));
+                SetProperty(ref _appId, value);
                 ValidateModelProperty(value, nameof(AppId));
             }
         }
@@ -57,8 +54,7 @@ namespace MvxScaffolding.UI.ViewModels
             get => _solutionName;
             set
             {
-                _solutionName = value;
-                OnPropertyChanged(nameof(SolutionName));
+                SetProperty(ref _solutionName, value);
                 ValidateModelProperty(value, nameof(SolutionName));
             }
         }
@@ -68,7 +64,15 @@ namespace MvxScaffolding.UI.ViewModels
         public bool HasEditorConfig
         {
             get => _hasEditorConfig;
-            set { _hasEditorConfig = value; OnPropertyChanged(nameof(HasEditorConfig)); }
+            set => SetProperty(ref _hasEditorConfig, value);
+        }
+
+        private ScaffoldType _selectedScaffoldType;
+
+        public ScaffoldType SelectedScaffoldType
+        {
+            get => _selectedScaffoldType;
+            set => SetProperty(ref _selectedScaffoldType, value);
         }
 
         private string _selectedProjectGrouping;
@@ -76,7 +80,7 @@ namespace MvxScaffolding.UI.ViewModels
         public string SelectedProjectGrouping
         {
             get => _selectedProjectGrouping;
-            set { _selectedProjectGrouping = value; OnPropertyChanged(nameof(SelectedProjectGrouping)); }
+            set => SetProperty(ref _selectedProjectGrouping, value);
         }
 
         public Dictionary<string, string> ProjectGroupingOptions { get; }
@@ -86,7 +90,7 @@ namespace MvxScaffolding.UI.ViewModels
         public string SelectedNetStandard
         {
             get => _selectedNetStandard;
-            set { _selectedNetStandard = value; OnPropertyChanged(nameof(SelectedNetStandard)); }
+            set => SetProperty(ref _selectedNetStandard, value);
         }
 
         public Dictionary<string, string> NetStandardOptions { get; }
@@ -96,7 +100,7 @@ namespace MvxScaffolding.UI.ViewModels
         public bool HasCoreUnitTestProject
         {
             get => _hasCoreUnitTestProject;
-            set { _hasCoreUnitTestProject = value; OnPropertyChanged(nameof(HasCoreUnitTestProject)); }
+            set => SetProperty(ref _hasCoreUnitTestProject, value);
         }
 
         private string _selectedMinAndroidSDK;
@@ -104,7 +108,7 @@ namespace MvxScaffolding.UI.ViewModels
         public string SelectedMinAndroidSDK
         {
             get => _selectedMinAndroidSDK;
-            set { _selectedMinAndroidSDK = value; OnPropertyChanged(nameof(SelectedMinAndroidSDK)); }
+            set => SetProperty(ref _selectedMinAndroidSDK, value);
         }
 
         public Dictionary<string, string> MinAndroidSDKOptions { get; }
@@ -114,7 +118,7 @@ namespace MvxScaffolding.UI.ViewModels
         public bool HasAndroidUnitTestProject
         {
             get => _hasAndroidUnitTestProject;
-            set { _hasAndroidUnitTestProject = value; OnPropertyChanged(nameof(HasAndroidUnitTestProject)); }
+            set => SetProperty(ref _hasAndroidUnitTestProject, value);
         }
 
         private bool _hasAndroidUiTestProject;
@@ -136,7 +140,7 @@ namespace MvxScaffolding.UI.ViewModels
         public bool HasAndroidXml
         {
             get => _hasAndroidXml;
-            set { _hasAndroidXml = value; OnPropertyChanged(nameof(HasAndroidXml)); }
+            set => SetProperty(ref _hasAndroidXml, value);
         }
 
         private string _selectedMinIosSDK;
@@ -144,7 +148,7 @@ namespace MvxScaffolding.UI.ViewModels
         public string SelectedMinIosSDK
         {
             get => _selectedMinIosSDK;
-            set { _selectedMinIosSDK = value; OnPropertyChanged(nameof(SelectedMinIosSDK)); }
+            set => SetProperty(ref _selectedMinIosSDK, value);
         }
 
         public Dictionary<string, string> MinIosSDKOptions { get; }
@@ -154,7 +158,7 @@ namespace MvxScaffolding.UI.ViewModels
         public bool HasIosUnitTestProject
         {
             get => _hasIosUnitTestProject;
-            set { _hasIosUnitTestProject = value; OnPropertyChanged(nameof(HasIosUnitTestProject)); }
+            set => SetProperty(ref _hasIosUnitTestProject, value);
         }
 
         private bool _hasIosUiTestProject;
@@ -176,7 +180,7 @@ namespace MvxScaffolding.UI.ViewModels
         public bool HasIosFluentLayout
         {
             get => _hasIosFluentLayout;
-            set { _hasIosFluentLayout = value; OnPropertyChanged(nameof(HasIosFluentLayout)); }
+            set => SetProperty(ref _hasIosFluentLayout, value);
         }
 
         private bool _hasIosHyperion;
@@ -184,7 +188,7 @@ namespace MvxScaffolding.UI.ViewModels
         public bool HasIosHyperion
         {
             get => _hasIosHyperion;
-            set { _hasIosHyperion = value; OnPropertyChanged(nameof(HasIosHyperion)); }
+            set => SetProperty(ref _hasIosHyperion, value);
         }
 
         private string _uwpDescription;
@@ -194,8 +198,7 @@ namespace MvxScaffolding.UI.ViewModels
             get => _uwpDescription;
             set
             {
-                _uwpDescription = value;
-                OnPropertyChanged(nameof(UwpDescription));
+                SetProperty(ref _uwpDescription, value);
                 ValidateModelProperty(value, nameof(UwpDescription));
             }
         }
@@ -205,7 +208,7 @@ namespace MvxScaffolding.UI.ViewModels
         public string SelectedMinUwpSDK
         {
             get => _selectedMinUwpSDK;
-            set { _selectedMinUwpSDK = value; OnPropertyChanged(nameof(SelectedMinUwpSDK)); }
+            set => SetProperty(ref _selectedMinUwpSDK, value);
         }
 
         public Dictionary<string, string> MinUwpSDKOptions { get; }
@@ -215,7 +218,7 @@ namespace MvxScaffolding.UI.ViewModels
         public bool HasUwpUnitTestProject
         {
             get => _hasUwpUnitTestProject;
-            set { _hasUwpUnitTestProject = value; OnPropertyChanged(nameof(HasUwpUnitTestProject)); }
+            set => SetProperty(ref _hasUwpUnitTestProject, value);
         }
 
         private bool _hasUwpUiTestProject;
@@ -223,7 +226,7 @@ namespace MvxScaffolding.UI.ViewModels
         public bool HasUwpUiTestProject
         {
             get => _hasUwpUiTestProject;
-            set { _hasUwpUiTestProject = value; OnPropertyChanged(nameof(HasUwpUiTestProject)); }
+            set => SetProperty(ref _hasUwpUiTestProject, value);
         }
 
         private bool _hasAndroid;
@@ -231,15 +234,7 @@ namespace MvxScaffolding.UI.ViewModels
         public bool HasAndroid
         {
             get => _hasAndroid;
-            set { _hasAndroid = value; OnPropertyChanged(nameof(HasAndroid)); }
-        }
-
-        private PackIconKind _androidIncludeIcon;
-
-        public PackIconKind AndroidIncludeIcon
-        {
-            get => _androidIncludeIcon;
-            set { _androidIncludeIcon = value; OnPropertyChanged(nameof(AndroidIncludeIcon)); }
+            set => SetProperty(ref _hasAndroid, value);
         }
 
         private bool _hasIos;
@@ -247,15 +242,7 @@ namespace MvxScaffolding.UI.ViewModels
         public bool HasIos
         {
             get => _hasIos;
-            set { _hasIos = value; OnPropertyChanged(nameof(HasIos)); }
-        }
-
-        private PackIconKind _iosIncludeIcon;
-
-        public PackIconKind IosIncludeIcon
-        {
-            get => _iosIncludeIcon;
-            set { _iosIncludeIcon = value; OnPropertyChanged(nameof(IosIncludeIcon)); }
+            set => SetProperty(ref _hasIos, value);
         }
 
         private bool _hasUwp;
@@ -265,19 +252,10 @@ namespace MvxScaffolding.UI.ViewModels
             get => _hasUwp;
             set
             {
-                _hasUwp = value;
-                OnPropertyChanged(nameof(HasUwp));
+                SetProperty(ref _hasUwp, value);
                 if (!value)
                     ValidateModelProperty(value, nameof(UwpDescription));
             }
-        }
-
-        private PackIconKind _uwpIncludeIcon;
-
-        public PackIconKind UwpIncludeIcon
-        {
-            get => _uwpIncludeIcon;
-            set { _uwpIncludeIcon = value; OnPropertyChanged(nameof(UwpIncludeIcon)); }
         }
 
         public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
@@ -323,6 +301,7 @@ namespace MvxScaffolding.UI.ViewModels
             SelectedProjectGrouping = TemplateChoices.ProjectGroupingOptionDefault;
 
             HasEditorConfig = true;
+            SelectedScaffoldType = ScaffoldType.SingleView;
 
             NetStandardOptions = TemplateChoices.NetStandardOptions;
             SelectedNetStandard = TemplateChoices.NetStandardOptionDefault;
@@ -351,12 +330,8 @@ namespace MvxScaffolding.UI.ViewModels
             HasUwpUiTestProject = false;
 
             HasAndroid = true;
-            AndroidIncludeIcon = PackIconKind.Check;
             HasIos = true;
-            IosIncludeIcon = PackIconKind.Check;
             HasUwp = false;
-            UwpIncludeIcon = PackIconKind.Plus;
-
         }
     }
 }

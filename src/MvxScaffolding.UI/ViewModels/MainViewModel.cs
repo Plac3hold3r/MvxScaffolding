@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -39,7 +39,7 @@ namespace MvxScaffolding.UI.ViewModels
         public int SelectedViewModelIndex
         {
             get => _selectedViewModelIndex;
-            set { _selectedViewModelIndex = value; OnPropertyChanged(nameof(SelectedViewModelIndex)); }
+            set => SetProperty(ref _selectedViewModelIndex, value);
         }
 
         private NavigationalViewModel _selectedNavigationalItem;
@@ -70,7 +70,7 @@ namespace MvxScaffolding.UI.ViewModels
         public bool HasUpdatedNotification
         {
             get => _hasUpdatedNotification;
-            set { _hasUpdatedNotification = value; OnPropertyChanged(nameof(HasUpdatedNotification)); }
+            set => SetProperty(ref _hasUpdatedNotification, value);
         }
 
         public MainViewModel()
@@ -115,10 +115,17 @@ namespace MvxScaffolding.UI.ViewModels
         {
             if (SelectedViewModelIndex + 1 < _navigationalViewModels.Count)
             {
-                if (_navigationalViewModels[SelectedViewModelIndex].ViewModel is IValidationViewModel validationViewModel && !validationViewModel.Validate())
-                    return;
+                var validationViewModel = _navigationalViewModels[SelectedViewModelIndex].ViewModel as IValidationViewModel;
 
-                SelectedNavigationalItem = _navigationalViewModels[++SelectedViewModelIndex];
+                if (validationViewModel is null || validationViewModel.Validate())
+                {
+                    SelectedNavigationalItem = _navigationalViewModels[++SelectedViewModelIndex];
+                }
+
+                if (HasUpdatedNotification)
+                {
+                    DismissNotification();
+                }
             }
             else
             {

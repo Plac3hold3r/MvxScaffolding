@@ -43,6 +43,14 @@
     <Color x:Key="Accent700">#4c555a</Color>
     <Color x:Key="Accent700Foreground">#DDFFFFFF</Color>
 
+    <Color x:Key="SingleView">#d6ab4f</Color>
+    <Color x:Key="NavigationMenu">#24a3b7</Color>
+    <Color x:Key="BlankView">#b73724</Color>
+
+    <SolidColorBrush x:Key="SingleViewColorBrush" Color="{StaticResource SingleView}" />
+    <SolidColorBrush x:Key="NavigationMenuColorBrush" Color="{StaticResource NavigationMenu}" />
+    <SolidColorBrush x:Key="BlankViewColorBrush" Color="{StaticResource BlankView}" />
+
     <SolidColorBrush x:Key="PrimaryColorBrush" Color="{StaticResource Primary500}" />
     <SolidColorBrush x:Key="PrimaryDarkColorBrush" Color="{StaticResource Primary800}" />
     <SolidColorBrush x:Key="PrimaryLightColorBrush" Color="{StaticResource Primary300}" />

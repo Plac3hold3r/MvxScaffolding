@@ -223,6 +223,60 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Blank.
+        /// </summary>
+        public static string AppDetails_Template_Blank {
+            get {
+                return ResourceManager.GetString("AppDetails_Template_Blank", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scaffold an app with no starting views and view models..
+        /// </summary>
+        public static string AppDetails_Template_Blank_Description {
+            get {
+                return ResourceManager.GetString("AppDetails_Template_Blank_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Navigation Menu.
+        /// </summary>
+        public static string AppDetails_Template_NavigationMenu {
+            get {
+                return ResourceManager.GetString("AppDetails_Template_NavigationMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scaffold an app with a side out menu. Template contains two starting views with view models..
+        /// </summary>
+        public static string AppDetails_Template_NavigationMenu_Description {
+            get {
+                return ResourceManager.GetString("AppDetails_Template_NavigationMenu_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Single View.
+        /// </summary>
+        public static string AppDetails_Template_SingleView {
+            get {
+                return ResourceManager.GetString("AppDetails_Template_SingleView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scaffold an app with a single starting view and view model..
+        /// </summary>
+        public static string AppDetails_Template_SingleView_Description {
+            get {
+                return ResourceManager.GetString("AppDetails_Template_SingleView_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Application name required.
         /// </summary>
         public static string AppDetails_Validation_Display_Name {
