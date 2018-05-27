@@ -43,9 +43,9 @@ namespace MvxScaffolding.UI.ViewModels.Dialogs
 
         public override void OnDialogOpened()
         {
-            string asmLocation = Assembly.GetExecutingAssembly().Location;
-            string extensionDirectory = Path.GetDirectoryName(asmLocation);
-            string releaseNoteLocation = Path.Combine(extensionDirectory, "Resources/release_notes.md");
+            var asmLocation = Assembly.GetExecutingAssembly().Location;
+            var extensionDirectory = Path.GetDirectoryName(asmLocation);
+            var releaseNoteLocation = Path.Combine(extensionDirectory, "Resources/release_notes.md");
             ReleaseNotes = File.ReadAllText(releaseNoteLocation);
         }
     }

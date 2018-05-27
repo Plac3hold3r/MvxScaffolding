@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -76,7 +76,6 @@ namespace MvxScaffolding.Core.Diagnostics
         {
             if (disposing)
             {
-                // free managed resources
                 foreach (IWriter writer in Writers)
                 {
                     if (writer is IDisposable disposableWriter)
@@ -85,8 +84,6 @@ namespace MvxScaffolding.Core.Diagnostics
                     }
                 }
             }
-
-            // free native resources if any.
         }
     }
 }

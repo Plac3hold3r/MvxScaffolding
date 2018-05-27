@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -6,7 +6,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using EnvDTE;
 using EnvDTE80;
 using Microsoft.Internal.VisualStudio.PlatformUI;
@@ -69,11 +68,6 @@ namespace MvxScaffolding.Vsix.Wizards
 
                     if (MvxScaffoldingContext.UserSelectedOptions is null)
                     {
-                        var projectDirectory = replacementsDictionary[VSTemplateKeys.DestinationDirectory];
-                        var solutionDirectory = replacementsDictionary[VSTemplateKeys.SolutionDirectory];
-
-                        CleanupDirectories(projectDirectory, solutionDirectory);
-
                         Logger.Current.Telemetry.TrackWizardCancelledAsync(MvxScaffoldingContext.RunningTimer.Elapsed.TotalSeconds)
                             .FireAndForget();
 
@@ -106,10 +100,8 @@ namespace MvxScaffolding.Vsix.Wizards
 
             var oldDestinationDirectory = replacementsDictionary[VSTemplateKeys.DestinationDirectory];
             var solutionRootDirectory = Path.GetFullPath(Path.Combine(oldDestinationDirectory, @"..\"));
-            if (Directory.Exists(solutionRootDirectory))
-            {
-                Directory.Delete(solutionRootDirectory, true);
-            }
+
+            FileSystemUtils.SafeDeleteDirectory(solutionRootDirectory);
 
             var rootFolderDictionary = Path.GetFullPath(Path.Combine(solutionRootDirectory, @"..\"));
             replacementsDictionary[VSTemplateKeys.DestinationDirectory] = rootFolderDictionary;
@@ -155,6 +147,7 @@ namespace MvxScaffolding.Vsix.Wizards
             replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName] = MvxScaffoldingContext.UserSelectedOptions.SolutionName;
             replacementsDictionary[VSTemplateKeys.SolutionDirectory] += MvxScaffoldingContext.UserSelectedOptions.SolutionName;
             replacementsDictionary[VSTemplateKeys.DestinationDirectory] += MvxScaffoldingContext.UserSelectedOptions.SolutionName + "\\";
+            replacementsDictionary[VSTemplateKeys.SafeProjectName] += MvxScaffoldingContext.UserSelectedOptions.ProjectName;
         }
 
         public void ShowModal(System.Windows.Window dialog)
@@ -184,17 +177,5 @@ namespace MvxScaffolding.Vsix.Wizards
         }, true);
 
         private IVsUIShell UIShell => _uiShell.Value;
-
-        private void CleanupDirectories(string projectDirectory, string solutionDirectory)
-        {
-            FileSystemUtils.SafeDeleteDirectory(projectDirectory);
-
-            if (Directory.Exists(solutionDirectory)
-                && !Directory.EnumerateDirectories(solutionDirectory).Any()
-                && !Directory.EnumerateFiles(solutionDirectory).Any())
-            {
-                FileSystemUtils.SafeDeleteDirectory(solutionDirectory);
-            }
-        }
     }
 }
