@@ -172,7 +172,10 @@
             </materialDesign:Card>
         </materialDesign:TransitioningContent>
 
-        <ItemsControl Grid.Row="1" Grid.Column="1">
+        <ItemsControl
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,0,24,0">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid Columns="2" />
@@ -184,7 +187,7 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="90" />
-                            <RowDefinition Height="110" />
+                            <RowDefinition Height="120" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <materialDesign:ColorZone VerticalAlignment="Stretch" Background="{StaticResource SingleViewColorBrush}">
@@ -261,7 +264,7 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="90" />
-                            <RowDefinition Height="110" />
+                            <RowDefinition Height="120" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <materialDesign:ColorZone VerticalAlignment="Stretch" Background="{StaticResource NavigationMenuColorBrush}">
@@ -338,7 +341,7 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="90" />
-                            <RowDefinition Height="110" />
+                            <RowDefinition Height="120" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <materialDesign:ColorZone VerticalAlignment="Stretch" Background="{StaticResource BlankViewColorBrush}">
