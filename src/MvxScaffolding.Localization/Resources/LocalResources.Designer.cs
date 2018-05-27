@@ -250,7 +250,7 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Scaffold an app with a side out menu. Template contains two starting views with view models..
+        ///   Looks up a localized string similar to Scaffold an app with a slide out menu. Template contains two starting views with view models..
         /// </summary>
         public static string AppDetails_Template_NavigationMenu_Description {
             get {

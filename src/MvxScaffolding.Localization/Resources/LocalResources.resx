@@ -454,7 +454,7 @@
     <value>Navigation Menu</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu_Description" xml:space="preserve">
-    <value>Scaffold an app with a side out menu. Template contains two starting views with view models.</value>
+    <value>Scaffold an app with a slide out menu. Template contains two starting views with view models.</value>
   </data>
   <data name="AppDetails_Template_SingleView" xml:space="preserve">
     <value>Single View</value>
