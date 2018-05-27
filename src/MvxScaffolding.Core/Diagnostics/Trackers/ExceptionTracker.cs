@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -23,7 +23,7 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
             }
             catch (Exception exception)
             {
-                Trace.TraceError($"Error writing exception data to listeners. Exception:\r\n{exception.ToString()}");
+                Trace.TraceError($"Error writing exception data to listeners. Exception:\r\n{ exception.ToString() }");
             }
         }
     }

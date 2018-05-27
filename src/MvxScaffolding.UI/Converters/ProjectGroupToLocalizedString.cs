@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -15,7 +15,7 @@ namespace MvxScaffolding.UI.Converters
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value is string projectGroupOption
-                && TemplateChoices.ProjectGroupingOptions.TryGetValue(projectGroupOption, out string displayOption))
+                && TemplateChoices.ProjectGroupingOptions.TryGetValue(projectGroupOption, out var displayOption))
             {
                 return displayOption;
             }

@@ -93,10 +93,15 @@
                             FontWeight="Bold"
                             Text="{x:Static l10n:LocalResources.AppDetails_Solution}" />
                         <TextBox
-                            Margin="0,4,0,8"
+                            Margin="0,4,0,0"
                             materialDesign:HintAssist.Hint="{Binding Source={x:Static l10n:LocalResources.AppDetails_Solution_Name}, Converter={StaticResource RequiredLabelConverter}}"
                             materialDesign:HintAssist.IsFloating="True"
                             Text="{Binding Options.SolutionName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
+                        <TextBox
+                            Margin="0,16,0,12"
+                            materialDesign:HintAssist.Hint="{Binding Source={x:Static l10n:LocalResources.AppDetails_Project_Name}, Converter={StaticResource RequiredLabelConverter}}"
+                            materialDesign:HintAssist.IsFloating="True"
+                            Text="{Binding Options.ProjectName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
                         <DockPanel
                             Grid.Row="0"
                             Margin="0,4,0,0"
@@ -167,7 +172,10 @@
             </materialDesign:Card>
         </materialDesign:TransitioningContent>
 
-        <ItemsControl Grid.Row="1" Grid.Column="1">
+        <ItemsControl
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,0,24,0">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid Columns="2" />
@@ -179,7 +187,7 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="90" />
-                            <RowDefinition Height="110" />
+                            <RowDefinition Height="120" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <materialDesign:ColorZone VerticalAlignment="Stretch" Background="{StaticResource SingleViewColorBrush}">
@@ -256,7 +264,7 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="90" />
-                            <RowDefinition Height="110" />
+                            <RowDefinition Height="120" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <materialDesign:ColorZone VerticalAlignment="Stretch" Background="{StaticResource NavigationMenuColorBrush}">
@@ -333,7 +341,7 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="90" />
-                            <RowDefinition Height="110" />
+                            <RowDefinition Height="120" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <materialDesign:ColorZone VerticalAlignment="Stretch" Background="{StaticResource BlankViewColorBrush}">
