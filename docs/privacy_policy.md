@@ -4,11 +4,11 @@ MvxScaffolding was built as an Open Source MvvmCross template. This template is 
 
 This page is used to inform users regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our template wizards.
 
-If you choose to use our template wizards, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the template wizards. We will not use or share your information with anyone except as described in this Privacy Policy.
+If you choose to use our template wizards, then you agree to the collection and use of information in relation to this policy. The telemetry data that we collect is used for providing and improving the template wizards. We will not use or share your information with anyone except as described in this Privacy Policy.
 
 ### Information Collection and Use
 
-For a better experience, while using the template wizards, we may require you to provide us with certain personally identifiable information.
+For a better experience, while using the template wizards, we make use of collecting Visual Studio telemetry data, as well as template options taken stripped of personal information e.g. application name or application identifiers. We do not require the user of the template wizard to provide us with any personally identifiable information.
 
 The template wizard does use third party services that may collect information used to identify you.
 
@@ -38,4 +38,4 @@ If you have any questions or suggestions about our Privacy Policy, do not hesita
 
 This privacy policy page was originally created at [privacypolicytemplate.net](https://privacypolicytemplate.net/)
 
-Last Update Date: ___23 February 2018___
+Last Update Date: ___27 March 2018___
