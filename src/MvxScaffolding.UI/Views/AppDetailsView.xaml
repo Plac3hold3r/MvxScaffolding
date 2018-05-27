@@ -213,7 +213,7 @@
                                     </Style.Setters>
                                 </Style>
                             </Button.Style>
-                            <materialDesign:PackIcon Kind="Check" />
+                            <materialDesign:PackIcon Kind="{Binding Options.SelectedScaffoldType, Converter={StaticResource SelectedScaffoldTypeToIconConverter}, ConverterParameter={x:Static coreTemplate:ScaffoldType.SingleView}}" />
                         </Button>
                         <StackPanel Grid.Row="1" Margin="8,12,8,0">
                             <TextBlock
@@ -290,7 +290,7 @@
                                     </Style.Setters>
                                 </Style>
                             </Button.Style>
-                            <materialDesign:PackIcon Kind="CheckboxBlankOutline" />
+                            <materialDesign:PackIcon Kind="{Binding Options.SelectedScaffoldType, Converter={StaticResource SelectedScaffoldTypeToIconConverter}, ConverterParameter={x:Static coreTemplate:ScaffoldType.NavigationMenu}}" />
                         </Button>
                         <StackPanel Grid.Row="1" Margin="8,12,8,0">
                             <TextBlock
@@ -367,7 +367,7 @@
                                     </Style.Setters>
                                 </Style>
                             </Button.Style>
-                            <materialDesign:PackIcon Kind="CheckboxBlankOutline" />
+                            <materialDesign:PackIcon Kind="{Binding Options.SelectedScaffoldType, Converter={StaticResource SelectedScaffoldTypeToIconConverter}, ConverterParameter={x:Static coreTemplate:ScaffoldType.Blank}}" />
                         </Button>
                         <StackPanel Grid.Row="1" Margin="8,12,8,0">
                             <TextBlock
