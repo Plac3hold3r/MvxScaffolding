@@ -8,7 +8,7 @@ If you choose to use our template wizards, then you agree to the collection and 
 
 ### Information Collection and Use
 
-For a better experience, while using the template wizards, we make use of collecting Visual Studio telemetry data, as well as template options taken stripped of personal information e.g. application name or application identifiers. We do not require the user of the template wizard to provide us with any personally identifiable information.
+For a better experience, while using the template wizards, we make use of Visual Studio telemetry data, as well as template options taken stripped of personal information e.g. application name or application identifiers. We do not require the user of the template wizard to provide us with any personally identifiable information.
 
 The template wizard does use third party services that may collect information used to identify you.
 
