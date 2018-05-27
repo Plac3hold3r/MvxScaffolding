@@ -177,8 +177,8 @@
                 <materialDesign:Card Width="200" Margin="0,6">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="100" />
-                            <RowDefinition Height="*" />
+                            <RowDefinition Height="90" />
+                            <RowDefinition Height="110" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <materialDesign:ColorZone VerticalAlignment="Stretch" Background="{StaticResource SingleViewColorBrush}">
@@ -195,11 +195,18 @@
                             HorizontalAlignment="Right"
                             VerticalAlignment="Bottom"
                             Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}">
-                            <materialDesign:PackIcon Kind="CheckboxBlankOutline" />
+                            <materialDesign:PackIcon Kind="Check" />
                         </Button>
-                        <StackPanel Grid.Row="1" Margin="8,24,8,0">
-                            <TextBlock FontWeight="Bold">Single View</TextBlock>
-                            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap">A great way to keep fit and forget about the constant grind of IT.</TextBlock>
+                        <StackPanel Grid.Row="1" Margin="8,12,8,0">
+                            <TextBlock
+                                Margin="0,0,0,4"
+                                FontWeight="Medium"
+                                Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                                Text="{x:Static l10n:LocalResources.AppDetails_Template_SingleView}" />
+                            <TextBlock
+                                VerticalAlignment="Center"
+                                Text="{x:Static l10n:LocalResources.AppDetails_Template_SingleView_Description}"
+                                TextWrapping="Wrap" />
                         </StackPanel>
                         <StackPanel
                             Grid.Row="2"
@@ -230,8 +237,8 @@
                 <materialDesign:Card Width="200" Margin="0,6">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="100" />
-                            <RowDefinition Height="*" />
+                            <RowDefinition Height="90" />
+                            <RowDefinition Height="110" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <materialDesign:ColorZone VerticalAlignment="Stretch" Background="{StaticResource NavigationMenuColorBrush}">
@@ -248,11 +255,18 @@
                             HorizontalAlignment="Right"
                             VerticalAlignment="Bottom"
                             Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}">
-                            <materialDesign:PackIcon Kind="Check" />
+                            <materialDesign:PackIcon Kind="CheckboxBlankOutline" />
                         </Button>
-                        <StackPanel Grid.Row="1" Margin="8,24,8,0">
-                            <TextBlock FontWeight="Bold">Navigation Menu</TextBlock>
-                            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap">A great way to keep fit and forget about the constant grind of IT.</TextBlock>
+                        <StackPanel Grid.Row="1" Margin="8,12,8,0">
+                            <TextBlock
+                                Margin="0,0,0,4"
+                                FontWeight="Medium"
+                                Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                                Text="{x:Static l10n:LocalResources.AppDetails_Template_NavigationMenu}" />
+                            <TextBlock
+                                VerticalAlignment="Center"
+                                Text="{x:Static l10n:LocalResources.AppDetails_Template_NavigationMenu_Description}"
+                                TextWrapping="Wrap" />
                         </StackPanel>
                         <StackPanel
                             Grid.Row="2"
@@ -283,8 +297,8 @@
                 <materialDesign:Card Width="200" Margin="0,6">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="100" />
-                            <RowDefinition Height="*" />
+                            <RowDefinition Height="90" />
+                            <RowDefinition Height="110" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <materialDesign:ColorZone VerticalAlignment="Stretch" Background="{StaticResource BlankViewColorBrush}">
@@ -303,9 +317,16 @@
                             Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}">
                             <materialDesign:PackIcon Kind="CheckboxBlankOutline" />
                         </Button>
-                        <StackPanel Grid.Row="1" Margin="8,24,8,0">
-                            <TextBlock FontWeight="Bold">Blank</TextBlock>
-                            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap">A great way to keep fit and forget about the constant grind of IT.</TextBlock>
+                        <StackPanel Grid.Row="1" Margin="8,12,8,0">
+                            <TextBlock
+                                Margin="0,0,0,4"
+                                FontWeight="Medium"
+                                Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                                Text="{x:Static l10n:LocalResources.AppDetails_Template_Blank}" />
+                            <TextBlock
+                                VerticalAlignment="Center"
+                                Text="{x:Static l10n:LocalResources.AppDetails_Template_Blank_Description}"
+                                TextWrapping="Wrap" />
                         </StackPanel>
                         <StackPanel
                             Grid.Row="2"
