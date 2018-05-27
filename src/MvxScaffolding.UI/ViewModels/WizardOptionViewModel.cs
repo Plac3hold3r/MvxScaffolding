@@ -59,6 +59,18 @@ namespace MvxScaffolding.UI.ViewModels
             }
         }
 
+        private string _projectName = MvxScaffoldingContext.ProjectName;
+        [Required(ErrorMessageResourceName = nameof(LocalResources.AppDetails_Validation_ProjectName), ErrorMessageResourceType = typeof(LocalResources))]
+        public string ProjectName
+        {
+            get => _projectName;
+            set
+            {
+                SetProperty(ref _projectName, value);
+                ValidateModelProperty(value, nameof(ProjectName));
+            }
+        }
+
         private bool _hasEditorConfig;
 
         public bool HasEditorConfig

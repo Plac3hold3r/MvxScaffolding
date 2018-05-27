@@ -462,4 +462,10 @@
   <data name="AppDetails_Template_SingleView_Description" xml:space="preserve">
     <value>Scaffold an app with a single starting view and view model.</value>
   </data>
+  <data name="AppDetails_Project_Name" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="AppDetails_Validation_ProjectName" xml:space="preserve">
+    <value>Project name required</value>
+  </data>
 </root>

@@ -196,6 +196,15 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Project Name.
+        /// </summary>
+        public static string AppDetails_Project_Name {
+            get {
+                return ResourceManager.GetString("AppDetails_Project_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Required.
         /// </summary>
         public static string AppDetails_Required {
@@ -291,6 +300,15 @@ namespace MvxScaffolding.Localization.Resources {
         public static string AppDetails_Validation_Identifier {
             get {
                 return ResourceManager.GetString("AppDetails_Validation_Identifier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project name required.
+        /// </summary>
+        public static string AppDetails_Validation_ProjectName {
+            get {
+                return ResourceManager.GetString("AppDetails_Validation_ProjectName", resourceCulture);
             }
         }
         
