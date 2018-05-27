@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -107,6 +107,8 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
                 [TemplateOptions.SolutionProjectGrouping] = options.SelectedProjectGrouping,
                 [TemplateOptions.AppId] = options.AppId.HasValue(),
                 [TemplateOptions.AppName] = options.AppName.HasValue(),
+                [TemplateOptions.SolutionName] = options.SolutionName.HasValue(),
+                [TemplateOptions.ProjectName] = options.ProjectName.HasValue(),
                 [TemplateOptions.NetStandardVersion] = options.SelectedNetStandard,
                 [TemplateOptions.AndroidMinSdkVersion] = options.SelectedMinAndroidSDK,
                 [TemplateOptions.IosMinSdkVersion] = options.SelectedMinIosSDK,

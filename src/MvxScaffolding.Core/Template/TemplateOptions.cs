@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -34,6 +34,10 @@ namespace MvxScaffolding.Core.Template
         public const string AppName = "AppName";
 
         public const string SolutionName = "SolutionName";
+
+        public const string ProjectName = "ProjectName";
+
+        public const string ScaffoldType = "ScaffoldType";
 
         public const string NetStandardVersion = "NETStandardVersion";
 
