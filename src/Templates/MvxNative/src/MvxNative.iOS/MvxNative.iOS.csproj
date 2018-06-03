@@ -94,16 +94,14 @@
     <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\launch_image.png" />
+    <BundleResource Include="Resources\launch_image%402x.png" />
+    <BundleResource Include="Resources\launch_image%403x.png" />
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Styles\ColorPalette.cs" />
-    <Compile Include="Views\!Base\BaseViewController.cs" />
-    <BundleResource Include="Resources\launch_image.png" />
-    <BundleResource Include="Resources\launch_image%402x.png" />
-    <BundleResource Include="Resources\launch_image%403x.png" />
-    <Compile Include="Views\Main\MainViewController.cs" />
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-87.png">
       <Visible>false</Visible>
     </ImageAsset>
@@ -150,6 +148,10 @@
     <Content Include="Entitlements.plist" />
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork%402x" />
+    <!--#if (!IsBlank)-->
+    <Compile Include="Views\!Base\BaseViewController.cs" />
+    <Compile Include="Views\Main\MainViewController.cs" />
+    <!--#endif-->
     <InterfaceDefinition Include="LaunchScreen.storyboard">
       <SubType>Designer</SubType>
     </InterfaceDefinition>
@@ -160,6 +162,7 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
+  <!--#if (!IsBlank)-->
   <ItemGroup Condition=" '$(HasFluentLayouts)' != 'true' ">
     <Compile Include="Views\Main\MainViewController.designer.cs">
       <DependentUpon>MainViewController.cs</DependentUpon>
@@ -168,6 +171,7 @@
       <SubType>Designer</SubType>
     </InterfaceDefinition>
   </ItemGroup>
+  <!--#endif-->
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />

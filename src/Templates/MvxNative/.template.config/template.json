@@ -189,6 +189,16 @@
             "FluentBaseViewController.cs": "BaseViewController.cs",
             "FluentMainViewController.cs": "MainViewController.cs"
           }
+        },
+        {
+          "condition": "(IsBlank)",
+          "exclude": [
+            "src/MvxNative.Core/ViewModels/**",
+            "src/MvxNative.iOS/Views/**",
+            "src/MvxNative.Droid/Views/**",
+            "src/MvxNative.Droid/Resources/layout/**",
+            "src/MvxNative.UWP/Views/**"
+          ]
         }
       ]
     }
@@ -271,15 +281,35 @@
       "choices": [
         {
           "choice": "flat",
-          "description": "All projects are placed at the root of the solution"
+          "description": "All projects are placed at the root of the solution."
         },
         {
           "choice": "test-group",
-          "description": "All test projects are placed in a test folder, other projects are placed at the root of the solution"
+          "description": "All test projects are placed in a test folder, other projects are placed at the root of the solution."
         },
         {
           "choice": "platform",
-          "description": "Projects are grouped based on their target platform"
+          "description": "Projects are grouped based on their target platform."
+        }
+      ]
+    },
+    "ScaffoldType": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "single-view",
+      "description": "The view pattern to scaffold the solution with.",
+      "choices": [
+        {
+          "choice": "single-view",
+          "description": "Scaffold an app with a single starting view and view model."
+        },
+        {
+          "choice": "navigation-menu",
+          "description": "Scaffold an app with a slide out menu. Template contains two starting views with view models."
+        },
+        {
+          "choice": "blank",
+          "description": "Scaffold an app with no starting views and view models."
         }
       ]
     },
@@ -298,6 +328,18 @@
     "IsPlatformDir": {
       "type": "computed",
       "value": "(SolutionProjectGrouping == \"platform\" && (HasAndroidProject || HasiOSProject || HasUWPProject))"
+    },
+    "IsSingleView": {
+      "type": "computed",
+      "value": "(ScaffoldType == \"single-view\")"
+    },
+    "IsNavigationMenu": {
+      "type": "computed",
+      "value": "(ScaffoldType == \"navigation-menu\")"
+    },
+    "IsBlank": {
+      "type": "computed",
+      "value": "(ScaffoldType == \"blank\")"
     },
     /*
     || All project flags

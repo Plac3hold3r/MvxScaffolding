@@ -62,13 +62,15 @@
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="Setup.cs" />
+    <!--#if (!IsBlank)-->
     <Compile Include="Views\!Base\BaseActivity.cs" />
     <Compile Include="Views\!Base\BaseFragment.cs" />
     <Compile Include="Views\Main\MainContainerActivity.cs" />
-    <Compile Include="Resources\Resource.Designer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Main\MainFragment.cs" />
     <Compile Include="Views\Splash\SplashActivity.cs" />
+    <!--#endif-->
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MvxNative.Core\MvxNative.Core.csproj">
@@ -97,6 +99,7 @@
     <ProguardConfiguration Include="proguard.cfg" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
+  <!--#if (!IsBlank)-->
   <ItemGroup Condition=" '$(UseAndroidXMLLayouts)' != 'true' ">
     <AndroidResource Include="Resources\layout\fragment_main.axml" />
     <AndroidResource Include="Resources\layout\layout_toolbar.axml" />
@@ -107,6 +110,7 @@
     <AndroidResource Include="Resources\layout\layout_toolbar.xml" />
     <AndroidResource Include="Resources\layout\activity_main_container.xml" />
   </ItemGroup>
+  <!--#endif-->
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml" />
     <AndroidResource Include="Resources\values\styles.xml" />

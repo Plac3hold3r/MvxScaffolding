@@ -133,7 +133,7 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
 **MvxNative** and **MvxForms** options
 
 ```text
- -droid|--include-android               Whether to include Xamarin Android project.
+ -droid|--include-android                Whether to include Xamarin Android project.
                                          bool - Optional
                                          Default: true
 
