@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\MvxNative.Core\MvxNative.Core.csproj" />
+    <ProjectReference Include="..\..\src\SingleView\MvxNative.Core\MvxNative.Core.csproj" />
   </ItemGroup>
 
 </Project>

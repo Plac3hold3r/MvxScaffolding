@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          android:versionCode="1"
+          android:versionName="1.0"
+          package="com.mvxscaffolding.app"
+          android:installLocation="auto">
+    <uses-sdk android:minSdkVersion="19"
+              android:targetSdkVersion="27" />
+    <application
+        android:allowBackup="true"
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:resizeableActivity="true">
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+    </application>
+</manifest>

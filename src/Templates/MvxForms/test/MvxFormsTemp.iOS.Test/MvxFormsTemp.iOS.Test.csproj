@@ -83,7 +83,7 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\MvxFormsTemp.iOS\MvxFormsTemp.iOS.csproj">
+    <ProjectReference Include="..\..\src\SingleView\MvxFormsTemp.iOS\MvxFormsTemp.iOS.csproj">
       <Project>{00000000-1111-0000-0000-000000000003}</Project>
       <Name>MvxFormsTemp.iOS</Name>
       <IsAppExtension>false</IsAppExtension>

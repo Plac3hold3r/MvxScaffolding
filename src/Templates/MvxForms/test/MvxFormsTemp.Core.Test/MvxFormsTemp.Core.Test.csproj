@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj" />
+    <ProjectReference Include="..\..\src\SingleView\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj" />
   </ItemGroup>
 
 </Project>

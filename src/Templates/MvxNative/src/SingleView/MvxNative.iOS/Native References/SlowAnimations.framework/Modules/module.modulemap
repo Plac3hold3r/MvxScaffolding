@@ -1,0 +1,6 @@
+framework module SlowAnimations {
+  umbrella header "SlowAnimations.h"
+
+  export *
+  module * { export * }
+}
