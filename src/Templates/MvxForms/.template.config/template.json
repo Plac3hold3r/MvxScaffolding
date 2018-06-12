@@ -85,64 +85,74 @@
     {
       "modifiers": [
         {
+          "condition": "(IsSingleView)",
+          "rename": { "SingleView/": "" },
+          "exclude": [ "NavigationMenu/**" ]
+        },
+        {
+          "condition": "(IsNavigationMenu)",
+          "rename": { "NavigationMenu/": "" },
+          "exclude": [ "SingleView/**" ]
+        },
+        {
           "condition": "(!HasAndroidProject)",
           "exclude": [
-            "src/MvxFormsTemp.Droid/**"
+            "**/src/MvxFormsTemp.Droid/**"
           ]
         },
         {
           "condition": "(!HasiOSProject)",
           "exclude": [
-            "src/MvxFormsTemp.iOS/**"
+            "**/src/MvxFormsTemp.iOS/**"
           ]
         },
         {
           "condition": "(!HasUWPProject)",
           "exclude": [
-            "src/MvxFormsTemp.UWP/**"
+            "**/src/MvxFormsTemp.UWP/**"
           ]
         },
         {
           "condition": "(!HasCoreTestProject)",
           "exclude": [
-            "test/MvxFormsTemp.Core.Test/**"
+            "**/test/MvxFormsTemp.Core.Test/**"
           ]
         },
         {
           "condition": "(!HasAndroidTestProject)",
           "exclude": [
-            "test/MvxFormsTemp.Droid.Test/**",
-            "src/MvxFormsTemp.Droid.Shared/**"
+            "**/test/MvxFormsTemp.Droid.Test/**",
+            "**/src/MvxFormsTemp.Droid.Shared/**"
           ]
         },
         {
           "condition": "(!HasiOSTestProject)",
           "exclude": [
-            "test/MvxFormsTemp.iOS.Test/**"
+            "**/test/MvxFormsTemp.iOS.Test/**"
           ]
         },
         {
           "condition": "(!HasXamarinUITestProject)",
           "exclude": [
-            "test/MvxFormsTemp.UI.Test/**"
+            "**/test/MvxFormsTemp.UI.Test/**"
           ]
         },
         {
           "condition": "(!HasUWPTestProject)",
           "exclude": [
-            "test/MvxFormsTemp.UWP.Test/**"
+            "**/test/MvxFormsTemp.UWP.Test/**"
           ]
         },
         {
           "condition": "(!HasUWPUITestProject)",
           "exclude": [
-            "test/MvxFormsTemp.UWP.UI.Test/**"
+            "**/test/MvxFormsTemp.UWP.UI.Test/**"
           ]
         },
         {
           "condition": "(!HasHyperion)",
           "exclude": [
-            "src/MvxNative.iOS/Native References/**"
+            "**/src/MvxNative.iOS/Native References/**"
           ]
         },
         {

@@ -86,44 +86,44 @@
     {
       "modifiers": [
         {
-          "condition": "(ScaffoldType == \"single-view\")",
+          "condition": "(IsSingleView)",
           "rename": { "SingleView/": "" },
-          "exclude": [ "src/NavigationMenu/**" ]
+          "exclude": [ "NavigationMenu/**" ]
         },
         {
-          "condition": "(ScaffoldType == \"navigation-menu\")",
+          "condition": "(IsNavigationMenu)",
           "rename": { "NavigationMenu/": "" },
-          "exclude": [ "src/SingleView/**" ]
+          "exclude": [ "SingleView/**" ]
         },
         {
           "condition": "(!HasAndroidProject)",
           "exclude": [
-            "src/**/MvxNative.Droid/**"
+            "**/src/MvxNative.Droid/**"
           ]
         },
         {
           "condition": "(!HasiOSProject)",
           "exclude": [
-            "src/**/MvxNative.iOS/**"
+            "**/src/MvxNative.iOS/**"
           ]
         },
         {
           "condition": "(!HasUWPProject)",
           "exclude": [
-            "src/**/MvxNative.UWP/**"
+            "**/src/MvxNative.UWP/**"
           ]
         },
         {
           "condition": "(!HasCoreTestProject)",
           "exclude": [
-            "test/MvxNative.Core.Test/**"
+            "**/test/MvxNative.Core.Test/**"
           ]
         },
         {
           "condition": "(!HasAndroidTestProject)",
           "exclude": [
-            "test/MvxNative.Droid.Test/**",
-            "src/**/MvxNative.Droid.Shared/**"
+            "**/test/MvxNative.Droid.Test/**",
+            "**/src/MvxNative.Droid.Shared/**"
           ]
         },
         {
@@ -135,31 +135,31 @@
         {
           "condition": "(!HasiOSTestProject)",
           "exclude": [
-            "test/MvxNative.iOS.Test/**"
+            "**/test/MvxNative.iOS.Test/**"
           ]
         },
         {
           "condition": "(!HasiOSUITestProject)",
           "exclude": [
-            "test/MvxNative.iOS.UI.Test/**"
+            "**/test/MvxNative.iOS.UI.Test/**"
           ]
         },
         {
           "condition": "(!HasUWPTestProject)",
           "exclude": [
-            "test/MvxNative.UWP.Test/**"
+            "**/test/MvxNative.UWP.Test/**"
           ]
         },
         {
           "condition": "(!HasUWPUITestProject)",
           "exclude": [
-            "test/MvxNative.UWP.UI.Test/**"
+            "**/test/MvxNative.UWP.UI.Test/**"
           ]
         },
         {
           "condition": "(!HasHyperion)",
           "exclude": [
-            "src/**/MvxNative.iOS/Native References/**"
+            "**/src/MvxNative.iOS/Native References/**"
           ]
         },
         {
@@ -185,15 +185,15 @@
         {
           "condition": "(!HasFluentLayouts)",
           "exclude": [
-            "src/**/MvxNative.iOS/Views/!Base/FluentBaseViewController.cs",
-            "src/**/MvxNative.iOS/Views/Main/FluentMainViewController.cs"
+            "**/src/MvxNative.iOS/Views/!Base/FluentBaseViewController.cs",
+            "**/src/MvxNative.iOS/Views/Main/FluentMainViewController.cs"
           ]
         },
         {
           "condition": "(HasFluentLayouts)",
           "exclude": [
-            "src/**/MvxNative.iOS/Views/!Base/BaseViewController.cs",
-            "src/**/MvxNative.iOS/Views/Main/MainViewController.*"
+            "**/src/MvxNative.iOS/Views/!Base/BaseViewController.cs",
+            "**/src/MvxNative.iOS/Views/Main/MainViewController.*"
           ],
           "rename": {
             "FluentBaseViewController.cs": "BaseViewController.cs",
@@ -373,12 +373,6 @@
       "isRequired": true,
       "fileRename": "MvxNativeSolution",
       "description": "The solution name."
-    },
-    "FixDirectory": {
-      "type": "parameter",
-      "datatype": "string",
-      "defaultValue": "..\\src",
-      "replaces": "..\\..\\src\\SingleView"
     },
     /*
     || Core project flags

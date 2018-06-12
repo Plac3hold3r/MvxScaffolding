@@ -96,9 +96,6 @@
     "UWPMinSDKVersion": {
       "longName": "uwp-min-sdk",
       "shortName": "uwp-sdk"
-    },
-    "FixDirectory": {
-      "isHidden": true
     }
   }
 }
