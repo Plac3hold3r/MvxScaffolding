@@ -83,8 +83,8 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SingleView\src\MvxNative.iOS\MvxNative.iOS.csproj">
-      <Project>{8c621e9e-a698-48fb-99d7-d26055dbf406}</Project>
+    <ProjectReference Include="..\..\src\MvxNative.iOS\MvxNative.iOS.csproj">
+      <Project>{00000000-0000-0000-0000-000000000003}</Project>
       <Name>MvxNative.iOS</Name>
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
