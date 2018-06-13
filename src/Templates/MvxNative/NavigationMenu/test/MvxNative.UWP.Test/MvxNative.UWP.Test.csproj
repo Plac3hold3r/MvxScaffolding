@@ -134,7 +134,7 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\SingleView\MvxNative.UWP\MvxNative.UWP.csproj">
+    <ProjectReference Include="..\..\..\SingleView\src\MvxNative.UWP\MvxNative.UWP.csproj">
       <Project>{5d08c271-a474-4472-b76f-751ee44afecf}</Project>
       <Name>MvxNative.UWP</Name>
     </ProjectReference>

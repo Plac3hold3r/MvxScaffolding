@@ -134,7 +134,7 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\SingleView\MvxFormsTemp.UWP\MvxFormsTemp.UWP.csproj">
+    <ProjectReference Include="..\..\..\SingleView\src\MvxFormsTemp.UWP\MvxFormsTemp.UWP.csproj">
       <Project>{00000000-1111-0000-0000-000000000004}</Project>
       <Name>MvxFormsTemp.UWP</Name>
     </ProjectReference>
