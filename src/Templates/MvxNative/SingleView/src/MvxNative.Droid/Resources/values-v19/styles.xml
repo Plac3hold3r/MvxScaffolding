@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+    <!-- App splash theme applied for API level 19 and above -->
+    <style name="AppTheme.Splash" parent="AppTheme.Splash.Base">
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+</resources>

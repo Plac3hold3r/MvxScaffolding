@@ -49,6 +49,10 @@
       "longName": "solution-project-grouping",
       "shortName": "sln-gp"
     },
+    "ScaffoldType": {
+      "longName": "scaffold-type",
+      "shortName": "st"
+    },
     "AppName": {
       "longName": "app-name",
       "shortName": "app-n"
