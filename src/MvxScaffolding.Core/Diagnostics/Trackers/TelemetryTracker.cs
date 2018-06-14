@@ -38,6 +38,7 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
         {
             var properties = new Dictionary<string, string>()
             {
+                [TelemetryProperties.EventName] = TelemetryEvents.OpenLink,
                 [TelemetryProperties.LinkName] = linkName,
             };
 
@@ -50,6 +51,7 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
         {
             var properties = new Dictionary<string, string>()
             {
+                [TelemetryProperties.EventName] = TelemetryEvents.UpdateVersion,
                 [TelemetryProperties.SeenReleaseNotes] = hasShownReleaseNotes.ToStringLowerCase(),
             };
 
@@ -61,7 +63,13 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
         public async Task TrackEndSessionAsync()
         {
             RemoteWriter.Current.SetContentVsProductVersionToContext(GetVsVersion());
-            await RemoteWriter.Current.TrackEventAsync(TelemetryEvents.SessionEnd)
+
+            var properties = new Dictionary<string, string>()
+            {
+                [TelemetryProperties.EventName] = TelemetryEvents.SessionEnd
+            };
+
+            await RemoteWriter.Current.TrackEventAsync(TelemetryEvents.SessionEnd, properties)
                 .ConfigureAwait(false);
 
             await RemoteWriter.Current.FlushAsync()
