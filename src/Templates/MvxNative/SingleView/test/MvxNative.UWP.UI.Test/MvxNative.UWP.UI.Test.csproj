@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{51004FB4-77DB-414D-AC71-2AB42BF4C531}</ProjectGuid>
+    <ProjectGuid>{00000000-0000-0000-0002-000000000004}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MvxNative.UWP.UI.Test</RootNamespace>

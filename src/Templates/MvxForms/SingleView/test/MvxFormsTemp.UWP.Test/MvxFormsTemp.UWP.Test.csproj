@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{1AC8F1AC-539A-45F1-AE14-D8081304ADBF}</ProjectGuid>
+    <ProjectGuid>{00000000-1111-0000-0001-000000000004}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MvxFormsTemp.UWP.Test</RootNamespace>

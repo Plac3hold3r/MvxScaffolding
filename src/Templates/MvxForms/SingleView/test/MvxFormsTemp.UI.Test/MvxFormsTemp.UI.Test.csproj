@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C3BCA116-2047-4FEC-83B3-1206B27A7F99}</ProjectGuid>
+    <ProjectGuid>{00000000-1111-0000-0002-000000000005}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>MvxFormsTemp.UI.Test</RootNamespace>
     <AssemblyName>MvxFormsTemp.UI.Test</AssemblyName>

@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{925986F1-E97B-4BF3-92EA-7C85FE3B6E8D}</ProjectGuid>
+    <ProjectGuid>{00000000-1111-0000-0002-000000000004}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MvxFormsTemp.UWP.UI.Test</RootNamespace>

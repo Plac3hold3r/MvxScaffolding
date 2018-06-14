@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{5D08C271-A474-4472-B76F-751EE44AFECF}</ProjectGuid>
+    <ProjectGuid>{00000000-0000-0000-0000-000000000004}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MvxNative.UWP</RootNamespace>

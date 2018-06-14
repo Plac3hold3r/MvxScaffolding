@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{00000000-1111-0000-0001-000000000004}</ProjectGuid>
+    <ProjectGuid>{00000000-1111-1111-0001-000000000004}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MvxFormsTemp.UWP.Test</RootNamespace>
@@ -135,7 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\MvxFormsTemp.UWP\MvxFormsTemp.UWP.csproj">
-      <Project>{aaaa33f9-8edb-4816-8bfb-5cf5d757b80f}</Project>
+      <Project>{00000000-1111-1111-0000-000000000004}</Project>
       <Name>MvxFormsTemp.UWP</Name>
     </ProjectReference>
   </ItemGroup>
