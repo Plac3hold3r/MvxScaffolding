@@ -60,6 +60,31 @@
                         </Grid>
                     </materialDesign:ColorZone>
                     <StackPanel Margin="16">
+
+                        <Grid Margin="0,0,0,16">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                            <TextBlock
+                                Margin="0,0,24,4"
+                                Foreground="{StaticResource MaterialDesignBodyLight}"
+                                Text="{x:Static l10n:LocalResources.AppDetails_MvvmCross_Version}" />
+                            <TextBlock
+                                Grid.Row="1"
+                                Margin="0,0,24,0"
+                                Foreground="{StaticResource MaterialDesignBodyLight}"
+                                Text="{x:Static l10n:LocalResources.AppDetails_Project_Name}" />
+                            <TextBlock Grid.Column="1" Text="6.0.1" />
+                            <TextBlock
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Text="{Binding ProjectName}" />
+                        </Grid>
                         <DockPanel>
                             <TextBlock FontWeight="Bold" Text="{x:Static l10n:LocalResources.AppDetails_Application}" />
                             <TextBlock
@@ -79,15 +104,6 @@
                             materialDesign:HintAssist.Hint="{Binding Source={x:Static l10n:LocalResources.AppDetails_Display_Name}, Converter={StaticResource RequiredLabelConverter}}"
                             materialDesign:HintAssist.IsFloating="True"
                             Text="{Binding Options.AppName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
-                        <ComboBox
-                            Margin="0,16,0,0"
-                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.AppDetails_MvvmCross_Version}"
-                            materialDesign:HintAssist.HintOpacity="1"
-                            IsEditable="False"
-                            IsEnabled="False"
-                            Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-                            <ComboBoxItem IsSelected="True">6.0.1</ComboBoxItem>
-                        </ComboBox>
                         <TextBlock
                             Margin="0,16,0,0"
                             FontWeight="Bold"
@@ -97,11 +113,6 @@
                             materialDesign:HintAssist.Hint="{Binding Source={x:Static l10n:LocalResources.AppDetails_Solution_Name}, Converter={StaticResource RequiredLabelConverter}}"
                             materialDesign:HintAssist.IsFloating="True"
                             Text="{Binding Options.SolutionName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
-                        <TextBox
-                            Margin="0,16,0,12"
-                            materialDesign:HintAssist.Hint="{Binding Source={x:Static l10n:LocalResources.AppDetails_Project_Name}, Converter={StaticResource RequiredLabelConverter}}"
-                            materialDesign:HintAssist.IsFloating="True"
-                            Text="{Binding Options.ProjectName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
                         <DockPanel
                             Grid.Row="0"
                             Margin="0,4,0,0"

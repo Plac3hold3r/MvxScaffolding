@@ -148,7 +148,6 @@ namespace MvxScaffolding.Vsix.Wizards
             replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName] = MvxScaffoldingContext.UserSelectedOptions.SolutionName;
             replacementsDictionary[VSTemplateKeys.SolutionDirectory] += MvxScaffoldingContext.UserSelectedOptions.SolutionName;
             replacementsDictionary[VSTemplateKeys.DestinationDirectory] += MvxScaffoldingContext.UserSelectedOptions.SolutionName + "\\";
-            replacementsDictionary[VSTemplateKeys.ProjectName] = MvxScaffoldingContext.UserSelectedOptions.ProjectName.MakeSafe();
         }
 
         public void ShowModal(System.Windows.Window dialog)

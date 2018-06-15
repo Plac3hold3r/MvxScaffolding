@@ -107,7 +107,6 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
                 [TemplateOptions.AppId] = options.AppId.HasValue(),
                 [TemplateOptions.AppName] = options.AppName.HasValue(),
                 [TemplateOptions.SolutionName] = options.SolutionName.HasValue(),
-                [TemplateOptions.ProjectName] = options.ProjectName.HasValue(),
                 [TemplateOptions.NetStandardVersion] = options.SelectedNetStandard,
                 [TemplateOptions.AndroidMinSdkVersion] = options.SelectedMinAndroidSDK,
                 [TemplateOptions.IosMinSdkVersion] = options.SelectedMinIosSDK,

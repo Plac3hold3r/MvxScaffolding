@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -14,7 +14,7 @@ namespace MvxScaffolding.UI.Converters
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
             if (values[0] is int valueInt
-                && int.TryParse(parameter?.ToString(), out int parameterInt))
+                && int.TryParse(parameter?.ToString(), out var parameterInt))
                 return valueInt == parameterInt
                     ? values[1]
                     : values[2];

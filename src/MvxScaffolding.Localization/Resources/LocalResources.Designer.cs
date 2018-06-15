@@ -286,15 +286,6 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Project name required.
-        /// </summary>
-        public static string AppDetails_Validation_ProjectName {
-            get {
-                return ResourceManager.GetString("AppDetails_Validation_ProjectName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Solution name required.
         /// </summary>
         public static string AppDetails_Validation_SolutionName {
