@@ -13,10 +13,10 @@ using System.Linq;
 using System.Reflection;
 using MvxScaffolding.Core.Contexts;
 using MvxScaffolding.Core.Template;
+using MvxScaffolding.Core.Validation;
 using MvxScaffolding.Localization.Resources;
-using MvxScaffolding.UI.Validation;
 
-namespace MvxScaffolding.UI.ViewModels
+namespace MvxScaffolding.Core.ViewModels
 {
     public class WizardOptionViewModel : BaseViewModel, ITemplateOptions, INotifyDataErrorInfo
     {

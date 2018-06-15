@@ -1,11 +1,12 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
-namespace MvxScaffolding.UI.ViewModels.Dialogs
+namespace MvxScaffolding.Core.ViewModels.Interfaces
 {
-    public class ProjectGroupInfoViewModel : BaseViewModel
+    public interface IClosable
     {
+        void Close();
     }
 }

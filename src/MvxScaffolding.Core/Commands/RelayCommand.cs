@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -6,7 +6,7 @@
 using System;
 using System.Windows.Input;
 
-namespace MvxScaffolding.UI.Commands
+namespace MvxScaffolding.Core.Commands
 {
     public class RelayCommand : ICommand
     {

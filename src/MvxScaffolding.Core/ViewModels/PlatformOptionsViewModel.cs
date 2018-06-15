@@ -4,13 +4,13 @@
 //---------------------------------------------------------------------------------
 
 using System.Windows.Input;
+using MvxScaffolding.Core.Commands;
 using MvxScaffolding.Core.Configuration;
 using MvxScaffolding.Core.Template;
-using MvxScaffolding.UI.Commands;
-using MvxScaffolding.UI.ViewModels.Dialogs;
-using MvxScaffolding.UI.ViewModels.Interfaces;
+using MvxScaffolding.Core.ViewModels.Dialogs;
+using MvxScaffolding.Core.ViewModels.Interfaces;
 
-namespace MvxScaffolding.UI.ViewModels
+namespace MvxScaffolding.Core.ViewModels
 {
     public class PlatformOptionsViewModel : BaseViewModel, IValidationViewModel
     {

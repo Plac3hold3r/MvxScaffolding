@@ -7,17 +7,17 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Input;
+using MvxScaffolding.Core.Commands;
 using MvxScaffolding.Core.Configuration;
 using MvxScaffolding.Core.Contexts;
 using MvxScaffolding.Core.Diagnostics;
 using MvxScaffolding.Core.Tasks;
 using MvxScaffolding.Core.Template;
+using MvxScaffolding.Core.ViewModels.Dialogs;
+using MvxScaffolding.Core.ViewModels.Interfaces;
 using MvxScaffolding.Localization.Resources;
-using MvxScaffolding.UI.Commands;
-using MvxScaffolding.UI.ViewModels.Dialogs;
-using MvxScaffolding.UI.ViewModels.Interfaces;
 
-namespace MvxScaffolding.UI.ViewModels
+namespace MvxScaffolding.Core.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
