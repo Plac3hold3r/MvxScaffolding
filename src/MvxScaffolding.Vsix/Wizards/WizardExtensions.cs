@@ -27,10 +27,5 @@ namespace MvxScaffolding.Vsix.Wizards
         {
             return $"$passthrough:{templateOption}$";
         }
-
-        public static string MakeSafe(this string name)
-        {
-            return name.Replace(" ", "_");
-        }
     }
 }
