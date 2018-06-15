@@ -38,12 +38,11 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
         {
             var properties = new Dictionary<string, string>()
             {
-                [TelemetryProperties.EventName] = TelemetryEvents.OpenLink,
                 [TelemetryProperties.LinkName] = linkName,
             };
 
             RemoteWriter.Current.SetContentVsProductVersionToContext(GetVsVersion());
-            await RemoteWriter.Current.TrackEventAsync($"{TelemetryEvents.OpenLink} - {linkName}", properties)
+            await RemoteWriter.Current.TrackEventAsync(TelemetryEvents.OpenLink, properties)
                 .ConfigureAwait(false);
         }
 
@@ -51,7 +50,6 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
         {
             var properties = new Dictionary<string, string>()
             {
-                [TelemetryProperties.EventName] = TelemetryEvents.UpdateVersion,
                 [TelemetryProperties.SeenReleaseNotes] = hasShownReleaseNotes.ToStringLowerCase(),
             };
 
@@ -64,12 +62,7 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
         {
             RemoteWriter.Current.SetContentVsProductVersionToContext(GetVsVersion());
 
-            var properties = new Dictionary<string, string>()
-            {
-                [TelemetryProperties.EventName] = TelemetryEvents.SessionEnd
-            };
-
-            await RemoteWriter.Current.TrackEventAsync(TelemetryEvents.SessionEnd, properties)
+            await RemoteWriter.Current.TrackEventAsync(TelemetryEvents.SessionEnd)
                 .ConfigureAwait(false);
 
             await RemoteWriter.Current.FlushAsync()
@@ -84,7 +77,6 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
             {
                 [TelemetryProperties.WizardStatus] = WizardStatus.Cancelled.ToString(),
                 [TelemetryProperties.WizardType] = TelemetryProperties.NewProject,
-                [TelemetryProperties.EventName] = TelemetryEvents.WizardCancelled
             };
 
             var metrics = new Dictionary<string, double>
@@ -102,7 +94,6 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
             var properties = new Dictionary<string, string>
             {
                 [TelemetryProperties.ProjectType] = MvxScaffoldingContext.CurrentTemplateType.ToString(),
-                [TelemetryProperties.EventName] = TelemetryEvents.ProjectGen,
                 [TemplateOptions.HasAndroidProject] = options.HasAndroid.ToStringLowerCase(),
                 [TemplateOptions.HasIosProject] = options.HasIos.ToStringLowerCase(),
                 [TemplateOptions.HasUwpProject] = options.HasUwp.ToStringLowerCase(),
