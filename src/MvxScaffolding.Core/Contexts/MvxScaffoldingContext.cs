@@ -5,6 +5,7 @@
 
 using System;
 using System.Diagnostics;
+using MvxScaffolding.Core.Dialogs.Interfaces;
 using MvxScaffolding.Core.Properties;
 using MvxScaffolding.Core.Template;
 
@@ -15,6 +16,8 @@ namespace MvxScaffolding.Core.Contexts
         public static TemplateType CurrentTemplateType { get; set; }
 
         public static ITemplateOptions UserSelectedOptions { get; set; }
+
+        public static IDialogHost DialogHost { get; set; }
 
         public static Stopwatch RunningTimer { get; set; }
 

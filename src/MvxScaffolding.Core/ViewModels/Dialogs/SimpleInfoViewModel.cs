@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -7,7 +7,7 @@ using MvxScaffolding.Core.Configuration;
 using MvxScaffolding.Core.Template;
 using MvxScaffolding.Localization.Resources;
 
-namespace MvxScaffolding.UI.ViewModels.Dialogs
+namespace MvxScaffolding.Core.ViewModels.Dialogs
 {
     public class SimpleInfoViewModel : BaseViewModel
     {

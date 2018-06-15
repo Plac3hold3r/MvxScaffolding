@@ -79,6 +79,7 @@
       <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -94,6 +95,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Commands\RelayParameterCommand.cs" />
     <Compile Include="Configuration\Config.cs" />
     <Compile Include="Contexts\MvxScaffoldingContext.cs" />
     <Compile Include="Diagnostics\Logger.cs" />
@@ -108,6 +111,7 @@
     <Compile Include="Diagnostics\Writers\ConsoleWriter.cs" />
     <Compile Include="Diagnostics\Writers\IWriter.cs" />
     <Compile Include="Diagnostics\Writers\RemoteWriter.cs" />
+    <Compile Include="Dialogs\Interfaces\IDialogHost.cs" />
     <Compile Include="Extensions\TaskExtensions.cs" />
     <Compile Include="Files\FileSystemUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -124,6 +128,21 @@
     <Compile Include="Template\ScaffoldType.cs" />
     <Compile Include="Template\TemplateType.cs" />
     <Compile Include="Template\VSTemplateKeys.cs" />
+    <Compile Include="Validation\RequiredIfAttribute.cs" />
+    <Compile Include="ViewModels\!Base\BaseViewModel.cs" />
+    <Compile Include="ViewModels\AppDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Dialogs\AboutViewModel.cs" />
+    <Compile Include="ViewModels\Dialogs\ProjectGroupInfoViewModel.cs" />
+    <Compile Include="ViewModels\Dialogs\ReleaseNotesViewModel.cs" />
+    <Compile Include="ViewModels\Dialogs\SimpleInfoViewModel.cs" />
+    <Compile Include="ViewModels\Interfaces\IClosable.cs" />
+    <Compile Include="ViewModels\Interfaces\IValidationViewModel.cs" />
+    <Compile Include="ViewModels\Interfaces\IViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\NavigationalViewModel.cs" />
+    <Compile Include="ViewModels\PlatformOptionsViewModel.cs" />
+    <Compile Include="ViewModels\SummaryViewModel.cs" />
+    <Compile Include="ViewModels\WizardOptionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">

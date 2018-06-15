@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -9,16 +9,15 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
-using MaterialDesignThemes.Wpf;
+using MvxScaffolding.Core.Commands;
 using MvxScaffolding.Core.Contexts;
 using MvxScaffolding.Core.Diagnostics;
 using MvxScaffolding.Core.Tasks;
 using MvxScaffolding.Core.Template;
-using MvxScaffolding.UI.Commands;
-using MvxScaffolding.UI.ViewModels.Dialogs;
-using MvxScaffolding.UI.ViewModels.Interfaces;
+using MvxScaffolding.Core.ViewModels.Dialogs;
+using MvxScaffolding.Core.ViewModels.Interfaces;
 
-namespace MvxScaffolding.UI.ViewModels
+namespace MvxScaffolding.Core.ViewModels
 {
     public abstract class BaseViewModel : IViewModel, INotifyPropertyChanged
     {
@@ -38,8 +37,6 @@ namespace MvxScaffolding.UI.ViewModels
            => MvxScaffoldingContext.WizardName;
 
         public ICommand ShowDialogCommand { get; }
-
-        private IViewModel _selectedDialogViewModel;
 
         protected BaseViewModel()
         {
@@ -85,14 +82,7 @@ namespace MvxScaffolding.UI.ViewModels
             Logger.Current.Telemetry.TrackWizardPageAsync(dialogPageName)
                     .FireAndForget();
 
-
-            _selectedDialogViewModel = viewModel;
-            DialogHost.Show(viewModel, OnDialogOpened);
-        }
-
-        private void OnDialogOpened(object sender, DialogOpenedEventArgs eventArgs)
-        {
-            _selectedDialogViewModel.OnDialogOpened();
+            MvxScaffoldingContext.DialogHost.Show(viewModel);
         }
 
         public virtual void OnDialogOpened()

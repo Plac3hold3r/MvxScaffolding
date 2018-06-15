@@ -1,14 +1,14 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
 using System.Windows.Input;
+using MvxScaffolding.Core.Commands;
 using MvxScaffolding.Core.Configuration;
 using MvxScaffolding.Core.Template;
-using MvxScaffolding.UI.Commands;
 
-namespace MvxScaffolding.UI.ViewModels.Dialogs
+namespace MvxScaffolding.Core.ViewModels.Dialogs
 {
     public class AboutViewModel : BaseViewModel
     {

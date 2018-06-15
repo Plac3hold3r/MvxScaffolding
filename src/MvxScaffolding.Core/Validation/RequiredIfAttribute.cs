@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -6,7 +6,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace MvxScaffolding.UI.Validation
+namespace MvxScaffolding.Core.Validation
 {
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
     public class RequiredIfAttribute : ValidationAttribute
