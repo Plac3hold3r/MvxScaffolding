@@ -459,7 +459,4 @@
   <data name="AppDetails_Project_Name" xml:space="preserve">
     <value>Project Name</value>
   </data>
-  <data name="AppDetails_Validation_ProjectName" xml:space="preserve">
-    <value>Project name required</value>
-  </data>
 </root>
