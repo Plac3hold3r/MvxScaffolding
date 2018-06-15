@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -33,7 +33,9 @@ namespace MvxScaffolding.VsEmulator
             Target = "~M:MvxScaffolding.VsEmulator.App.CurrentDomain_AssemblyResolve(System.Object,System.ResolveEventArgs)~System.Reflection.Assembly")]
         private Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
-            if (args.Name.ToUpper().StartsWith("MATERIALDESIGNTHEMES.WPF") || args.Name.ToUpper().StartsWith("MARKDIG.WPF"))
+            if (args.Name.ToUpper().StartsWith("MATERIALDESIGNTHEMES.WPF")
+                || args.Name.ToUpper().StartsWith("MARKDIG.WPF")
+                || args.Name.ToUpper().StartsWith("MAHAPPS.METRO"))
             {
                 var asmLocation = Assembly.GetExecutingAssembly().Location;
                 var debugDirectory = Path.GetDirectoryName(asmLocation);
