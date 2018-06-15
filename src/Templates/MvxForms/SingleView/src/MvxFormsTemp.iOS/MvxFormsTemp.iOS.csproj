@@ -128,16 +128,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MvvmCross">
-      <Version>6.0.1</Version>
+      <Version>6.1.1</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.CodeAnalysis">
-      <Version>6.0.1</Version>
+      <Version>6.1.1</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Forms">
-      <Version>6.0.1</Version>
+      <Version>6.1.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>2.5.1.444934</Version>
+      <Version>3.0.0.561731</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
