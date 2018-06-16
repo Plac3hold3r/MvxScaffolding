@@ -6,6 +6,7 @@
 - Update to support MvvmCross 6.1.1.
 - Update to support Xamarin Forms 3
 - Update default template option to Single View
+- Add iOS SDK 11.4 as a minimum SDK option
 
 ## [v0.10.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.10.0-beta) (2018-05-14)
 
