@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -47,6 +47,7 @@ namespace MvxScaffolding.Core.Template
 
         public static Dictionary<string, string> MinIosSDKOptions => new Dictionary<string, string>
         {
+            ["11.4"] = "iOS 11.4",
             ["11.3"] = "iOS 11.3",
             ["11.2"] = "iOS 11.2",
             ["11.1"] = "iOS 11.1",
