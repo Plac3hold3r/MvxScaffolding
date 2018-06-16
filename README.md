@@ -4,7 +4,7 @@
 [![Visual Studio Marketplace](https://img.shields.io/vscode-marketplace/v/Plac3Hold3r.MvxScaffolding.svg)](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding)
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/mvxscaffolding/localized.svg)](https://crowdin.com/project/mvxscaffolding)
 
-A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.
+A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms. Supports MvvmCross 6.1.1.
 
 ![MvxScaffolding screenshot](docs/resources/vs_template_banner.png)
 
@@ -24,8 +24,6 @@ Android AXML or XML layout |* |
 iOS storyboard launch screen |* | *
 iOS [Hyperion](https://github.com/willowtreeapps/Hyperion-iOS) |* | *
 iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.FluentLayout) |* |
-
-Supports MvvmCross 6.1.1
 
 See [Release Notes](docs/release_notes.md)
 
