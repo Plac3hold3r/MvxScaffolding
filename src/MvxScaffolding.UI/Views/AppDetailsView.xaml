@@ -270,7 +270,7 @@
                 </materialDesign:Card>
             </materialDesign:TransitioningContent>
 
-            <!--<materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}" OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}">
+            <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}" OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}">
                 <materialDesign:Card Width="200" Margin="0,6">
                     <Grid>
                         <Grid.RowDefinitions>
@@ -345,7 +345,7 @@
                         </StackPanel>
                     </Grid>
                 </materialDesign:Card>
-            </materialDesign:TransitioningContent>-->
+            </materialDesign:TransitioningContent>
 
         </ItemsControl>
     </Grid>
