@@ -444,12 +444,6 @@
   <data name="AppDetails_Validation_SolutionName" xml:space="preserve">
     <value>Solution name required</value>
   </data>
-  <data name="AppDetails_Template_Blank" xml:space="preserve">
-    <value>Blank</value>
-  </data>
-  <data name="AppDetails_Template_Blank_Description" xml:space="preserve">
-    <value>Scaffold an app with no starting views and view models.</value>
-  </data>
   <data name="AppDetails_Template_NavigationMenu" xml:space="preserve">
     <value>Navigation Menu</value>
   </data>
@@ -464,8 +458,5 @@
   </data>
   <data name="AppDetails_Project_Name" xml:space="preserve">
     <value>Project Name</value>
-  </data>
-  <data name="AppDetails_Validation_ProjectName" xml:space="preserve">
-    <value>Project name required</value>
   </data>
 </root>
