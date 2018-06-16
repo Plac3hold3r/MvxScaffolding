@@ -51,7 +51,8 @@
     },
     "ScaffoldType": {
       "longName": "scaffold-type",
-      "shortName": "st"
+      "shortName": "st",
+      "isHidden": true
     },
     "AppName": {
       "longName": "app-name",

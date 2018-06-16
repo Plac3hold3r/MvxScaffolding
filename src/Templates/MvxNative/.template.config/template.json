@@ -147,7 +147,7 @@
         {
           "condition": "(!HasAndroidUITestProject)",
           "exclude": [
-            "test/MvxNative.Droid.UI.Test/**"
+            "**/test/MvxNative.Droid.UI.Test/**"
           ]
         },
         {

@@ -25,7 +25,7 @@ iOS storyboard launch screen |* | *
 iOS [Hyperion](https://github.com/willowtreeapps/Hyperion-iOS) |* | *
 iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.FluentLayout) |* |
 
-Supports MvvmCross 6.0.1
+Supports MvvmCross 6.1.1
 
 See [Release Notes](docs/release_notes.md)
 
@@ -64,7 +64,7 @@ __Required__
  __Optional__ 
 
  * Xamarin Android SDK _(Recommanded version 8.3+)_
- * Xamarin iOS SDK _(Recommanded version 11.10+)_
+ * Xamarin iOS SDK _(Recommanded version 11.12+)_
  * UWP SDK _(__Windows Only__, recommanded version 10.0.17134+)_
 
 ### Installation
@@ -93,7 +93,7 @@ __Required__
  __Optional__ 
 
  * Xamarin Android SDK _(Recommanded version 8.3+)_
- * Xamarin iOS SDK _(Recommanded version 11.10+)_
+ * Xamarin iOS SDK _(Recommanded version 11.12+)_
  * UWP SDK _(__Windows Only__, recommanded version 10.0.17134+)_
 
 ### Installation
