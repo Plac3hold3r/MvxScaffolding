@@ -232,24 +232,6 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Blank.
-        /// </summary>
-        public static string AppDetails_Template_Blank {
-            get {
-                return ResourceManager.GetString("AppDetails_Template_Blank", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Scaffold an app with no starting views and view models..
-        /// </summary>
-        public static string AppDetails_Template_Blank_Description {
-            get {
-                return ResourceManager.GetString("AppDetails_Template_Blank_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Navigation Menu.
         /// </summary>
         public static string AppDetails_Template_NavigationMenu {
@@ -300,15 +282,6 @@ namespace MvxScaffolding.Localization.Resources {
         public static string AppDetails_Validation_Identifier {
             get {
                 return ResourceManager.GetString("AppDetails_Validation_Identifier", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Project name required.
-        /// </summary>
-        public static string AppDetails_Validation_ProjectName {
-            get {
-                return ResourceManager.GetString("AppDetails_Validation_ProjectName", resourceCulture);
             }
         }
         

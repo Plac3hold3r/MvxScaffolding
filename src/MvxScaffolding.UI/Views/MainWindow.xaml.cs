@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -9,9 +9,10 @@ using MahApps.Metro.Controls;
 using MaterialDesignThemes.Wpf;
 using MvxScaffolding.Core.Contexts;
 using MvxScaffolding.Core.Template;
-using MvxScaffolding.UI.ViewModels;
-using MvxScaffolding.UI.ViewModels.Dialogs;
-using MvxScaffolding.UI.ViewModels.Interfaces;
+using MvxScaffolding.Core.ViewModels;
+using MvxScaffolding.Core.ViewModels.Dialogs;
+using MvxScaffolding.Core.ViewModels.Interfaces;
+using MvxScaffolding.UI.Dialogs;
 
 namespace MvxScaffolding.UI.Views
 {
@@ -20,6 +21,8 @@ namespace MvxScaffolding.UI.Views
         public MainWindow()
         {
             InitializeComponent();
+
+            MvxScaffoldingContext.DialogHost = new DialohHost();
 
             DataContext = new MainViewModel();
 

@@ -1,0 +1,759 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Core", "src\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj", "{00000000-1111-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UI", "src\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj", "{00000000-1111-0000-0000-000000000005}"
+EndProject
+//#if (HasAndroidProject)
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Droid", "src\MvxFormsTemp.Droid\MvxFormsTemp.Droid.csproj", "{00000000-1111-0000-0000-000000000002}"
+EndProject
+//#endif
+//#if (HasiOSProject)
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.iOS", "src\MvxFormsTemp.iOS\MvxFormsTemp.iOS.csproj", "{00000000-1111-0000-0000-000000000003}"
+EndProject
+//#endif
+//#if (HasUWPProject)
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UWP", "src\MvxFormsTemp.UWP\MvxFormsTemp.UWP.csproj", "{00000000-1111-0000-0000-000000000004}"
+EndProject
+//#endif
+//#if (HasCoreTestProject)
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Core.Test", "test\MvxFormsTemp.Core.Test\MvxFormsTemp.Core.Test.csproj", "{00000000-1111-0000-0001-000000000001}"
+EndProject
+//#endif
+//#if (HasAndroidProject && HasAndroidTestProject)
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.Droid.Test", "test\MvxFormsTemp.Droid.Test\MvxFormsTemp.Droid.Test.csproj", "{00000000-1111-0000-0001-000000000002}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MvxFormsTemp.Droid.Shared", "src\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.shproj", "{00000000-1111-0000-0003-000000000002}"
+EndProject
+//#endif
+//#if (HasiOSProject && HasiOSTestProject)
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.iOS.Test", "test\MvxFormsTemp.iOS.Test\MvxFormsTemp.iOS.Test.csproj", "{00000000-1111-0000-0001-000000000003}"
+EndProject
+//#endif
+//#if ((HasiOSProject || HasAndroidProject) && HasXamarinUITestProject)
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UI.Test", "test\MvxFormsTemp.UI.Test\MvxFormsTemp.UI.Test.csproj", "{00000000-1111-0000-0002-000000000005}"
+EndProject
+//#endif
+//#if (HasUWPProject && HasUWPTestProject)
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UWP.Test", "test\MvxFormsTemp.UWP.Test\MvxFormsTemp.UWP.Test.csproj", "{00000000-1111-0000-0001-000000000004}"
+EndProject
+//#endif
+//#if (HasUWPProject && HasUWPUITestProject)
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UWP.UI.Test", "test\MvxFormsTemp.UWP.UI.Test\MvxFormsTemp.UWP.UI.Test.csproj", "{00000000-1111-0000-0002-000000000004}"
+EndProject
+//#endif
+//#if (HasTests && SolutionProjectGrouping == 'test-group')
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{00000002-1111-0000-0000-000000000000}"
+EndProject
+//#endif
+//#if (HasAndroidProject && SolutionProjectGrouping == 'platform')
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Android", "Android", "{00000003-1111-0000-0000-000000000000}"
+EndProject
+//#endif
+//#if (HasiOSProject && SolutionProjectGrouping == 'platform')
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iOS", "iOS", "{00000004-1111-0000-0000-000000000000}"
+EndProject
+//#endif
+//#if (HasUWPProject && SolutionProjectGrouping == 'platform')
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UWP", "UWP", "{00000005-1111-0000-0000-000000000000}"
+EndProject
+//#endif
+//#if (HasEditorConfig)
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solution Items", "{00000001-1111-0000-0000-000000000000}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+//#endif
+Global
+//#if (HasAndroidProject && HasAndroidTestProject)
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.projitems*{00000000-1111-0000-0000-000000000002}*SharedItemsImports = 4
+		src\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.projitems*{00000000-1111-0000-0001-000000000002}*SharedItemsImports = 4
+		src\MvxFormsTemp.Droid.Shared\MvxFormsTemp.Droid.Shared.projitems*{00000000-1111-0000-0003-000000000002}*SharedItemsImports = 13
+	EndGlobalSection
+//#endif
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
+		Ad-Hoc|ARM = Ad-Hoc|ARM
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		Ad-Hoc|iPhoneSimulator = Ad-Hoc|iPhoneSimulator
+		Ad-Hoc|x64 = Ad-Hoc|x64
+		Ad-Hoc|x86 = Ad-Hoc|x86
+		AppStore|Any CPU = AppStore|Any CPU
+		AppStore|ARM = AppStore|ARM
+		AppStore|iPhone = AppStore|iPhone
+		AppStore|iPhoneSimulator = AppStore|iPhoneSimulator
+		AppStore|x64 = AppStore|x64
+		AppStore|x86 = AppStore|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|iPhone = Debug|iPhone
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00000000-1111-0000-0000-000000000001}.Ad-Hoc|Any CPU.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Ad-Hoc|Any CPU.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Ad-Hoc|ARM.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Ad-Hoc|ARM.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Ad-Hoc|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Ad-Hoc|x64.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Ad-Hoc|x64.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Ad-Hoc|x86.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Ad-Hoc|x86.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.AppStore|ARM.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.AppStore|ARM.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.AppStore|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.AppStore|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.AppStore|x64.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.AppStore|x64.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.AppStore|x86.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.AppStore|x86.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Debug|ARM.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Debug|x64.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Debug|x86.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Release|ARM.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Release|ARM.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Release|iPhone.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Release|x64.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Release|x64.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Release|x86.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000001}.Release|x86.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Ad-Hoc|Any CPU.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Ad-Hoc|Any CPU.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Ad-Hoc|ARM.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Ad-Hoc|ARM.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Ad-Hoc|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Ad-Hoc|x64.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Ad-Hoc|x64.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Ad-Hoc|x86.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Ad-Hoc|x86.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.AppStore|ARM.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.AppStore|ARM.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.AppStore|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.AppStore|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.AppStore|x64.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.AppStore|x64.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.AppStore|x86.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.AppStore|x86.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Debug|ARM.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Debug|x64.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Debug|x86.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Release|ARM.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Release|ARM.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Release|iPhone.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Release|x64.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Release|x64.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Release|x86.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000005}.Release|x86.Build.0 = Release|Any CPU
+//#if (HasAndroidProject)
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|Any CPU.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|ARM.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|ARM.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|iPhone.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|x64.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|x64.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|x64.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|x86.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|x86.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Ad-Hoc|x86.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|Any CPU.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|ARM.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|ARM.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|ARM.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|iPhone.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|iPhoneSimulator.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|x64.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|x64.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|x64.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|x86.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.AppStore|x86.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|ARM.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|ARM.Deploy.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|iPhone.Deploy.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|iPhoneSimulator.Deploy.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|x64.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|x86.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|ARM.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|ARM.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|ARM.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|iPhone.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|iPhone.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|x64.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|x64.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|x64.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|x86.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|x86.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0000-000000000002}.Release|x86.Deploy.0 = Release|Any CPU
+//#endif
+//#if (HasiOSProject)
+		{00000000-1111-0000-0000-000000000003}.Ad-Hoc|Any CPU.ActiveCfg = Ad-Hoc|iPhone
+		{00000000-1111-0000-0000-000000000003}.Ad-Hoc|ARM.ActiveCfg = Ad-Hoc|iPhone
+		{00000000-1111-0000-0000-000000000003}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{00000000-1111-0000-0000-000000000003}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{00000000-1111-0000-0000-000000000003}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhoneSimulator
+		{00000000-1111-0000-0000-000000000003}.Ad-Hoc|iPhoneSimulator.Build.0 = Ad-Hoc|iPhoneSimulator
+		{00000000-1111-0000-0000-000000000003}.Ad-Hoc|x64.ActiveCfg = Ad-Hoc|iPhone
+		{00000000-1111-0000-0000-000000000003}.Ad-Hoc|x86.ActiveCfg = Ad-Hoc|iPhone
+		{00000000-1111-0000-0000-000000000003}.AppStore|Any CPU.ActiveCfg = AppStore|iPhone
+		{00000000-1111-0000-0000-000000000003}.AppStore|ARM.ActiveCfg = AppStore|iPhone
+		{00000000-1111-0000-0000-000000000003}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{00000000-1111-0000-0000-000000000003}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{00000000-1111-0000-0000-000000000003}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
+		{00000000-1111-0000-0000-000000000003}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
+		{00000000-1111-0000-0000-000000000003}.AppStore|x64.ActiveCfg = AppStore|iPhone
+		{00000000-1111-0000-0000-000000000003}.AppStore|x86.ActiveCfg = AppStore|iPhone
+		{00000000-1111-0000-0000-000000000003}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{00000000-1111-0000-0000-000000000003}.Debug|Any CPU.Build.0 = Debug|iPhone
+		{00000000-1111-0000-0000-000000000003}.Debug|ARM.ActiveCfg = Debug|iPhone
+		{00000000-1111-0000-0000-000000000003}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{00000000-1111-0000-0000-000000000003}.Debug|iPhone.Build.0 = Debug|iPhone
+		{00000000-1111-0000-0000-000000000003}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{00000000-1111-0000-0000-000000000003}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{00000000-1111-0000-0000-000000000003}.Debug|x64.ActiveCfg = Debug|iPhone
+		{00000000-1111-0000-0000-000000000003}.Debug|x86.ActiveCfg = Debug|iPhone
+		{00000000-1111-0000-0000-000000000003}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0000-000000000003}.Release|ARM.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0000-000000000003}.Release|iPhone.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0000-000000000003}.Release|iPhone.Build.0 = Release|iPhone
+		{00000000-1111-0000-0000-000000000003}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{00000000-1111-0000-0000-000000000003}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{00000000-1111-0000-0000-000000000003}.Release|x64.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0000-000000000003}.Release|x86.ActiveCfg = Release|iPhone
+//#endif
+//#if (HasUWPProject)
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|Any CPU.ActiveCfg = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|Any CPU.Build.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|Any CPU.Deploy.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|ARM.ActiveCfg = Release|ARM
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|ARM.Build.0 = Release|ARM
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|ARM.Deploy.0 = Release|ARM
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|iPhone.ActiveCfg = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|iPhone.Build.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|iPhone.Deploy.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|iPhoneSimulator.Deploy.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|x64.ActiveCfg = Release|x64
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|x64.Build.0 = Release|x64
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|x64.Deploy.0 = Release|x64
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|x86.ActiveCfg = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|x86.Build.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Ad-Hoc|x86.Deploy.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.AppStore|Any CPU.ActiveCfg = Release|x86
+		{00000000-1111-0000-0000-000000000004}.AppStore|Any CPU.Build.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.AppStore|Any CPU.Deploy.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.AppStore|ARM.ActiveCfg = Release|ARM
+		{00000000-1111-0000-0000-000000000004}.AppStore|ARM.Build.0 = Release|ARM
+		{00000000-1111-0000-0000-000000000004}.AppStore|ARM.Deploy.0 = Release|ARM
+		{00000000-1111-0000-0000-000000000004}.AppStore|iPhone.ActiveCfg = Release|x86
+		{00000000-1111-0000-0000-000000000004}.AppStore|iPhone.Build.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.AppStore|iPhone.Deploy.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.AppStore|iPhoneSimulator.ActiveCfg = Release|x86
+		{00000000-1111-0000-0000-000000000004}.AppStore|iPhoneSimulator.Build.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.AppStore|iPhoneSimulator.Deploy.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.AppStore|x64.ActiveCfg = Release|x64
+		{00000000-1111-0000-0000-000000000004}.AppStore|x64.Build.0 = Release|x64
+		{00000000-1111-0000-0000-000000000004}.AppStore|x64.Deploy.0 = Release|x64
+		{00000000-1111-0000-0000-000000000004}.AppStore|x86.ActiveCfg = Release|x86
+		{00000000-1111-0000-0000-000000000004}.AppStore|x86.Build.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.AppStore|x86.Deploy.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{00000000-1111-0000-0000-000000000004}.Debug|ARM.ActiveCfg = Debug|ARM
+		{00000000-1111-0000-0000-000000000004}.Debug|ARM.Build.0 = Debug|ARM
+		{00000000-1111-0000-0000-000000000004}.Debug|ARM.Deploy.0 = Debug|ARM
+		{00000000-1111-0000-0000-000000000004}.Debug|iPhone.ActiveCfg = Debug|x86
+		{00000000-1111-0000-0000-000000000004}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
+		{00000000-1111-0000-0000-000000000004}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-1111-0000-0000-000000000004}.Debug|x64.Build.0 = Debug|x64
+		{00000000-1111-0000-0000-000000000004}.Debug|x64.Deploy.0 = Debug|x64
+		{00000000-1111-0000-0000-000000000004}.Debug|x86.ActiveCfg = Debug|x86
+		{00000000-1111-0000-0000-000000000004}.Debug|x86.Build.0 = Debug|x86
+		{00000000-1111-0000-0000-000000000004}.Debug|x86.Deploy.0 = Debug|x86
+		{00000000-1111-0000-0000-000000000004}.Release|Any CPU.ActiveCfg = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Release|ARM.ActiveCfg = Release|ARM
+		{00000000-1111-0000-0000-000000000004}.Release|ARM.Build.0 = Release|ARM
+		{00000000-1111-0000-0000-000000000004}.Release|ARM.Deploy.0 = Release|ARM
+		{00000000-1111-0000-0000-000000000004}.Release|iPhone.ActiveCfg = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Release|iPhoneSimulator.ActiveCfg = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Release|x64.ActiveCfg = Release|x64
+		{00000000-1111-0000-0000-000000000004}.Release|x64.Build.0 = Release|x64
+		{00000000-1111-0000-0000-000000000004}.Release|x64.Deploy.0 = Release|x64
+		{00000000-1111-0000-0000-000000000004}.Release|x86.ActiveCfg = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Release|x86.Build.0 = Release|x86
+		{00000000-1111-0000-0000-000000000004}.Release|x86.Deploy.0 = Release|x86
+//#endif
+//#if (HasCoreTestProject)
+		{00000000-1111-0000-0001-000000000001}.Ad-Hoc|Any CPU.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Ad-Hoc|Any CPU.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Ad-Hoc|ARM.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Ad-Hoc|ARM.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Ad-Hoc|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Ad-Hoc|x64.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Ad-Hoc|x64.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Ad-Hoc|x86.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Ad-Hoc|x86.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.AppStore|ARM.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.AppStore|ARM.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.AppStore|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.AppStore|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.AppStore|x64.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.AppStore|x64.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.AppStore|x86.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.AppStore|x86.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Debug|ARM.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Debug|x64.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Debug|x86.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Release|ARM.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Release|ARM.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Release|iPhone.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Release|x64.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Release|x64.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Release|x86.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000001}.Release|x86.Build.0 = Release|Any CPU
+//#endif
+//#if (HasAndroidProject && HasAndroidTestProject)
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|Any CPU.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|ARM.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|ARM.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|iPhone.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|x64.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|x64.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|x64.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|x86.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|x86.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Ad-Hoc|x86.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|Any CPU.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|ARM.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|ARM.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|ARM.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|iPhone.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|iPhoneSimulator.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|x64.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|x64.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|x64.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|x86.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.AppStore|x86.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|ARM.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|ARM.Deploy.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|iPhone.Deploy.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|iPhoneSimulator.Deploy.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|x64.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|x86.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|ARM.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|ARM.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|ARM.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|iPhone.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|iPhone.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|x64.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|x64.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|x64.Deploy.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|x86.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|x86.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0001-000000000002}.Release|x86.Deploy.0 = Release|Any CPU
+//#endif
+//#if (HasiOSProject && HasiOSTestProject)
+		{00000000-1111-0000-0001-000000000003}.Ad-Hoc|Any CPU.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.Ad-Hoc|Any CPU.Build.0 = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.Ad-Hoc|ARM.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.Ad-Hoc|ARM.Build.0 = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.Ad-Hoc|iPhone.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.Ad-Hoc|iPhone.Build.0 = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{00000000-1111-0000-0001-000000000003}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{00000000-1111-0000-0001-000000000003}.Ad-Hoc|x64.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.Ad-Hoc|x64.Build.0 = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.Ad-Hoc|x86.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.Ad-Hoc|x86.Build.0 = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.AppStore|Any CPU.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.AppStore|Any CPU.Build.0 = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.AppStore|ARM.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.AppStore|ARM.Build.0 = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.AppStore|iPhone.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.AppStore|iPhone.Build.0 = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.AppStore|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{00000000-1111-0000-0001-000000000003}.AppStore|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{00000000-1111-0000-0001-000000000003}.AppStore|x64.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.AppStore|x64.Build.0 = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.AppStore|x86.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.AppStore|x86.Build.0 = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{00000000-1111-0000-0001-000000000003}.Debug|Any CPU.Build.0 = Debug|iPhone
+		{00000000-1111-0000-0001-000000000003}.Debug|ARM.ActiveCfg = Debug|iPhone
+		{00000000-1111-0000-0001-000000000003}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{00000000-1111-0000-0001-000000000003}.Debug|iPhone.Build.0 = Debug|iPhone
+		{00000000-1111-0000-0001-000000000003}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{00000000-1111-0000-0001-000000000003}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{00000000-1111-0000-0001-000000000003}.Debug|x64.ActiveCfg = Debug|iPhone
+		{00000000-1111-0000-0001-000000000003}.Debug|x86.ActiveCfg = Debug|iPhone
+		{00000000-1111-0000-0001-000000000003}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.Release|ARM.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.Release|iPhone.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.Release|iPhone.Build.0 = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{00000000-1111-0000-0001-000000000003}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{00000000-1111-0000-0001-000000000003}.Release|x64.ActiveCfg = Release|iPhone
+		{00000000-1111-0000-0001-000000000003}.Release|x86.ActiveCfg = Release|iPhone
+//#endif
+//#if ((HasiOSProject || HasAndroidProject) && HasXamarinUITestProject)
+		{00000000-1111-0000-0002-000000000005}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Ad-Hoc|ARM.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Ad-Hoc|x64.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Ad-Hoc|x64.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Ad-Hoc|x86.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Ad-Hoc|x86.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.AppStore|ARM.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.AppStore|ARM.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.AppStore|iPhoneSimulator.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.AppStore|x64.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.AppStore|x64.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.AppStore|x86.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Debug|ARM.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Debug|x64.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Debug|x86.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Release|ARM.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Release|ARM.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Release|iPhone.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Release|x64.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Release|x64.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Release|x86.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000005}.Release|x86.Build.0 = Release|Any CPU
+//#endif
+//#if (HasUWPProject && HasUWPTestProject)
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|Any CPU.ActiveCfg = Release|x64
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|Any CPU.Build.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|Any CPU.Deploy.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|ARM.ActiveCfg = Release|ARM
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|ARM.Build.0 = Release|ARM
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|ARM.Deploy.0 = Release|ARM
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|iPhone.ActiveCfg = Release|x64
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|iPhone.Build.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|iPhone.Deploy.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|x64
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|iPhoneSimulator.Deploy.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|x64.ActiveCfg = Release|x64
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|x64.Build.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|x64.Deploy.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|x86.ActiveCfg = Release|x86
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|x86.Build.0 = Release|x86
+		{00000000-1111-0000-0001-000000000004}.Ad-Hoc|x86.Deploy.0 = Release|x86
+		{00000000-1111-0000-0001-000000000004}.AppStore|Any CPU.ActiveCfg = Release|x64
+		{00000000-1111-0000-0001-000000000004}.AppStore|Any CPU.Build.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.AppStore|Any CPU.Deploy.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.AppStore|ARM.ActiveCfg = Release|ARM
+		{00000000-1111-0000-0001-000000000004}.AppStore|ARM.Build.0 = Release|ARM
+		{00000000-1111-0000-0001-000000000004}.AppStore|ARM.Deploy.0 = Release|ARM
+		{00000000-1111-0000-0001-000000000004}.AppStore|iPhone.ActiveCfg = Release|x64
+		{00000000-1111-0000-0001-000000000004}.AppStore|iPhone.Build.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.AppStore|iPhone.Deploy.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.AppStore|iPhoneSimulator.ActiveCfg = Release|x64
+		{00000000-1111-0000-0001-000000000004}.AppStore|iPhoneSimulator.Build.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.AppStore|iPhoneSimulator.Deploy.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.AppStore|x64.ActiveCfg = Release|x64
+		{00000000-1111-0000-0001-000000000004}.AppStore|x64.Build.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.AppStore|x64.Deploy.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.AppStore|x86.ActiveCfg = Release|x86
+		{00000000-1111-0000-0001-000000000004}.AppStore|x86.Build.0 = Release|x86
+		{00000000-1111-0000-0001-000000000004}.AppStore|x86.Deploy.0 = Release|x86
+		{00000000-1111-0000-0001-000000000004}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{00000000-1111-0000-0001-000000000004}.Debug|ARM.ActiveCfg = Debug|ARM
+		{00000000-1111-0000-0001-000000000004}.Debug|ARM.Build.0 = Debug|ARM
+		{00000000-1111-0000-0001-000000000004}.Debug|ARM.Deploy.0 = Debug|ARM
+		{00000000-1111-0000-0001-000000000004}.Debug|iPhone.ActiveCfg = Debug|x86
+		{00000000-1111-0000-0001-000000000004}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
+		{00000000-1111-0000-0001-000000000004}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-1111-0000-0001-000000000004}.Debug|x64.Build.0 = Debug|x64
+		{00000000-1111-0000-0001-000000000004}.Debug|x64.Deploy.0 = Debug|x64
+		{00000000-1111-0000-0001-000000000004}.Debug|x86.ActiveCfg = Debug|x86
+		{00000000-1111-0000-0001-000000000004}.Debug|x86.Build.0 = Debug|x86
+		{00000000-1111-0000-0001-000000000004}.Debug|x86.Deploy.0 = Debug|x86
+		{00000000-1111-0000-0001-000000000004}.Release|Any CPU.ActiveCfg = Release|x86
+		{00000000-1111-0000-0001-000000000004}.Release|ARM.ActiveCfg = Release|ARM
+		{00000000-1111-0000-0001-000000000004}.Release|ARM.Build.0 = Release|ARM
+		{00000000-1111-0000-0001-000000000004}.Release|ARM.Deploy.0 = Release|ARM
+		{00000000-1111-0000-0001-000000000004}.Release|iPhone.ActiveCfg = Release|x86
+		{00000000-1111-0000-0001-000000000004}.Release|iPhoneSimulator.ActiveCfg = Release|x86
+		{00000000-1111-0000-0001-000000000004}.Release|x64.ActiveCfg = Release|x64
+		{00000000-1111-0000-0001-000000000004}.Release|x64.Build.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.Release|x64.Deploy.0 = Release|x64
+		{00000000-1111-0000-0001-000000000004}.Release|x86.ActiveCfg = Release|x86
+		{00000000-1111-0000-0001-000000000004}.Release|x86.Build.0 = Release|x86
+		{00000000-1111-0000-0001-000000000004}.Release|x86.Deploy.0 = Release|x86
+//#endif
+//#if (HasUWPProject && HasUWPUITestProject)
+		{00000000-1111-0000-0002-000000000004}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Ad-Hoc|ARM.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Ad-Hoc|x64.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Ad-Hoc|x64.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Ad-Hoc|x86.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Ad-Hoc|x86.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.AppStore|ARM.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.AppStore|ARM.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.AppStore|iPhoneSimulator.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.AppStore|x64.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.AppStore|x64.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.AppStore|x86.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Debug|ARM.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Debug|x64.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Debug|x86.Build.0 = Debug|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Release|ARM.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Release|ARM.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Release|iPhone.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Release|x64.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Release|x64.Build.0 = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Release|x86.ActiveCfg = Release|Any CPU
+		{00000000-1111-0000-0002-000000000004}.Release|x86.Build.0 = Release|Any CPU
+//#endif
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+//#if (IsTestGroupDir)
+	GlobalSection(NestedProjects) = preSolution
+		{00000000-1111-0000-0001-000000000001} = {00000002-1111-0000-0000-000000000000}
+//#endif
+//#if (IsTestGroupDir && HasAndroidProject && HasAndroidTestProject)
+		{00000000-1111-0000-0001-000000000002} = {00000002-1111-0000-0000-000000000000}
+//#endif
+//#if (IsTestGroupDir && HasXamarinUITestProject)
+		{00000000-1111-0000-0002-000000000005} = {00000002-1111-0000-0000-000000000000}
+//#endif
+//#if (IsTestGroupDir && HasiOSProject && HasiOSTestProject)
+		{00000000-1111-0000-0001-000000000003} = {00000002-1111-0000-0000-000000000000}
+//#endif
+//#if (IsTestGroupDir && HasUWPProject && HasUWPTestProject)
+		{00000000-1111-0000-0001-000000000004} = {00000002-1111-0000-0000-000000000000}
+//#endif
+//#if (IsTestGroupDir && HasUWPProject && HasUWPUITestProject)
+		{00000000-1111-0000-0002-000000000004} = {00000002-1111-0000-0000-000000000000}
+//#endif
+//#if (IsTestGroupDir)
+	EndGlobalSection
+//#endif
+//#if (IsPlatformDir)
+	GlobalSection(NestedProjects) = preSolution
+//#endif
+//#if (IsPlatformDir && HasAndroidProject)
+		{00000000-1111-0000-0000-000000000002} = {00000003-1111-0000-0000-000000000000}
+//#endif
+//#if (IsPlatformDir && HasAndroidProject && HasAndroidTestProject)
+		{00000000-1111-0000-0001-000000000002} = {00000003-1111-0000-0000-000000000000}
+		{00000000-1111-0000-0003-000000000002} = {00000003-1111-0000-0000-000000000000}
+//#endif
+//#if (IsPlatformDir && HasiOSProject)
+		{00000000-1111-0000-0000-000000000003} = {00000004-1111-0000-0000-000000000000}
+//#endif
+//#if (IsPlatformDir && HasiOSProject && HasiOSTestProject)
+		{00000000-1111-0000-0001-000000000003} = {00000004-1111-0000-0000-000000000000}
+//#endif
+//#if (IsPlatformDir && HasUWPProject)
+		{00000000-1111-0000-0000-000000000004} = {00000005-1111-0000-0000-000000000000}
+//#endif
+//#if (IsPlatformDir && HasUWPProject && HasUWPTestProject)
+		{00000000-1111-0000-0001-000000000004} = {00000005-1111-0000-0000-000000000000}
+//#endif
+//#if (IsPlatformDir && HasUWPProject && HasUWPUITestProject)
+		{00000000-1111-0000-0002-000000000004} = {00000005-1111-0000-0000-000000000000}
+//#endif
+//#if (IsPlatformDir)
+	EndGlobalSection
+//#endif
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1650E742-2D5F-44C4-A42E-14B7AC4C6030}
+	EndGlobalSection
+EndGlobal

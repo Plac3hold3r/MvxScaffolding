@@ -9,7 +9,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:coreTemplate="clr-namespace:MvxScaffolding.Core.Template;assembly=MvxScaffolding.Core"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:dialogs="clr-namespace:MvxScaffolding.UI.ViewModels.Dialogs"
+    xmlns:dialogs="clr-namespace:MvxScaffolding.Core.ViewModels.Dialogs;assembly=MvxScaffolding.Core"
     xmlns:l10n="clr-namespace:MvxScaffolding.Localization.Resources;assembly=MvxScaffolding.Localization"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -60,6 +60,31 @@
                         </Grid>
                     </materialDesign:ColorZone>
                     <StackPanel Margin="16">
+
+                        <Grid Margin="0,0,0,16">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                            <TextBlock
+                                Margin="0,0,24,4"
+                                Foreground="{StaticResource MaterialDesignBodyLight}"
+                                Text="{x:Static l10n:LocalResources.AppDetails_MvvmCross_Version}" />
+                            <TextBlock
+                                Grid.Row="1"
+                                Margin="0,0,24,0"
+                                Foreground="{StaticResource MaterialDesignBodyLight}"
+                                Text="{x:Static l10n:LocalResources.AppDetails_Project_Name}" />
+                            <TextBlock Grid.Column="1" Text="6.1.1" />
+                            <TextBlock
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Text="{Binding ProjectName}" />
+                        </Grid>
                         <DockPanel>
                             <TextBlock FontWeight="Bold" Text="{x:Static l10n:LocalResources.AppDetails_Application}" />
                             <TextBlock
@@ -79,15 +104,6 @@
                             materialDesign:HintAssist.Hint="{Binding Source={x:Static l10n:LocalResources.AppDetails_Display_Name}, Converter={StaticResource RequiredLabelConverter}}"
                             materialDesign:HintAssist.IsFloating="True"
                             Text="{Binding Options.AppName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
-                        <ComboBox
-                            Margin="0,16,0,0"
-                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.AppDetails_MvvmCross_Version}"
-                            materialDesign:HintAssist.HintOpacity="1"
-                            IsEditable="False"
-                            IsEnabled="False"
-                            Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-                            <ComboBoxItem IsSelected="True">6.0.1</ComboBoxItem>
-                        </ComboBox>
                         <TextBlock
                             Margin="0,16,0,0"
                             FontWeight="Bold"
@@ -97,11 +113,6 @@
                             materialDesign:HintAssist.Hint="{Binding Source={x:Static l10n:LocalResources.AppDetails_Solution_Name}, Converter={StaticResource RequiredLabelConverter}}"
                             materialDesign:HintAssist.IsFloating="True"
                             Text="{Binding Options.SolutionName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
-                        <TextBox
-                            Margin="0,16,0,12"
-                            materialDesign:HintAssist.Hint="{Binding Source={x:Static l10n:LocalResources.AppDetails_Project_Name}, Converter={StaticResource RequiredLabelConverter}}"
-                            materialDesign:HintAssist.IsFloating="True"
-                            Text="{Binding Options.ProjectName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
                         <DockPanel
                             Grid.Row="0"
                             Margin="0,4,0,0"
@@ -309,83 +320,6 @@
                             <TextBlock
                                 VerticalAlignment="Center"
                                 Text="{x:Static l10n:LocalResources.AppDetails_Template_NavigationMenu_Description}"
-                                TextWrapping="Wrap" />
-                        </StackPanel>
-                        <StackPanel
-                            Grid.Row="2"
-                            Margin="8"
-                            HorizontalAlignment="Right"
-                            Orientation="Horizontal">
-                            <materialDesign:PackIcon
-                                Width="30"
-                                Padding="2,0,2,0"
-                                Kind="Android"
-                                ToolTip="Android" />
-                            <materialDesign:PackIcon
-                                Width="30"
-                                Padding="2,0,2,0"
-                                Kind="AppleIos"
-                                ToolTip="iOS" />
-                            <materialDesign:PackIcon
-                                Width="30"
-                                Padding="2,0,2,0"
-                                Kind="Windows"
-                                ToolTip="UWP" />
-                        </StackPanel>
-                    </Grid>
-                </materialDesign:Card>
-            </materialDesign:TransitioningContent>
-
-            <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}" OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}">
-                <materialDesign:Card Width="200" Margin="0,6">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="90" />
-                            <RowDefinition Height="120" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <materialDesign:ColorZone VerticalAlignment="Stretch" Background="{StaticResource BlankViewColorBrush}">
-                            <TextBlock
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                FontSize="48"
-                                FontWeight="Bold"
-                                Text="B" />
-                        </materialDesign:ColorZone>
-                        <Button
-                            Grid.Row="0"
-                            Margin="0,0,16,-20"
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Bottom"
-                            Command="{Binding SelectScaffoldTypeCommand}"
-                            CommandParameter="{x:Static coreTemplate:ScaffoldType.Blank}">
-                            <Button.Style>
-                                <Style BasedOn="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" TargetType="Button">
-                                    <Style.Triggers>
-                                        <DataTrigger Binding="{Binding Options.SelectedScaffoldType}" Value="{x:Static coreTemplate:ScaffoldType.Blank}">
-                                            <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}" />
-                                            <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}" />
-                                            <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}" />
-                                        </DataTrigger>
-                                    </Style.Triggers>
-                                    <Style.Setters>
-                                        <Setter Property="Background" Value="{DynamicResource AccentHueColorBrush}" />
-                                        <Setter Property="BorderBrush" Value="{DynamicResource AccentHueColorBrush}" />
-                                        <Setter Property="Foreground" Value="{DynamicResource AccentHueColorForegroundBrush}" />
-                                    </Style.Setters>
-                                </Style>
-                            </Button.Style>
-                            <materialDesign:PackIcon Kind="{Binding Options.SelectedScaffoldType, Converter={StaticResource SelectedScaffoldTypeToIconConverter}, ConverterParameter={x:Static coreTemplate:ScaffoldType.Blank}}" />
-                        </Button>
-                        <StackPanel Grid.Row="1" Margin="8,12,8,0">
-                            <TextBlock
-                                Margin="0,0,0,4"
-                                FontWeight="Medium"
-                                Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                                Text="{x:Static l10n:LocalResources.AppDetails_Template_Blank}" />
-                            <TextBlock
-                                VerticalAlignment="Center"
-                                Text="{x:Static l10n:LocalResources.AppDetails_Template_Blank_Description}"
                                 TextWrapping="Wrap" />
                         </StackPanel>
                         <StackPanel

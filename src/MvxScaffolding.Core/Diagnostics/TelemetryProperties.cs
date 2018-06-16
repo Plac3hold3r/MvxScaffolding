@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -16,8 +16,6 @@ namespace MvxScaffolding.Core.Diagnostics
         public const string WizardType = "WizardType";
 
         public const string WizardStatus = "WizardStatus";
-
-        public const string EventName = "EventName";
 
         public const string VisualStudioExeVersion = "VsExeVersion";
 
