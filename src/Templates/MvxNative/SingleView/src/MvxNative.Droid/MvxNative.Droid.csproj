@@ -129,6 +129,12 @@
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
     <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvxNative.Core\MvxNative.Core.csproj">
+      <Project>{00000000-0000-0000-0000-000000000001}</Project>
+      <Name>MvxNative.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="..\MvxNative.Droid.Shared\MvxNative.Droid.Shared.projitems" Label="Shared" Condition=" '$(HasAndroidTestProject)' != 'false' " />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
