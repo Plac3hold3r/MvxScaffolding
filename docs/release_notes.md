@@ -1,5 +1,12 @@
 ## Release Notes
 
+## [v0.11.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.11.0-beta) (2018-06-16)
+
+- Fix support for choosing solution name
+- Update to support MvvmCross 6.1.1.
+- Update to support Xamarin Forms 3
+- Update default template option to Single View
+
 ## [v0.10.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.10.0-beta) (2018-05-14)
 
 - Update to support Visual Studio 15.7.
@@ -15,12 +22,12 @@
 
 ## [v0.8.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.8.0-beta) (2018-04-16)
 
-- Updated templates to support MvvmCross 6.0.0.
-- Removed support for creating a Core project targeting anything other than .NET Standard 2.0, required by MvvmCross 6.0.0.
-- Removed support for all UWP versions prior to Fall Creators Update (1709) due to MvvmCross 6.0.0 only supporting .NET Standard 2.0.
-- Added Android ProGuard for release builds.
-- Added Android SDK 27 (Oreo) as a minimum SDK option.
-- Added iOS SDK 11.3 as a minimum SDK option.
+- Update templates to support MvvmCross 6.0.0.
+- Remove support for creating a Core project targeting anything other than .NET Standard 2.0, required by MvvmCross 6.0.0.
+- Remove support for all UWP versions prior to Fall Creators Update (1709) due to MvvmCross 6.0.0 only supporting .NET Standard 2.0.
+- Add Android ProGuard for release builds
+- Add Android SDK 27 (Oreo) as a minimum SDK option
+- Add iOS SDK 11.3 as a minimum SDK option
 
 ## [v0.7.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.7.0-beta) (2018-03-23)
 
