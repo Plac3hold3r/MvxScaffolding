@@ -190,6 +190,9 @@
     <PackageReference Include="MvvmCross.CodeAnalysis">
       <Version>6.1.1</Version>
     </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Sidebar">
+      <Version>6.1.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json">
