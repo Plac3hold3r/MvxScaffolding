@@ -64,8 +64,11 @@
     <Compile Include="Setup.cs" />
     <Compile Include="Views\!Base\BaseActivity.cs" />
     <Compile Include="Views\!Base\BaseFragment.cs" />
+    <Compile Include="Views\!Helpers\IDrawerActivity.cs" />
     <Compile Include="Views\Main\MainContainerActivity.cs" />
     <Compile Include="Views\Main\MainFragment.cs" />
+    <Compile Include="Views\Menu\MenuFragment.cs" />
+    <Compile Include="Views\Settings\SettingsFragment.cs" />
     <Compile Include="Views\Splash\SplashActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,19 +98,26 @@
     <AndroidResource Include="Resources\layout\fragment_main.axml" />
     <AndroidResource Include="Resources\layout\layout_toolbar.axml" />
     <AndroidResource Include="Resources\layout\activity_main_container.axml" />
+    <AndroidResource Include="Resources\layout\fragment_navigation.axml" />
+    <AndroidResource Include="Resources\layout\fragment_navigation_header.axml" />
+    <AndroidResource Include="Resources\layout\fragment_settings.axml" />
   </ItemGroup>
   <ItemGroup Condition=" '$(UseAndroidXMLLayouts)' == 'true' ">
     <AndroidResource Include="Resources\layout\fragment_main.xml" />
     <AndroidResource Include="Resources\layout\layout_toolbar.xml" />
     <AndroidResource Include="Resources\layout\activity_main_container.xml" />
+    <AndroidResource Include="Resources\layout\fragment_navigation.xml" />
+    <AndroidResource Include="Resources\layout\fragment_navigation_header.xml" />
+    <AndroidResource Include="Resources\layout\fragment_settings.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\values-v19\styles.xml" />
     <AndroidResource Include="Resources\values-v21\styles.xml" />
-    <AndroidResource Include="Resources\drawable\splash_screen.xml" />
+    <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
     <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_round.png" />
     <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
@@ -118,16 +128,17 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_round.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\drawable\splash_screen.xml" />
+    <AndroidResource Include="Resources\drawable\side_nav_bar.xml" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_mvvmcross_logo.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_mvvmcross_logo.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_mvvmcross_logo.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_mvvmcross_logo.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_mvvmcross_logo.png" />
-    <AndroidResource Include="Resources\values-v19\styles.xml" />
     <AndroidResource Include="Resources\drawable\ic_launcher_foreground.xml" />
+    <AndroidResource Include="Resources\menu\navigation_drawer.xml" />
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
-    <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MvxNative.Core\MvxNative.Core.csproj">
