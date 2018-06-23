@@ -42,7 +42,7 @@
                     <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="PrimaryMid">
                         <Image
                             Width="196"
-                            Height="140"
+                            Height="130"
                             Source="../Resources/Images/mvxscaffolding_logo_transparent.png"
                             Stretch="Uniform" />
                     </materialDesign:ColorZone>
@@ -115,8 +115,8 @@
                     </Grid.RowDefinitions>
                     <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="{Binding Options.HasAndroid, Converter={StaticResource ActiveColorZoneModeConverter}}">
                         <materialDesign:PackIcon
-                            Width="128"
-                            Height="128"
+                            Width="118"
+                            Height="118"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                             Kind="Android" />
@@ -208,7 +208,7 @@
                             Grid.Row="1"
                             Margin="0,4,0,0"
                             materialDesign:ComboBoxAssist.ClassicMode="true"
-                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.PlatformOptions_Android_LayoutTypes}"
+                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.PlatformOptions_Android_LayoutType}"
                             DisplayMemberPath="Value"
                             IsEnabled="{Binding Options.HasAndroid}"
                             ItemsSource="{Binding Options.AndroidLayoutTypes}"
@@ -277,8 +277,8 @@
                     </Grid.RowDefinitions>
                     <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="{Binding Options.HasIos, Converter={StaticResource ActiveColorZoneModeConverter}}">
                         <materialDesign:PackIcon
-                            Width="128"
-                            Height="128"
+                            Width="118"
+                            Height="118"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                             Kind="Apple" />
@@ -371,7 +371,7 @@
                             Grid.Row="1"
                             Margin="0,4,0,0"
                             materialDesign:ComboBoxAssist.ClassicMode="true"
-                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.PlatformOptions_Ios_LayoutTypes}"
+                            materialDesign:HintAssist.Hint="{x:Static l10n:LocalResources.PlatformOptions_Ios_LayoutType}"
                             DisplayMemberPath="Value"
                             IsEnabled="{Binding Options.HasIos}"
                             ItemsSource="{Binding Options.IosLayoutTypes}"
@@ -465,8 +465,8 @@
                     </Grid.RowDefinitions>
                     <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="{Binding Options.HasUwp, Converter={StaticResource ActiveColorZoneModeConverter}}">
                         <materialDesign:PackIcon
-                            Width="128"
-                            Height="128"
+                            Width="118"
+                            Height="118"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                             Kind="Windows" />

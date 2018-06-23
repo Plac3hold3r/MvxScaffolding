@@ -412,11 +412,11 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Layout Types.
+        ///   Looks up a localized string similar to Layout Type.
         /// </summary>
-        public static string PlatformOptions_Android_LayoutTypes {
+        public static string PlatformOptions_Android_LayoutType {
             get {
-                return ResourceManager.GetString("PlatformOptions_Android_LayoutTypes", resourceCulture);
+                return ResourceManager.GetString("PlatformOptions_Android_LayoutType", resourceCulture);
             }
         }
         
@@ -502,11 +502,11 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Layout Types.
+        ///   Looks up a localized string similar to Layout Type.
         /// </summary>
-        public static string PlatformOptions_Ios_LayoutTypes {
+        public static string PlatformOptions_Ios_LayoutType {
             get {
-                return ResourceManager.GetString("PlatformOptions_Ios_LayoutTypes", resourceCulture);
+                return ResourceManager.GetString("PlatformOptions_Ios_LayoutType", resourceCulture);
             }
         }
         
