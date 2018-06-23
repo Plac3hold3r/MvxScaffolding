@@ -53,9 +53,9 @@ namespace MvxScaffolding.Core.Template
 
             public const string HasIosUITestProject = "HasiOSUITestProject";
 
-            public const string UseAndroidXmlLayouts = "UseAndroidXMLLayouts";
+            public const string AndroidLayoutType = "AndroidLayoutType";
 
-            public const string HasFluentLayouts = "HasFluentLayouts";
+            public const string IosLayoutType = "IosLayoutType";
         }
 
         public static class Forms

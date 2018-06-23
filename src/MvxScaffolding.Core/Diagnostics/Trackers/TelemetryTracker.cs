@@ -145,8 +145,8 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
         {
             properties.Add(TemplateOptions.Native.HasAndroidUITestProject, options.HasAndroidUiTestProject.ToStringLowerCase());
             properties.Add(TemplateOptions.Native.HasIosUITestProject, options.HasIosUiTestProject.ToStringLowerCase());
-            properties.Add(TemplateOptions.Native.UseAndroidXmlLayouts, options.HasAndroidXml.ToStringLowerCase());
-            properties.Add(TemplateOptions.Native.HasFluentLayouts, options.HasIosFluentLayout.ToStringLowerCase());
+            properties.Add(TemplateOptions.Native.AndroidLayoutType, options.SelectedAndroidLayoutType);
+            properties.Add(TemplateOptions.Native.IosLayoutType, options.SelectedIosLayoutType);
 
             return properties;
         }

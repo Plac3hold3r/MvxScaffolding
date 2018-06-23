@@ -25,6 +25,8 @@ namespace MvxScaffolding.Core.Template
 
         bool HasEditorConfig { get; set; }
 
+        ScaffoldType SelectedScaffoldType { get; set; }
+
         string SelectedProjectGrouping { get; set; }
 
         string AppId { get; set; }
@@ -49,8 +51,8 @@ namespace MvxScaffolding.Core.Template
 
         bool HasIosUiTestProject { get; set; }
 
-        bool HasAndroidXml { get; set; }
+        string SelectedAndroidLayoutType { get; set; }
 
-        bool HasIosFluentLayout { get; set; }
+        string SelectedIosLayoutType { get; set; }
     }
 }
