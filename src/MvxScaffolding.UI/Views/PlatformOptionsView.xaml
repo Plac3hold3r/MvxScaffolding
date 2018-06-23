@@ -35,7 +35,7 @@
                 HorizontalAlignment="Center">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="140" />
+                        <RowDefinition Height="130" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
@@ -54,7 +54,7 @@
                     </StackPanel>
                     <Grid
                         Grid.Row="2"
-                        Height="180"
+                        Height="190"
                         Margin="8"
                         HorizontalAlignment="Stretch">
                         <Grid.RowDefinitions>
@@ -109,7 +109,7 @@
                 HorizontalAlignment="Center">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="140" />
+                        <RowDefinition Height="130" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
@@ -153,7 +153,7 @@
                     </StackPanel>
                     <Grid
                         Grid.Row="2"
-                        Height="180"
+                        Height="190"
                         Margin="8"
                         HorizontalAlignment="Stretch">
                         <Grid.RowDefinitions>
@@ -204,8 +204,25 @@
                                 <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Android_MarketShare}" />
                             </Hyperlink>
                         </TextBlock>
-                        <DockPanel
+                        <ComboBox
                             Grid.Row="1"
+                            Margin="0,4,0,0"
+                            materialDesign:ComboBoxAssist.ClassicMode="true"
+                            materialDesign:HintAssist.Hint="Layout Type"
+                            DisplayMemberPath="Value"
+                            IsEnabled="{Binding Options.HasAndroid}"
+                            ItemsSource="{Binding Options.AndroidLayoutTypes}"
+                            SelectedValue="{Binding Options.SelectedAndroidLayoutType}"
+                            SelectedValuePath="Key"
+                            Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel />
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+                        </ComboBox>
+                        <DockPanel
+                            Grid.Row="2"
                             Margin="0,12,0,0"
                             HorizontalAlignment="Stretch">
                             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
@@ -224,7 +241,7 @@
                                 IsEnabled="{Binding Options.HasAndroid}" />
                         </DockPanel>
                         <DockPanel
-                            Grid.Row="2"
+                            Grid.Row="3"
                             Margin="0,12,0,0"
                             HorizontalAlignment="Stretch">
                             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
@@ -242,31 +259,6 @@
                                 IsChecked="{Binding Options.HasAndroidUiTestProject}"
                                 IsEnabled="{Binding Options.HasAndroid}" />
                         </DockPanel>
-                        <DockPanel
-                            Grid.Row="3"
-                            Margin="0,12,0,8"
-                            HorizontalAlignment="Stretch"
-                            Visibility="{Binding IsNativeTemplate, Converter={StaticResource BooleanToVisibilityConverter}}">
-                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Bottom">
-                                <Hyperlink
-                                    Command="{Binding ShowDialogCommand}"
-                                    CommandParameter="{Binding AndroidXmlLayoutInfoModel}"
-                                    IsEnabled="{Binding Options.HasAndroid}"
-                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
-                                    TextDecorations="None">
-                                    <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Android_XmlLayouts}" />
-                                    <materialDesign:PackIcon
-                                        Margin="4,0"
-                                        VerticalAlignment="Center"
-                                        Kind="Information" />
-                                </Hyperlink>
-                            </TextBlock>
-                            <ToggleButton
-                                Margin="8,0,0,0"
-                                HorizontalAlignment="Right"
-                                IsChecked="{Binding Options.HasAndroidXml}"
-                                IsEnabled="{Binding Options.HasAndroid}" />
-                        </DockPanel>
                     </Grid>
                 </Grid>
             </materialDesign:Card>
@@ -279,7 +271,7 @@
                 HorizontalAlignment="Center">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="140" />
+                        <RowDefinition Height="130" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
@@ -323,7 +315,7 @@
                     </StackPanel>
                     <Grid
                         Grid.Row="2"
-                        Height="180"
+                        Height="190"
                         Margin="8"
                         HorizontalAlignment="Stretch">
                         <Grid.RowDefinitions>
@@ -375,8 +367,25 @@
                                 <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Ios_MarketShare}" />
                             </Hyperlink>
                         </TextBlock>
-                        <DockPanel
+                        <ComboBox
                             Grid.Row="1"
+                            Margin="0,4,0,0"
+                            materialDesign:ComboBoxAssist.ClassicMode="true"
+                            materialDesign:HintAssist.Hint="Layout Type"
+                            DisplayMemberPath="Value"
+                            IsEnabled="{Binding Options.HasIos}"
+                            ItemsSource="{Binding Options.IosLayoutTypes}"
+                            SelectedValue="{Binding Options.SelectedIosLayoutType}"
+                            SelectedValuePath="Key"
+                            Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel />
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+                        </ComboBox>
+                        <DockPanel
+                            Grid.Row="2"
                             Margin="0,12,0,0"
                             HorizontalAlignment="Stretch">
                             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
@@ -395,7 +404,7 @@
                                 IsEnabled="{Binding Options.HasIos}" />
                         </DockPanel>
                         <DockPanel
-                            Grid.Row="2"
+                            Grid.Row="3"
                             Margin="0,12,0,0"
                             HorizontalAlignment="Stretch">
                             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
@@ -411,31 +420,6 @@
                                 Margin="8,0,0,0"
                                 HorizontalAlignment="Right"
                                 IsChecked="{Binding Options.HasIosUiTestProject}"
-                                IsEnabled="{Binding Options.HasIos}" />
-                        </DockPanel>
-                        <DockPanel
-                            Grid.Row="3"
-                            Margin="0,12,0,0"
-                            HorizontalAlignment="Stretch"
-                            Visibility="{Binding IsNativeTemplate, Converter={StaticResource BooleanToVisibilityConverter}}">
-                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
-                                <Hyperlink
-                                    Command="{Binding ShowDialogCommand}"
-                                    CommandParameter="{Binding IosFluentLayoutsInfoModel}"
-                                    IsEnabled="{Binding Options.HasIos}"
-                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
-                                    TextDecorations="None">
-                                    <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Ios_FluentLayouts}" />
-                                    <materialDesign:PackIcon
-                                        Margin="4,0"
-                                        VerticalAlignment="Center"
-                                        Kind="Information" />
-                                </Hyperlink>
-                            </TextBlock>
-                            <ToggleButton
-                                Margin="8,0,0,0"
-                                HorizontalAlignment="Right"
-                                IsChecked="{Binding Options.HasIosFluentLayout}"
                                 IsEnabled="{Binding Options.HasIos}" />
                         </DockPanel>
                         <DockPanel
@@ -475,7 +459,7 @@
                 HorizontalAlignment="Center">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="140" />
+                        <RowDefinition Height="130" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
@@ -519,7 +503,7 @@
                     </StackPanel>
                     <Grid
                         Grid.Row="2"
-                        Height="180"
+                        Height="190"
                         Margin="8"
                         HorizontalAlignment="Stretch">
                         <Grid.RowDefinitions>
