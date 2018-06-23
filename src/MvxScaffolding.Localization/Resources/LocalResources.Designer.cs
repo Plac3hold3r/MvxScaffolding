@@ -412,6 +412,15 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Layout Types.
+        /// </summary>
+        public static string PlatformOptions_Android_LayoutTypes {
+            get {
+                return ResourceManager.GetString("PlatformOptions_Android_LayoutTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Market Share.
         /// </summary>
         public static string PlatformOptions_Android_MarketShare {
@@ -457,15 +466,6 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to XML Layouts.
-        /// </summary>
-        public static string PlatformOptions_Android_XmlLayouts {
-            get {
-                return ResourceManager.GetString("PlatformOptions_Android_XmlLayouts", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to .NET Standard.
         /// </summary>
         public static string PlatformOptions_Core_dotNetStandard {
@@ -493,20 +493,20 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fluent Layouts.
-        /// </summary>
-        public static string PlatformOptions_Ios_FluentLayouts {
-            get {
-                return ResourceManager.GetString("PlatformOptions_Ios_FluentLayouts", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Hyperion.
         /// </summary>
         public static string PlatformOptions_Ios_Hyperion {
             get {
                 return ResourceManager.GetString("PlatformOptions_Ios_Hyperion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Layout Types.
+        /// </summary>
+        public static string PlatformOptions_Ios_LayoutTypes {
+            get {
+                return ResourceManager.GetString("PlatformOptions_Ios_LayoutTypes", resourceCulture);
             }
         }
         
