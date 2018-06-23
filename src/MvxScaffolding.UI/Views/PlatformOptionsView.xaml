@@ -281,7 +281,7 @@
                             Height="118"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
-                            Kind="Apple" />
+                            Kind="AppleIos" />
                     </materialDesign:ColorZone>
                     <Button
                         Grid.Row="0"
