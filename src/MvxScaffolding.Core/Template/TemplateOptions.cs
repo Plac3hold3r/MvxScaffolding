@@ -23,8 +23,6 @@ namespace MvxScaffolding.Core.Template
 
         public const string HasUwpUITestProject = "HasUWPUITestProject";
 
-        public const string MvvmCrossVersion = "MvvmCrossVersion";
-
         public const string HasEditorConfig = "HasEditorConfig";
 
         public const string SolutionProjectGrouping = "SolutionProjectGrouping";
