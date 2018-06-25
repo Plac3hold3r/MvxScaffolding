@@ -318,8 +318,8 @@
   <data name="Summary_Android_UnitTestProject" xml:space="preserve">
     <value>Unit Test Project</value>
   </data>
-  <data name="Summary_Android_XmlLayouts" xml:space="preserve">
-    <value>XML Layouts</value>
+  <data name="Summary_Android_LayoutType" xml:space="preserve">
+    <value>Layout Type</value>
   </data>
   <data name="Summary_Application" xml:space="preserve">
     <value>Application</value>
@@ -345,8 +345,8 @@
   <data name="Summary_Ios" xml:space="preserve">
     <value>iOS</value>
   </data>
-  <data name="Summary_Ios_FluentLayouts" xml:space="preserve">
-    <value>Fluent Layouts</value>
+  <data name="Summary_Ios_LayoutType" xml:space="preserve">
+    <value>Layout Type</value>
   </data>
   <data name="Summary_Ios_Hyperion" xml:space="preserve">
     <value>Hyperion</value>

@@ -126,8 +126,7 @@
                     OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}"
                     Visibility="{Binding Options.HasAndroid, Converter={StaticResource BooleanToVisibilityConverter}}">
                     <materialDesign:Card
-                        Width="380"
-                        Height="220"
+                        Width="570"
                         Margin="8"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
@@ -139,71 +138,84 @@
                                         Height="20"
                                         Kind="Android" />
                                     <TextBlock
-                                        Margin="8,0"
+                                        Margin="0,0,20,0"
                                         HorizontalAlignment="Center"
                                         FontWeight="Medium"
                                         Style="{StaticResource MaterialDesignSubheadingTextBlock}"
                                         Text="{x:Static l10n:LocalResources.Summary_Android_Title}" />
                                 </DockPanel>
                             </materialDesign:ColorZone>
-                            <StackPanel Margin="16">
-                                <DockPanel HorizontalAlignment="Stretch">
-                                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Android_MinSdk}" />
-                                    <TextBlock
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Margin="16">
+                                    <DockPanel HorizontalAlignment="Stretch">
+                                        <TextBlock Text="{x:Static l10n:LocalResources.Summary_Android_MinSdk}" />
+                                        <TextBlock
+                                            Margin="0,4,0,0"
+                                            HorizontalAlignment="Right"
+                                            Foreground="{StaticResource PrimaryColorBrush}"
+                                            Text="{Binding Options.SelectedMinAndroidSDK}" />
+                                    </DockPanel>
+                                    <DockPanel
                                         Margin="0,4,0,0"
-                                        HorizontalAlignment="Right"
-                                        Foreground="{StaticResource PrimaryColorBrush}"
-                                        Text="{Binding Options.SelectedMinAndroidSDK}" />
-                                </DockPanel>
-                                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
-                                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Android_UnitTestProject}" />
-                                    <TextBlock
-                                        Margin="0,4,0,0"
-                                        HorizontalAlignment="Right"
-                                        Text="{Binding Options.HasAndroidUnitTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
-                                        <TextBlock.Foreground>
-                                            <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
-                                                <Binding Path="Options.HasAndroidUnitTestProject" />
-                                                <Binding Source="{StaticResource PrimaryColorBrush}" />
-                                                <Binding Source="{StaticResource MaterialDesignBody}" />
-                                            </MultiBinding>
-                                        </TextBlock.Foreground>
-                                    </TextBlock>
-                                </DockPanel>
-                                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
-                                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Android_UITestProject}" />
-                                    <TextBlock
-                                        Margin="0,4,0,0"
-                                        HorizontalAlignment="Right"
-                                        Text="{Binding Options.HasAndroidUiTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
-                                        <TextBlock.Foreground>
-                                            <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
-                                                <Binding Path="Options.HasAndroidUiTestProject" />
-                                                <Binding Source="{StaticResource PrimaryColorBrush}" />
-                                                <Binding Source="{StaticResource MaterialDesignBody}" />
-                                            </MultiBinding>
-                                        </TextBlock.Foreground>
-                                    </TextBlock>
-                                </DockPanel>
-                                <DockPanel
-                                    Margin="0,4,0,0"
-                                    HorizontalAlignment="Stretch"
-                                    Visibility="{Binding IsNativeTemplate, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Android_XmlLayouts}" />
-                                    <TextBlock
-                                        Margin="0,4,0,0"
-                                        HorizontalAlignment="Right"
-                                        Text="{Binding Options.HasAndroidXml, Converter={StaticResource BoolToLocalizedStringConverter}}">
-                                        <TextBlock.Foreground>
-                                            <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
-                                                <Binding Path="Options.HasAndroidXml" />
-                                                <Binding Source="{StaticResource PrimaryColorBrush}" />
-                                                <Binding Source="{StaticResource MaterialDesignBody}" />
-                                            </MultiBinding>
-                                        </TextBlock.Foreground>
-                                    </TextBlock>
-                                </DockPanel>
-                            </StackPanel>
+                                        HorizontalAlignment="Stretch"
+                                        Visibility="{Binding IsNativeTemplate, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                        <TextBlock Text="{x:Static l10n:LocalResources.Summary_Android_LayoutType}" />
+                                        <TextBlock
+                                            Margin="0,4,0,0"
+                                            HorizontalAlignment="Right"
+                                            Text="{Binding Options.HasAndroidXml, Converter={StaticResource BoolToLocalizedStringConverter}}">
+                                            <TextBlock.Foreground>
+                                                <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                                    <Binding Path="Options.HasAndroidXml" />
+                                                    <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                                    <Binding Source="{StaticResource MaterialDesignBody}" />
+                                                </MultiBinding>
+                                            </TextBlock.Foreground>
+                                        </TextBlock>
+                                    </DockPanel>
+                                </StackPanel>
+                                <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0,0,1,0" />
+                                <StackPanel Grid.Column="1" Margin="16">
+                                    <DockPanel HorizontalAlignment="Stretch">
+                                        <TextBlock Text="{x:Static l10n:LocalResources.Summary_Android_UnitTestProject}" />
+                                        <TextBlock
+                                            Margin="0,4,0,0"
+                                            HorizontalAlignment="Right"
+                                            Text="{Binding Options.HasAndroidUnitTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
+                                            <TextBlock.Foreground>
+                                                <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                                    <Binding Path="Options.HasAndroidUnitTestProject" />
+                                                    <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                                    <Binding Source="{StaticResource MaterialDesignBody}" />
+                                                </MultiBinding>
+                                            </TextBlock.Foreground>
+                                        </TextBlock>
+                                    </DockPanel>
+                                    <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
+                                        <TextBlock Text="{x:Static l10n:LocalResources.Summary_Android_UITestProject}" />
+                                        <TextBlock
+                                            Margin="0,4,0,0"
+                                            HorizontalAlignment="Right"
+                                            Text="{Binding Options.HasAndroidUiTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
+                                            <TextBlock.Foreground>
+                                                <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                                    <Binding Path="Options.HasAndroidUiTestProject" />
+                                                    <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                                    <Binding Source="{StaticResource MaterialDesignBody}" />
+                                                </MultiBinding>
+                                            </TextBlock.Foreground>
+                                        </TextBlock>
+                                    </DockPanel>
+                                </StackPanel>
+                            </Grid>
+
                         </StackPanel>
                     </materialDesign:Card>
                 </materialDesign:TransitioningContent>
@@ -214,8 +226,7 @@
                     OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}"
                     Visibility="{Binding Options.HasIos, Converter={StaticResource BooleanToVisibilityConverter}}">
                     <materialDesign:Card
-                        Width="380"
-                        Height="220"
+                        Width="570"
                         Margin="8"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
@@ -227,86 +238,98 @@
                                         Height="20"
                                         Kind="AppleIos" />
                                     <TextBlock
-                                        Margin="8,0"
+                                        Margin="0,0,20,0"
                                         HorizontalAlignment="Center"
                                         FontWeight="Medium"
                                         Style="{StaticResource MaterialDesignSubheadingTextBlock}"
                                         Text="{x:Static l10n:LocalResources.Summary_Ios}" />
                                 </DockPanel>
                             </materialDesign:ColorZone>
-                            <StackPanel Margin="16">
-                                <DockPanel HorizontalAlignment="Stretch">
-                                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Ios_MinSdk}" />
-                                    <TextBlock
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Margin="16">
+                                    <DockPanel HorizontalAlignment="Stretch">
+                                        <TextBlock Text="{x:Static l10n:LocalResources.Summary_Ios_MinSdk}" />
+                                        <TextBlock
+                                            Margin="0,4,0,0"
+                                            HorizontalAlignment="Right"
+                                            Foreground="{StaticResource PrimaryColorBrush}"
+                                            Text="{Binding Options.SelectedMinIosSDK}" />
+                                    </DockPanel>
+                                    <DockPanel
                                         Margin="0,4,0,0"
-                                        HorizontalAlignment="Right"
-                                        Foreground="{StaticResource PrimaryColorBrush}"
-                                        Text="{Binding Options.SelectedMinIosSDK}" />
-                                </DockPanel>
-                                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
-                                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Ios_UnitTestProject}" />
-                                    <TextBlock
-                                        Margin="0,4,0,0"
-                                        HorizontalAlignment="Right"
-                                        Text="{Binding Options.HasIosUnitTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
-                                        <TextBlock.Foreground>
-                                            <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
-                                                <Binding Path="Options.HasIosUnitTestProject" />
-                                                <Binding Source="{StaticResource PrimaryColorBrush}" />
-                                                <Binding Source="{StaticResource MaterialDesignBody}" />
-                                            </MultiBinding>
-                                        </TextBlock.Foreground>
-                                    </TextBlock>
-                                </DockPanel>
-                                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
-                                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Ios_UITestProject}" />
-                                    <TextBlock
-                                        Margin="0,4,0,0"
-                                        HorizontalAlignment="Right"
-                                        Text="{Binding Options.HasIosUiTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
-                                        <TextBlock.Foreground>
-                                            <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
-                                                <Binding Path="Options.HasIosUiTestProject" />
-                                                <Binding Source="{StaticResource PrimaryColorBrush}" />
-                                                <Binding Source="{StaticResource MaterialDesignBody}" />
-                                            </MultiBinding>
-                                        </TextBlock.Foreground>
-                                    </TextBlock>
-                                </DockPanel>
-                                <DockPanel
-                                    Margin="0,4,0,0"
-                                    HorizontalAlignment="Stretch"
-                                    Visibility="{Binding IsNativeTemplate, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Ios_FluentLayouts}" />
-                                    <TextBlock
-                                        Margin="0,4,0,0"
-                                        HorizontalAlignment="Right"
-                                        Text="{Binding Options.HasIosFluentLayout, Converter={StaticResource BoolToLocalizedStringConverter}}">
-                                        <TextBlock.Foreground>
-                                            <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
-                                                <Binding Path="Options.HasIosFluentLayout" />
-                                                <Binding Source="{StaticResource PrimaryColorBrush}" />
-                                                <Binding Source="{StaticResource MaterialDesignBody}" />
-                                            </MultiBinding>
-                                        </TextBlock.Foreground>
-                                    </TextBlock>
-                                </DockPanel>
-                                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
-                                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Ios_Hyperion}" />
-                                    <TextBlock
-                                        Margin="0,4,0,0"
-                                        HorizontalAlignment="Right"
-                                        Text="{Binding Options.HasIosHyperion, Converter={StaticResource BoolToLocalizedStringConverter}}">
-                                        <TextBlock.Foreground>
-                                            <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
-                                                <Binding Path="Options.HasIosHyperion" />
-                                                <Binding Source="{StaticResource PrimaryColorBrush}" />
-                                                <Binding Source="{StaticResource MaterialDesignBody}" />
-                                            </MultiBinding>
-                                        </TextBlock.Foreground>
-                                    </TextBlock>
-                                </DockPanel>
-                            </StackPanel>
+                                        HorizontalAlignment="Stretch"
+                                        Visibility="{Binding IsNativeTemplate, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                        <TextBlock Text="{x:Static l10n:LocalResources.Summary_Ios_LayoutType}" />
+                                        <TextBlock
+                                            Margin="0,4,0,0"
+                                            HorizontalAlignment="Right"
+                                            Text="{Binding Options.HasIosFluentLayout, Converter={StaticResource BoolToLocalizedStringConverter}}">
+                                            <TextBlock.Foreground>
+                                                <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                                    <Binding Path="Options.HasIosFluentLayout" />
+                                                    <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                                    <Binding Source="{StaticResource MaterialDesignBody}" />
+                                                </MultiBinding>
+                                            </TextBlock.Foreground>
+                                        </TextBlock>
+                                    </DockPanel>
+                                    <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
+                                        <TextBlock Text="{x:Static l10n:LocalResources.Summary_Ios_Hyperion}" />
+                                        <TextBlock
+                                            Margin="0,4,0,0"
+                                            HorizontalAlignment="Right"
+                                            Text="{Binding Options.HasIosHyperion, Converter={StaticResource BoolToLocalizedStringConverter}}">
+                                            <TextBlock.Foreground>
+                                                <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                                    <Binding Path="Options.HasIosHyperion" />
+                                                    <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                                    <Binding Source="{StaticResource MaterialDesignBody}" />
+                                                </MultiBinding>
+                                            </TextBlock.Foreground>
+                                        </TextBlock>
+                                    </DockPanel>
+                                </StackPanel>
+                                <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0,0,1,0" />
+                                <StackPanel Grid.Column="1" Margin="16">
+                                    <DockPanel HorizontalAlignment="Stretch">
+                                        <TextBlock Text="{x:Static l10n:LocalResources.Summary_Ios_UnitTestProject}" />
+                                        <TextBlock
+                                            Margin="0,4,0,0"
+                                            HorizontalAlignment="Right"
+                                            Text="{Binding Options.HasIosUnitTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
+                                            <TextBlock.Foreground>
+                                                <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                                    <Binding Path="Options.HasIosUnitTestProject" />
+                                                    <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                                    <Binding Source="{StaticResource MaterialDesignBody}" />
+                                                </MultiBinding>
+                                            </TextBlock.Foreground>
+                                        </TextBlock>
+                                    </DockPanel>
+                                    <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
+                                        <TextBlock Text="{x:Static l10n:LocalResources.Summary_Ios_UITestProject}" />
+                                        <TextBlock
+                                            Margin="0,4,0,0"
+                                            HorizontalAlignment="Right"
+                                            Text="{Binding Options.HasIosUiTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
+                                            <TextBlock.Foreground>
+                                                <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                                    <Binding Path="Options.HasIosUiTestProject" />
+                                                    <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                                    <Binding Source="{StaticResource MaterialDesignBody}" />
+                                                </MultiBinding>
+                                            </TextBlock.Foreground>
+                                        </TextBlock>
+                                    </DockPanel>
+                                </StackPanel>
+                            </Grid>
                         </StackPanel>
                     </materialDesign:Card>
                 </materialDesign:TransitioningContent>
@@ -317,8 +340,7 @@
                     OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}"
                     Visibility="{Binding Options.HasUwp, Converter={StaticResource BooleanToVisibilityConverter}}">
                     <materialDesign:Card
-                        Width="380"
-                        Height="220"
+                        Width="570"
                         Margin="8"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
@@ -330,61 +352,73 @@
                                         Height="20"
                                         Kind="Windows" />
                                     <TextBlock
-                                        Margin="8,0"
+                                        Margin="0,0,20,0"
                                         HorizontalAlignment="Center"
                                         FontWeight="Medium"
                                         Style="{StaticResource MaterialDesignSubheadingTextBlock}"
                                         Text="{x:Static l10n:LocalResources.Summary_Uwp_Title}" />
                                 </DockPanel>
                             </materialDesign:ColorZone>
-                            <StackPanel Margin="16">
-                                <DockPanel HorizontalAlignment="Stretch">
-                                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Uwp_Description}" />
-                                    <TextBlock
-                                        Margin="0,4,0,0"
-                                        HorizontalAlignment="Right"
-                                        Foreground="{StaticResource PrimaryColorBrush}"
-                                        Text="{Binding Options.UwpDescription}" />
-                                </DockPanel>
-                                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
-                                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Uwp_MinSdk}" />
-                                    <TextBlock
-                                        Margin="0,4,0,0"
-                                        HorizontalAlignment="Right"
-                                        Foreground="{StaticResource PrimaryColorBrush}"
-                                        Text="{Binding Options.SelectedMinUwpSDK}" />
-                                </DockPanel>
-                                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
-                                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Uwp_UnitTestProject}" />
-                                    <TextBlock
-                                        Margin="0,4,0,0"
-                                        HorizontalAlignment="Right"
-                                        Text="{Binding Options.HasUwpUnitTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
-                                        <TextBlock.Foreground>
-                                            <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
-                                                <Binding Path="Options.HasUwpUnitTestProject" />
-                                                <Binding Source="{StaticResource PrimaryColorBrush}" />
-                                                <Binding Source="{StaticResource MaterialDesignBody}" />
-                                            </MultiBinding>
-                                        </TextBlock.Foreground>
-                                    </TextBlock>
-                                </DockPanel>
-                                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
-                                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Uwp_UITestProject}" />
-                                    <TextBlock
-                                        Margin="0,4,0,0"
-                                        HorizontalAlignment="Right"
-                                        Text="{Binding Options.HasUwpUiTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
-                                        <TextBlock.Foreground>
-                                            <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
-                                                <Binding Path="Options.HasUwpUiTestProject" />
-                                                <Binding Source="{StaticResource PrimaryColorBrush}" />
-                                                <Binding Source="{StaticResource MaterialDesignBody}" />
-                                            </MultiBinding>
-                                        </TextBlock.Foreground>
-                                    </TextBlock>
-                                </DockPanel>
-                            </StackPanel>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Margin="16">
+                                    <DockPanel HorizontalAlignment="Stretch">
+                                        <TextBlock Text="{x:Static l10n:LocalResources.Summary_Uwp_Description}" />
+                                        <TextBlock
+                                            Margin="0,4,0,0"
+                                            HorizontalAlignment="Right"
+                                            Foreground="{StaticResource PrimaryColorBrush}"
+                                            Text="{Binding Options.UwpDescription}" />
+                                    </DockPanel>
+                                    <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
+                                        <TextBlock Text="{x:Static l10n:LocalResources.Summary_Uwp_MinSdk}" />
+                                        <TextBlock
+                                            Margin="0,4,0,0"
+                                            HorizontalAlignment="Right"
+                                            Foreground="{StaticResource PrimaryColorBrush}"
+                                            Text="{Binding Options.SelectedMinUwpSDK}" />
+                                    </DockPanel>
+                                </StackPanel>
+                                <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0,0,1,0" />
+                                <StackPanel Grid.Column="1" Margin="16">
+                                    <DockPanel HorizontalAlignment="Stretch">
+                                        <TextBlock Text="{x:Static l10n:LocalResources.Summary_Uwp_UnitTestProject}" />
+                                        <TextBlock
+                                            Margin="0,4,0,0"
+                                            HorizontalAlignment="Right"
+                                            Text="{Binding Options.HasUwpUnitTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
+                                            <TextBlock.Foreground>
+                                                <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                                    <Binding Path="Options.HasUwpUnitTestProject" />
+                                                    <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                                    <Binding Source="{StaticResource MaterialDesignBody}" />
+                                                </MultiBinding>
+                                            </TextBlock.Foreground>
+                                        </TextBlock>
+                                    </DockPanel>
+                                    <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
+                                        <TextBlock Text="{x:Static l10n:LocalResources.Summary_Uwp_UITestProject}" />
+                                        <TextBlock
+                                            Margin="0,4,0,0"
+                                            HorizontalAlignment="Right"
+                                            Text="{Binding Options.HasUwpUiTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
+                                            <TextBlock.Foreground>
+                                                <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                                    <Binding Path="Options.HasUwpUiTestProject" />
+                                                    <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                                    <Binding Source="{StaticResource MaterialDesignBody}" />
+                                                </MultiBinding>
+                                            </TextBlock.Foreground>
+                                        </TextBlock>
+                                    </DockPanel>
+                                </StackPanel>
+                            </Grid>
                         </StackPanel>
                     </materialDesign:Card>
                 </materialDesign:TransitioningContent>
