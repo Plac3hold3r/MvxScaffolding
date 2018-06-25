@@ -52,6 +52,22 @@
                         Text="{Binding Options.AppName}" />
                 </DockPanel>
                 <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
+                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_SolutionName}" />
+                    <TextBlock
+                        Margin="0,4,0,0"
+                        HorizontalAlignment="Right"
+                        Foreground="{StaticResource PrimaryColorBrush}"
+                        Text="{Binding Options.SolutionName}" />
+                </DockPanel>
+                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
+                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_ScaffoldType}" />
+                    <TextBlock
+                        Margin="0,4,0,0"
+                        HorizontalAlignment="Right"
+                        Foreground="{StaticResource PrimaryColorBrush}"
+                        Text="{Binding Options.SelectedScaffoldType}" />
+                </DockPanel>
+                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
                     <TextBlock Text="{x:Static l10n:LocalResources.Summary_ProjectGrouping}" />
                     <TextBlock
                         Margin="0,4,0,0"

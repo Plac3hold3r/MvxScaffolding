@@ -459,4 +459,10 @@
   <data name="AppDetails_Project_Name" xml:space="preserve">
     <value>Project Name</value>
   </data>
+  <data name="Summary_ScaffoldType" xml:space="preserve">
+    <value>Scaffold Type</value>
+  </data>
+  <data name="Summary_SolutionName" xml:space="preserve">
+    <value>Solution Name</value>
+  </data>
 </root>

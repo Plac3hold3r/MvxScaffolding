@@ -997,6 +997,24 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Scaffold Type.
+        /// </summary>
+        public static string Summary_ScaffoldType {
+            get {
+                return ResourceManager.GetString("Summary_ScaffoldType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Solution Name.
+        /// </summary>
+        public static string Summary_SolutionName {
+            get {
+                return ResourceManager.GetString("Summary_SolutionName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Summary_Uwp_Description {
