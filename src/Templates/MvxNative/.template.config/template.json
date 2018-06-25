@@ -193,7 +193,7 @@
           }
         },
         {
-          "condition": "(UseAndroidXMLLayouts)",
+          "condition": "(HasAndroidXMLLayouts)",
           "rename": {
             "activity_main_container.axml": "activity_main_container.xml",
             "fragment_main.axml": "fragment_main.xml",
@@ -330,6 +330,14 @@
     "HasTests": {
       "type": "computed",
       "value": "(HasCoreTestProject || HasAndroidTestProject || HasAndroidUITestProject || HasiOSTestProject || HasiOSUITestProject || HasUWPTestProject || HasUWPUITestProject)"
+    },
+    "HasFluentLayouts": {
+      "type": "computed",
+      "value": "(iOSLayoutType == \"fluent\")"
+    },
+    "HasAndroidXMLLayouts": {
+      "type": "computed",
+      "value": "(AndroidLayoutType == \"xml\")"
     },
     "IsFlatDir": {
       "type": "computed",
@@ -474,11 +482,21 @@
         }
       ]
     },
-    "UseAndroidXMLLayouts": {
+    "AndroidLayoutType": {
       "type": "parameter",
-      "datatype": "bool",
-      "defaultValue": "false",
-      "description": "Whether to XML layouts instead of AXML for Android."
+      "datatype": "choice",
+      "description": "The Android project layout pattern to use.",
+      "defaultValue": "axml",
+      "choices": [
+        {
+          "choice": "axml",
+          "description": "axml, Android layout format compatible with Visual Studio tooling."
+        },
+        {
+          "choice": "xml",
+          "description": "xml, Android layout format compatible with Android Studio tooling."
+        }
+      ]
     },
     /*
     || iOS project flags
@@ -489,6 +507,10 @@
       "defaultValue": "10.0",
       "description": "Minimum iOS SDK version.",
       "choices": [
+        {
+          "choice": "11.4",
+          "description": "iOS 11.4"
+        },
         {
           "choice": "11.3",
           "description": "iOS 11.3"
@@ -552,11 +574,21 @@
       "description": "Whether to include Hyperion, an in app design review tool, in the iOS project.",
       "defaultValue": "false"
     },
-    "HasFluentLayouts": {
+    "iOSLayoutType": {
       "type": "parameter",
-      "datatype": "bool",
-      "description": "Whether to include FluentLayout, a fluent API for creating constraint-based layouts, in the iOS project.",
-      "defaultValue": "false"
+      "datatype": "choice",
+      "description": "The iOS project layout pattern to use.",
+      "defaultValue": "fluent",
+      "choices": [
+        {
+          "choice": "fluent",
+          "description": "FluentLayout, a fluent API for creating constraint-based layouts."
+        },
+        {
+          "choice": "storyboard",
+          "description": "Storyboard, iOS layout format compatible with Xcode interface builder."
+        }
+      ]
     },
     /*
     || UWP project flags

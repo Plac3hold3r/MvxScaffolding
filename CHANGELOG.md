@@ -1,7 +1,48 @@
 # Change Log
 
+## [v0.11.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.11.0-beta) (2018-06-16)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.10.0-beta...v0.11.0-beta)
+
+**Implemented enhancements:**
+
+- Add support for iOS 11.4 [\#63](https://github.com/Plac3hold3r/MvxScaffolding/pull/63) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update dependencies [\#60](https://github.com/Plac3hold3r/MvxScaffolding/pull/60) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update app details layout [\#59](https://github.com/Plac3hold3r/MvxScaffolding/pull/59) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Add project name option to wizard [\#52](https://github.com/Plac3hold3r/MvxScaffolding/pull/52) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Intial multi template work [\#51](https://github.com/Plac3hold3r/MvxScaffolding/pull/51) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update editor config rules [\#50](https://github.com/Plac3hold3r/MvxScaffolding/pull/50) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Add Android target for API 27 to SDK [\#49](https://github.com/Plac3hold3r/MvxScaffolding/pull/49) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update UWP and dependency update [\#48](https://github.com/Plac3hold3r/MvxScaffolding/pull/48) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Add support to define solution name [\#47](https://github.com/Plac3hold3r/MvxScaffolding/pull/47) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Fixed bugs:**
+
+- Update release notes and bump version [\#62](https://github.com/Plac3hold3r/MvxScaffolding/pull/62) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Add support to define solution name [\#47](https://github.com/Plac3hold3r/MvxScaffolding/pull/47) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Closed issues:**
+
+- Project template fails to create project on VS 15.7.1 [\#40](https://github.com/Plac3hold3r/MvxScaffolding/issues/40)
+
+**Merged pull requests:**
+
+- New Crowdin translations [\#61](https://github.com/Plac3hold3r/MvxScaffolding/pull/61) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Move view models to core project [\#58](https://github.com/Plac3hold3r/MvxScaffolding/pull/58) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- New Crowdin translations [\#57](https://github.com/Plac3hold3r/MvxScaffolding/pull/57) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Re-work templates structure  [\#56](https://github.com/Plac3hold3r/MvxScaffolding/pull/56) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- New Crowdin translations [\#55](https://github.com/Plac3hold3r/MvxScaffolding/pull/55) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update privacy policy [\#54](https://github.com/Plac3hold3r/MvxScaffolding/pull/54) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update privacy policy [\#53](https://github.com/Plac3hold3r/MvxScaffolding/pull/53) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Remove ability to choose MvvmCross version [\#46](https://github.com/Plac3hold3r/MvxScaffolding/pull/46) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update dependencies [\#45](https://github.com/Plac3hold3r/MvxScaffolding/pull/45) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update changelog [\#44](https://github.com/Plac3hold3r/MvxScaffolding/pull/44) ([Plac3hold3r](https://github.com/Plac3hold3r))
+
 ## [v0.10.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.10.0-beta) (2018-05-14)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.9.0-beta...v0.10.0-beta)
+
+**Implemented enhancements:**
+
+- Add support for VS 2017 15.7+ [\#41](https://github.com/Plac3hold3r/MvxScaffolding/pull/41) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 
 **Fixed bugs:**
 
@@ -11,7 +52,6 @@
 
 - Bump version [\#43](https://github.com/Plac3hold3r/MvxScaffolding/pull/43) ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Update README [\#42](https://github.com/Plac3hold3r/MvxScaffolding/pull/42) ([Plac3hold3r](https://github.com/Plac3hold3r))
-- Add support for VS 2017 15.7+ [\#41](https://github.com/Plac3hold3r/MvxScaffolding/pull/41) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - New Crowdin translations [\#39](https://github.com/Plac3hold3r/MvxScaffolding/pull/39) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 
 ## [v0.9.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.9.0-beta) (2018-05-01)

@@ -22,8 +22,8 @@ namespace MvxScaffolding.Vsix.Wizards
             replacementsDictionary.AddParameter(TemplateOptions.Native.HasAndroidUITestProject, MvxScaffoldingContext.UserSelectedOptions.HasAndroidUiTestProject);
             replacementsDictionary.AddParameter(TemplateOptions.Native.HasIosUITestProject, MvxScaffoldingContext.UserSelectedOptions.HasIosUiTestProject);
 
-            replacementsDictionary.AddParameter(TemplateOptions.Native.UseAndroidXmlLayouts, MvxScaffoldingContext.UserSelectedOptions.HasAndroidXml);
-            replacementsDictionary.AddParameter(TemplateOptions.Native.HasFluentLayouts, MvxScaffoldingContext.UserSelectedOptions.HasIosFluentLayout);
+            replacementsDictionary.AddParameter(TemplateOptions.Native.AndroidLayoutType, MvxScaffoldingContext.UserSelectedOptions.HasAndroidXml);
+            replacementsDictionary.AddParameter(TemplateOptions.Native.IosLayoutType, MvxScaffoldingContext.UserSelectedOptions.HasIosFluentLayout);
         }
     }
 }

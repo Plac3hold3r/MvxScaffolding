@@ -74,9 +74,9 @@
       "longName": "android-min-sdk",
       "shortName": "droid-sdk"
     },
-    "UseAndroidXMLLayouts": {
-      "longName": "android-xml-layouts",
-      "shortName": "droid-xml"
+    "AndroidLayoutType": {
+      "longName": "android-layout-type",
+      "shortName": "droid-l"
     },
     "iOSMinSDKVersion": {
       "longName": "ios-min-sdk",
@@ -86,9 +86,9 @@
       "longName": "ios-include-hyperion",
       "shortName": "ios-h"
     },
-    "HasFluentLayouts": {
-      "longName": "ios-include-fluentlayout",
-      "shortName": "ios-f"
+    "iOSLayoutType": {
+      "longName": "ios-layout-type",
+      "shortName": "ios-l"
     },
     "UWPAppDescription": {
       "longName": "uwp-app-description",

@@ -412,6 +412,15 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Layout Type.
+        /// </summary>
+        public static string PlatformOptions_Android_LayoutType {
+            get {
+                return ResourceManager.GetString("PlatformOptions_Android_LayoutType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Market Share.
         /// </summary>
         public static string PlatformOptions_Android_MarketShare {
@@ -457,15 +466,6 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to XML Layouts.
-        /// </summary>
-        public static string PlatformOptions_Android_XmlLayouts {
-            get {
-                return ResourceManager.GetString("PlatformOptions_Android_XmlLayouts", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to .NET Standard.
         /// </summary>
         public static string PlatformOptions_Core_dotNetStandard {
@@ -493,20 +493,20 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fluent Layouts.
-        /// </summary>
-        public static string PlatformOptions_Ios_FluentLayouts {
-            get {
-                return ResourceManager.GetString("PlatformOptions_Ios_FluentLayouts", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Hyperion.
         /// </summary>
         public static string PlatformOptions_Ios_Hyperion {
             get {
                 return ResourceManager.GetString("PlatformOptions_Ios_Hyperion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Layout Type.
+        /// </summary>
+        public static string PlatformOptions_Ios_LayoutType {
+            get {
+                return ResourceManager.GetString("PlatformOptions_Ios_LayoutType", resourceCulture);
             }
         }
         
@@ -826,6 +826,15 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Layout Type.
+        /// </summary>
+        public static string Summary_Android_LayoutType {
+            get {
+                return ResourceManager.GetString("Summary_Android_LayoutType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Min SDK version.
         /// </summary>
         public static string Summary_Android_MinSdk {
@@ -858,15 +867,6 @@ namespace MvxScaffolding.Localization.Resources {
         public static string Summary_Android_UnitTestProject {
             get {
                 return ResourceManager.GetString("Summary_Android_UnitTestProject", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to XML Layouts.
-        /// </summary>
-        public static string Summary_Android_XmlLayouts {
-            get {
-                return ResourceManager.GetString("Summary_Android_XmlLayouts", resourceCulture);
             }
         }
         
@@ -943,20 +943,20 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fluent Layouts.
-        /// </summary>
-        public static string Summary_Ios_FluentLayouts {
-            get {
-                return ResourceManager.GetString("Summary_Ios_FluentLayouts", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Hyperion.
         /// </summary>
         public static string Summary_Ios_Hyperion {
             get {
                 return ResourceManager.GetString("Summary_Ios_Hyperion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Layout Type.
+        /// </summary>
+        public static string Summary_Ios_LayoutType {
+            get {
+                return ResourceManager.GetString("Summary_Ios_LayoutType", resourceCulture);
             }
         }
         
@@ -993,6 +993,24 @@ namespace MvxScaffolding.Localization.Resources {
         public static string Summary_ProjectGrouping {
             get {
                 return ResourceManager.GetString("Summary_ProjectGrouping", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scaffold Type.
+        /// </summary>
+        public static string Summary_ScaffoldType {
+            get {
+                return ResourceManager.GetString("Summary_ScaffoldType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Solution Name.
+        /// </summary>
+        public static string Summary_SolutionName {
+            get {
+                return ResourceManager.GetString("Summary_SolutionName", resourceCulture);
             }
         }
         

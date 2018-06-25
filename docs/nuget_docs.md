@@ -1,6 +1,6 @@
 ## System Requirements
 
-In order to make use of the these templates you will need to have the following installed for Windows or macOS
+In order to make use of these templates you will need to have the following installed for Windows or macOS
 
 __Required__
 
@@ -8,9 +8,9 @@ __Required__
 
  __Optional__ 
 
- * Xamarin Android SDK _(Recommanded version 8.3+)_
- * Xamarin iOS SDK _(Recommanded version 11.12+)_
- * UWP SDK _(__Windows Only__, recommanded version 10.0.17134+)_
+ * Xamarin Android SDK _(Recommended version 8.3+)_
+ * Xamarin iOS SDK _(Recommended version 11.12+)_
+ * UWP SDK _(__Windows Only__, recommended version 10.0.17134+)_
 
 ## Installation
 

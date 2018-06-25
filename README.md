@@ -1,10 +1,11 @@
-﻿# MvxScaffolding (Preview)
+# MvxScaffolding (Preview)
 
 [![NuGet](https://img.shields.io/nuget/v/MvxScaffolding.Templates.svg)](https://www.nuget.org/packages/MvxScaffolding.Templates/)
 [![Visual Studio Marketplace](https://img.shields.io/vscode-marketplace/v/Plac3Hold3r.MvxScaffolding.svg)](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding)
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/mvxscaffolding/localized.svg)](https://crowdin.com/project/mvxscaffolding)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FPlac3hold3r%2FMvxScaffolding.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FPlac3hold3r%2FMvxScaffolding?ref=badge_shield)
 
-A customizable template used to scaffold a cross platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.
+A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms. Supports MvvmCross 6.1.2.
 
 ![MvxScaffolding screenshot](docs/resources/vs_template_banner.png)
 
@@ -25,8 +26,6 @@ iOS storyboard launch screen |* | *
 iOS [Hyperion](https://github.com/willowtreeapps/Hyperion-iOS) |* | *
 iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.FluentLayout) |* |
 
-Supports MvvmCross 6.1.1
-
 See [Release Notes](docs/release_notes.md)
 
 See [Changelog](/CHANGELOG.md)
@@ -40,7 +39,7 @@ Visual Studio Extension | [Installation Guide](#visual-studio-extension) | [Docu
 
 ## Help Translate
 
-If you want to help translate MvxScaffolding into your native language. Please checkout our [Crowdin project](https://crowdin.com/project/mvxscaffolding) page.
+If you want to help translate MvxScaffolding into your native language. Please check out our [Crowdin project](https://crowdin.com/project/mvxscaffolding) page.
 
 ### Translators
 
@@ -55,7 +54,7 @@ French | fr-FR | [Antoine Bichon (Chapelin)](https://crowdin.com/profile/Chapeli
 
 ### System Requirements
 
-In order to make use of the these templates you will need to have the following installed for Windows or macOS
+In order to make use of these templates you will need to have the following installed for Windows or macOS
 
 __Required__
 
@@ -63,9 +62,9 @@ __Required__
 
  __Optional__ 
 
- * Xamarin Android SDK _(Recommanded version 8.3+)_
- * Xamarin iOS SDK _(Recommanded version 11.12+)_
- * UWP SDK _(__Windows Only__, recommanded version 10.0.17134+)_
+ * Xamarin Android SDK _(Recommended version 8.3+)_
+ * Xamarin iOS SDK _(Recommended version 11.12+)_
+ * UWP SDK _(__Windows Only__, recommended  version 10.0.17134+)_
 
 ### Installation
 
@@ -83,7 +82,7 @@ See [documentation](docs/template_dotnet_cli.md) for how to generate a solution.
 
 ### System Requirements
 
-In order to make use of the these templates you will need to have the following installed for Windows
+In order to make use of these templates you will need to have the following installed for Windows
 
 __Required__
 
@@ -92,9 +91,9 @@ __Required__
 
  __Optional__ 
 
- * Xamarin Android SDK _(Recommanded version 8.3+)_
- * Xamarin iOS SDK _(Recommanded version 11.12+)_
- * UWP SDK _(__Windows Only__, recommanded version 10.0.17134+)_
+ * Xamarin Android SDK _(Recommended version 8.3+)_
+ * Xamarin iOS SDK _(Recommended version 11.12+)_
+ * UWP SDK _(__Windows Only__, recommended version 10.0.17134+)_
 
 ### Installation
 
@@ -117,6 +116,9 @@ See [documentation](docs/template_vs.md) for how to generate a solution.
 - To [Crowdin](https://crowdin.com) for supporting localization for MvxScaffolding
 
 ## License
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FPlac3hold3r%2FMvxScaffolding.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FPlac3hold3r%2FMvxScaffolding?ref=badge_large)
 
 ##### Third party libraries
 - [MvvmCross](https://github.com/MvvmCross/MvvmCross) is licensed under [MS-PL](https://github.com/MvvmCross/MvvmCross/blob/master/LICENSE)

@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -47,6 +47,7 @@ namespace MvxScaffolding.Core.Template
 
         public static Dictionary<string, string> MinIosSDKOptions => new Dictionary<string, string>
         {
+            ["11.4"] = "iOS 11.4",
             ["11.3"] = "iOS 11.3",
             ["11.2"] = "iOS 11.2",
             ["11.1"] = "iOS 11.1",
@@ -70,5 +71,21 @@ namespace MvxScaffolding.Core.Template
         };
 
         public static string MinUwpSDKOptionDefault => "16299";
+
+        public static Dictionary<string, string> AndroidLayoutTypes => new Dictionary<string, string>
+        {
+            ["axml"] = ".axml",
+            ["xml"] = ".xml"
+        };
+
+        public static string AndroidLayoutTypeDefault => "axml";
+
+        public static Dictionary<string, string> IosLayoutTypes => new Dictionary<string, string>
+        {
+            ["fluent"] = "FluentLayout",
+            ["storyboard"] = "Storyboard"
+        };
+
+        public static string IosLayoutTypeDefault => "fluent";
     }
 }

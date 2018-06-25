@@ -135,13 +135,15 @@ namespace MvxScaffolding.Core.ViewModels
             }
         }
 
-        private bool _hasAndroidXml;
+        private string _selectedAndroidLayoutType;
 
-        public bool HasAndroidXml
+        public string SelectedAndroidLayoutType
         {
-            get => _hasAndroidXml;
-            set => SetProperty(ref _hasAndroidXml, value);
+            get => _selectedAndroidLayoutType;
+            set => SetProperty(ref _selectedAndroidLayoutType, value);
         }
+
+        public Dictionary<string, string> AndroidLayoutTypes { get; }
 
         private string _selectedMinIosSDK;
 
@@ -175,13 +177,15 @@ namespace MvxScaffolding.Core.ViewModels
             }
         }
 
-        private bool _hasIosFluentLayout;
+        private string _selectedIosLayoutType;
 
-        public bool HasIosFluentLayout
+        public string SelectedIosLayoutType
         {
-            get => _hasIosFluentLayout;
-            set => SetProperty(ref _hasIosFluentLayout, value);
+            get => _selectedIosLayoutType;
+            set => SetProperty(ref _selectedIosLayoutType, value);
         }
+
+        public Dictionary<string, string> IosLayoutTypes { get; }
 
         private bool _hasIosHyperion;
 
@@ -313,15 +317,19 @@ namespace MvxScaffolding.Core.ViewModels
 
             HasAndroidUnitTestProject = false;
             HasAndroidUiTestProject = false;
-            HasAndroidXml = false;
+
+            AndroidLayoutTypes = TemplateChoices.AndroidLayoutTypes;
+            SelectedAndroidLayoutType = TemplateChoices.AndroidLayoutTypeDefault;
 
             MinIosSDKOptions = TemplateChoices.MinIosSDKOptions;
             SelectedMinIosSDK = TemplateChoices.MinIosSDKOptionDefault;
 
             HasIosUnitTestProject = false;
             HasIosUiTestProject = false;
-            HasIosFluentLayout = false;
             HasIosHyperion = false;
+
+            IosLayoutTypes = TemplateChoices.IosLayoutTypes;
+            SelectedIosLayoutType = TemplateChoices.IosLayoutTypeDefault;
 
             MinUwpSDKOptions = TemplateChoices.MinUwpSDKOptions;
             SelectedMinUwpSDK = TemplateChoices.MinUwpSDKOptionDefault;
