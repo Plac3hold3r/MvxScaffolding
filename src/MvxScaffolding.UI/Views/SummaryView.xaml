@@ -26,114 +26,6 @@
             <ColumnDefinition Width="300" />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="1" Background="White">
-            <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="{Binding IsNativeTemplate, Converter={StaticResource ActiveColorZoneModeConverter}}">
-                <TextBlock
-                    Margin="16"
-                    FontWeight="Medium"
-                    Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                    Text="{x:Static l10n:LocalResources.Summary_Application}" />
-            </materialDesign:ColorZone>
-            <StackPanel Margin="16">
-                <DockPanel HorizontalAlignment="Stretch">
-                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Identifier}" />
-                    <TextBlock
-                        Margin="0,4,0,0"
-                        HorizontalAlignment="Right"
-                        Foreground="{StaticResource PrimaryColorBrush}"
-                        Text="{Binding Options.AppId}" />
-                </DockPanel>
-                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
-                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_DisplayName}" />
-                    <TextBlock
-                        Margin="0,4,0,0"
-                        HorizontalAlignment="Right"
-                        Foreground="{StaticResource PrimaryColorBrush}"
-                        Text="{Binding Options.AppName}" />
-                </DockPanel>
-                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
-                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_SolutionName}" />
-                    <TextBlock
-                        Margin="0,4,0,0"
-                        HorizontalAlignment="Right"
-                        Foreground="{StaticResource PrimaryColorBrush}"
-                        Text="{Binding Options.SolutionName}" />
-                </DockPanel>
-                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
-                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_ScaffoldType}" />
-                    <TextBlock
-                        Margin="0,4,0,0"
-                        HorizontalAlignment="Right"
-                        Foreground="{StaticResource PrimaryColorBrush}"
-                        Text="{Binding Options.SelectedScaffoldType}" />
-                </DockPanel>
-                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
-                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_ProjectGrouping}" />
-                    <TextBlock
-                        Margin="0,4,0,0"
-                        HorizontalAlignment="Right"
-                        Foreground="{StaticResource PrimaryColorBrush}">
-                        <TextBlock.Text>
-                            <MultiBinding Converter="{StaticResource OptionToLocalizedString}">
-                                <Binding Path="Options.SelectedProjectGrouping" />
-                                <Binding Path="Options.ProjectGroupingOptions" />
-                            </MultiBinding>
-                        </TextBlock.Text>
-                    </TextBlock>
-                </DockPanel>
-                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
-                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_EditorConfig}" />
-                    <TextBlock
-                        Margin="0,4,0,0"
-                        HorizontalAlignment="Right"
-                        Text="{Binding Options.HasEditorConfig, Converter={StaticResource BoolToLocalizedStringConverter}}">
-                        <TextBlock.Foreground>
-                            <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
-                                <Binding Path="Options.HasEditorConfig" />
-                                <Binding Source="{StaticResource PrimaryColorBrush}" />
-                                <Binding Source="{StaticResource MaterialDesignBody}" />
-                            </MultiBinding>
-                        </TextBlock.Foreground>
-                    </TextBlock>
-                </DockPanel>
-
-            </StackPanel>
-            <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="{Binding IsNativeTemplate, Converter={StaticResource ActiveColorZoneModeConverter}}">
-                <TextBlock
-                    Margin="16"
-                    FontWeight="Medium"
-                    Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                    Text="{x:Static l10n:LocalResources.Summary_Core_Title}" />
-            </materialDesign:ColorZone>
-            <StackPanel Margin="16">
-                <DockPanel HorizontalAlignment="Stretch">
-                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Core_dotNetStandard}" />
-                    <TextBlock
-                        Margin="0,4,0,0"
-                        HorizontalAlignment="Right"
-                        Foreground="{StaticResource PrimaryColorBrush}"
-                        Text="{Binding Options.SelectedNetStandard}" />
-                </DockPanel>
-                <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
-                    <TextBlock Text="{x:Static l10n:LocalResources.Summary_Core_UnitTestProject}" />
-                    <TextBlock
-                        Margin="0,4,0,0"
-                        HorizontalAlignment="Right"
-                        Text="{Binding Options.HasCoreUnitTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
-                        <TextBlock.Foreground>
-                            <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
-                                <Binding Path="Options.HasCoreUnitTestProject" />
-                                <Binding Source="{StaticResource PrimaryColorBrush}" />
-                                <Binding Source="{StaticResource MaterialDesignBody}" />
-                            </MultiBinding>
-                        </TextBlock.Foreground>
-                    </TextBlock>
-                </DockPanel>
-            </StackPanel>
-        </StackPanel>
-
-        <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0,0,1,0" />
-
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <ItemsControl>
                 <ItemsControl.ItemsPanel>
@@ -444,6 +336,116 @@
                 </materialDesign:TransitioningContent>
             </ItemsControl>
         </ScrollViewer>
+
+        <materialDesign:TransitioningContent Grid.Column="1" OpeningEffect="{materialDesign:TransitionEffect FadeIn, Duration=0:0:1.2}">
+            <materialDesign:Card Height="1500" Margin="10,0,0,0">
+                <StackPanel Background="White">
+                    <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="{Binding IsNativeTemplate, Converter={StaticResource ActiveColorZoneModeConverter}}">
+                        <TextBlock
+                            Margin="16"
+                            FontWeight="Medium"
+                            Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                            Text="{x:Static l10n:LocalResources.Summary_Application}" />
+                    </materialDesign:ColorZone>
+                    <StackPanel Margin="16">
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <TextBlock Text="{x:Static l10n:LocalResources.Summary_Identifier}" />
+                            <TextBlock
+                                Margin="0,4,0,0"
+                                HorizontalAlignment="Right"
+                                Foreground="{StaticResource PrimaryColorBrush}"
+                                Text="{Binding Options.AppId}" />
+                        </DockPanel>
+                        <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
+                            <TextBlock Text="{x:Static l10n:LocalResources.Summary_DisplayName}" />
+                            <TextBlock
+                                Margin="0,4,0,0"
+                                HorizontalAlignment="Right"
+                                Foreground="{StaticResource PrimaryColorBrush}"
+                                Text="{Binding Options.AppName}" />
+                        </DockPanel>
+                        <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
+                            <TextBlock Text="{x:Static l10n:LocalResources.Summary_SolutionName}" />
+                            <TextBlock
+                                Margin="0,4,0,0"
+                                HorizontalAlignment="Right"
+                                Foreground="{StaticResource PrimaryColorBrush}"
+                                Text="{Binding Options.SolutionName}" />
+                        </DockPanel>
+                        <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
+                            <TextBlock Text="{x:Static l10n:LocalResources.Summary_ScaffoldType}" />
+                            <TextBlock
+                                Margin="0,4,0,0"
+                                HorizontalAlignment="Right"
+                                Foreground="{StaticResource PrimaryColorBrush}"
+                                Text="{Binding Options.SelectedScaffoldType}" />
+                        </DockPanel>
+                        <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
+                            <TextBlock Text="{x:Static l10n:LocalResources.Summary_ProjectGrouping}" />
+                            <TextBlock
+                                Margin="0,4,0,0"
+                                HorizontalAlignment="Right"
+                                Foreground="{StaticResource PrimaryColorBrush}">
+                                <TextBlock.Text>
+                                    <MultiBinding Converter="{StaticResource OptionToLocalizedString}">
+                                        <Binding Path="Options.SelectedProjectGrouping" />
+                                        <Binding Path="Options.ProjectGroupingOptions" />
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DockPanel>
+                        <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
+                            <TextBlock Text="{x:Static l10n:LocalResources.Summary_EditorConfig}" />
+                            <TextBlock
+                                Margin="0,4,0,0"
+                                HorizontalAlignment="Right"
+                                Text="{Binding Options.HasEditorConfig, Converter={StaticResource BoolToLocalizedStringConverter}}">
+                                <TextBlock.Foreground>
+                                    <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                        <Binding Path="Options.HasEditorConfig" />
+                                        <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                        <Binding Source="{StaticResource MaterialDesignBody}" />
+                                    </MultiBinding>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                        </DockPanel>
+
+                    </StackPanel>
+                    <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="{Binding IsNativeTemplate, Converter={StaticResource ActiveColorZoneModeConverter}}">
+                        <TextBlock
+                            Margin="16"
+                            FontWeight="Medium"
+                            Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                            Text="{x:Static l10n:LocalResources.Summary_Core_Title}" />
+                    </materialDesign:ColorZone>
+                    <StackPanel Margin="16">
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <TextBlock Text="{x:Static l10n:LocalResources.Summary_Core_dotNetStandard}" />
+                            <TextBlock
+                                Margin="0,4,0,0"
+                                HorizontalAlignment="Right"
+                                Foreground="{StaticResource PrimaryColorBrush}"
+                                Text="{Binding Options.SelectedNetStandard}" />
+                        </DockPanel>
+                        <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
+                            <TextBlock Text="{x:Static l10n:LocalResources.Summary_Core_UnitTestProject}" />
+                            <TextBlock
+                                Margin="0,4,0,0"
+                                HorizontalAlignment="Right"
+                                Text="{Binding Options.HasCoreUnitTestProject, Converter={StaticResource BoolToLocalizedStringConverter}}">
+                                <TextBlock.Foreground>
+                                    <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
+                                        <Binding Path="Options.HasCoreUnitTestProject" />
+                                        <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                        <Binding Source="{StaticResource MaterialDesignBody}" />
+                                    </MultiBinding>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                        </DockPanel>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:Card>
+        </materialDesign:TransitioningContent>
 
     </Grid>
 </UserControl>
