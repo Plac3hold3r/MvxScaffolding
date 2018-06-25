@@ -22,11 +22,11 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="300" />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Background="White">
+        <StackPanel Grid.Column="1" Background="White">
             <materialDesign:ColorZone VerticalAlignment="Stretch" Mode="{Binding IsNativeTemplate, Converter={StaticResource ActiveColorZoneModeConverter}}">
                 <TextBlock
                     Margin="16"
@@ -134,7 +134,7 @@
 
         <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0,0,1,0" />
 
-        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
             <ItemsControl>
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -143,7 +143,7 @@
                 </ItemsControl.ItemsPanel>
 
                 <materialDesign:TransitioningContent
-                    OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight,
+                    OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft,
                                                                     Duration=0:0:1.2}"
                     OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}"
                     Visibility="{Binding Options.HasAndroid, Converter={StaticResource BooleanToVisibilityConverter}}">
@@ -242,7 +242,7 @@
                 </materialDesign:TransitioningContent>
 
                 <materialDesign:TransitioningContent
-                    OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight,
+                    OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft,
                                                                     Duration=0:0:1.2}"
                     OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}"
                     Visibility="{Binding Options.HasIos, Converter={StaticResource BooleanToVisibilityConverter}}">
@@ -355,7 +355,7 @@
                 </materialDesign:TransitioningContent>
 
                 <materialDesign:TransitioningContent
-                    OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight,
+                    OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft,
                                                                     Duration=0:0:1.2}"
                     OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}"
                     Visibility="{Binding Options.HasUwp, Converter={StaticResource BooleanToVisibilityConverter}}">
