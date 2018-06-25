@@ -40,7 +40,7 @@
     <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
     <converters:StringToUpperConverter x:Key="StringToUpperConverter" />
     <converters:BoolToLocalizedStringConverter x:Key="BoolToLocalizedStringConverter" />
-    <converters:ProjectGroupToLocalizedString x:Key="ProjectGroupToLocalizedString" />
+    <converters:OptionToLocalizedString x:Key="OptionToLocalizedString" />
     <converters:RequiredLabelConverter x:Key="RequiredLabelConverter" />
     <converters:SelectedScaffoldTypeToIconConverter x:Key="SelectedScaffoldTypeToIconConverter" />
     <converters:SelectedPlatformTypeToIconConverter x:Key="SelectedPlatformTypeToIconConverter" />

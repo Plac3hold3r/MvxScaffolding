@@ -71,5 +71,21 @@ namespace MvxScaffolding.Core.Template
         };
 
         public static string MinUwpSDKOptionDefault => "16299";
+
+        public static Dictionary<string, string> AndroidLayoutTypes => new Dictionary<string, string>
+        {
+            ["axml"] = ".axml",
+            ["xml"] = ".xml"
+        };
+
+        public static string AndroidLayoutTypeDefault => "axml";
+
+        public static Dictionary<string, string> IosLayoutTypes => new Dictionary<string, string>
+        {
+            ["fluent"] = "FluentLayout",
+            ["storyboard"] = "Storyboard"
+        };
+
+        public static string IosLayoutTypeDefault => "fluent";
     }
 }
