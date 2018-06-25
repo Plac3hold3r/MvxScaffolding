@@ -56,8 +56,14 @@
                     <TextBlock
                         Margin="0,4,0,0"
                         HorizontalAlignment="Right"
-                        Foreground="{StaticResource PrimaryColorBrush}"
-                        Text="{Binding Options.SelectedProjectGrouping, Converter={StaticResource ProjectGroupToLocalizedString}}" />
+                        Foreground="{StaticResource PrimaryColorBrush}">
+                        <TextBlock.Text>
+                            <MultiBinding Converter="{StaticResource OptionToLocalizedString}">
+                                <Binding Path="Options.SelectedProjectGrouping" />
+                                <Binding Path="Options.ProjectGroupingOptions" />
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
                 </DockPanel>
                 <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
                     <TextBlock Text="{x:Static l10n:LocalResources.Summary_EditorConfig}" />
@@ -170,14 +176,13 @@
                                         <TextBlock
                                             Margin="0,4,0,0"
                                             HorizontalAlignment="Right"
-                                            Text="{Binding Options.HasAndroidXml, Converter={StaticResource BoolToLocalizedStringConverter}}">
-                                            <TextBlock.Foreground>
-                                                <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
-                                                    <Binding Path="Options.HasAndroidXml" />
-                                                    <Binding Source="{StaticResource PrimaryColorBrush}" />
-                                                    <Binding Source="{StaticResource MaterialDesignBody}" />
+                                            Foreground="{StaticResource PrimaryColorBrush}">
+                                            <TextBlock.Text>
+                                                <MultiBinding Converter="{StaticResource OptionToLocalizedString}">
+                                                    <Binding Path="Options.SelectedAndroidLayoutType" />
+                                                    <Binding Path="Options.AndroidLayoutTypes" />
                                                 </MultiBinding>
-                                            </TextBlock.Foreground>
+                                            </TextBlock.Text>
                                         </TextBlock>
                                     </DockPanel>
                                 </StackPanel>
@@ -270,14 +275,13 @@
                                         <TextBlock
                                             Margin="0,4,0,0"
                                             HorizontalAlignment="Right"
-                                            Text="{Binding Options.HasIosFluentLayout, Converter={StaticResource BoolToLocalizedStringConverter}}">
-                                            <TextBlock.Foreground>
-                                                <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
-                                                    <Binding Path="Options.HasIosFluentLayout" />
-                                                    <Binding Source="{StaticResource PrimaryColorBrush}" />
-                                                    <Binding Source="{StaticResource MaterialDesignBody}" />
+                                            Foreground="{StaticResource PrimaryColorBrush}">
+                                            <TextBlock.Text>
+                                                <MultiBinding Converter="{StaticResource OptionToLocalizedString}">
+                                                    <Binding Path="Options.SelectedIosLayoutType" />
+                                                    <Binding Path="Options.IosLayoutTypes" />
                                                 </MultiBinding>
-                                            </TextBlock.Foreground>
+                                            </TextBlock.Text>
                                         </TextBlock>
                                     </DockPanel>
                                     <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
