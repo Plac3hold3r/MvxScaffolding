@@ -204,29 +204,11 @@
   <data name="SimpleInfo_EditorConfig_Title" xml:space="preserve">
     <value>EditorConfig</value>
   </data>
-  <data name="SimpleInfo_Fluent_Layouts_Desc" xml:space="preserve">
-    <value>启用以包含 FluentLayout，一个用于创建基于约束布局的 Fluent API。</value>
-  </data>
-  <data name="SimpleInfo_Fluent_Layouts_Title" xml:space="preserve">
-    <value>流畅布局</value>
-  </data>
-  <data name="SimpleInfo_Hyperion_Desc" xml:space="preserve">
-    <value>启用以包含 Hyperion，一个应用程序内设计检阅工具。</value>
-  </data>
-  <data name="SimpleInfo_Hyperion_Title" xml:space="preserve">
-    <value>Hyperion</value>
-  </data>
   <data name="SimpleInfo_Privacy_Desc" xml:space="preserve">
     <value>此模板指南使用第三方崩溃分析报告。请参见隐私策略获取更多信息。</value>
   </data>
   <data name="SimpleInfo_Privacy_Title" xml:space="preserve">
     <value>隐私</value>
-  </data>
-  <data name="SimpleInfo_Xml_Layouts_Desc" xml:space="preserve">
-    <value>启用以使用 XML 布局替换 Xamarin 默认 AXML 布局。</value>
-  </data>
-  <data name="SimpleInfo_Xml_Layouts_Title" xml:space="preserve">
-    <value>XML 布局</value>
   </data>
   <data name="About_Button_Close" xml:space="preserve">
     <value>关闭</value>
@@ -245,9 +227,6 @@
   </data>
   <data name="PlatformOptions_Ios_LayoutType" xml:space="preserve">
     <value>Layout Type</value>
-  </data>
-  <data name="PlatformOptions_Ios_Hyperion" xml:space="preserve">
-    <value>Hyperion</value>
   </data>
   <data name="PlatformOptions_Ios_MarketShare" xml:space="preserve">
     <value>市占率</value>
@@ -347,9 +326,6 @@
   </data>
   <data name="Summary_Ios_LayoutType" xml:space="preserve">
     <value>Layout Type</value>
-  </data>
-  <data name="Summary_Ios_Hyperion" xml:space="preserve">
-    <value>Hyperion</value>
   </data>
   <data name="Summary_Ios_MinSdk" xml:space="preserve">
     <value>最低 SDK 版本</value>
