@@ -63,18 +63,6 @@ namespace MvxScaffolding.Core.ViewModels
             }
         }
 
-        private SimpleInfoViewModel _androidXmlLayoutInfoModel;
-        public SimpleInfoViewModel AndroidXmlLayoutInfoModel
-            => _androidXmlLayoutInfoModel ?? (_androidXmlLayoutInfoModel = SimpleInfoViewModel.AndroidXmlLayoutInfo());
-
-        private SimpleInfoViewModel _iosFluentLayoutsInfoModel;
-        public SimpleInfoViewModel IosFluentLayoutsInfoModel
-            => _iosFluentLayoutsInfoModel ?? (_iosFluentLayoutsInfoModel = SimpleInfoViewModel.IosFluentLayoutsInfo());
-
-        private SimpleInfoViewModel _iosHyperionInfoModel;
-        public SimpleInfoViewModel IosHyperionInfoModel
-            => _iosHyperionInfoModel ?? (_iosHyperionInfoModel = SimpleInfoViewModel.IosHyperionInfo());
-
         public bool Validate()
         {
             Options.ValidateModelProperty(Options.UwpDescription, nameof(WizardOptionViewModel.UwpDescription));

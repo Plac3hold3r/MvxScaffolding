@@ -192,21 +192,6 @@
                                             </TextBlock.Text>
                                         </TextBlock>
                                     </DockPanel>
-                                    <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
-                                        <TextBlock Text="{x:Static l10n:LocalResources.Summary_Ios_Hyperion}" />
-                                        <TextBlock
-                                            Margin="0,4,0,0"
-                                            HorizontalAlignment="Right"
-                                            Text="{Binding Options.HasIosHyperion, Converter={StaticResource BoolToLocalizedStringConverter}}">
-                                            <TextBlock.Foreground>
-                                                <MultiBinding Converter="{StaticResource SummaryHighlightColorConverter}">
-                                                    <Binding Path="Options.HasIosHyperion" />
-                                                    <Binding Source="{StaticResource PrimaryColorBrush}" />
-                                                    <Binding Source="{StaticResource MaterialDesignBody}" />
-                                                </MultiBinding>
-                                            </TextBlock.Foreground>
-                                        </TextBlock>
-                                    </DockPanel>
                                 </StackPanel>
                                 <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0,0,1,0" />
                                 <StackPanel Grid.Column="1" Margin="16">

@@ -422,31 +422,6 @@
                                 IsChecked="{Binding Options.HasIosUiTestProject}"
                                 IsEnabled="{Binding Options.HasIos}" />
                         </DockPanel>
-                        <DockPanel
-                            Grid.Row="4"
-                            Margin="0,12,0,8"
-                            HorizontalAlignment="Stretch">
-                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
-                                <Hyperlink
-                                    Command="{Binding ShowDialogCommand}"
-                                    CommandParameter="{Binding IosHyperionInfoModel}"
-                                    IsEnabled="{Binding Options.HasIos}"
-                                    Style="{StaticResource MaterialDesignBody1Hyperlink}"
-                                    TextDecorations="None">
-                                    <Run Text="{x:Static l10n:LocalResources.PlatformOptions_Ios_Hyperion}" />
-                                    <materialDesign:PackIcon
-                                        Margin="4,0"
-                                        VerticalAlignment="Center"
-                                        Kind="Information" />
-                                </Hyperlink>
-                            </TextBlock>
-
-                            <ToggleButton
-                                Margin="8,0,0,0"
-                                HorizontalAlignment="Right"
-                                IsChecked="{Binding Options.HasIosHyperion}"
-                                IsEnabled="{Binding Options.HasIos}" />
-                        </DockPanel>
                     </Grid>
                 </Grid>
             </materialDesign:Card>

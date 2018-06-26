@@ -1,6 +1,0 @@
-framework module HyperionCore {
-  umbrella header "HyperionCore.h"
-
-  export *
-  module * { export * }
-}

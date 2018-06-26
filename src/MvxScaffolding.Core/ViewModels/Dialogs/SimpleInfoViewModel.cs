@@ -51,36 +51,5 @@ namespace MvxScaffolding.Core.ViewModels.Dialogs
                 TemplateLink = TemplateLinks.EditorConfig
             };
         }
-
-        public static SimpleInfoViewModel AndroidXmlLayoutInfo()
-        {
-            return new SimpleInfoViewModel
-            {
-                Title = LocalResources.SimpleInfo_Xml_Layouts_Title,
-                Message = LocalResources.SimpleInfo_Xml_Layouts_Desc
-            };
-        }
-
-        public static SimpleInfoViewModel IosFluentLayoutsInfo()
-        {
-            return new SimpleInfoViewModel
-            {
-                Title = LocalResources.SimpleInfo_Fluent_Layouts_Title,
-                Message = LocalResources.SimpleInfo_Fluent_Layouts_Desc,
-                ReadMoreLink = Config.Current.FluentLayoutUri,
-                TemplateLink = TemplateLinks.FluentLayout
-            };
-        }
-
-        public static SimpleInfoViewModel IosHyperionInfo()
-        {
-            return new SimpleInfoViewModel
-            {
-                Title = LocalResources.SimpleInfo_Hyperion_Title,
-                Message = LocalResources.SimpleInfo_Hyperion_Desc,
-                ReadMoreLink = Config.Current.HyperioniOSUri,
-                TemplateLink = TemplateLinks.HyperioniOS
-            };
-        }
     }
 }

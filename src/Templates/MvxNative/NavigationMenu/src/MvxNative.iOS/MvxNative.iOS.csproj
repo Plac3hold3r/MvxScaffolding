@@ -148,10 +148,8 @@
     <Content Include="Entitlements.plist" />
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork%402x" />
-    <!--#if (!IsBlank)-->
     <Compile Include="Views\!Base\BaseViewController.cs" />
     <Compile Include="Views\Main\MainViewController.cs" />
-    <!--#endif-->
     <InterfaceDefinition Include="LaunchScreen.storyboard">
       <SubType>Designer</SubType>
     </InterfaceDefinition>
@@ -162,7 +160,6 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
-  <!--#if (!IsBlank)-->
   <ItemGroup Condition=" '$(HasFluentLayouts)' != 'true' ">
     <Compile Include="Views\Main\MainViewController.designer.cs">
       <DependentUpon>MainViewController.cs</DependentUpon>
@@ -171,7 +168,6 @@
       <SubType>Designer</SubType>
     </InterfaceDefinition>
   </ItemGroup>
-  <!--#endif-->
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -242,22 +238,6 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
-  <!--#if (HasHyperion)-->
-  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <NativeReference Include="Native References/HyperionCore.framework">
-      <Kind>Framework</Kind>
-    </NativeReference>
-    <NativeReference Include="Native References/AttributesInspector.framework">
-      <Kind>Framework</Kind>
-    </NativeReference>
-    <NativeReference Include="Native References/SlowAnimations.framework">
-      <Kind>Framework</Kind>
-    </NativeReference>
-    <NativeReference Include="Native References/Measurements.framework">
-      <Kind>Framework</Kind>
-    </NativeReference>
-  </ItemGroup>
-  <!--#endif-->
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -41,8 +41,6 @@ namespace MvxScaffolding.Core.Template
 
         public const string IosMinSdkVersion = "iOSMinSDKVersion";
 
-        public const string HasHyperion = "HasHyperion";
-
         public const string UwpMinSdkVersion = "UWPMinSDKVersion";
 
         public const string UwpAppDescription = "UWPAppDescription";

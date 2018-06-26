@@ -41,8 +41,6 @@ namespace MvxScaffolding.Core.Template
 
         string SelectedMinIosSDK { get; set; }
 
-        bool HasIosHyperion { get; set; }
-
         string SelectedMinUwpSDK { get; set; }
 
         string UwpDescription { get; set; }
