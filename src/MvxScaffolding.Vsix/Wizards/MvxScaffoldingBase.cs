@@ -137,7 +137,6 @@ namespace MvxScaffolding.Vsix.Wizards
             replacementsDictionary.AddParameter(TemplateOptions.AndroidMinSdkVersion, MvxScaffoldingContext.UserSelectedOptions.SelectedMinAndroidSDK);
 
             replacementsDictionary.AddParameter(TemplateOptions.IosMinSdkVersion, MvxScaffoldingContext.UserSelectedOptions.SelectedMinIosSDK);
-            replacementsDictionary.AddParameter(TemplateOptions.HasHyperion, MvxScaffoldingContext.UserSelectedOptions.HasIosHyperion);
 
             replacementsDictionary.AddParameter(TemplateOptions.UwpMinSdkVersion, MvxScaffoldingContext.UserSelectedOptions.SelectedMinUwpSDK);
             replacementsDictionary.AddParameter(TemplateOptions.UwpAppDescription, MvxScaffoldingContext.UserSelectedOptions.UwpDescription);

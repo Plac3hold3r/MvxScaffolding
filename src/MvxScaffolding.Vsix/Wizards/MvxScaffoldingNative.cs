@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -22,8 +22,8 @@ namespace MvxScaffolding.Vsix.Wizards
             replacementsDictionary.AddParameter(TemplateOptions.Native.HasAndroidUITestProject, MvxScaffoldingContext.UserSelectedOptions.HasAndroidUiTestProject);
             replacementsDictionary.AddParameter(TemplateOptions.Native.HasIosUITestProject, MvxScaffoldingContext.UserSelectedOptions.HasIosUiTestProject);
 
-            replacementsDictionary.AddParameter(TemplateOptions.Native.AndroidLayoutType, MvxScaffoldingContext.UserSelectedOptions.HasAndroidXml);
-            replacementsDictionary.AddParameter(TemplateOptions.Native.IosLayoutType, MvxScaffoldingContext.UserSelectedOptions.HasIosFluentLayout);
+            replacementsDictionary.AddParameter(TemplateOptions.Native.AndroidLayoutType, MvxScaffoldingContext.UserSelectedOptions.SelectedAndroidLayoutType);
+            replacementsDictionary.AddParameter(TemplateOptions.Native.IosLayoutType, MvxScaffoldingContext.UserSelectedOptions.SelectedIosLayoutType);
         }
     }
 }
