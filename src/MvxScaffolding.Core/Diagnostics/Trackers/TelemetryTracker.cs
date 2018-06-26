@@ -110,7 +110,6 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
                 [TemplateOptions.NetStandardVersion] = options.SelectedNetStandard,
                 [TemplateOptions.AndroidMinSdkVersion] = options.SelectedMinAndroidSDK,
                 [TemplateOptions.IosMinSdkVersion] = options.SelectedMinIosSDK,
-                [TemplateOptions.HasHyperion] = options.HasIosHyperion.ToStringLowerCase(),
                 [TemplateOptions.UwpMinSdkVersion] = options.SelectedMinUwpSDK,
                 [TemplateOptions.UwpAppDescription] = options.UwpDescription.HasValue()
             };

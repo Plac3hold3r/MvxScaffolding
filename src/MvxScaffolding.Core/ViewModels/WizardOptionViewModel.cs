@@ -187,14 +187,6 @@ namespace MvxScaffolding.Core.ViewModels
 
         public Dictionary<string, string> IosLayoutTypes { get; }
 
-        private bool _hasIosHyperion;
-
-        public bool HasIosHyperion
-        {
-            get => _hasIosHyperion;
-            set => SetProperty(ref _hasIosHyperion, value);
-        }
-
         private string _uwpDescription;
         [RequiredIf(nameof(HasUwp), true, ErrorMessageResourceName = nameof(LocalResources.PlatformOptions_Validation_Uwp_Description), ErrorMessageResourceType = typeof(LocalResources))]
         public string UwpDescription
@@ -326,7 +318,6 @@ namespace MvxScaffolding.Core.ViewModels
 
             HasIosUnitTestProject = false;
             HasIosUiTestProject = false;
-            HasIosHyperion = false;
 
             IosLayoutTypes = TemplateChoices.IosLayoutTypes;
             SelectedIosLayoutType = TemplateChoices.IosLayoutTypeDefault;

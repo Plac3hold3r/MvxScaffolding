@@ -493,15 +493,6 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hyperion.
-        /// </summary>
-        public static string PlatformOptions_Ios_Hyperion {
-            get {
-                return ResourceManager.GetString("PlatformOptions_Ios_Hyperion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Layout Type.
         /// </summary>
         public static string PlatformOptions_Ios_LayoutType {
@@ -736,42 +727,6 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enable to include FluentLayout, a fluent API for creating constraint-based layouts..
-        /// </summary>
-        public static string SimpleInfo_Fluent_Layouts_Desc {
-            get {
-                return ResourceManager.GetString("SimpleInfo_Fluent_Layouts_Desc", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Fluent Layouts.
-        /// </summary>
-        public static string SimpleInfo_Fluent_Layouts_Title {
-            get {
-                return ResourceManager.GetString("SimpleInfo_Fluent_Layouts_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Enable to include Hyperion, an in app design review tool..
-        /// </summary>
-        public static string SimpleInfo_Hyperion_Desc {
-            get {
-                return ResourceManager.GetString("SimpleInfo_Hyperion_Desc", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Hyperion.
-        /// </summary>
-        public static string SimpleInfo_Hyperion_Title {
-            get {
-                return ResourceManager.GetString("SimpleInfo_Hyperion_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more information..
         /// </summary>
         public static string SimpleInfo_Privacy_Desc {
@@ -804,24 +759,6 @@ namespace MvxScaffolding.Localization.Resources {
         public static string SimpleInfo_Translate_Title {
             get {
                 return ResourceManager.GetString("SimpleInfo_Translate_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Enable to use XML layouts instead of Xamarin default AXML layouts..
-        /// </summary>
-        public static string SimpleInfo_Xml_Layouts_Desc {
-            get {
-                return ResourceManager.GetString("SimpleInfo_Xml_Layouts_Desc", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to XML Layouts.
-        /// </summary>
-        public static string SimpleInfo_Xml_Layouts_Title {
-            get {
-                return ResourceManager.GetString("SimpleInfo_Xml_Layouts_Title", resourceCulture);
             }
         }
         
@@ -939,15 +876,6 @@ namespace MvxScaffolding.Localization.Resources {
         public static string Summary_Ios {
             get {
                 return ResourceManager.GetString("Summary_Ios", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Hyperion.
-        /// </summary>
-        public static string Summary_Ios_Hyperion {
-            get {
-                return ResourceManager.GetString("Summary_Ios_Hyperion", resourceCulture);
             }
         }
         
