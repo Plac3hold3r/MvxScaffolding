@@ -168,12 +168,6 @@
           ]
         },
         {
-          "condition": "(!HasHyperion)",
-          "exclude": [
-            "**/src/MvxNative.iOS/Native References/**"
-          ]
-        },
-        {
           "condition": "(!HasEditorConfig)",
           "exclude": [
             "editor.config"
@@ -504,12 +498,6 @@
           "before": "</string>"
         }
       ]
-    },
-    "HasHyperion": {
-      "type": "parameter",
-      "datatype": "bool",
-      "description": "Whether to include Hyperion, an in app design review tool, in the iOS project.",
-      "defaultValue": "false"
     },
     /*
     || UWP project flags

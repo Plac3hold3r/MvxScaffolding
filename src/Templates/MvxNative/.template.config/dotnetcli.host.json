@@ -82,10 +82,6 @@
       "longName": "ios-min-sdk",
       "shortName": "ios-sdk"
     },
-    "HasHyperion": {
-      "longName": "ios-include-hyperion",
-      "shortName": "ios-h"
-    },
     "iOSLayoutType": {
       "longName": "ios-layout-type",
       "shortName": "ios-l"
