@@ -23,7 +23,6 @@ Android Oreo adaptive icons |* |*
 Android support constraint layout |* |
 Android AXML or XML layout |* |
 iOS storyboard launch screen |* | *
-iOS [Hyperion](https://github.com/willowtreeapps/Hyperion-iOS) |* | *
 iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.FluentLayout) |* |
 
 See [Release Notes](docs/release_notes.md)

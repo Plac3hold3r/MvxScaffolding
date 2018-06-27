@@ -37,7 +37,7 @@ namespace MvxScaffolding.UI.Views
 #endif
         }
 
-        private void OnDialogClosing(object sender, DialogClosingEventArgs eventArgs)
+        void OnDialogClosing(object sender, DialogClosingEventArgs eventArgs)
         {
             if (eventArgs.Parameter is SimpleInfoViewModel infoViewModel
                 && !string.IsNullOrWhiteSpace(infoViewModel.ReadMoreLink)
@@ -47,7 +47,7 @@ namespace MvxScaffolding.UI.Views
             }
         }
 
-        private void OnKeyDown(object sender, KeyEventArgs e)
+        void OnKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Escape)
             {

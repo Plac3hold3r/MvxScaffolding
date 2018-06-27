@@ -32,22 +32,22 @@ namespace MvxScaffolding.Core.ViewModels
         public ICommand ToggleUwpCommand { get; }
         public ICommand ShowPlatformMarketShareCommand { get; }
 
-        private void ToggleAndroid()
+        void ToggleAndroid()
         {
             Options.HasAndroid = !Options.HasAndroid;
         }
 
-        private void ToggleIos()
+        void ToggleIos()
         {
             Options.HasIos = !Options.HasIos;
         }
 
-        private void ToggleUwp()
+        void ToggleUwp()
         {
             Options.HasUwp = !Options.HasUwp;
         }
 
-        private void ShowPlatformMarketShare(PlatformType platform)
+        void ShowPlatformMarketShare(PlatformType platform)
         {
             switch (platform)
             {

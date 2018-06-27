@@ -13,7 +13,7 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
 {
     public class TraceTracker
     {
-        private readonly TraceEventType _traceEventType;
+        readonly TraceEventType _traceEventType;
 
         public TraceTracker(TraceEventType eventType)
         {
@@ -29,7 +29,7 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
             }
         }
 
-        private async Task SafeTrackAsync(string traceToTrack, Exception ex, IWriter writer)
+        async Task SafeTrackAsync(string traceToTrack, Exception ex, IWriter writer)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
             }
         }
 
-        private bool IsTraceEnabled()
+        bool IsTraceEnabled()
         {
             return _traceEventType <= Config.Current.DiagnosticsTraceLevel;
         }

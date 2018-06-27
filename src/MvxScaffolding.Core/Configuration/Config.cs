@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -42,9 +42,9 @@ namespace MvxScaffolding.Core.Configuration
 
         public string ChangelogUri { get; set; }
 
-        private const string DefaultJsonConfigFileName = "MvxScaffolding.config.json";
+        const string DefaultJsonConfigFileName = "MvxScaffolding.config.json";
 
-        private static Config _current;
+        static Config _current;
 
         public static Config Current
         {
@@ -86,7 +86,7 @@ namespace MvxScaffolding.Core.Configuration
             return loadedConfig;
         }
 
-        private static Config DeserializeConfiguration(string path)
+        static Config DeserializeConfiguration(string path)
         {
             try
             {
@@ -105,7 +105,7 @@ namespace MvxScaffolding.Core.Configuration
             }
         }
 
-        private static void TraceUsingDefault(string info)
+        static void TraceUsingDefault(string info)
         {
             Debug.Write(info);
             Trace.TraceWarning(info);

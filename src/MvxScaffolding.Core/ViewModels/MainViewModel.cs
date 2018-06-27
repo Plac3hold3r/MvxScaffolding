@@ -21,8 +21,8 @@ namespace MvxScaffolding.Core.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        private readonly List<NavigationalViewModel> _navigationalViewModels;
-        private readonly WizardOptionViewModel _options;
+        readonly List<NavigationalViewModel> _navigationalViewModels;
+        readonly WizardOptionViewModel _options;
 
         public ICommand ForwardCommand { get; }
 
@@ -34,7 +34,7 @@ namespace MvxScaffolding.Core.ViewModels
 
         public ICommand DismissNotificationCommand { get; }
 
-        private int _selectedViewModelIndex;
+        int _selectedViewModelIndex;
 
         public int SelectedViewModelIndex
         {
@@ -42,7 +42,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _selectedViewModelIndex, value);
         }
 
-        private NavigationalViewModel _selectedNavigationalItem;
+        NavigationalViewModel _selectedNavigationalItem;
 
         public NavigationalViewModel SelectedNavigationalItem
         {
@@ -57,15 +57,15 @@ namespace MvxScaffolding.Core.ViewModels
             }
         }
 
-        private SimpleInfoViewModel _privacyInfoModel;
+        SimpleInfoViewModel _privacyInfoModel;
         public SimpleInfoViewModel PrivacyInfoModel
             => _privacyInfoModel ?? (_privacyInfoModel = SimpleInfoViewModel.PrivacyInfo());
 
-        private SimpleInfoViewModel _translateInfoModel;
+        SimpleInfoViewModel _translateInfoModel;
         public SimpleInfoViewModel TranslateInfoModel
             => _translateInfoModel ?? (_translateInfoModel = SimpleInfoViewModel.TranslateInfo());
 
-        private bool _hasUpdatedNotification;
+        bool _hasUpdatedNotification;
 
         public bool HasUpdatedNotification
         {
@@ -97,7 +97,7 @@ namespace MvxScaffolding.Core.ViewModels
             ShowUpdatedNotification();
         }
 
-        private void ShowUpdatedNotification()
+        void ShowUpdatedNotification()
         {
             if (MvxScaffoldingContext.LastKnownVersion == null || MvxScaffoldingContext.LastKnownVersion < MvxScaffoldingContext.WizardVersion)
             {
@@ -106,12 +106,12 @@ namespace MvxScaffolding.Core.ViewModels
             }
         }
 
-        private void NavigateFirst()
+        void NavigateFirst()
         {
             SelectedNavigationalItem = _navigationalViewModels.First();
         }
 
-        private void NavigateForward(IClosable window)
+        void NavigateForward(IClosable window)
         {
             if (SelectedViewModelIndex + 1 < _navigationalViewModels.Count)
             {
@@ -135,13 +135,13 @@ namespace MvxScaffolding.Core.ViewModels
             }
         }
 
-        private void NavigateBackward()
+        void NavigateBackward()
         {
             if (SelectedViewModelIndex - 1 >= 0)
                 SelectedNavigationalItem = _navigationalViewModels[--SelectedViewModelIndex];
         }
 
-        private void NavigateToReleaseNotes()
+        void NavigateToReleaseNotes()
         {
             HasUpdatedNotification = false;
             ShowDialogCommand.Execute(new ReleaseNotesViewModel());
@@ -150,7 +150,7 @@ namespace MvxScaffolding.Core.ViewModels
                 .FireAndForget();
         }
 
-        private void DismissNotification()
+        void DismissNotification()
         {
             HasUpdatedNotification = false;
 
@@ -158,7 +158,7 @@ namespace MvxScaffolding.Core.ViewModels
                 .FireAndForget();
         }
 
-        private void GoToGitHubLink()
+        void GoToGitHubLink()
         {
             OpenLink(Config.Current.GitHubUri, TemplateLinks.GitHub);
         }

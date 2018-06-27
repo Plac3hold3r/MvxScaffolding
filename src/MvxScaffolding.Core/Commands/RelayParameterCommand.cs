@@ -10,8 +10,8 @@ namespace MvxScaffolding.Core.Commands
 {
     public class RelayCommand<T> : ICommand
     {
-        private readonly Action<T> _execute;
-        private readonly Func<T, bool> _canExecute;
+        readonly Action<T> _execute;
+        readonly Func<T, bool> _canExecute;
 
         public RelayCommand(Action<T> execute)
             : this(execute, null)

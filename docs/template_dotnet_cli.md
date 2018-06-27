@@ -223,11 +223,6 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                              9.0     - iOS 9
                                          Default: 10.0
 
-  -ios-h|--ios-include-hyperion          Whether to include Hyperion, an in app design review tool,
-                                             in the iOS project.
-                                         bool - Optional
-                                         Default: false
-
   -uwp-desc|--uwp-app-description        The UWP application description.
                                          string - Optional
                                          Default: Laying the foundation with Mvx Scaffolding
@@ -249,14 +244,15 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                          bool - Optional
                                          Default: false
 
-  -droid-xml|--android-xml-layouts       Whether to XML layouts instead of AXML for Android.
-                                         bool - Optional
-                                         Default: false
+  -droid-l|--android-layout-type         The Android project layout pattern to use.
+                                             axml    - axml, Android layout format compatible with Visual Studio tooling.
+                                             xml     - xml, Android layout format compatible with Android Studio tooling.
+                                         Default: axml
 
-  -ios-f|--ios-include-fluentlayout      Whether to include FluentLayout, a fluent API for 
-                                            creating constraint-based layouts, in the iOS project.
-                                         bool - Optional
-                                         Default: false
+  -ios-l|--ios-layout-type               The iOS project layout pattern to use.
+                                             fluent        - FluentLayout, a fluent API for creating constraint-based layouts.
+                                             storyboard    - Storyboard, iOS layout format compatible with Xcode interface builder.
+                                         Default: fluent
 ```
 
 **MvxForms** only options

@@ -20,10 +20,10 @@ namespace MvxScaffolding.Core.ViewModels
 {
     public class WizardOptionViewModel : BaseViewModel, ITemplateOptions, INotifyDataErrorInfo
     {
-        private readonly Dictionary<string, ICollection<string>>
+        readonly Dictionary<string, ICollection<string>>
             _validationErrors = new Dictionary<string, ICollection<string>>();
 
-        private string _appName = MvxScaffoldingContext.ProjectName;
+        string _appName = MvxScaffoldingContext.ProjectName;
         [Required(ErrorMessageResourceName = nameof(LocalResources.AppDetails_Validation_Display_Name), ErrorMessageResourceType = typeof(LocalResources))]
         public string AppName
         {
@@ -35,7 +35,7 @@ namespace MvxScaffolding.Core.ViewModels
             }
         }
 
-        private string _appId = $"com.{ MvxScaffoldingContext.SafeProjectName.ToLower() }";
+        string _appId = $"com.{ MvxScaffoldingContext.SafeProjectName.ToLower() }";
         [Required(ErrorMessageResourceName = nameof(LocalResources.AppDetails_Validation_Identifier), ErrorMessageResourceType = typeof(LocalResources))]
         public string AppId
         {
@@ -47,7 +47,7 @@ namespace MvxScaffolding.Core.ViewModels
             }
         }
 
-        private string _solutionName = MvxScaffoldingContext.SolutionName;
+        string _solutionName = MvxScaffoldingContext.SolutionName;
         [Required(ErrorMessageResourceName = nameof(LocalResources.AppDetails_Validation_SolutionName), ErrorMessageResourceType = typeof(LocalResources))]
         public string SolutionName
         {
@@ -59,7 +59,7 @@ namespace MvxScaffolding.Core.ViewModels
             }
         }
 
-        private bool _hasEditorConfig;
+        bool _hasEditorConfig;
 
         public bool HasEditorConfig
         {
@@ -67,7 +67,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _hasEditorConfig, value);
         }
 
-        private ScaffoldType _selectedScaffoldType;
+        ScaffoldType _selectedScaffoldType;
 
         public ScaffoldType SelectedScaffoldType
         {
@@ -75,7 +75,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _selectedScaffoldType, value);
         }
 
-        private string _selectedProjectGrouping;
+        string _selectedProjectGrouping;
 
         public string SelectedProjectGrouping
         {
@@ -85,7 +85,7 @@ namespace MvxScaffolding.Core.ViewModels
 
         public Dictionary<string, string> ProjectGroupingOptions { get; }
 
-        private string _selectedNetStandard;
+        string _selectedNetStandard;
 
         public string SelectedNetStandard
         {
@@ -95,7 +95,7 @@ namespace MvxScaffolding.Core.ViewModels
 
         public Dictionary<string, string> NetStandardOptions { get; }
 
-        private bool _hasCoreUnitTestProject;
+        bool _hasCoreUnitTestProject;
 
         public bool HasCoreUnitTestProject
         {
@@ -103,7 +103,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _hasCoreUnitTestProject, value);
         }
 
-        private string _selectedMinAndroidSDK;
+        string _selectedMinAndroidSDK;
 
         public string SelectedMinAndroidSDK
         {
@@ -113,7 +113,7 @@ namespace MvxScaffolding.Core.ViewModels
 
         public Dictionary<string, string> MinAndroidSDKOptions { get; }
 
-        private bool _hasAndroidUnitTestProject;
+        bool _hasAndroidUnitTestProject;
 
         public bool HasAndroidUnitTestProject
         {
@@ -121,7 +121,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _hasAndroidUnitTestProject, value);
         }
 
-        private bool _hasAndroidUiTestProject;
+        bool _hasAndroidUiTestProject;
 
         public bool HasAndroidUiTestProject
         {
@@ -135,7 +135,7 @@ namespace MvxScaffolding.Core.ViewModels
             }
         }
 
-        private string _selectedAndroidLayoutType;
+        string _selectedAndroidLayoutType;
 
         public string SelectedAndroidLayoutType
         {
@@ -145,7 +145,7 @@ namespace MvxScaffolding.Core.ViewModels
 
         public Dictionary<string, string> AndroidLayoutTypes { get; }
 
-        private string _selectedMinIosSDK;
+        string _selectedMinIosSDK;
 
         public string SelectedMinIosSDK
         {
@@ -155,7 +155,7 @@ namespace MvxScaffolding.Core.ViewModels
 
         public Dictionary<string, string> MinIosSDKOptions { get; }
 
-        private bool _hasIosUnitTestProject;
+        bool _hasIosUnitTestProject;
 
         public bool HasIosUnitTestProject
         {
@@ -163,7 +163,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _hasIosUnitTestProject, value);
         }
 
-        private bool _hasIosUiTestProject;
+        bool _hasIosUiTestProject;
 
         public bool HasIosUiTestProject
         {
@@ -177,7 +177,7 @@ namespace MvxScaffolding.Core.ViewModels
             }
         }
 
-        private string _selectedIosLayoutType;
+        string _selectedIosLayoutType;
 
         public string SelectedIosLayoutType
         {
@@ -187,7 +187,7 @@ namespace MvxScaffolding.Core.ViewModels
 
         public Dictionary<string, string> IosLayoutTypes { get; }
 
-        private string _uwpDescription;
+        string _uwpDescription;
         [RequiredIf(nameof(HasUwp), true, ErrorMessageResourceName = nameof(LocalResources.PlatformOptions_Validation_Uwp_Description), ErrorMessageResourceType = typeof(LocalResources))]
         public string UwpDescription
         {
@@ -199,7 +199,7 @@ namespace MvxScaffolding.Core.ViewModels
             }
         }
 
-        private string _selectedMinUwpSDK;
+        string _selectedMinUwpSDK;
 
         public string SelectedMinUwpSDK
         {
@@ -209,7 +209,7 @@ namespace MvxScaffolding.Core.ViewModels
 
         public Dictionary<string, string> MinUwpSDKOptions { get; }
 
-        private bool _hasUwpUnitTestProject;
+        bool _hasUwpUnitTestProject;
 
         public bool HasUwpUnitTestProject
         {
@@ -217,7 +217,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _hasUwpUnitTestProject, value);
         }
 
-        private bool _hasUwpUiTestProject;
+        bool _hasUwpUiTestProject;
 
         public bool HasUwpUiTestProject
         {
@@ -225,7 +225,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _hasUwpUiTestProject, value);
         }
 
-        private bool _hasAndroid;
+        bool _hasAndroid;
 
         public bool HasAndroid
         {
@@ -233,7 +233,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _hasAndroid, value);
         }
 
-        private bool _hasIos;
+        bool _hasIos;
 
         public bool HasIos
         {
@@ -241,7 +241,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _hasIos, value);
         }
 
-        private bool _hasUwp;
+        bool _hasUwp;
 
         public bool HasUwp
         {
@@ -256,7 +256,7 @@ namespace MvxScaffolding.Core.ViewModels
 
         public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
 
-        private void RaiseErrorsChanged(string propertyName)
+        void RaiseErrorsChanged(string propertyName)
         {
             ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
         }

@@ -31,7 +31,7 @@ namespace MvxScaffolding.VsEmulator
             Justification = "Required to load assembly via file path",
             Scope = "member",
             Target = "~M:MvxScaffolding.VsEmulator.App.CurrentDomain_AssemblyResolve(System.Object,System.ResolveEventArgs)~System.Reflection.Assembly")]
-        private Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
+        Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
             if (args.Name.ToUpper().StartsWith("MATERIALDESIGNTHEMES.WPF")
                 || args.Name.ToUpper().StartsWith("MARKDIG.WPF")

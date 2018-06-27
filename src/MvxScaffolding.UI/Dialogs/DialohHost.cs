@@ -16,7 +16,7 @@ namespace MvxScaffolding.UI.Dialogs
             Show(viewModel, OnDialogOpened);
         }
 
-        private void OnDialogOpened(object sender, DialogOpenedEventArgs eventArgs)
+        void OnDialogOpened(object sender, DialogOpenedEventArgs eventArgs)
         {
             if (eventArgs.Session.Content is IViewModel viewModel)
                 viewModel.OnDialogOpened();

@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -21,10 +21,10 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
     {
         public bool IsEnabled { get; private set; }
 
-        private readonly Config _currentConfig;
-        private TelemetryClient _client;
+        readonly Config _currentConfig;
+        TelemetryClient _client;
 
-        private static RemoteWriter _current;
+        static RemoteWriter _current;
 
         public static RemoteWriter Current
         {
@@ -46,7 +46,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             _current = null;
         }
 
-        private RemoteWriter(Config config)
+        RemoteWriter(Config config)
         {
             _currentConfig = config ?? throw new ArgumentNullException(nameof(config));
 
@@ -93,7 +93,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             await Current.TrackExceptionAsync(ex, properties);
         }
 
-        private void IntializeTelemetryClient()
+        void IntializeTelemetryClient()
         {
             try
             {
@@ -128,7 +128,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             }
         }
 
-        private bool VsTelemetryIsOptedIn()
+        bool VsTelemetryIsOptedIn()
         {
             try
             {
@@ -142,7 +142,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             }
         }
 
-        private bool SafeVsTelemetryIsOptedIn()
+        bool SafeVsTelemetryIsOptedIn()
         {
             var result = false;
             var vsEdition = string.Empty;
@@ -182,7 +182,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             return result;
         }
 
-        private void SetSessionData()
+        void SetSessionData()
         {
             if (Settings.Default.AiUserId == Guid.Empty)
             {
@@ -235,7 +235,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             }
         }
 
-        private async Task SafeExecuteAsync(Action action)
+        async Task SafeExecuteAsync(Action action)
         {
             try
             {
@@ -256,7 +256,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             }
         }
 
-        private async Task SafeExecuteAsync(Func<Task> action)
+        async Task SafeExecuteAsync(Func<Task> action)
         {
             try
             {
@@ -309,7 +309,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             }
         }
 
-        private bool RemoteKeyAvailable()
+        bool RemoteKeyAvailable()
         {
             // Returns true if a valid AI key or tagged AI key exists
             var validGuid = Guid.TryParse(_currentConfig.RemoteTelemetryKey, out Guid auxA);
