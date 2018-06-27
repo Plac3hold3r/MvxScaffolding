@@ -214,7 +214,8 @@
                             ItemsSource="{Binding Options.AndroidLayoutTypes}"
                             SelectedValue="{Binding Options.SelectedAndroidLayoutType}"
                             SelectedValuePath="Key"
-                            Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                            Visibility="{Binding IsNativeTemplate, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <ComboBox.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <VirtualizingStackPanel />
@@ -377,7 +378,8 @@
                             ItemsSource="{Binding Options.IosLayoutTypes}"
                             SelectedValue="{Binding Options.SelectedIosLayoutType}"
                             SelectedValuePath="Key"
-                            Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                            Visibility="{Binding IsNativeTemplate, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <ComboBox.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <VirtualizingStackPanel />
