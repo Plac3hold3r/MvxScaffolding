@@ -30,16 +30,17 @@ namespace MvxScaffolding.Core.ViewModels
 
         public WizardOptionViewModel Options { get; private set; }
 
-        private SimpleInfoViewModel _editorConfigInfoModel;
+        SimpleInfoViewModel _editorConfigInfoModel;
+
         public SimpleInfoViewModel EditorConfigInfoModel
             => _editorConfigInfoModel ?? (_editorConfigInfoModel = SimpleInfoViewModel.EditorConfigInfo());
 
-        private void GoToGitHubLink()
+        void GoToGitHubLink()
         {
             OpenLink(Config.Current.GitHubUri, TemplateLinks.GitHub);
         }
 
-        private void SelectScaffoldType(ScaffoldType scaffoldType)
+        void SelectScaffoldType(ScaffoldType scaffoldType)
         {
             Options.SelectedScaffoldType = scaffoldType;
         }

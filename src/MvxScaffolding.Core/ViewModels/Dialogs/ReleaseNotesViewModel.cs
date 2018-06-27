@@ -17,7 +17,7 @@ namespace MvxScaffolding.Core.ViewModels.Dialogs
         public ICommand GoToGitHubCommand { get; }
         public ICommand GoToChangelogCommand { get; }
 
-        private string _releaseNotes;
+        string _releaseNotes;
 
         public string ReleaseNotes
         {
@@ -31,12 +31,12 @@ namespace MvxScaffolding.Core.ViewModels.Dialogs
             GoToChangelogCommand = new RelayCommand(GoToChangelogLink);
         }
 
-        private void GoToGitHubLink()
+        void GoToGitHubLink()
         {
             OpenLink(Config.Current.GitHubUri, TemplateLinks.GitHub);
         }
 
-        private void GoToChangelogLink()
+        void GoToChangelogLink()
         {
             OpenLink(Config.Current.ChangelogUri, TemplateLinks.Changelog);
         }

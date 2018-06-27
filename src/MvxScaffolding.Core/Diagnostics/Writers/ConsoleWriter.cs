@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -45,7 +45,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             await WriteTraceAsync(TraceEventType.Critical, "Exception Tracked", ex);
         }
 
-        private async Task CallAsync(Action action)
+        async Task CallAsync(Action action)
         {
             var task = Task.Run(() => action);
             await task;

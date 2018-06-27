@@ -16,7 +16,7 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
 {
     public class TelemetryTracker : IDisposable
     {
-        private string _vsProductVersion = string.Empty;
+        string _vsProductVersion = string.Empty;
 
         public TelemetryTracker()
         {
@@ -140,7 +140,7 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
             return _vsProductVersion;
         }
 
-        private Dictionary<string, string> AddNativeProjectProperties(Dictionary<string, string> properties, ITemplateOptions options)
+        Dictionary<string, string> AddNativeProjectProperties(Dictionary<string, string> properties, ITemplateOptions options)
         {
             properties.Add(TemplateOptions.Native.HasAndroidUITestProject, options.HasAndroidUiTestProject.ToStringLowerCase());
             properties.Add(TemplateOptions.Native.HasIosUITestProject, options.HasIosUiTestProject.ToStringLowerCase());
@@ -150,7 +150,7 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
             return properties;
         }
 
-        private Dictionary<string, string> AddFormsProjectProperties(Dictionary<string, string> properties, ITemplateOptions options)
+        Dictionary<string, string> AddFormsProjectProperties(Dictionary<string, string> properties, ITemplateOptions options)
         {
             properties.Add(TemplateOptions.Forms.HasXamarinUITestProject, options.HasAndroidUiTestProject.ToStringLowerCase());
 
