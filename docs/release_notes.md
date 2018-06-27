@@ -1,5 +1,11 @@
 ## Release Notes
 
+## [v0.12.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.12.0-beta) (2018-06-27)
+
+- Update to support MvvmCross 6.1.2.
+- Update summary page UI
+- Remove Hyperion from iOS
+
 ## [v0.11.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.11.0-beta) (2018-06-16)
 
 - Fix support for choosing solution name
