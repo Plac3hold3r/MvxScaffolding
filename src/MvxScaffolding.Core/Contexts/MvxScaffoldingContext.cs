@@ -33,10 +33,10 @@ namespace MvxScaffolding.Core.Contexts
 
         public static Version LastKnownVersion
         {
-            get => Settings.Default.LastKnownVersion;
+            get => Version.TryParse(Settings.Default.LastKnownVersion, out Version version) ? version : null;
             set
             {
-                Settings.Default.LastKnownVersion = value;
+                Settings.Default.LastKnownVersion = value.ToString();
                 Settings.Default.Save();
             }
         }
