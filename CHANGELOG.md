@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.12.1-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.12.1-beta) (2018-07-01)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.12.0-beta...v0.12.1-beta)
+
+**Fixed bugs:**
+
+- Fix release note version check [\#73](https://github.com/Plac3hold3r/MvxScaffolding/pull/73) ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Removed old links [\#72](https://github.com/Plac3hold3r/MvxScaffolding/pull/72) ([Plac3hold3r](https://github.com/Plac3hold3r))
+
 ## [v0.12.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.12.0-beta) (2018-06-27)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.11.0-beta...v0.12.0-beta)
 
