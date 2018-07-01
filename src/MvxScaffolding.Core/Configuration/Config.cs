@@ -28,10 +28,6 @@ namespace MvxScaffolding.Core.Configuration
 
         public string EditorConfigUri { get; set; }
 
-        public string FluentLayoutUri { get; set; }
-
-        public string HyperioniOSUri { get; set; }
-
         public string MarketShareAndroidUri { get; set; }
 
         public string MarketShareiOSUri { get; set; }
