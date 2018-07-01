@@ -121,7 +121,6 @@ See [documentation](docs/template_vs.md) for how to generate a solution.
 
 ##### Third party libraries
 - [MvvmCross](https://github.com/MvvmCross/MvvmCross) is licensed under [MS-PL](https://github.com/MvvmCross/MvvmCross/blob/master/LICENSE)
-- [Hyperion](https://github.com/willowtreeapps/Hyperion-iOS) is licensed under [MIT](https://github.com/willowtreeapps/Hyperion-iOS/blob/master/LICENSE)
 - [FluentLayout](https://github.com/FluentLayout/Cirrious.FluentLayout) is licensed under [MS-PL](https://github.com/FluentLayout/Cirrious.FluentLayout/blob/master/LICENSE)
 - [Xamarin Android Support Library](https://github.com/xamarin/AndroidSupportComponents/) is licensed under [MIT](https://github.com/xamarin/AndroidSupportComponents/blob/master/LICENSE.md)
 
