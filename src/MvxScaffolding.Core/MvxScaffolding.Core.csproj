@@ -122,12 +122,11 @@
     </Compile>
     <Compile Include="Template\ITemplateOptions.cs" />
     <Compile Include="Template\PlatformType.cs" />
-    <Compile Include="Template\TemplateChoices.cs" />
+    <Compile Include="Configuration\TemplateConfig.cs" />
     <Compile Include="Template\TemplateLinks.cs" />
     <Compile Include="Template\TemplateOptions.cs" />
     <Compile Include="Template\ScaffoldType.cs" />
     <Compile Include="Template\TemplateType.cs" />
-    <Compile Include="Template\VSTemplateKeys.cs" />
     <Compile Include="Validation\RequiredIfAttribute.cs" />
     <Compile Include="ViewModels\!Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\AppDetailsViewModel.cs" />

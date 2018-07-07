@@ -6,9 +6,9 @@
 using System.Collections.Generic;
 using MvxScaffolding.Localization.Resources;
 
-namespace MvxScaffolding.Core.Template
+namespace MvxScaffolding.Core.Configuration
 {
-    public static class TemplateChoices
+    public static class TemplateConfig
     {
         public static Dictionary<string, string> ProjectGroupingOptions => new Dictionary<string, string>
         {

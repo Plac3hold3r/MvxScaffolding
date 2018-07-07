@@ -11,6 +11,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
+using MvxScaffolding.Core.Configuration;
 using MvxScaffolding.Core.Contexts;
 using MvxScaffolding.Core.Template;
 using MvxScaffolding.Core.Validation;
@@ -293,37 +294,37 @@ namespace MvxScaffolding.Core.ViewModels
 
         public WizardOptionViewModel()
         {
-            ProjectGroupingOptions = TemplateChoices.ProjectGroupingOptions;
-            SelectedProjectGrouping = TemplateChoices.ProjectGroupingOptionDefault;
+            ProjectGroupingOptions = TemplateConfig.ProjectGroupingOptions;
+            SelectedProjectGrouping = TemplateConfig.ProjectGroupingOptionDefault;
 
             HasEditorConfig = true;
             SelectedScaffoldType = ScaffoldType.SingleView;
 
-            NetStandardOptions = TemplateChoices.NetStandardOptions;
-            SelectedNetStandard = TemplateChoices.NetStandardOptionDefault;
+            NetStandardOptions = TemplateConfig.NetStandardOptions;
+            SelectedNetStandard = TemplateConfig.NetStandardOptionDefault;
 
             HasCoreUnitTestProject = false;
 
-            MinAndroidSDKOptions = TemplateChoices.MinAndroidSDKOptions;
-            SelectedMinAndroidSDK = TemplateChoices.MinAndroidSDKOptionDefault;
+            MinAndroidSDKOptions = TemplateConfig.MinAndroidSDKOptions;
+            SelectedMinAndroidSDK = TemplateConfig.MinAndroidSDKOptionDefault;
 
             HasAndroidUnitTestProject = false;
             HasAndroidUiTestProject = false;
 
-            AndroidLayoutTypes = TemplateChoices.AndroidLayoutTypes;
-            SelectedAndroidLayoutType = TemplateChoices.AndroidLayoutTypeDefault;
+            AndroidLayoutTypes = TemplateConfig.AndroidLayoutTypes;
+            SelectedAndroidLayoutType = TemplateConfig.AndroidLayoutTypeDefault;
 
-            MinIosSDKOptions = TemplateChoices.MinIosSDKOptions;
-            SelectedMinIosSDK = TemplateChoices.MinIosSDKOptionDefault;
+            MinIosSDKOptions = TemplateConfig.MinIosSDKOptions;
+            SelectedMinIosSDK = TemplateConfig.MinIosSDKOptionDefault;
 
             HasIosUnitTestProject = false;
             HasIosUiTestProject = false;
 
-            IosLayoutTypes = TemplateChoices.IosLayoutTypes;
-            SelectedIosLayoutType = TemplateChoices.IosLayoutTypeDefault;
+            IosLayoutTypes = TemplateConfig.IosLayoutTypes;
+            SelectedIosLayoutType = TemplateConfig.IosLayoutTypeDefault;
 
-            MinUwpSDKOptions = TemplateChoices.MinUwpSDKOptions;
-            SelectedMinUwpSDK = TemplateChoices.MinUwpSDKOptionDefault;
+            MinUwpSDKOptions = TemplateConfig.MinUwpSDKOptions;
+            SelectedMinUwpSDK = TemplateConfig.MinUwpSDKOptionDefault;
 
             HasUwpUnitTestProject = false;
             HasUwpUiTestProject = false;

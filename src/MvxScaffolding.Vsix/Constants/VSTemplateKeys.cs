@@ -3,7 +3,7 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
-namespace MvxScaffolding.Core.Template
+namespace MvxScaffolding.Vsix.Constants
 {
     public static class VSTemplateKeys
     {

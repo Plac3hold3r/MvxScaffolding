@@ -19,6 +19,7 @@ using MvxScaffolding.Core.Tasks;
 using MvxScaffolding.Core.Template;
 using MvxScaffolding.UI;
 using MvxScaffolding.UI.Threading;
+using MvxScaffolding.Vsix.Constants;
 
 namespace MvxScaffolding.Vsix.Wizards
 {
