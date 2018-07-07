@@ -45,7 +45,7 @@ namespace MvxScaffolding.Core.ViewModels.Dialogs
         public override async Task OnDialogOpenedAsync()
         {
             using (var client = new WebClient())
-                ReleaseNotes = await client.DownloadStringTaskAsync(Config.Current.ReleaseNotesUri.AsRawUrl());
+                ReleaseNotes = await client.SafeDownloadStringTaskAsync(Config.Current.ReleaseNotesUri.AsRawUrl());
         }
     }
 }
