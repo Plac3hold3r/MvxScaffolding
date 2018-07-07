@@ -112,6 +112,7 @@
     <Compile Include="Diagnostics\Writers\IWriter.cs" />
     <Compile Include="Diagnostics\Writers\RemoteWriter.cs" />
     <Compile Include="Dialogs\Interfaces\IDialogHost.cs" />
+    <Compile Include="Extensions\GitHubDownloadExtensions.cs" />
     <Compile Include="Extensions\TaskExtensions.cs" />
     <Compile Include="Files\FileSystemUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

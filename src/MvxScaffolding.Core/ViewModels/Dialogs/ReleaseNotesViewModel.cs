@@ -3,11 +3,10 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
-using System.IO;
-using System.Reflection;
 using System.Windows.Input;
 using MvxScaffolding.Core.Commands;
 using MvxScaffolding.Core.Configuration;
+using MvxScaffolding.Core.Extensions;
 using MvxScaffolding.Core.Template;
 
 namespace MvxScaffolding.Core.ViewModels.Dialogs
@@ -43,10 +42,8 @@ namespace MvxScaffolding.Core.ViewModels.Dialogs
 
         public override void OnDialogOpened()
         {
-            var asmLocation = Assembly.GetExecutingAssembly().Location;
-            var extensionDirectory = Path.GetDirectoryName(asmLocation);
-            var releaseNoteLocation = Path.Combine(extensionDirectory, "Resources/release_notes.md");
-            ReleaseNotes = File.ReadAllText(releaseNoteLocation);
+            using (var wc = new System.Net.WebClient())
+                ReleaseNotes = wc.DownloadString(Config.Current.ReleaseNotesUri.AsRawUrl());
         }
     }
 }
