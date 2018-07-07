@@ -3,12 +3,13 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
-using System.Threading.Tasks;
-
-namespace MvxScaffolding.Core.ViewModels.Interfaces
+namespace MvxScaffolding.Core.Extensions
 {
-    public interface IViewModel
+    public static class GitHubDownloadExtensions
     {
-        Task OnDialogOpenedAsync();
+        public static string AsRawUrl(this string url)
+        {
+            return $"{url}?raw=true";
+        }
     }
 }

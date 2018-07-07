@@ -3,11 +3,12 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
-using System.IO;
-using System.Reflection;
+using System.Net;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using MvxScaffolding.Core.Commands;
 using MvxScaffolding.Core.Configuration;
+using MvxScaffolding.Core.Extensions;
 using MvxScaffolding.Core.Template;
 
 namespace MvxScaffolding.Core.ViewModels.Dialogs
@@ -41,12 +42,10 @@ namespace MvxScaffolding.Core.ViewModels.Dialogs
             OpenLink(Config.Current.ChangelogUri, TemplateLinks.Changelog);
         }
 
-        public override void OnDialogOpened()
+        public override async Task OnDialogOpenedAsync()
         {
-            var asmLocation = Assembly.GetExecutingAssembly().Location;
-            var extensionDirectory = Path.GetDirectoryName(asmLocation);
-            var releaseNoteLocation = Path.Combine(extensionDirectory, "Resources/release_notes.md");
-            ReleaseNotes = File.ReadAllText(releaseNoteLocation);
+            using (var client = new WebClient())
+                ReleaseNotes = await client.DownloadStringTaskAsync(Config.Current.ReleaseNotesUri.AsRawUrl());
         }
     }
 }

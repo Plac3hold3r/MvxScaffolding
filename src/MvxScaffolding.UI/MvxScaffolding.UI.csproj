@@ -272,10 +272,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\docs\release_notes.md">
-      <Link>Resources\release_notes.md</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>

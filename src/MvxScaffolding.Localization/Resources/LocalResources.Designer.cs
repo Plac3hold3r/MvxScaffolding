@@ -691,6 +691,15 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Installed Version.
+        /// </summary>
+        public static string ReleaseNotes_InstalledVersion {
+            get {
+                return ResourceManager.GetString("ReleaseNotes_InstalledVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
         public static string SimpleInfo_Button_Close {

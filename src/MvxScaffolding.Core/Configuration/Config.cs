@@ -38,6 +38,8 @@ namespace MvxScaffolding.Core.Configuration
 
         public string ChangelogUri { get; set; }
 
+        public string ReleaseNotesUri { get; set; }
+
         const string DefaultJsonConfigFileName = "MvxScaffolding.config.json";
 
         static Config _current;
