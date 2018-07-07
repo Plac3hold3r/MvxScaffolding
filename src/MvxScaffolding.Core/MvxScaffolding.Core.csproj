@@ -122,7 +122,7 @@
     </Compile>
     <Compile Include="Template\ITemplateOptions.cs" />
     <Compile Include="Template\PlatformType.cs" />
-    <Compile Include="Template\TemplateChoices.cs" />
+    <Compile Include="Configuration\TemplateConfig.cs" />
     <Compile Include="Template\TemplateLinks.cs" />
     <Compile Include="Template\TemplateOptions.cs" />
     <Compile Include="Template\ScaffoldType.cs" />
