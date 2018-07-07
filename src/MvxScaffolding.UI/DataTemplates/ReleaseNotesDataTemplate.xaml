@@ -17,6 +17,7 @@
 
     <DataTemplate DataType="{x:Type dialogs:ReleaseNotesViewModel}">
         <StackPanel Width="600" Margin="16">
+
             <DockPanel Height="300">
                 <markdig:MarkdownViewer Height="300" Markdown="{Binding ReleaseNotes}" />
                 <ProgressBar
@@ -26,6 +27,13 @@
                     Style="{StaticResource MaterialDesignCircularProgressBar}"
                     Value="0" />
             </DockPanel>
+            <StackPanel Margin="0,12,0,0" Orientation="Horizontal">
+                <TextBlock Foreground="{StaticResource MaterialDesignBodyLight}" Text="{x:Static l10n:LocalResources.ReleaseNotes_InstalledVersion}" />
+                <TextBlock
+                    Margin="8,0,0,0"
+                    Style="{StaticResource MaterialDesignCaptionTextBlock}"
+                    Text="{Binding WizardVersion, StringFormat={}v{0}}" />
+            </StackPanel>
             <TextBlock Margin="0,12,0,8">
                 <Hyperlink
                     Command="{Binding GoToGitHubCommand}"
