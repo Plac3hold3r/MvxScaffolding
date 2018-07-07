@@ -74,13 +74,13 @@ namespace MvxNative.Droid.Views.Main
 
         public void HideSoftKeyboard()
         {
-            if (CurrentFocus == null)
-                return;
+            if (CurrentFocus != null)
+            {
+                var inputMethodManager = (InputMethodManager)GetSystemService(InputMethodService);
+                inputMethodManager.HideSoftInputFromWindow(CurrentFocus.WindowToken, 0);
 
-            var inputMethodManager = (InputMethodManager)GetSystemService(InputMethodService);
-            inputMethodManager.HideSoftInputFromWindow(CurrentFocus.WindowToken, 0);
-
-            CurrentFocus.ClearFocus();
+                CurrentFocus.ClearFocus();
+            }
         }
     }
 }
