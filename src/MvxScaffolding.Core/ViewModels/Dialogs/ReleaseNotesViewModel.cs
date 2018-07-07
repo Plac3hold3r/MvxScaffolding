@@ -3,6 +3,8 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
+using System.Net;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using MvxScaffolding.Core.Commands;
 using MvxScaffolding.Core.Configuration;
@@ -40,10 +42,10 @@ namespace MvxScaffolding.Core.ViewModels.Dialogs
             OpenLink(Config.Current.ChangelogUri, TemplateLinks.Changelog);
         }
 
-        public override void OnDialogOpened()
+        public override async Task OnDialogOpenedAsync()
         {
-            using (var wc = new System.Net.WebClient())
-                ReleaseNotes = wc.DownloadString(Config.Current.ReleaseNotesUri.AsRawUrl());
+            using (var client = new WebClient())
+                ReleaseNotes = await client.DownloadStringTaskAsync(Config.Current.ReleaseNotesUri.AsRawUrl());
         }
     }
 }

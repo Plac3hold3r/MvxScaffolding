@@ -3,10 +3,12 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
+using System.Threading.Tasks;
+
 namespace MvxScaffolding.Core.ViewModels.Interfaces
 {
     public interface IViewModel
     {
-        void OnDialogOpened();
+        Task OnDialogOpenedAsync();
     }
 }

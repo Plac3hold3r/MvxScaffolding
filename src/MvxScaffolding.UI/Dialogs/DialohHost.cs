@@ -13,13 +13,13 @@ namespace MvxScaffolding.UI.Dialogs
     {
         void IDialogHost.Show(IViewModel viewModel)
         {
-            Show(viewModel, OnDialogOpened);
+            Show(viewModel, OnDialogOpenedAsync);
         }
 
-        void OnDialogOpened(object sender, DialogOpenedEventArgs eventArgs)
+        async void OnDialogOpenedAsync(object sender, DialogOpenedEventArgs eventArgs)
         {
             if (eventArgs.Session.Content is IViewModel viewModel)
-                viewModel.OnDialogOpened();
+                await viewModel.OnDialogOpenedAsync();
         }
     }
 }
