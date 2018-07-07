@@ -8,7 +8,7 @@ using System.IO;
 using EnvDTE;
 using EnvDTE80;
 using Microsoft.VisualStudio.TemplateWizard;
-using MvxScaffolding.Core.Template;
+using MvxScaffolding.Vsix.Constants;
 
 namespace MvxScaffolding.Vsix.Wizards
 {
