@@ -13,8 +13,5 @@ namespace MvxNative.iOS.Views.Settings
     [MvxSidebarPresentation(MvxPanelEnum.Center, MvxPanelHintType.ResetRoot, false)]
     public class SettingsView : BaseViewController<SettingsViewModel>
     {
-        public SettingsView(IntPtr handle) : base(handle)
-        {
-        }
     }
 }

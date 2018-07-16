@@ -14,10 +14,6 @@ namespace MvxNative.iOS.Views.Menu
     [MvxSidebarPresentation(MvxPanelEnum.Left, MvxPanelHintType.PushPanel, false)]
     public class MenuView : BaseViewController<MenuViewModel>, IMvxSidebarMenu
     {
-        public MenuView(IntPtr handle) : base(handle)
-        {
-        }
-
         public bool AnimateMenu => true;
 
         public bool DisablePanGesture => false;

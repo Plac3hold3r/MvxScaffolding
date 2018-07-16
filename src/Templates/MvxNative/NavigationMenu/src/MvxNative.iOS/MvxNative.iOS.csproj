@@ -102,6 +102,8 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Styles\ColorPalette.cs" />
+    <Compile Include="Views\!Base\BaseViewController.cs" />
+    <Compile Include="Views\Main\MainViewController.cs" />
     <Compile Include="Views\Menu\MenuView.cs" />
     <Compile Include="Views\Settings\SettingsView.cs" />
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-87.png">
@@ -150,8 +152,6 @@
     <Content Include="Entitlements.plist" />
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork%402x" />
-    <Compile Include="Views\!Base\BaseViewController.cs" />
-    <Compile Include="Views\Main\MainViewController.cs" />
     <InterfaceDefinition Include="LaunchScreen.storyboard">
       <SubType>Designer</SubType>
     </InterfaceDefinition>
@@ -161,14 +161,6 @@
     <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-  </ItemGroup>
-  <ItemGroup Condition=" '$(HasFluentLayouts)' != 'true' ">
-    <Compile Include="Views\Main\MainViewController.designer.cs">
-      <DependentUpon>MainViewController.cs</DependentUpon>
-    </Compile>
-    <InterfaceDefinition Include="Views\Main\MainViewController.storyboard">
-      <SubType>Designer</SubType>
-    </InterfaceDefinition>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
