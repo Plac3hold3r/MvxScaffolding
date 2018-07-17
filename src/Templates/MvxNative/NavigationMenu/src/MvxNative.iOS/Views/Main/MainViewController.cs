@@ -37,13 +37,13 @@ namespace MvxNative.iOS.Views.Main
         protected override void LayoutView()
         {
             View.AddConstraints(new FluentLayout[]
-           {
+            {
                 _labelWelcome.WithSameCenterX(View),
                 _labelWelcome.WithSameCenterY(View),
 
                 _labelMessage.Below(_labelWelcome, 10f),
                 _labelMessage.WithSameWidth(View)
-           });
+            });
         }
     }
 }
