@@ -94,7 +94,7 @@
     <ProguardConfiguration Include="proguard.cfg" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
-  <ItemGroup Condition=" '$(UseAndroidXMLLayouts)' != 'true' ">
+  <ItemGroup Condition=" '$(HasAndroidXMLLayouts)' != 'true' ">
     <AndroidResource Include="Resources\layout\fragment_main.axml" />
     <AndroidResource Include="Resources\layout\layout_toolbar.axml" />
     <AndroidResource Include="Resources\layout\activity_main_container.axml" />
@@ -102,7 +102,7 @@
     <AndroidResource Include="Resources\layout\fragment_navigation_header.axml" />
     <AndroidResource Include="Resources\layout\fragment_settings.axml" />
   </ItemGroup>
-  <ItemGroup Condition=" '$(UseAndroidXMLLayouts)' == 'true' ">
+  <ItemGroup Condition=" '$(HasAndroidXMLLayouts)' == 'true' ">
     <AndroidResource Include="Resources\layout\fragment_main.xml" />
     <AndroidResource Include="Resources\layout\layout_toolbar.xml" />
     <AndroidResource Include="Resources\layout\activity_main_container.xml" />
