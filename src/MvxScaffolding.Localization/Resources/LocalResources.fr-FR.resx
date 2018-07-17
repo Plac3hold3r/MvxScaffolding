@@ -441,4 +441,7 @@
   <data name="Summary_SolutionName" xml:space="preserve">
     <value>Solution Name</value>
   </data>
+  <data name="ReleaseNotes_InstalledVersion" xml:space="preserve">
+    <value>Installed Version</value>
+  </data>
 </root>
