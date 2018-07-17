@@ -1,5 +1,9 @@
 ## Release Notes
 
+## [v0.12.1-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.12.1-beta) (2018-07-01)
+
+- Fix release note modal showing again after Visual Studio restart
+
 ## [v0.12.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.12.0-beta) (2018-06-27)
 
 - Update to support MvvmCross 6.1.2.

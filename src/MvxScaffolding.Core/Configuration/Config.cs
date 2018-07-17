@@ -28,10 +28,6 @@ namespace MvxScaffolding.Core.Configuration
 
         public string EditorConfigUri { get; set; }
 
-        public string FluentLayoutUri { get; set; }
-
-        public string HyperioniOSUri { get; set; }
-
         public string MarketShareAndroidUri { get; set; }
 
         public string MarketShareiOSUri { get; set; }
@@ -41,6 +37,8 @@ namespace MvxScaffolding.Core.Configuration
         public string HelpTranslateUri { get; set; }
 
         public string ChangelogUri { get; set; }
+
+        public string ReleaseNotesUri { get; set; }
 
         const string DefaultJsonConfigFileName = "MvxScaffolding.config.json";
 
@@ -101,7 +99,6 @@ namespace MvxScaffolding.Core.Configuration
             {
                 TraceUsingDefault($"Error deserializing configuration from file '{path}'. Exception:\n\r{ex.ToString()}");
                 throw new ConfigurationErrorsException($"Error deserializing configuration data from file '{path}'.", ex);
-                throw;
             }
         }
 

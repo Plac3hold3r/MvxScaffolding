@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using MvxScaffolding.Core.Commands;
 using MvxScaffolding.Core.Contexts;
@@ -85,9 +86,9 @@ namespace MvxScaffolding.Core.ViewModels
             MvxScaffoldingContext.DialogHost.Show(viewModel);
         }
 
-        public virtual void OnDialogOpened()
+        public virtual Task OnDialogOpenedAsync()
         {
-            // Method intentionally left empty.
+            return Task.CompletedTask;
         }
     }
 }

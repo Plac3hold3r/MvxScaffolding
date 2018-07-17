@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/nav_items">
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/app_home" />
+        <item
+            android:id="@+id/nav_settings"
+            android:title="@string/app_settings" />
+    </group>
+
+</menu>

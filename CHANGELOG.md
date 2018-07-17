@@ -1,5 +1,33 @@
 # Change Log
 
+## [v0.12.1-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.12.1-beta) (2018-07-01)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.12.0-beta...v0.12.1-beta)
+
+**Fixed bugs:**
+
+- Fix release note version check [\#73](https://github.com/Plac3hold3r/MvxScaffolding/pull/73) ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Removed old links [\#72](https://github.com/Plac3hold3r/MvxScaffolding/pull/72) ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+## [v0.12.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.12.0-beta) (2018-06-27)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.11.0-beta...v0.12.0-beta)
+
+**Implemented enhancements:**
+
+- Update selections [\#68](https://github.com/Plac3hold3r/MvxScaffolding/pull/68) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Add license scan report and status [\#67](https://github.com/Plac3hold3r/MvxScaffolding/pull/67) ([fossabot](https://github.com/fossabot))
+- Update MVX for single view template [\#66](https://github.com/Plac3hold3r/MvxScaffolding/pull/66) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Fixed bugs:**
+
+- Fix missing commands in docs [\#65](https://github.com/Plac3hold3r/MvxScaffolding/pull/65) ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Merged pull requests:**
+
+- Clean up [\#71](https://github.com/Plac3hold3r/MvxScaffolding/pull/71) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Remove Hyperion [\#70](https://github.com/Plac3hold3r/MvxScaffolding/pull/70) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- New Crowdin translations [\#69](https://github.com/Plac3hold3r/MvxScaffolding/pull/69) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Enable ScaffoldType [\#64](https://github.com/Plac3hold3r/MvxScaffolding/pull/64) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
 ## [v0.11.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.11.0-beta) (2018-06-16)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.10.0-beta...v0.11.0-beta)
 
