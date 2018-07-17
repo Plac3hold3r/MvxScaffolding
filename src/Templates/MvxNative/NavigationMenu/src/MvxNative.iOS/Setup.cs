@@ -8,8 +8,6 @@ namespace MvxNative.iOS
     public class Setup : MvxIosSetup<App>
     {
         protected override IMvxIosViewPresenter CreateViewPresenter()
-        {
-            return new MvxSidebarPresenter(ApplicationDelegate, Window);
-        }
+            => new MvxSidebarPresenter(ApplicationDelegate, Window);
     }
 }
