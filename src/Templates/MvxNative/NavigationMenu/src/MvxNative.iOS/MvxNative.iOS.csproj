@@ -106,6 +106,9 @@
     <Compile Include="Views\Main\MainViewController.cs" />
     <Compile Include="Views\Menu\MenuView.cs" />
     <Compile Include="Views\Settings\SettingsView.cs" />
+    <BundleResource Include="Resources\Images\ic_menu.png" />
+    <BundleResource Include="Resources\Images\ic_menu%402x.png" />
+    <BundleResource Include="Resources\Images\ic_menu%403x.png" />
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-87.png">
       <Visible>false</Visible>
     </ImageAsset>
