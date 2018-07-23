@@ -22,17 +22,31 @@ namespace MvxScaffolding.Core.ViewModels.Helpers
             {
                 foreach (PlatformScaffoldTypeConfiguration.ScaffoldTypeConfiguration scaffoldTemplate in platformScaffoldTypeConfiguration.MvxNative)
                 {
-                    var newTemplate = ScaffoldTemplateOptionViewModel.Create(scaffoldTemplate.Type, options);
-                    newTemplate.HasAndroid = scaffoldTemplate.Platforms.Contains(PlatformType.Android);
-                    newTemplate.HasIos = scaffoldTemplate.Platforms.Contains(PlatformType.Ios);
-                    newTemplate.HasUwp = scaffoldTemplate.Platforms.Contains(PlatformType.Uwp);
-                    newTemplate.Exclude = scaffoldTemplate.Exclude;
-
-                    templateOptions.Add(newTemplate);
+                    templateOptions.Add(scaffoldTemplate.MapScaffoldTemlateOption(options));
+                }
+            }
+            else if (currentTemplateType == TemplateType.MvxForms)
+            {
+                foreach (PlatformScaffoldTypeConfiguration.ScaffoldTypeConfiguration scaffoldTemplate in platformScaffoldTypeConfiguration.MvxForms)
+                {
+                    templateOptions.Add(scaffoldTemplate.MapScaffoldTemlateOption(options));
                 }
             }
 
             return templateOptions;
+        }
+
+        internal static ScaffoldTemplateOptionViewModel MapScaffoldTemlateOption(
+            this PlatformScaffoldTypeConfiguration.ScaffoldTypeConfiguration scaffoldTemplate,
+            WizardOptionViewModel options)
+        {
+            var newTemplate = ScaffoldTemplateOptionViewModel.Create(scaffoldTemplate.Type, options);
+            newTemplate.HasAndroid = scaffoldTemplate.Platforms.Contains(PlatformType.Android);
+            newTemplate.HasIos = scaffoldTemplate.Platforms.Contains(PlatformType.Ios);
+            newTemplate.HasUwp = scaffoldTemplate.Platforms.Contains(PlatformType.Uwp);
+            newTemplate.Exclude = scaffoldTemplate.Exclude;
+
+            return newTemplate;
         }
     }
 }
