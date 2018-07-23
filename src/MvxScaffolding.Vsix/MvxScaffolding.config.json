@@ -19,6 +19,10 @@
   "PlatformScaffoldTypeConfiguration": {
     "MvxNative": [
       {
+        "Type": "SingleView",
+        "Platforms": [ "iOS", "Android", "UWP" ]
+      },
+      {
         "Type": "NavigationMenu",
         "Platforms": [ "iOS", "Android" ],
         "Exclude": [
@@ -27,10 +31,6 @@
             "OptionKey": "storyboard"
           }
         ]
-      },
-      {
-        "Type": "SingleView",
-        "Platforms": [ "iOS", "Android", "UWP" ]
       }
     ],
     "MvxForms": [

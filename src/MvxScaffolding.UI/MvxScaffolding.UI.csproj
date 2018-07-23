@@ -206,6 +206,7 @@
     <Compile Include="Converters\BoolToLocalizedStringConverter.cs" />
     <Compile Include="Converters\OptionToLocalizedString.cs" />
     <Compile Include="Converters\SelectedPlatformTypeToIconConverter.cs" />
+    <Compile Include="Converters\SelectedScaffoldTypeToBackgroundColorConverter.cs" />
     <Compile Include="Converters\SelectedScaffoldTypeToIconConverter.cs" />
     <Compile Include="Converters\StringToUpperConverter.cs" />
     <Compile Include="Converters\SummaryHighlightColorConverter.cs" />
@@ -230,6 +231,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="DataTemplates\ScaffoldTemplateOption.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="DataTemplates\ReleaseNotesDataTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

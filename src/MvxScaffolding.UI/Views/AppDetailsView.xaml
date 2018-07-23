@@ -11,15 +11,22 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:dialogs="clr-namespace:MvxScaffolding.Core.ViewModels.Dialogs;assembly=MvxScaffolding.Core"
     xmlns:l10n="clr-namespace:MvxScaffolding.Localization.Resources;assembly=MvxScaffolding.Localization"
+    xmlns:local="clr-namespace:MvxScaffolding.UI.Views"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:MvxScaffolding.Core.ViewModels;assembly=MvxScaffolding.Core"
     d:DesignHeight="700"
     d:DesignWidth="950"
     Background="{DynamicResource MaterialDesignPaper}"
     mc:Ignorable="d">
 
     <UserControl.Resources>
-        <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
+                <ResourceDictionary Source="/MvxScaffolding.UI;component/DataTemplates/ScaffoldTemplateOption.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </UserControl.Resources>
 
     <Grid>
@@ -186,14 +193,17 @@
         <ItemsControl
             Grid.Row="1"
             Grid.Column="1"
-            Margin="0,0,24,0">
+            Margin="0,0,24,0"
+            ItemTemplate="{StaticResource ScaffoldTemplateOption}"
+            ItemsSource="{Binding ScaffoldTemplateOptions}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid Columns="2" />
                 </ItemsPanelTemplate>
+
             </ItemsControl.ItemsPanel>
 
-            <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
+            <!--<materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
                 <materialDesign:Card Width="200" Margin="0,6">
                     <Grid>
                         <Grid.RowDefinitions>
@@ -268,7 +278,7 @@
                         </StackPanel>
                     </Grid>
                 </materialDesign:Card>
-            </materialDesign:TransitioningContent>
+            </materialDesign:TransitioningContent>-->
 
             <!--<materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}" OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.1}">
                 <materialDesign:Card Width="200" Margin="0,6">

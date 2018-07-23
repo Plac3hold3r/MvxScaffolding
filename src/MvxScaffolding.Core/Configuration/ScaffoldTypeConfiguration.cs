@@ -3,8 +3,10 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
 using MvxScaffolding.Core.Template;
+using MvxScaffolding.Core.ViewModels;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 

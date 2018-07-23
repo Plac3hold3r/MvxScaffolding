@@ -138,12 +138,14 @@
     <Compile Include="ViewModels\Dialogs\ProjectGroupInfoViewModel.cs" />
     <Compile Include="ViewModels\Dialogs\ReleaseNotesViewModel.cs" />
     <Compile Include="ViewModels\Dialogs\SimpleInfoViewModel.cs" />
+    <Compile Include="ViewModels\Helpers\ScaffoldingTypeConfigurationExtensions.cs" />
     <Compile Include="ViewModels\Interfaces\IClosable.cs" />
     <Compile Include="ViewModels\Interfaces\IValidationViewModel.cs" />
     <Compile Include="ViewModels\Interfaces\IViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\NavigationalViewModel.cs" />
     <Compile Include="ViewModels\PlatformOptionsViewModel.cs" />
+    <Compile Include="ViewModels\ScaffoldTemplateOptionViewModel.cs" />
     <Compile Include="ViewModels\SummaryViewModel.cs" />
     <Compile Include="ViewModels\WizardOptionViewModel.cs" />
   </ItemGroup>

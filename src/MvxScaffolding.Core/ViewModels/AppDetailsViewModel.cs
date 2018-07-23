@@ -3,12 +3,14 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
+using System.Collections.Generic;
 using System.Windows.Input;
 using MvxScaffolding.Core.Commands;
 using MvxScaffolding.Core.Configuration;
 using MvxScaffolding.Core.Contexts;
 using MvxScaffolding.Core.Template;
 using MvxScaffolding.Core.ViewModels.Dialogs;
+using MvxScaffolding.Core.ViewModels.Helpers;
 using MvxScaffolding.Core.ViewModels.Interfaces;
 
 namespace MvxScaffolding.Core.ViewModels
@@ -24,11 +26,15 @@ namespace MvxScaffolding.Core.ViewModels
 
             GoToGitHubCommand = new RelayCommand(GoToGitHubLink);
             SelectScaffoldTypeCommand = new RelayCommand<ScaffoldType>(SelectScaffoldType);
+
+            ScaffoldTemplateOptions = Config.Current.PlatformScaffoldTypeConfiguration.ToScaffoldTemplateOptions(MvxScaffoldingContext.CurrentTemplateType);
         }
 
         public string ProjectName => MvxScaffoldingContext.SafeProjectName;
 
         public WizardOptionViewModel Options { get; private set; }
+
+        public List<ScaffoldTemplateOptionViewModel> ScaffoldTemplateOptions { get; private set; }
 
         SimpleInfoViewModel _editorConfigInfoModel;
 

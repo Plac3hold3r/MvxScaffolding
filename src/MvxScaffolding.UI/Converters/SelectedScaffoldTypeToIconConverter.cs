@@ -7,7 +7,6 @@ using System;
 using System.Globalization;
 using System.Windows.Data;
 using MaterialDesignThemes.Wpf;
-using MvxScaffolding.Core.Template;
 
 namespace MvxScaffolding.UI.Converters
 {
@@ -15,9 +14,9 @@ namespace MvxScaffolding.UI.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value is ScaffoldType selectedScaffoldType && parameter is ScaffoldType controlScaffoldType)
+            if (value is bool boolValue)
             {
-                if (selectedScaffoldType == controlScaffoldType)
+                if (boolValue)
                 {
                     return PackIconKind.CheckCircleOutline;
                 }

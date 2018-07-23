@@ -44,6 +44,7 @@
     <converters:RequiredLabelConverter x:Key="RequiredLabelConverter" />
     <converters:SelectedScaffoldTypeToIconConverter x:Key="SelectedScaffoldTypeToIconConverter" />
     <converters:SelectedPlatformTypeToIconConverter x:Key="SelectedPlatformTypeToIconConverter" />
+    <converters:SelectedScaffoldTypeToBackgroundColorConverter x:Key="SelectedScaffoldTypeToBackgroundColorConverter" />
     <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
     <Style
