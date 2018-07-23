@@ -3,6 +3,8 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
+using MvxScaffolding.Core.ViewModels;
+
 namespace MvxScaffolding.Core.Template
 {
     public interface ITemplateOptions
@@ -25,7 +27,7 @@ namespace MvxScaffolding.Core.Template
 
         bool HasEditorConfig { get; set; }
 
-        ScaffoldType SelectedScaffoldType { get; set; }
+        ScaffoldTemplateOptionViewModel SelectedScaffoldType { get; set; }
 
         string SelectedProjectGrouping { get; set; }
 

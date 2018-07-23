@@ -4,6 +4,7 @@
 //---------------------------------------------------------------------------------
 
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Input;
 using MvxScaffolding.Core.Commands;
 using MvxScaffolding.Core.Configuration;
@@ -18,21 +19,21 @@ namespace MvxScaffolding.Core.ViewModels
     public class AppDetailsViewModel : BaseViewModel, IValidationViewModel
     {
         public ICommand GoToGitHubCommand { get; }
-        public ICommand SelectScaffoldTypeCommand { get; }
 
         public AppDetailsViewModel(WizardOptionViewModel options)
         {
             Options = options;
 
             GoToGitHubCommand = new RelayCommand(GoToGitHubLink);
-            SelectScaffoldTypeCommand = new RelayCommand<ScaffoldType>(SelectScaffoldType);
 
-            ScaffoldTemplateOptions = Config.Current.PlatformScaffoldTypeConfiguration.ToScaffoldTemplateOptions(MvxScaffoldingContext.CurrentTemplateType);
+            ScaffoldTemplateOptions = Config.Current.PlatformScaffoldTypeConfiguration.ToScaffoldTemplateOptions(MvxScaffoldingContext.CurrentTemplateType, options);
+            Options.SelectedScaffoldType = ScaffoldTemplateOptions.First();
+            Options.SelectedScaffoldType.IsSelected = true;
         }
 
         public string ProjectName => MvxScaffoldingContext.SafeProjectName;
 
-        public WizardOptionViewModel Options { get; private set; }
+        public WizardOptionViewModel Options { get; }
 
         public List<ScaffoldTemplateOptionViewModel> ScaffoldTemplateOptions { get; private set; }
 
@@ -44,11 +45,6 @@ namespace MvxScaffolding.Core.ViewModels
         void GoToGitHubLink()
         {
             OpenLink(Config.Current.GitHubUri, TemplateLinks.GitHub);
-        }
-
-        void SelectScaffoldType(ScaffoldType scaffoldType)
-        {
-            Options.SelectedScaffoldType = scaffoldType;
         }
 
         public bool Validate()

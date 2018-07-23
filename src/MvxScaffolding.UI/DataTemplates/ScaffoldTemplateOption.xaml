@@ -44,8 +44,7 @@
                         Margin="0,0,16,-20"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Bottom"
-                        Command="{Binding SelectScaffoldTypeCommand}"
-                        CommandParameter="{Binding ScaffoldType}">
+                        Command="{Binding SelectScaffoldTypeCommand}">
                         <Button.Style>
                             <Style BasedOn="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" TargetType="Button">
                                 <Style.Triggers>
@@ -54,12 +53,12 @@
                                         <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}" />
                                         <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}" />
                                     </DataTrigger>
+                                    <DataTrigger Binding="{Binding IsSelected}" Value="False">
+                                        <Setter Property="Background" Value="{DynamicResource AccentHueColorBrush}" />
+                                        <Setter Property="BorderBrush" Value="{DynamicResource AccentHueColorBrush}" />
+                                        <Setter Property="Foreground" Value="{DynamicResource AccentHueColorForegroundBrush}" />
+                                    </DataTrigger>
                                 </Style.Triggers>
-                                <Style.Setters>
-                                    <Setter Property="Background" Value="{DynamicResource AccentHueColorBrush}" />
-                                    <Setter Property="BorderBrush" Value="{DynamicResource AccentHueColorBrush}" />
-                                    <Setter Property="Foreground" Value="{DynamicResource AccentHueColorForegroundBrush}" />
-                                </Style.Setters>
                             </Style>
                         </Button.Style>
                         <materialDesign:PackIcon Kind="{Binding IsSelected, Converter={StaticResource SelectedScaffoldTypeToIconConverter}}" />

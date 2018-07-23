@@ -5,6 +5,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.Windows.Input;
+using MvxScaffolding.Core.Commands;
 using MvxScaffolding.Core.Template;
 using MvxScaffolding.Localization.Resources;
 using static MvxScaffolding.Core.Configuration.PlatformScaffoldTypeConfiguration.ScaffoldTypeConfiguration;
@@ -13,6 +15,8 @@ namespace MvxScaffolding.Core.ViewModels
 {
     public class ScaffoldTemplateOptionViewModel : BaseViewModel
     {
+        public ICommand SelectScaffoldTypeCommand { get; }
+
         public ScaffoldType ScaffoldType { get; set; }
 
         public string HeaderName { get; set; }
@@ -27,25 +31,39 @@ namespace MvxScaffolding.Core.ViewModels
 
         public bool HasUwp { get; set; }
 
-        public bool IsSelected { get; set; }
+        bool _isSelected;
+        public bool IsSelected
+        {
+            get => _isSelected;
+            set => SetProperty(ref _isSelected, value);
+        }
 
         internal List<TemplateOptionKey> Exclude { get; set; }
 
-        public static ScaffoldTemplateOptionViewModel Create(ScaffoldType scaffoldType)
+        internal WizardOptionViewModel Options { get; }
+
+        public ScaffoldTemplateOptionViewModel(WizardOptionViewModel options)
+        {
+            Options = options;
+
+            SelectScaffoldTypeCommand = new RelayCommand(SelectScaffoldType);
+        }
+
+        public static ScaffoldTemplateOptionViewModel Create(ScaffoldType scaffoldType, WizardOptionViewModel options)
         {
             switch (scaffoldType)
             {
                 case ScaffoldType.SingleView:
-                    return new ScaffoldTemplateOptionViewModel
+                    return new ScaffoldTemplateOptionViewModel(options)
                     {
                         HeaderName = "SV",
                         ScaffoldType = ScaffoldType.SingleView,
                         Name = LocalResources.AppDetails_Template_SingleView,
                         Description = LocalResources.AppDetails_Template_SingleView_Description,
-                        IsSelected = true
+                        IsSelected = false
                     };
                 case ScaffoldType.NavigationMenu:
-                    return new ScaffoldTemplateOptionViewModel
+                    return new ScaffoldTemplateOptionViewModel(options)
                     {
                         HeaderName = "NM",
                         ScaffoldType = ScaffoldType.NavigationMenu,
@@ -56,6 +74,13 @@ namespace MvxScaffolding.Core.ViewModels
                 default:
                     throw new ArgumentOutOfRangeException(nameof(scaffoldType), $"No matching {nameof(ScaffoldType)} found for {scaffoldType}");
             }
+        }
+
+        void SelectScaffoldType()
+        {
+            Options.SelectedScaffoldType.IsSelected = false;
+            Options.SelectedScaffoldType = this;
+            Options.SelectedScaffoldType.IsSelected = true;
         }
     }
 }

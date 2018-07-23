@@ -11,7 +11,10 @@ namespace MvxScaffolding.Core.ViewModels.Helpers
 {
     internal static class ScaffoldingTypeConfigurationExtensions
     {
-        internal static List<ScaffoldTemplateOptionViewModel> ToScaffoldTemplateOptions(this PlatformScaffoldTypeConfiguration platformScaffoldTypeConfiguration, TemplateType currentTemplateType)
+        internal static List<ScaffoldTemplateOptionViewModel> ToScaffoldTemplateOptions(
+            this PlatformScaffoldTypeConfiguration platformScaffoldTypeConfiguration,
+            TemplateType currentTemplateType,
+            WizardOptionViewModel options)
         {
             var templateOptions = new List<ScaffoldTemplateOptionViewModel>();
 
@@ -19,7 +22,7 @@ namespace MvxScaffolding.Core.ViewModels.Helpers
             {
                 foreach (PlatformScaffoldTypeConfiguration.ScaffoldTypeConfiguration scaffoldTemplate in platformScaffoldTypeConfiguration.MvxNative)
                 {
-                    var newTemplate = ScaffoldTemplateOptionViewModel.Create(scaffoldTemplate.Type);
+                    var newTemplate = ScaffoldTemplateOptionViewModel.Create(scaffoldTemplate.Type, options);
                     newTemplate.HasAndroid = scaffoldTemplate.Platforms.Contains(PlatformType.Android);
                     newTemplate.HasIos = scaffoldTemplate.Platforms.Contains(PlatformType.Ios);
                     newTemplate.HasUwp = scaffoldTemplate.Platforms.Contains(PlatformType.Uwp);

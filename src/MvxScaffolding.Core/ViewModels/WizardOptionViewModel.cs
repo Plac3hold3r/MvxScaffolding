@@ -68,9 +68,9 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _hasEditorConfig, value);
         }
 
-        ScaffoldType _selectedScaffoldType;
+        ScaffoldTemplateOptionViewModel _selectedScaffoldType;
 
-        public ScaffoldType SelectedScaffoldType
+        public ScaffoldTemplateOptionViewModel SelectedScaffoldType
         {
             get => _selectedScaffoldType;
             set
@@ -302,7 +302,6 @@ namespace MvxScaffolding.Core.ViewModels
             SelectedProjectGrouping = TemplateConfig.ProjectGroupingOptionDefault;
 
             HasEditorConfig = true;
-            SelectedScaffoldType = ScaffoldType.SingleView;
         }
 
         private void ResetPlatformOptions()
