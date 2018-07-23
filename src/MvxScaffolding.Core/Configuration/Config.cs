@@ -16,6 +16,8 @@ namespace MvxScaffolding.Core.Configuration
 {
     public class Config
     {
+        const string DefaultJsonConfigFileName = "MvxScaffolding.config.json";
+
         public string RemoteTelemetryKey { get; set; }
 
         public string PrivacyPolicyUri { get; set; }
@@ -40,7 +42,7 @@ namespace MvxScaffolding.Core.Configuration
 
         public string ReleaseNotesUri { get; set; }
 
-        const string DefaultJsonConfigFileName = "MvxScaffolding.config.json";
+        public PlatformScaffoldTypeConfiguration PlatformScaffoldTypeConfiguration { get; set; }
 
         static Config _current;
 

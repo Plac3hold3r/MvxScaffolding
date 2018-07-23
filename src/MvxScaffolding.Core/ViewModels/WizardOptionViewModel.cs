@@ -73,7 +73,11 @@ namespace MvxScaffolding.Core.ViewModels
         public ScaffoldType SelectedScaffoldType
         {
             get => _selectedScaffoldType;
-            set => SetProperty(ref _selectedScaffoldType, value);
+            set
+            {
+                if (SetProperty(ref _selectedScaffoldType, value))
+                    ResetPlatformOptions();
+            }
         }
 
         string _selectedProjectGrouping;
@@ -94,7 +98,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _selectedNetStandard, value);
         }
 
-        public Dictionary<string, string> NetStandardOptions { get; }
+        public Dictionary<string, string> NetStandardOptions { get; private set; }
 
         bool _hasCoreUnitTestProject;
 
@@ -112,7 +116,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _selectedMinAndroidSDK, value);
         }
 
-        public Dictionary<string, string> MinAndroidSDKOptions { get; }
+        public Dictionary<string, string> MinAndroidSDKOptions { get; private set; }
 
         bool _hasAndroidUnitTestProject;
 
@@ -144,7 +148,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _selectedAndroidLayoutType, value);
         }
 
-        public Dictionary<string, string> AndroidLayoutTypes { get; }
+        public Dictionary<string, string> AndroidLayoutTypes { get; private set; }
 
         string _selectedMinIosSDK;
 
@@ -154,7 +158,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _selectedMinIosSDK, value);
         }
 
-        public Dictionary<string, string> MinIosSDKOptions { get; }
+        public Dictionary<string, string> MinIosSDKOptions { get; private set; }
 
         bool _hasIosUnitTestProject;
 
@@ -186,7 +190,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _selectedIosLayoutType, value);
         }
 
-        public Dictionary<string, string> IosLayoutTypes { get; }
+        public Dictionary<string, string> IosLayoutTypes { get; private set; }
 
         string _uwpDescription;
         [RequiredIf(nameof(HasUwp), true, ErrorMessageResourceName = nameof(LocalResources.PlatformOptions_Validation_Uwp_Description), ErrorMessageResourceType = typeof(LocalResources))]
@@ -208,7 +212,7 @@ namespace MvxScaffolding.Core.ViewModels
             set => SetProperty(ref _selectedMinUwpSDK, value);
         }
 
-        public Dictionary<string, string> MinUwpSDKOptions { get; }
+        public Dictionary<string, string> MinUwpSDKOptions { get; private set; }
 
         bool _hasUwpUnitTestProject;
 
@@ -299,7 +303,10 @@ namespace MvxScaffolding.Core.ViewModels
 
             HasEditorConfig = true;
             SelectedScaffoldType = ScaffoldType.SingleView;
+        }
 
+        private void ResetPlatformOptions()
+        {
             NetStandardOptions = TemplateConfig.NetStandardOptions;
             SelectedNetStandard = TemplateConfig.NetStandardOptionDefault;
 

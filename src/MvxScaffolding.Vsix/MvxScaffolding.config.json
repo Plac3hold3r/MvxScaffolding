@@ -15,5 +15,29 @@
   "MarketShareWindowsUri": "http://reports.adduplex.com/",
   "HelpTranslateUri": "https://crowdin.com/project/mvxscaffolding",
   "ChangelogUri": "https://github.com/Plac3hold3r/MvxScaffolding/blob/master/CHANGELOG.md",
-  "ReleaseNotesUri": "https://github.com/Plac3hold3r/MvxScaffolding/blob/master/docs/release_notes.md"
+  "ReleaseNotesUri": "https://github.com/Plac3hold3r/MvxScaffolding/blob/master/docs/release_notes.md",
+  "PlatformScaffoldTypeConfiguration": {
+    "MvxNative": [
+      {
+        "Type": "NavigationMenu",
+        "Platforms": [ "iOS", "Android" ],
+        "Exclude": [
+          {
+            "OptionName": "IosLayoutTypes",
+            "OptionKey": "storyboard"
+          }
+        ]
+      },
+      {
+        "Type": "SingleView",
+        "Platforms": [ "iOS", "Android", "UWP" ]
+      }
+    ],
+    "MvxForms": [
+      {
+        "Type": "SingleView",
+        "Platforms": [ "iOS", "Android", "UWP" ]
+      }
+    ]
+  }
 }
