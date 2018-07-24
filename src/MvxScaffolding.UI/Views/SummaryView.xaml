@@ -363,7 +363,7 @@
                                 Margin="0,4,0,0"
                                 HorizontalAlignment="Right"
                                 Foreground="{StaticResource PrimaryColorBrush}"
-                                Text="{Binding Options.SelectedScaffoldType}" />
+                                Text="{Binding Options.SelectedScaffoldType.ScaffoldType}" />
                         </DockPanel>
                         <DockPanel Margin="0,4,0,0" HorizontalAlignment="Stretch">
                             <TextBlock Text="{x:Static l10n:LocalResources.Summary_ProjectGrouping}" />
