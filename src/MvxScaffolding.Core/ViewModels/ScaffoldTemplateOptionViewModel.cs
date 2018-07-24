@@ -25,11 +25,11 @@ namespace MvxScaffolding.Core.ViewModels
 
         public string Description { get; set; }
 
-        public bool HasAndroid { get; set; }
+        public bool HasAndroidSupport { get; set; }
 
-        public bool HasIos { get; set; }
+        public bool HasIosSupport { get; set; }
 
-        public bool HasUwp { get; set; }
+        public bool HasUwpSupport { get; set; }
 
         bool _isSelected;
         public bool IsSelected

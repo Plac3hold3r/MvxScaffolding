@@ -84,19 +84,19 @@
                             Padding="2,0,2,0"
                             Kind="Android"
                             ToolTip="Android"
-                            Visibility="{Binding HasAndroid, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                            Visibility="{Binding HasAndroidSupport, Converter={StaticResource BooleanToVisibilityConverter}}" />
                         <materialDesign:PackIcon
                             Width="30"
                             Padding="2,0,2,0"
                             Kind="AppleIos"
                             ToolTip="iOS"
-                            Visibility="{Binding HasIos, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                            Visibility="{Binding HasIosSupport, Converter={StaticResource BooleanToVisibilityConverter}}" />
                         <materialDesign:PackIcon
                             Width="30"
                             Padding="2,0,2,0"
                             Kind="Windows"
                             ToolTip="UWP"
-                            Visibility="{Binding HasUwp, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                            Visibility="{Binding HasUwpSupport, Converter={StaticResource BooleanToVisibilityConverter}}" />
                     </StackPanel>
                 </Grid>
             </materialDesign:Card>

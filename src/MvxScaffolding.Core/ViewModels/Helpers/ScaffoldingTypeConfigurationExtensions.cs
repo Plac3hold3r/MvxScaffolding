@@ -6,6 +6,7 @@
 using System.Collections.Generic;
 using MvxScaffolding.Core.Configuration;
 using MvxScaffolding.Core.Template;
+using static MvxScaffolding.Core.Configuration.PlatformScaffoldTypeConfiguration.ScaffoldTypeConfiguration;
 
 namespace MvxScaffolding.Core.ViewModels.Helpers
 {
@@ -41,12 +42,22 @@ namespace MvxScaffolding.Core.ViewModels.Helpers
             WizardOptionViewModel options)
         {
             var newTemplate = ScaffoldTemplateOptionViewModel.Create(scaffoldTemplate.Type, options);
-            newTemplate.HasAndroid = scaffoldTemplate.Platforms.Contains(PlatformType.Android);
-            newTemplate.HasIos = scaffoldTemplate.Platforms.Contains(PlatformType.Ios);
-            newTemplate.HasUwp = scaffoldTemplate.Platforms.Contains(PlatformType.Uwp);
-            newTemplate.Exclude = scaffoldTemplate.Exclude;
+            newTemplate.HasAndroidSupport = scaffoldTemplate.Platforms.Contains(PlatformType.Android);
+            newTemplate.HasIosSupport = scaffoldTemplate.Platforms.Contains(PlatformType.Ios);
+            newTemplate.HasUwpSupport = scaffoldTemplate.Platforms.Contains(PlatformType.Uwp);
+            newTemplate.Exclude = scaffoldTemplate.Exclude ?? new List<TemplateOptionKey>();
 
             return newTemplate;
+        }
+
+        internal static Dictionary<string, string> Filter(this Dictionary<string, string> options, List<TemplateOptionKey> excludedOptions)
+        {
+            foreach (var excludeItem in excludedOptions)
+            {
+                options.Remove(excludeItem.Optionkey);
+            }
+
+            return options;
         }
     }
 }
