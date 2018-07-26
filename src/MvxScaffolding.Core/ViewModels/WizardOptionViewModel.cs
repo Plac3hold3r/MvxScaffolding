@@ -302,8 +302,8 @@ namespace MvxScaffolding.Core.ViewModels
 
         public bool HasIosSupport
         {
-            get => _hasIos;
-            set => SetProperty(ref _hasIos, value);
+            get => _hasIosSupport;
+            set => SetProperty(ref _hasIosSupport, value);
         }
 
         bool _hasUwpSupport;
