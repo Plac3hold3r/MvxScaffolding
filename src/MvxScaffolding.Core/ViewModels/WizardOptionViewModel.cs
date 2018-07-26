@@ -361,6 +361,8 @@ namespace MvxScaffolding.Core.ViewModels
 
         private void ResetPlatformOptions()
         {
+            UwpDescription = "";
+
             NetStandardOptions = TemplateConfig.NetStandardOptions.Filter(SelectedScaffoldType.Exclude);
             SelectedNetStandard = TemplateConfig.NetStandardOptionDefault;
 
