@@ -191,25 +191,29 @@
           "rename": {
             "activity_main_container.axml": "activity_main_container.xml",
             "fragment_main.axml": "fragment_main.xml",
-            "layout_toolbar.axml": "layout_toolbar.xml"
+            "layout_toolbar.axml": "layout_toolbar.xml",
+            "fragment_navigation.axml": "fragment_navigation.xml",
+            "fragment_navigation_header.axml": "fragment_navigation_header.xml",
+            "fragment_settings.axml": "fragment_settings.xml"
           }
-        },
-        {
-          "condition": "(!HasFluentLayouts)",
-          "exclude": [
-            "**/src/MvxNative.iOS/Views/!Base/FluentBaseViewController.cs",
-            "**/src/MvxNative.iOS/Views/Main/FluentMainViewController.cs"
-          ]
         },
         {
           "condition": "(HasFluentLayouts)",
           "exclude": [
+            "**/src/MvxNative.iOS/Views/!Base/StoryBaseViewController.cs",
+            "**/src/MvxNative.iOS/Views/Main/StoryMainViewController.*"
+          ]
+        },
+        {
+          "condition": "(!HasFluentLayouts)",
+          "exclude": [
             "**/src/MvxNative.iOS/Views/!Base/BaseViewController.cs",
-            "**/src/MvxNative.iOS/Views/Main/MainViewController.*"
+            "**/src/MvxNative.iOS/Views/Main/MainViewController.cs"
           ],
           "rename": {
-            "FluentBaseViewController.cs": "BaseViewController.cs",
-            "FluentMainViewController.cs": "MainViewController.cs"
+            "StoryBaseViewController.cs": "BaseViewController.cs",
+            "StoryMainViewController.cs": "MainViewController.cs",
+            "StoryMainViewController.storyboard": "MainViewController.storyboard"
           }
         }
       ]
