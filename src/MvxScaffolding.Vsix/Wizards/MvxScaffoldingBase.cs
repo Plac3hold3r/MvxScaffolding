@@ -141,6 +141,8 @@ namespace MvxScaffolding.Vsix.Wizards
 
             replacementsDictionary.AddParameter(TemplateOptions.UwpMinSdkVersion, MvxScaffoldingContext.UserSelectedOptions.SelectedMinUwpSDK);
             replacementsDictionary.AddParameter(TemplateOptions.UwpAppDescription, MvxScaffoldingContext.UserSelectedOptions.UwpDescription);
+
+            replacementsDictionary.AddParameter(TemplateOptions.ScaffoldType, MvxScaffoldingContext.UserSelectedOptions.SelectedScaffoldType.ScaffoldType.AsParameter());
         }
 
         public void UpdateReplacementsDictionary(Dictionary<string, string> replacementsDictionary)
