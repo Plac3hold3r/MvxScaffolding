@@ -7,7 +7,6 @@ using System.Windows.Input;
 using MvxScaffolding.Core.Commands;
 using MvxScaffolding.Core.Configuration;
 using MvxScaffolding.Core.Template;
-using MvxScaffolding.Core.ViewModels.Dialogs;
 using MvxScaffolding.Core.ViewModels.Interfaces;
 
 namespace MvxScaffolding.Core.ViewModels

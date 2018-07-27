@@ -160,7 +160,7 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
-  <ItemGroup Condition=" '$(HasFluentLayouts)' != 'true' ">
+  <ItemGroup Condition=" '$(HasFluentLayouts)' == 'false' ">
     <Compile Include="Views\Main\MainViewController.designer.cs">
       <DependentUpon>MainViewController.cs</DependentUpon>
     </Compile>

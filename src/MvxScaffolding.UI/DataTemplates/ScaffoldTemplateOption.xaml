@@ -1,0 +1,105 @@
+﻿<!--
+    Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
+    MvxScaffolding is licensed using the MIT License
+-->
+
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:coreTemplate="clr-namespace:MvxScaffolding.Core.Template;assembly=MvxScaffolding.Core"
+    xmlns:l10n="clr-namespace:MvxScaffolding.Localization.Resources;assembly=MvxScaffolding.Localization"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:viewModels="clr-namespace:MvxScaffolding.Core.ViewModels;assembly=MvxScaffolding.Core">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/MvxScaffolding.UI;component/Styles/MvxScaffoldingTheme.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <DataTemplate x:Key="ScaffoldTemplateOption" DataType="{x:Type viewModels:ScaffoldTemplateOptionViewModel}">
+        <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:1.2}">
+            <materialDesign:Card Width="200" Margin="0,6">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="90" />
+                        <RowDefinition Height="120" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone VerticalAlignment="Stretch">
+                        <materialDesign:ColorZone.Background>
+                            <MultiBinding Converter="{StaticResource SelectedScaffoldTypeToBackgroundColorConverter}">
+                                <Binding Path="ScaffoldType" />
+                                <Binding Source="{StaticResource SingleViewColorBrush}" />
+                                <Binding Source="{StaticResource NavigationMenuColorBrush}" />
+                            </MultiBinding>
+                        </materialDesign:ColorZone.Background>
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="48"
+                            FontWeight="Bold"
+                            Text="{Binding HeaderName}" />
+                    </materialDesign:ColorZone>
+                    <Button
+                        Grid.Row="0"
+                        Margin="0,0,16,-20"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        Command="{Binding SelectScaffoldTypeCommand}">
+                        <Button.Style>
+                            <Style BasedOn="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" TargetType="Button">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                        <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}" />
+                                        <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}" />
+                                        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}" />
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding IsSelected}" Value="False">
+                                        <Setter Property="Background" Value="{DynamicResource AccentHueColorBrush}" />
+                                        <Setter Property="BorderBrush" Value="{DynamicResource AccentHueColorBrush}" />
+                                        <Setter Property="Foreground" Value="{DynamicResource AccentHueColorForegroundBrush}" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <materialDesign:PackIcon Kind="{Binding IsSelected, Converter={StaticResource SelectedScaffoldTypeToIconConverter}}" />
+                    </Button>
+                    <StackPanel Grid.Row="1" Margin="8,12,8,0">
+                        <TextBlock
+                            Margin="0,0,0,4"
+                            FontWeight="Medium"
+                            Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                            Text="{Binding Name}" />
+                        <TextBlock
+                            VerticalAlignment="Center"
+                            Text="{Binding Description}"
+                            TextWrapping="Wrap" />
+                    </StackPanel>
+                    <StackPanel
+                        Grid.Row="2"
+                        Margin="8"
+                        HorizontalAlignment="Right"
+                        Orientation="Horizontal">
+                        <materialDesign:PackIcon
+                            Width="30"
+                            Padding="2,0,2,0"
+                            Kind="Android"
+                            ToolTip="Android"
+                            Visibility="{Binding HasAndroidSupport, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <materialDesign:PackIcon
+                            Width="30"
+                            Padding="2,0,2,0"
+                            Kind="AppleIos"
+                            ToolTip="iOS"
+                            Visibility="{Binding HasIosSupport, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <materialDesign:PackIcon
+                            Width="30"
+                            Padding="2,0,2,0"
+                            Kind="Windows"
+                            ToolTip="UWP"
+                            Visibility="{Binding HasUwpSupport, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    </StackPanel>
+                </Grid>
+            </materialDesign:Card>
+        </materialDesign:TransitioningContent>
+    </DataTemplate>
+</ResourceDictionary>

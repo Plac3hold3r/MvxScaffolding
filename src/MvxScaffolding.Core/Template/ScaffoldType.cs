@@ -7,6 +7,7 @@ namespace MvxScaffolding.Core.Template
 {
     public enum ScaffoldType
     {
+        None,
         SingleView,
         NavigationMenu
     }

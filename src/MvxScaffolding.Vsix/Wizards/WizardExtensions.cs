@@ -3,7 +3,9 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
+using MvxScaffolding.Core.Template;
 
 namespace MvxScaffolding.Vsix.Wizards
 {
@@ -26,6 +28,19 @@ namespace MvxScaffolding.Vsix.Wizards
         public static string AsParameter(this string templateOption)
         {
             return $"$passthrough:{templateOption}$";
+        }
+
+        public static string AsParameter(this ScaffoldType templateOption)
+        {
+            switch (templateOption)
+            {
+                case ScaffoldType.SingleView:
+                    return "single-view";
+                case ScaffoldType.NavigationMenu:
+                    return "navigation-menu";
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(templateOption), $"No matching {nameof(ScaffoldType)} type");
+            }
         }
     }
 }
