@@ -1,17 +1,5 @@
 # Change Log
 
-## [Unreleased](https://github.com/Plac3hold3r/MvxScaffolding/tree/HEAD)
-
-[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.13.0-beta...HEAD)
-
-**Fixed bugs:**
-
-- \[Android\] Both AXML and XML files are being generated [\#80](https://github.com/Plac3hold3r/MvxScaffolding/issues/80)
-
-**Closed issues:**
-
-- \[Feature Request\] Master-Detail View or any other layout [\#26](https://github.com/Plac3hold3r/MvxScaffolding/issues/26)
-
 ## [v0.13.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.13.0-beta) (2018-07-27)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.12.1-beta...v0.13.0-beta)
 
@@ -27,8 +15,13 @@
 
 **Fixed bugs:**
 
+- \[Android\] Both AXML and XML files are being generated [\#80](https://github.com/Plac3hold3r/MvxScaffolding/issues/80)
 - Downgrade Markdig [\#86](https://github.com/Plac3hold3r/MvxScaffolding/pull/86) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Fix Android csproj referencing both AXML and XML layouts [\#82](https://github.com/Plac3hold3r/MvxScaffolding/pull/82) ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Closed issues:**
+
+- \[Feature Request\] Master-Detail View or any other layout [\#26](https://github.com/Plac3hold3r/MvxScaffolding/issues/26)
 
 **Merged pull requests:**
 
