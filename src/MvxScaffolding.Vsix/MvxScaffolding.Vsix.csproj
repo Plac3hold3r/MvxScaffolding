@@ -7,7 +7,7 @@
     <StartAction>Program</StartAction>
     <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
     <StartArguments>/rootsuffix Exp</StartArguments>
-    <VSIXBuildVersion>0.12.1</VSIXBuildVersion>
+    <VSIXBuildVersion>0.13.0</VSIXBuildVersion>
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
