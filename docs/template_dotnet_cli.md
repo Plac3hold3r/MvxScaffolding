@@ -253,6 +253,10 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                              fluent        - FluentLayout, a fluent API for creating constraint-based layouts.
                                              storyboard    - Storyboard, iOS layout format compatible with Xcode interface builder.
                                          Default: fluent
+  -st|--scaffold-type                    The view pattern to scaffold the solution with.
+                                             single-view        - Scaffold an app with a single starting view and view model.
+                                             navigation-menu    - Scaffold an app with a slide out menu. Template contains two starting views with view models.
+                                         Default: single-view
 ```
 
 **MvxForms** only options
