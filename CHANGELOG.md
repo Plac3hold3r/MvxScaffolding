@@ -1,5 +1,40 @@
 # Change Log
 
+## [Unreleased](https://github.com/Plac3hold3r/MvxScaffolding/tree/HEAD)
+
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.13.0-beta...HEAD)
+
+**Fixed bugs:**
+
+- \[Android\] Both AXML and XML files are being generated [\#80](https://github.com/Plac3hold3r/MvxScaffolding/issues/80)
+
+**Closed issues:**
+
+- \[Feature Request\] Master-Detail View or any other layout [\#26](https://github.com/Plac3hold3r/MvxScaffolding/issues/26)
+
+## [v0.13.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.13.0-beta) (2018-07-27)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.12.1-beta...v0.13.0-beta)
+
+**Implemented enhancements:**
+
+- Add scaffold type template setup configurations [\#85](https://github.com/Plac3hold3r/MvxScaffolding/pull/85) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update dependencies [\#84](https://github.com/Plac3hold3r/MvxScaffolding/pull/84) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Add native iOS Navigation menu template [\#81](https://github.com/Plac3hold3r/MvxScaffolding/pull/81) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Fetch release notes from GitHub [\#77](https://github.com/Plac3hold3r/MvxScaffolding/pull/77) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update Vsix wizard dependencies [\#76](https://github.com/Plac3hold3r/MvxScaffolding/pull/76) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update Xamarin Forms and FluentLayout NuGets [\#75](https://github.com/Plac3hold3r/MvxScaffolding/pull/75) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Add Android navigation menu template [\#74](https://github.com/Plac3hold3r/MvxScaffolding/pull/74) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Fixed bugs:**
+
+- Downgrade Markdig [\#86](https://github.com/Plac3hold3r/MvxScaffolding/pull/86) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Fix Android csproj referencing both AXML and XML layouts [\#82](https://github.com/Plac3hold3r/MvxScaffolding/pull/82) ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Merged pull requests:**
+
+- New Crowdin translations [\#83](https://github.com/Plac3hold3r/MvxScaffolding/pull/83) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- New Crowdin translations [\#78](https://github.com/Plac3hold3r/MvxScaffolding/pull/78) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
 ## [v0.12.1-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.12.1-beta) (2018-07-01)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.12.0-beta...v0.12.1-beta)
 
