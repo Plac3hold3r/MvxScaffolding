@@ -1,5 +1,12 @@
 ## Release Notes
 
+## [v0.13.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.13.0-beta) (2018-07-27)
+
+- Fix Android Native projects showing XML and AXML layout files in csproj
+- Update to support latest Xamarin Forms
+- Update dependencies
+- Add initial support for more template options, added Navigation Menu option to MvxNative 
+
 ## [v0.12.1-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.12.1-beta) (2018-07-01)
 
 - Fix release note modal showing again after Visual Studio restart
