@@ -104,6 +104,7 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
                 [TemplateOptions.HasUwpUITestProject] = options.HasUwpUiTestProject.ToStringLowerCase(),
                 [TemplateOptions.HasEditorConfig] = options.HasEditorConfig.ToStringLowerCase(),
                 [TemplateOptions.SolutionProjectGrouping] = options.SelectedProjectGrouping,
+                [TemplateOptions.ScaffoldType] = options.SelectedScaffoldType.ScaffoldType.ToString(),
                 [TemplateOptions.AppId] = options.AppId.HasValue(),
                 [TemplateOptions.AppName] = options.AppName.HasValue(),
                 [TemplateOptions.SolutionName] = options.SolutionName.HasValue(),
