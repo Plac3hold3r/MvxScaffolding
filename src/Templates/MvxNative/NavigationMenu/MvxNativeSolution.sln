@@ -161,16 +161,20 @@ Global
 		{00000000-0000-1111-0000-000000000003}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{00000000-0000-1111-0000-000000000003}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{00000000-0000-1111-0000-000000000003}.Debug|iPhone.Build.0 = Debug|iPhone
+		{00000000-0000-1111-0000-000000000003}.Debug|iPhone.Deploy.0 = Debug|iPhone
 		{00000000-0000-1111-0000-000000000003}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{00000000-0000-1111-0000-000000000003}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{00000000-0000-1111-0000-000000000003}.Debug|iPhoneSimulator.Deploy.0 = Debug|iPhoneSimulator
 		{00000000-0000-1111-0000-000000000003}.Debug|x64.ActiveCfg = Debug|iPhone
 		{00000000-0000-1111-0000-000000000003}.Debug|x86.ActiveCfg = Debug|iPhone
 		{00000000-0000-1111-0000-000000000003}.Release|Any CPU.ActiveCfg = Release|iPhone
 		{00000000-0000-1111-0000-000000000003}.Release|ARM.ActiveCfg = Release|iPhone
 		{00000000-0000-1111-0000-000000000003}.Release|iPhone.ActiveCfg = Release|iPhone
 		{00000000-0000-1111-0000-000000000003}.Release|iPhone.Build.0 = Release|iPhone
+		{00000000-0000-1111-0000-000000000003}.Release|iPhone.Deploy.0 = Release|iPhone
 		{00000000-0000-1111-0000-000000000003}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{00000000-0000-1111-0000-000000000003}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{00000000-0000-1111-0000-000000000003}.Release|iPhoneSimulator.Deploy.0 = Release|iPhoneSimulator
 		{00000000-0000-1111-0000-000000000003}.Release|x64.ActiveCfg = Release|iPhone
 		{00000000-0000-1111-0000-000000000003}.Release|x86.ActiveCfg = Release|iPhone
 //#endif
