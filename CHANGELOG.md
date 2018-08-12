@@ -1,5 +1,17 @@
 # Change Log
 
+## [v0.14.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.14.0-beta) (2018-08-12)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.13.0-beta...v0.14.0-beta)
+
+**Implemented enhancements:**
+
+- Update dependencies [\#88](https://github.com/Plac3hold3r/MvxScaffolding/pull/88) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update solution to allow for iOS iPhone deploy [\#87](https://github.com/Plac3hold3r/MvxScaffolding/pull/87) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Fixed bugs:**
+
+- Add missing scaffold type parameter to tracker [\#89](https://github.com/Plac3hold3r/MvxScaffolding/pull/89) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
 ## [v0.13.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.13.0-beta) (2018-07-27)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.12.1-beta...v0.13.0-beta)
 
