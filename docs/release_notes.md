@@ -1,5 +1,11 @@
 ## Release Notes
 
+## [v0.14.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.14.0-beta) (2018-08-12)
+
+- Fix iOS not deploying to iPhone
+- Update to support latest Xamarin Forms
+- Update dependencies
+
 ## [v0.13.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.13.0-beta) (2018-07-27)
 
 - Fix Android Native projects showing XML and AXML layout files in csproj
