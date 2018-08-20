@@ -24,7 +24,7 @@ namespace MvxNative.Droid.Views
         {
             base.OnCreateView(inflater, container, savedInstanceState);
 
-            return this.BindingInflate(FragmentLayoutId, null);
+            return this.BindingInflate(FragmentLayoutId, container, false);
         }
     }
 }
