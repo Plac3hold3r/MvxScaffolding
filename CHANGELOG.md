@@ -1,5 +1,20 @@
 # Change Log
 
+## [v0.15.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.15.0-beta) (2018-08-21)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.14.0-beta...v0.15.0-beta)
+
+**Fixed bugs:**
+
+- Fragment BindingInflate ignores `container` argument [\#95](https://github.com/Plac3hold3r/MvxScaffolding/issues/95)
+- Toolbar in Native/NM/BaseActivity is not cached [\#91](https://github.com/Plac3hold3r/MvxScaffolding/issues/91)
+- Unhook DrawerOpened event [\#97](https://github.com/Plac3hold3r/MvxScaffolding/pull/97) ([Cheesebaron](https://github.com/Cheesebaron))
+- Fix \#95 BindingInflate ignores container [\#96](https://github.com/Plac3hold3r/MvxScaffolding/pull/96) ([Cheesebaron](https://github.com/Cheesebaron))
+- Fix native menu template toolbar assignment [\#94](https://github.com/Plac3hold3r/MvxScaffolding/pull/94) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Merged pull requests:**
+
+- New Crowdin translations [\#90](https://github.com/Plac3hold3r/MvxScaffolding/pull/90) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
 ## [v0.14.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.14.0-beta) (2018-08-12)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.13.0-beta...v0.14.0-beta)
 
