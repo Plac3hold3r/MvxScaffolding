@@ -54,8 +54,23 @@ namespace MvxNative.Droid.Views.Main
                 Resource.String.drawer_close    // "close drawer" description
             );
 
-            DrawerToggle.DrawerOpened += (sender, e) => HideSoftKeyboard();
             DrawerLayout.AddDrawerListener(DrawerToggle);
+        }
+
+        protected override void OnResume()
+        {
+            if (DrawerToggle != null)
+            {
+                DrawerToggle.DrawerOpened += HideSoftKeyboard;
+            }
+        }
+
+        protected override void OnPause()
+        {
+            if (DrawerToggle != null)
+            {
+                DrawerToggle.DrawerOpened -= HideSoftKeyboard;
+            }
         }
 
         public override void OnBackPressed()
@@ -72,7 +87,9 @@ namespace MvxNative.Droid.Views.Main
             DrawerToggle.OnConfigurationChanged(newConfig);
         }
 
-        public void HideSoftKeyboard()
+        public void HideSoftKeyboard() => HideSoftKeyboard(this, EventArgs.Empty);
+
+        private void HideSoftKeyboard(object sender, EventArgs args)
         {
             if (CurrentFocus != null)
             {
