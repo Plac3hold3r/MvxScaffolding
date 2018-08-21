@@ -1,5 +1,11 @@
 ## Release Notes
 
+## [v0.15.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.15.0-beta) (2018-08-21)
+
+- Various template bugfixes, thanks @Cheesebaron 
+- Update translations
+  - Chinese Simplified, by Forbidden (cptbl00dra1n)
+
 ## [v0.14.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.14.0-beta) (2018-08-12)
 
 - Fix iOS not deploying to iPhone
