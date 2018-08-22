@@ -77,9 +77,13 @@ namespace MvxNative.iOS.Views.Menu
 
         protected override void LayoutView()
         {
+            NSObject topGuide = UIDevice.CurrentDevice.CheckSystemVersion(11, 0) ? 
+                View.SafeAreaLayoutGuide : View.LayoutMarginsGuide;
+            
             View.AddConstraints(new FluentLayout[]
             {
-                _menuHome.AtTopOf(View, 25f),
+                _menuHome.Top().EqualTo().TopOf(topGuide).Plus(25f),
+                _menuHome.AtLeftOf(View, 10f),
                 _menuHome.AtLeftOf(View, 10f),
                 _menuHome.ToRightOf(View),
 
