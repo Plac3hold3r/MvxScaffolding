@@ -70,7 +70,7 @@ __Required__
 To install the template run the `-i|--install` command
 
 ```text
-dotnet new --install MvxScaffolding.Templates::*
+dotnet new --install MvxScaffolding.Templates
 ```
 
 ### Usage
