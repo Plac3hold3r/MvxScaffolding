@@ -61,8 +61,8 @@ __Required__
 
  __Optional__ 
 
- * Xamarin Android SDK _(Recommended version 8.3+)_
- * Xamarin iOS SDK _(Recommended version 11.12+)_
+ * Xamarin Android SDK _(Recommended version 9.0+)_
+ * Xamarin iOS SDK _(Recommended version 11.14+)_
  * UWP SDK _(__Windows Only__, recommended  version 10.0.17134+)_
 
 ### Installation
@@ -70,7 +70,7 @@ __Required__
 To install the template run the `-i|--install` command
 
 ```text
-dotnet new --install MvxScaffolding.Templates::*
+dotnet new --install MvxScaffolding.Templates
 ```
 
 ### Usage
@@ -85,13 +85,13 @@ In order to make use of these templates you will need to have the following inst
 
 __Required__
 
- * Visual Studio 2017 15.5+ ([Download Visual Studio](https://www.visualstudio.com/downloads/))
+ * Visual Studio 2017 15.8+ ([Download Visual Studio](https://www.visualstudio.com/downloads/))
  * .NET Framework 4.7+ ([Download .NET Framework](https://www.microsoft.com/net/download/windows))
 
  __Optional__ 
 
- * Xamarin Android SDK _(Recommended version 8.3+)_
- * Xamarin iOS SDK _(Recommended version 11.12+)_
+ * Xamarin Android SDK _(Recommended version 9.0+)_
+ * Xamarin iOS SDK _(Recommended version 11.14+)_
  * UWP SDK _(__Windows Only__, recommended version 10.0.17134+)_
 
 ### Installation
@@ -101,10 +101,6 @@ Download and install the VSIX from [Visual Studio Marketplace](https://marketpla
 ### Usage
 
 See [documentation](docs/template_vs.md) for how to generate a solution.
-
-## Known issues
-
-- __Incorrect project type GUIDs__ - There is currently a [bug in Visual Studio 2017](https://github.com/dotnet/project-system/issues/1821) where Visual Studio will what to convert the new `csproj` project type GUID to `9A19103F-16F7-4668-BE54-9A1E7A4F7556`. However, Visual Studio for Mac will then want to convert `csproj` project type GUID back to the correct `FAE04EC0-301F-11d3-BF4B-00C04F79EFBC`. Both GUID's are currently valid but `FAE04EC0-301F-11d3-BF4B-00C04F79EFBC` is preferred going forward.
 
 ## Thanks
 
