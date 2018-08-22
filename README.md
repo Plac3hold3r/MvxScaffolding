@@ -102,10 +102,6 @@ Download and install the VSIX from [Visual Studio Marketplace](https://marketpla
 
 See [documentation](docs/template_vs.md) for how to generate a solution.
 
-## Known issues
-
-- __Incorrect project type GUIDs__ - There is currently a [bug in Visual Studio 2017](https://github.com/dotnet/project-system/issues/1821) where Visual Studio will what to convert the new `csproj` project type GUID to `9A19103F-16F7-4668-BE54-9A1E7A4F7556`. However, Visual Studio for Mac will then want to convert `csproj` project type GUID back to the correct `FAE04EC0-301F-11d3-BF4B-00C04F79EFBC`. Both GUID's are currently valid but `FAE04EC0-301F-11d3-BF4B-00C04F79EFBC` is preferred going forward.
-
 ## Thanks
 
 - To [Windows Template Studio](https://github.com/Microsoft/WindowsTemplateStudio) community
