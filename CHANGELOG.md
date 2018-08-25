@@ -1,5 +1,18 @@
 # Change Log
 
+## [v0.15.1-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.15.1-beta) (2018-08-25)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.15.0-beta...v0.15.1-beta)
+
+**Implemented enhancements:**
+
+- Update for CI building [\#101](https://github.com/Plac3hold3r/MvxScaffolding/pull/101) ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update support for VS 2017 15.8 [\#100](https://github.com/Plac3hold3r/MvxScaffolding/pull/100) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Fixed bugs:**
+
+- Fixes for Android [\#102](https://github.com/Plac3hold3r/MvxScaffolding/pull/102) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Respect safe area on iPhone X [\#98](https://github.com/Plac3hold3r/MvxScaffolding/pull/98) ([Cheesebaron](https://github.com/Cheesebaron))
+
 ## [v0.15.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.15.0-beta) (2018-08-21)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.14.0-beta...v0.15.0-beta)
 
