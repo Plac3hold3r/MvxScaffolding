@@ -1,5 +1,9 @@
 ## Release Notes
 
+## [v0.15.1-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.15.1-beta) (2018-08-25)
+
+- Fix Android missing base calls for `OnResume` and `OnPause` 
+
 ## [v0.15.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.15.0-beta) (2018-08-21)
 
 - Various template bugfixes, thanks @Cheesebaron 
