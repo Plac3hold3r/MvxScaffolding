@@ -20,7 +20,7 @@
     </FindVsixManifest>
   </Target>
   
-  <Target Name="VsixInfo" AfterTargets="DetokenizeVsixManifestFile" Condition="Exists('$(IntermediateVsixManifest)')">
+  <Target Name="VsixInfo" AfterTargets="DetokenizeVsixManifestFile" BeforeTargets="CoreCompile" Condition="Exists('$(IntermediateVsixManifest)')">
     <XmlPeek Condition="'$(VsixID)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="$(IntermediateVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:Identity/@Id">
       <Output TaskParameter="Result" PropertyName="VsixID" />
     </XmlPeek>

@@ -1,0 +1,10 @@
+version: 1.0.{build}
+skip_branch_with_pr: true
+image: Visual Studio 2017
+before_build:
+- cmd: nuget restore
+build:
+  project: /src/MvxScaffolding.Vsix/MvxScaffolding.Vsix.csproj
+  verbosity: detailed
+artifacts:
+- path: src\MvxScaffolding.Vsix\bin\Debug\MvxScaffolding.Vsix.vsix
