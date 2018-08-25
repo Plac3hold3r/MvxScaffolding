@@ -63,6 +63,8 @@ namespace MvxNative.Droid.Views.Main
             {
                 DrawerToggle.DrawerOpened += HideSoftKeyboard;
             }
+
+            base.OnResume();
         }
 
         protected override void OnPause()
@@ -71,6 +73,8 @@ namespace MvxNative.Droid.Views.Main
             {
                 DrawerToggle.DrawerOpened -= HideSoftKeyboard;
             }
+
+            base.OnPause();
         }
 
         public override void OnBackPressed()
