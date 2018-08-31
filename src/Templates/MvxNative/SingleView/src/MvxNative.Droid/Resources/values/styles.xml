@@ -21,4 +21,8 @@
     <style name="AppTheme.Splash.Base" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
+
+    <!-- Default Splash Screen theme applied if no resource style overrides for specific API level -->
+    <style name="AppTheme.Splash" parent="AppTheme.Splash.Base">
+    </style>
 </resources>
