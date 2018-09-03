@@ -1,5 +1,18 @@
 # Change Log
 
+## [v0.16.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.16.0-beta) (2018-09-03)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.15.1-beta...v0.16.0-beta)
+
+**Implemented enhancements:**
+
+- Bump Android MvxNative templates to use support library v27.0.2.1 [\#105](https://github.com/Plac3hold3r/MvxScaffolding/pull/105) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- New Crowdin translations [\#103](https://github.com/Plac3hold3r/MvxScaffolding/pull/103) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Fixed bugs:**
+
+- Bump Android MvxNative templates to use support library v27.0.2.1 [\#105](https://github.com/Plac3hold3r/MvxScaffolding/pull/105) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Fix missing splash style for devices lower than 19  [\#104](https://github.com/Plac3hold3r/MvxScaffolding/pull/104) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
 ## [v0.15.1-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.15.1-beta) (2018-08-25)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.15.0-beta...v0.15.1-beta)
 
