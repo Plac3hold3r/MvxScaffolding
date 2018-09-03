@@ -262,64 +262,64 @@
     <value>Proyecto de prueba unitaria</value>
   </data>
   <data name="ProjectGrouping_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Cerrar</value>
   </data>
   <data name="ProjectGrouping_Description" xml:space="preserve">
-    <value>The grouping for projects into folders inside of the solution.</value>
+    <value>La agrupación de proyectos en carpetas dentro de la solución.</value>
   </data>
   <data name="ProjectGrouping_Select_Flat" xml:space="preserve">
-    <value>Select "Flat" for when you want all projects to be placed at the root of the solution.</value>
+    <value>Seleccione "Flat" para cuando quiera que todos los proyectos se coloquen en la raíz de la solución.</value>
   </data>
   <data name="ProjectGrouping_Select_Platform" xml:space="preserve">
-    <value>Select "Platform"for when you want projects to be grouped based on their target platform.</value>
+    <value>Seleccione 'Plataforma' cuando desea que los proyectos se agrupen en base a la plataforma de destino.</value>
   </data>
   <data name="ProjectGrouping_Select_TestGroup" xml:space="preserve">
-    <value>Select "Test Group" for when you want all test projects to be placed in a test folder, other projects are placed at the root of the solution.</value>
+    <value>Seleccione "Test Group" para cuando quiera que todos los proyectos sean colocados en una carpeta de prueba, otros proyectos se colocan en la raíz de la solución.</value>
   </data>
   <data name="ProjectGrouping_Title" xml:space="preserve">
-    <value>Project Grouping</value>
+    <value>Grupos de proyectos</value>
   </data>
   <data name="SimpleInfo_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Cerrar</value>
   </data>
   <data name="SimpleInfo_Button_More_Info" xml:space="preserve">
-    <value>More Info</value>
+    <value>Más Información</value>
   </data>
   <data name="Summary_Android_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Versión DSK Min</value>
   </data>
   <data name="Summary_Android_Title" xml:space="preserve">
     <value>Android</value>
   </data>
   <data name="Summary_Android_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>UI Proyecto de Test</value>
   </data>
   <data name="Summary_Android_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Proyecto de prueba unitaria</value>
   </data>
   <data name="Summary_Android_LayoutType" xml:space="preserve">
     <value>Tipo de diseño</value>
   </data>
   <data name="Summary_Application" xml:space="preserve">
-    <value>Application</value>
+    <value>Aplicación</value>
   </data>
   <data name="Summary_Core_dotNetStandard" xml:space="preserve">
-    <value>.NET Standard</value>
+    <value>Estándar de .NET</value>
   </data>
   <data name="Summary_Core_Title" xml:space="preserve">
-    <value>Core</value>
+    <value>Núcleo</value>
   </data>
   <data name="Summary_Core_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Proyecto de prueba unitaria</value>
   </data>
   <data name="Summary_DisplayName" xml:space="preserve">
-    <value>Display Name</value>
+    <value>Mostrar Nombre</value>
   </data>
   <data name="Summary_EditorConfig" xml:space="preserve">
-    <value>EditorConfig</value>
+    <value>Editor de Configuración</value>
   </data>
   <data name="Summary_Identifier" xml:space="preserve">
-    <value>Identifier</value>
+    <value>Identificador</value>
   </data>
   <data name="Summary_Ios" xml:space="preserve">
     <value>iOS</value>
@@ -328,70 +328,70 @@
     <value>Tipo de diseño</value>
   </data>
   <data name="Summary_Ios_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Versión DSK Min</value>
   </data>
   <data name="Summary_Ios_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>UI Proyecto de Test</value>
   </data>
   <data name="Summary_Ios_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Proyecto de prueba unitaria</value>
   </data>
   <data name="Summary_ProjectGrouping" xml:space="preserve">
-    <value>Project Grouping</value>
+    <value>Grupos de proyectos</value>
   </data>
   <data name="Summary_Uwp_Description" xml:space="preserve">
-    <value>Description</value>
+    <value>Descrición</value>
   </data>
   <data name="Summary_Uwp_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Versión DSK Min</value>
   </data>
   <data name="Summary_Uwp_Title" xml:space="preserve">
     <value>UWP</value>
   </data>
   <data name="Summary_Uwp_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>UI Proyecto de Test</value>
   </data>
   <data name="Summary_Uwp_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Proyecto de prueba unitaria</value>
   </data>
   <data name="About_GitHub_Link" xml:space="preserve">
     <value>GitHub</value>
   </data>
   <data name="About_Privacy_Link" xml:space="preserve">
-    <value>Privacy Policy</value>
+    <value>Política de privacidad</value>
   </data>
   <data name="Template_Choice_False" xml:space="preserve">
-    <value>False</value>
+    <value>Falso</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Flat" xml:space="preserve">
-    <value>Flat</value>
+    <value>Plano</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Platform" xml:space="preserve">
-    <value>Platform</value>
+    <value>Plataforma</value>
   </data>
   <data name="Template_Choice_ProjectGroup_TestGroup" xml:space="preserve">
-    <value>Test Group</value>
+    <value>Grupo de pruebas</value>
   </data>
   <data name="Template_Choice_True" xml:space="preserve">
-    <value>True</value>
+    <value>Verdadero</value>
   </data>
   <data name="Main_Window_Button_Translate" xml:space="preserve">
-    <value>Translate</value>
+    <value>Traducir</value>
   </data>
   <data name="SimpleInfo_Translate_Desc" xml:space="preserve">
-    <value>Find an error in spelling or grammar? Want MvxScaffolding translated into your native language? To help translate MvxScaffolding, please visit our Crowdin page.</value>
+    <value>¿Encontró un error de ortografía o gramática? ¿Quiere que mvxscaffolding esté traducido a su idioma nativo? Para ayudar a traducir MvxScaffolding, por favor visite nuestra página Crowdin.</value>
   </data>
   <data name="SimpleInfo_Translate_Title" xml:space="preserve">
-    <value>Help Translate</value>
+    <value>Ayúdanos a Traducir</value>
   </data>
   <data name="About_Translate_Link" xml:space="preserve">
-    <value>Help Translate</value>
+    <value>Ayúdanos a Traducir</value>
   </data>
   <data name="About_Changelog_Link" xml:space="preserve">
-    <value>Changelog</value>
+    <value>Registro de cambios</value>
   </data>
   <data name="AppDetails_MvvmCross_Version" xml:space="preserve">
-    <value>MvvmCross Version</value>
+    <value>Versión MvvmCross</value>
   </data>
   <data name="Main_Window_Notify_Dismiss" xml:space="preserve">
     <value>Descartar</value>
