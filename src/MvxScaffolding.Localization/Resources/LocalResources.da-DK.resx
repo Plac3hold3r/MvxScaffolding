@@ -118,88 +118,88 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppDetails_Application" xml:space="preserve">
-    <value>Application</value>
+    <value>Applikation</value>
   </data>
   <data name="AppDetails_Display_Name" xml:space="preserve">
-    <value>Display Name</value>
+    <value>Visningsnavn</value>
   </data>
   <data name="AppDetails_EditorConfig" xml:space="preserve">
     <value>EditorConfig</value>
   </data>
   <data name="AppDetails_Identifier" xml:space="preserve">
-    <value>Identifier</value>
+    <value>Id</value>
   </data>
   <data name="AppDetails_Project_Grouping" xml:space="preserve">
-    <value>Project Grouping</value>
+    <value>Projekt gruppering</value>
   </data>
   <data name="AppDetails_Solution" xml:space="preserve">
     <value>Solution</value>
   </data>
   <data name="AppDetails_Validation_Display_Name" xml:space="preserve">
-    <value>Application name required</value>
+    <value>Applikationsnavn er påkrævet</value>
   </data>
   <data name="AppDetails_Validation_Identifier" xml:space="preserve">
-    <value>Application identifier required</value>
+    <value>Applikations id er påkrævet</value>
   </data>
   <data name="Main_Window_Button_About" xml:space="preserve">
-    <value>About</value>
+    <value>Om</value>
   </data>
   <data name="Main_Window_Button_Done" xml:space="preserve">
-    <value>Done</value>
+    <value>Udført</value>
   </data>
   <data name="Main_Window_Button_Next" xml:space="preserve">
-    <value>Next</value>
+    <value>Næste</value>
   </data>
   <data name="Main_Window_Button_Previous" xml:space="preserve">
-    <value>Previous</value>
+    <value>Forrige</value>
   </data>
   <data name="Main_Window_Button_Privacy" xml:space="preserve">
-    <value>Privacy</value>
+    <value>Beskyttelse af personlige oplysninger</value>
   </data>
   <data name="Main_Window_Link_GitHub" xml:space="preserve">
-    <value>Visit MvxScaffolding on GitHub</value>
+    <value>Besøg MvxScaffolding på GitHub</value>
   </data>
   <data name="Main_Window_SectionHeader_AppDetails" xml:space="preserve">
-    <value>App Details</value>
+    <value>App detaljer</value>
   </data>
   <data name="Main_Window_SectionHeader_PlatformOptions" xml:space="preserve">
-    <value>Platforms Options</value>
+    <value>Indstillinger for Platforme</value>
   </data>
   <data name="Main_Window_SectionHeader_Summary" xml:space="preserve">
-    <value>Summary</value>
+    <value>Oversigt</value>
   </data>
   <data name="PlatformOptions_Android_MarketShare" xml:space="preserve">
-    <value>Market Share</value>
+    <value>Markedsandel</value>
   </data>
   <data name="PlatformOptions_Android_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Minimum SDK version</value>
   </data>
   <data name="PlatformOptions_Android_Title" xml:space="preserve">
     <value>Android</value>
   </data>
   <data name="PlatformOptions_Android_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>UI testprojekt</value>
   </data>
   <data name="PlatformOptions_Android_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Unit testprojekt</value>
   </data>
   <data name="PlatformOptions_Android_LayoutType" xml:space="preserve">
     <value>Layout Type</value>
   </data>
   <data name="PlatformOptions_Core_dotNetStandard" xml:space="preserve">
-    <value>.NET Standard</value>
+    <value>.NET standard</value>
   </data>
   <data name="PlatformOptions_Core_Title" xml:space="preserve">
     <value>Core</value>
   </data>
   <data name="PlatformOptions_Core_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Unit testprojekt</value>
   </data>
   <data name="PlatformOptions_Validation_Uwp_Description" xml:space="preserve">
-    <value>Description required</value>
+    <value>Beskrivelse kræves</value>
   </data>
   <data name="SimpleInfo_EditorConfig_Desc" xml:space="preserve">
-    <value>Enable to include an EditorConfig file at the root of the solution. EditorConfig is used to define coding styles highlighted within Visual Studio.</value>
+    <value>Slå til for at inkludere en EditorConfig fil i roden af din solution. EditorConfig bliver brugt til at definere kode stil fremhævet i Visual Studio.</value>
   </data>
   <data name="SimpleInfo_EditorConfig_Title" xml:space="preserve">
     <value>EditorConfig</value>
