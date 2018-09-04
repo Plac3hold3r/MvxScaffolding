@@ -6,7 +6,7 @@
 - Fix MvxNative Android templates crashing on start-up on Android SDK 19 and below
 - Update MvxNative Android templates to use Android Support Library v27.0.2.1
 - Update translations
-  - Spanish, by elpitufo
+  - Spanish, by Agustin Jose Wawrzyk (elpitufo)
   - Danish, by Tomasz Cielecki (Cheesebaron)
 
 ## [v0.15.1-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.15.1-beta) (2018-08-25)
