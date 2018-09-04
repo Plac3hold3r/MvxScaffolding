@@ -49,7 +49,7 @@ Language | Code | Translators |
 :-------------------------:|:-------------------------:|:-------------------------:
 Chinese Simplified | zh-CN | [Forbidden (cptbl00dra1n)](https://crowdin.com/profile/cptbl00dra1n)
 French | fr-FR | [Antoine Bichon (Chapelin)](https://crowdin.com/profile/Chapelin)
-Spanish | es-ES | [elpitufo](https://crowdin.com/profile/elpitufo)
+Spanish | es-ES | [Agustin Jose Wawrzyk (elpitufo)](https://crowdin.com/profile/elpitufo)
 Danish | da-DK | [Tomasz Cielecki (Cheesebaron)](https://crowdin.com/profile/Cheesebaron)
 
 ## dotnet CLI
