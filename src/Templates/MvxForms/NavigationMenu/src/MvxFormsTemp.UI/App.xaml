@@ -3,7 +3,7 @@
     x:Class="MvxFormsTemp.UI.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:d="clr-namespace:MvvmCross.Forms.Platform;assembly=MvvmCross.Forms"
+    xmlns:d="clr-namespace:MvvmCross.Forms;assembly=MvvmCross.Forms"
     xmlns:resources="clr-namespace:MvxFormsTemp.UI.Resources">
     <Application.Resources>
 
