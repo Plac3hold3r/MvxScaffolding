@@ -370,6 +370,10 @@
       "description": "Minimum Android target SDK version.",
       "choices": [
         {
+          "choice": "28",
+          "description": "Android 9 - Pie v28"
+        },
+        {
           "choice": "27",
           "description": "Android 8.1 - Oreo v27"
         },
