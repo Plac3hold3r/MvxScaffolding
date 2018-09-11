@@ -133,6 +133,9 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
 **MvxNative** and **MvxForms** options
 
 ```text
+ -n|--name                               The name for the generated projects.
+                                         string - Required
+
  -droid|--include-android                Whether to include Xamarin Android project.
                                          bool - Optional
                                          Default: true
@@ -192,6 +195,7 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                          Default: 2.0
 
   -droid-sdk|--android-min-sdk           Minimum Android SDK version.
+                                             28    - Android 9 - Oreo v28
                                              27    - Android 8.1 - Oreo v27
                                              26    - Android 8 - Oreo v26
                                              25    - Android 7.1 - Nougat v25
