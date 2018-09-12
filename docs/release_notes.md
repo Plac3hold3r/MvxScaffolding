@@ -1,5 +1,12 @@
 ## Release Notes
 
+## [v0.17.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.17.0-beta) (2018-09-12)
+
+- Fix MvxForms templates, thanks @benoitjadinon 
+- Update Android ConstraintLayout usage
+- Update Android target fragment to 9.0
+- Add Android v28 Pie support
+
 ## [v0.16.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.16.0-beta) (2018-09-03)
 
 - Fix Android templates missing splash screen theme for Android SDK 18 and below
