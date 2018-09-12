@@ -1,5 +1,18 @@
 # Change Log
 
+## [v0.17.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.17.0-beta) (2018-09-12)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.16.0-beta...v0.17.0-beta)
+
+**Implemented enhancements:**
+
+- Android add support for v28 SDK [\#109](https://github.com/Plac3hold3r/MvxScaffolding/pull/109) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Fixed bugs:**
+
+- Android Constraints in default views are wrong [\#106](https://github.com/Plac3hold3r/MvxScaffolding/issues/106)
+- Improve usage of Android constraints layout [\#108](https://github.com/Plac3hold3r/MvxScaffolding/pull/108) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- stuff that didn’t compile with mvxforms [\#107](https://github.com/Plac3hold3r/MvxScaffolding/pull/107) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([benoitjadinon](https://github.com/benoitjadinon))
+
 ## [v0.16.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.16.0-beta) (2018-09-03)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.15.1-beta...v0.16.0-beta)
 
