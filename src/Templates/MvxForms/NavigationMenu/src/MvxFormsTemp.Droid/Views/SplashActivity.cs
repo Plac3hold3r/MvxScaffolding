@@ -1,4 +1,5 @@
-﻿using Android.App;
+using System.Threading.Tasks;
+using Android.App;
 using Android.OS;
 using MvvmCross.Forms.Platforms.Android.Views;
 
@@ -13,10 +14,10 @@ namespace MvxFormsTemp.Droid.Views
        RoundIcon = "@mipmap/ic_launcher_round")]
     public class SplashActivity : MvxFormsSplashScreenAppCompatActivity<Setup, Core.App, UI.App>
     {
-        protected override void RunAppStart(Bundle bundle)
+        protected override Task RunAppStartAsync(Bundle bundle)
         {
             StartActivity(typeof(MainActivity));
-            base.RunAppStart(bundle);
+            return Task.CompletedTask;
         }
     }
 }
