@@ -15,10 +15,10 @@
   "sourceName": "MvxNative",
   "preferNameDirectory": true,
   "guids": [
-    "{00000000-0000-0000-0000-000000000001}", // Core Project
-    "{00000000-0000-0000-0000-000000000002}", // Android Project
-    "{00000000-0000-0000-0000-000000000003}", // iOS Project
-    "{00000000-0000-0000-0000-000000000004}", // UWP Project
+    "{00000000-0000-2222-0000-000000000001}", // Core Project
+    "{00000000-0000-2222-0000-000000000002}", // Android Project
+    "{00000000-0000-2222-0000-000000000003}", // iOS Project
+    "{00000000-0000-2222-0000-000000000004}", // UWP Project
     "{00000000-0000-0000-0003-000000000002}", // Android shared Project
     "{00000000-0000-0000-0001-000000000001}", // Core Unit Test Project
     "{00000000-0000-0000-0001-000000000002}", // Android Unit Test Project
@@ -36,19 +36,6 @@
     "{00000000-0000-1111-0000-000000000002}", // Android Project
     "{00000000-0000-1111-0000-000000000003}", // iOS Project
     "{00000000-0000-1111-0000-000000000004}", // UWP Project
-    "{00000000-0000-1111-0003-000000000002}", // Android shared Project
-    "{00000000-0000-1111-0001-000000000001}", // Core Unit Test Project
-    "{00000000-0000-1111-0001-000000000002}", // Android Unit Test Project
-    "{00000000-0000-1111-0002-000000000002}", // Android UI Test Project
-    "{00000000-0000-1111-0001-000000000003}", // iOS Unit Test Project
-    "{00000000-0000-1111-0002-000000000003}", // iOS UI Test Project
-    "{00000000-0000-1111-0001-000000000004}", // UWP Unit Test Project
-    "{00000000-0000-1111-0002-000000000004}", // UWP UI Test Project
-    "{00000001-0000-1111-0000-000000000000}", // Solution items folder
-    "{00000002-0000-1111-0000-000000000000}", // Tests folder
-    "{00000003-0000-1111-0000-000000000000}", // Android folder
-    "{00000004-0000-1111-0000-000000000000}", // iOS folder
-    "{00000005-0000-1111-0000-000000000000}", // UWP folder
     "{6E1DBB1B-50D7-4E7E-A18B-249C279D5F95}" // Solution GUID
   ],
   "primaryOutputs": [
@@ -138,41 +125,72 @@
           ]
         },
         {
-          "condition": "(!HasAndroidTestProject)",
+          "condition": "(HasCoreTestProject)",
+          "rename": { "Shared/test/MvxNative.Core.Test/": "test/MvxNative.Core.Test/" }
+        },
+        {
+          "condition": "(!(HasAndroidTestProject && HasAndroidProject))",
           "exclude": [
             "**/test/MvxNative.Droid.Test/**",
             "**/src/MvxNative.Droid.Shared/**"
           ]
         },
         {
-          "condition": "(!HasAndroidUITestProject)",
+          "condition": "(HasAndroidTestProject && HasAndroidProject)",
+          "rename": {
+            "Shared/test/MvxNative.Droid.Test/": "test/MvxNative.Droid.Test/",
+            "Shared/src/MvxNative.Droid.Shared/": "src/MvxNative.Droid.Shared/"
+          }
+        },
+        {
+          "condition": "(!(HasAndroidUITestProject && HasAndroidProject))",
           "exclude": [
             "**/test/MvxNative.Droid.UI.Test/**"
           ]
         },
         {
-          "condition": "(!HasiOSTestProject)",
+          "condition": "(HasAndroidUITestProject && HasAndroidProject)",
+          "rename": { "Shared/test/MvxNative.Droid.UI.Test/": "test/MvxNative.Droid.UI.Test/" }
+        },
+        {
+          "condition": "(!(HasiOSTestProject && HasiOSProject))",
           "exclude": [
             "**/test/MvxNative.iOS.Test/**"
           ]
         },
         {
-          "condition": "(!HasiOSUITestProject)",
+          "condition": "(HasiOSTestProject && HasiOSProject)",
+          "rename": { "Shared/test/MvxNative.iOS.Test/": "test/MvxNative.iOS.Test/" }
+        },
+        {
+          "condition": "(!(HasiOSUITestProject && HasiOSProject))",
           "exclude": [
             "**/test/MvxNative.iOS.UI.Test/**"
           ]
         },
         {
-          "condition": "(!HasUWPTestProject)",
+          "condition": "(HasiOSUITestProject && HasiOSProject)",
+          "rename": { "Shared/test/MvxNative.iOS.UI.Test/": "test/MvxNative.iOS.UI.Test/" }
+        },
+        {
+          "condition": "(!(HasUWPTestProject && HasUWPProject))",
           "exclude": [
             "**/test/MvxNative.UWP.Test/**"
           ]
         },
         {
-          "condition": "(!HasUWPUITestProject)",
+          "condition": "(HasUWPTestProject && HasUWPProject)",
+          "rename": { "Shared/test/MvxNative.UWP.Test/": "test/MvxNative.UWP.Test/" }
+        },
+        {
+          "condition": "(!(HasUWPUITestProject && HasUWPProject))",
           "exclude": [
             "**/test/MvxNative.UWP.UI.Test/**"
           ]
+        },
+        {
+          "condition": "(HasUWPUITestProject && HasUWPProject)",
+          "rename": { "Shared/test/MvxNative.UWP.UI.Test/": "test/MvxNative.UWP.UI.Test/" }
         },
         {
           "condition": "(!HasEditorConfig)",

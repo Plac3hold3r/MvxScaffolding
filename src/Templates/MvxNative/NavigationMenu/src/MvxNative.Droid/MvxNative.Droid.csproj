@@ -148,7 +148,7 @@
       <Name>MvxNative.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="..\MvxNative.Droid.Shared\MvxNative.Droid.Shared.projitems" Label="Shared" Condition=" '$(HasAndroidTestProject)' != 'false' " />
+  <Import Project="..\MvxNative.Droid.Shared\MvxNative.Droid.Shared.projitems" Label="Shared" Condition=" '$(HasAndroidTestProject)' == 'true' " />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.
