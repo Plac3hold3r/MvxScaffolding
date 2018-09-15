@@ -9,7 +9,7 @@ pool:
 variables:
   solution: '**/MvxScaffolding.sln'
   buildProject: '**/MvxScaffolding.Vsix.csproj'
-  buildPlatform: 'Any CPU'
+  buildPlatform: 'AnyCPU'
   buildConfiguration: 'Release'
 
 steps:
