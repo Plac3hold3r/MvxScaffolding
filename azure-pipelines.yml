@@ -7,7 +7,8 @@ pool:
   vmImage: 'VS2017-Win2016'
 
 variables:
-  solution: '**\MvxScaffolding.Vsix.csproj'
+  solution: '**/*.sln'
+  buildProject: '**/MvxScaffolding.Vsix.csproj'
   buildPlatform: 'x86'
   buildConfiguration: 'Release'
 
@@ -20,6 +21,6 @@ steps:
 
 - task: VSBuild@1
   inputs:
-    solution: '$(solution)'
+    solution: '$(buildProject)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
