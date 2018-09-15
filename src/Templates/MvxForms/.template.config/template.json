@@ -125,11 +125,22 @@
           ]
         },
         {
+          "condition": "(HasCoreTestProject)",
+          "rename": { "Shared/test/MvxFormsTemp.Core.Test/": "test/MvxFormsTemp.Core.Test/" }
+        },
+        {
           "condition": "(!HasAndroidTestProject)",
           "exclude": [
             "**/test/MvxFormsTemp.Droid.Test/**",
             "**/src/MvxFormsTemp.Droid.Shared/**"
           ]
+        },
+        {
+          "condition": "(HasAndroidTestProject && HasAndroidProject)",
+          "rename": {
+            "Shared/test/MvxFormsTemp.Droid.Test/": "test/MvxFormsTemp.Droid.Test/",
+            "Shared/src/MvxFormsTemp.Droid.Shared/": "src/MvxFormsTemp.Droid.Shared/"
+          }
         },
         {
           "condition": "(!HasiOSTestProject)",
@@ -138,10 +149,18 @@
           ]
         },
         {
+          "condition": "(HasiOSTestProject && HasiOSProject)",
+          "rename": { "Shared/test/MvxFormsTemp.iOS.Test/": "test/MvxFormsTemp.iOS.Test/" }
+        },
+        {
           "condition": "(!HasXamarinUITestProject)",
           "exclude": [
             "**/test/MvxFormsTemp.UI.Test/**"
           ]
+        },
+        {
+          "condition": "(HasXamarinUITestProject && (HasiOSProject || HasAndroidProject))",
+          "rename": { "Shared/test/MvxFormsTemp.UI.Test/": "test/MvxFormsTemp.UI.Test/" }
         },
         {
           "condition": "(!HasUWPTestProject)",
@@ -150,10 +169,18 @@
           ]
         },
         {
+          "condition": "(HasUWPTestProject && HasUWPProject)",
+          "rename": { "Shared/test/MvxFormsTemp.UWP.Test/": "test/MvxFormsTemp.UWP.Test/" }
+        },
+        {
           "condition": "(!HasUWPUITestProject)",
           "exclude": [
             "**/test/MvxFormsTemp.UWP.UI.Test/**"
           ]
+        },
+        {
+          "condition": "(HasUWPUITestProject && HasUWPProject)",
+          "rename": { "Shared/test/MvxFormsTemp.UWP.UI.Test/": "test/MvxFormsTemp.UWP.UI.Test/" }
         },
         {
           "condition": "(!HasEditorConfig)",
