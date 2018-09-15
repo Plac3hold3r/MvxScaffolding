@@ -14,13 +14,18 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@0
+  displayName: 'Install NuGet'
+  inputs:
+    versionSpec: 4.4.1
 
 - task: NuGetCommand@2
+  displayName: 'Restore NuGets'
   inputs:
     restoreSolution: '$(solution)'
 
 - task: VSBuild@1
   inputs:
+    displayName: 'Build VSIX'
     solution: '$(buildProject)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
