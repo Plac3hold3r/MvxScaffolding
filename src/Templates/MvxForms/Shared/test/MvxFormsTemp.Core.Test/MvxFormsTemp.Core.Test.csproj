@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
@@ -14,7 +14,7 @@
     <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition=" '$(HasCoreTestProject)' == 'true' ">
     <ProjectReference Include="..\..\src\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj" />
   </ItemGroup>
 

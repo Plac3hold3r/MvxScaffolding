@@ -83,7 +83,7 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\MvxFormsTemp.iOS\MvxFormsTemp.iOS.csproj">
+    <ProjectReference Include="..\..\..\SingleView\src\MvxFormsTemp.iOS\MvxFormsTemp.iOS.csproj">
       <!--#if (IsSingleView)-->
       <Project>{00000000-1111-2222-0000-000000000003}</Project>
       <!--#endif-->
