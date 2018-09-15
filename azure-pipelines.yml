@@ -7,7 +7,7 @@ pool:
   vmImage: 'VS2017-Win2016'
 
 variables:
-  solution: '**/*.sln'
+  solution: '**/MvxScaffolding.sln'
   buildProject: '**/MvxScaffolding.Vsix.csproj'
   buildPlatform: 'x86'
   buildConfiguration: 'Release'
