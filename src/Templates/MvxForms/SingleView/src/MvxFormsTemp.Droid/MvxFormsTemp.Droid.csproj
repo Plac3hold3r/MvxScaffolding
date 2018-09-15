@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{00000000-1111-0000-0000-000000000002}</ProjectGuid>
+    <ProjectGuid>{00000000-1111-2222-0000-000000000002}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -146,11 +146,11 @@
   <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\MvxFormsTemp.Core\MvxFormsTemp.Core.csproj">
-      <Project>{00000000-1111-0000-0000-000000000001}</Project>
+      <Project>{00000000-1111-2222-0000-000000000001}</Project>
       <Name>MvxFormsTemp.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj">
-      <Project>{00000000-1111-0000-0000-000000000005}</Project>
+      <Project>{00000000-1111-2222-0000-000000000005}</Project>
       <Name>MvxFormsTemp.UI</Name>
     </ProjectReference>
   </ItemGroup>
