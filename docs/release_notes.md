@@ -1,5 +1,9 @@
 ## Release Notes
 
+## [v0.18.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.18.0-beta) (2018-09-??)
+
+- Update to support MvvmCross 6.2.0.
+
 ## [v0.17.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.17.0-beta) (2018-09-12)
 
 - Fix MvxForms templates, thanks @benoitjadinon 

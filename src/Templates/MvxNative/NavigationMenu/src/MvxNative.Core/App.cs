@@ -1,4 +1,4 @@
-﻿using MvvmCross.IoC;
+using MvvmCross.IoC;
 using MvvmCross.ViewModels;
 using MvxNative.Core.ViewModels.Main;
 
