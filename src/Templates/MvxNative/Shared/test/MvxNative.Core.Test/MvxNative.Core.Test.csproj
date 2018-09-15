@@ -14,7 +14,7 @@
     <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition=" '$(HasCoreTestProject)' == 'true' ">
     <ProjectReference Include="..\..\src\MvxNative.Core\MvxNative.Core.csproj" />
   </ItemGroup>
 

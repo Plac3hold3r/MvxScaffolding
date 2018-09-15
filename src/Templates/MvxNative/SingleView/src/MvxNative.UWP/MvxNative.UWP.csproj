@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{00000000-0000-0000-0000-000000000004}</ProjectGuid>
+    <ProjectGuid>{00000000-0000-2222-0000-000000000004}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MvxNative.UWP</RootNamespace>
@@ -163,7 +163,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <!--#if (!IsBlank)-->
     <Compile Include="Views\Main\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -171,7 +170,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <!--#endif-->
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
@@ -189,7 +187,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MvxNative.Core\MvxNative.Core.csproj">
-      <Project>{00000000-0000-0000-0000-000000000001}</Project>
+      <Project>{00000000-0000-2222-0000-000000000001}</Project>
       <Name>MvxNative.Core</Name>
     </ProjectReference>
   </ItemGroup>

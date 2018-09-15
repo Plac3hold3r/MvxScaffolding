@@ -83,8 +83,13 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\MvxNative.iOS\MvxNative.iOS.csproj">
-      <Project>{00000000-0000-0000-0000-000000000002}</Project>
+    <ProjectReference Include="..\..\..\NavigationMenu\src\MvxNative.iOS\MvxNative.iOS.csproj">
+      <!--#if (IsSingleView)-->
+      <Project>{00000000-0000-2222-0000-000000000003}</Project>
+      <!--#endif-->
+      <!--#if (IsNavigationMenu)-->
+      <Project>{00000000-0000-1111-0000-000000000003}</Project>
+      <!--#endif-->
       <Name>MvxNative.iOS</Name>
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
