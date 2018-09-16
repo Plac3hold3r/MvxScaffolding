@@ -3,10 +3,4 @@
     <item>
         <color android:color="@color/primaryColor" />
     </item>
-    <item>
-        <bitmap android:src="@drawable/ic_mvvmcross_logo"
-                android:tileMode="disabled"
-                android:gravity="center"
-                android:layout_gravity="center" />
-    </item>
 </layer-list>

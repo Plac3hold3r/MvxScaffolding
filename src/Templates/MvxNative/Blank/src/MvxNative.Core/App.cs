@@ -1,4 +1,3 @@
-﻿using MvvmCross.IoC;
 using MvvmCross.ViewModels;
 using MvxNative.Core.ViewModels.Main;
 
@@ -8,11 +7,6 @@ namespace MvxNative.Core
     {
         public override void Initialize()
         {
-            CreatableTypes()
-                .EndingWith("Service")
-                .AsInterfaces()
-                .RegisterAsLazySingleton();
-
             RegisterAppStart<MainViewModel>();
         }
     }

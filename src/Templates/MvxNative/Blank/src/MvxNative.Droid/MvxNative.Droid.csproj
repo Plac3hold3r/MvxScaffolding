@@ -61,10 +61,7 @@
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="Views\!Base\BaseActivity.cs" />
-    <Compile Include="Views\!Base\BaseFragment.cs" />
-    <Compile Include="Views\Main\MainContainerActivity.cs" />
-    <Compile Include="Views\Main\MainFragment.cs" />
+    <Compile Include="Views\Main\MainActivity.cs" />
     <Compile Include="Views\Splash\SplashActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,12 +91,10 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup Condition=" '$(HasAndroidXMLLayouts)' != 'true' ">
-    <AndroidResource Include="Resources\layout\fragment_main.axml" />
     <AndroidResource Include="Resources\layout\layout_toolbar.axml" />
     <AndroidResource Include="Resources\layout\activity_main_container.axml" />
   </ItemGroup>
   <ItemGroup Condition=" '$(HasAndroidXMLLayouts)' == 'true' ">
-    <AndroidResource Include="Resources\layout\fragment_main.xml" />
     <AndroidResource Include="Resources\layout\layout_toolbar.xml" />
     <AndroidResource Include="Resources\layout\activity_main_container.xml" />
   </ItemGroup>
@@ -110,26 +105,7 @@
     <AndroidResource Include="Resources\values\dimens.xml" />
     <AndroidResource Include="Resources\values-v21\styles.xml" />
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_round.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_round.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_round.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_round.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_mvvmcross_logo.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_mvvmcross_logo.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_mvvmcross_logo.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_mvvmcross_logo.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_mvvmcross_logo.png" />
     <AndroidResource Include="Resources\values-v19\styles.xml" />
-    <AndroidResource Include="Resources\drawable\ic_launcher_foreground.xml" />
-    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
-    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
-    <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MvxNative.Core\MvxNative.Core.csproj">
