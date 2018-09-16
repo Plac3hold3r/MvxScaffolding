@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxContentPage x:TypeArguments="viewModels:HomeViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:local="clr-namespace:MvxFormsTemp.UI.Pages"
+    x:Class="MvxFormsTemp.UI.Pages.HomePage"
+    xmlns:viewModels="clr-namespace:MvxFormsTemp.Core.ViewModels.Home;assembly=MvxFormsTemp.Core"
+                      Title="Main page">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome!!&#10;App scaffolded with MvxScaffolding"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</views:MvxContentPage>
