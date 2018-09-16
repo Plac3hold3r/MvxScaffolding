@@ -8,7 +8,7 @@ pool:
 
 variables:
   solution: '**/MvxScaffolding.Vsix.sln'
-  buildPlatform: 'AnyCPU'
+  buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
