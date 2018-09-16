@@ -38,6 +38,8 @@ namespace MvxScaffolding.Vsix.Wizards
                     return "single-view";
                 case ScaffoldType.NavigationMenu:
                     return "navigation-menu";
+                case ScaffoldType.Blank:
+                    return "blank";
                 default:
                     throw new ArgumentOutOfRangeException(nameof(templateOption), $"No matching {nameof(ScaffoldType)} type");
             }

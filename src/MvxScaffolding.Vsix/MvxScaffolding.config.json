@@ -31,11 +31,19 @@
             "OptionKey": "storyboard"
           }
         ]
+      },
+      {
+        "Type": "Blank",
+        "Platforms": [ "iOS", "Android", "UWP" ]
       }
     ],
     "MvxForms": [
       {
         "Type": "SingleView",
+        "Platforms": [ "iOS", "Android", "UWP" ]
+      },
+      {
+        "Type": "Blank",
         "Platforms": [ "iOS", "Android", "UWP" ]
       }
     ]
