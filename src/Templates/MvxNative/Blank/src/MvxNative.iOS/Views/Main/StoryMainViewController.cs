@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +13,7 @@ namespace MvxNative.iOS.Views.Main
 {
     [MvxFromStoryboard(nameof(MainViewController))]
     [MvxRootPresentation(WrapInNavigationController = true)]
-    public partial class MainViewController : BaseViewController<MainViewModel>
+    public partial class MainViewController : MvxViewController<MainViewModel>
     {
         public MainViewController(IntPtr handle) : base(handle)
         {
