@@ -444,4 +444,10 @@
   <data name="ReleaseNotes_InstalledVersion" xml:space="preserve">
     <value>Installed Version</value>
   </data>
+  <data name="AppDetails_Template_Blank" xml:space="preserve">
+    <value>Blank</value>
+  </data>
+  <data name="AppDetails_Template_Blank_Description" xml:space="preserve">
+    <value>Scaffold an app with bare basic features.</value>
+  </data>
 </root>
