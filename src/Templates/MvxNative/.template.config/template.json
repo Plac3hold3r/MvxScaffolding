@@ -340,6 +340,10 @@
         {
           "choice": "navigation-menu",
           "description": "Scaffold an app with a slide out menu. Template contains two starting views with view models."
+        },
+        {
+          "choice": "blank",
+          "description": "Scaffold an app with bare basic features."
         }
       ]
     },
@@ -374,6 +378,10 @@
     "IsNavigationMenu": {
       "type": "computed",
       "value": "(ScaffoldType == \"navigation-menu\")"
+    },
+    "IsBlank": {
+      "type": "computed",
+      "value": "(ScaffoldType == \"blank\")"
     },
     /*
     || All project flags
