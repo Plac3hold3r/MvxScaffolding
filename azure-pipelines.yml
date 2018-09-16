@@ -21,6 +21,8 @@ steps:
   displayName: 'Restore NuGets'
   inputs:
     restoreSolution: '$(solution)'
+    feedsToUse: config
+    nugetConfigPath: Nuget.Config
 
 - task: VSBuild@1
   inputs:
