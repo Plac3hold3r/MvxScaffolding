@@ -42,6 +42,8 @@ namespace MvxScaffolding.Core.Configuration
 
         public string ReleaseNotesUri { get; set; }
 
+        public string SupportedMvvmCrossVersion { get; set; }
+
         public PlatformScaffoldTypeConfiguration PlatformScaffoldTypeConfiguration { get; set; }
 
         static Config _current;
