@@ -1,13 +1,13 @@
-﻿using Foundation;
+using System;
+using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Windows.Input;
+using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.Platforms.Ios.Views;
 using MvvmCross.ViewModels;
-using System;
-using System.Collections.Specialized;
-using System.ComponentModel;
-using System.Windows.Input;
 using UIKit;
 
 namespace MvxNative.iOS.Linker
@@ -33,6 +33,7 @@ namespace MvxNative.iOS.Linker
         {
             textField.Text = $"{ textField.Text }";
             textField.EditingChanged += (sender, args) => { textField.Text = ""; };
+            textField.EditingDidEnd += (sender, args) => { textField.Text = ""; };
         }
 
         public void Include(UITextView textView)

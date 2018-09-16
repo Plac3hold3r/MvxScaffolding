@@ -6,8 +6,6 @@
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:coreTemplate="clr-namespace:MvxScaffolding.Core.Template;assembly=MvxScaffolding.Core"
-    xmlns:l10n="clr-namespace:MvxScaffolding.Localization.Resources;assembly=MvxScaffolding.Localization"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:viewModels="clr-namespace:MvxScaffolding.Core.ViewModels;assembly=MvxScaffolding.Core">
 
@@ -30,6 +28,7 @@
                                 <Binding Path="ScaffoldType" />
                                 <Binding Source="{StaticResource SingleViewColorBrush}" />
                                 <Binding Source="{StaticResource NavigationMenuColorBrush}" />
+                                <Binding Source="{StaticResource BlankViewColorBrush}" />
                             </MultiBinding>
                         </materialDesign:ColorZone.Background>
                         <TextBlock

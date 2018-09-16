@@ -33,6 +33,8 @@ namespace MvxScaffolding.Core.ViewModels
 
         public string ProjectName => MvxScaffoldingContext.SafeProjectName;
 
+        public string MvvmCrossVersion => Config.Current.SupportedMvvmCrossVersion;
+
         public WizardOptionViewModel Options { get; }
 
         public List<ScaffoldTemplateOptionViewModel> ScaffoldTemplateOptions { get; private set; }

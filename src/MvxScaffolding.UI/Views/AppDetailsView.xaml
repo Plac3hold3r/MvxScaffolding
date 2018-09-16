@@ -86,7 +86,7 @@
                                 Margin="0,0,24,0"
                                 Foreground="{StaticResource MaterialDesignBodyLight}"
                                 Text="{x:Static l10n:LocalResources.AppDetails_Project_Name}" />
-                            <TextBlock Grid.Column="1" Text="6.1.2" />
+                            <TextBlock Grid.Column="1" Text="{Binding MvvmCrossVersion}" />
                             <TextBlock
                                 Grid.Row="1"
                                 Grid.Column="1"

@@ -71,6 +71,15 @@ namespace MvxScaffolding.Core.ViewModels
                         Description = LocalResources.AppDetails_Template_NavigationMenu_Description,
                         IsSelected = false
                     };
+                case ScaffoldType.Blank:
+                    return new ScaffoldTemplateOptionViewModel(options)
+                    {
+                        HeaderName = "B",
+                        ScaffoldType = ScaffoldType.Blank,
+                        Name = LocalResources.AppDetails_Template_Blank,
+                        Description = LocalResources.AppDetails_Template_Blank_Description,
+                        IsSelected = false
+                    };
                 default:
                     throw new ArgumentOutOfRangeException(nameof(scaffoldType), $"No matching {nameof(ScaffoldType)} found for {scaffoldType}");
             }
