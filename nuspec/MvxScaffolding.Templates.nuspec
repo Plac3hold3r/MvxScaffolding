@@ -2,12 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>MvxScaffolding.Templates</id>
-    <version>0.16.0</version>
+    <version>0.17.0</version>
     <title>MvxScaffolding MvvmCross Templates</title>
     <authors>Plac3hold3r</authors>
     <owners>Plac3hold3r</owners>
     <licenseUrl>https://github.com/Plac3hold3r/MvxScaffolding/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/Plac3hold3r/MvxScaffolding</projectUrl>
+    <repository type="git" url="https://github.com/Plac3hold3r/MvxScaffolding" />
     <iconUrl>https://raw.githubusercontent.com/Plac3hold3r/MvxScaffolding/master/nuspec/nuget_icon.png</iconUrl>
     <description>A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.</description>
     <summary>A customizable template used to scaffold a cross-platform MvvmCross application.</summary>

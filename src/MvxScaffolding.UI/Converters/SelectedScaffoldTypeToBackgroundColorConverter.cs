@@ -22,6 +22,8 @@ namespace MvxScaffolding.UI.Converters
                         return values[1];
                     case ScaffoldType.NavigationMenu:
                         return values[2];
+                    case ScaffoldType.Blank:
+                        return values[3];
                 }
             }
 

@@ -9,6 +9,7 @@ namespace MvxScaffolding.Core.Template
     {
         None,
         SingleView,
-        NavigationMenu
+        NavigationMenu,
+        Blank
     }
 }

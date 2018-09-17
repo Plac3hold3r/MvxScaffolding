@@ -6,7 +6,7 @@
     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
     xmlns:local="clr-namespace:MvxFormsTemp.UI.Pages"
     x:Class="MvxFormsTemp.UI.Pages.HomePage"
-    xmlns:viewModels="clr-namespace:MvxFormsTemp.Core.ViewModels.Home;assembly=MvxForms.Core"
+    xmlns:viewModels="clr-namespace:MvxFormsTemp.Core.ViewModels.Home;assembly=MvxFormsTemp.Core"
                       Title="Main page">
     <ContentPage.Content>
         <StackLayout>

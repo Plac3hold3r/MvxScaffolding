@@ -2,11 +2,11 @@
 
 [![NuGet](https://img.shields.io/nuget/v/MvxScaffolding.Templates.svg)](https://www.nuget.org/packages/MvxScaffolding.Templates/)
 [![Visual Studio Marketplace](https://img.shields.io/vscode-marketplace/v/Plac3Hold3r.MvxScaffolding.svg)](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding)
-[![Build status](https://ci.appveyor.com/api/projects/status/lo18p4h64kul1u2v/branch/master?svg=true)](https://ci.appveyor.com/project/Plac3hold3r/mvxscaffolding/branch/master)
+[![Build Status](https://plac3hold3r.visualstudio.com/MvxScaffolding/_apis/build/status/MvxScaffolding%20CI)](https://plac3hold3r.visualstudio.com/MvxScaffolding/_build/latest?definitionId=4)
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/mvxscaffolding/localized.svg)](https://crowdin.com/project/mvxscaffolding)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FPlac3hold3r%2FMvxScaffolding.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FPlac3hold3r%2FMvxScaffolding?ref=badge_shield)
 
-A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms. Supports MvvmCross 6.1.2.
+A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms. Supports MvvmCross 6.2.0.
 
 ![MvxScaffolding screenshot](docs/resources/vs_template_banner.png)
 
@@ -49,7 +49,7 @@ Language | Code | Translators |
 :-------------------------:|:-------------------------:|:-------------------------:
 Chinese Simplified | zh-CN | [Forbidden (cptbl00dra1n)](https://crowdin.com/profile/cptbl00dra1n)
 French | fr-FR | [Antoine Bichon (Chapelin)](https://crowdin.com/profile/Chapelin)
-Spanish | es-ES | [elpitufo](https://crowdin.com/profile/elpitufo)
+Spanish | es-ES | [Agustin Jose Wawrzyk (elpitufo)](https://crowdin.com/profile/elpitufo)
 Danish | da-DK | [Tomasz Cielecki (Cheesebaron)](https://crowdin.com/profile/Cheesebaron)
 
 ## dotnet CLI

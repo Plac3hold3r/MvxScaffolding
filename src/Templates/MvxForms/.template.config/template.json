@@ -15,11 +15,11 @@
   "sourceName": "MvxFormsTemp",
   "preferNameDirectory": true,
   "guids": [
-    "{00000000-1111-0000-0000-000000000001}", // Core Project
-    "{00000000-1111-0000-0000-000000000002}", // Android Project
-    "{00000000-1111-0000-0000-000000000003}", // iOS Project
-    "{00000000-1111-0000-0000-000000000004}", // UWP Project
-    "{00000000-1111-0000-0000-000000000005}", // UI Project
+    "{00000000-1111-2222-0000-000000000001}", // Core Project
+    "{00000000-1111-2222-0000-000000000002}", // Android Project
+    "{00000000-1111-2222-0000-000000000003}", // iOS Project
+    "{00000000-1111-2222-0000-000000000004}", // UWP Project
+    "{00000000-1111-2222-0000-000000000005}", // UI Project
     "{00000000-1111-0000-0003-000000000002}", // Android shared Project
     "{00000000-1111-0000-0001-000000000001}", // Core Unit Test Project
     "{00000000-1111-0000-0001-000000000002}", // Android Unit Test Project
@@ -37,18 +37,11 @@
     "{00000000-1111-1111-0000-000000000003}", // iOS Project
     "{00000000-1111-1111-0000-000000000004}", // UWP Project
     "{00000000-1111-1111-0000-000000000005}", // UI Project
-    "{00000000-1111-1111-0003-000000000002}", // Android shared Project
-    "{00000000-1111-1111-0001-000000000001}", // Core Unit Test Project
-    "{00000000-1111-1111-0001-000000000002}", // Android Unit Test Project
-    "{00000000-1111-1111-0001-000000000003}", // iOS Unit Test Project
-    "{00000000-1111-1111-0001-000000000004}", // UWP Unit Test Project
-    "{00000000-1111-1111-0002-000000000004}", // UWP UI Test Project
-    "{00000000-1111-1111-0002-000000000005}", // Android and iOS UI Test Project
-    "{00000001-1111-1111-0000-000000000000}", // Solution items folder
-    "{00000002-1111-1111-0000-000000000000}", // Tests folder
-    "{00000003-1111-1111-0000-000000000000}", // Android folder
-    "{00000004-1111-1111-0000-000000000000}", // iOS folder
-    "{00000005-1111-1111-0000-000000000000}", // UWP folder
+    "{00000000-1111-3333-0000-000000000001}", // Core Project
+    "{00000000-1111-3333-0000-000000000002}", // Android Project
+    "{00000000-1111-3333-0000-000000000003}", // iOS Project
+    "{00000000-1111-3333-0000-000000000004}", // UWP Project
+    "{00000000-1111-3333-0000-000000000005}", // UI Project
     "{1650E742-2D5F-44C4-A42E-14B7AC4C6030}" // Solution GUID
   ],
   "primaryOutputs": [
@@ -137,35 +130,62 @@
           ]
         },
         {
-          "condition": "(!HasAndroidTestProject)",
+          "condition": "(HasCoreTestProject)",
+          "rename": { "Shared/test/MvxFormsTemp.Core.Test/": "test/MvxFormsTemp.Core.Test/" }
+        },
+        {
+          "condition": "(!(HasAndroidTestProject && HasAndroidProject))",
           "exclude": [
             "**/test/MvxFormsTemp.Droid.Test/**",
             "**/src/MvxFormsTemp.Droid.Shared/**"
           ]
         },
         {
-          "condition": "(!HasiOSTestProject)",
+          "condition": "(HasAndroidTestProject && HasAndroidProject)",
+          "rename": {
+            "Shared/test/MvxFormsTemp.Droid.Test/": "test/MvxFormsTemp.Droid.Test/",
+            "Shared/src/MvxFormsTemp.Droid.Shared/": "src/MvxFormsTemp.Droid.Shared/"
+          }
+        },
+        {
+          "condition": "(!(HasiOSTestProject && HasiOSProject))",
           "exclude": [
             "**/test/MvxFormsTemp.iOS.Test/**"
           ]
         },
         {
-          "condition": "(!HasXamarinUITestProject)",
+          "condition": "(HasiOSTestProject && HasiOSProject)",
+          "rename": { "Shared/test/MvxFormsTemp.iOS.Test/": "test/MvxFormsTemp.iOS.Test/" }
+        },
+        {
+          "condition": "(!(HasXamarinUITestProject && (HasiOSProject || HasAndroidProject))",
           "exclude": [
             "**/test/MvxFormsTemp.UI.Test/**"
           ]
         },
         {
-          "condition": "(!HasUWPTestProject)",
+          "condition": "(HasXamarinUITestProject && (HasiOSProject || HasAndroidProject))",
+          "rename": { "Shared/test/MvxFormsTemp.UI.Test/": "test/MvxFormsTemp.UI.Test/" }
+        },
+        {
+          "condition": "(!(HasUWPTestProject && HasUWPProject))",
           "exclude": [
             "**/test/MvxFormsTemp.UWP.Test/**"
           ]
         },
         {
-          "condition": "(!HasUWPUITestProject)",
+          "condition": "(HasUWPTestProject && HasUWPProject)",
+          "rename": { "Shared/test/MvxFormsTemp.UWP.Test/": "test/MvxFormsTemp.UWP.Test/" }
+        },
+        {
+          "condition": "(!(HasUWPUITestProject && HasUWPProject))",
           "exclude": [
             "**/test/MvxFormsTemp.UWP.UI.Test/**"
           ]
+        },
+        {
+          "condition": "(HasUWPUITestProject && HasUWPProject)",
+          "rename": { "Shared/test/MvxFormsTemp.UWP.UI.Test/": "test/MvxFormsTemp.UWP.UI.Test/" }
         },
         {
           "condition": "(!HasEditorConfig)",
@@ -279,6 +299,10 @@
         {
           "choice": "navigation-menu",
           "description": "Scaffold an app with a slide out menu. Template contains two starting views with view models."
+        },
+        {
+          "choice": "blank",
+          "description": "Scaffold an app with bare basic features."
         }
       ]
     },
@@ -305,6 +329,10 @@
     "IsNavigationMenu": {
       "type": "computed",
       "value": "(ScaffoldType == \"navigation-menu\")"
+    },
+    "IsBlank": {
+      "type": "computed",
+      "value": "(ScaffoldType == \"blank\")"
     },
     /*
     || All project flags
@@ -369,6 +397,10 @@
       "defaultValue": "19",
       "description": "Minimum Android target SDK version.",
       "choices": [
+        {
+          "choice": "28",
+          "description": "Android 9 - Pie v28"
+        },
         {
           "choice": "27",
           "description": "Android 8.1 - Oreo v27"
