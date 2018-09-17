@@ -205,16 +205,16 @@
     <value>EditorConfig</value>
   </data>
   <data name="SimpleInfo_Privacy_Desc" xml:space="preserve">
-    <value>This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more information.</value>
+    <value>Dette skabelonværktøj gør brug af tredjeparts crash- og analytics rapportering. See fortrolighedspolitikken for flere oplysninger.</value>
   </data>
   <data name="SimpleInfo_Privacy_Title" xml:space="preserve">
-    <value>Privacy</value>
+    <value>Fortrolighedspolitik</value>
   </data>
   <data name="About_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Luk</value>
   </data>
   <data name="About_CreatedBy" xml:space="preserve">
-    <value>Created by</value>
+    <value>Lavet af</value>
   </data>
   <data name="About_General__Desc" xml:space="preserve">
     <value>A customizable template used to scaffold a cross platform MvvmCross application. Includes a .NET Standard class library and NuGet package references. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.</value>
