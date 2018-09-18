@@ -93,12 +93,17 @@
         {
           "condition": "(IsSingleView)",
           "rename": { "SingleView/": "" },
-          "exclude": [ "NavigationMenu/**" ]
+          "exclude": [ "NavigationMenu/**", "Blank/**" ]
         },
         {
           "condition": "(IsNavigationMenu)",
           "rename": { "NavigationMenu/": "" },
-          "exclude": [ "SingleView/**" ]
+          "exclude": [ "SingleView/**", "Blank/**" ]
+        },
+        {
+          "condition": "(IsBlank)",
+          "rename": { "Blank/": "" },
+          "exclude": [ "SingleView/**", "NavigationMenu/**" ]
         },
         {
           "condition": "(!HasAndroidProject)",
