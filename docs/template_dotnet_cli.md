@@ -261,13 +261,18 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
   -st|--scaffold-type                    The view pattern to scaffold the solution with.
                                              single-view        - Scaffold an app with a single starting view and view model.
                                              navigation-menu    - Scaffold an app with a slide out menu. Template contains two starting views with view models.
+                                             blank              - Scaffold an app with bare basic features.
                                          Default: single-view
 ```
 
 **MvxForms** only options
 
 ```Text
-  -ui-t|--include-ui-test              Whether to include Xamarin Android and iOS UI test project.
-                                       bool - Optional
-                                       Default: false
+  -ui-t|--include-ui-test                Whether to include Xamarin Android and iOS UI test project.
+                                         bool - Optional
+                                         Default: false
+  -st|--scaffold-type                    The view pattern to scaffold the solution with.
+                                             single-view        - Scaffold an app with a single starting view and view model.
+                                             blank              - Scaffold an app with bare basic features.
+                                         Default: single-view
 ```
