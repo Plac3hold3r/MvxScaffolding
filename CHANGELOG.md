@@ -1,5 +1,23 @@
 # Change Log
 
+## [v0.18.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.18.0-beta) (2018-09-19)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.17.0-beta...v0.18.0-beta)
+
+**Implemented enhancements:**
+
+- \[Feature Request\] Request for a stripped back template [\#99](https://github.com/Plac3hold3r/MvxScaffolding/issues/99)
+- Add scaffold type for Blank template options [\#114](https://github.com/Plac3hold3r/MvxScaffolding/pull/114) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Remove the need to restore all NuGet packages [\#113](https://github.com/Plac3hold3r/MvxScaffolding/pull/113) ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Re-structure templates to simplify creating new templates [\#112](https://github.com/Plac3hold3r/MvxScaffolding/pull/112) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Set up CI with Azure Pipelines [\#111](https://github.com/Plac3hold3r/MvxScaffolding/pull/111) ([azure-pipelines[bot]](https://github.com/apps/azure-pipelines))
+- Add support for MvvmCross 6.2 [\#110](https://github.com/Plac3hold3r/MvxScaffolding/pull/110) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Merged pull requests:**
+
+- Update scaffold template location [\#117](https://github.com/Plac3hold3r/MvxScaffolding/pull/117) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- New Crowdin translations [\#116](https://github.com/Plac3hold3r/MvxScaffolding/pull/116) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- New Crowdin translations [\#115](https://github.com/Plac3hold3r/MvxScaffolding/pull/115) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
 ## [v0.17.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.17.0-beta) (2018-09-12)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.16.0-beta...v0.17.0-beta)
 
