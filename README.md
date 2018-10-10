@@ -51,6 +51,7 @@ Chinese Simplified | zh-CN | [Forbidden (cptbl00dra1n)](https://crowdin.com/prof
 French | fr-FR | [Antoine Bichon (Chapelin)](https://crowdin.com/profile/Chapelin)
 Spanish | es-ES | [Agustin Jose Wawrzyk (elpitufo)](https://crowdin.com/profile/elpitufo)
 Danish | da-DK | [Tomasz Cielecki (Cheesebaron)](https://crowdin.com/profile/Cheesebaron)
+Russian | ru-RU | [Alex (alex.bublik1093)](https://crowdin.com/profile/alex.bublik1093)
 
 ## dotnet CLI
 
