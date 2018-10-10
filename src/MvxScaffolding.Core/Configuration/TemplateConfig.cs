@@ -48,6 +48,7 @@ namespace MvxScaffolding.Core.Configuration
 
         public static Dictionary<string, string> MinIosSDKOptions => new Dictionary<string, string>
         {
+            ["12.0"] = "iOS 12.0",
             ["11.4"] = "iOS 11.4",
             ["11.3"] = "iOS 11.3",
             ["11.2"] = "iOS 11.2",

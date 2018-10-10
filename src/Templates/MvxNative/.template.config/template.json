@@ -541,6 +541,10 @@
       "description": "Minimum iOS SDK version.",
       "choices": [
         {
+          "choice": "12.0",
+          "description": "iOS 12.0"
+        },
+        {
           "choice": "11.4",
           "description": "iOS 11.4"
         },

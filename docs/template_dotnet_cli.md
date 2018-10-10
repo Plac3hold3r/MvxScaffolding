@@ -212,6 +212,7 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                          Default: 19
 
   -ios-sdk|--ios-min-sdk                 Minimum iOS SDK version.
+                                             12.0    - iOS 12.0
                                              11.4    - iOS 11.4
                                              11.3    - iOS 11.3
                                              11.2    - iOS 11.2
