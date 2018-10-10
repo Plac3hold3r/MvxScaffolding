@@ -7,6 +7,7 @@
 - Update translations
   -  Russian, by Alex (alex.bublik1093)
 - Add iOS 12 support
+- Add Visual Studio 2019 Preview support
 - Add support for UWP Windows 10 SDK 1809, October Update
 
 ## [v0.18.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.18.0-beta) (2018-09-19)
