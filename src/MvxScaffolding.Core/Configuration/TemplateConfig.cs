@@ -68,6 +68,7 @@ namespace MvxScaffolding.Core.Configuration
 
         public static Dictionary<string, string> MinUwpSDKOptions => new Dictionary<string, string>
         {
+            ["17763"] = "1809 - October 2018 Update",
             ["17134"] = "1803 - April 2018 Update",
             ["16299"] = "1709 - Fall Creators Update"
         };

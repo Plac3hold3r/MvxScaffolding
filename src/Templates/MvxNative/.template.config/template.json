@@ -638,6 +638,10 @@
       "description": "Minimum UWP target SDK version.",
       "choices": [
         {
+          "choice": "17763",
+          "description": "1809 - October 2018 Update"
+        },
+        {
           "choice": "17134",
           "description": "1803 - April 2018 Update"
         },

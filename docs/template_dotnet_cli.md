@@ -233,6 +233,7 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                          Default: Laying the foundation with Mvx Scaffolding
 
   -uwp-sdk|--uwp-min-sdk                 Minimum UWP target SDK version.
+                                             17763    - 1809 - October 2018 Update
                                              17134    - 1803 - April 2018 Update
                                              16299    - 1709 - Fall Creators Update
                                          Default: 16299
