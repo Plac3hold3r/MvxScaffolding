@@ -1,5 +1,19 @@
 # Change Log
 
+## [v0.19.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.19.0-beta) (2018-10-11)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.18.0-beta...v0.19.0-beta)
+
+**Implemented enhancements:**
+
+- Add Visual Studio 2019 preview support [\#122](https://github.com/Plac3hold3r/MvxScaffolding/pull/122) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Updates supported versions [\#121](https://github.com/Plac3hold3r/MvxScaffolding/pull/121) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update dependencies [\#120](https://github.com/Plac3hold3r/MvxScaffolding/pull/120) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update README the Russian translator [\#119](https://github.com/Plac3hold3r/MvxScaffolding/pull/119) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Merged pull requests:**
+
+- New Crowdin translations [\#118](https://github.com/Plac3hold3r/MvxScaffolding/pull/118) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
 ## [v0.18.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.18.0-beta) (2018-09-19)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.17.0-beta...v0.18.0-beta)
 
