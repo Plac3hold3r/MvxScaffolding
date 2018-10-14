@@ -424,19 +424,19 @@
     <value>Navigationsmenu</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu_Description" xml:space="preserve">
-    <value>Scaffold an app with a slide out menu. Template contains two starting views with view models.</value>
+    <value>Lav en skabelon af en app med en slide out menu. Skabelonen indeholder to views med tilhørende view modeller.</value>
   </data>
   <data name="AppDetails_Template_SingleView" xml:space="preserve">
-    <value>Single View</value>
+    <value>Et View</value>
   </data>
   <data name="AppDetails_Template_SingleView_Description" xml:space="preserve">
-    <value>Scaffold an app with a single starting view and view model.</value>
+    <value>Lav en skabelon af en app med et view og en view model.</value>
   </data>
   <data name="AppDetails_Project_Name" xml:space="preserve">
     <value>Projektnavn</value>
   </data>
   <data name="Summary_ScaffoldType" xml:space="preserve">
-    <value>Scaffold Type</value>
+    <value>Skabelontype</value>
   </data>
   <data name="Summary_SolutionName" xml:space="preserve">
     <value>Solution Navn</value>
@@ -448,6 +448,6 @@
     <value>Blank</value>
   </data>
   <data name="AppDetails_Template_Blank_Description" xml:space="preserve">
-    <value>Scaffold an app with bare basic features.</value>
+    <value>Lav en skabelon af en App med grundlæggende features.</value>
   </data>
 </root>
