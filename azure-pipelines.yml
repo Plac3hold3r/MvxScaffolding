@@ -48,3 +48,22 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: NuGetCommand@2
+  displayName: 'NuGet pack'
+  inputs:
+    command: pack
+    packagesToPack: 'nuspec/*.nuspec'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: Vsix-drop'
+  inputs:
+    PathtoPublish: '$(build.binariesdirectory)/$(BuildConfiguration)'
+    ArtifactName: 'Vsix-drop'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: NuGet-drop'
+  inputs:
+    PathtoPublish: 'nuspec'
+    ArtifactName: 'Vsix-NuGet'
+
