@@ -26,7 +26,7 @@ steps:
     feedsToUse: config
     nugetConfigPath: Nuget.Config
 
-- task: VersionVSIX
+- task: VersionVSIX@2
   inputs:
     Path: $(Build.SourcesDirectory)
     VersionNumber: $(Build.BuildNumber)
@@ -35,7 +35,7 @@ steps:
     VersionRegex: \d+\.\d+\.\d+\
     OutputVersion: OutputedVersion
 
-- task: VersionNuspec
+- task: VersionNuspec@2
   inputs: 
      Path: $(Build.SourcesDirectory)
      VersionNumber: $(Build.BuildNumber)
