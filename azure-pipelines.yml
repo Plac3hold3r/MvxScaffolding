@@ -32,14 +32,14 @@ steps:
     VersionNumber: $(Build.BuildNumber)
     UseRegex: false
     DigitMode: All
-    VersionRegex: \d+\.\d+\.\d+\
+    VersionRegex: \d+\.\d+\.\d+
     OutputVersion: OutputedVersion
 
 - task: VersionNuspec@2
   inputs: 
      Path: $(Build.SourcesDirectory)
      VersionNumber: $(Build.BuildNumber)
-     VersionRegex: \d+\.\d+\.\d+\
+     VersionRegex: \d+\.\d+\.\d+
      OutputVersion: OutputedVersion
 
 - task: VSBuild@1
