@@ -48,3 +48,23 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: NuGetCommand@2
+  displayName: 'NuGet pack'
+  inputs:
+    command: pack
+    packDestination: '$(Build.ArtifactStagingDirectory)/NuGet'
+    packagesToPack: 'nuspec/*.nuspec'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: Vsix-drop'
+  inputs:
+    PathtoPublish: 'src/MvxScaffolding.Vsix/bin/$(BuildConfiguration)'
+    ArtifactName: 'Vsix-drop'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: NuGet-drop'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/NuGet'
+    ArtifactName: 'Vsix-NuGet'
+
