@@ -58,7 +58,7 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: Vsix-drop'
   inputs:
-    PathtoPublish: '$(build.binariesdirectory)/$(BuildConfiguration)'
+    PathtoPublish: 'src/MvxScaffolding.Vsix/bin/$(BuildConfiguration)'
     ArtifactName: 'Vsix-drop'
 
 - task: PublishBuildArtifacts@1
