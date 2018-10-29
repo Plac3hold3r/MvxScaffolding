@@ -11,8 +11,6 @@
     <Vsix2011>&lt;Namespace Prefix='vs' Uri='http://schemas.microsoft.com/developer/vsx-schema/2011'/&gt;</Vsix2011>
   </PropertyGroup>
 
-  <Target Name="GetVSIXVersion" Outputs="$(VSIXBuildVersion)" />
-
   <Target Name="EnsureSourceVsixManifest" Condition="'@(SourceVsixManifest)' == ''">
     <FindVsixManifest ItemsToConsider="@(None)"
               ProjectName="$(MSBuildProjectName)">
@@ -20,34 +18,34 @@
     </FindVsixManifest>
   </Target>
   
-  <Target Name="VsixInfo" AfterTargets="DetokenizeVsixManifestFile" BeforeTargets="CoreCompile" Condition="Exists('$(IntermediateVsixManifest)')">
-    <XmlPeek Condition="'$(VsixID)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="$(IntermediateVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:Identity/@Id">
+  <Target Name="VsixInfo" DependsOnTargets="FindSourceVsixManifest" Condition="Exists('@(SourceVsixManifest)')">
+    <XmlPeek Condition="'$(VsixID)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="@(SourceVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:Identity/@Id">
       <Output TaskParameter="Result" PropertyName="VsixID" />
     </XmlPeek>
-    <XmlPeek Condition="'$(VsixName)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="$(IntermediateVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:DisplayName/text()">
+    <XmlPeek Condition="'$(VsixName)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="@(SourceVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:DisplayName/text()">
       <Output TaskParameter="Result" PropertyName="VsixName" />
     </XmlPeek>
-    <XmlPeek Condition="'$(VsixDescription)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="$(IntermediateVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:Description/text()">
+    <XmlPeek Condition="'$(VsixDescription)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="@(SourceVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:Description/text()">
       <Output TaskParameter="Result" PropertyName="VsixDescription" />
     </XmlPeek>
-    <XmlPeek Condition="'$(VsixAuthor)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="$(IntermediateVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:Identity/@Publisher">
+    <XmlPeek Condition="'$(VsixAuthor)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="@(SourceVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:Identity/@Publisher">
       <Output TaskParameter="Result" PropertyName="VsixAuthor" />
     </XmlPeek>
-    <XmlPeek Condition="'$(VsixVersion)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="$(IntermediateVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:Identity/@Version">
+    <XmlPeek Condition="'$(VsixVersion)' == ''" Namespaces="$(Vsix2011)" XmlInputPath="@(SourceVsixManifest)" Query="/vs:PackageManifest/vs:Metadata/vs:Identity/@Version">
       <Output TaskParameter="Result" PropertyName="VsixVersion" />
     </XmlPeek>
   </Target>
 
-  <Target Name="VsixThisAssembly" AfterTargets="_VsixGenerateThisAssembly"
+  <Target Name="VsixThisAssembly" DependsOnTargets="_VsixGenerateThisAssembly"
       Condition="'$(Language)' == 'C#' Or '$(Language)' == 'VB'">
     <ItemGroup>
       <Compile Include="$(ThisVsixInfoFile)" />
     </ItemGroup>
   </Target>
 
-  <Target Name="_VsixGenerateThisAssembly" AfterTargets="VsixInfo"
+  <Target Name="_VsixGenerateThisAssembly" DependsOnTargets="VsixInfo"
       Condition="'$(Language)' == 'C#' Or '$(Language)' == 'VB'"
-      Inputs="$(IntermediateVsixManifest)" Outputs="$(ThisVsixInfoFile)">
+      Inputs="@(SourceVsixManifest)" Outputs="$(ThisVsixInfoFile)">
 
     <PropertyGroup>
       <_ThisVsixInfoContent>$([System.IO.File]::ReadAllText('$(MSBuildThisFileDirectory)MSBuilder.ThisAssembly.Vsix$(DefaultLanguageSourceExtension).pp'))</_ThisVsixInfoContent>

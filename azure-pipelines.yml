@@ -6,6 +6,8 @@
 pool:
   vmImage: 'VS2017-Win2016'
 
+name: 0.19.$(Build.BuildId)
+
 variables:
   solution: '**/MvxScaffolding.Vsix.sln'
   buildPlatform: 'Any CPU'
@@ -23,6 +25,22 @@ steps:
     restoreSolution: '$(solution)'
     feedsToUse: config
     nugetConfigPath: Nuget.Config
+
+- task: VersionVSIX@2
+  inputs:
+    Path: $(Build.SourcesDirectory)
+    VersionNumber: $(Build.BuildNumber)
+    UseRegex: false
+    DigitMode: All
+    VersionRegex: \d+\.\d+\.\d+
+    OutputVersion: OutputedVersion
+
+- task: VersionNuspec@2
+  inputs: 
+     Path: $(Build.SourcesDirectory)
+     VersionNumber: $(Build.BuildNumber)
+     VersionRegex: \d+\.\d+\.\d+
+     OutputVersion: OutputedVersion
 
 - task: VSBuild@1
   inputs:
