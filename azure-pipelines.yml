@@ -6,7 +6,7 @@
 pool:
   vmImage: 'VS2017-Win2016'
 
-name: 0.19.$(Build.BuildId)
+name: $(version.major).$(version.minor).$(Build.BuildId)
 
 variables:
   solution: '**/MvxScaffolding.Vsix.sln'
