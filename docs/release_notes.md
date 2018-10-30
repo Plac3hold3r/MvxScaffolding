@@ -1,5 +1,9 @@
 ## Release Notes
 
+## [v0.20.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.20.0-beta) (2018-10-30)
+
+- Update translations
+
 ## [v0.19.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.19.0-beta) (2018-10-11)
 
 - Update to support MvvmCross 6.2.1.
