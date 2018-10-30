@@ -1,5 +1,32 @@
 # Change Log
 
+## [v0.20.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.20.0-beta) (2018-10-30)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.19.0-beta...v0.20.0-beta)
+
+**Implemented enhancements:**
+
+- Add artifacts for CI [\#126](https://github.com/Plac3hold3r/MvxScaffolding/pull/126) ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Fixed bugs:**
+
+- Update targets [\#125](https://github.com/Plac3hold3r/MvxScaffolding/pull/125) ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Closed issues:**
+
+- Dependabot couldn't find a \<anything\>.\(cs|vb|fs\)proj for this project [\#131](https://github.com/Plac3hold3r/MvxScaffolding/issues/131)
+- Dependabot couldn't find a \<anything\>.\(cs|vb|fs\)proj for this project [\#130](https://github.com/Plac3hold3r/MvxScaffolding/issues/130)
+
+**Merged pull requests:**
+
+- Bump Xamarin.Forms from 3.2.0.871581 to 3.3.0.912540 in /src/Templates/MvxForms/NavigationMenu [\#136](https://github.com/Plac3hold3r/MvxScaffolding/pull/136) [[dependencies](https://github.com/Plac3hold3r/MvxScaffolding/labels/dependencies)] ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Microsoft.NET.Test.Sdk from 15.7.2 to 15.9.0 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#135](https://github.com/Plac3hold3r/MvxScaffolding/pull/135) [[dependencies](https://github.com/Plac3hold3r/MvxScaffolding/labels/dependencies)] ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump NUnit3TestAdapter from 3.10.0 to 3.11.0 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#134](https://github.com/Plac3hold3r/MvxScaffolding/pull/134) [[dependencies](https://github.com/Plac3hold3r/MvxScaffolding/labels/dependencies)] ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Microsoft.NET.Test.Sdk from 15.7.2 to 15.9.0 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#133](https://github.com/Plac3hold3r/MvxScaffolding/pull/133) [[dependencies](https://github.com/Plac3hold3r/MvxScaffolding/labels/dependencies)] ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump NUnit3TestAdapter from 3.10.0 to 3.11.0 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#132](https://github.com/Plac3hold3r/MvxScaffolding/pull/132) [[dependencies](https://github.com/Plac3hold3r/MvxScaffolding/labels/dependencies)] ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.2.0.871581 to 3.3.0.912540 in /src/Templates/MvxForms/Blank [\#129](https://github.com/Plac3hold3r/MvxScaffolding/pull/129) [[dependencies](https://github.com/Plac3hold3r/MvxScaffolding/labels/dependencies)] ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.2.0.871581 to 3.3.0.912540 in /src/Templates/MvxForms/SingleView [\#128](https://github.com/Plac3hold3r/MvxScaffolding/pull/128) [[dependencies](https://github.com/Plac3hold3r/MvxScaffolding/labels/dependencies)] ([dependabot[bot]](https://github.com/apps/dependabot))
+- New Crowdin translations [\#123](https://github.com/Plac3hold3r/MvxScaffolding/pull/123) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
 ## [v0.19.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.19.0-beta) (2018-10-11)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.18.0-beta...v0.19.0-beta)
 
