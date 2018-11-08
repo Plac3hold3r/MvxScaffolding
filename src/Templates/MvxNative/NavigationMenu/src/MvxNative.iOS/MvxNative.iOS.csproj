@@ -156,7 +156,7 @@
       <Version>6.2.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.CodeAnalysis">
-      <Version>6.2.1</Version>
+      <Version>6.2.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Plugin.Sidebar">
       <Version>6.2.1</Version>
