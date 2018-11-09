@@ -1,5 +1,10 @@
 ## Release Notes
 
+## [v0.21.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.21.0-beta) (2018-11-09)
+
+- Update to support MvvmCross 6.2.2.
+- Update Xamarin Forms
+
 ## [v0.20.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.20.0-beta) (2018-10-30)
 
 - Update Xamarin Forms
