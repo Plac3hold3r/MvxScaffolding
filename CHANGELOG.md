@@ -1,5 +1,55 @@
 # Change Log
 
+## [v0.21.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.21.0-beta) (2018-11-09)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.20.0-beta...v0.21.0-beta)
+
+**Implemented enhancements:**
+
+- Update dependencies [\#200](https://github.com/Plac3hold3r/MvxScaffolding/pull/200) ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Merged pull requests:**
+
+- Bump MvvmCross from 6.2.1 to 6.2.2 in /src/Templates/MvxNative/NavigationMenu [\#197](https://github.com/Plac3hold3r/MvxScaffolding/pull/197) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump StrongNamer from 0.0.7 to 0.0.8 [\#196](https://github.com/Plac3hold3r/MvxScaffolding/pull/196) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.CodeAnalysis from 6.2.1 to 6.2.2 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#194](https://github.com/Plac3hold3r/MvxScaffolding/pull/194) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/NavigationMenu [\#193](https://github.com/Plac3hold3r/MvxScaffolding/pull/193) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.CodeAnalysis from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/NavigationMenu [\#192](https://github.com/Plac3hold3r/MvxScaffolding/pull/192) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Forms from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/NavigationMenu [\#190](https://github.com/Plac3hold3r/MvxScaffolding/pull/190) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Tests from 6.2.1 to 6.2.2 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#189](https://github.com/Plac3hold3r/MvxScaffolding/pull/189) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Droid.Support.V7.AppCompat from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/NavigationMenu [\#188](https://github.com/Plac3hold3r/MvxScaffolding/pull/188) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross from 6.2.1 to 6.2.2 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#186](https://github.com/Plac3hold3r/MvxScaffolding/pull/186) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.CodeAnalysis from 6.2.1 to 6.2.2 in /src/Templates/MvxNative/NavigationMenu [\#185](https://github.com/Plac3hold3r/MvxScaffolding/pull/185) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Droid.Support.Design from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/SingleView [\#184](https://github.com/Plac3hold3r/MvxScaffolding/pull/184) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Forms from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/SingleView [\#183](https://github.com/Plac3hold3r/MvxScaffolding/pull/183) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Droid.Support.V7.AppCompat from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/SingleView [\#182](https://github.com/Plac3hold3r/MvxScaffolding/pull/182) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/SingleView [\#181](https://github.com/Plac3hold3r/MvxScaffolding/pull/181) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.CodeAnalysis from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/SingleView [\#180](https://github.com/Plac3hold3r/MvxScaffolding/pull/180) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Droid.Support.Design from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/NavigationMenu [\#179](https://github.com/Plac3hold3r/MvxScaffolding/pull/179) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Droid.Support.Design from 6.2.1 to 6.2.2 in /src/Templates/MvxNative/NavigationMenu [\#178](https://github.com/Plac3hold3r/MvxScaffolding/pull/178) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Droid.Support.V7.AppCompat from 6.2.1 to 6.2.2 in /src/Templates/MvxNative/NavigationMenu [\#177](https://github.com/Plac3hold3r/MvxScaffolding/pull/177) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Plugin.Sidebar from 6.2.1 to 6.2.2 in /src/Templates/MvxNative/NavigationMenu [\#176](https://github.com/Plac3hold3r/MvxScaffolding/pull/176) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross from 6.2.1 to 6.2.2 in /src/Templates/MvxNative/Blank [\#174](https://github.com/Plac3hold3r/MvxScaffolding/pull/174) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Droid.Support.V7.AppCompat from 6.2.1 to 6.2.2 in /src/Templates/MvxNative/Blank [\#173](https://github.com/Plac3hold3r/MvxScaffolding/pull/173) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Droid.Support.Design from 6.2.1 to 6.2.2 in /src/Templates/MvxNative/Blank [\#172](https://github.com/Plac3hold3r/MvxScaffolding/pull/172) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Droid.Support.V7.AppCompat from 6.2.1 to 6.2.2 in /src/Templates/MvxNative/SingleView [\#164](https://github.com/Plac3hold3r/MvxScaffolding/pull/164) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Droid.Support.Design from 6.2.1 to 6.2.2 in /src/Templates/MvxNative/SingleView [\#162](https://github.com/Plac3hold3r/MvxScaffolding/pull/162) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump SonarAnalyzer.CSharp from 7.3.0.5690 to 7.8.0.7320 [\#161](https://github.com/Plac3hold3r/MvxScaffolding/pull/161) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross from 6.2.1 to 6.2.2 in /src/Templates/MvxNative/SingleView [\#160](https://github.com/Plac3hold3r/MvxScaffolding/pull/160) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.CodeAnalysis from 6.2.1 to 6.2.2 in /src/Templates/MvxNative/SingleView [\#157](https://github.com/Plac3hold3r/MvxScaffolding/pull/157) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Droid.Support.Design from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/Blank [\#156](https://github.com/Plac3hold3r/MvxScaffolding/pull/156) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/Blank [\#154](https://github.com/Plac3hold3r/MvxScaffolding/pull/154) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Forms from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/Blank [\#152](https://github.com/Plac3hold3r/MvxScaffolding/pull/152) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Droid.Support.V7.AppCompat from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/Blank [\#151](https://github.com/Plac3hold3r/MvxScaffolding/pull/151) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.Tests from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#145](https://github.com/Plac3hold3r/MvxScaffolding/pull/145) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross.CodeAnalysis from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#144](https://github.com/Plac3hold3r/MvxScaffolding/pull/144) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump MvvmCross from 6.2.1 to 6.2.2 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#143](https://github.com/Plac3hold3r/MvxScaffolding/pull/143) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.3.0.912540 to 3.3.0.967583 in /src/Templates/MvxForms/NavigationMenu [\#142](https://github.com/Plac3hold3r/MvxScaffolding/pull/142) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.3.0.912540 to 3.3.0.967583 in /src/Templates/MvxForms/Blank [\#141](https://github.com/Plac3hold3r/MvxScaffolding/pull/141) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.3.0.912540 to 3.3.0.967583 in /src/Templates/MvxForms/SingleView [\#140](https://github.com/Plac3hold3r/MvxScaffolding/pull/140) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Cirrious.FluentLayout from 2.7.0 to 2.8.0 in /src/Templates/MvxNative/SingleView [\#139](https://github.com/Plac3hold3r/MvxScaffolding/pull/139) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Cirrious.FluentLayout from 2.7.0 to 2.8.0 in /src/Templates/MvxNative/Blank [\#138](https://github.com/Plac3hold3r/MvxScaffolding/pull/138) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Cirrious.FluentLayout from 2.7.0 to 2.8.0 in /src/Templates/MvxNative/NavigationMenu [\#137](https://github.com/Plac3hold3r/MvxScaffolding/pull/137) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.20.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.20.0-beta) (2018-10-30)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.19.0-beta...v0.20.0-beta)
 
@@ -18,13 +68,13 @@
 
 **Merged pull requests:**
 
-- Bump Xamarin.Forms from 3.2.0.871581 to 3.3.0.912540 in /src/Templates/MvxForms/NavigationMenu [\#136](https://github.com/Plac3hold3r/MvxScaffolding/pull/136) [[dependencies](https://github.com/Plac3hold3r/MvxScaffolding/labels/dependencies)] ([dependabot[bot]](https://github.com/apps/dependabot))
-- Bump Microsoft.NET.Test.Sdk from 15.7.2 to 15.9.0 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#135](https://github.com/Plac3hold3r/MvxScaffolding/pull/135) [[dependencies](https://github.com/Plac3hold3r/MvxScaffolding/labels/dependencies)] ([dependabot[bot]](https://github.com/apps/dependabot))
-- Bump NUnit3TestAdapter from 3.10.0 to 3.11.0 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#134](https://github.com/Plac3hold3r/MvxScaffolding/pull/134) [[dependencies](https://github.com/Plac3hold3r/MvxScaffolding/labels/dependencies)] ([dependabot[bot]](https://github.com/apps/dependabot))
-- Bump Microsoft.NET.Test.Sdk from 15.7.2 to 15.9.0 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#133](https://github.com/Plac3hold3r/MvxScaffolding/pull/133) [[dependencies](https://github.com/Plac3hold3r/MvxScaffolding/labels/dependencies)] ([dependabot[bot]](https://github.com/apps/dependabot))
-- Bump NUnit3TestAdapter from 3.10.0 to 3.11.0 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#132](https://github.com/Plac3hold3r/MvxScaffolding/pull/132) [[dependencies](https://github.com/Plac3hold3r/MvxScaffolding/labels/dependencies)] ([dependabot[bot]](https://github.com/apps/dependabot))
-- Bump Xamarin.Forms from 3.2.0.871581 to 3.3.0.912540 in /src/Templates/MvxForms/Blank [\#129](https://github.com/Plac3hold3r/MvxScaffolding/pull/129) [[dependencies](https://github.com/Plac3hold3r/MvxScaffolding/labels/dependencies)] ([dependabot[bot]](https://github.com/apps/dependabot))
-- Bump Xamarin.Forms from 3.2.0.871581 to 3.3.0.912540 in /src/Templates/MvxForms/SingleView [\#128](https://github.com/Plac3hold3r/MvxScaffolding/pull/128) [[dependencies](https://github.com/Plac3hold3r/MvxScaffolding/labels/dependencies)] ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.2.0.871581 to 3.3.0.912540 in /src/Templates/MvxForms/NavigationMenu [\#136](https://github.com/Plac3hold3r/MvxScaffolding/pull/136) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Microsoft.NET.Test.Sdk from 15.7.2 to 15.9.0 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#135](https://github.com/Plac3hold3r/MvxScaffolding/pull/135) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump NUnit3TestAdapter from 3.10.0 to 3.11.0 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#134](https://github.com/Plac3hold3r/MvxScaffolding/pull/134) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Microsoft.NET.Test.Sdk from 15.7.2 to 15.9.0 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#133](https://github.com/Plac3hold3r/MvxScaffolding/pull/133) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump NUnit3TestAdapter from 3.10.0 to 3.11.0 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#132](https://github.com/Plac3hold3r/MvxScaffolding/pull/132) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.2.0.871581 to 3.3.0.912540 in /src/Templates/MvxForms/Blank [\#129](https://github.com/Plac3hold3r/MvxScaffolding/pull/129) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.2.0.871581 to 3.3.0.912540 in /src/Templates/MvxForms/SingleView [\#128](https://github.com/Plac3hold3r/MvxScaffolding/pull/128) ([dependabot[bot]](https://github.com/apps/dependabot))
 - New Crowdin translations [\#123](https://github.com/Plac3hold3r/MvxScaffolding/pull/123) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 
 ## [v0.19.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.19.0-beta) (2018-10-11)
@@ -101,6 +151,10 @@
 ## [v0.15.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.15.0-beta) (2018-08-21)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.14.0-beta...v0.15.0-beta)
 
+**Implemented enhancements:**
+
+- Fetch release notes from GitHub [\#77](https://github.com/Plac3hold3r/MvxScaffolding/pull/77) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
 **Fixed bugs:**
 
 - Fragment BindingInflate ignores `container` argument [\#95](https://github.com/Plac3hold3r/MvxScaffolding/issues/95)
@@ -133,7 +187,6 @@
 - Add scaffold type template setup configurations [\#85](https://github.com/Plac3hold3r/MvxScaffolding/pull/85) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Update dependencies [\#84](https://github.com/Plac3hold3r/MvxScaffolding/pull/84) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Add native iOS Navigation menu template [\#81](https://github.com/Plac3hold3r/MvxScaffolding/pull/81) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
-- Fetch release notes from GitHub [\#77](https://github.com/Plac3hold3r/MvxScaffolding/pull/77) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Update Vsix wizard dependencies [\#76](https://github.com/Plac3hold3r/MvxScaffolding/pull/76) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Update Xamarin Forms and FluentLayout NuGets [\#75](https://github.com/Plac3hold3r/MvxScaffolding/pull/75) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Add Android navigation menu template [\#74](https://github.com/Plac3hold3r/MvxScaffolding/pull/74) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
