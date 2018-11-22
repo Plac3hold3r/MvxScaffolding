@@ -4,7 +4,7 @@
 [![Visual Studio Marketplace](https://badgen.net/vs-marketplace/v/Plac3Hold3r.MvxScaffolding)](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding)
 [![Build Status](https://plac3hold3r.visualstudio.com/MvxScaffolding/_apis/build/status/MvxScaffolding%20CI)](https://plac3hold3r.visualstudio.com/MvxScaffolding/_build/latest?definitionId=4)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FPlac3hold3r%2FMvxScaffolding.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FPlac3hold3r%2FMvxScaffolding?ref=badge_shield)
-[![Crowdin](https://d322cqt584bo4o.cloudfront.net/mvxscaffolding/localized.svg)](https://crowdin.com/project/mvxscaffolding)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=Plac3hold3r/MvxScaffolding)](https://dependabot.com)
 
 A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms. Supports MvvmCross 6.2.2.
 
