@@ -5,6 +5,7 @@
 - Fix iOS blank templates not compiling and black bars above and below view
 - Update Xamarin Forms
 - Update Universal Windows Platform to 6.2.2
+- Add iOS 12.1 support
 
 ## [v0.21.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.21.0-beta) (2018-11-09)
 
