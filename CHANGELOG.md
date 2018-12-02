@@ -1,5 +1,33 @@
 # Change Log
 
+## [v0.22.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.22.0-beta) (2018-12-02)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.21.0-beta...v0.22.0-beta)
+
+**Implemented enhancements:**
+
+- Add iOS 12.1 support [\#216](https://github.com/Plac3hold3r/MvxScaffolding/pull/216) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Fixed bugs:**
+
+- Wrong MvxViewController sizing within Mvx native iOS project [\#214](https://github.com/Plac3hold3r/MvxScaffolding/issues/214)
+- Fix iOS blank templates [\#215](https://github.com/Plac3hold3r/MvxScaffolding/pull/215) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Merged pull requests:**
+
+- Bump NUnit3TestAdapter from 3.11.1 to 3.11.2 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#213](https://github.com/Plac3hold3r/MvxScaffolding/pull/213) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump NUnit3TestAdapter from 3.11.1 to 3.11.2 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#212](https://github.com/Plac3hold3r/MvxScaffolding/pull/212) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump NUnit3TestAdapter from 3.11.0 to 3.11.1 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#211](https://github.com/Plac3hold3r/MvxScaffolding/pull/211) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump NUnit3TestAdapter from 3.11.0 to 3.11.1 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#210](https://github.com/Plac3hold3r/MvxScaffolding/pull/210) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.3.0.967583 to 3.4.0.1008975 in /src/Templates/MvxForms/Blank [\#209](https://github.com/Plac3hold3r/MvxScaffolding/pull/209) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.3.0.967583 to 3.4.0.1008975 in /src/Templates/MvxForms/SingleView [\#208](https://github.com/Plac3hold3r/MvxScaffolding/pull/208) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.3.0.967583 to 3.4.0.1008975 in /src/Templates/MvxForms/NavigationMenu [\#207](https://github.com/Plac3hold3r/MvxScaffolding/pull/207) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Microsoft.NETCore.UniversalWindowsPlatform from 6.1.9 to 6.2.2 in /src/Templates/MvxForms/SingleView [\#206](https://github.com/Plac3hold3r/MvxScaffolding/pull/206) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Microsoft.NETCore.UniversalWindowsPlatform from 6.1.9 to 6.2.2 in /src/Templates/MvxNative/NavigationMenu [\#205](https://github.com/Plac3hold3r/MvxScaffolding/pull/205) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Microsoft.NETCore.UniversalWindowsPlatform from 6.1.9 to 6.2.2 in /src/Templates/MvxNative/SingleView [\#204](https://github.com/Plac3hold3r/MvxScaffolding/pull/204) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Microsoft.NETCore.UniversalWindowsPlatform from 6.1.9 to 6.2.2 in /src/Templates/MvxNative/Blank [\#203](https://github.com/Plac3hold3r/MvxScaffolding/pull/203) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Microsoft.NETCore.UniversalWindowsPlatform from 6.1.9 to 6.2.2 in /src/Templates/MvxForms/Blank [\#202](https://github.com/Plac3hold3r/MvxScaffolding/pull/202) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Microsoft.NETCore.UniversalWindowsPlatform from 6.1.9 to 6.2.2 in /src/Templates/MvxForms/NavigationMenu [\#201](https://github.com/Plac3hold3r/MvxScaffolding/pull/201) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.21.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.21.0-beta) (2018-11-09)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.20.0-beta...v0.21.0-beta)
 
@@ -151,10 +179,6 @@
 ## [v0.15.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.15.0-beta) (2018-08-21)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.14.0-beta...v0.15.0-beta)
 
-**Implemented enhancements:**
-
-- Fetch release notes from GitHub [\#77](https://github.com/Plac3hold3r/MvxScaffolding/pull/77) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
-
 **Fixed bugs:**
 
 - Fragment BindingInflate ignores `container` argument [\#95](https://github.com/Plac3hold3r/MvxScaffolding/issues/95)
@@ -187,6 +211,7 @@
 - Add scaffold type template setup configurations [\#85](https://github.com/Plac3hold3r/MvxScaffolding/pull/85) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Update dependencies [\#84](https://github.com/Plac3hold3r/MvxScaffolding/pull/84) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Add native iOS Navigation menu template [\#81](https://github.com/Plac3hold3r/MvxScaffolding/pull/81) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Fetch release notes from GitHub [\#77](https://github.com/Plac3hold3r/MvxScaffolding/pull/77) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Update Vsix wizard dependencies [\#76](https://github.com/Plac3hold3r/MvxScaffolding/pull/76) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Update Xamarin Forms and FluentLayout NuGets [\#75](https://github.com/Plac3hold3r/MvxScaffolding/pull/75) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
 - Add Android navigation menu template [\#74](https://github.com/Plac3hold3r/MvxScaffolding/pull/74) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
