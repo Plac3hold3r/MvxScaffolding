@@ -122,6 +122,7 @@
     <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup Condition=" '$(HasFluentLayouts)' == 'false' ">
     <Compile Include="Views\Main\MainViewController.designer.cs">
