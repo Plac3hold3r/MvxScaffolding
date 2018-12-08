@@ -27,27 +27,27 @@ namespace MvxScaffolding.Core.ViewModels.Dialogs
             GoToPrivacyPolicyCommand = new RelayCommand(GoToPrivacyPolicyLink);
         }
 
-        void GoToGitHubLink()
+        private void GoToGitHubLink()
         {
             OpenLink(Config.Current.GitHubUri, TemplateLinks.GitHub);
         }
 
-        void GoToAuthorGitHubLink()
+        private void GoToAuthorGitHubLink()
         {
             OpenLink(Config.Current.AuthorGitHubUri, TemplateLinks.AuthorGitHub);
         }
 
-        void GoToHelpTranslateLink()
+        private void GoToHelpTranslateLink()
         {
             OpenLink(Config.Current.HelpTranslateUri, TemplateLinks.HelpTranslate);
         }
 
-        void GoToChangelogLink()
+        private void GoToChangelogLink()
         {
             OpenLink(Config.Current.ChangelogUri, TemplateLinks.Changelog);
         }
 
-        void GoToPrivacyPolicyLink()
+        private void GoToPrivacyPolicyLink()
         {
             OpenLink(Config.Current.PrivacyPolicyUri, TemplateLinks.PrivacyPolicy);
         }

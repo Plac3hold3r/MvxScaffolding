@@ -27,7 +27,7 @@ namespace MvxScaffolding.Core.Diagnostics
 
         public static List<IWriter> Writers { get; } = new List<IWriter>();
 
-        static Logger _current;
+        private static Logger _current;
 
         public static Logger Current
         {
@@ -43,7 +43,7 @@ namespace MvxScaffolding.Core.Diagnostics
             private set => _current = value;
         }
 
-        Logger()
+        private Logger()
         {
             InstanceDefaultWriters();
 
@@ -55,7 +55,7 @@ namespace MvxScaffolding.Core.Diagnostics
             Telemetry = new TelemetryTracker();
         }
 
-        void InstanceDefaultWriters()
+        private void InstanceDefaultWriters()
         {
             Writers.Add(new ConsoleWriter());
             Writers.Add(RemoteWriter.Current);

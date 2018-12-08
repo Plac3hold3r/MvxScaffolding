@@ -71,7 +71,7 @@ namespace MvxScaffolding.Core.ViewModels
             return true;
         }
 
-        void ShowDialog(IViewModel viewModel)
+        private void ShowDialog(IViewModel viewModel)
         {
             string dialogPageName;
 

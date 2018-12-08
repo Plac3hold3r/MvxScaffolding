@@ -45,7 +45,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             await WriteTraceAsync(TraceEventType.Critical, "Exception Tracked", ex);
         }
 
-        async Task CallAsync(Action action)
+        private async Task CallAsync(Action action)
         {
             var task = Task.Run(() => action);
             await task;

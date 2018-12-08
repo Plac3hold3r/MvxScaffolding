@@ -39,12 +39,12 @@ namespace MvxScaffolding.Core.ViewModels
 
         public List<ScaffoldTemplateOptionViewModel> ScaffoldTemplateOptions { get; private set; }
 
-        SimpleInfoViewModel _editorConfigInfoModel;
+        private SimpleInfoViewModel _editorConfigInfoModel;
 
         public SimpleInfoViewModel EditorConfigInfoModel
             => _editorConfigInfoModel ?? (_editorConfigInfoModel = SimpleInfoViewModel.EditorConfigInfo());
 
-        void GoToGitHubLink()
+        private void GoToGitHubLink()
         {
             OpenLink(Config.Current.GitHubUri, TemplateLinks.GitHub);
         }

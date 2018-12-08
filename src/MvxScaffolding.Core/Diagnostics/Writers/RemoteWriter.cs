@@ -21,10 +21,9 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
     {
         public bool IsEnabled { get; private set; }
 
-        readonly Config _currentConfig;
-        TelemetryClient _client;
-
-        static RemoteWriter _current;
+        private readonly Config _currentConfig;
+        private TelemetryClient _client;
+        private static RemoteWriter _current;
 
         public static RemoteWriter Current
         {
@@ -46,7 +45,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             _current = null;
         }
 
-        RemoteWriter(Config config)
+        private RemoteWriter(Config config)
         {
             _currentConfig = config ?? throw new ArgumentNullException(nameof(config));
 
@@ -93,7 +92,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             await Current.TrackExceptionAsync(ex, properties);
         }
 
-        void IntializeTelemetryClient()
+        private void IntializeTelemetryClient()
         {
             try
             {
@@ -128,7 +127,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             }
         }
 
-        bool VsTelemetryIsOptedIn()
+        private bool VsTelemetryIsOptedIn()
         {
             try
             {
@@ -142,7 +141,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             }
         }
 
-        bool SafeVsTelemetryIsOptedIn()
+        private bool SafeVsTelemetryIsOptedIn()
         {
             var result = false;
             var vsEdition = string.Empty;
@@ -182,7 +181,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             return result;
         }
 
-        void SetSessionData()
+        private void SetSessionData()
         {
             if (Settings.Default.AiUserId == Guid.Empty)
             {
@@ -235,7 +234,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             }
         }
 
-        async Task SafeExecuteAsync(Action action)
+        private async Task SafeExecuteAsync(Action action)
         {
             try
             {
@@ -256,7 +255,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             }
         }
 
-        async Task SafeExecuteAsync(Func<Task> action)
+        private async Task SafeExecuteAsync(Func<Task> action)
         {
             try
             {
@@ -309,7 +308,7 @@ namespace MvxScaffolding.Core.Diagnostics.Writers
             }
         }
 
-        bool RemoteKeyAvailable()
+        private bool RemoteKeyAvailable()
         {
             // Returns true if a valid AI key or tagged AI key exists
             var validGuid = Guid.TryParse(_currentConfig.RemoteTelemetryKey, out Guid auxA);

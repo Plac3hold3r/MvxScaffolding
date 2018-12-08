@@ -5,16 +5,16 @@
 
 namespace MvxScaffolding.Vsix.Constants
 {
-    public static class VSTemplateKeys
+    internal static class VSTemplateKeys
     {
-        public const string DestinationDirectory = "$destinationdirectory$";
+        internal const string DestinationDirectory = "$destinationdirectory$";
 
-        public const string SolutionDirectory = "$solutiondirectory$";
+        internal const string SolutionDirectory = "$solutiondirectory$";
 
-        public const string SafeProjectName = "$safeprojectname$";
+        internal const string SafeProjectName = "$safeprojectname$";
 
-        public const string ProjectName = "$projectname$";
+        internal const string ProjectName = "$projectname$";
 
-        public const string SpecifiedSolutionName = "$specifiedsolutionname$";
+        internal const string SpecifiedSolutionName = "$specifiedsolutionname$";
     }
 }

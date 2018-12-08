@@ -11,7 +11,7 @@ namespace MvxScaffolding.Core.Validation
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
     public class RequiredIfAttribute : ValidationAttribute
     {
-        readonly RequiredAttribute _innerAttribute = new RequiredAttribute();
+        private readonly RequiredAttribute _innerAttribute = new RequiredAttribute();
 
         public string _dependentProperty { get; set; }
         public object _targetValue { get; set; }

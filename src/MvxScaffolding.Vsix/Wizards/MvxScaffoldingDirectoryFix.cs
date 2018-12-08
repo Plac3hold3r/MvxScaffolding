@@ -14,9 +14,9 @@ namespace MvxScaffolding.Vsix.Wizards
 {
     public class MvxScaffoldingDirectoryFix : IWizard
     {
-        DTE _dte;
-        string _destinationDirectory;
-        string _solutionName;
+        private DTE _dte;
+        private string _destinationDirectory;
+        private string _solutionName;
 
         public void BeforeOpeningFile(ProjectItem projectItem)
         {

@@ -16,7 +16,7 @@ namespace MvxScaffolding.Core.Configuration
 {
     public class Config
     {
-        const string DefaultJsonConfigFileName = "MvxScaffolding.config.json";
+        private const string DefaultJsonConfigFileName = "MvxScaffolding.config.json";
 
         public string RemoteTelemetryKey { get; set; }
 
@@ -46,7 +46,7 @@ namespace MvxScaffolding.Core.Configuration
 
         public PlatformScaffoldTypeConfiguration PlatformScaffoldTypeConfiguration { get; set; }
 
-        static Config _current;
+        private static Config _current;
 
         public static Config Current
         {
@@ -88,7 +88,7 @@ namespace MvxScaffolding.Core.Configuration
             return loadedConfig;
         }
 
-        static Config DeserializeConfiguration(string path)
+        private static Config DeserializeConfiguration(string path)
         {
             try
             {
@@ -106,7 +106,7 @@ namespace MvxScaffolding.Core.Configuration
             }
         }
 
-        static void TraceUsingDefault(string info)
+        private static void TraceUsingDefault(string info)
         {
             Debug.Write(info);
             Trace.TraceWarning(info);

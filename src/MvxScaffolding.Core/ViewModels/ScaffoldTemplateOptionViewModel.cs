@@ -31,7 +31,7 @@ namespace MvxScaffolding.Core.ViewModels
 
         public bool HasUwpSupport { get; set; }
 
-        bool _isSelected;
+        private bool _isSelected;
         public bool IsSelected
         {
             get => _isSelected;
@@ -85,7 +85,7 @@ namespace MvxScaffolding.Core.ViewModels
             }
         }
 
-        void SelectScaffoldType()
+        private void SelectScaffoldType()
         {
             Options.SelectedScaffoldType.IsSelected = false;
             Options.SelectedScaffoldType = this;
