@@ -94,7 +94,7 @@ namespace MvxScaffolding.Vsix.Wizards
             }
         }
 
-        static void RemoveOldSolutionDirectory(object automationObject, Dictionary<string, string> replacementsDictionary)
+        private static void RemoveOldSolutionDirectory(object automationObject, Dictionary<string, string> replacementsDictionary)
         {
             var dte = (DTE)automationObject;
             var solution = (Solution2)dte.Solution;
@@ -172,12 +172,12 @@ namespace MvxScaffolding.Vsix.Wizards
             }
         }
 
-        readonly Lazy<IVsUIShell> _uiShell = new Lazy<IVsUIShell>(() =>
+        private readonly Lazy<IVsUIShell> _uiShell = new Lazy<IVsUIShell>(() =>
         {
             SafeThreading.JoinableTaskFactory.SwitchToMainThreadAsync();
             return ServiceProvider.GlobalProvider.GetService(typeof(SVsUIShell)) as IVsUIShell;
         }, true);
 
-        IVsUIShell UIShell => _uiShell.Value;
+        protected IVsUIShell UIShell => _uiShell.Value;
     }
 }

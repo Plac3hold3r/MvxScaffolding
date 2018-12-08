@@ -16,7 +16,7 @@ namespace MvxScaffolding.UI.Dialogs
             Show(viewModel, OnDialogOpenedAsync);
         }
 
-        async void OnDialogOpenedAsync(object sender, DialogOpenedEventArgs eventArgs)
+        private async void OnDialogOpenedAsync(object sender, DialogOpenedEventArgs eventArgs)
         {
             if (eventArgs.Session.Content is IViewModel viewModel)
                 await viewModel.OnDialogOpenedAsync();
