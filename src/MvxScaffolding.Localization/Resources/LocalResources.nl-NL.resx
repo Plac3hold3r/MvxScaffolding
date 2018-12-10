@@ -184,7 +184,7 @@
     <value>Unit Test Project</value>
   </data>
   <data name="PlatformOptions_Android_LayoutType" xml:space="preserve">
-    <value>Layout Type</value>
+    <value>Type indeling</value>
   </data>
   <data name="PlatformOptions_Core_dotNetStandard" xml:space="preserve">
     <value>.NET Standard</value>
@@ -226,7 +226,7 @@
     <value>This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more information.</value>
   </data>
   <data name="PlatformOptions_Ios_LayoutType" xml:space="preserve">
-    <value>Layout Type</value>
+    <value>Type indeling</value>
   </data>
   <data name="PlatformOptions_Ios_MarketShare" xml:space="preserve">
     <value>Marktaandeel</value>
@@ -298,7 +298,7 @@
     <value>Unit Test Project</value>
   </data>
   <data name="Summary_Android_LayoutType" xml:space="preserve">
-    <value>Layout Type</value>
+    <value>Type indeling</value>
   </data>
   <data name="Summary_Application" xml:space="preserve">
     <value>Application</value>
@@ -325,7 +325,7 @@
     <value>iOS</value>
   </data>
   <data name="Summary_Ios_LayoutType" xml:space="preserve">
-    <value>Layout Type</value>
+    <value>Type indeling</value>
   </data>
   <data name="Summary_Ios_MinSdk" xml:space="preserve">
     <value>Min SDK version</value>
