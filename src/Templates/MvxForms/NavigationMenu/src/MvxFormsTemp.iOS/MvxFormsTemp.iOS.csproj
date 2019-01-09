@@ -172,6 +172,8 @@
     <BundleResource Include="Resources\launch_image.png" />
     <BundleResource Include="Resources\launch_image%402x.png" />
     <BundleResource Include="Resources\launch_image%403x.png" />
+    <BundleResource Include="Resources\hamburger%402x.png" />
+    <BundleResource Include="Resources\hamburger.png" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-1024.png">
@@ -227,12 +229,6 @@
     <NativeReference Include="Native References/Measurements.framework">
       <Kind>Framework</Kind>
     </NativeReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\hamburger%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\hamburger.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
