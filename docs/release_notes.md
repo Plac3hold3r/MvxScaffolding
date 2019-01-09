@@ -1,5 +1,11 @@
 ## Release Notes
 
+## [v0.23.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.23.0-beta) (2019-01-09)
+
+- Update Xamarin Forms
+- Update Android Support packages to v28
+- Update FluentLayout
+
 ## [v0.22.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.22.0-beta) (2018-12-02)
 
 - Fix iOS blank templates not compiling and black bars above and below view
