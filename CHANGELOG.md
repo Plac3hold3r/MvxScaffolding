@@ -1,5 +1,48 @@
 # Change Log
 
+## [v0.23.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.23.0-beta) (2019-01-09)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.22.0-beta...v0.23.0-beta)
+
+**Implemented enhancements:**
+
+- New Crowdin translations [\#224](https://github.com/Plac3hold3r/MvxScaffolding/pull/224) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Update editor config [\#223](https://github.com/Plac3hold3r/MvxScaffolding/pull/223) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Add preview tag [\#222](https://github.com/Plac3hold3r/MvxScaffolding/pull/222) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Merged pull requests:**
+
+- Bump Xamarin.Forms from 3.4.0.1008975 to 3.4.0.1009999 in /src/Templates/MvxForms/Blank [\#250](https://github.com/Plac3hold3r/MvxScaffolding/pull/250) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.4.0.1008975 to 3.4.0.1009999 in /src/Templates/MvxForms/SingleView [\#249](https://github.com/Plac3hold3r/MvxScaffolding/pull/249) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.4.0.1008975 to 3.4.0.1009999 in /src/Templates/MvxForms/NavigationMenu [\#248](https://github.com/Plac3hold3r/MvxScaffolding/pull/248) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump NUnit3TestAdapter from 3.11.2 to 3.12.0 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#247](https://github.com/Plac3hold3r/MvxScaffolding/pull/247) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump NUnit3TestAdapter from 3.11.2 to 3.12.0 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#246](https://github.com/Plac3hold3r/MvxScaffolding/pull/246) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Design from 27.0.2.1 to 28.0.0 in /src/Templates/MvxNative/NavigationMenu [\#245](https://github.com/Plac3hold3r/MvxScaffolding/pull/245) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Design from 27.0.2.1 to 28.0.0 in /src/Templates/MvxNative/SingleView [\#244](https://github.com/Plac3hold3r/MvxScaffolding/pull/244) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Design from 27.0.2.1 to 28.0.0 in /src/Templates/MvxNative/Blank [\#243](https://github.com/Plac3hold3r/MvxScaffolding/pull/243) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Core.UI from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/SingleView [\#242](https://github.com/Plac3hold3r/MvxScaffolding/pull/242) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Media.Compat from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/SingleView [\#241](https://github.com/Plac3hold3r/MvxScaffolding/pull/241) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Compat from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/SingleView [\#240](https://github.com/Plac3hold3r/MvxScaffolding/pull/240) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Core.Utils from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/SingleView [\#239](https://github.com/Plac3hold3r/MvxScaffolding/pull/239) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Fragment from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/SingleView [\#238](https://github.com/Plac3hold3r/MvxScaffolding/pull/238) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Annotations from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/SingleView [\#237](https://github.com/Plac3hold3r/MvxScaffolding/pull/237) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Annotations from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/Blank [\#236](https://github.com/Plac3hold3r/MvxScaffolding/pull/236) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Fragment from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/Blank [\#235](https://github.com/Plac3hold3r/MvxScaffolding/pull/235) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Compat from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/Blank [\#234](https://github.com/Plac3hold3r/MvxScaffolding/pull/234) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Core.UI from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/Blank [\#233](https://github.com/Plac3hold3r/MvxScaffolding/pull/233) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Core.Utils from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/Blank [\#232](https://github.com/Plac3hold3r/MvxScaffolding/pull/232) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Media.Compat from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/Blank [\#231](https://github.com/Plac3hold3r/MvxScaffolding/pull/231) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Media.Compat from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/NavigationMenu [\#230](https://github.com/Plac3hold3r/MvxScaffolding/pull/230) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Compat from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/NavigationMenu [\#229](https://github.com/Plac3hold3r/MvxScaffolding/pull/229) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Annotations from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/NavigationMenu [\#228](https://github.com/Plac3hold3r/MvxScaffolding/pull/228) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Core.UI from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/NavigationMenu [\#227](https://github.com/Plac3hold3r/MvxScaffolding/pull/227) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Fragment from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/NavigationMenu [\#226](https://github.com/Plac3hold3r/MvxScaffolding/pull/226) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Android.Support.Core.Utils from 27.0.2.1 to 28.0.0 in /src/Templates/MvxForms/NavigationMenu [\#225](https://github.com/Plac3hold3r/MvxScaffolding/pull/225) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Cirrious.FluentLayout from 2.8.0 to 2.9.0 in /src/Templates/MvxNative/SingleView [\#221](https://github.com/Plac3hold3r/MvxScaffolding/pull/221) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Cirrious.FluentLayout from 2.8.0 to 2.9.0 in /src/Templates/MvxNative/Blank [\#220](https://github.com/Plac3hold3r/MvxScaffolding/pull/220) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Cirrious.FluentLayout from 2.8.0 to 2.9.0 in /src/Templates/MvxNative/NavigationMenu [\#219](https://github.com/Plac3hold3r/MvxScaffolding/pull/219) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Moq from 4.10.0 to 4.10.1 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#218](https://github.com/Plac3hold3r/MvxScaffolding/pull/218) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Moq from 4.10.0 to 4.10.1 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#217](https://github.com/Plac3hold3r/MvxScaffolding/pull/217) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.22.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.22.0-beta) (2018-12-02)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.21.0-beta...v0.22.0-beta)
 
