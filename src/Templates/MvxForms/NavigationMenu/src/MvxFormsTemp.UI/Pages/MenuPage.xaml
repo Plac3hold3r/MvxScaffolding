@@ -22,7 +22,7 @@
                         <On Platform="iOS" Value="0,20,0,0" />
                     </OnPlatform>
                 </StackLayout.Margin>
-                <Label Text="HamburgerMenu Demo" Margin="10" VerticalOptions="Center" FontSize="Large"></Label>
+                <Label Text="NavigationMenu" Margin="10" VerticalOptions="Center" FontSize="Large"></Label>
             </StackLayout>
             <ListView x:Name="MenuList" ItemsSource="{Binding MenuItemList}" 
                       SelectedItem="{Binding SelectedMenuItem, Mode=TwoWay}">
