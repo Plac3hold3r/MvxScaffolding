@@ -1,6 +1,6 @@
-﻿using MvvmCross.IoC;
+using MvvmCross.IoC;
 using MvvmCross.ViewModels;
-using MvxFormsTemp.Core.ViewModels.Home;
+using MvxFormsTemp.Core.ViewModels.Root;
 
 namespace MvxFormsTemp.Core
 {
@@ -13,7 +13,7 @@ namespace MvxFormsTemp.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<HomeViewModel>();
+            RegisterAppStart<RootViewModel>();
         }
     }
 }
