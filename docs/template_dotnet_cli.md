@@ -212,6 +212,7 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                          Default: 19
 
   -ios-sdk|--ios-min-sdk                 Minimum iOS SDK version.
+                                             12.1    - iOS 12.1
                                              12.0    - iOS 12.0
                                              11.4    - iOS 11.4
                                              11.3    - iOS 11.3
@@ -237,6 +238,12 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                              17134    - 1803 - April 2018 Update
                                              16299    - 1709 - Fall Creators Update
                                          Default: 16299
+
+  -st|--scaffold-type                    The view pattern to scaffold the solution with.
+                                             single-view        - Scaffold an app with a single starting view and view model.
+                                             navigation-menu    - Scaffold an app with a slide out menu. Template contains two starting views with view models.
+                                             blank              - Scaffold an app with bare basic features.
+                                         Default: single-view
 ```
 
 **MvxNative** only options
@@ -259,12 +266,6 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                              fluent        - FluentLayout, a fluent API for creating constraint-based layouts.
                                              storyboard    - Storyboard, iOS layout format compatible with Xcode interface builder.
                                          Default: fluent
-
-  -st|--scaffold-type                    The view pattern to scaffold the solution with.
-                                             single-view        - Scaffold an app with a single starting view and view model.
-                                             navigation-menu    - Scaffold an app with a slide out menu. Template contains two starting views with view models.
-                                             blank              - Scaffold an app with bare basic features.
-                                         Default: single-view
 ```
 
 **MvxForms** only options
@@ -273,8 +274,4 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
   -ui-t|--include-ui-test                Whether to include Xamarin Android and iOS UI test project.
                                          bool - Optional
                                          Default: false
-  -st|--scaffold-type                    The view pattern to scaffold the solution with.
-                                             single-view        - Scaffold an app with a single starting view and view model.
-                                             blank              - Scaffold an app with bare basic features.
-                                         Default: single-view
 ```

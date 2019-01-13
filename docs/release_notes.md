@@ -1,5 +1,10 @@
 ## Release Notes
 
+## [v0.24.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.24.0-beta) (2019-01-13)
+
+- Add Navigation template to MvxForms, thanks @yanxiaodi 
+- Fix Android Xamarin Forms templates not specifying correct dependency versions
+
 ## [v0.23.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.23.0-beta) (2019-01-09)
 
 - Update Xamarin Forms
