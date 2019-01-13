@@ -2,10 +2,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>MvxScaffolding.Templates</id>
-    <version>0.23.0</version>
+    <version>0.24.0</version>
     <title>MvxScaffolding MvvmCross Templates</title>
     <authors>Plac3hold3r</authors>
     <owners>Plac3hold3r</owners>
+    <license type="MIT"/>
     <licenseUrl>https://github.com/Plac3hold3r/MvxScaffolding/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/Plac3hold3r/MvxScaffolding</projectUrl>
     <repository type="git" url="https://github.com/Plac3hold3r/MvxScaffolding" />
