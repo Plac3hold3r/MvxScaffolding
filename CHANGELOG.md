@@ -1,5 +1,17 @@
 # Change Log
 
+## [v0.24.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.24.0-beta) (2019-01-13)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.23.0-beta...v0.24.0-beta)
+
+**Implemented enhancements:**
+
+- Missing NavigationMenu template for Xamarin.Forms [\#251](https://github.com/Plac3hold3r/MvxScaffolding/issues/251)
+- Add the NavigationMenu template for Xamarin.Forms. [\#252](https://github.com/Plac3hold3r/MvxScaffolding/pull/252) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([yanxiaodi](https://github.com/yanxiaodi))
+
+**Fixed bugs:**
+
+- Fix android dependencies for Forms templates [\#253](https://github.com/Plac3hold3r/MvxScaffolding/pull/253) ([Plac3hold3r](https://github.com/Plac3hold3r))
+
 ## [v0.23.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.23.0-beta) (2019-01-09)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.22.0-beta...v0.23.0-beta)
 
