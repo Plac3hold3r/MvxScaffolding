@@ -16,6 +16,8 @@ namespace MvxFormsTemp.Core.ViewModels.Menu
     {
         readonly IMvxNavigationService _navigationService;
 
+        public IMvxAsyncCommand ShowDetailPageAsyncCommand { get; private set; }
+
         public MenuViewModel(IMvxNavigationService navigationService)
         {
             _navigationService = navigationService;
@@ -24,29 +26,17 @@ namespace MvxFormsTemp.Core.ViewModels.Menu
                 "Home",
                 "Contacts"
             };
+
+            ShowDetailPageAsyncCommand = new MvxAsyncCommand(ShowDetailPageAsync);
         }
 
-
-
-        #region MenuItemList;
         private ObservableCollection<string> _menuItemList;
         public ObservableCollection<string> MenuItemList
         {
             get => _menuItemList;
             set => SetProperty(ref _menuItemList, value);
         }
-        #endregion
 
-        #region ShowDetailPageAsyncCommand;
-        private IMvxAsyncCommand _showDetailPageAsyncCommand;
-        public IMvxAsyncCommand ShowDetailPageAsyncCommand
-        {
-            get
-            {
-                _showDetailPageAsyncCommand = _showDetailPageAsyncCommand ?? new MvxAsyncCommand(ShowDetailPageAsync);
-                return _showDetailPageAsyncCommand;
-            }
-        }
         private async Task ShowDetailPageAsync()
         {
             // Implement your logic here.
@@ -61,6 +51,7 @@ namespace MvxFormsTemp.Core.ViewModels.Menu
                 default:
                     break;
             }
+
             if (Application.Current.MainPage is MasterDetailPage masterDetailPage)
             {
                 masterDetailPage.IsPresented = false;
@@ -71,16 +62,12 @@ namespace MvxFormsTemp.Core.ViewModels.Menu
                 nestedMasterDetail.IsPresented = false;
             }
         }
-        #endregion
 
-
-        #region SelectedMenuItem;
         private string _selectedMenuItem;
         public string SelectedMenuItem
         {
             get => _selectedMenuItem;
             set => SetProperty(ref _selectedMenuItem, value);
         }
-        #endregion
     }
 }
