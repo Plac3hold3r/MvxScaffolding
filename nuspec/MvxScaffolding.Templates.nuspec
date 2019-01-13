@@ -6,8 +6,7 @@
     <title>MvxScaffolding MvvmCross Templates</title>
     <authors>Plac3hold3r</authors>
     <owners>Plac3hold3r</owners>
-    <license type="MIT"/>
-    <licenseUrl>https://github.com/Plac3hold3r/MvxScaffolding/blob/master/LICENSE</licenseUrl>
+    <license type="expression">MIT</license>
     <projectUrl>https://github.com/Plac3hold3r/MvxScaffolding</projectUrl>
     <repository type="git" url="https://github.com/Plac3hold3r/MvxScaffolding" />
     <iconUrl>https://raw.githubusercontent.com/Plac3hold3r/MvxScaffolding/master/nuspec/nuget_icon.png</iconUrl>
