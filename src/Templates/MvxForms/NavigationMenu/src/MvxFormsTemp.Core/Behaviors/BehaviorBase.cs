@@ -4,7 +4,7 @@ using System.Text;
 using Xamarin.Forms;
 
 namespace MvxFormsTemp.Core.Behaviors
-{    
+{
     public class BehaviorBase<T> : Behavior<T> where T : BindableObject
     {
         public T AssociatedObject { get; private set; }
