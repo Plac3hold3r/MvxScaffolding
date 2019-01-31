@@ -421,7 +421,7 @@
     <value>Solution name required</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu" xml:space="preserve">
-    <value>Navigation Menu</value>
+    <value>Навігаційне меню</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu_Description" xml:space="preserve">
     <value>Scaffold an app with a slide out menu. Template contains two starting views with view models.</value>
@@ -433,7 +433,7 @@
     <value>Scaffold an app with a single starting view and view model.</value>
   </data>
   <data name="AppDetails_Project_Name" xml:space="preserve">
-    <value>Project Name</value>
+    <value>Назва проекту</value>
   </data>
   <data name="Summary_ScaffoldType" xml:space="preserve">
     <value>Scaffold Type</value>
@@ -442,12 +442,12 @@
     <value>Solution Name</value>
   </data>
   <data name="ReleaseNotes_InstalledVersion" xml:space="preserve">
-    <value>Installed Version</value>
+    <value>Встановлена версія</value>
   </data>
   <data name="AppDetails_Template_Blank" xml:space="preserve">
-    <value>Blank</value>
+    <value>Пусто</value>
   </data>
   <data name="AppDetails_Template_Blank_Description" xml:space="preserve">
-    <value>Scaffold an app with bare basic features.</value>
+    <value>Згенерувати додаток з мінімальним функціоналом.</value>
   </data>
 </root>
