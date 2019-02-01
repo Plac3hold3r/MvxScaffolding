@@ -121,70 +121,70 @@
     <value>Application</value>
   </data>
   <data name="AppDetails_Display_Name" xml:space="preserve">
-    <value>Display Name</value>
+    <value>Ім'я</value>
   </data>
   <data name="AppDetails_EditorConfig" xml:space="preserve">
     <value>EditorConfig</value>
   </data>
   <data name="AppDetails_Identifier" xml:space="preserve">
-    <value>Identifier</value>
+    <value>Ідентифікатор</value>
   </data>
   <data name="AppDetails_Project_Grouping" xml:space="preserve">
     <value>Project Grouping</value>
   </data>
   <data name="AppDetails_Solution" xml:space="preserve">
-    <value>Solution</value>
+    <value>Рішення</value>
   </data>
   <data name="AppDetails_Validation_Display_Name" xml:space="preserve">
-    <value>Application name required</value>
+    <value>Назва рішення обов'язкова</value>
   </data>
   <data name="AppDetails_Validation_Identifier" xml:space="preserve">
-    <value>Application identifier required</value>
+    <value>Ідентифікатор рішення обов'язковий</value>
   </data>
   <data name="Main_Window_Button_About" xml:space="preserve">
-    <value>About</value>
+    <value>Про додаток</value>
   </data>
   <data name="Main_Window_Button_Done" xml:space="preserve">
-    <value>Done</value>
+    <value>Готово</value>
   </data>
   <data name="Main_Window_Button_Next" xml:space="preserve">
-    <value>Next</value>
+    <value>Далі</value>
   </data>
   <data name="Main_Window_Button_Previous" xml:space="preserve">
-    <value>Previous</value>
+    <value>Попередній</value>
   </data>
   <data name="Main_Window_Button_Privacy" xml:space="preserve">
-    <value>Privacy</value>
+    <value>Конфіденційність</value>
   </data>
   <data name="Main_Window_Link_GitHub" xml:space="preserve">
-    <value>Visit MvxScaffolding on GitHub</value>
+    <value>Відвідайте MvxScaffolding на GitHub</value>
   </data>
   <data name="Main_Window_SectionHeader_AppDetails" xml:space="preserve">
-    <value>App Details</value>
+    <value>Про додаток</value>
   </data>
   <data name="Main_Window_SectionHeader_PlatformOptions" xml:space="preserve">
-    <value>Platforms Options</value>
+    <value>Параметри платформ</value>
   </data>
   <data name="Main_Window_SectionHeader_Summary" xml:space="preserve">
-    <value>Summary</value>
+    <value>Підсумок</value>
   </data>
   <data name="PlatformOptions_Android_MarketShare" xml:space="preserve">
-    <value>Market Share</value>
+    <value>Частка ринку</value>
   </data>
   <data name="PlatformOptions_Android_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Мінімальна версія SDK</value>
   </data>
   <data name="PlatformOptions_Android_Title" xml:space="preserve">
-    <value>Android</value>
+    <value>Андроїд</value>
   </data>
   <data name="PlatformOptions_Android_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>Проект UI тестів</value>
   </data>
   <data name="PlatformOptions_Android_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Проект юніт тестів</value>
   </data>
   <data name="PlatformOptions_Android_LayoutType" xml:space="preserve">
-    <value>Layout Type</value>
+    <value>Тип лейаута</value>
   </data>
   <data name="PlatformOptions_Core_dotNetStandard" xml:space="preserve">
     <value>.NET Standard</value>
@@ -226,7 +226,7 @@
     <value>This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more information.</value>
   </data>
   <data name="PlatformOptions_Ios_LayoutType" xml:space="preserve">
-    <value>Layout Type</value>
+    <value>Тип лейаута</value>
   </data>
   <data name="PlatformOptions_Ios_MarketShare" xml:space="preserve">
     <value>Market Share</value>
@@ -298,7 +298,7 @@
     <value>Unit Test Project</value>
   </data>
   <data name="Summary_Android_LayoutType" xml:space="preserve">
-    <value>Layout Type</value>
+    <value>Тип лейаута</value>
   </data>
   <data name="Summary_Application" xml:space="preserve">
     <value>Application</value>
@@ -325,7 +325,7 @@
     <value>iOS</value>
   </data>
   <data name="Summary_Ios_LayoutType" xml:space="preserve">
-    <value>Layout Type</value>
+    <value>Тип лейаута</value>
   </data>
   <data name="Summary_Ios_MinSdk" xml:space="preserve">
     <value>Min SDK version</value>
@@ -415,39 +415,39 @@
     <value>GitHub</value>
   </data>
   <data name="AppDetails_Solution_Name" xml:space="preserve">
-    <value>Solution Name</value>
+    <value>Назва рішення</value>
   </data>
   <data name="AppDetails_Validation_SolutionName" xml:space="preserve">
-    <value>Solution name required</value>
+    <value>Назва рішення обов'язкова</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu" xml:space="preserve">
-    <value>Navigation Menu</value>
+    <value>Навігаційне меню</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu_Description" xml:space="preserve">
-    <value>Scaffold an app with a slide out menu. Template contains two starting views with view models.</value>
+    <value>Згенерувати додаток з випливаючим меню. Шаблон містить два початкових view з view models.</value>
   </data>
   <data name="AppDetails_Template_SingleView" xml:space="preserve">
-    <value>Single View</value>
+    <value>Односторінковий</value>
   </data>
   <data name="AppDetails_Template_SingleView_Description" xml:space="preserve">
-    <value>Scaffold an app with a single starting view and view model.</value>
+    <value>Згенерувати додаток з єдиним початковим view та view model.</value>
   </data>
   <data name="AppDetails_Project_Name" xml:space="preserve">
-    <value>Project Name</value>
+    <value>Назва проекту</value>
   </data>
   <data name="Summary_ScaffoldType" xml:space="preserve">
-    <value>Scaffold Type</value>
+    <value>Тип генерування</value>
   </data>
   <data name="Summary_SolutionName" xml:space="preserve">
-    <value>Solution Name</value>
+    <value>Назва рішення</value>
   </data>
   <data name="ReleaseNotes_InstalledVersion" xml:space="preserve">
-    <value>Installed Version</value>
+    <value>Встановлена версія</value>
   </data>
   <data name="AppDetails_Template_Blank" xml:space="preserve">
-    <value>Blank</value>
+    <value>Пусто</value>
   </data>
   <data name="AppDetails_Template_Blank_Description" xml:space="preserve">
-    <value>Scaffold an app with bare basic features.</value>
+    <value>Згенерувати додаток з мінімальним функціоналом.</value>
   </data>
 </root>
