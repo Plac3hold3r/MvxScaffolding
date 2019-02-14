@@ -187,7 +187,7 @@
       <Version>6.2.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross">
-      <Version>6.2.2</Version>
+      <Version>6.2.3</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Forms">
       <Version>6.2.3</Version>
