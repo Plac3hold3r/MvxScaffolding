@@ -118,88 +118,88 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppDetails_Application" xml:space="preserve">
-    <value>Application</value>
+    <value>Applicazione</value>
   </data>
   <data name="AppDetails_Display_Name" xml:space="preserve">
-    <value>Display Name</value>
+    <value>Nome Visualizzato</value>
   </data>
   <data name="AppDetails_EditorConfig" xml:space="preserve">
     <value>EditorConfig</value>
   </data>
   <data name="AppDetails_Identifier" xml:space="preserve">
-    <value>Identifier</value>
+    <value>Identificativo</value>
   </data>
   <data name="AppDetails_Project_Grouping" xml:space="preserve">
-    <value>Project Grouping</value>
+    <value>Raggruppa Progetti</value>
   </data>
   <data name="AppDetails_Solution" xml:space="preserve">
-    <value>Solution</value>
+    <value>Soluzione</value>
   </data>
   <data name="AppDetails_Validation_Display_Name" xml:space="preserve">
-    <value>Application name required</value>
+    <value>Il nome dell'applicazione è necessario</value>
   </data>
   <data name="AppDetails_Validation_Identifier" xml:space="preserve">
-    <value>Application identifier required</value>
+    <value>Identificativo applicazione necessario</value>
   </data>
   <data name="Main_Window_Button_About" xml:space="preserve">
-    <value>About</value>
+    <value>Maggiori informazioni su</value>
   </data>
   <data name="Main_Window_Button_Done" xml:space="preserve">
-    <value>Done</value>
+    <value>Fatto</value>
   </data>
   <data name="Main_Window_Button_Next" xml:space="preserve">
-    <value>Next</value>
+    <value>Successivo</value>
   </data>
   <data name="Main_Window_Button_Previous" xml:space="preserve">
-    <value>Previous</value>
+    <value>Precedente</value>
   </data>
   <data name="Main_Window_Button_Privacy" xml:space="preserve">
-    <value>Privacy</value>
+    <value>Informativa sulla Privacy</value>
   </data>
   <data name="Main_Window_Link_GitHub" xml:space="preserve">
-    <value>Visit MvxScaffolding on GitHub</value>
+    <value>Visita MvxScaffolding su GitHub</value>
   </data>
   <data name="Main_Window_SectionHeader_AppDetails" xml:space="preserve">
-    <value>App Details</value>
+    <value>Dettagli App</value>
   </data>
   <data name="Main_Window_SectionHeader_PlatformOptions" xml:space="preserve">
-    <value>Platforms Options</value>
+    <value>Opzioni piattaforme</value>
   </data>
   <data name="Main_Window_SectionHeader_Summary" xml:space="preserve">
-    <value>Summary</value>
+    <value>Riepilogo</value>
   </data>
   <data name="PlatformOptions_Android_MarketShare" xml:space="preserve">
-    <value>Market Share</value>
+    <value>Quota di mercato</value>
   </data>
   <data name="PlatformOptions_Android_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Versione SDK di min</value>
   </data>
   <data name="PlatformOptions_Android_Title" xml:space="preserve">
     <value>Android</value>
   </data>
   <data name="PlatformOptions_Android_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>Progetto di Test dell'interfaccia utente</value>
   </data>
   <data name="PlatformOptions_Android_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Progetto di Unit Test</value>
   </data>
   <data name="PlatformOptions_Android_LayoutType" xml:space="preserve">
     <value>Layout Type</value>
   </data>
   <data name="PlatformOptions_Core_dotNetStandard" xml:space="preserve">
-    <value>.NET Standard</value>
+    <value>.NET standard</value>
   </data>
   <data name="PlatformOptions_Core_Title" xml:space="preserve">
     <value>Core</value>
   </data>
   <data name="PlatformOptions_Core_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Progetto di Unit Test</value>
   </data>
   <data name="PlatformOptions_Validation_Uwp_Description" xml:space="preserve">
-    <value>Description required</value>
+    <value>Descrizione necessaria</value>
   </data>
   <data name="SimpleInfo_EditorConfig_Desc" xml:space="preserve">
-    <value>Enable to include an EditorConfig file at the root of the solution. EditorConfig is used to define coding styles highlighted within Visual Studio.</value>
+    <value>Includi un file EditorConfig nella directory principale della soluzione. EditorConfig viene utilizzato per definire gli stili del codice evidenziati all'interno di Visual Studio.</value>
   </data>
   <data name="SimpleInfo_EditorConfig_Title" xml:space="preserve">
     <value>EditorConfig</value>
@@ -208,13 +208,13 @@
     <value>This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more information.</value>
   </data>
   <data name="SimpleInfo_Privacy_Title" xml:space="preserve">
-    <value>Privacy</value>
+    <value>Informativa sulla Privacy</value>
   </data>
   <data name="About_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Chiudi</value>
   </data>
   <data name="About_CreatedBy" xml:space="preserve">
-    <value>Created by</value>
+    <value>Creato da</value>
   </data>
   <data name="About_General__Desc" xml:space="preserve">
     <value>A customizable template used to scaffold a cross platform MvvmCross application. Includes a .NET Standard class library and NuGet package references. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.</value>
@@ -229,10 +229,10 @@
     <value>Layout Type</value>
   </data>
   <data name="PlatformOptions_Ios_MarketShare" xml:space="preserve">
-    <value>Market Share</value>
+    <value>Quota di mercato</value>
   </data>
   <data name="PlatformOptions_Ios_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Versione SDK minima</value>
   </data>
   <data name="PlatformOptions_Ios_Title" xml:space="preserve">
     <value>iOS</value>
@@ -244,10 +244,10 @@
     <value>Unit Test Project</value>
   </data>
   <data name="PlatformOptions_Uwp_Description" xml:space="preserve">
-    <value>Description</value>
+    <value>Descrizione</value>
   </data>
   <data name="PlatformOptions_Uwp_MarketShare" xml:space="preserve">
-    <value>Market Share</value>
+    <value>Quota di mercato</value>
   </data>
   <data name="PlatformOptions_Uwp_MinSdk" xml:space="preserve">
     <value>Min SDK version</value>
@@ -262,7 +262,7 @@
     <value>Unit Test Project</value>
   </data>
   <data name="ProjectGrouping_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Chiudi</value>
   </data>
   <data name="ProjectGrouping_Description" xml:space="preserve">
     <value>The grouping for projects into folders inside of the solution.</value>
@@ -280,10 +280,10 @@
     <value>Project Grouping</value>
   </data>
   <data name="SimpleInfo_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Chiudi</value>
   </data>
   <data name="SimpleInfo_Button_More_Info" xml:space="preserve">
-    <value>More Info</value>
+    <value>Maggiori informazioni</value>
   </data>
   <data name="Summary_Android_MinSdk" xml:space="preserve">
     <value>Min SDK version</value>
@@ -301,10 +301,10 @@
     <value>Layout Type</value>
   </data>
   <data name="Summary_Application" xml:space="preserve">
-    <value>Application</value>
+    <value>Applicazione</value>
   </data>
   <data name="Summary_Core_dotNetStandard" xml:space="preserve">
-    <value>.NET Standard</value>
+    <value>.NET standard</value>
   </data>
   <data name="Summary_Core_Title" xml:space="preserve">
     <value>Core</value>
@@ -313,7 +313,7 @@
     <value>Unit Test Project</value>
   </data>
   <data name="Summary_DisplayName" xml:space="preserve">
-    <value>Display Name</value>
+    <value>Nome Visualizzato</value>
   </data>
   <data name="Summary_EditorConfig" xml:space="preserve">
     <value>EditorConfig</value>
@@ -352,64 +352,64 @@
     <value>UI Test Project</value>
   </data>
   <data name="Summary_Uwp_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Progetto di Unit Test</value>
   </data>
   <data name="About_GitHub_Link" xml:space="preserve">
     <value>GitHub</value>
   </data>
   <data name="About_Privacy_Link" xml:space="preserve">
-    <value>Privacy Policy</value>
+    <value>Informativa sulla privacy</value>
   </data>
   <data name="Template_Choice_False" xml:space="preserve">
-    <value>False</value>
+    <value>Falso</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Flat" xml:space="preserve">
-    <value>Flat</value>
+    <value>Piatto</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Platform" xml:space="preserve">
-    <value>Platform</value>
+    <value>Piattaforma</value>
   </data>
   <data name="Template_Choice_ProjectGroup_TestGroup" xml:space="preserve">
-    <value>Test Group</value>
+    <value>Raggruppa Test</value>
   </data>
   <data name="Template_Choice_True" xml:space="preserve">
-    <value>True</value>
+    <value>Vero</value>
   </data>
   <data name="Main_Window_Button_Translate" xml:space="preserve">
-    <value>Translate</value>
+    <value>Traduci</value>
   </data>
   <data name="SimpleInfo_Translate_Desc" xml:space="preserve">
     <value>Find an error in spelling or grammar? Want MvxScaffolding translated into your native language? To help translate MvxScaffolding, please visit our Crowdin page.</value>
   </data>
   <data name="SimpleInfo_Translate_Title" xml:space="preserve">
-    <value>Help Translate</value>
+    <value>Partecipa alla traduzione</value>
   </data>
   <data name="About_Translate_Link" xml:space="preserve">
-    <value>Help Translate</value>
+    <value>Partecipa alla traduzione</value>
   </data>
   <data name="About_Changelog_Link" xml:space="preserve">
-    <value>Changelog</value>
+    <value>Registro delle modifiche</value>
   </data>
   <data name="AppDetails_MvvmCross_Version" xml:space="preserve">
-    <value>MvvmCross Version</value>
+    <value>Versione MvvmCross</value>
   </data>
   <data name="Main_Window_Notify_Dismiss" xml:space="preserve">
-    <value>Dismiss</value>
+    <value>Scarta</value>
   </data>
   <data name="Main_Window_Notify_ReleaseNotes" xml:space="preserve">
-    <value>Release Notes</value>
+    <value>Note di rilascio</value>
   </data>
   <data name="Main_Window_Notify_Updated" xml:space="preserve">
-    <value>{0} updated</value>
+    <value>{0} Aggiornato</value>
   </data>
   <data name="AppDetails_Required" xml:space="preserve">
-    <value>Required</value>
+    <value>Obbligatorio</value>
   </data>
   <data name="ReleaseNotes_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Chiudi</value>
   </data>
   <data name="ReleaseNotes_Changelog_Link" xml:space="preserve">
-    <value>Changelog</value>
+    <value>Registro delle modifiche</value>
   </data>
   <data name="ReleaseNotes_GitHub_Link" xml:space="preserve">
     <value>GitHub</value>
