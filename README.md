@@ -7,25 +7,25 @@
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=Plac3hold3r/MvxScaffolding)](https://dependabot.com)
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/mvxscaffolding/localized.svg)](https://crowdin.com/project/mvxscaffolding)
 
-A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms. Supports MvvmCross 6.2.2.
+A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms. Supports MvvmCross 6.2.3.
 
 ![MvxScaffolding screenshot](docs/resources/vs_template_banner.png)
 
 __Templates features__
 
- Features    | mvxnative            |  mvxforms
-:-------------------------:|:-------------------------:|:-------------------------:
-[.NET Standard class library](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) |* |*
-[Package references](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files) |* |*
-Unit test projects |* |*
-UI test projects |* |*
-Solution [EditorConfig](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options) |* |*
-Android Nougat round icons |* |*
-Android Oreo adaptive icons |* |*
-Android support constraint layout |* |
-Android AXML or XML layout |* |
-iOS storyboard launch screen |* | *
-iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.FluentLayout) |* |
+ |                                                     Features                                                      | mvxnative | mvxforms |
+ | :---------------------------------------------------------------------------------------------------------------: | :-------: | :------: |
+ |           [.NET Standard class library](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)            |     *     |    *     |
+ | [Package references](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files) |     *     |    *     |
+ |                                                Unit test projects                                                 |     *     |    *     |
+ |                                                 UI test projects                                                  |     *     |    *     |
+ | Solution [EditorConfig](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options)  |     *     |    *     |
+ |                                            Android Nougat round icons                                             |     *     |    *     |
+ |                                            Android Oreo adaptive icons                                            |     *     |    *     |
+ |                                         Android support constraint layout                                         |     *     |
+ |                                            Android AXML or XML layout                                             |     *     |
+ |                                           iOS storyboard launch screen                                            |     *     |    *     |
+ |             iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.FluentLayout)              |     *     |
 
 See [Release Notes](docs/release_notes.md)
 
@@ -33,10 +33,10 @@ See [Changelog](/CHANGELOG.md)
 
 ## Installation
 
- Platform  |  Installation and System Requirements | Documentation           | Download           |
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-dotnet CLI | [Installation Guide](#dotnet-cli) | [Documentation](docs/template_dotnet_cli.md) | [NuGet](https://www.nuget.org/packages/MvxScaffolding.Templates/)
-Visual Studio Extension | [Installation Guide](#visual-studio-extension) | [Documentation](docs/template_vs.md) | [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding)
+ |        Platform         |      Installation and System Requirements      |                Documentation                 |                                                  Download                                                   |
+ | :---------------------: | :--------------------------------------------: | :------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
+ |       dotnet CLI        |       [Installation Guide](#dotnet-cli)        | [Documentation](docs/template_dotnet_cli.md) |                      [NuGet](https://www.nuget.org/packages/MvxScaffolding.Templates/)                      |
+ | Visual Studio Extension | [Installation Guide](#visual-studio-extension) |     [Documentation](docs/template_vs.md)     | [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding) |
 
 ## Help Translate
 
@@ -46,15 +46,15 @@ If you want to help translate MvxScaffolding into your native language. Please c
 
 Thank you to the following translators
 
-Language | Code | Translators |
-:-------------------------:|:-------------------------:|:-------------------------:
-Chinese Simplified | zh-CN | [Forbidden (cptbl00dra1n)](https://crowdin.com/profile/cptbl00dra1n)
-French | fr-FR | [Antoine Bichon (Chapelin)](https://crowdin.com/profile/Chapelin)
-Spanish | es-ES | [Agustin Jose Wawrzyk (elpitufo)](https://crowdin.com/profile/elpitufo)
-Danish | da-DK | [Tomasz Cielecki (Cheesebaron)](https://crowdin.com/profile/Cheesebaron)
-Russian | ru-RU | [Alexander Bublik (alex.bublik1093)](https://crowdin.com/profile/alex.bublik1093)
-Italian | ru-RU | [Emanuele Filardo (fileman)](https://crowdin.com/profile/fileman)
-Ukrainian | uk-UA | [Руслан Соромля (garenauser)](https://crowdin.com/profile/garenauser), [Anthony Maisak (anthony.maisak)](https://crowdin.com/profile/anthony.maisak)
+|      Language      | Code  |                                                                     Translators                                                                      |
+| :----------------: | :---: | :--------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Chinese Simplified | zh-CN |                                         [Forbidden (cptbl00dra1n)](https://crowdin.com/profile/cptbl00dra1n)                                         |
+|       French       | fr-FR |                                          [Antoine Bichon (Chapelin)](https://crowdin.com/profile/Chapelin)                                           |
+|      Spanish       | es-ES |                                       [Agustin Jose Wawrzyk (elpitufo)](https://crowdin.com/profile/elpitufo)                                        |
+|       Danish       | da-DK |                                       [Tomasz Cielecki (Cheesebaron)](https://crowdin.com/profile/Cheesebaron)                                       |
+|      Russian       | ru-RU |                                  [Alexander Bublik (alex.bublik1093)](https://crowdin.com/profile/alex.bublik1093)                                   |
+|      Italian       | ru-RU |                                          [Emanuele Filardo (fileman)](https://crowdin.com/profile/fileman)                                           |
+|     Ukrainian      | uk-UA | [Руслан Соромля (garenauser)](https://crowdin.com/profile/garenauser), [Anthony Maisak (anthony.maisak)](https://crowdin.com/profile/anthony.maisak) |
 
 ## dotnet CLI
 
