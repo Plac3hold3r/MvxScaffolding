@@ -1,4 +1,4 @@
-# MvxScaffolding (Preview)
+﻿# MvxScaffolding (Preview)
 
 [![NuGet](https://badgen.net/nuget/v/MvxScaffolding.Templates)](https://www.nuget.org/packages/MvxScaffolding.Templates/)
 [![Visual Studio Marketplace](https://badgen.net/vs-marketplace/v/Plac3Hold3r.MvxScaffolding)](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding)
@@ -52,7 +52,9 @@ Chinese Simplified | zh-CN | [Forbidden (cptbl00dra1n)](https://crowdin.com/prof
 French | fr-FR | [Antoine Bichon (Chapelin)](https://crowdin.com/profile/Chapelin)
 Spanish | es-ES | [Agustin Jose Wawrzyk (elpitufo)](https://crowdin.com/profile/elpitufo)
 Danish | da-DK | [Tomasz Cielecki (Cheesebaron)](https://crowdin.com/profile/Cheesebaron)
-Russian | ru-RU | [Alex (alex.bublik1093)](https://crowdin.com/profile/alex.bublik1093)
+Russian | ru-RU | [Alexander Bublik (alex.bublik1093)](https://crowdin.com/profile/alex.bublik1093)
+Italian | ru-RU | [Emanuele Filardo (fileman)](https://crowdin.com/profile/fileman)
+Ukrainian | uk-UA | [Руслан Соромля (garenauser)](https://crowdin.com/profile/garenauser), [Anthony Maisak (anthony.maisak)](https://crowdin.com/profile/anthony.maisak)
 
 ## dotnet CLI
 
