@@ -1,4 +1,12 @@
-## Release Notes
+﻿## Release Notes
+
+## [v0.25.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.25.0-beta) (2019-02-19)
+
+- Update to support MvvmCross 6.2.2.
+- Update Xamarin Forms
+- Update translations
+  -  Italian, by Emanuele Filardo
+  -  Ukrainian, by Руслан Соромля and Anthony Maisak
 
 ## [v0.24.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.24.0-beta) (2019-01-13)
 
