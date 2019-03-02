@@ -445,9 +445,9 @@
     <value>已安装版本</value>
   </data>
   <data name="AppDetails_Template_Blank" xml:space="preserve">
-    <value>Blank</value>
+    <value>空</value>
   </data>
   <data name="AppDetails_Template_Blank_Description" xml:space="preserve">
-    <value>Scaffold an app with bare basic features.</value>
+    <value>构建拥有基础功能的应用程序。</value>
   </data>
 </root>
