@@ -53,7 +53,7 @@ Thank you to the following translators
 |      Spanish       | es-ES |                                       [Agustin Jose Wawrzyk (elpitufo)](https://crowdin.com/profile/elpitufo)                                        |
 |       Danish       | da-DK |                                       [Tomasz Cielecki (Cheesebaron)](https://crowdin.com/profile/Cheesebaron)                                       |
 |      Russian       | ru-RU |                                  [Alexander Bublik (alex.bublik1093)](https://crowdin.com/profile/alex.bublik1093)                                   |
-|      Italian       | ru-RU |                                          [Emanuele Filardo (fileman)](https://crowdin.com/profile/fileman)                                           |
+|      Italian       | it-IT |                                          [Emanuele Filardo (fileman)](https://crowdin.com/profile/fileman)                                           |
 |     Ukrainian      | uk-UA | [Руслан Соромля (garenauser)](https://crowdin.com/profile/garenauser), [Anthony Maisak (anthony.maisak)](https://crowdin.com/profile/anthony.maisak) |
 
 ## dotnet CLI
