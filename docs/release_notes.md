@@ -1,8 +1,12 @@
 ﻿## Release Notes
 
+## [v0.26.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.26.0-beta) (2019-03-09)
+
+- Fix location of directory when "Create directory for solution" is used
+
 ## [v0.25.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.25.0-beta) (2019-02-19)
 
-- Update to support MvvmCross 6.2.2.
+- Update to support MvvmCross 6.2.3.
 - Update Xamarin Forms
 - Update translations
   -  Italian, by Emanuele Filardo
