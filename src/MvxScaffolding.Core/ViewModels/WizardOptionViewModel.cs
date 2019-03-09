@@ -48,6 +48,14 @@ namespace MvxScaffolding.Core.ViewModels
             }
         }
 
+        private bool _canCreateSolutionDirectory = MvxScaffoldingContext.CanCreateSolutionDirectory;
+
+        public bool CanCreateSolutionDirectory
+        {
+            get => _canCreateSolutionDirectory;
+            set => SetProperty(ref _canCreateSolutionDirectory, value);
+        }
+
         private string _solutionName = MvxScaffoldingContext.SolutionName;
         [Required(ErrorMessageResourceName = nameof(LocalResources.AppDetails_Validation_SolutionName), ErrorMessageResourceType = typeof(LocalResources))]
         public string SolutionName

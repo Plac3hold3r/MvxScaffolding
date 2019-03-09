@@ -31,6 +31,8 @@ namespace MvxScaffolding.Core.Contexts
 
         public static string SolutionName { get; set; } = "SolutionProject";
 
+        public static bool CanCreateSolutionDirectory { get; set; }
+
         public static Version LastKnownVersion
         {
             get => Version.TryParse(Settings.Default.LastKnownVersion, out Version version) ? version : null;

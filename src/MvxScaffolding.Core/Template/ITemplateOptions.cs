@@ -37,6 +37,8 @@ namespace MvxScaffolding.Core.Template
 
         string SolutionName { get; set; }
 
+        bool CanCreateSolutionDirectory { get; set; }
+
         string SelectedNetStandard { get; set; }
 
         string SelectedMinAndroidSDK { get; set; }

@@ -58,6 +58,7 @@ namespace MvxScaffolding.Vsix.Wizards
                 MvxScaffoldingContext.WizardName = ThisAssembly.Vsix.Name;
                 MvxScaffoldingContext.ProjectName = replacementsDictionary[VSTemplateKeys.ProjectName];
                 MvxScaffoldingContext.SafeProjectName = replacementsDictionary[VSTemplateKeys.SafeProjectName];
+                MvxScaffoldingContext.CanCreateSolutionDirectory = !string.IsNullOrWhiteSpace(replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName]);
                 MvxScaffoldingContext.SolutionName = replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName];
 
                 RemoveOldSolutionDirectory(automationObject, replacementsDictionary);
@@ -101,7 +102,10 @@ namespace MvxScaffolding.Vsix.Wizards
             solution.Close();
 
             var oldDestinationDirectory = replacementsDictionary[VSTemplateKeys.DestinationDirectory];
-            var solutionRootDirectory = Path.GetFullPath(Path.Combine(oldDestinationDirectory, @"..\"));
+
+            var solutionRootDirectory = string.IsNullOrWhiteSpace(replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName])
+                ? oldDestinationDirectory
+                : Path.GetFullPath(Path.Combine(oldDestinationDirectory, @"..\"));
 
             FileSystemUtils.SafeDeleteDirectory(solutionRootDirectory);
 
@@ -147,9 +151,16 @@ namespace MvxScaffolding.Vsix.Wizards
 
         public void UpdateReplacementsDictionary(Dictionary<string, string> replacementsDictionary)
         {
-            replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName] = MvxScaffoldingContext.UserSelectedOptions.SolutionName;
-            replacementsDictionary[VSTemplateKeys.SolutionDirectory] += MvxScaffoldingContext.UserSelectedOptions.SolutionName;
-            replacementsDictionary[VSTemplateKeys.DestinationDirectory] += MvxScaffoldingContext.UserSelectedOptions.SolutionName + "\\";
+            if (MvxScaffoldingContext.UserSelectedOptions.CanCreateSolutionDirectory)
+            {
+                replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName] = MvxScaffoldingContext.UserSelectedOptions.SolutionName;
+                replacementsDictionary[VSTemplateKeys.SolutionDirectory] += MvxScaffoldingContext.UserSelectedOptions.SolutionName + "\\";
+                replacementsDictionary[VSTemplateKeys.DestinationDirectory] += MvxScaffoldingContext.UserSelectedOptions.SolutionName + "\\";
+            }
+            else
+            {
+                replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName] = "";
+            }
         }
 
         public void ShowModal(System.Windows.Window dialog)
