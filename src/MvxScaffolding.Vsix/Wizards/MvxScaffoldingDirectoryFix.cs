@@ -8,6 +8,7 @@ using System.IO;
 using EnvDTE;
 using EnvDTE80;
 using Microsoft.VisualStudio.TemplateWizard;
+using MvxScaffolding.Core.Template;
 using MvxScaffolding.Vsix.Constants;
 
 namespace MvxScaffolding.Vsix.Wizards
@@ -36,15 +37,15 @@ namespace MvxScaffolding.Vsix.Wizards
         public void RunFinished()
         {
             var solution = (Solution2)_dte.Solution;
-            var pathToOldSolution = Path.Combine(_destinationDirectory, _solutionName + ".sln");
-            solution.Open(pathToOldSolution);
+            var pathToNewSolution = Path.Combine(_destinationDirectory, _solutionName + ".sln");
+            solution.Open(pathToNewSolution);
         }
 
         public void RunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, WizardRunKind runKind, object[] customParams)
         {
             _dte = (DTE)automationObject;
             _destinationDirectory = replacementsDictionary[VSTemplateKeys.DestinationDirectory];
-            _solutionName = replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName];
+            _solutionName = replacementsDictionary[TemplateOptions.SolutionName.AsParameter()];
         }
 
         public bool ShouldAddProjectItem(string filePath)

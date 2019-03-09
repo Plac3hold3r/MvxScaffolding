@@ -33,6 +33,8 @@ namespace MvxScaffolding.Core.Template
 
         public const string SolutionName = "SolutionName";
 
+        public const string CanCreateSolutionDirectory = "CanCreateSolutionDirectory";
+
         public const string ScaffoldType = "ScaffoldType";
 
         public const string NetStandardVersion = "NETStandardVersion";

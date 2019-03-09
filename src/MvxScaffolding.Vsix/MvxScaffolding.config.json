@@ -16,7 +16,7 @@
   "HelpTranslateUri": "https://crowdin.com/project/mvxscaffolding",
   "ChangelogUri": "https://github.com/Plac3hold3r/MvxScaffolding/blob/master/CHANGELOG.md",
   "ReleaseNotesUri": "https://github.com/Plac3hold3r/MvxScaffolding/blob/master/docs/release_notes.md",
-  "SupportedMvvmCrossVersion": "6.2.2",
+  "SupportedMvvmCrossVersion": "6.2.3",
   "PlatformScaffoldTypeConfiguration": {
     "MvxNative": [
       {
