@@ -1,7 +1,12 @@
 ﻿## Release Notes
 
+## [v0.26.1-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.26.0-beta) (2019-03-09)
+
+- Fix UWP target platform version not targeting 17763
+
 ## [v0.26.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.26.0-beta) (2019-03-09)
 
+- Update Xamarin Forms
 - Fix location of directory when "Create directory for solution" is used
 
 ## [v0.25.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.25.0-beta) (2019-02-19)

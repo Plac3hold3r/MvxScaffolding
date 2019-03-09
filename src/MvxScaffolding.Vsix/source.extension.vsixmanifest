@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="3574903F-FB0F-4938-B24C-D01830783CAF" Version="0.26.0" Language="en-US" Publisher="Plac3Hold3r" />
+        <Identity Id="3574903F-FB0F-4938-B24C-D01830783CAF" Version="0.26.1" Language="en-US" Publisher="Plac3Hold3r" />
         <DisplayName>MvxScaffolding</DisplayName>
         <Description xml:space="preserve">A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.</Description>
         <MoreInfo>https://github.com/Plac3hold3r/MvxScaffolding</MoreInfo>
