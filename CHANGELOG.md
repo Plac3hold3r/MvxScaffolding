@@ -1,5 +1,18 @@
 # Change Log
 
+## [v0.26.1-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.26.1-beta) (2019-03-09)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.26.0-beta...v0.26.1-beta)
+
+**Fixed bugs:**
+
+- Fix for \#343 uwp target version [\#346](https://github.com/Plac3hold3r/MvxScaffolding/pull/346) [[template](https://github.com/Plac3hold3r/MvxScaffolding/labels/template)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Merged pull requests:**
+
+- New Crowdin translations [\#347](https://github.com/Plac3hold3r/MvxScaffolding/pull/347) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- New Crowdin translations [\#345](https://github.com/Plac3hold3r/MvxScaffolding/pull/345) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- New Crowdin translations [\#344](https://github.com/Plac3hold3r/MvxScaffolding/pull/344) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+
 ## [v0.26.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.26.0-beta) (2019-03-09)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.25.0-beta...v0.26.0-beta)
 
