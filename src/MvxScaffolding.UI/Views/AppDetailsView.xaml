@@ -115,6 +115,11 @@
                             Margin="0,16,0,0"
                             FontWeight="Bold"
                             Text="{x:Static l10n:LocalResources.AppDetails_Solution}" />
+                        <CheckBox
+                            Margin="0,4,0,0"
+                            Content="{x:Static l10n:LocalResources.AppDetails_Create_Solution_Directory}"
+                            IsChecked="{Binding Options.CanCreateSolutionDirectory}"
+                            Style="{StaticResource MaterialDesignCheckBox}" />
                         <TextBox
                             Margin="0,4,0,0"
                             materialDesign:HintAssist.Hint="{Binding Source={x:Static l10n:LocalResources.AppDetails_Solution_Name}, Converter={StaticResource RequiredLabelConverter}}"

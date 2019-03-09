@@ -151,6 +151,15 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create directory for solution.
+        /// </summary>
+        public static string AppDetails_Create_Solution_Directory {
+            get {
+                return ResourceManager.GetString("AppDetails_Create_Solution_Directory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Display Name.
         /// </summary>
         public static string AppDetails_Display_Name {
