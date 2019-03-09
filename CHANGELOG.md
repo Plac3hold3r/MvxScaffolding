@@ -1,5 +1,29 @@
 # Change Log
 
+## [v0.26.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.26.0-beta) (2019-03-09)
+[Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.25.0-beta...v0.26.0-beta)
+
+**Fixed bugs:**
+
+- Fix directory location for solution generation [\#343](https://github.com/Plac3hold3r/MvxScaffolding/pull/343) [[visual studio](https://github.com/Plac3hold3r/MvxScaffolding/labels/visual%20studio)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Fix ISO code in readme [\#335](https://github.com/Plac3hold3r/MvxScaffolding/pull/335) ([Plac3hold3r](https://github.com/Plac3hold3r))
+
+**Merged pull requests:**
+
+- Bump Xamarin.Forms from 3.5.0.169047 to 3.6.0.220655 in /src/Templates/MvxForms/NavigationMenu [\#341](https://github.com/Plac3hold3r/MvxScaffolding/pull/341) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.5.0.169047 to 3.6.0.220655 in /src/Templates/MvxForms/SingleView [\#340](https://github.com/Plac3hold3r/MvxScaffolding/pull/340) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.5.0.169047 to 3.6.0.220655 in /src/Templates/MvxForms/Blank [\#339](https://github.com/Plac3hold3r/MvxScaffolding/pull/339) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Microsoft.NET.Test.Sdk from 16.0.0 to 16.0.1 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#338](https://github.com/Plac3hold3r/MvxScaffolding/pull/338) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Microsoft.NET.Test.Sdk from 16.0.0 to 16.0.1 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#337](https://github.com/Plac3hold3r/MvxScaffolding/pull/337) ([dependabot[bot]](https://github.com/apps/dependabot))
+- New Crowdin translations [\#334](https://github.com/Plac3hold3r/MvxScaffolding/pull/334) [[localization](https://github.com/Plac3hold3r/MvxScaffolding/labels/localization)] ([Plac3hold3r](https://github.com/Plac3hold3r))
+- Bump Microsoft.NET.Test.Sdk from 15.9.0 to 16.0.0 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#333](https://github.com/Plac3hold3r/MvxScaffolding/pull/333) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Microsoft.NET.Test.Sdk from 15.9.0 to 16.0.0 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#332](https://github.com/Plac3hold3r/MvxScaffolding/pull/332) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump NUnit3TestAdapter from 3.12.0 to 3.13.0 in /src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test [\#331](https://github.com/Plac3hold3r/MvxScaffolding/pull/331) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump NUnit3TestAdapter from 3.12.0 to 3.13.0 in /src/Templates/MvxNative/Shared/test/MvxNative.Core.Test [\#330](https://github.com/Plac3hold3r/MvxScaffolding/pull/330) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.5.0.129452 to 3.5.0.169047 in /src/Templates/MvxForms/Blank [\#329](https://github.com/Plac3hold3r/MvxScaffolding/pull/329) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.5.0.129452 to 3.5.0.169047 in /src/Templates/MvxForms/NavigationMenu [\#328](https://github.com/Plac3hold3r/MvxScaffolding/pull/328) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump Xamarin.Forms from 3.5.0.129452 to 3.5.0.169047 in /src/Templates/MvxForms/SingleView [\#327](https://github.com/Plac3hold3r/MvxScaffolding/pull/327) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.25.0-beta](https://github.com/Plac3hold3r/MvxScaffolding/tree/v0.25.0-beta) (2019-02-19)
 [Full Changelog](https://github.com/Plac3hold3r/MvxScaffolding/compare/v0.24.0-beta...v0.25.0-beta)
 
