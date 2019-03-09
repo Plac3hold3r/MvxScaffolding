@@ -53,6 +53,7 @@ namespace MvxScaffolding.Core.ViewModels
         {
             Options.ValidateModelProperty(Options.AppId, nameof(WizardOptionViewModel.AppId));
             Options.ValidateModelProperty(Options.AppName, nameof(WizardOptionViewModel.AppName));
+            Options.ValidateModelProperty(Options.SolutionName, nameof(WizardOptionViewModel.SolutionName));
 
             return !Options.HasErrors;
         }
