@@ -116,7 +116,7 @@
                             FontWeight="Bold"
                             Text="{x:Static l10n:LocalResources.AppDetails_Solution}" />
                         <CheckBox
-                            Margin="0,4,0,0"
+                            Margin="0,8,0,4"
                             Content="{x:Static l10n:LocalResources.AppDetails_Create_Solution_Directory}"
                             IsChecked="{Binding Options.CanCreateSolutionDirectory}"
                             Style="{StaticResource MaterialDesignCheckBox}" />
