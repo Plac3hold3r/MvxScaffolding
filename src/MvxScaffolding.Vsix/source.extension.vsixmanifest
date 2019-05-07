@@ -8,7 +8,6 @@
         <License>Content\License.txt</License>
         <Icon>Properties\project-icon.png</Icon>
         <Tags>MvvmCross;Xamarin;Xamarin.Forms;.NET Standard;C#;Android;iOS;UWP;Template;</Tags>
-        <Preview>true</Preview>
     </Metadata>
     <Installation InstalledByMsi="false">
         <InstallationTarget Version="[15.0, 17.0)" Id="Microsoft.VisualStudio.Community" />

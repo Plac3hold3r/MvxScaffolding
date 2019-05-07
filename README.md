@@ -1,4 +1,4 @@
-﻿# MvxScaffolding (Preview)
+﻿# MvxScaffolding
 
 [![NuGet](https://badgen.net/nuget/v/MvxScaffolding.Templates)](https://www.nuget.org/packages/MvxScaffolding.Templates/)
 [![Visual Studio Marketplace](https://badgen.net/vs-marketplace/v/Plac3Hold3r.MvxScaffolding)](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding)
