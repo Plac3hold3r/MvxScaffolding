@@ -68,8 +68,8 @@ __Required__
 
  __Optional__ 
 
- * Xamarin Android SDK _(Recommended version 9.0+)_
- * Xamarin iOS SDK _(Recommended version 12.0+)_
+ * Xamarin Android SDK _(Recommended version 9.2+)_
+ * Xamarin iOS SDK _(Recommended version 12.8+)_
  * UWP SDK _(__Windows Only__, recommended  version 10.0.17763+)_
 
 ### Installation
@@ -84,7 +84,7 @@ dotnet new --install MvxScaffolding.Templates
 
 See [documentation](docs/template_dotnet_cli.md) for how to generate a solution.
 
-## Visual Studio 2017 Extension
+## Visual Studio 2017/2019 Extension
 
 ### System Requirements
 
@@ -92,14 +92,14 @@ In order to make use of these templates you will need to have the following inst
 
 __Required__
 
- * Visual Studio 2017 15.8+ ([Download Visual Studio](https://www.visualstudio.com/downloads/))
+ * Visual Studio 2017 15.8+ (_Recommended Visual Studio 2019 16_ [Download Visual Studio](https://www.visualstudio.com/downloads/))
  * .NET Framework 4.7+ ([Download .NET Framework](https://www.microsoft.com/net/download/windows))
 
  __Optional__ 
 
- * Xamarin Android SDK _(Recommended version 9.0+)_
- * Xamarin iOS SDK _(Recommended version 11.14+)_
- * UWP SDK _(__Windows Only__, recommended version 10.0.17134+)_
+ * Xamarin Android SDK _(Recommended version 9.2+)_
+ * Xamarin iOS SDK _(Recommended version 12.8+)_
+ * UWP SDK _(__Windows Only__, recommended version 10.0.17763+)_
 
 ### Installation
 
