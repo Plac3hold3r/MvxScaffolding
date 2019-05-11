@@ -36,7 +36,7 @@ See [Changelog](/CHANGELOG.md)
  |        Platform         |      Installation and System Requirements      |                Documentation                 |                                                  Download                                                   |
  | :---------------------: | :--------------------------------------------: | :------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
  |       dotnet CLI        |       [Installation Guide](#dotnet-cli)        | [Documentation](docs/template_dotnet_cli.md) |                      [NuGet](https://www.nuget.org/packages/MvxScaffolding.Templates/)                      |
- | Visual Studio Extension | [Installation Guide](#visual-studio-extension) |     [Documentation](docs/template_vs.md)     | [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding) |
+ | Visual Studio Extension | [Installation Guide](#visual-studio-extension) |     [Documentation VS 2017](docs/template_vs_2017.md) or [Documentation VS 2019](docs/template_vs_2019.md)    | [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding) |
 
 ## Help Translate
 
@@ -107,7 +107,7 @@ Download and install the VSIX from [Visual Studio Marketplace](https://marketpla
 
 ### Usage
 
-See [documentation](docs/template_vs.md) for how to generate a solution.
+See [documentation VS 2017](docs/template_vs_2017.md) or [documentation VS 2019](docs/template_vs_2019.md) for how to generate a solution.
 
 ## Thanks
 

@@ -34,15 +34,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project Templates", "Projec
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item Templates", "Item Templates", "{55BC22BB-C3FE-416A-973C-937E9A2BBBF2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Docs", "!Docs", "{D6F40415-D292-4A46-AEFF-2AE4BC185BE6}"
-	ProjectSection(SolutionItems) = preProject
-		docs\nuget_docs.md = docs\nuget_docs.md
-		docs\privacy_policy.md = docs\privacy_policy.md
-		docs\release_notes.md = docs\release_notes.md
-		docs\template_dotnet_cli.md = docs\template_dotnet_cli.md
-		docs\template_vs_2017.md = docs\template_vs_2017.md
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Native", "Native", "{A4C3B6E2-92D5-478B-99DC-1CF0F489284E}"
 	ProjectSection(SolutionItems) = preProject
 		src\Templates\MvxNative\editor.config = src\Templates\MvxNative\editor.config
@@ -186,6 +177,16 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.UI", "src\Templates\MvxForms\Blank\src\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj", "{C29200C2-5478-4C59-AE18-6F54CF7B389E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UWP", "src\Templates\MvxForms\Blank\src\MvxFormsTemp.UWP\MvxFormsTemp.UWP.csproj", "{00000000-1111-3333-0000-000000000004}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{E9920038-AE4A-4C78-8180-407BCA62DE09}"
+	ProjectSection(SolutionItems) = preProject
+		docs\nuget_docs.md = docs\nuget_docs.md
+		docs\privacy_policy.md = docs\privacy_policy.md
+		docs\release_notes.md = docs\release_notes.md
+		docs\template_dotnet_cli.md = docs\template_dotnet_cli.md
+		docs\template_vs_2017.md = docs\template_vs_2017.md
+		docs\template_vs_2019.md = docs\template_vs_2019.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
