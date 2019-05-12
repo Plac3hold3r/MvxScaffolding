@@ -6,6 +6,8 @@
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FPlac3hold3r%2FMvxScaffolding.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FPlac3hold3r%2FMvxScaffolding?ref=badge_shield)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=Plac3hold3r/MvxScaffolding)](https://dependabot.com)
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/mvxscaffolding/localized.svg)](https://crowdin.com/project/mvxscaffolding)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![Semver](https://badgen.net/badge/semver/2.0.0/green)](https://semver.org/)
 
 A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms. Supports MvvmCross 6.2.3.
 
@@ -27,9 +29,10 @@ __Templates features__
  |                                           iOS storyboard launch screen                                            |     *     |    *     |
  |             iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.FluentLayout)              |     *     |
 
-See [Release Notes](docs/release_notes.md)
-
 See [Changelog](/CHANGELOG.md)
+
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/At3MQb9xX)
+
 
 ## Installation
 
