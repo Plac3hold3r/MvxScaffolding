@@ -1,0 +1,5 @@
+mode: ContinuousDelivery
+minor-version-bump-message: '^(feat)'
+patch-version-bump-message: '^(build|chore|fix|style|ci|refactor|docs)'
+ignore:
+  commits-before: 2019-03-09T00:00:00

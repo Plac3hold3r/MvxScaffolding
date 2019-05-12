@@ -26,6 +26,11 @@ steps:
     feedsToUse: config
     nugetConfigPath: Nuget.Config
 
+- task: gittools.gitversion.gitversion-task.GitVersion@4
+  displayName: GitVersion
+  inputs:
+    preferBundledVersion: false
+
 - task: VersionVSIX@2
   inputs:
     Path: $(Build.SourcesDirectory)
