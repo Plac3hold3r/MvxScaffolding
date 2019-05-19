@@ -19,7 +19,6 @@ steps:
   inputs:
     versionSpec: 4.9.2
 
-steps:
 - task: cake-build.cake.cake-build-task.Cake@0
   displayName: 'Cake Build'
 
