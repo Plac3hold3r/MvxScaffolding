@@ -90,8 +90,7 @@ Task("Clean").Does(() =>
     EnsureDirectoryExists(outputDirNuGet);
 });
 
-Task("Build-NuGet-Package")
-  .Does(() =>
+Task("Build-NuGet-Package").Does(() =>
 {
     var nuGetPackSettings = new NuGetPackSettings
       {
@@ -102,15 +101,13 @@ Task("Build-NuGet-Package")
     NuGetPack(nuspecFile, nuGetPackSettings);
 });
 
-Task("Restore-NuGet-Packages")
-    .Does(() =>
+Task("Restore-NuGet-Packages").Does(() =>
 {
     Information("Restoring solution...");
     NuGetRestore("./MvxScaffolding.Vsix.sln");
 });
 
-Task("Update-Manifest-Version")
-    .Does(() =>
+Task("Update-Manifest-Version").Does(() =>
 {
     var settings = new XmlPokeSettings
     {
@@ -124,9 +121,10 @@ Task("Update-Manifest-Version")
         versionInfo.ToString(), settings);
 });
 
-Task("Build-VSIX")
-.Does(() => {
+Task("Build-VSIX").Does(() => 
+{
     Information("Building solution...");
+
     MSBuild(solutionPathVsix, settings =>
         settings.SetPlatformTarget(PlatformTarget.MSIL)
             .SetMSBuildPlatform(MSBuildPlatform.x86)
@@ -137,10 +135,18 @@ Task("Build-VSIX")
             .SetConfiguration(configuration));
 });
 
-Task("Post-Build")
-.Does(() => {
+Task("Post-Build").Does(() => 
+{
   Information("Moving to artifact directory...");
+
   CopyFileToDirectory("./src/MvxScaffolding.Vsix/bin/Release/MvxScaffolding.Vsix.vsix", outputDirVsix);
+  MoveFile("./artifacts/Vsix/MvxScaffolding.Vsix.vsix", "./artifacts/Vsix/MvxScaffolding.vsix");
+});
+
+Task("Build-Release").Does(() => 
+{
+    Information("Bumping version and updating changelog...");
+    Npx("standard-version")
 });
 
 Task("Default")
@@ -150,6 +156,19 @@ Task("Default")
     .IsDependentOn("Update-Manifest-Version")
     .IsDependentOn("Build-VSIX")
     .IsDependentOn("Post-Build")
+  .Does(() =>
+{
+  
+});
+
+Task("Release")
+    .IsDependentOn("Clean")
+    .IsDependentOn("Restore-NuGet-Packages")
+    .IsDependentOn("Build-NuGet-Package")
+    .IsDependentOn("Update-Manifest-Version")
+    .IsDependentOn("Build-VSIX")
+    .IsDependentOn("Post-Build")
+    .IsDependentOn("Build-Release"")
   .Does(() =>
 {
   
