@@ -146,7 +146,7 @@ Task("Post-Build").Does(() =>
 Task("Build-Release").Does(() => 
 {
     Information("Bumping version and updating changelog...");
-    Npx("standard-version")
+    Npx("standard-version");
 });
 
 Task("Default")
@@ -168,7 +168,7 @@ Task("Release")
     .IsDependentOn("Update-Manifest-Version")
     .IsDependentOn("Build-VSIX")
     .IsDependentOn("Post-Build")
-    .IsDependentOn("Build-Release"")
+    .IsDependentOn("Build-Release")
   .Does(() =>
 {
   
