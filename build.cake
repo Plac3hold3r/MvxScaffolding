@@ -11,9 +11,9 @@ var verbosity = Verbosity.Minimal;
 // TOOLS / ADDINS
 //////////////////////////////////////////////////////////////////////
 
-#tool nuget:?package=GitVersion.CommandLine&version=4.0.0
 #addin nuget:?package=Cake.Figlet&version=1.2.0
-#addin nuget:?package=Newtonsoft.Json&version=12.0.2
+#addin nuget:?package=Cake.Npx&version=1.3.0
+#addin nuget:?package=SemanticVersioning&version=1.2.0
 
 //////////////////////////////////////////////////////////////////////
 // EXTERNAL SCRIPTS
@@ -25,14 +25,15 @@ var verbosity = Verbosity.Minimal;
 // GLOBAL VARIABLES
 ///////////////////////////////////////////////////////////////////////////////
 
+using System.Text.RegularExpressions;
+
 var solutionName = "MvxScaffolding";
 var solutionPathVsix = File("./MvxScaffolding.Vsix.sln");
 var outputDir = new DirectoryPath("./artifacts");
-var gitVersionLog = new FilePath("./artifacts/gitversion.log");
 var nuspecFile = new FilePath("./nuspec/MvxScaffolding.Templates.nuspec");
 
 var isRunningOnAzurePipelines = BuildSystem.IsRunningOnAzurePipelines ;
-GitVersion versionInfo = null;
+SemVer.Version versionInfo = null;
 
 Information(Figlet(solutionName));
 
@@ -42,18 +43,24 @@ Information(Figlet(solutionName));
 
 Setup(context => 
 {
-    versionInfo = context.GitVersion(new GitVersionSettings 
-    {
-        OutputType = GitVersionOutput.Json,
-        LogFilePath = gitVersionLog.MakeAbsolute(context.Environment)
-    });
-
     var cakeVersion = typeof(ICakeContext).Assembly.GetName().Version.ToString();
 
-    Information(Newtonsoft.Json.JsonConvert.SerializeObject(versionInfo));
+    string[] redirectedStandardOutput = null;
+
+    Npx("standard-version",
+        args => args.Append("--dry-run"),
+        out redirectedStandardOutput);
+        
+    Regex regex = new Regex(@"(?<=\[).+?(?=\])");
+    Match match = regex.Match(redirectedStandardOutput[3]);
+
+    if (!match.Success)
+        throw new InvalidOperationException ("Can not parse a build version number.");
+
+    versionInfo = new SemVer.Version(match.Value);
 
     Information("Building version {0}, ({1}, {2}) using version {3} of Cake.",
-        versionInfo.SemVer,
+        versionInfo.ToString(),
         configuration,
         target,
         cakeVersion);
@@ -84,19 +91,19 @@ Task("Build-NuGet-Package")
   .Does(() =>
 {
     var nuGetPackSettings = new NuGetPackSettings
-	  {
-		  OutputDirectory = outputDir,
-		  Version = versionInfo.NuGetVersion
-	  };
+      {
+          OutputDirectory = outputDir,
+          Version = versionInfo.ToString()
+      };
 
     NuGetPack(nuspecFile, nuGetPackSettings);
 });
 
 Task("Restore-NuGet-Packages")
-	.Does(() =>
+    .Does(() =>
 {
-	Information("Restoring solution...");
-	NuGetRestore("./MvxScaffolding.Vsix.sln");
+    Information("Restoring solution...");
+    NuGetRestore("./MvxScaffolding.Vsix.sln");
 });
 
 Task("Update-Manifest-Version")
@@ -111,20 +118,20 @@ Task("Update-Manifest-Version")
     };
 
     XmlPoke("./src/MvxScaffolding.Vsix/source.extension.vsixmanifest", "/vsx:PackageManifest/vsx:Metadata/vsx:Identity/@Version", 
-        versionInfo.MajorMinorPatch, settings);
+        versionInfo.ToString(), settings);
 });
 
 Task("Build-VSIX")
 .Does(() => {
-	Information("Building solution...");
-	MSBuild(solutionPathVsix, settings =>
-		settings.SetPlatformTarget(PlatformTarget.MSIL)
-			.SetMSBuildPlatform(MSBuildPlatform.x86)
-			.UseToolVersion(MSBuildToolVersion.VS2019)
-			.WithProperty("TreatWarningsAsErrors","true")
-			.SetVerbosity(Verbosity.Quiet)
-			.WithTarget("Build")
-			.SetConfiguration(configuration));
+    Information("Building solution...");
+    MSBuild(solutionPathVsix, settings =>
+        settings.SetPlatformTarget(PlatformTarget.MSIL)
+            .SetMSBuildPlatform(MSBuildPlatform.x86)
+            .UseToolVersion(MSBuildToolVersion.VS2019)
+            .WithProperty("TreatWarningsAsErrors","true")
+            .SetVerbosity(Verbosity.Quiet)
+            .WithTarget("Build")
+            .SetConfiguration(configuration));
 });
 
 Task("Post-Build")
@@ -134,12 +141,12 @@ Task("Post-Build")
 });
 
 Task("Default")
-   .IsDependentOn("Clean")
-	 .IsDependentOn("Restore-NuGet-Packages")
-	 .IsDependentOn("Build-NuGet-Package")
-	 .IsDependentOn("Update-Manifest-Version")
-	 .IsDependentOn("Build-VSIX")
-	 .IsDependentOn("Post-Build")
+    .IsDependentOn("Clean")
+    .IsDependentOn("Restore-NuGet-Packages")
+    .IsDependentOn("Build-NuGet-Package")
+    .IsDependentOn("Update-Manifest-Version")
+    .IsDependentOn("Build-VSIX")
+    .IsDependentOn("Post-Build")
   .Does(() =>
 {
   
