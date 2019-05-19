@@ -29,7 +29,8 @@ using System.Text.RegularExpressions;
 
 var solutionName = "MvxScaffolding";
 var solutionPathVsix = File("./MvxScaffolding.Vsix.sln");
-var outputDir = new DirectoryPath("./artifacts");
+var outputDirVsix = new DirectoryPath("./artifacts/Vsix");
+var outputDirNuGet = new DirectoryPath("./artifacts/NuGet");
 var nuspecFile = new FilePath("./nuspec/MvxScaffolding.Templates.nuspec");
 
 var isRunningOnAzurePipelines = BuildSystem.IsRunningOnAzurePipelines ;
@@ -82,9 +83,11 @@ Task("Clean").Does(() =>
     Information("Cleaning common files...");
     CleanDirectories("./**/bin");
     CleanDirectories("./**/obj");
-    CleanDirectories(outputDir.FullPath);
+    CleanDirectories(outputDirVsix.FullPath);
+    CleanDirectories(outputDirNuGet.FullPath);
 
-    EnsureDirectoryExists(outputDir);
+    EnsureDirectoryExists(outputDirVsix);
+    EnsureDirectoryExists(outputDirNuGet);
 });
 
 Task("Build-NuGet-Package")
@@ -92,7 +95,7 @@ Task("Build-NuGet-Package")
 {
     var nuGetPackSettings = new NuGetPackSettings
       {
-          OutputDirectory = outputDir,
+          OutputDirectory = outputDirNuGet,
           Version = versionInfo.ToString()
       };
 
@@ -137,7 +140,7 @@ Task("Build-VSIX")
 Task("Post-Build")
 .Does(() => {
   Information("Moving to artifact directory...");
-  CopyFileToDirectory("./src/MvxScaffolding.Vsix/bin/Release/MvxScaffolding.Vsix.vsix", outputDir);
+  CopyFileToDirectory("./src/MvxScaffolding.Vsix/bin/Release/MvxScaffolding.Vsix.vsix", outputDirVsix);
 });
 
 Task("Default")
