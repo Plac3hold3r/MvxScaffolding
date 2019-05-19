@@ -4,9 +4,9 @@
 # https://docs.microsoft.com/vsts/pipelines/apps/windows/dot-net
 
 pool:
-  vmImage: 'VS2017-Win2016'
+  vmImage: 'windows-2019'
 
-name: $(version.major).$(version.minor).$(Build.BuildId)
+name: $(Build.BuildId)
 
 variables:
   solution: '**/MvxScaffolding.Vsix.sln'
@@ -19,52 +19,18 @@ steps:
   inputs:
     versionSpec: 4.9.2
 
-- task: NuGetCommand@2
-  displayName: 'Restore NuGets'
-  inputs:
-    restoreSolution: '$(solution)'
-    feedsToUse: config
-    nugetConfigPath: Nuget.Config
-
-- task: VersionVSIX@2
-  inputs:
-    Path: $(Build.SourcesDirectory)
-    VersionNumber: $(Build.BuildNumber)
-    UseRegex: false
-    DigitMode: All
-    VersionRegex: \d+\.\d+\.\d+
-    OutputVersion: OutputedVersion
-
-- task: VersionNuspec@2
-  inputs: 
-     Path: $(Build.SourcesDirectory)
-     VersionNumber: $(Build.BuildNumber)
-     VersionRegex: \d+\.\d+\.\d+
-     OutputVersion: OutputedVersion
-
-- task: VSBuild@1
-  inputs:
-    displayName: 'Build VSIX'
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: NuGetCommand@2
-  displayName: 'NuGet pack'
-  inputs:
-    command: pack
-    packDestination: '$(Build.ArtifactStagingDirectory)/NuGet'
-    packagesToPack: 'nuspec/*.nuspec'
+- task: cake-build.cake.cake-build-task.Cake@0
+  displayName: 'Cake Build'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: Vsix-drop'
   inputs:
-    PathtoPublish: 'src/MvxScaffolding.Vsix/bin/$(BuildConfiguration)'
+    PathtoPublish: 'artifacts/Vsix'
     ArtifactName: 'Build-Vsix'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: NuGet-drop'
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/NuGet'
+    PathtoPublish: './artifacts/NuGet'
     ArtifactName: 'Build-NuGet'
 

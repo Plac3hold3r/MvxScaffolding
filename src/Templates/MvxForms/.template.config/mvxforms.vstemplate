@@ -1,4 +1,4 @@
-<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010" Type="ProjectGroup">
     <TemplateData>
         <Name>MvxScaffolding MvvmCross Forms</Name>
         <Description>A customizable template used to scaffold a cross platform MvvmCross application using Xamarin Forms</Description>
@@ -14,6 +14,12 @@
         <ProvideDefaultName>true</ProvideDefaultName>
         <LocationField>Enabled</LocationField>
         <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+        <LanguageTag>C#</LanguageTag>
+        <PlatformTag>Android</PlatformTag>
+        <PlatformTag>iOS</PlatformTag>
+        <PlatformTag>Windows</PlatformTag>
+        <ProjectTypeTag>Mobile</ProjectTypeTag>
+        <ProjectTypeTag>MvvmCross</ProjectTypeTag>
     </TemplateData>
     <TemplateContent>
         <ProjectCollection />

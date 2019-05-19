@@ -1,4 +1,4 @@
-﻿# MvxScaffolding (Preview)
+﻿# MvxScaffolding
 
 [![NuGet](https://badgen.net/nuget/v/MvxScaffolding.Templates)](https://www.nuget.org/packages/MvxScaffolding.Templates/)
 [![Visual Studio Marketplace](https://badgen.net/vs-marketplace/v/Plac3Hold3r.MvxScaffolding)](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding)
@@ -6,6 +6,8 @@
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FPlac3hold3r%2FMvxScaffolding.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FPlac3hold3r%2FMvxScaffolding?ref=badge_shield)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=Plac3hold3r/MvxScaffolding)](https://dependabot.com)
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/mvxscaffolding/localized.svg)](https://crowdin.com/project/mvxscaffolding)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![Semver](https://badgen.net/badge/semver/2.0.0/green)](https://semver.org/)
 
 A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms. Supports MvvmCross 6.2.3.
 
@@ -27,16 +29,17 @@ __Templates features__
  |                                           iOS storyboard launch screen                                            |     *     |    *     |
  |             iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.FluentLayout)              |     *     |
 
-See [Release Notes](docs/release_notes.md)
-
 See [Changelog](/CHANGELOG.md)
+
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/At3MQb9xX)
+
 
 ## Installation
 
  |        Platform         |      Installation and System Requirements      |                Documentation                 |                                                  Download                                                   |
  | :---------------------: | :--------------------------------------------: | :------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
  |       dotnet CLI        |       [Installation Guide](#dotnet-cli)        | [Documentation](docs/template_dotnet_cli.md) |                      [NuGet](https://www.nuget.org/packages/MvxScaffolding.Templates/)                      |
- | Visual Studio Extension | [Installation Guide](#visual-studio-extension) |     [Documentation](docs/template_vs.md)     | [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding) |
+ | Visual Studio Extension | [Installation Guide](#visual-studio-extension) |     [Documentation VS 2017](docs/template_vs_2017.md) or [Documentation VS 2019](docs/template_vs_2019.md)    | [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding) |
 
 ## Help Translate
 
@@ -68,8 +71,8 @@ __Required__
 
  __Optional__ 
 
- * Xamarin Android SDK _(Recommended version 9.0+)_
- * Xamarin iOS SDK _(Recommended version 12.0+)_
+ * Xamarin Android SDK _(Recommended version 9.2+)_
+ * Xamarin iOS SDK _(Recommended version 12.8+)_
  * UWP SDK _(__Windows Only__, recommended  version 10.0.17763+)_
 
 ### Installation
@@ -84,7 +87,7 @@ dotnet new --install MvxScaffolding.Templates
 
 See [documentation](docs/template_dotnet_cli.md) for how to generate a solution.
 
-## Visual Studio 2017 Extension
+## Visual Studio 2017/2019 Extension
 
 ### System Requirements
 
@@ -92,14 +95,14 @@ In order to make use of these templates you will need to have the following inst
 
 __Required__
 
- * Visual Studio 2017 15.8+ ([Download Visual Studio](https://www.visualstudio.com/downloads/))
+ * Visual Studio 2017 15.8+ (_Recommended Visual Studio 2019 16_ [Download Visual Studio](https://www.visualstudio.com/downloads/))
  * .NET Framework 4.7+ ([Download .NET Framework](https://www.microsoft.com/net/download/windows))
 
  __Optional__ 
 
- * Xamarin Android SDK _(Recommended version 9.0+)_
- * Xamarin iOS SDK _(Recommended version 11.14+)_
- * UWP SDK _(__Windows Only__, recommended version 10.0.17134+)_
+ * Xamarin Android SDK _(Recommended version 9.2+)_
+ * Xamarin iOS SDK _(Recommended version 12.8+)_
+ * UWP SDK _(__Windows Only__, recommended version 10.0.17763+)_
 
 ### Installation
 
@@ -107,7 +110,7 @@ Download and install the VSIX from [Visual Studio Marketplace](https://marketpla
 
 ### Usage
 
-See [documentation](docs/template_vs.md) for how to generate a solution.
+See [documentation VS 2017](docs/template_vs_2017.md) or [documentation VS 2019](docs/template_vs_2019.md) for how to generate a solution.
 
 ## Thanks
 

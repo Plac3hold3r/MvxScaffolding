@@ -265,3 +265,6 @@ __pycache__/
 
 **/MvxScaffolding.Vsix.csproj-sc.App.config
 **/*Release.pfx
+
+# Cake tools
+tools/**

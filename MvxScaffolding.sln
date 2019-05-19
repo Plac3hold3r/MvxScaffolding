@@ -1,13 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2036
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solution Items", "{CD685E50-2396-43CA-AE14-6F4A5019EFDA}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
 		azure-pipelines.yml = azure-pipelines.yml
+		build.cake = build.cake
 		CHANGELOG.md = CHANGELOG.md
 		crowdin.yml = crowdin.yml
 		LICENSE.txt = LICENSE.txt
@@ -15,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solutio
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Nuspec", "!Nuspec", "{4AEE0797-5D79-4C6B-86FB-85778D650F22}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuspec", "nuspec", "{4AEE0797-5D79-4C6B-86FB-85778D650F22}"
 	ProjectSection(SolutionItems) = preProject
 		nuspec\MvxScaffolding.Templates.nuspec = nuspec\MvxScaffolding.Templates.nuspec
 	EndProjectSection
@@ -33,15 +34,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project Templates", "Project Templates", "{D7352774-663C-445E-8C46-BAEAE4532A76}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item Templates", "Item Templates", "{55BC22BB-C3FE-416A-973C-937E9A2BBBF2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Docs", "!Docs", "{D6F40415-D292-4A46-AEFF-2AE4BC185BE6}"
-	ProjectSection(SolutionItems) = preProject
-		docs\nuget_docs.md = docs\nuget_docs.md
-		docs\privacy_policy.md = docs\privacy_policy.md
-		docs\release_notes.md = docs\release_notes.md
-		docs\template_dotnet_cli.md = docs\template_dotnet_cli.md
-		docs\template_vs.md = docs\template_vs.md
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Native", "Native", "{A4C3B6E2-92D5-478B-99DC-1CF0F489284E}"
 	ProjectSection(SolutionItems) = preProject
@@ -186,6 +178,18 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxFormsTemp.UI", "src\Templates\MvxForms\Blank\src\MvxFormsTemp.UI\MvxFormsTemp.UI.csproj", "{C29200C2-5478-4C59-AE18-6F54CF7B389E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxFormsTemp.UWP", "src\Templates\MvxForms\Blank\src\MvxFormsTemp.UWP\MvxFormsTemp.UWP.csproj", "{00000000-1111-3333-0000-000000000004}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{E9920038-AE4A-4C78-8180-407BCA62DE09}"
+	ProjectSection(SolutionItems) = preProject
+		docs\nuget_docs.md = docs\nuget_docs.md
+		docs\privacy_policy.md = docs\privacy_policy.md
+		docs\release_notes.md = docs\release_notes.md
+		docs\template_dotnet_cli.md = docs\template_dotnet_cli.md
+		docs\template_vs_2017.md = docs\template_vs_2017.md
+		docs\template_vs_2019.md = docs\template_vs_2019.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7D486F67-1B2A-4766-82C6-6BFD1D38F009}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -1342,6 +1346,13 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{5F73E421-52CF-464D-A53D-F9B76A87B31D} = {7D486F67-1B2A-4766-82C6-6BFD1D38F009}
+		{C8615A68-1B7F-4798-BF54-430973E457EC} = {7D486F67-1B2A-4766-82C6-6BFD1D38F009}
+		{C727CC5B-1154-4DE7-8654-5038BDE92EBD} = {7D486F67-1B2A-4766-82C6-6BFD1D38F009}
+		{59B4974D-C88F-432C-B013-7F838A0A218E} = {7D486F67-1B2A-4766-82C6-6BFD1D38F009}
+		{079C1EB3-7123-4571-90DD-E4F298B78FB7} = {7D486F67-1B2A-4766-82C6-6BFD1D38F009}
+		{D7352774-663C-445E-8C46-BAEAE4532A76} = {7D486F67-1B2A-4766-82C6-6BFD1D38F009}
+		{55BC22BB-C3FE-416A-973C-937E9A2BBBF2} = {7D486F67-1B2A-4766-82C6-6BFD1D38F009}
 		{A4C3B6E2-92D5-478B-99DC-1CF0F489284E} = {D7352774-663C-445E-8C46-BAEAE4532A76}
 		{414ED55C-0665-4CCF-BD0D-26E34C2B7B16} = {A4C3B6E2-92D5-478B-99DC-1CF0F489284E}
 		{1EAE45DA-9A84-41AF-824B-B5378E31873A} = {A4C3B6E2-92D5-478B-99DC-1CF0F489284E}

@@ -1,10 +1,10 @@
-﻿# Template - Visual Studio Extension
+﻿# Template - Visual Studio 2017 Extension
 
 ### 1. Select template type
 
 MvxScaffolding Templates can be found under `Visual C#` > `MvvmCross` in the New Project creation wizard.
 
-![Windows Template Studio screenshot](../docs/resources/vs_template_selection.png)
+![Visual Studio 2017 screen-shot](../docs/resources/vs_template_selection.png)
 
 You can select between
 
@@ -17,7 +17,7 @@ Enter in your relevant application details. Then select `Next` to continue.
 
 You can select the ℹ️ to get more details about a specific option.
 
-![Windows Template Studio screenshot](../docs/resources/vs_template_native_app_details.png)
+![MvxScaffolding screen-shot](../docs/resources/vs_template_native_app_details.png)
 
 ### 3. Select supported platforms and platform options
 
@@ -25,7 +25,7 @@ Select which platforms you want to support for your scaffolded application. By d
 
 You can select the ℹ️ or row to get more details about a specific option.
 
-![Windows Template Studio screenshot](../docs/resources/vs_template_native_platform_options.png)
+![MvxScaffolding screen-shot](../docs/resources/vs_template_native_platform_options.png)
 
 Once you are satisfied with your choices select `Next` to continue.
 
@@ -35,4 +35,4 @@ Double check that you are happy with all your choices. You can adjust any choice
 
 Once you are satisfied with your choices select `Done` to start the template generating process.
 
-![Windows Template Studio screenshot](../docs/resources/vs_template_native_summary.png)
+![MvxScaffolding screen-shot](../docs/resources/vs_template_native_summary.png)
