@@ -307,11 +307,6 @@ dotnet_naming_rule.public_internal_fields_must_be_pascal_case.severity          
 dotnet_naming_rule.public_internal_fields_must_be_pascal_case.symbols           = public_internal_fields
 dotnet_naming_rule.public_internal_fields_must_be_pascal_case.style             = pascal_case_style
 
-# Private and protected fields must be camelCase
-dotnet_naming_rule.private_protected_fields_must_be_camel_case.severity         = warning
-dotnet_naming_rule.private_protected_fields_must_be_camel_case.symbols          = private_protected_fields
-dotnet_naming_rule.private_protected_fields_must_be_camel_case.style            = camel_case_style
-
 # Public members must be capitalized
 dotnet_naming_rule.public_members_must_be_capitalized.severity                  = warning
 dotnet_naming_rule.public_members_must_be_capitalized.symbols                   = public_symbols
