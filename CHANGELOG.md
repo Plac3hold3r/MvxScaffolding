@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.2.0...v1.2.1) (2019-06-01)
+
+
+### Bug Fixes
+
+* **vsix:** Add missing UWP project type and global error handling ([#419](https://github.com/Plac3hold3r/MvxScaffolding/issues/419)) ([1e9ee00](https://github.com/Plac3hold3r/MvxScaffolding/commit/1e9ee00))
+
+
+
 ## [1.2.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.1.0...v1.2.0) (2019-06-01)
 
 
