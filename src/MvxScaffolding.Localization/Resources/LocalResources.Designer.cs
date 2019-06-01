@@ -19,7 +19,7 @@ namespace MvxScaffolding.Localization.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class LocalResources {
@@ -795,6 +795,24 @@ namespace MvxScaffolding.Localization.Resources {
         public static string SimpleInfo_Translate_Title {
             get {
                 return ResourceManager.GetString("SimpleInfo_Translate_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MvxScaffolding can not delete the default Visual Studio generated project folder due to the choice of file location requiring elevated privileges. You will need to either run Visual Studio as an Administrator or manually clean up the directory after project has been generated..
+        /// </summary>
+        public static string SimpleInfo_UnauthorizedAccess_Message {
+            get {
+                return ResourceManager.GetString("SimpleInfo_UnauthorizedAccess_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unauthorized Access Error.
+        /// </summary>
+        public static string SimpleInfo_UnauthorizedAccess_Title {
+            get {
+                return ResourceManager.GetString("SimpleInfo_UnauthorizedAccess_Title", resourceCulture);
             }
         }
         

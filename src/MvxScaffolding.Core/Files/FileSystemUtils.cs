@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -12,7 +12,7 @@ namespace MvxScaffolding.Core.Files
 {
     public static class FileSystemUtils
     {
-        public static void SafeDeleteDirectory(string dir)
+        public static FileDeleteStatus SafeDeleteDirectory(string dir)
         {
             try
             {
@@ -20,11 +20,22 @@ namespace MvxScaffolding.Core.Files
                 {
                     Directory.Delete(dir, true);
                 }
+
+                return FileDeleteStatus.Success;
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                Logger.Current.Info.TrackAsync("Unauthorized access to deleting directory", ex)
+                    .FireAndForget();
+
+                return FileDeleteStatus.UnauthorizedAccessError;
             }
             catch (Exception ex)
             {
                 Logger.Current.Exception.TrackAsync(ex, "Error deleting directory")
                     .FireAndForget();
+
+                return FileDeleteStatus.Error;
             }
         }
     }

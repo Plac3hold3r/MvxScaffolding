@@ -51,7 +51,6 @@
         "Type": "Blank",
         "Platforms": [ "iOS", "Android", "UWP" ]
       }
-
     ]
   }
 }
