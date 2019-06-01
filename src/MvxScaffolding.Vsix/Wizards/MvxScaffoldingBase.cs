@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows;
 using EnvDTE;
 using EnvDTE80;
 using Microsoft.Internal.VisualStudio.PlatformUI;
@@ -54,17 +55,17 @@ namespace MvxScaffolding.Vsix.Wizards
         {
             if (runKind == WizardRunKind.AsNewProject || runKind == WizardRunKind.AsMultiProject)
             {
-                MvxScaffoldingContext.WizardVersion = new Version(ThisAssembly.Vsix.Version);
-                MvxScaffoldingContext.WizardName = ThisAssembly.Vsix.Name;
-                MvxScaffoldingContext.ProjectName = replacementsDictionary[VSTemplateKeys.ProjectName];
-                MvxScaffoldingContext.SafeProjectName = replacementsDictionary[VSTemplateKeys.SafeProjectName];
-                MvxScaffoldingContext.CanCreateSolutionDirectory = !string.IsNullOrWhiteSpace(replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName]);
-                MvxScaffoldingContext.SolutionName = replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName];
-
-                RemoveOldSolutionDirectory(automationObject, replacementsDictionary);
-
                 try
                 {
+                    MvxScaffoldingContext.WizardVersion = new Version(ThisAssembly.Vsix.Version);
+                    MvxScaffoldingContext.WizardName = ThisAssembly.Vsix.Name;
+                    MvxScaffoldingContext.ProjectName = replacementsDictionary[VSTemplateKeys.ProjectName];
+                    MvxScaffoldingContext.SafeProjectName = replacementsDictionary[VSTemplateKeys.SafeProjectName];
+                    MvxScaffoldingContext.CanCreateSolutionDirectory = !string.IsNullOrWhiteSpace(replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName]);
+                    MvxScaffoldingContext.SolutionName = replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName];
+
+                    RemoveOldSolutionDirectory(automationObject, replacementsDictionary);
+
                     ShowModal(Startup.FirstView());
 
                     MvxScaffoldingContext.RunningTimer.Stop();
@@ -86,6 +87,19 @@ namespace MvxScaffolding.Vsix.Wizards
 
                         MvxScaffoldingContext.UserSelectedOptions = null;
                     }
+                }
+                catch (Exception ex) when (ex.GetType() != typeof(WizardBackoutException))
+                {
+                    Logger.Current.Exception.TrackAsync(ex, "Error running wizard")
+                        .FireAndForget();
+
+                    var messageBoxText = $"There was an error trying to run MvxScaffolding. Please log an issue on GitHub if the error persists.\n\nError Message: {ex.Message}\nError StackTrace:{ex.StackTrace}";
+                    var caption = "MvxScaffolding error";
+                    MessageBoxButton button = MessageBoxButton.OK;
+                    MessageBoxImage icon = MessageBoxImage.Error;
+                    MessageBox.Show(messageBoxText, caption, button, icon);
+
+                    throw new WizardBackoutException("Error running wizard, closing application", ex);
                 }
                 finally
                 {
