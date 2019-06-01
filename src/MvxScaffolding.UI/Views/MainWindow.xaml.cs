@@ -3,11 +3,13 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
+using System;
 using System.Windows.Input;
 using System.Windows.Media;
 using MahApps.Metro.Controls;
 using MaterialDesignThemes.Wpf;
 using MvxScaffolding.Core.Contexts;
+using MvxScaffolding.Core.Files;
 using MvxScaffolding.Core.Template;
 using MvxScaffolding.Core.ViewModels;
 using MvxScaffolding.Core.ViewModels.Dialogs;
@@ -35,6 +37,17 @@ namespace MvxScaffolding.UI.Views
 #if DEBUG
             ShowInTaskbar = true;
 #endif
+        }
+
+        protected override void OnContentRendered(EventArgs e)
+        {
+            base.OnContentRendered(e);
+
+            if (MvxScaffoldingContext.RemoveOldSolutionDirectoryStatus == FileDeleteStatus.UnauthorizedAccessError
+                && DataContext is MainViewModel mainViewModel)
+            {
+                mainViewModel.ShowDialogCommand.Execute(SimpleInfoViewModel.UnauthorizedAccessErrorInfo());
+            }
         }
 
         private void OnDialogClosing(object sender, DialogClosingEventArgs eventArgs)

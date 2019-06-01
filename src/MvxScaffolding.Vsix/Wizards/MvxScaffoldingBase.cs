@@ -64,7 +64,7 @@ namespace MvxScaffolding.Vsix.Wizards
                     MvxScaffoldingContext.CanCreateSolutionDirectory = !string.IsNullOrWhiteSpace(replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName]);
                     MvxScaffoldingContext.SolutionName = replacementsDictionary[VSTemplateKeys.SpecifiedSolutionName];
 
-                    RemoveOldSolutionDirectory(automationObject, replacementsDictionary);
+                    MvxScaffoldingContext.RemoveOldSolutionDirectoryStatus = RemoveOldSolutionDirectory(automationObject, replacementsDictionary);
 
                     ShowModal(Startup.FirstView());
 
@@ -109,7 +109,7 @@ namespace MvxScaffolding.Vsix.Wizards
             }
         }
 
-        private static void RemoveOldSolutionDirectory(object automationObject, Dictionary<string, string> replacementsDictionary)
+        private static FileDeleteStatus RemoveOldSolutionDirectory(object automationObject, Dictionary<string, string> replacementsDictionary)
         {
             var dte = (DTE)automationObject;
             var solution = (Solution2)dte.Solution;
@@ -121,11 +121,13 @@ namespace MvxScaffolding.Vsix.Wizards
                 ? oldDestinationDirectory
                 : Path.GetFullPath(Path.Combine(oldDestinationDirectory, @"..\"));
 
-            FileSystemUtils.SafeDeleteDirectory(solutionRootDirectory);
+            FileDeleteStatus deleteStatus = FileSystemUtils.SafeDeleteDirectory(solutionRootDirectory);
 
             var rootFolderDictionary = Path.GetFullPath(Path.Combine(solutionRootDirectory, @"..\"));
             replacementsDictionary[VSTemplateKeys.DestinationDirectory] = rootFolderDictionary;
             replacementsDictionary[VSTemplateKeys.SolutionDirectory] = rootFolderDictionary;
+
+            return deleteStatus;
         }
 
         public bool ShouldAddProjectItem(string filePath)

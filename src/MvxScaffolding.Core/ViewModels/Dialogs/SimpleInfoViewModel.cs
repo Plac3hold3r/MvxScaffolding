@@ -51,5 +51,15 @@ namespace MvxScaffolding.Core.ViewModels.Dialogs
                 TemplateLink = TemplateLinks.EditorConfig
             };
         }
+
+        public static SimpleInfoViewModel UnauthorizedAccessErrorInfo()
+        {
+            return new SimpleInfoViewModel
+            {
+                Title = LocalResources.SimpleInfo_UnauthorizedAccess_Title,
+                Message = LocalResources.SimpleInfo_UnauthorizedAccess_Message,
+                TemplateLink = TemplateLinks.UnauthorizedAccessError
+            };
+        }
     }
 }

@@ -6,6 +6,7 @@
 using System;
 using System.Diagnostics;
 using MvxScaffolding.Core.Dialogs.Interfaces;
+using MvxScaffolding.Core.Files;
 using MvxScaffolding.Core.Properties;
 using MvxScaffolding.Core.Template;
 
@@ -30,6 +31,8 @@ namespace MvxScaffolding.Core.Contexts
         public static string SafeProjectName { get; set; } = "Test_Project";
 
         public static string SolutionName { get; set; } = "SolutionProject";
+
+        public static FileDeleteStatus RemoveOldSolutionDirectoryStatus { get; set; } = FileDeleteStatus.Unknown;
 
         public static bool CanCreateSolutionDirectory { get; set; }
 

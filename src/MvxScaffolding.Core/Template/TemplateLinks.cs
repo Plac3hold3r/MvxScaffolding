@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -24,6 +24,8 @@ namespace MvxScaffolding.Core.Template
         public const string AuthorGitHub = "AuthorGitHub";
 
         public const string EditorConfig = "EditorConfig";
+
+        public const string UnauthorizedAccessError = "UnauthorizedAccessError";
 
         public const string FluentLayout = "FluentLayout";
 
