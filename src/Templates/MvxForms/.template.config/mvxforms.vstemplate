@@ -19,6 +19,7 @@
         <PlatformTag>iOS</PlatformTag>
         <PlatformTag>Windows</PlatformTag>
         <ProjectTypeTag>Mobile</ProjectTypeTag>
+        <ProjectTypeTag>UWP</ProjectTypeTag>
         <ProjectTypeTag>MvvmCross</ProjectTypeTag>
     </TemplateData>
     <TemplateContent>

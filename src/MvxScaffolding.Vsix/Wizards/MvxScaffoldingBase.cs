@@ -6,7 +6,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Windows;
 using EnvDTE;
 using EnvDTE80;
 using Microsoft.Internal.VisualStudio.PlatformUI;
@@ -20,6 +19,7 @@ using MvxScaffolding.Core.Tasks;
 using MvxScaffolding.Core.Template;
 using MvxScaffolding.UI;
 using MvxScaffolding.UI.Threading;
+using MvxScaffolding.UI.Utils;
 using MvxScaffolding.Vsix.Constants;
 
 namespace MvxScaffolding.Vsix.Wizards
@@ -93,11 +93,7 @@ namespace MvxScaffolding.Vsix.Wizards
                     Logger.Current.Exception.TrackAsync(ex, "Error running wizard")
                         .FireAndForget();
 
-                    var messageBoxText = $"There was an error trying to run MvxScaffolding. Please log an issue on GitHub if the error persists.\n\nError Message: {ex.Message}\nError StackTrace:{ex.StackTrace}";
-                    var caption = "MvxScaffolding error";
-                    MessageBoxButton button = MessageBoxButton.OK;
-                    MessageBoxImage icon = MessageBoxImage.Error;
-                    MessageBox.Show(messageBoxText, caption, button, icon);
+                    ExceptionHandler.ShowErrorDialog(ex);
 
                     throw new WizardBackoutException("Error running wizard, closing application", ex);
                 }
