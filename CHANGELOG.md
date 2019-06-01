@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.1.0...v1.2.0) (2019-06-01)
+
+
+### Features
+
+* **template:** Remove armeabi support ([#418](https://github.com/Plac3hold3r/MvxScaffolding/issues/418)) ([a895755](https://github.com/Plac3hold3r/MvxScaffolding/commit/a895755))
+
+
+
 ## [1.1.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.0.0...v1.1.0) (2019-06-01)
 
 
