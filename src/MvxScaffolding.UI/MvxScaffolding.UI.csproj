@@ -195,6 +195,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Threading\SafeThreading.cs" />
+    <Compile Include="Utils\ExceptionHandler.cs" />
     <Compile Include="Utils\ForceAssemblyReferenceAttribute.cs" />
     <Compile Include="Views\AppDetailsView.xaml.cs">
       <DependentUpon>AppDetailsView.xaml</DependentUpon>

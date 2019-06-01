@@ -4,17 +4,22 @@
 //---------------------------------------------------------------------------------
 
 using System;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Threading;
 using MahApps.Metro.Controls;
 using MaterialDesignThemes.Wpf;
 using MvxScaffolding.Core.Contexts;
+using MvxScaffolding.Core.Diagnostics;
 using MvxScaffolding.Core.Files;
+using MvxScaffolding.Core.Tasks;
 using MvxScaffolding.Core.Template;
 using MvxScaffolding.Core.ViewModels;
 using MvxScaffolding.Core.ViewModels.Dialogs;
 using MvxScaffolding.Core.ViewModels.Interfaces;
 using MvxScaffolding.UI.Dialogs;
+using MvxScaffolding.UI.Utils;
 
 namespace MvxScaffolding.UI.Views
 {
@@ -22,6 +27,8 @@ namespace MvxScaffolding.UI.Views
     {
         public MainWindow()
         {
+            Application.Current.DispatcherUnhandledException += new DispatcherUnhandledExceptionEventHandler(HandlerDispatcherUnhandledExceptionEvent);
+
             InitializeComponent();
 
             MvxScaffoldingContext.DialogHost = new DialohHost();
@@ -66,6 +73,14 @@ namespace MvxScaffolding.UI.Views
             {
                 Close();
             }
+        }
+
+        private void HandlerDispatcherUnhandledExceptionEvent(object sender, DispatcherUnhandledExceptionEventArgs e)
+        {
+            Logger.Current.Exception.TrackAsync(e.Exception, "Dispatcher unhandled exception running wizard")
+                        .FireAndForget();
+
+            ExceptionHandler.ShowErrorDialog(e.Exception);
         }
     }
 }
