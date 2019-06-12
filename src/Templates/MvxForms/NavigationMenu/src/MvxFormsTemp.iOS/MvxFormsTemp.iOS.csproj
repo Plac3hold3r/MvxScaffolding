@@ -216,20 +216,6 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
-  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <NativeReference Include="Native References/HyperionCore.framework">
-      <Kind>Framework</Kind>
-    </NativeReference>
-    <NativeReference Include="Native References/AttributesInspector.framework">
-      <Kind>Framework</Kind>
-    </NativeReference>
-    <NativeReference Include="Native References/SlowAnimations.framework">
-      <Kind>Framework</Kind>
-    </NativeReference>
-    <NativeReference Include="Native References/Measurements.framework">
-      <Kind>Framework</Kind>
-    </NativeReference>
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
