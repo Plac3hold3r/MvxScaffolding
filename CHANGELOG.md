@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.3](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.2.1...v1.2.3) (2019-06-15)
+
+
+### Bug Fixes
+
+* **mvxform:** Remove native reference from template ([#424](https://github.com/Plac3hold3r/MvxScaffolding/issues/424)) ([b43769d](https://github.com/Plac3hold3r/MvxScaffolding/commit/b43769d))
+
+
+
 ### [1.2.1](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.2.0...v1.2.1) (2019-06-01)
 
 
