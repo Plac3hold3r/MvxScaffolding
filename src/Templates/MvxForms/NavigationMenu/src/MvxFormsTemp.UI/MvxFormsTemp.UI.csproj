@@ -8,7 +8,7 @@
     <PackageReference Include="MvvmCross" Version="6.3.1" />
     <PackageReference Include="MvvmCross.CodeAnalysis" Version="6.3.1" />
     <PackageReference Include="MvvmCross.Forms" Version="6.3.1" />
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.497661" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.540366" />
   </ItemGroup>
   
   <ItemGroup>
