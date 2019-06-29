@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.2.3...v1.3.0) (2019-06-29)
+
+
+### Bug Fixes
+
+* update language grammar ([#467](https://github.com/Plac3hold3r/MvxScaffolding/issues/467)) ([1920f7c](https://github.com/Plac3hold3r/MvxScaffolding/commit/1920f7c))
+
+
+### Features
+
+* **vsix:** re-enable resize of window ([#469](https://github.com/Plac3hold3r/MvxScaffolding/issues/469)) ([67ae974](https://github.com/Plac3hold3r/MvxScaffolding/commit/67ae974))
+* update Crowdin translations ([#468](https://github.com/Plac3hold3r/MvxScaffolding/issues/468)) ([cdbac29](https://github.com/Plac3hold3r/MvxScaffolding/commit/cdbac29))
+* **deps:** Bump MvvmCross in /src/Templates/MvxNative/NavigationMenu ([#433](https://github.com/Plac3hold3r/MvxScaffolding/issues/433)) ([d9fd4bb](https://github.com/Plac3hold3r/MvxScaffolding/commit/d9fd4bb))
+* **deps:** Bump MvvmCross.Forms ([#457](https://github.com/Plac3hold3r/MvxScaffolding/issues/457)) ([dafaf51](https://github.com/Plac3hold3r/MvxScaffolding/commit/dafaf51))
+* **deps:** Bump Xamarin.Forms ([#464](https://github.com/Plac3hold3r/MvxScaffolding/issues/464)) ([043c850](https://github.com/Plac3hold3r/MvxScaffolding/commit/043c850))
+
+
+
 ### [1.2.3](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.2.1...v1.2.3) (2019-06-15)
 
 
