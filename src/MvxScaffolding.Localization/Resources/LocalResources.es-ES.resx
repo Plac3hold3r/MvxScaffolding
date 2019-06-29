@@ -454,7 +454,7 @@
     <value>Crear directorio para la solución</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Message" xml:space="preserve">
-    <value>MvxScaffolding can not delete the default Visual Studio generated project folder due to the choice of file location requiring elevated privileges. You will need to either run Visual Studio as an Administrator or manually clean up the directory after project has been generated.</value>
+    <value>MvxScaffolding cannot delete the default Visual Studio generated project folder due to the choice of file location requiring elevated privileges. You will need to either run Visual Studio as an Administrator or manually clean up the directory after the project has been generated.</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Title" xml:space="preserve">
     <value>Unauthorized Access Error</value>
