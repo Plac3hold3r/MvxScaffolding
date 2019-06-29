@@ -451,12 +451,12 @@
     <value>Steiger een app met kale basisfuncties.</value>
   </data>
   <data name="AppDetails_Create_Solution_Directory" xml:space="preserve">
-    <value>Create directory for solution</value>
+    <value>Maak een directory voor de oplossing</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Message" xml:space="preserve">
-    <value>MvxScaffolding cannot delete the default Visual Studio generated project folder due to the choice of file location requiring elevated privileges. You will need to either run Visual Studio as an Administrator or manually clean up the directory after the project has been generated.</value>
+    <value>MvxScaffolding kan de door Visual Studio gegenereerde projectmap niet verwijderen vanwege de keuze van de bestandslocatie waarvoor verhoogde rechten vereist zijn. U moet Visual Studio als een beheerder uitvoeren of de map handmatig opschonen nadat het project is gegenereerd.</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Title" xml:space="preserve">
-    <value>Unauthorized Access Error</value>
+    <value>Ongeautoriseerde toegang fout</value>
   </data>
 </root>
