@@ -799,7 +799,7 @@ namespace MvxScaffolding.Localization.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MvxScaffolding can not delete the default Visual Studio generated project folder due to the choice of file location requiring elevated privileges. You will need to either run Visual Studio as an Administrator or manually clean up the directory after project has been generated..
+        ///   Looks up a localized string similar to MvxScaffolding cannot delete the default Visual Studio generated project folder due to the choice of file location requiring elevated privileges. You will need to either run Visual Studio as an Administrator or manually clean up the directory after the project has been generated..
         /// </summary>
         public static string SimpleInfo_UnauthorizedAccess_Message {
             get {
