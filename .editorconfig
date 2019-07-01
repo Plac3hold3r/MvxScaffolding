@@ -3,6 +3,7 @@
 # Built for 
 #   ~ Visual Studio 2017 v15.9 - https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options
 #   ~ Visual Studio for Mac v7.7 - https://docs.microsoft.com/en-us/visualstudio/mac/editorconfig
+# Version - 1.0.0
 # ------------------------------------------------------------------------------------------------------------------------
 
 # top-most EditorConfig file
@@ -14,9 +15,9 @@ indent_style = space
 
 # Code files
 [*.{cs,csx,vb,vbx}]
+charset                     = utf-8
 indent_size                 = 4
 insert_final_newline        = true
-charset                     = utf-8
 trim_trailing_whitespace    = true
 
 # Solution Files
@@ -236,6 +237,10 @@ dotnet_naming_symbols.public_internal_fields.applicable_kinds                   
 dotnet_naming_symbols.private_protected_fields.applicable_accessibilities       = private, protected
 dotnet_naming_symbols.private_protected_fields.applicable_kinds                 = field
 
+# private_fields - Define private and protected fields
+dotnet_naming_symbols.private_fields.applicable_accessibilities                 = private
+dotnet_naming_symbols.private_fields.applicable_kinds                           = field
+
 # public_symbols - Define any public symbol
 dotnet_naming_symbols.public_symbols.applicable_accessibilities                 = public, internal, protected, protected_internal
 dotnet_naming_symbols.public_symbols.applicable_kinds                           = method, property, event, delegate
@@ -274,6 +279,10 @@ dotnet_naming_style.first_upper_style.capitalization                            
 dotnet_naming_style.prefix_interface_with_i_style.required_prefix               = I
 dotnet_naming_style.prefix_interface_with_i_style.capitalization                = pascal_case
 
+# prefix_with_underscore_style - Require an underscore as the first character style
+dotnet_naming_style.prefix_with_underscore_style.required_prefix                = _
+dotnet_naming_style.prefix_with_underscore_style.capitalization                 = camel_case
+
 # suffix_method_with_async_style - Async method must be suffix by 'Async' key word
 dotnet_naming_style.suffix_method_with_async_style.required_suffix              = Async
 dotnet_naming_style.suffix_method_with_async_style.capitalization               = pascal_case
@@ -287,6 +296,11 @@ dotnet_naming_rule.constant_fields_must_be_pascal_case.severity                 
 dotnet_naming_rule.constant_fields_must_be_pascal_case.symbols                  = constant_fields
 dotnet_naming_rule.constant_fields_must_be_pascal_case.style                    = pascal_case_style
 
+# Private fields must be camelCase and start with an underscore
+dotnet_naming_rule.private_fields_must_be_camel_case.severity                   = warning
+dotnet_naming_rule.private_fields_must_be_camel_case.symbols                    = private_fields
+dotnet_naming_rule.private_fields_must_be_camel_case.style                      = prefix_with_underscore_style
+
 # Public, internal and protected readonly fields must be PascalCase
 dotnet_naming_rule.non_private_readonly_fields_must_be_pascal_case.severity     = warning
 dotnet_naming_rule.non_private_readonly_fields_must_be_pascal_case.symbols      = non_private_readonly_fields
@@ -297,10 +311,10 @@ dotnet_naming_rule.static_readonly_fields_must_be_pascal_case.severity          
 dotnet_naming_rule.static_readonly_fields_must_be_pascal_case.symbols           = static_readonly_fields
 dotnet_naming_rule.static_readonly_fields_must_be_pascal_case.style             = pascal_case_style
 
-# Private readonly fields must be camelCase
+# Private readonly fields must be camelCase and start with an underscore
 dotnet_naming_rule.private_readonly_fields_must_be_camel_case.severity          = warning
 dotnet_naming_rule.private_readonly_fields_must_be_camel_case.symbols           = private_readonly_fields
-dotnet_naming_rule.private_readonly_fields_must_be_camel_case.style             = camel_case_style
+dotnet_naming_rule.private_readonly_fields_must_be_camel_case.style             = prefix_with_underscore_style
 
 # Public and internal fields must be PascalCase
 dotnet_naming_rule.public_internal_fields_must_be_pascal_case.severity          = warning
