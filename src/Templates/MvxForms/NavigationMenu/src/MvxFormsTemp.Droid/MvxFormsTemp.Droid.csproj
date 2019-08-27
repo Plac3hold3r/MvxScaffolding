@@ -119,7 +119,7 @@
       <Version>28.0.0.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.v4">
-      <Version>28.0.0.1</Version>
+      <Version>28.0.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.V7.AppCompat">
       <Version>28.0.0.1</Version>
