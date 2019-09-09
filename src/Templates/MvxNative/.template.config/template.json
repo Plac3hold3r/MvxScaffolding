@@ -545,6 +545,18 @@
       "description": "Minimum iOS SDK version.",
       "choices": [
         {
+          "choice": "12.4",
+          "description": "iOS 12.4"
+        },
+        {
+          "choice": "12.3",
+          "description": "iOS 12.3"
+        },
+        {
+          "choice": "12.2",
+          "description": "iOS 12.2"
+        },
+        {
           "choice": "12.1",
           "description": "iOS 12.1"
         },
@@ -645,6 +657,10 @@
       "defaultValue": "16299",
       "description": "Minimum UWP target SDK version.",
       "choices": [
+        {
+          "choice": "18362",
+          "description": "1903 - May 2019 Update"
+        },
         {
           "choice": "17763",
           "description": "1809 - October 2018 Update"
