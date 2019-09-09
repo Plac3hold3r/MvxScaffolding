@@ -9,7 +9,7 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![Semver](https://badgen.net/badge/semver/2.0.0/green)](https://semver.org/)
 
-A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms. Supports MvvmCross 6.3.1.
+A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms. Supports MvvmCross 6.4.0.
 
 ![MvxScaffolding screenshot](docs/resources/vs_template_banner.png)
 
@@ -30,9 +30,6 @@ __Templates features__
  |             iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.FluentLayout)              |     *     |
 
 See [Changelog](/CHANGELOG.md)
-
-[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/At3MQb9xX)
-
 
 ## Installation
 
