@@ -184,7 +184,7 @@
     <value>Unit Test Project</value>
   </data>
   <data name="PlatformOptions_Android_LayoutType" xml:space="preserve">
-    <value>Layout Type</value>
+    <value>Tipo de layout</value>
   </data>
   <data name="PlatformOptions_Core_dotNetStandard" xml:space="preserve">
     <value>.NET Standard</value>
