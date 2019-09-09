@@ -212,6 +212,9 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                          Default: 19
 
   -ios-sdk|--ios-min-sdk                 Minimum iOS SDK version.
+                                             12.4    - iOS 12.4
+                                             12.3    - iOS 12.3
+                                             12.2    - iOS 12.2
                                              12.1    - iOS 12.1
                                              12.0    - iOS 12.0
                                              11.4    - iOS 11.4
@@ -234,6 +237,7 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                          Default: Laying the foundation with Mvx Scaffolding
 
   -uwp-sdk|--uwp-min-sdk                 Minimum UWP target SDK version.
+                                             18362    - 1903 - May 2019 Update
                                              17763    - 1809 - October 2018 Update
                                              17134    - 1803 - April 2018 Update
                                              16299    - 1709 - Fall Creators Update
