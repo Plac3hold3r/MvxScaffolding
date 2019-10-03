@@ -9,7 +9,7 @@
     <PackageReference Include="Moq" Version="4.13.0" />
     <PackageReference Include="MvvmCross" Version="6.4.1" />
     <PackageReference Include="MvvmCross.CodeAnalysis" Version="6.4.0" />
-    <PackageReference Include="MvvmCross.Tests" Version="6.4.0" />
+    <PackageReference Include="MvvmCross.Tests" Version="6.4.1" />
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
   </ItemGroup>
