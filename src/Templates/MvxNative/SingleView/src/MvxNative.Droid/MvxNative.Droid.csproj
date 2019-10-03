@@ -78,7 +78,7 @@
       <Version>6.4.1</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.CodeAnalysis">
-      <Version>6.4.0</Version>
+      <Version>6.4.1</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.Design">
       <Version>6.4.0</Version>
