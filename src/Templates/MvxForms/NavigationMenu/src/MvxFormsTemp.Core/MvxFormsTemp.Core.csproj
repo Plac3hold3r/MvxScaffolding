@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <PackageReference Include="MvvmCross" Version="6.4.1" />
-    <PackageReference Include="MvvmCross.CodeAnalysis" Version="6.4.1" />
     <PackageReference Include="Xamarin.Forms" Version="4.2.0.848062" />
   </ItemGroup>
 
