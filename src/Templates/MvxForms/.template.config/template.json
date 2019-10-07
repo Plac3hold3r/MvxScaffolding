@@ -476,6 +476,14 @@
       "description": "Minimum iOS target SDK version.",
       "choices": [
         {
+          "choice": "13.1",
+          "description": "iOS 13.1"
+        },
+        {
+          "choice": "13.0",
+          "description": "iOS 13.0"
+        },
+        {
           "choice": "12.4",
           "description": "iOS 12.4"
         },
