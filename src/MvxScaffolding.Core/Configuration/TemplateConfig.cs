@@ -28,6 +28,7 @@ namespace MvxScaffolding.Core.Configuration
 
         public static Dictionary<string, string> MinAndroidSDKOptions => new Dictionary<string, string>
         {
+            ["29"] = "Android 10 - Q v29",
             ["28"] = "Android 9 - Pie v28",
             ["27"] = "Android 8.1 - Oreo v27",
             ["26"] = "Android 8 - Oreo v26",

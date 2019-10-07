@@ -403,6 +403,10 @@
       "description": "Minimum Android target SDK version.",
       "choices": [
         {
+          "choice": "29",
+          "description": "Android 10 - Q v29"
+        },
+        {
           "choice": "28",
           "description": "Android 9 - Pie v28"
         },
