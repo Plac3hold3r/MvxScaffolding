@@ -3,8 +3,8 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
-using System.Collections.Generic;
 using MvxScaffolding.Localization.Resources;
+using System.Collections.Generic;
 
 namespace MvxScaffolding.Core.Configuration
 {
@@ -48,6 +48,8 @@ namespace MvxScaffolding.Core.Configuration
 
         public static Dictionary<string, string> MinIosSDKOptions => new Dictionary<string, string>
         {
+            ["13.1"] = "iOS 13.1",
+            ["13.0"] = "iOS 13.0",
             ["12.4"] = "iOS 12.4",
             ["12.3"] = "iOS 12.3",
             ["12.2"] = "iOS 12.2",
