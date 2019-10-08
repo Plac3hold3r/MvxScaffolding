@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.3.0...v1.4.0) (2019-10-08)
+
+
+### Bug Fixes
+
+* **template:** remove Mvx CodeAnalysis ([341daac](https://github.com/Plac3hold3r/MvxScaffolding/commit/341daac))
+
+
+### Features
+
+* **deps:** bump Moq ([#535](https://github.com/Plac3hold3r/MvxScaffolding/issues/535)) ([0857dd7](https://github.com/Plac3hold3r/MvxScaffolding/commit/0857dd7))
+* **deps:** bump MvvmCross ([#545](https://github.com/Plac3hold3r/MvxScaffolding/issues/545)) ([1b22db5](https://github.com/Plac3hold3r/MvxScaffolding/commit/1b22db5))
+* **deps:** bump MvvmCross.Plugin.Sidebar ([#567](https://github.com/Plac3hold3r/MvxScaffolding/issues/567)) ([6627c1f](https://github.com/Plac3hold3r/MvxScaffolding/commit/6627c1f))
+* **deps:** bump NUnit3TestAdapter ([#533](https://github.com/Plac3hold3r/MvxScaffolding/issues/533)) ([703f6c5](https://github.com/Plac3hold3r/MvxScaffolding/commit/703f6c5))
+* **deps:** Bump Xamarin.Forms ([#473](https://github.com/Plac3hold3r/MvxScaffolding/issues/473)) ([f34ca54](https://github.com/Plac3hold3r/MvxScaffolding/commit/f34ca54))
+* **deps:** bump Xamarin.Forms ([#481](https://github.com/Plac3hold3r/MvxScaffolding/issues/481)) ([1ab9532](https://github.com/Plac3hold3r/MvxScaffolding/commit/1ab9532))
+* **deps:** bump Xamarin.Forms ([#483](https://github.com/Plac3hold3r/MvxScaffolding/issues/483)) ([6fae16a](https://github.com/Plac3hold3r/MvxScaffolding/commit/6fae16a))
+* **deps:** bump Xamarin.Forms ([#489](https://github.com/Plac3hold3r/MvxScaffolding/issues/489)) ([f62b399](https://github.com/Plac3hold3r/MvxScaffolding/commit/f62b399))
+* **deps:** Bump Xamarin.Forms in /src/Templates/MvxForms/Blank ([#477](https://github.com/Plac3hold3r/MvxScaffolding/issues/477)) ([e003b2b](https://github.com/Plac3hold3r/MvxScaffolding/commit/e003b2b))
+* **deps:** update UI testing ([bfb7211](https://github.com/Plac3hold3r/MvxScaffolding/commit/bfb7211))
+* **template:** Android 10 support for min SDK ([d022206](https://github.com/Plac3hold3r/MvxScaffolding/commit/d022206))
+* **template:** iOS 13+ support for min SDK ([b49bff5](https://github.com/Plac3hold3r/MvxScaffolding/commit/b49bff5))
+* **template:** UWP use NuGet Microsoft.NET.Test.Sdk ([#656](https://github.com/Plac3hold3r/MvxScaffolding/issues/656)) ([516043a](https://github.com/Plac3hold3r/MvxScaffolding/commit/516043a))
+* **uwp:** Add 1903 UWP support ([#572](https://github.com/Plac3hold3r/MvxScaffolding/issues/572)) ([f57decc](https://github.com/Plac3hold3r/MvxScaffolding/commit/f57decc))
+* Add support for iOS 12.4 ([#571](https://github.com/Plac3hold3r/MvxScaffolding/issues/571)) ([651499e](https://github.com/Plac3hold3r/MvxScaffolding/commit/651499e))
+* Update editor config ([#472](https://github.com/Plac3hold3r/MvxScaffolding/issues/472)) ([5d55ced](https://github.com/Plac3hold3r/MvxScaffolding/commit/5d55ced))
+
 ## [1.3.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.2.3...v1.3.0) (2019-06-29)
 
 
