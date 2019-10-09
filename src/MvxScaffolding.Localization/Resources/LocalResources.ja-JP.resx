@@ -424,39 +424,39 @@
     <value>ナビゲーションメニュー</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu_Description" xml:space="preserve">
-    <value>Scaffold an app with a slide out menu. Template contains two starting views with view models.</value>
+    <value>スライドアウトメニューでアプリを作成する。テンプレートには2つの初期ビューとビューモデルがあります。</value>
   </data>
   <data name="AppDetails_Template_SingleView" xml:space="preserve">
-    <value>Single View</value>
+    <value>単一のビュー</value>
   </data>
   <data name="AppDetails_Template_SingleView_Description" xml:space="preserve">
     <value>Scaffold an app with a single starting view and view model.</value>
   </data>
   <data name="AppDetails_Project_Name" xml:space="preserve">
-    <value>Project Name</value>
+    <value>プロジェクト名</value>
   </data>
   <data name="Summary_ScaffoldType" xml:space="preserve">
-    <value>Scaffold Type</value>
+    <value>基盤タイプ</value>
   </data>
   <data name="Summary_SolutionName" xml:space="preserve">
-    <value>Solution Name</value>
+    <value>ソリューション名</value>
   </data>
   <data name="ReleaseNotes_InstalledVersion" xml:space="preserve">
-    <value>Installed Version</value>
+    <value>インストール済のバージョン</value>
   </data>
   <data name="AppDetails_Template_Blank" xml:space="preserve">
-    <value>Blank</value>
+    <value>空白</value>
   </data>
   <data name="AppDetails_Template_Blank_Description" xml:space="preserve">
     <value>Scaffold an app with bare basic features.</value>
   </data>
   <data name="AppDetails_Create_Solution_Directory" xml:space="preserve">
-    <value>Create directory for solution</value>
+    <value>ソリューションのディレクトリ作成</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Message" xml:space="preserve">
     <value>MvxScaffolding cannot delete the default Visual Studio generated project folder due to the choice of file location requiring elevated privileges. You will need to either run Visual Studio as an Administrator or manually clean up the directory after the project has been generated.</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Title" xml:space="preserve">
-    <value>Unauthorized Access Error</value>
+    <value>不正アクセスエラー</value>
   </data>
 </root>
