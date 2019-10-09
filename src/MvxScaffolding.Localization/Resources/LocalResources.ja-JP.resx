@@ -430,7 +430,7 @@
     <value>単一のビュー</value>
   </data>
   <data name="AppDetails_Template_SingleView_Description" xml:space="preserve">
-    <value>Scaffold an app with a single starting view and view model.</value>
+    <value>シングル初期ビューとビューモデルでアプリを作成</value>
   </data>
   <data name="AppDetails_Project_Name" xml:space="preserve">
     <value>プロジェクト名</value>
@@ -448,7 +448,7 @@
     <value>空白</value>
   </data>
   <data name="AppDetails_Template_Blank_Description" xml:space="preserve">
-    <value>Scaffold an app with bare basic features.</value>
+    <value>基本機能のアプリを作成</value>
   </data>
   <data name="AppDetails_Create_Solution_Directory" xml:space="preserve">
     <value>ソリューションのディレクトリ作成</value>
