@@ -13,30 +13,30 @@ A customizable template used to scaffold a cross-platform MvvmCross application.
 
 ![MvxScaffolding screenshot](docs/resources/vs_template_banner.png)
 
-__Templates features__
+**Templates features**
 
- |                                                     Features                                                      | mvxnative | mvxforms |
- | :---------------------------------------------------------------------------------------------------------------: | :-------: | :------: |
- |           [.NET Standard class library](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)            |     *     |    *     |
- | [Package references](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files) |     *     |    *     |
- |                                                Unit test projects                                                 |     *     |    *     |
- |                                                 UI test projects                                                  |     *     |    *     |
- | Solution [EditorConfig](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options)  |     *     |    *     |
- |                                            Android Nougat round icons                                             |     *     |    *     |
- |                                            Android Oreo adaptive icons                                            |     *     |    *     |
- |                                         Android support constraint layout                                         |     *     |
- |                                            Android AXML or XML layout                                             |     *     |
- |                                           iOS storyboard launch screen                                            |     *     |    *     |
- |             iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.FluentLayout)              |     *     |
+|                                                     Features                                                      | mvxnative | mvxforms |
+| :---------------------------------------------------------------------------------------------------------------: | :-------: | :------: |
+|           [.NET Standard class library](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)            |    \*     |    \*    |
+| [Package references](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files) |    \*     |    \*    |
+|                                                Unit test projects                                                 |    \*     |    \*    |
+|                                                 UI test projects                                                  |    \*     |    \*    |
+| Solution [EditorConfig](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options)  |    \*     |    \*    |
+|                                            Android Nougat round icons                                             |    \*     |    \*    |
+|                                            Android Oreo adaptive icons                                            |    \*     |    \*    |
+|                                         Android support constraint layout                                         |    \*     |
+|                                            Android AXML or XML layout                                             |    \*     |
+|                                           iOS storyboard launch screen                                            |    \*     |    \*    |
+|             iOS storyboard or [FluentLayouts](https://github.com/FluentLayout/Cirrious.FluentLayout)              |    \*     |
 
 See [Changelog](/CHANGELOG.md)
 
 ## Installation
 
- |        Platform         |      Installation and System Requirements      |                Documentation                 |                                                  Download                                                   |
- | :---------------------: | :--------------------------------------------: | :------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
- |       dotnet CLI        |       [Installation Guide](#dotnet-cli)        | [Documentation](docs/template_dotnet_cli.md) |                      [NuGet](https://www.nuget.org/packages/MvxScaffolding.Templates/)                      |
- | Visual Studio Extension | [Installation Guide](#visual-studio-extension) |     [Documentation VS 2017](docs/template_vs_2017.md) or [Documentation VS 2019](docs/template_vs_2019.md)    | [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding) |
+|        Platform         |      Installation and System Requirements      |                                             Documentation                                              |                                                  Download                                                   |
+| :---------------------: | :--------------------------------------------: | :----------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
+|       dotnet CLI        |       [Installation Guide](#dotnet-cli)        |                              [Documentation](docs/template_dotnet_cli.md)                              |                      [NuGet](https://www.nuget.org/packages/MvxScaffolding.Templates/)                      |
+| Visual Studio Extension | [Installation Guide](#visual-studio-extension) | [Documentation VS 2017](docs/template_vs_2017.md) or [Documentation VS 2019](docs/template_vs_2019.md) | [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Plac3Hold3r.MvxScaffolding) |
 
 ## Help Translate
 
@@ -49,11 +49,12 @@ Thank you to the following translators
 |      Language      | Code  |                                                                     Translators                                                                      |
 | :----------------: | :---: | :--------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Chinese Simplified | zh-CN |                                         [Forbidden (cptbl00dra1n)](https://crowdin.com/profile/cptbl00dra1n)                                         |
-|       French       | fr-FR |                                          [Antoine Bichon (Chapelin)](https://crowdin.com/profile/Chapelin)                                           |
-|      Spanish       | es-ES |                                       [Agustin Jose Wawrzyk (elpitufo)](https://crowdin.com/profile/elpitufo)                                        |
 |       Danish       | da-DK |                                       [Tomasz Cielecki (Cheesebaron)](https://crowdin.com/profile/Cheesebaron)                                       |
-|      Russian       | ru-RU |                                  [Alexander Bublik (alex.bublik1093)](https://crowdin.com/profile/alex.bublik1093)                                   |
+|       French       | fr-FR |                                          [Antoine Bichon (Chapelin)](https://crowdin.com/profile/Chapelin)                                           |
 |      Italian       | it-IT |                                          [Emanuele Filardo (fileman)](https://crowdin.com/profile/fileman)                                           |
+|      Japanese      | ja-JP |                                              [Rei Jyo (klakling)](https://crowdin.com/profile/klakling)                                              |
+|      Russian       | ru-RU |                                  [Alexander Bublik (alex.bublik1093)](https://crowdin.com/profile/alex.bublik1093)                                   |
+|      Spanish       | es-ES |                                       [Agustin Jose Wawrzyk (elpitufo)](https://crowdin.com/profile/elpitufo)                                        |
 |     Ukrainian      | uk-UA | [Руслан Соромля (garenauser)](https://crowdin.com/profile/garenauser), [Anthony Maisak (anthony.maisak)](https://crowdin.com/profile/anthony.maisak) |
 
 ## dotnet CLI
@@ -62,15 +63,15 @@ Thank you to the following translators
 
 In order to make use of these templates you will need to have the following installed for Windows or macOS
 
-__Required__
+**Required**
 
- * .NET Core SDK 2.1.4+ ([Download SDK](https://www.microsoft.com/net/download))
+- .NET Core SDK 2.1.4+ ([Download SDK](https://www.microsoft.com/net/download))
 
- __Optional__ 
+**Optional**
 
- * Xamarin Android SDK _(Recommended version 9.4+)_
- * Xamarin iOS SDK _(Recommended version 12.14+)_
- * UWP SDK _(__Windows Only__, recommended  version 10.0.18362+)_
+- Xamarin Android SDK _(Recommended version 10+)_
+- Xamarin iOS SDK _(Recommended version 13.2+)_
+- UWP SDK _(**Windows Only**, recommended version 10.0.18362+)_
 
 ### Installation
 
@@ -90,16 +91,16 @@ See [documentation](docs/template_dotnet_cli.md) for how to generate a solution.
 
 In order to make use of these templates you will need to have the following installed for Windows
 
-__Required__
+**Required**
 
- * Visual Studio 2017 15.8+ (_Recommended Visual Studio 2019 16_ [Download Visual Studio](https://www.visualstudio.com/downloads/))
- * .NET Framework 4.7+ ([Download .NET Framework](https://www.microsoft.com/net/download/windows))
+- Visual Studio 2017 15.8+ (_Recommended Visual Studio 2019 16_ [Download Visual Studio](https://www.visualstudio.com/downloads/))
+- .NET Framework 4.7+ ([Download .NET Framework](https://www.microsoft.com/net/download/windows))
 
- __Optional__ 
+**Optional**
 
- * Xamarin Android SDK _(Recommended version 9.4+)_
- * Xamarin iOS SDK _(Recommended version 12.14+)_
- * UWP SDK _(__Windows Only__, recommended version 10.0.18362+)_
+- Xamarin Android SDK _(Recommended version 10+)_
+- Xamarin iOS SDK _(Recommended version 13.2+)_
+- UWP SDK _(**Windows Only**, recommended version 10.0.18362+)_
 
 ### Installation
 
@@ -119,10 +120,10 @@ See [documentation VS 2017](docs/template_vs_2017.md) or [documentation VS 2019]
 
 ## License
 
-
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FPlac3hold3r%2FMvxScaffolding.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FPlac3hold3r%2FMvxScaffolding?ref=badge_large)
 
 ##### Third party libraries
+
 - [MvvmCross](https://github.com/MvvmCross/MvvmCross) is licensed under [MS-PL](https://github.com/MvvmCross/MvvmCross/blob/master/LICENSE)
 - [FluentLayout](https://github.com/FluentLayout/Cirrious.FluentLayout) is licensed under [MS-PL](https://github.com/FluentLayout/Cirrious.FluentLayout/blob/master/LICENSE)
 - [Xamarin Android Support Library](https://github.com/xamarin/AndroidSupportComponents/) is licensed under [MIT](https://github.com/xamarin/AndroidSupportComponents/blob/master/LICENSE.md)

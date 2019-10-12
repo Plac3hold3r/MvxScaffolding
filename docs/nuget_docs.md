@@ -4,13 +4,13 @@ In order to make use of these templates you will need to have the following inst
 
 __Required__
 
- * .NET Core SDK 2.1.4+ ([Download SDK](https://www.microsoft.com/net/download))
+- .NET Core SDK 2.1.4+ ([Download SDK](https://www.microsoft.com/net/download))
 
  __Optional__ 
 
- * Xamarin Android SDK _(Recommended version 9.4+)_
- * Xamarin iOS SDK _(Recommended version 12.14+)_
- * UWP SDK _(__Windows Only__, recommended version 10.0.18362+)_
+- Xamarin Android SDK _(Recommended version 10+)_
+- Xamarin iOS SDK _(Recommended version 13.2+)_
+- UWP SDK _(**Windows Only**, recommended version 10.0.18362+)_
 
 ## Installation
 
