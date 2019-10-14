@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.4.0...v1.5.0) (2019-10-14)
+
+
+### Features
+
+* **NuGet:** support latest Nuspec requirements ([#657](https://github.com/Plac3hold3r/MvxScaffolding/issues/657)) ([c46bd3b](https://github.com/Plac3hold3r/MvxScaffolding/commit/c46bd3bedd9ad5c2e899795c5fe004b8d3a05599))
+* **template:** .NET  Standard 2.1 support ([#664](https://github.com/Plac3hold3r/MvxScaffolding/issues/664)) ([175292a](https://github.com/Plac3hold3r/MvxScaffolding/commit/175292a2515dad77325a08c10d6208113707100d))
+* **translation:** New Crowdin translations ([#659](https://github.com/Plac3hold3r/MvxScaffolding/issues/659)) Japanese and Spanish ([0d14d52](https://github.com/Plac3hold3r/MvxScaffolding/commit/0d14d52754b8eb71b089daf0fd511423b7a83e3a))
+* **translation:** New Crowdin translations ([#662](https://github.com/Plac3hold3r/MvxScaffolding/issues/662)) ([f9f33fd](https://github.com/Plac3hold3r/MvxScaffolding/commit/f9f33fdeed8e1cbfd035ebb5729e0252375a39d6))
+
 ## [1.4.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.3.0...v1.4.0) (2019-10-08)
 
 
