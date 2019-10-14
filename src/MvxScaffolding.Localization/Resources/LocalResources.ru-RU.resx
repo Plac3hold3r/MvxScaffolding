@@ -247,10 +247,10 @@
     <value>Описание</value>
   </data>
   <data name="PlatformOptions_Uwp_MarketShare" xml:space="preserve">
-    <value>Market Share</value>
+    <value>Доля рынка</value>
   </data>
   <data name="PlatformOptions_Uwp_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Минимальная версия SDK</value>
   </data>
   <data name="PlatformOptions_Uwp_Title" xml:space="preserve">
     <value>UWP</value>
@@ -262,7 +262,7 @@
     <value>Unit Test Project</value>
   </data>
   <data name="ProjectGrouping_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Закрыть</value>
   </data>
   <data name="ProjectGrouping_Description" xml:space="preserve">
     <value>The grouping for projects into folders inside of the solution.</value>
@@ -280,13 +280,13 @@
     <value>Project Grouping</value>
   </data>
   <data name="SimpleInfo_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Закрыть</value>
   </data>
   <data name="SimpleInfo_Button_More_Info" xml:space="preserve">
     <value>More Info</value>
   </data>
   <data name="Summary_Android_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Минимальная версия SDK</value>
   </data>
   <data name="Summary_Android_Title" xml:space="preserve">
     <value>Android</value>
@@ -301,7 +301,7 @@
     <value>Тип макета</value>
   </data>
   <data name="Summary_Application" xml:space="preserve">
-    <value>Application</value>
+    <value>Приложение</value>
   </data>
   <data name="Summary_Core_dotNetStandard" xml:space="preserve">
     <value>.NET Standard</value>
@@ -313,7 +313,7 @@
     <value>Unit Test Project</value>
   </data>
   <data name="Summary_DisplayName" xml:space="preserve">
-    <value>Display Name</value>
+    <value>Отображаемое имя</value>
   </data>
   <data name="Summary_EditorConfig" xml:space="preserve">
     <value>EditorConfig</value>
@@ -328,7 +328,7 @@
     <value>Тип макета</value>
   </data>
   <data name="Summary_Ios_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Минимальная версия SDK</value>
   </data>
   <data name="Summary_Ios_UITestProject" xml:space="preserve">
     <value>UI Test Project</value>
@@ -340,10 +340,10 @@
     <value>Project Grouping</value>
   </data>
   <data name="Summary_Uwp_Description" xml:space="preserve">
-    <value>Description</value>
+    <value>Описание</value>
   </data>
   <data name="Summary_Uwp_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Минимальная версия SDK</value>
   </data>
   <data name="Summary_Uwp_Title" xml:space="preserve">
     <value>UWP</value>
@@ -406,7 +406,7 @@
     <value>Required</value>
   </data>
   <data name="ReleaseNotes_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Закрыть</value>
   </data>
   <data name="ReleaseNotes_Changelog_Link" xml:space="preserve">
     <value>Changelog</value>
