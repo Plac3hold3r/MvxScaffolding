@@ -191,10 +191,12 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                          string - Required
 
   -f|--framework                         The version of .NET Standard to use in the Core project.
+                                             2.1    - .NET Standard 2.1
                                              2.0    - .NET Standard 2.0
                                          Default: 2.0
 
   -droid-sdk|--android-min-sdk           Minimum Android SDK version.
+                                             29    - Android 10 - Q v29
                                              28    - Android 9 - Oreo v28
                                              27    - Android 8.1 - Oreo v27
                                              26    - Android 8 - Oreo v26
@@ -212,6 +214,8 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                          Default: 19
 
   -ios-sdk|--ios-min-sdk                 Minimum iOS SDK version.
+                                             13.1    - iOS 13.1
+                                             13.0    - iOS 13.0
                                              12.4    - iOS 12.4
                                              12.3    - iOS 12.3
                                              12.2    - iOS 12.2

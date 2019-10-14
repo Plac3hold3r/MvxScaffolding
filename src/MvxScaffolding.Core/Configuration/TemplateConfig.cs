@@ -3,8 +3,8 @@
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
 
-using MvxScaffolding.Localization.Resources;
 using System.Collections.Generic;
+using MvxScaffolding.Localization.Resources;
 
 namespace MvxScaffolding.Core.Configuration
 {
@@ -21,6 +21,7 @@ namespace MvxScaffolding.Core.Configuration
 
         public static Dictionary<string, string> NetStandardOptions => new Dictionary<string, string>
         {
+            ["2.1"] = ".NET Standard 2.1",
             ["2.0"] = ".NET Standard 2.0"
         };
 
