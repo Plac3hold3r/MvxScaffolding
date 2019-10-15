@@ -217,7 +217,7 @@
     <value>作成者</value>
   </data>
   <data name="About_General__Desc" xml:space="preserve">
-    <value>A customizable template used to scaffold a cross platform MvvmCross application. Includes a .NET Standard class library and NuGet package references. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.</value>
+    <value>カスタマイズテンプレートはクロスプラットフォームMvvmCrossアプリケーションに基づく構成する。 .NET標準クラスライブラリとNuGetパッケージを参照まれています。 Xamarin Android、Xamarin iOS、およびUWPプロジェクトはXamarin NativeおよびXamarin Formsでサポートされています。</value>
   </data>
   <data name="About_GitHub_Desc" xml:space="preserve">
     <value>問題と新機能クエストについては、GitHubのMvxScaffoldingプロジェクトをご覧ください。</value>
