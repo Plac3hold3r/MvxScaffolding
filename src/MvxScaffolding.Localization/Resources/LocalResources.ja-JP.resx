@@ -268,10 +268,10 @@
     <value>The grouping for projects into folders inside of the solution.</value>
   </data>
   <data name="ProjectGrouping_Select_Flat" xml:space="preserve">
-    <value>Select "Flat" for when you want all projects to be placed at the root of the solution.</value>
+    <value>すべてのプロジェクトをソリューションのルートに配置をしたい場合、「フラット」を選択する。</value>
   </data>
   <data name="ProjectGrouping_Select_Platform" xml:space="preserve">
-    <value>Select "Platform"for when you want projects to be grouped based on their target platform.</value>
+    <value>[プラットフォーム] を選択場合、プロジェクトをターゲットプラットフォームに基づいてグループ化する</value>
   </data>
   <data name="ProjectGrouping_Select_TestGroup" xml:space="preserve">
     <value>Select "Test Group" for when you want all test projects to be placed in a test folder, other projects are placed at the root of the solution.</value>
