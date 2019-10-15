@@ -178,7 +178,7 @@
     <value>アンドロイド</value>
   </data>
   <data name="PlatformOptions_Android_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>UIテストプロジェクト</value>
   </data>
   <data name="PlatformOptions_Android_UnitTestProject" xml:space="preserve">
     <value>Unit Test Project</value>
@@ -238,7 +238,7 @@
     <value>iOS</value>
   </data>
   <data name="PlatformOptions_Ios_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>UIテストプロジェクト</value>
   </data>
   <data name="PlatformOptions_Ios_UnitTestProject" xml:space="preserve">
     <value>Unit Test Project</value>
@@ -256,7 +256,7 @@
     <value>UWP</value>
   </data>
   <data name="PlatformOptions_Uwp_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>UIテストプロジェクト</value>
   </data>
   <data name="PlatformOptions_Uwp_UnitTestProject" xml:space="preserve">
     <value>Unit Test Project</value>
@@ -292,7 +292,7 @@
     <value>アンドロイド</value>
   </data>
   <data name="Summary_Android_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>UIテストプロジェクト</value>
   </data>
   <data name="Summary_Android_UnitTestProject" xml:space="preserve">
     <value>Unit Test Project</value>
@@ -331,7 +331,7 @@
     <value>ミニSDKバージョン</value>
   </data>
   <data name="Summary_Ios_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>UIテストプロジェクト</value>
   </data>
   <data name="Summary_Ios_UnitTestProject" xml:space="preserve">
     <value>Unit Test Project</value>
@@ -349,7 +349,7 @@
     <value>UWP</value>
   </data>
   <data name="Summary_Uwp_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>UIテストプロジェクト</value>
   </data>
   <data name="Summary_Uwp_UnitTestProject" xml:space="preserve">
     <value>Unit Test Project</value>
