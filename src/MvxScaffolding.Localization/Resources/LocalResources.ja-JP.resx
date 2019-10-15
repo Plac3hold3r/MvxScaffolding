@@ -199,7 +199,7 @@
     <value>説明を記入してください</value>
   </data>
   <data name="SimpleInfo_EditorConfig_Desc" xml:space="preserve">
-    <value>Enable to include an EditorConfig file at the root of the solution. EditorConfig is used to define coding styles highlighted within Visual Studio.</value>
+    <value>ソリューションのルートにEditorConfigファイルを含むには使用可能を選択します。EditorConfigはVisualStudioで強調表示されているコーディングスタイルの定義に使用されます</value>
   </data>
   <data name="SimpleInfo_EditorConfig_Title" xml:space="preserve">
     <value>構成エディター</value>
