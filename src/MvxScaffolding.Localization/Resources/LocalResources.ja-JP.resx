@@ -220,7 +220,7 @@
     <value>A customizable template used to scaffold a cross platform MvvmCross application. Includes a .NET Standard class library and NuGet package references. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.</value>
   </data>
   <data name="About_GitHub_Desc" xml:space="preserve">
-    <value>For issues and feature requests visit MvxScaffolding project on GitHub.</value>
+    <value>問題と新機能クエストについては、GitHubのMvxScaffoldingプロジェクトをご覧ください。</value>
   </data>
   <data name="About_Privacy_Desc" xml:space="preserve">
     <value>This template wizard makes use of 3rd party crash and analytics reporting. See the privacy policy for more information.</value>
@@ -265,7 +265,7 @@
     <value>閉じる</value>
   </data>
   <data name="ProjectGrouping_Description" xml:space="preserve">
-    <value>The grouping for projects into folders inside of the solution.</value>
+    <value>ソリューション内のフォルダーへのプロジェクトをグループ化。</value>
   </data>
   <data name="ProjectGrouping_Select_Flat" xml:space="preserve">
     <value>すべてのプロジェクトをソリューションのルートに作成をしたい場合、「フラット」を選択する。</value>
@@ -380,7 +380,7 @@
     <value>翻訳</value>
   </data>
   <data name="SimpleInfo_Translate_Desc" xml:space="preserve">
-    <value>Find an error in spelling or grammar? Want MvxScaffolding translated into your native language? To help translate MvxScaffolding, please visit our Crowdin page.</value>
+    <value>スペルや文法にエラーを見つけましたか？ 母国語に翻訳したいですか？ 翻訳することを手伝いたいと思ったら、Crowdinページをご覧ください。</value>
   </data>
   <data name="SimpleInfo_Translate_Title" xml:space="preserve">
     <value>翻訳に参加する</value>
