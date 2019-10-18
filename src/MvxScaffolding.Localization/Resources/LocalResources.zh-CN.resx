@@ -451,12 +451,12 @@
     <value>构建拥有基础功能的应用程序。</value>
   </data>
   <data name="AppDetails_Create_Solution_Directory" xml:space="preserve">
-    <value>Create directory for solution</value>
+    <value>创建解决目录</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Message" xml:space="preserve">
-    <value>MvxScaffolding cannot delete the default Visual Studio generated project folder due to the choice of file location requiring elevated privileges. You will need to either run Visual Studio as an Administrator or manually clean up the directory after the project has been generated.</value>
+    <value>MvxScaffolding无法删除Visual Studio 默认的 生成的项目文件夹，因为选择需要更高权限的文件位置。您需要以管理员运行 Visual Studio ，或者在项目生成后手动清理目录。</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Title" xml:space="preserve">
-    <value>Unauthorized Access Error</value>
+    <value>未授权的访问错误</value>
   </data>
 </root>
