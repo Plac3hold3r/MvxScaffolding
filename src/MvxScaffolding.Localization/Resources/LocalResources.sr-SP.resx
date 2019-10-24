@@ -454,9 +454,9 @@
     <value>Креирај директоријум за решење</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Message" xml:space="preserve">
-    <value>MvxScaffolding cannot delete the default Visual Studio generated project folder due to the choice of file location requiring elevated privileges. You will need to either run Visual Studio as an Administrator or manually clean up the directory after the project has been generated.</value>
+    <value>MvxScaffolding не може да обрише по default-у Visual Studio генерисани директоријум пројекта због избора фајл локације која захтева више привилегије. Морате покренути Visual Studio као администратор или ручно обрисати директоријум пошто се генерише пројекат.</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Title" xml:space="preserve">
-    <value>Unauthorized Access Error</value>
+    <value>Грешка неауторизовани приступ</value>
   </data>
 </root>
