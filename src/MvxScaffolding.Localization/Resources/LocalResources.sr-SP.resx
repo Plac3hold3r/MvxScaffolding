@@ -361,40 +361,40 @@
     <value>Полиса приватности</value>
   </data>
   <data name="Template_Choice_False" xml:space="preserve">
-    <value>False</value>
+    <value>Нетачно</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Flat" xml:space="preserve">
-    <value>Flat</value>
+    <value>Равно</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Platform" xml:space="preserve">
-    <value>Platform</value>
+    <value>Платформа</value>
   </data>
   <data name="Template_Choice_ProjectGroup_TestGroup" xml:space="preserve">
-    <value>Test Group</value>
+    <value>Тест група</value>
   </data>
   <data name="Template_Choice_True" xml:space="preserve">
-    <value>True</value>
+    <value>Тачно</value>
   </data>
   <data name="Main_Window_Button_Translate" xml:space="preserve">
-    <value>Translate</value>
+    <value>Преведи</value>
   </data>
   <data name="SimpleInfo_Translate_Desc" xml:space="preserve">
-    <value>Find an error in spelling or grammar? Want MvxScaffolding translated into your native language? To help translate MvxScaffolding, please visit our Crowdin page.</value>
+    <value>Пронашли сте грешку у правопису или граматици? Желите MvxScaffolding преведе на Ваш изворни језик? Да помогнете превођење MvxScaffolding, молимо посетите нашу Crowdin страницу.</value>
   </data>
   <data name="SimpleInfo_Translate_Title" xml:space="preserve">
-    <value>Help Translate</value>
+    <value>Помозите у превођењу</value>
   </data>
   <data name="About_Translate_Link" xml:space="preserve">
-    <value>Help Translate</value>
+    <value>Помозите у превођењу</value>
   </data>
   <data name="About_Changelog_Link" xml:space="preserve">
-    <value>Changelog</value>
+    <value>Историја измена</value>
   </data>
   <data name="AppDetails_MvvmCross_Version" xml:space="preserve">
-    <value>MvvmCross Version</value>
+    <value>MvvmCross верзија</value>
   </data>
   <data name="Main_Window_Notify_Dismiss" xml:space="preserve">
-    <value>Dismiss</value>
+    <value>Одбаци</value>
   </data>
   <data name="Main_Window_Notify_ReleaseNotes" xml:space="preserve">
     <value>Release Notes</value>
@@ -409,7 +409,7 @@
     <value>Затвори</value>
   </data>
   <data name="ReleaseNotes_Changelog_Link" xml:space="preserve">
-    <value>Changelog</value>
+    <value>Историја измена</value>
   </data>
   <data name="ReleaseNotes_GitHub_Link" xml:space="preserve">
     <value>GitHub</value>
