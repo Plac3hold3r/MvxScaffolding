@@ -217,10 +217,10 @@
     <value>Креирао</value>
   </data>
   <data name="About_General__Desc" xml:space="preserve">
-    <value>A customizable template used to scaffold a cross platform MvvmCross application. Includes a .NET Standard class library and NuGet package references. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.</value>
+    <value>Подесиви template користи се за scaffold мултиплатформске MvvmCross апликације. Укључује .NET Standard библиотеку класа и референце NuGet пакета. Подржава Xamarin Android, Xamarin iOS и UWP типове пројеката за Xamarin Native и Xamarin Forms.</value>
   </data>
   <data name="About_GitHub_Desc" xml:space="preserve">
-    <value>For issues and feature requests visit MvxScaffolding project on GitHub.</value>
+    <value>За проблеме и feature захтеве посетите MvxScaffolding пројекат на GitHub.</value>
   </data>
   <data name="About_Privacy_Desc" xml:space="preserve">
     <value>Овај template чаробњак користи трећа лица за праћење грешака и аналитике. Видите полису приватности за више информација.</value>
@@ -244,7 +244,7 @@
     <value>Unit тест пројекат</value>
   </data>
   <data name="PlatformOptions_Uwp_Description" xml:space="preserve">
-    <value>Description</value>
+    <value>Опис</value>
   </data>
   <data name="PlatformOptions_Uwp_MarketShare" xml:space="preserve">
     <value>Тржишни удео</value>
@@ -265,7 +265,7 @@
     <value>Затвори</value>
   </data>
   <data name="ProjectGrouping_Description" xml:space="preserve">
-    <value>The grouping for projects into folders inside of the solution.</value>
+    <value>Груписање за пројекте у директоријуме унутар решења.</value>
   </data>
   <data name="ProjectGrouping_Select_Flat" xml:space="preserve">
     <value>Select "Flat" for when you want all projects to be placed at the root of the solution.</value>
@@ -340,7 +340,7 @@
     <value>Групација пројекта</value>
   </data>
   <data name="Summary_Uwp_Description" xml:space="preserve">
-    <value>Description</value>
+    <value>Опис</value>
   </data>
   <data name="Summary_Uwp_MinSdk" xml:space="preserve">
     <value>Минимална верзија SDK</value>
