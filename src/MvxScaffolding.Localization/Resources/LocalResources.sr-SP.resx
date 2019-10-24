@@ -268,13 +268,13 @@
     <value>Груписање за пројекте у директоријуме унутар решења.</value>
   </data>
   <data name="ProjectGrouping_Select_Flat" xml:space="preserve">
-    <value>Select "Flat" for when you want all projects to be placed at the root of the solution.</value>
+    <value>Одаберите "Равно" када желите да сви пројекти буду смештени у root-у решења.</value>
   </data>
   <data name="ProjectGrouping_Select_Platform" xml:space="preserve">
-    <value>Select "Platform"for when you want projects to be grouped based on their target platform.</value>
+    <value>Одаберите "Платформа" када желите да пројекти буду груписани засновано на циљаној платформи.</value>
   </data>
   <data name="ProjectGrouping_Select_TestGroup" xml:space="preserve">
-    <value>Select "Test Group" for when you want all test projects to be placed in a test folder, other projects are placed at the root of the solution.</value>
+    <value>Одаберите "Тест група" када желите да сви тест пројекти буду смештени у тест директоријуми, други пројекти биће смештени у root-у решења.</value>
   </data>
   <data name="ProjectGrouping_Title" xml:space="preserve">
     <value>Групација пројекта</value>
@@ -283,7 +283,7 @@
     <value>Затвори</value>
   </data>
   <data name="SimpleInfo_Button_More_Info" xml:space="preserve">
-    <value>More Info</value>
+    <value>Више информација</value>
   </data>
   <data name="Summary_Android_MinSdk" xml:space="preserve">
     <value>Минимална верзија SDK</value>
@@ -358,7 +358,7 @@
     <value>GitHub</value>
   </data>
   <data name="About_Privacy_Link" xml:space="preserve">
-    <value>Privacy Policy</value>
+    <value>Полиса приватности</value>
   </data>
   <data name="Template_Choice_False" xml:space="preserve">
     <value>False</value>
