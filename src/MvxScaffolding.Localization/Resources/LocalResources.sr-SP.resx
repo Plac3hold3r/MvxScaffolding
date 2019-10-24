@@ -397,13 +397,13 @@
     <value>Одбаци</value>
   </data>
   <data name="Main_Window_Notify_ReleaseNotes" xml:space="preserve">
-    <value>Release Notes</value>
+    <value>Белешке о издању</value>
   </data>
   <data name="Main_Window_Notify_Updated" xml:space="preserve">
-    <value>{0} updated</value>
+    <value>{0} исправљено</value>
   </data>
   <data name="AppDetails_Required" xml:space="preserve">
-    <value>Required</value>
+    <value>Неопходан</value>
   </data>
   <data name="ReleaseNotes_Button_Close" xml:space="preserve">
     <value>Затвори</value>
@@ -415,43 +415,43 @@
     <value>GitHub</value>
   </data>
   <data name="AppDetails_Solution_Name" xml:space="preserve">
-    <value>Solution Name</value>
+    <value>Назив решења</value>
   </data>
   <data name="AppDetails_Validation_SolutionName" xml:space="preserve">
-    <value>Solution name required</value>
+    <value>Неопходан назив решења</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu" xml:space="preserve">
-    <value>Navigation Menu</value>
+    <value>Навигациони мени</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu_Description" xml:space="preserve">
-    <value>Scaffold an app with a slide out menu. Template contains two starting views with view models.</value>
+    <value>Поставите основу за апликацију са slide out менијем. Template садржи две почетне стране са viewmodel-има.</value>
   </data>
   <data name="AppDetails_Template_SingleView" xml:space="preserve">
-    <value>Single View</value>
+    <value>Самостална страна</value>
   </data>
   <data name="AppDetails_Template_SingleView_Description" xml:space="preserve">
-    <value>Scaffold an app with a single starting view and view model.</value>
+    <value>Поставите основу за апликацију са једном страном и viewmodel-ом.</value>
   </data>
   <data name="AppDetails_Project_Name" xml:space="preserve">
-    <value>Project Name</value>
+    <value>Назив пројекта</value>
   </data>
   <data name="Summary_ScaffoldType" xml:space="preserve">
-    <value>Scaffold Type</value>
+    <value>Тип основа</value>
   </data>
   <data name="Summary_SolutionName" xml:space="preserve">
-    <value>Solution Name</value>
+    <value>Назив решења</value>
   </data>
   <data name="ReleaseNotes_InstalledVersion" xml:space="preserve">
-    <value>Installed Version</value>
+    <value>Инсталирана верзија</value>
   </data>
   <data name="AppDetails_Template_Blank" xml:space="preserve">
-    <value>Blank</value>
+    <value>Празно</value>
   </data>
   <data name="AppDetails_Template_Blank_Description" xml:space="preserve">
-    <value>Scaffold an app with bare basic features.</value>
+    <value>Поставите основе апликације са минималним feature-има.</value>
   </data>
   <data name="AppDetails_Create_Solution_Directory" xml:space="preserve">
-    <value>Create directory for solution</value>
+    <value>Креирај директоријум за решење</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Message" xml:space="preserve">
     <value>MvxScaffolding cannot delete the default Visual Studio generated project folder due to the choice of file location requiring elevated privileges. You will need to either run Visual Studio as an Administrator or manually clean up the directory after the project has been generated.</value>
