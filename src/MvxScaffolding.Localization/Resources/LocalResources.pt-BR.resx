@@ -124,13 +124,13 @@
     <value>Nome de exibição</value>
   </data>
   <data name="AppDetails_EditorConfig" xml:space="preserve">
-    <value>Arquivo EditorConfig</value>
+    <value>EditorConfig</value>
   </data>
   <data name="AppDetails_Identifier" xml:space="preserve">
     <value>Identificador</value>
   </data>
   <data name="AppDetails_Project_Grouping" xml:space="preserve">
-    <value>Grupos de projetos</value>
+    <value>Grupo de Projetos</value>
   </data>
   <data name="AppDetails_Solution" xml:space="preserve">
     <value>Solução</value>
@@ -202,7 +202,7 @@
     <value>Habilite para incluir um arquivo EditorConfig na raiz da solução. EditorConfig é usado para definir estilos de programação destacados no Visual Studio.</value>
   </data>
   <data name="SimpleInfo_EditorConfig_Title" xml:space="preserve">
-    <value>Arquivo EditorConfig</value>
+    <value>EditorConfig</value>
   </data>
   <data name="SimpleInfo_Privacy_Desc" xml:space="preserve">
     <value>Este assistente de template faz uso de relatórios de erros de terceiros e análise. Veja a política de privacidade para mais informações.</value>
@@ -277,7 +277,7 @@
     <value>Selecione "Test Group" para quando você deseja que todos os projetos de teste sejam colocados em uma pasta de teste, outros projetos são colocados na raiz da solução.</value>
   </data>
   <data name="ProjectGrouping_Title" xml:space="preserve">
-    <value>Grupos de projetos</value>
+    <value>Grupo de Projetos</value>
   </data>
   <data name="SimpleInfo_Button_Close" xml:space="preserve">
     <value>Fechar</value>
@@ -316,7 +316,7 @@
     <value>Nome de exibição</value>
   </data>
   <data name="Summary_EditorConfig" xml:space="preserve">
-    <value>Arquivo EditorConfig</value>
+    <value>EditorConfig</value>
   </data>
   <data name="Summary_Identifier" xml:space="preserve">
     <value>Identificador</value>
@@ -337,7 +337,7 @@
     <value>Projeto de teste unitário</value>
   </data>
   <data name="Summary_ProjectGrouping" xml:space="preserve">
-    <value>Grupos de projetos</value>
+    <value>Grupo de Projetos</value>
   </data>
   <data name="Summary_Uwp_Description" xml:space="preserve">
     <value>Descrição</value>
@@ -448,15 +448,15 @@
     <value>Em Branco</value>
   </data>
   <data name="AppDetails_Template_Blank_Description" xml:space="preserve">
-    <value>Scaffold an app with bare basic features.</value>
+    <value>Crie um aplicativo com recursos básicos e simples.</value>
   </data>
   <data name="AppDetails_Create_Solution_Directory" xml:space="preserve">
-    <value>Create directory for solution</value>
+    <value>Criar diretório para solução</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Message" xml:space="preserve">
-    <value>MvxScaffolding cannot delete the default Visual Studio generated project folder due to the choice of file location requiring elevated privileges. You will need to either run Visual Studio as an Administrator or manually clean up the directory after the project has been generated.</value>
+    <value>O MvxScaffolding não pode excluir a pasta padrão do projeto gerada pelo Visual Studio devido à escolha do local de arquivo que requer privilégios elevados. Você precisará executar o Visual Studio como administrador ou limpar manualmente o diretório após o projeto ter sido gerado.</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Title" xml:space="preserve">
-    <value>Unauthorized Access Error</value>
+    <value>Acesso não autorizado</value>
   </data>
 </root>
