@@ -136,10 +136,10 @@
     <value>Solution</value>
   </data>
   <data name="AppDetails_Validation_Display_Name" xml:space="preserve">
-    <value>Application name required</value>
+    <value>Nom de l'application obligatoire</value>
   </data>
   <data name="AppDetails_Validation_Identifier" xml:space="preserve">
-    <value>Application identifier required</value>
+    <value>Identifiant de l'application obligatoire</value>
   </data>
   <data name="Main_Window_Button_About" xml:space="preserve">
     <value>À propos</value>
