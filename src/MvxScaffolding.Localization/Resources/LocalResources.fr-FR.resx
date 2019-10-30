@@ -211,7 +211,7 @@
     <value>Vie privée</value>
   </data>
   <data name="About_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Fermer</value>
   </data>
   <data name="About_CreatedBy" xml:space="preserve">
     <value>Créé par</value>
@@ -262,7 +262,7 @@
     <value>Unit Test Project</value>
   </data>
   <data name="ProjectGrouping_Button_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Fermer</value>
   </data>
   <data name="ProjectGrouping_Description" xml:space="preserve">
     <value>The grouping for projects into folders inside of the solution.</value>
@@ -376,7 +376,7 @@
     <value>Oui</value>
   </data>
   <data name="Main_Window_Button_Translate" xml:space="preserve">
-    <value>Translate</value>
+    <value>Traduction</value>
   </data>
   <data name="SimpleInfo_Translate_Desc" xml:space="preserve">
     <value>Vous avez trouvé une erreur d'orthographe ou de grammaire ? Vous voulez que MvxScaffolding soit traduit dans votre langue maternelle ? Pour aider MvxScaffolding, veuillez visiter notre page Crowdin.</value>
@@ -415,7 +415,7 @@
     <value>GitHub</value>
   </data>
   <data name="AppDetails_Solution_Name" xml:space="preserve">
-    <value>Solution Name</value>
+    <value>Nom de la solution</value>
   </data>
   <data name="AppDetails_Validation_SolutionName" xml:space="preserve">
     <value>Solution name required</value>
@@ -433,16 +433,16 @@
     <value>Scaffold an app with a single starting view and view model.</value>
   </data>
   <data name="AppDetails_Project_Name" xml:space="preserve">
-    <value>Project Name</value>
+    <value>Nom du projet</value>
   </data>
   <data name="Summary_ScaffoldType" xml:space="preserve">
-    <value>Scaffold Type</value>
+    <value>Type de génération</value>
   </data>
   <data name="Summary_SolutionName" xml:space="preserve">
-    <value>Solution Name</value>
+    <value>Nom de la solution</value>
   </data>
   <data name="ReleaseNotes_InstalledVersion" xml:space="preserve">
-    <value>Installed Version</value>
+    <value>Version installée</value>
   </data>
   <data name="AppDetails_Template_Blank" xml:space="preserve">
     <value>Blank</value>
@@ -451,7 +451,7 @@
     <value>Scaffold an app with bare basic features.</value>
   </data>
   <data name="AppDetails_Create_Solution_Directory" xml:space="preserve">
-    <value>Create directory for solution</value>
+    <value>Créer un répertoire pour la solution</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Message" xml:space="preserve">
     <value>MvxScaffolding cannot delete the default Visual Studio generated project folder due to the choice of file location requiring elevated privileges. You will need to either run Visual Studio as an Administrator or manually clean up the directory after the project has been generated.</value>
