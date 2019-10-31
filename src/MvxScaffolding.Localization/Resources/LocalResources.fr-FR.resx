@@ -424,13 +424,13 @@
     <value>Navigation Menu</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu_Description" xml:space="preserve">
-    <value>Scaffold an app with a slide out menu. Template contains two starting views with view models.</value>
+    <value>Génère une application avec un menu coulissant. Le projet contient deux vues de départ et leurs vue-modèles.</value>
   </data>
   <data name="AppDetails_Template_SingleView" xml:space="preserve">
     <value>Single View</value>
   </data>
   <data name="AppDetails_Template_SingleView_Description" xml:space="preserve">
-    <value>Scaffold an app with a single starting view and view model.</value>
+    <value>Génère une application avec une seule vue de départ et son vue-modèle.</value>
   </data>
   <data name="AppDetails_Project_Name" xml:space="preserve">
     <value>Nom du projet</value>
@@ -448,7 +448,7 @@
     <value>Blank</value>
   </data>
   <data name="AppDetails_Template_Blank_Description" xml:space="preserve">
-    <value>Scaffold an app with bare basic features.</value>
+    <value>Génère une application avec les fonctionnalités minimales.</value>
   </data>
   <data name="AppDetails_Create_Solution_Directory" xml:space="preserve">
     <value>Créer un répertoire pour la solution</value>
