@@ -196,7 +196,7 @@
     <value>Projet de Test unitaire</value>
   </data>
   <data name="PlatformOptions_Validation_Uwp_Description" xml:space="preserve">
-    <value>Description required</value>
+    <value>Description obligatoire</value>
   </data>
   <data name="SimpleInfo_EditorConfig_Desc" xml:space="preserve">
     <value>Enable to include an EditorConfig file at the root of the solution. EditorConfig is used to define coding styles highlighted within Visual Studio.</value>
@@ -424,7 +424,7 @@
     <value>Navigation Menu</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu_Description" xml:space="preserve">
-    <value>Génère une application avec un menu coulissant. Le projet contient deux vues de départ et leurs vue-modèles.</value>
+    <value>Génère une application avec un menu coulissant. Le projet contient deux vues de départ avec leurs vue-modèles.</value>
   </data>
   <data name="AppDetails_Template_SingleView" xml:space="preserve">
     <value>Single View</value>
