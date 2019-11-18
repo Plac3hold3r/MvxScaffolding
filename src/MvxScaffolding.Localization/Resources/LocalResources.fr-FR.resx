@@ -172,16 +172,16 @@
     <value>Market Share</value>
   </data>
   <data name="PlatformOptions_Android_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Version minimale du SDK</value>
   </data>
   <data name="PlatformOptions_Android_Title" xml:space="preserve">
     <value>Android</value>
   </data>
   <data name="PlatformOptions_Android_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>Projet de test UI</value>
   </data>
   <data name="PlatformOptions_Android_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Projet de test unitaire</value>
   </data>
   <data name="PlatformOptions_Android_LayoutType" xml:space="preserve">
     <value>Layout Type</value>
@@ -232,16 +232,16 @@
     <value>Market Share</value>
   </data>
   <data name="PlatformOptions_Ios_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Version minimale du SDK</value>
   </data>
   <data name="PlatformOptions_Ios_Title" xml:space="preserve">
     <value>iOS</value>
   </data>
   <data name="PlatformOptions_Ios_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>Projet de test UI</value>
   </data>
   <data name="PlatformOptions_Ios_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Projet de test unitaire</value>
   </data>
   <data name="PlatformOptions_Uwp_Description" xml:space="preserve">
     <value>Description</value>
@@ -250,16 +250,16 @@
     <value>Market Share</value>
   </data>
   <data name="PlatformOptions_Uwp_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Version minimale du SDK</value>
   </data>
   <data name="PlatformOptions_Uwp_Title" xml:space="preserve">
     <value>UWP</value>
   </data>
   <data name="PlatformOptions_Uwp_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>Projet de test UI</value>
   </data>
   <data name="PlatformOptions_Uwp_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Projet de test unitaire</value>
   </data>
   <data name="ProjectGrouping_Button_Close" xml:space="preserve">
     <value>Fermer</value>
@@ -292,10 +292,10 @@
     <value>Android</value>
   </data>
   <data name="Summary_Android_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>Projet de test UI</value>
   </data>
   <data name="Summary_Android_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Projet de test unitaire</value>
   </data>
   <data name="Summary_Android_LayoutType" xml:space="preserve">
     <value>Layout Type</value>
@@ -310,7 +310,7 @@
     <value>Core</value>
   </data>
   <data name="Summary_Core_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Projet de test unitaire</value>
   </data>
   <data name="Summary_DisplayName" xml:space="preserve">
     <value>Nom affiché</value>
@@ -331,10 +331,10 @@
     <value>Version min. du SDK</value>
   </data>
   <data name="Summary_Ios_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>Projet de test UI</value>
   </data>
   <data name="Summary_Ios_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Projet de test unitaire</value>
   </data>
   <data name="Summary_ProjectGrouping" xml:space="preserve">
     <value>Regroupement des projets</value>
@@ -343,16 +343,16 @@
     <value>Description</value>
   </data>
   <data name="Summary_Uwp_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>Version minimale du SDK</value>
   </data>
   <data name="Summary_Uwp_Title" xml:space="preserve">
     <value>UWP</value>
   </data>
   <data name="Summary_Uwp_UITestProject" xml:space="preserve">
-    <value>UI Test Project</value>
+    <value>Projet de test UI</value>
   </data>
   <data name="Summary_Uwp_UnitTestProject" xml:space="preserve">
-    <value>Unit Test Project</value>
+    <value>Projet de test unitaire</value>
   </data>
   <data name="About_GitHub_Link" xml:space="preserve">
     <value>GitHub</value>
