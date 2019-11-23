@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Windows.Input;
@@ -7,6 +7,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Binding.BindingContext;
+using MvvmCross.Commands;
+using MvvmCross.Core;
 using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
@@ -108,6 +110,41 @@ namespace MvxNative.Droid.Linker
             Console.ForegroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.ForegroundColor = ConsoleColor.DarkGray;
+        }
+
+        public void Include(MvxSettings settings)
+        {
+            _ = new MvxSettings();
+        }
+
+        public void Include(MvxStringToTypeParser parser)
+        {
+            _ = new MvxStringToTypeParser();
+        }
+
+        public void Include(MvxViewModelLoader loader)
+        {
+            _ = new MvxViewModelLoader(null);
+        }
+
+        public void Include(MvxViewModelViewLookupBuilder builder)
+        {
+            _ = new MvxViewModelViewLookupBuilder();
+        }
+
+        public void Include(MvxCommandCollectionBuilder builder)
+        {
+            _ = new MvxCommandCollectionBuilder();
+        }
+
+        public void Include(MvxStringDictionaryNavigationSerializer serializer)
+        {
+            _ = new MvxStringDictionaryNavigationSerializer();
+        }
+
+        public void Include(MvxChildViewModelCache cache)
+        {
+            _ = new MvxChildViewModelCache();
         }
     }
 }
