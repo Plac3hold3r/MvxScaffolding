@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.5.0...v1.6.0) (2019-11-27)
+
+
+### Features
+
+* **deps:** bump Moq ([#671](https://github.com/Plac3hold3r/MvxScaffolding/issues/671)) ([07712a9](https://github.com/Plac3hold3r/MvxScaffolding/commit/07712a9cfc9bb5bfcca6d65fd54b102f6f9f4abe))
+* **deps:** bump Xamarin.Forms ([#668](https://github.com/Plac3hold3r/MvxScaffolding/issues/668)) ([72a16a7](https://github.com/Plac3hold3r/MvxScaffolding/commit/72a16a71bf5a4e7993d29264dec345811cc28622))
+* **deps:** bump Xamarin.Forms ([#675](https://github.com/Plac3hold3r/MvxScaffolding/issues/675)) ([4308380](https://github.com/Plac3hold3r/MvxScaffolding/commit/4308380560d14af2bb3a1f3e9a1ce614e1018921))
+* **deps:** bump Xamarin.Forms ([#682](https://github.com/Plac3hold3r/MvxScaffolding/issues/682)) ([5ffd60a](https://github.com/Plac3hold3r/MvxScaffolding/commit/5ffd60a5cd0c93d96f3fed2ff2c0f0d8ea34ecd2))
+* **template:** Add constructor references for various MvvmCross types to LinkerPleaseInclude files ([#686](https://github.com/Plac3hold3r/MvxScaffolding/issues/686)) ([d5b1b5f](https://github.com/Plac3hold3r/MvxScaffolding/commit/d5b1b5f8ac4aedacafa7aee1915b8f1c64900635))
+* **translate:** New Crowdin translations ([#665](https://github.com/Plac3hold3r/MvxScaffolding/issues/665)) ([735bff6](https://github.com/Plac3hold3r/MvxScaffolding/commit/735bff610f10c5f30127d0e8befec0a09b398af0))
+* **translate:** New Crowdin translations ([#673](https://github.com/Plac3hold3r/MvxScaffolding/issues/673)) ([7a3e73e](https://github.com/Plac3hold3r/MvxScaffolding/commit/7a3e73e3f05dcca55eba6f93013c4080cea6d313))
+* **translate:** New Crowdin translations ([#684](https://github.com/Plac3hold3r/MvxScaffolding/issues/684)) ([16470ee](https://github.com/Plac3hold3r/MvxScaffolding/commit/16470eee0de4540cc1a72f3282f2a54dda3970a1))
+
 ## [1.5.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.4.0...v1.5.0) (2019-10-14)
 
 
