@@ -46,16 +46,19 @@ If you want to help translate MvxScaffolding into your native language. Please c
 
 Thank you to the following translators
 
-|      Language      | Code  |                                                                     Translators                                                                      |
-| :----------------: | :---: | :--------------------------------------------------------------------------------------------------------------------------------------------------: |
-| Chinese Simplified | zh-CN |                                         [Forbidden (cptbl00dra1n)](https://crowdin.com/profile/cptbl00dra1n)                                         |
-|       Danish       | da-DK |                                       [Tomasz Cielecki (Cheesebaron)](https://crowdin.com/profile/Cheesebaron)                                       |
-|       French       | fr-FR |                                          [Antoine Bichon (Chapelin)](https://crowdin.com/profile/Chapelin)                                           |
-|      Italian       | it-IT |                                          [Emanuele Filardo (fileman)](https://crowdin.com/profile/fileman)                                           |
-|      Japanese      | ja-JP |                                              [Rei Jyo (klakling)](https://crowdin.com/profile/klakling)                                              |
-|      Russian       | ru-RU |                                  [Alexander Bublik (alex.bublik1093)](https://crowdin.com/profile/alex.bublik1093)                                   |
-|      Spanish       | es-ES |                                       [Agustin Jose Wawrzyk (elpitufo)](https://crowdin.com/profile/elpitufo)                                        |
-|     Ukrainian      | uk-UA | [Руслан Соромля (garenauser)](https://crowdin.com/profile/garenauser), [Anthony Maisak (anthony.maisak)](https://crowdin.com/profile/anthony.maisak) |
+|      Language         | Code  |                                                                     Translators                                                                      |
+| :-------------------: | :---: | :--------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Chinese Simplified    | zh-CN | [Forbidden (cptbl00dra1n)](https://crowdin.com/profile/cptbl00dra1n), [Rei Jyo (klakling)](https://crowdin.com/profile/klakling)                     |
+| Chinese Traditional   | zh-TW | [Rei Jyo (klakling)](https://crowdin.com/profile/klakling)                                                                                           |
+|       Danish          | da-DK | [Tomasz Cielecki (Cheesebaron)](https://crowdin.com/profile/Cheesebaron)                                                                             |
+|       French          | fr-FR | [Antoine Bichon (Chapelin)](https://crowdin.com/profile/Chapelin), [An0d](https://crowdin.com/profile/An0d)                                          |
+|      Italian          | it-IT | [Emanuele Filardo (fileman)](https://crowdin.com/profile/fileman)                                                                                    |
+|      Japanese         | ja-JP | [Rei Jyo (klakling)](https://crowdin.com/profile/klakling)                                                                                           |
+| Portuguese, Brazilian | pt-BR | [Bazzi](https://crowdin.com/profile/Bazzi), [tobias.16bar](https://crowdin.com/profile/tobias.16bar)                                                 |
+|      Russian          | ru-RU | [Alexander Bublik (alex.bublik1093)](https://crowdin.com/profile/alex.bublik1093)                                                                    |
+|      Spanish          | es-ES | [Agustin Jose Wawrzyk (elpitufo)](https://crowdin.com/profile/elpitufo)                                                                              |
+|    Serbian (Cyrillic) | sr-SP | [dimitrijevic](https://crowdin.com/profile/dimitrijevic)                                                                                             |
+|     Ukrainian         | uk-UA | [Руслан Соромля (garenauser)](https://crowdin.com/profile/garenauser), [Anthony Maisak (anthony.maisak)](https://crowdin.com/profile/anthony.maisak) |
 
 ## dotnet CLI
 
