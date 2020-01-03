@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.6.0...v1.7.0) (2020-01-03)
+
+
+### Features
+
+* **deps:** bump MvvmCross ([#704](https://github.com/Plac3hold3r/MvxScaffolding/issues/704)) ([c7a2df3](https://github.com/Plac3hold3r/MvxScaffolding/commit/c7a2df30a6b8786eee3f84080be17aa25c196f48))
+* **deps:** bump MvvmCross.Forms ([#714](https://github.com/Plac3hold3r/MvxScaffolding/issues/714)) ([2bb8b1f](https://github.com/Plac3hold3r/MvxScaffolding/commit/2bb8b1fdd2b87907e20072ea756b0145245697da))
+
 ## [1.6.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.5.0...v1.6.0) (2019-11-27)
 
 
