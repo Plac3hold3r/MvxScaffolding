@@ -131,7 +131,7 @@
     <Compile Include="Template\ScaffoldType.cs" />
     <Compile Include="Template\TemplateType.cs" />
     <Compile Include="Validation\RequiredIfAttribute.cs" />
-    <Compile Include="ViewModels\!Base\BaseViewModel.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\AppDetailsViewModel.cs" />
     <Compile Include="ViewModels\Dialogs\AboutViewModel.cs" />
     <Compile Include="ViewModels\Dialogs\ProjectGroupInfoViewModel.cs" />

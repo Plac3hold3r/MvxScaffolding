@@ -119,7 +119,7 @@
     <Content Include="Entitlements.plist" />
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork%402x" />
-    <Compile Include="Views\!Base\BaseViewController.cs" />
+    <Compile Include="Views\BaseViewController.cs" />
     <Compile Include="Views\Main\MainViewController.cs" />
     <InterfaceDefinition Include="LaunchScreen.storyboard">
       <SubType>Designer</SubType>
