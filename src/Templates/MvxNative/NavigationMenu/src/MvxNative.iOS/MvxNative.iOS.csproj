@@ -73,7 +73,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Styles\ColorPalette.cs" />
-    <Compile Include="Views\!Base\BaseViewController.cs" />
+    <Compile Include="Views\BaseViewController.cs" />
     <Compile Include="Views\Main\MainViewController.cs" />
     <Compile Include="Views\Menu\MenuView.cs" />
     <Compile Include="Views\Settings\SettingsView.cs" />

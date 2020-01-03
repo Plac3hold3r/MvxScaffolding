@@ -65,8 +65,8 @@
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="Views\!Base\BaseActivity.cs" />
-    <Compile Include="Views\!Base\BaseFragment.cs" />
+    <Compile Include="Views\BaseActivity.cs" />
+    <Compile Include="Views\BaseFragment.cs" />
     <Compile Include="Views\Main\MainContainerActivity.cs" />
     <Compile Include="Views\Main\MainFragment.cs" />
     <Compile Include="Views\Splash\SplashActivity.cs" />
