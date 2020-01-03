@@ -102,7 +102,7 @@
       <Version>6.4.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Forms">
-      <Version>6.4.1</Version>
+      <Version>6.4.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
       <Version>4.3.0.991211</Version>
