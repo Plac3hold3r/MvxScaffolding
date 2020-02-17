@@ -78,7 +78,7 @@
       <Version>6.4.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.Design">
-      <Version>6.4.2</Version>
+      <Version>6.4.3</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.V7.AppCompat">
       <Version>6.4.2</Version>
