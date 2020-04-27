@@ -178,10 +178,10 @@
     <value>Android</value>
   </data>
   <data name="PlatformOptions_Android_UITestProject" xml:space="preserve">
-    <value>Projet de test UI</value>
+    <value>Projet de tests d'interface</value>
   </data>
   <data name="PlatformOptions_Android_UnitTestProject" xml:space="preserve">
-    <value>Projet de test unitaire</value>
+    <value>Projet de tests unitaires</value>
   </data>
   <data name="PlatformOptions_Android_LayoutType" xml:space="preserve">
     <value>Type de fichier</value>
@@ -238,10 +238,10 @@
     <value>iOS</value>
   </data>
   <data name="PlatformOptions_Ios_UITestProject" xml:space="preserve">
-    <value>Projet de test UI</value>
+    <value>Projet de tests d'interface</value>
   </data>
   <data name="PlatformOptions_Ios_UnitTestProject" xml:space="preserve">
-    <value>Projet de test unitaire</value>
+    <value>Projet de tests unitaires</value>
   </data>
   <data name="PlatformOptions_Uwp_Description" xml:space="preserve">
     <value>Description</value>
@@ -256,10 +256,10 @@
     <value>UWP</value>
   </data>
   <data name="PlatformOptions_Uwp_UITestProject" xml:space="preserve">
-    <value>Projet de test UI</value>
+    <value>Projet de tests d'interface</value>
   </data>
   <data name="PlatformOptions_Uwp_UnitTestProject" xml:space="preserve">
-    <value>Projet de test unitaire</value>
+    <value>Projet de tests unitaires</value>
   </data>
   <data name="ProjectGrouping_Button_Close" xml:space="preserve">
     <value>Fermer</value>
@@ -292,10 +292,10 @@
     <value>Android</value>
   </data>
   <data name="Summary_Android_UITestProject" xml:space="preserve">
-    <value>Projet de test UI</value>
+    <value>Projet de tests d'interface</value>
   </data>
   <data name="Summary_Android_UnitTestProject" xml:space="preserve">
-    <value>Projet de test unitaire</value>
+    <value>Projet de tests unitaires</value>
   </data>
   <data name="Summary_Android_LayoutType" xml:space="preserve">
     <value>Type de fichier</value>
@@ -310,7 +310,7 @@
     <value>Core</value>
   </data>
   <data name="Summary_Core_UnitTestProject" xml:space="preserve">
-    <value>Projet de test unitaire</value>
+    <value>Projet de tests unitaires</value>
   </data>
   <data name="Summary_DisplayName" xml:space="preserve">
     <value>Nom affiché</value>
@@ -331,10 +331,10 @@
     <value>Version min. du SDK</value>
   </data>
   <data name="Summary_Ios_UITestProject" xml:space="preserve">
-    <value>Projet de test UI</value>
+    <value>Projet de tests d'interface</value>
   </data>
   <data name="Summary_Ios_UnitTestProject" xml:space="preserve">
-    <value>Projet de test unitaire</value>
+    <value>Projet de tests unitaires</value>
   </data>
   <data name="Summary_ProjectGrouping" xml:space="preserve">
     <value>Regroupement des projets</value>
@@ -349,10 +349,10 @@
     <value>UWP</value>
   </data>
   <data name="Summary_Uwp_UITestProject" xml:space="preserve">
-    <value>Projet de test UI</value>
+    <value>Projet de tests d'interface</value>
   </data>
   <data name="Summary_Uwp_UnitTestProject" xml:space="preserve">
-    <value>Projet de test unitaire</value>
+    <value>Projet de tests unitaires</value>
   </data>
   <data name="About_GitHub_Link" xml:space="preserve">
     <value>GitHub</value>
