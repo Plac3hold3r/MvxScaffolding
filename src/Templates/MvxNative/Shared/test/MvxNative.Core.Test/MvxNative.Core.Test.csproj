@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
-    <PackageReference Include="Moq" Version="4.14.0" />
+    <PackageReference Include="Moq" Version="4.14.1" />
     <PackageReference Include="MvvmCross" Version="6.4.2" />
     <PackageReference Include="MvvmCross.Tests" Version="6.4.2" />
     <PackageReference Include="NUnit" Version="3.12.0" />
