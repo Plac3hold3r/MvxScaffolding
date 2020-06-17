@@ -94,7 +94,8 @@ namespace MvxScaffolding.Core.ViewModels
 
             NavigateFirst();
 
-            ShowUpdatedNotification();
+            // TODO [PH] :: need to find an alternative way to store the check of reading release notes
+            //ShowUpdatedNotification();
         }
 
         private void ShowUpdatedNotification()
@@ -115,9 +116,7 @@ namespace MvxScaffolding.Core.ViewModels
         {
             if (SelectedViewModelIndex + 1 < _navigationalViewModels.Count)
             {
-                var validationViewModel = _navigationalViewModels[SelectedViewModelIndex].ViewModel as IValidationViewModel;
-
-                if (validationViewModel is null || validationViewModel.Validate())
+                if (!(_navigationalViewModels[SelectedViewModelIndex].ViewModel is IValidationViewModel validationViewModel) || validationViewModel.Validate())
                 {
                     SelectedNavigationalItem = _navigationalViewModels[++SelectedViewModelIndex];
                 }
