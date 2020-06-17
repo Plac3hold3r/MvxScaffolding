@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.7.0...v1.8.0) (2020-06-17)
+
+
+### Features
+
+* disable window resize ([f8a0456](https://github.com/Plac3hold3r/MvxScaffolding/commit/f8a04562b47bcac2041c3704c149e68f359bc655)), closes [#776](https://github.com/Plac3hold3r/MvxScaffolding/issues/776)
+* **deps:** bump Microsoft.NET.Test.Sdk ([#725](https://github.com/Plac3hold3r/MvxScaffolding/issues/725)) ([b01eecf](https://github.com/Plac3hold3r/MvxScaffolding/commit/b01eecf65823825c1775bc299cc07286ceb4ac28))
+* **deps:** bump NUnit3TestAdapter ([#721](https://github.com/Plac3hold3r/MvxScaffolding/issues/721)) ([0859a84](https://github.com/Plac3hold3r/MvxScaffolding/commit/0859a8473bfa740e07293181e3abe59c5cb3431e))
+* **translations:** New translations LocalResources.resx (French) ([#771](https://github.com/Plac3hold3r/MvxScaffolding/issues/771)) ([e6bf064](https://github.com/Plac3hold3r/MvxScaffolding/commit/e6bf064edb61a8f7eac67bff394bea31b8c7a70b))
+
+
+### Bug Fixes
+
+* disable release note toast ([#779](https://github.com/Plac3hold3r/MvxScaffolding/issues/779)) ([a532f9e](https://github.com/Plac3hold3r/MvxScaffolding/commit/a532f9e40a4cc047c13b5bca3e1b5ec2fbb4be25))
+
 ## [1.7.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.6.0...v1.7.0) (2020-01-03)
 
 
