@@ -25,6 +25,7 @@
     FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
     Icon="../Resources/Images/mvxscaffolding_logo_transparent_padding.png"
     KeyDown="OnKeyDown"
+    ResizeMode="NoResize"
     ShowIconOnTitleBar="True"
     ShowInTaskbar="False"
     TextElement.FontSize="13"
