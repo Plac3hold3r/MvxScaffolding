@@ -8,7 +8,7 @@
 
   <PropertyGroup Label="TemplatePackInfo">
     <Authors>Plac3hold3r</Authors>
-    <Description>A customizable template used to scaffold a cross platform MvvmCross application using Xamarin Navtive</Description>
+    <Description>A customizable template used to scaffold a cross platform MvvmCross application using Xamarin Native</Description>
     <Version>0.1.0</Version>
   </PropertyGroup>
 
@@ -26,7 +26,10 @@
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/.vs/**/*" />
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/.git/**/*" />
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/packages/**/*" />
+    <ExcludeFromPackage Include="$(TemplateSourceRoot)**/iTunesArtwork*" />
 
+    <ItunesArtWorkFiles Include="$(TemplateSourceRoot)**/iTunesArtwork*" />
+    
     <TemplateFiles  Include="$(TemplateSourceRoot)/**/*"
                     Exclude="@(ExcludeFromPackage)" />
   </ItemGroup>
@@ -44,6 +47,8 @@
     <Content  Include="@(TemplateFiles)"
               Exclude="@(ExcludeFromPackage)"
               PackagePath="Content/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content  Include="@(ItunesArtWorkFiles)"
+              PackagePath="Content/" />
   </ItemGroup>
 
   <Target Name="GetNuGetPath" Outputs="@(NuGetPackOutput)">
