@@ -484,6 +484,26 @@
       "description": "Minimum iOS target SDK version.",
       "choices": [
         {
+          "choice": "13.5",
+          "description": "iOS 13.5"
+        },
+        {
+          "choice": "13.4",
+          "description": "iOS 13.4"
+        },
+        {
+          "choice": "13.3",
+          "description": "iOS 13.3"
+        },
+        {
+          "choice": "13.2",
+          "description": "iOS 13.2"
+        },
+        {
+          "choice": "13.2",
+          "description": "iOS 13.2"
+        },
+        {
           "choice": "13.1",
           "description": "iOS 13.1"
         },
@@ -588,6 +608,10 @@
       "defaultValue": "16299",
       "description": "Minimum UWP target SDK version.",
       "choices": [
+        {
+          "choice": "19041",
+          "description": "2004 - April 2020 Update"
+        },
         {
           "choice": "18362",
           "description": "1903 - May 2019 Update"
