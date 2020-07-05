@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.8.0...v1.9.0) (2020-07-05)
+
+
+### Features
+
+* update nuspec ([cc550c5](https://github.com/Plac3hold3r/MvxScaffolding/commit/cc550c5dc51b8755306ef0c9680728452a5062ca))
+* update OS support [iOS + UWP] ([#788](https://github.com/Plac3hold3r/MvxScaffolding/issues/788)) ([bba66f1](https://github.com/Plac3hold3r/MvxScaffolding/commit/bba66f1d0d23bc8ed1aeb3eb4217e873eaf24e0e))
+
+
+### Bug Fixes
+
+* path for iTunes artwork ([#787](https://github.com/Plac3hold3r/MvxScaffolding/issues/787)) ([2764f0f](https://github.com/Plac3hold3r/MvxScaffolding/commit/2764f0ff797d8fd7d0c091fc2fbe700cb377796b)), closes [#786](https://github.com/Plac3hold3r/MvxScaffolding/issues/786)
+
 ## [1.8.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.7.0...v1.8.0) (2020-06-17)
 
 
