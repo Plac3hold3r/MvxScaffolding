@@ -500,10 +500,6 @@
           "description": "iOS 13.2"
         },
         {
-          "choice": "13.2",
-          "description": "iOS 13.2"
-        },
-        {
           "choice": "13.1",
           "description": "iOS 13.1"
         },
