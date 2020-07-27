@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.1](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.9.0...v1.9.1) (2020-07-27)
+
+
+### Bug Fixes
+
+* remove duplicate key for iOS platforms ([#792](https://github.com/Plac3hold3r/MvxScaffolding/issues/792)) ([c21f86b](https://github.com/Plac3hold3r/MvxScaffolding/commit/c21f86b8529ff2c34eea1f55591ae25b2a00d66c)), closes [#791](https://github.com/Plac3hold3r/MvxScaffolding/issues/791)
+
 ## [1.9.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.8.0...v1.9.0) (2020-07-05)
 
 
