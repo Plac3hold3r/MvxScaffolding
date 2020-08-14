@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,12 +9,12 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Platforms.Android.Views;
 using MvvmCross.ViewModels;
 
 namespace MvxNative.Droid.Views
 {
-    public abstract class BaseActivity<TViewModel> : MvxAppCompatActivity<TViewModel>
+    public abstract class BaseActivity<TViewModel> : MvxActivity<TViewModel>
         where TViewModel : class, IMvxViewModel
     {
         protected abstract int ActivityLayoutId { get; }

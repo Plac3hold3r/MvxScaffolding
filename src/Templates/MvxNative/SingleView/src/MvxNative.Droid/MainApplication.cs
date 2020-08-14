@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System;
 
 using Android.App;
-using Android.Content;
-using Android.OS;
 using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Platforms.Android.Views;
 using MvxNative.Core;
 
 namespace MvxNative.Droid
@@ -21,7 +14,7 @@ namespace MvxNative.Droid
     [Application(Debuggable = false)]
 #endif
     //+:cnd:noEmit
-    public class MainApplication : MvxAppCompatApplication<Setup, App>
+    public class MainApplication : MvxAndroidApplication<Setup, App>
     {
         public MainApplication(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
         {
