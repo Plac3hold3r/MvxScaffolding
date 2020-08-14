@@ -9,7 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Platforms.Android.Views;
 using MvxNative.Core.ViewModels.Main;
 
 namespace MvxNative.Droid.Views.Main
@@ -17,7 +17,7 @@ namespace MvxNative.Droid.Views.Main
     [Activity(
         Theme = "@style/AppTheme",
         WindowSoftInputMode = SoftInput.AdjustResize | SoftInput.StateHidden)]
-    public class MainActivity : MvxAppCompatActivity<MainViewModel>
+    public class MainActivity : MvxActivity<MainViewModel>
     {
         protected override void OnCreate(Bundle bundle)
         {
