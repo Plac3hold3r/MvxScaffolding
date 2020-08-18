@@ -8,12 +8,12 @@ using Android.Content;
 using Android.Content.Res;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.V4.View;
-using Android.Support.V4.Widget;
 using Android.Views;
 using Android.Views.InputMethods;
 using Android.Widget;
-using MvvmCross.Droid.Support.V7.AppCompat;
+using AndroidX.Core.View;
+using AndroidX.DrawerLayout.Widget;
+using MvvmCross.Platforms.Android.Views.AppCompat;
 using MvxNative.Core.ViewModels.Main;
 using MvxNative.Droid.Views.Helpers;
 

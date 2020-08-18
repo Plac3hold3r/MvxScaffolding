@@ -9,7 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Platforms.Android.Views;
 
 namespace MvxNative.Droid.Views.Splash
 {
@@ -18,7 +18,7 @@ namespace MvxNative.Droid.Views.Splash
         MainLauncher = true,
         Label = "@string/app_name",
         Theme = "@style/AppTheme.Splash")]
-    public class SplashActivity : MvxSplashScreenAppCompatActivity
+    public class SplashActivity : MvxSplashScreenActivity
     {
     }
 }

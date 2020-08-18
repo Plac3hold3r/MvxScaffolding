@@ -6,10 +6,10 @@ using System.Text;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.V4.Widget;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using AndroidX.AppCompat.App;
+using AndroidX.DrawerLayout.Widget;
 
 namespace MvxNative.Droid.Views.Helpers
 {

@@ -1,9 +1,9 @@
-﻿using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Platforms.Android.Core;
 using MvxNative.Core;
 
 namespace MvxNative.Droid
 {
-    public class Setup : MvxAppCompatSetup<App>
+    public class Setup : MvxAndroidSetup<App>
     {
     }
 }
