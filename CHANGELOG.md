@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.9.1...v1.10.0) (2020-08-23)
+
+
+### Features
+
+* **VSIX:** update to support latest version of NuGet exe ([#814](https://github.com/Plac3hold3r/MvxScaffolding/issues/814)) ([d6e5442](https://github.com/Plac3hold3r/MvxScaffolding/commit/d6e54423a405e76825274ed1baf237f7e5ec9cf7))
+* add support for Mvx 7 ([#795](https://github.com/Plac3hold3r/MvxScaffolding/issues/795)) ([7de4a2b](https://github.com/Plac3hold3r/MvxScaffolding/commit/7de4a2bab3f975a93df3d73bdcc62156650f6a32))
+
 ### [1.9.1](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.9.0...v1.9.1) (2020-07-27)
 
 
