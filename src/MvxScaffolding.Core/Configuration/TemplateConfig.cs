@@ -80,7 +80,7 @@ namespace MvxScaffolding.Core.Configuration
             ["9.0"] = "iOS 9.0",
         };
 
-        public static string MinIosSDKOptionDefault => "10.0";
+        public static string MinIosSDKOptionDefault => "12.0";
 
         public static Dictionary<string, string> MinUwpSDKOptions => new Dictionary<string, string>
         {
