@@ -553,7 +553,7 @@
     "iOSMinSDKVersion": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "10.0",
+      "defaultValue": "12.0",
       "description": "Minimum iOS SDK version.",
       "choices": [
         {
@@ -665,7 +665,7 @@
           "description": "iOS 9"
         }
       ],
-      "replaces": "10.0",
+      "replaces": "12.0",
       "onlyIf": [
         {
           "after": "<string>",
