@@ -196,6 +196,7 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                          Default: 2.0
 
   -droid-sdk|--android-min-sdk           Minimum Android SDK version.
+                                             30    - Android 11 - R v30
                                              29    - Android 10 - Q v29
                                              28    - Android 9 - Oreo v28
                                              27    - Android 8.1 - Oreo v27
@@ -214,6 +215,9 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                          Default: 19
 
   -ios-sdk|--ios-min-sdk                 Minimum iOS SDK version.
+                                             14.0    - iOS 14.0
+                                             13.7    - iOS 13.7
+                                             13.6    - iOS 13.6
                                              13.5    - iOS 13.5
                                              13.4    - iOS 13.4
                                              13.3    - iOS 13.3

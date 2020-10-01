@@ -16,7 +16,7 @@
   "HelpTranslateUri": "https://crowdin.com/project/mvxscaffolding",
   "ChangelogUri": "https://github.com/Plac3hold3r/MvxScaffolding/blob/master/CHANGELOG.md",
   "ReleaseNotesUri": "https://github.com/Plac3hold3r/MvxScaffolding/blob/master/CHANGELOG.md",
-  "SupportedMvvmCrossVersion": "7.0.0",
+  "SupportedMvvmCrossVersion": "7.0.1",
   "PlatformScaffoldTypeConfiguration": {
     "MvxNative": [
       {
