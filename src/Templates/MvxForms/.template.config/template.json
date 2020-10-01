@@ -407,6 +407,10 @@
       "description": "Minimum Android target SDK version.",
       "choices": [
         {
+          "choice": "30",
+          "description": "Android 11 - R v30"
+        },
+        {
           "choice": "29",
           "description": "Android 10 - Q v29"
         },
@@ -483,6 +487,18 @@
       "defaultValue": "10.0",
       "description": "Minimum iOS target SDK version.",
       "choices": [
+        {
+          "choice": "14.0",
+          "description": "iOS 14.0"
+        },
+        {
+          "choice": "13.7",
+          "description": "iOS 13.7"
+        },
+        {
+          "choice": "13.6",
+          "description": "iOS 13.6"
+        },
         {
           "choice": "13.5",
           "description": "iOS 13.5"
