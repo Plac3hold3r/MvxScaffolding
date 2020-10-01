@@ -212,7 +212,7 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                              16    - Android 4.1 - Jelly Bean v16
                                              15    - Android 4.0.3 - Ice Cream Sandwich v15
                                              14    - Android 4 - Ice Cream Sandwich v14
-                                         Default: 19
+                                         Default: 21
 
   -ios-sdk|--ios-min-sdk                 Minimum iOS SDK version.
                                              14.0    - iOS 14.0
@@ -242,7 +242,7 @@ dotnet new mvxnative -n MyXamarinApp -sln MyXamarinApp --solution-project-groupi
                                              9.2     - iOS 9.2
                                              9.1     - iOS 9.1
                                              9.0     - iOS 9
-                                         Default: 10.0
+                                         Default: 12.0
 
   -uwp-desc|--uwp-app-description        The UWP application description.
                                          string - Optional
