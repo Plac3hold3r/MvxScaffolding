@@ -9,7 +9,7 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![Semver](https://badgen.net/badge/semver/2.0.0/green)](https://semver.org/)
 
-A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms. Supports MvvmCross 7.0.0.
+A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms. Supports MvvmCross 7.0.1.
 
 ![MvxScaffolding screenshot](docs/resources/vs_template_banner.png)
 
@@ -72,9 +72,9 @@ In order to make use of these templates you will need to have the following inst
 
 **Optional**
 
-- Xamarin Android SDK _(Recommended version 10+)_
-- Xamarin iOS SDK _(Recommended version 13.2+)_
-- UWP SDK _(**Windows Only**, recommended version 10.0.18362+)_
+- Xamarin Android SDK _(Recommended version 11+)_
+- Xamarin iOS SDK _(Recommended version 14+)_
+- UWP SDK _(**Windows Only**, recommended version 10.0.19041+)_
 
 ### Installation
 
@@ -101,9 +101,9 @@ In order to make use of these templates you will need to have the following inst
 
 **Optional**
 
-- Xamarin Android SDK _(Recommended version 10+)_
-- Xamarin iOS SDK _(Recommended version 13.2+)_
-- UWP SDK _(**Windows Only**, recommended version 10.0.18362+)_
+- Xamarin Android SDK _(Recommended version 11+)_
+- Xamarin iOS SDK _(Recommended version 14+)_
+- UWP SDK _(**Windows Only**, recommended version 10.0.19041+)_
 
 ### Installation
 
