@@ -46,7 +46,7 @@ namespace MvxScaffolding.Core.Configuration
             ["14"] = "Android 4 - Ice Cream Sandwich v14",
         };
 
-        public static string MinAndroidSDKOptionDefault => "19";
+        public static string MinAndroidSDKOptionDefault => "21";
 
         public static Dictionary<string, string> MinIosSDKOptions => new Dictionary<string, string>
         {

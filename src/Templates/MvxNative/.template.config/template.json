@@ -456,7 +456,7 @@
     "AndroidMinSDKVersion": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "19",
+      "defaultValue": "21",
       "description": "Minimum Android SDK version.",
       "choices": [
         {
@@ -520,7 +520,7 @@
           "description": "Android 4 - Ice Cream Sandwich v14"
         }
       ],
-      "replaces": "19",
+      "replaces": "21",
       "onlyIf": [
         {
           "after": "android:minSdkVersion=\""
