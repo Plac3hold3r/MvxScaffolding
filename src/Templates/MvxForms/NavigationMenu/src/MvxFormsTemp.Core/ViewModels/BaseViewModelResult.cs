@@ -7,6 +7,7 @@ using MvvmCross.ViewModels;
 namespace MvxFormsTemp.Core.ViewModels
 {
     public abstract class BaseViewModelResult<TResult> : BaseViewModel, IMvxViewModelResult<TResult>
+        where TResult : class
     {
         public TaskCompletionSource<object> CloseCompletionSource { get; set; }
 

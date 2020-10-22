@@ -6,6 +6,7 @@ using MvvmCross.ViewModels;
 namespace MvxNative.Core.ViewModels
 {
     public abstract class BaseViewModel<TParameter> : BaseViewModel, IMvxViewModel<TParameter>
+        where TParameter : class
     {
         public abstract void Prepare(TParameter parameter);
     }
