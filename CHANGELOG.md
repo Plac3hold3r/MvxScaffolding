@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.10.0...v1.11.0) (2020-10-22)
+
+
+### Features
+
+* update base ViewModels for reference restrictions ([#861](https://github.com/Plac3hold3r/MvxScaffolding/issues/861)) ([cd67dd3](https://github.com/Plac3hold3r/MvxScaffolding/commit/cd67dd33f231f633b38c90d36f04a321e68f375e))
+* **deps:** bump MvvmCross v7.1.1 ([#850](https://github.com/Plac3hold3r/MvxScaffolding/issues/850)) ([f6fe54b](https://github.com/Plac3hold3r/MvxScaffolding/commit/f6fe54b453584953800ce6cd9f64b82b2989fb54))
+* update android & iOS SDK ([#837](https://github.com/Plac3hold3r/MvxScaffolding/issues/837)) ([7f1cd70](https://github.com/Plac3hold3r/MvxScaffolding/commit/7f1cd70aceb3587b57eff5724f0d901e8b774f49))
+* update iOS Min SDK to 12 ([#839](https://github.com/Plac3hold3r/MvxScaffolding/issues/839)) ([c8a8aee](https://github.com/Plac3hold3r/MvxScaffolding/commit/c8a8aeea746e6a45d20e8fae9347575e52a92a7a))
+* **deps:** bump MvvmCross ([#828](https://github.com/Plac3hold3r/MvxScaffolding/issues/828)) ([d508b9a](https://github.com/Plac3hold3r/MvxScaffolding/commit/d508b9a17479660cdd9344d777ad48163bc496de))
+* **deps:** bump MvvmCross.Forms ([#833](https://github.com/Plac3hold3r/MvxScaffolding/issues/833)) ([7467b1f](https://github.com/Plac3hold3r/MvxScaffolding/commit/7467b1f89cba627e826aeac236df6ac31673effc))
+* **deps:** bump MvvmCross.Tests ([#823](https://github.com/Plac3hold3r/MvxScaffolding/issues/823)) ([aa03b67](https://github.com/Plac3hold3r/MvxScaffolding/commit/aa03b670904a999f6b4fdc9f7f2e54c1d26c2fc6))
+* **template:** Set min Android SDK to 21 ([#836](https://github.com/Plac3hold3r/MvxScaffolding/issues/836)) ([7c433f8](https://github.com/Plac3hold3r/MvxScaffolding/commit/7c433f8d86be5ed200d01bde90383f34002a4f43))
+
 ## [1.10.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.9.1...v1.10.0) (2020-08-23)
 
 
