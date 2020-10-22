@@ -84,7 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MvvmCross">
-      <Version>7.0.1</Version>
+      <Version>7.1.1</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Forms">
       <Version>7.1.1</Version>
