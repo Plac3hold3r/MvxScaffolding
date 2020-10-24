@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.11.0...v1.12.0) (2020-10-24)
+
+
+### Features
+
+* add support for C# 8 and notnull constraint for base ViewModels ([#882](https://github.com/Plac3hold3r/MvxScaffolding/issues/882)) ([564d511](https://github.com/Plac3hold3r/MvxScaffolding/commit/564d511799aa6cb41f16c762378d530f30ce49ad)), closes [C#8](https://github.com/Plac3hold3r/C/issues/8)
+* **deps:** bump MvvmCross 7.1.2 ([#870](https://github.com/Plac3hold3r/MvxScaffolding/issues/870)) ([17383bc](https://github.com/Plac3hold3r/MvxScaffolding/commit/17383bcb201020412cb4a42b10f00f28224c884d))
+* **deps:** bump MvvmCross.Forms 7.1.2 ([#867](https://github.com/Plac3hold3r/MvxScaffolding/issues/867)) ([d2883af](https://github.com/Plac3hold3r/MvxScaffolding/commit/d2883af93238b798904f5546e57d49d9a04b5a6d))
+* **deps:** bump MvvmCross.Tests 7.1.2 ([#862](https://github.com/Plac3hold3r/MvxScaffolding/issues/862)) ([01ba34a](https://github.com/Plac3hold3r/MvxScaffolding/commit/01ba34ae62a7e18a35de645f3d46558d4a749a0a))
+
 ## [1.11.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.10.0...v1.11.0) (2020-10-22)
 
 
