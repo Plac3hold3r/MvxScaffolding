@@ -43,6 +43,7 @@
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -56,6 +57,7 @@
     <AndroidLinkSkip>MvxFormsTemp.Core;MvxFormsTemp.UI;</AndroidLinkSkip>
     <EnableProguard>true</EnableProguard>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
