@@ -156,7 +156,7 @@
       <Version>7.1.1</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Plugin.Sidebar">
-      <Version>7.1.1</Version>
+      <Version>7.1.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
