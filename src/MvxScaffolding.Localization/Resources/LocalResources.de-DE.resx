@@ -133,7 +133,7 @@
     <value>Projektgruppierung</value>
   </data>
   <data name="AppDetails_Solution" xml:space="preserve">
-    <value>Solution</value>
+    <value>Projektmappe</value>
   </data>
   <data name="AppDetails_Validation_Display_Name" xml:space="preserve">
     <value>Anwendungsname erforderlich</value>
@@ -199,7 +199,7 @@
     <value>Beschreibung erforderlich</value>
   </data>
   <data name="SimpleInfo_EditorConfig_Desc" xml:space="preserve">
-    <value>Aktivieren, um eine EditorConfig-Datei in das Rootverzeichnis der Solution einzubinden. EditorConfig wird verwendet, um Codierungsstile zu definieren, die in Visual Studio hervorgehoben werden.</value>
+    <value>Aktivieren, um eine EditorConfig-Datei in das Rootverzeichnis der Projektmappe einzubinden. EditorConfig wird verwendet, um Codierungsstile zu definieren, die in Visual Studio hervorgehoben werden.</value>
   </data>
   <data name="SimpleInfo_EditorConfig_Title" xml:space="preserve">
     <value>EditorConfig</value>
@@ -265,16 +265,16 @@
     <value>Schließen</value>
   </data>
   <data name="ProjectGrouping_Description" xml:space="preserve">
-    <value>Die Gruppierung von Projekten in Ordner innerhalb der Solution.</value>
+    <value>Die Gruppierung von Projekten in Ordner innerhalb der Projektmappe.</value>
   </data>
   <data name="ProjectGrouping_Select_Flat" xml:space="preserve">
-    <value>Wählen Sie "Flat" aus, wenn Sie möchten, dass alle Projekte im Root-Verzeichnis der Solution platziert werden.</value>
+    <value>Wählen Sie "Flat" aus, wenn Sie möchten, dass alle Projekte im Root-Verzeichnis der Projektmappe platziert werden.</value>
   </data>
   <data name="ProjectGrouping_Select_Platform" xml:space="preserve">
     <value>Wählen Sie "Plattform" aus, wenn Sie Projekte basierend auf ihrer Zielplattform gruppieren möchten.</value>
   </data>
   <data name="ProjectGrouping_Select_TestGroup" xml:space="preserve">
-    <value>Wählen Sie "Testgruppe" aus, wenn alle Testprojekte in einem Testordner platziert werden sollen andere Projekte werden im Root-Verzeichnis der Solution erstellt.</value>
+    <value>Wählen Sie "Testgruppe" aus, wenn alle Testprojekte in einem Testordner platziert werden sollen andere Projekte werden im Root-Verzeichnis der Projektmappe erstellt.</value>
   </data>
   <data name="ProjectGrouping_Title" xml:space="preserve">
     <value>Projektgruppierung</value>
@@ -415,10 +415,10 @@
     <value>GitHub</value>
   </data>
   <data name="AppDetails_Solution_Name" xml:space="preserve">
-    <value>Solution Name</value>
+    <value>Projektmappe Name</value>
   </data>
   <data name="AppDetails_Validation_SolutionName" xml:space="preserve">
-    <value>Solution Name erforderlich</value>
+    <value>Projektmappe Name erforderlich</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu" xml:space="preserve">
     <value>Navigationsmenü</value>
@@ -430,33 +430,33 @@
     <value>Einzelansicht</value>
   </data>
   <data name="AppDetails_Template_SingleView_Description" xml:space="preserve">
-    <value>Scaffold an app with a single starting view and view model.</value>
+    <value>Eine App mit einem einzigen Start View mit View Model erstellen.</value>
   </data>
   <data name="AppDetails_Project_Name" xml:space="preserve">
-    <value>Project Name</value>
+    <value>Projekt Name</value>
   </data>
   <data name="Summary_ScaffoldType" xml:space="preserve">
-    <value>Scaffold Type</value>
+    <value>Gerüsttyp</value>
   </data>
   <data name="Summary_SolutionName" xml:space="preserve">
-    <value>Solution Name</value>
+    <value>Projektmappe Name</value>
   </data>
   <data name="ReleaseNotes_InstalledVersion" xml:space="preserve">
-    <value>Installed Version</value>
+    <value>Installierte Version</value>
   </data>
   <data name="AppDetails_Template_Blank" xml:space="preserve">
-    <value>Blank</value>
+    <value>Leer</value>
   </data>
   <data name="AppDetails_Template_Blank_Description" xml:space="preserve">
-    <value>Scaffold an app with bare basic features.</value>
+    <value>Eine App mit bloßen Grundfunktionen erstellen.</value>
   </data>
   <data name="AppDetails_Create_Solution_Directory" xml:space="preserve">
-    <value>Create directory for solution</value>
+    <value>Verzeichnis für die Projektmappe erstellen</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Message" xml:space="preserve">
-    <value>MvxScaffolding cannot delete the default Visual Studio generated project folder due to the choice of file location requiring elevated privileges. You will need to either run Visual Studio as an Administrator or manually clean up the directory after the project has been generated.</value>
+    <value>MvxScaffolding kann den standardmäßig generierten Projektordner von Visual Studio nicht löschen, da der Speicherort für Dateien mit erweiterten Berechtigungen erforderlich ist. Sie müssen entweder Visual Studio als Administrator ausführen oder das Verzeichnis manuell bereinigen, nachdem das Projekt erstellt wurde.</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Title" xml:space="preserve">
-    <value>Unauthorized Access Error</value>
+    <value>Unberechtigter Zugriffsfehler</value>
   </data>
 </root>
