@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.12.0...v1.13.0) (2021-04-28)
+
+
+### Features
+
+* New Crowdin updates (German) ([1ddd29d](https://github.com/Plac3hold3r/MvxScaffolding/commit/1ddd29d6943d666ac13fade723cd2e1de476c355))
+* New Crowdin updates (Turkish) ([#918](https://github.com/Plac3hold3r/MvxScaffolding/issues/918)) ([8eb89d9](https://github.com/Plac3hold3r/MvxScaffolding/commit/8eb89d96236ef92067e83fb964fa623106cbf044))
+
 ## [1.12.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.11.0...v1.12.0) (2020-10-24)
 
 
