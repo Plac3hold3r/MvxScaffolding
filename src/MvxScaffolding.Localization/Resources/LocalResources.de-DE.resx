@@ -394,16 +394,16 @@
     <value>MvvmCross Version</value>
   </data>
   <data name="Main_Window_Notify_Dismiss" xml:space="preserve">
-    <value>Dismiss</value>
+    <value>Verwerfen</value>
   </data>
   <data name="Main_Window_Notify_ReleaseNotes" xml:space="preserve">
-    <value>Release Notes</value>
+    <value>Versionshinweise</value>
   </data>
   <data name="Main_Window_Notify_Updated" xml:space="preserve">
-    <value>{0} updated</value>
+    <value>{0} aktualisiert</value>
   </data>
   <data name="AppDetails_Required" xml:space="preserve">
-    <value>Required</value>
+    <value>Erforderlich</value>
   </data>
   <data name="ReleaseNotes_Button_Close" xml:space="preserve">
     <value>Schließen</value>
@@ -418,16 +418,16 @@
     <value>Solution Name</value>
   </data>
   <data name="AppDetails_Validation_SolutionName" xml:space="preserve">
-    <value>Solution name required</value>
+    <value>Solution Name erforderlich</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu" xml:space="preserve">
-    <value>Navigation Menu</value>
+    <value>Navigationsmenü</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu_Description" xml:space="preserve">
-    <value>Scaffold an app with a slide out menu. Template contains two starting views with view models.</value>
+    <value>Eine App mit einem Slide Out Menü erstellen. Vorlage enthält zwei Seiten mit View Models.</value>
   </data>
   <data name="AppDetails_Template_SingleView" xml:space="preserve">
-    <value>Single View</value>
+    <value>Einzelansicht</value>
   </data>
   <data name="AppDetails_Template_SingleView_Description" xml:space="preserve">
     <value>Scaffold an app with a single starting view and view model.</value>
