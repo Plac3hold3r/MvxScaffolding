@@ -1,0 +1,58 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/src/Templates/MvxForms/Blank"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/src/Templates/MvxForms/SingleView"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/src/Templates/MvxForms/Shared/test/MvxFormsTemp.Core.Test"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: Moq
+    versions:
+    - 4.16.1
+- package-ecosystem: nuget
+  directory: "/src/Templates/MvxNative/Blank"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/src/Templates/MvxNative/NavigationMenu"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/src/Templates/MvxNative/SingleView"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: Microsoft.NETCore.UniversalWindowsPlatform
+    versions:
+    - 6.2.12
+- package-ecosystem: nuget
+  directory: "/src/Templates/MvxNative/Shared/test/MvxNative.Core.Test"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/src/Templates/MvxForms/NavigationMenu"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
