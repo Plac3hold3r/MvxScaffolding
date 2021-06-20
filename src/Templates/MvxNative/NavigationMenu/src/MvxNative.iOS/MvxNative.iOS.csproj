@@ -160,7 +160,7 @@
       <Version>8.0.1</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Plugin.Sidebar">
-      <Version>7.1.2</Version>
+      <Version>8.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
