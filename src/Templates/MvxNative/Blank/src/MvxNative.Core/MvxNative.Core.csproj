@@ -6,6 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MvvmCross" Version="8.0.1" />
+    <PackageReference Include="MvvmCross" Version="8.0.2" />
   </ItemGroup>
 </Project>
