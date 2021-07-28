@@ -12,6 +12,7 @@ using MvvmCross.Core;
 using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using MvvmCross.Views;
 
 namespace MvxNative.Droid.Linker
 {
@@ -93,9 +94,9 @@ namespace MvxNative.Droid.Linker
             _ = new MvxViewModelViewTypeFinder(null, null);
         }
 
-        public void Include(MvxNavigationService service, IMvxViewModelLoader loader)
+        public void Include(MvxNavigationService service, IMvxViewModelLoader loader, IMvxViewDispatcher viewDispatcher)
         {
-            _ = new MvxNavigationService(null, loader);
+            _ = new MvxNavigationService(null, viewDispatcher, MvvmCross.Mvx.IoCProvider);
             _ = new MvxAppStart<MvxNullViewModel>(null, null);
         }
 
