@@ -87,7 +87,7 @@
       <Version>8.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.ConstraintLayout">
-      <Version>2.0.4.2</Version>
+      <Version>2.0.4.3</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
