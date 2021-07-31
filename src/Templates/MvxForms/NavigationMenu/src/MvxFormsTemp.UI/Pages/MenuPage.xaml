@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<views:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MvxFormsTemp.UI.Pages.MenuPage"
-             xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
-             xmlns:viewModels="clr-namespace:MvxFormsTemp.Core.ViewModels.Menu;assembly=MvxFormsTemp.Core"
-             x:TypeArguments="viewModels:MenuViewModel"
-             x:Name="MainContent"
-             xmlns:behaviors="clr-namespace:MvxFormsTemp.Core.Behaviors;assembly=MvxFormsTemp.Core"
-             Icon="hamburger.png">
+<views:MvxContentPage
+    x:Class="MvxFormsTemp.UI.Pages.MenuPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:MvxFormsTemp.Core.Behaviors;assembly=MvxFormsTemp.Core"
+    xmlns:viewModels="clr-namespace:MvxFormsTemp.Core.ViewModels.Menu;assembly=MvxFormsTemp.Core"
+    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    x:Name="MainContent"
+    x:TypeArguments="viewModels:MenuViewModel"
+    Icon="hamburger.png">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout HeightRequest="40">
@@ -22,21 +23,27 @@
                         <On Platform="iOS" Value="0,20,0,0" />
                     </OnPlatform>
                 </StackLayout.Margin>
-                <Label Text="NavigationMenu" Margin="10" VerticalOptions="Center" FontSize="Large"></Label>
+                <Label
+                    Margin="10"
+                    FontSize="Large"
+                    Text="NavigationMenu"
+                    VerticalOptions="Center" />
             </StackLayout>
-            <ListView x:Name="MenuList" ItemsSource="{Binding MenuItemList}" 
-                      SelectedItem="{Binding SelectedMenuItem, Mode=TwoWay}">
+            <ListView
+                x:Name="MenuList"
+                ItemsSource="{Binding MenuItemList}"
+                SelectedItem="{Binding SelectedMenuItem, Mode=TwoWay}">
                 <ListView.Behaviors>
-                    <behaviors:EventToCommandBehavior EventName="ItemSelected" Command="{Binding BindingContext.DataContext.ShowDetailPageAsyncCommand, 
-                            Source={x:Reference MainContent}}">
-                    </behaviors:EventToCommandBehavior>
+                    <behaviors:EventToCommandBehavior Command="{Binding BindingContext.DataContext.ShowDetailPageAsyncCommand, Source={x:Reference MainContent}}" EventName="ItemSelected" />
                 </ListView.Behaviors>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout HeightRequest="50">
-                                <Label Text="{Binding}" Margin="20,0,0,0" 
-                                       VerticalOptions="CenterAndExpand"></Label>
+                                <Label
+                                    Margin="20,0,0,0"
+                                    Text="{Binding}"
+                                    VerticalOptions="CenterAndExpand" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

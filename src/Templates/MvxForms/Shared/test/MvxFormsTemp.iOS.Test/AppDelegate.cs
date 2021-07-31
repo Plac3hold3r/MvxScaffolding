@@ -15,8 +15,8 @@ namespace MvxFormsTemp.iOS.Test
     public partial class AppDelegate : UIApplicationDelegate
     {
         // class-level declarations
-        UIWindow window;
-        TouchRunner runner;
+        private UIWindow window;
+        private TouchRunner runner;
 
         //
         // This method is invoked when the application has loaded and is ready to run. In this 

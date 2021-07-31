@@ -11,7 +11,7 @@ namespace MvxNative.Droid.UI.Test
     [TestFixture]
     public class Tests
     {
-        AndroidApp app;
+        private AndroidApp app;
 
         [SetUp]
         public void BeforeEachTest()

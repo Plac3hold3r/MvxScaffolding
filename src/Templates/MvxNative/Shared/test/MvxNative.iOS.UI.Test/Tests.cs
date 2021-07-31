@@ -11,7 +11,7 @@ namespace iOSUITest
     [TestFixture]
     public class Tests
     {
-        iOSApp app;
+        private iOSApp app;
 
         [SetUp]
         public void BeforeEachTest()

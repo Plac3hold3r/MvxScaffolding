@@ -3,7 +3,7 @@ using MvvmCross.Platforms.Uap.Views;
 
 namespace MvxNative.UWP
 {
-    sealed partial class App
+    public sealed partial class App
     {
         public App()
         {

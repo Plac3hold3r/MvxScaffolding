@@ -18,7 +18,7 @@ using Windows.UI.Xaml.Navigation;
 
 namespace MvxFormsTemp.UWP
 {
-    sealed partial class App
+    public sealed partial class App
     {
         public App()
         {

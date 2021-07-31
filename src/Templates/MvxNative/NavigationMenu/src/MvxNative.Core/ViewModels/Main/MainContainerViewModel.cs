@@ -10,7 +10,7 @@ namespace MvxNative.Core.ViewModels.Main
 {
     public class MainContainerViewModel : BaseViewModel
     {
-        readonly IMvxNavigationService _navigationService;
+        private readonly IMvxNavigationService _navigationService;
 
         public IMvxAsyncCommand ShowMenuCommand { get; private set; }
 

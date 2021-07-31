@@ -11,7 +11,7 @@ namespace MvxNative.Core.ViewModels.Menu
 {
     public class MenuViewModel : BaseViewModel
     {
-        readonly IMvxNavigationService _navigationService;
+        private readonly IMvxNavigationService _navigationService;
 
         public IMvxAsyncCommand ShowHomeCommand { get; private set; }
         public IMvxAsyncCommand ShowSettingsCommand { get; private set; }
