@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.14.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.13.0...v1.14.0) (2021-07-31)
+
+
+### Features
+
+* cater for Mvx 8 changes ([#978](https://github.com/Plac3hold3r/MvxScaffolding/issues/978)) ([8ed4ba8](https://github.com/Plac3hold3r/MvxScaffolding/commit/8ed4ba84decfd3a1c485f22d73b7174f303e3386))
+* **deps:** bump MvvmCross ([#950](https://github.com/Plac3hold3r/MvxScaffolding/issues/950)) ([d24f3c2](https://github.com/Plac3hold3r/MvxScaffolding/commit/d24f3c2e76d2d60c42a2762e2fe68a07b4ff94dd))
+* **deps:** bump MvvmCross ([#958](https://github.com/Plac3hold3r/MvxScaffolding/issues/958)) ([9e3ebd2](https://github.com/Plac3hold3r/MvxScaffolding/commit/9e3ebd2de07af84817efd9950a5f4c9cc6785c9d))
+* **deps:** bump MvvmCross.Forms ([#946](https://github.com/Plac3hold3r/MvxScaffolding/issues/946)) ([3a3ba10](https://github.com/Plac3hold3r/MvxScaffolding/commit/3a3ba10e91f70d525859403259af7ec8d6b0501c))
+* **deps:** bump MvvmCross.Forms ([#973](https://github.com/Plac3hold3r/MvxScaffolding/issues/973)) ([bb4359a](https://github.com/Plac3hold3r/MvxScaffolding/commit/bb4359a16697877e095a58e46850d456ea0bad09))
+* **deps:** bump MvvmCross.Tests ([#961](https://github.com/Plac3hold3r/MvxScaffolding/issues/961)) ([0a9aa41](https://github.com/Plac3hold3r/MvxScaffolding/commit/0a9aa41c079ba7a891d2d08512c88d9729a1b75d))
+* New Crowdin updates ([#935](https://github.com/Plac3hold3r/MvxScaffolding/issues/935)) ([0cdc54d](https://github.com/Plac3hold3r/MvxScaffolding/commit/0cdc54db1c237e764d77bd7f36f86d151ce55c8f))
+
 ## [1.13.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.12.0...v1.13.0) (2021-04-28)
 
 
