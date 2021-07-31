@@ -9,7 +9,7 @@ namespace MvxFormsTemp.Core.ViewModels.Root
 {
     public class RootViewModel : BaseViewModel
     {
-        readonly IMvxNavigationService _navigationService;
+        private readonly IMvxNavigationService _navigationService;
 
         public RootViewModel(IMvxNavigationService navigationService)
         {

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<views:MvxMasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MvxFormsTemp.UI.Pages.RootPage"
-             xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
-             xmlns:viewModels="clr-namespace:MvxFormsTemp.Core.ViewModels.Root;assembly=MvxFormsTemp.Core"
-             x:TypeArguments="viewModels:RootViewModel"
-             MasterBehavior="Popover">
-</views:MvxMasterDetailPage>
+<views:MvxMasterDetailPage
+    x:Class="MvxFormsTemp.UI.Pages.RootPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:MvxFormsTemp.Core.ViewModels.Root;assembly=MvxFormsTemp.Core"
+    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    x:TypeArguments="viewModels:RootViewModel"
+    FlyoutLayoutBehavior="Popover" />

@@ -14,7 +14,7 @@ namespace MvxFormsTemp.Core.ViewModels.Menu
 {
     public class MenuViewModel : BaseViewModel
     {
-        readonly IMvxNavigationService _navigationService;
+        private readonly IMvxNavigationService _navigationService;
 
         public IMvxAsyncCommand ShowDetailPageAsyncCommand { get; private set; }
 
@@ -52,12 +52,12 @@ namespace MvxFormsTemp.Core.ViewModels.Menu
                     break;
             }
 
-            if (Application.Current.MainPage is MasterDetailPage masterDetailPage)
+            if (Application.Current.MainPage is FlyoutPage masterDetailPage)
             {
                 masterDetailPage.IsPresented = false;
             }
             else if (Application.Current.MainPage is NavigationPage navigationPage
-                     && navigationPage.CurrentPage is MasterDetailPage nestedMasterDetail)
+                     && navigationPage.CurrentPage is FlyoutPage nestedMasterDetail)
             {
                 nestedMasterDetail.IsPresented = false;
             }
