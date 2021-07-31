@@ -1,15 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<views:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MvxFormsTemp.UI.Pages.ContactsPage"
-             xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
-             xmlns:viewModels="clr-namespace:MvxFormsTemp.Core.ViewModels.Contacts;assembly=MvxFormsTemp.Core"
-             x:TypeArguments="viewModels:ContactsViewModel">
+<views:MvxContentPage
+    x:Class="MvxFormsTemp.UI.Pages.ContactsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:MvxFormsTemp.Core.ViewModels.Contacts;assembly=MvxFormsTemp.Core"
+    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    x:TypeArguments="viewModels:ContactsViewModel">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to ContactsPage!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label
+                HorizontalOptions="CenterAndExpand"
+                Text="Welcome to ContactsPage!"
+                VerticalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </views:MvxContentPage>

@@ -10,6 +10,7 @@ using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.Platforms.Ios.Views;
 using MvvmCross.ViewModels;
+using MvvmCross.Views;
 using UIKit;
 
 namespace MvxNative.iOS.Linker
@@ -129,9 +130,9 @@ namespace MvxNative.iOS.Linker
             _ = new MvxAppStart<MvxNullViewModel>(null, null);
         }
 
-        public void Include(MvxNavigationService service, IMvxViewModelLoader loader)
+        public void Include(MvxNavigationService service, IMvxViewModelLoader loader, IMvxViewDispatcher viewDispatcher)
         {
-            _ = new MvxNavigationService(null, loader);
+            _ = new MvxNavigationService(null, viewDispatcher, MvvmCross.Mvx.IoCProvider);
         }
 
         public void Include(ConsoleColor color)

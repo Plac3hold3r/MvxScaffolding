@@ -9,7 +9,7 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![Semver](https://badgen.net/badge/semver/2.0.0/green)](https://semver.org/)
 
-A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms. Supports MvvmCross 7.1.2.
+A customizable template used to scaffold a cross-platform MvvmCross application. Includes a .NET Standard class library. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms. Supports MvvmCross 8.0.2.
 
 ![MvxScaffolding screenshot](docs/resources/vs_template_banner.png)
 
@@ -52,9 +52,10 @@ Thank you to the following translators
 | Chinese Traditional   | zh-TW | [Rei Jyo (klakling)](https://crowdin.com/profile/klakling)                                                                                           |
 |       Danish          | da-DK | [Tomasz Cielecki (Cheesebaron)](https://crowdin.com/profile/Cheesebaron)                                                                             |
 |       French          | fr-FR | [Antoine Bichon (Chapelin)](https://crowdin.com/profile/Chapelin), [An0d](https://crowdin.com/profile/An0d)                                          |
-|       German          | de-DE | [Manuel (epsmae)](https://crowdin.com/profile/epsmae) |
+|       German          | de-DE | [Manuel (epsmae)](https://crowdin.com/profile/epsmae)                                                                                                |
 |      Italian          | it-IT | [Emanuele Filardo (fileman)](https://crowdin.com/profile/fileman)                                                                                    |
 |      Japanese         | ja-JP | [Rei Jyo (klakling)](https://crowdin.com/profile/klakling)                                                                                           |
+|       Polish          | pl-PL | [qattiel (Qattiel)](https://crowdin.com/profile/qattiel)                                                                                             |
 | Portuguese, Brazilian | pt-BR | [Bazzi](https://crowdin.com/profile/Bazzi), [tobias.16bar](https://crowdin.com/profile/tobias.16bar)                                                 |
 |      Russian          | ru-RU | [Alexander Bublik (alex.bublik1093)](https://crowdin.com/profile/alex.bublik1093)                                                                    |
 |      Spanish          | es-ES | [Agustin Jose Wawrzyk (elpitufo)](https://crowdin.com/profile/elpitufo)                                                                              |
