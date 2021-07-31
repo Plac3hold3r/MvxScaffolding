@@ -108,6 +108,12 @@
     <PackageReference Include="MvvmCross.Forms">
       <Version>8.0.2</Version>
     </PackageReference>
+    <PackageReference Include="Serilog.Extensions.Logging">
+      <Version>3.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Serilog.Sinks.Xamarin">
+      <Version>0.2.0.64</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms">
       <Version>5.0.0.2083</Version>
     </PackageReference>
