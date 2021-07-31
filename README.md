@@ -52,9 +52,10 @@ Thank you to the following translators
 | Chinese Traditional   | zh-TW | [Rei Jyo (klakling)](https://crowdin.com/profile/klakling)                                                                                           |
 |       Danish          | da-DK | [Tomasz Cielecki (Cheesebaron)](https://crowdin.com/profile/Cheesebaron)                                                                             |
 |       French          | fr-FR | [Antoine Bichon (Chapelin)](https://crowdin.com/profile/Chapelin), [An0d](https://crowdin.com/profile/An0d)                                          |
-|       German          | de-DE | [Manuel (epsmae)](https://crowdin.com/profile/epsmae) |
+|       German          | de-DE | [Manuel (epsmae)](https://crowdin.com/profile/epsmae)                                                                                                |
 |      Italian          | it-IT | [Emanuele Filardo (fileman)](https://crowdin.com/profile/fileman)                                                                                    |
 |      Japanese         | ja-JP | [Rei Jyo (klakling)](https://crowdin.com/profile/klakling)                                                                                           |
+|       Polish          | pl-PL | [qattiel (Qattiel)](https://crowdin.com/profile/qattiel)                                                                                             |
 | Portuguese, Brazilian | pt-BR | [Bazzi](https://crowdin.com/profile/Bazzi), [tobias.16bar](https://crowdin.com/profile/tobias.16bar)                                                 |
 |      Russian          | ru-RU | [Alexander Bublik (alex.bublik1093)](https://crowdin.com/profile/alex.bublik1093)                                                                    |
 |      Spanish          | es-ES | [Agustin Jose Wawrzyk (elpitufo)](https://crowdin.com/profile/elpitufo)                                                                              |
