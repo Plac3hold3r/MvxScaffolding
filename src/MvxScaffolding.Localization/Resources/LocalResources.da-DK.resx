@@ -160,7 +160,7 @@
     <value>Besøg MvxScaffolding på GitHub</value>
   </data>
   <data name="Main_Window_SectionHeader_AppDetails" xml:space="preserve">
-    <value>App detaljer</value>
+    <value>App Detaljer</value>
   </data>
   <data name="Main_Window_SectionHeader_PlatformOptions" xml:space="preserve">
     <value>Indstillinger for Platforme</value>
@@ -451,12 +451,12 @@
     <value>Lav en skabelon af en App med grundlæggende features.</value>
   </data>
   <data name="AppDetails_Create_Solution_Directory" xml:space="preserve">
-    <value>Create directory for solution</value>
+    <value>Opret mappe for solution</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Message" xml:space="preserve">
-    <value>MvxScaffolding cannot delete the default Visual Studio generated project folder due to the choice of file location requiring elevated privileges. You will need to either run Visual Studio as an Administrator or manually clean up the directory after the project has been generated.</value>
+    <value>MvxScaffolding kan ikke slette standard Visual Studio genereret projekt mappe på grund af valget af fil placering, som kræver forhøjede privilegier. Du skal enten køre Visual Studio som administrator eller manuelt rydde op i mappen efter projektet er blevet genereret.</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Title" xml:space="preserve">
-    <value>Unauthorized Access Error</value>
+    <value>Fejl Adgang Nægtet</value>
   </data>
 </root>
