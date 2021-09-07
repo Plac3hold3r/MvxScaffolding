@@ -96,6 +96,13 @@ namespace MvxFormsTemp.iOS.Linker
         {
             s.Pages = s.Pages + 1;
         }
+        
+        public void Include(UISearchBar searchBar)
+        {
+            searchBar.Text = $"{ searchBar.Text }";
+            searchBar.TextChanged += (sender, e) => searchBar.Text = "";
+            searchBar.CancelButtonClicked += (s, e) => searchBar.Text = $"{ searchBar.Text }";
+        }
 
         public void Include(INotifyCollectionChanged changed)
         {
