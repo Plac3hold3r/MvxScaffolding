@@ -88,57 +88,69 @@
                     <ColumnDefinition Width="0.5*" />
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
-                <TextBlock
+                <Viewbox
                     Grid.Column="0"
-                    HorizontalAlignment="Center"
-                    Style="{StaticResource MaterialDesignHeadlineTextBlock}"
-                    Text="{x:Static l10n:LocalResources.Main_Window_SectionHeader_AppDetails}">
-                    <TextBlock.Foreground>
-                        <MultiBinding Converter="{StaticResource SectionHighlightColorConverter}" ConverterParameter="0">
-                            <Binding Path="SelectedViewModelIndex" />
-                            <Binding Source="{StaticResource PrimaryColorBrush}" />
-                            <Binding Source="{StaticResource MaterialDesignBodyLight}" />
-                        </MultiBinding>
-                    </TextBlock.Foreground>
-                </TextBlock>
+                    Stretch="Uniform"
+                    StretchDirection="DownOnly">
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                        Text="{x:Static l10n:LocalResources.Main_Window_SectionHeader_AppDetails}">
+                        <TextBlock.Foreground>
+                            <MultiBinding Converter="{StaticResource SectionHighlightColorConverter}" ConverterParameter="0">
+                                <Binding Path="SelectedViewModelIndex" />
+                                <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                <Binding Source="{StaticResource MaterialDesignBodyLight}" />
+                            </MultiBinding>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                </Viewbox>
                 <TextBlock
                     Grid.Column="1"
                     HorizontalAlignment="Center"
                     Style="{StaticResource MaterialDesignHeadlineTextBlock}">
                     &gt;
                 </TextBlock>
-                <TextBlock
+                <Viewbox
                     Grid.Column="2"
-                    HorizontalAlignment="Center"
-                    Style="{StaticResource MaterialDesignHeadlineTextBlock}"
-                    Text="{x:Static l10n:LocalResources.Main_Window_SectionHeader_PlatformOptions}">
-                    <TextBlock.Foreground>
-                        <MultiBinding Converter="{StaticResource SectionHighlightColorConverter}" ConverterParameter="1">
-                            <Binding Path="SelectedViewModelIndex" />
-                            <Binding Source="{StaticResource PrimaryColorBrush}" />
-                            <Binding Source="{StaticResource MaterialDesignBodyLight}" />
-                        </MultiBinding>
-                    </TextBlock.Foreground>
-                </TextBlock>
+                    Stretch="Uniform"
+                    StretchDirection="DownOnly">
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                        Text="{x:Static l10n:LocalResources.Main_Window_SectionHeader_PlatformOptions}">
+                        <TextBlock.Foreground>
+                            <MultiBinding Converter="{StaticResource SectionHighlightColorConverter}" ConverterParameter="1">
+                                <Binding Path="SelectedViewModelIndex" />
+                                <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                <Binding Source="{StaticResource MaterialDesignBodyLight}" />
+                            </MultiBinding>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                </Viewbox>
                 <TextBlock
                     Grid.Column="3"
                     HorizontalAlignment="Center"
                     Style="{StaticResource MaterialDesignHeadlineTextBlock}">
                     &gt;
                 </TextBlock>
-                <TextBlock
+                <Viewbox
                     Grid.Column="4"
-                    HorizontalAlignment="Center"
-                    Style="{StaticResource MaterialDesignHeadlineTextBlock}"
-                    Text="{x:Static l10n:LocalResources.Main_Window_SectionHeader_Summary}">
-                    <TextBlock.Foreground>
-                        <MultiBinding Converter="{StaticResource SectionHighlightColorConverter}" ConverterParameter="2">
-                            <Binding Path="SelectedViewModelIndex" />
-                            <Binding Source="{StaticResource PrimaryColorBrush}" />
-                            <Binding Source="{StaticResource MaterialDesignBodyLight}" />
-                        </MultiBinding>
-                    </TextBlock.Foreground>
-                </TextBlock>
+                    Stretch="Uniform"
+                    StretchDirection="DownOnly">
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                        Text="{x:Static l10n:LocalResources.Main_Window_SectionHeader_Summary}">
+                        <TextBlock.Foreground>
+                            <MultiBinding Converter="{StaticResource SectionHighlightColorConverter}" ConverterParameter="2">
+                                <Binding Path="SelectedViewModelIndex" />
+                                <Binding Source="{StaticResource PrimaryColorBrush}" />
+                                <Binding Source="{StaticResource MaterialDesignBodyLight}" />
+                            </MultiBinding>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                </Viewbox>
             </Grid>
 
             <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0,0,0,1" />
