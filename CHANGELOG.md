@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.15.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.14.0...v1.15.0) (2021-09-08)
+
+
+### Features
+
+* Add UISearchBar to LinkerPleaseInclude.cs ([#995](https://github.com/Plac3hold3r/MvxScaffolding/issues/995)) ([42a60ec](https://github.com/Plac3hold3r/MvxScaffolding/commit/42a60ecc1e33b594a71fc31f78311563fabb7267))
+* make text adjust to overflow for different languages ([#997](https://github.com/Plac3hold3r/MvxScaffolding/issues/997)) ([6e28183](https://github.com/Plac3hold3r/MvxScaffolding/commit/6e281834ee1df61489e47a35e68824d7895af018))
+* update translations LocalResources.resx (Danish) ([#985](https://github.com/Plac3hold3r/MvxScaffolding/issues/985)) ([cf8e15a](https://github.com/Plac3hold3r/MvxScaffolding/commit/cf8e15ac564b4ee7ae55b2817373b72eae1aa683))
+
 ## [1.14.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.13.0...v1.14.0) (2021-07-31)
 
 
