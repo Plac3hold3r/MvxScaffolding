@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.VisualStudio.Setup.Configuration;
 using MvxScaffolding.Core.Configuration;
 using MvxScaffolding.Core.Contexts;
 using MvxScaffolding.Core.Diagnostics.Writers;
@@ -133,11 +134,9 @@ namespace MvxScaffolding.Core.Diagnostics.Trackers
         {
             if (string.IsNullOrEmpty(_vsProductVersion))
             {
-                //var configuration = new SetupConfiguration() as ISetupConfiguration;
-                //ISetupInstance instance = configuration.GetInstanceForCurrentProcess();
-                //_vsProductVersion = instance.GetInstallationVersion();
-                // TODO [JF] :: update the version selection logic
-                _vsProductVersion = "";
+                var configuration = new SetupConfiguration() as ISetupConfiguration;
+                ISetupInstance instance = configuration.GetInstanceForCurrentProcess();
+                _vsProductVersion = instance.GetInstallationVersion();
             }
 
             return _vsProductVersion;
