@@ -51,6 +51,14 @@ namespace MvxScaffolding.Core.Configuration
 
         public static Dictionary<string, string> MinIosSDKOptions => new Dictionary<string, string>
         {
+            ["15.0"] = "iOS 15.0",
+            ["14.7"] = "iOS 14.7",
+            ["14.6"] = "iOS 14.6",
+            ["14.5"] = "iOS 14.5",
+            ["14.4"] = "iOS 14.4",
+            ["14.3"] = "iOS 14.3",
+            ["14.2"] = "iOS 14.2",
+            ["14.1"] = "iOS 14.1",
             ["14.0"] = "iOS 14.0",
             ["13.7"] = "iOS 13.7",
             ["13.6"] = "iOS 13.6",
@@ -80,7 +88,7 @@ namespace MvxScaffolding.Core.Configuration
             ["9.0"] = "iOS 9.0",
         };
 
-        public static string MinIosSDKOptionDefault => "12.0";
+        public static string MinIosSDKOptionDefault => "13.0";
 
         public static Dictionary<string, string> MinUwpSDKOptions => new Dictionary<string, string>
         {

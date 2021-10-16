@@ -553,9 +553,41 @@
     "iOSMinSDKVersion": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "12.0",
+      "defaultValue": "13.0",
       "description": "Minimum iOS SDK version.",
       "choices": [
+        {
+          "choice": "15.0",
+          "description": "iOS 15.0"
+        },
+        {
+          "choice": "14.7",
+          "description": "iOS 14.7"
+        },
+        {
+          "choice": "14.6",
+          "description": "iOS 14.6"
+        },
+        {
+          "choice": "14.5",
+          "description": "iOS 14.5"
+        },
+        {
+          "choice": "14.4",
+          "description": "iOS 14.4"
+        },
+        {
+          "choice": "14.3",
+          "description": "iOS 14.3"
+        },
+        {
+          "choice": "14.2",
+          "description": "iOS 14.2"
+        },
+        {
+          "choice": "14.1",
+          "description": "iOS 14.1"
+        },
         {
           "choice": "14.0",
           "description": "iOS 14.0"
