@@ -628,7 +628,7 @@
           "description": "iOS 9"
         }
       ],
-      "replaces": "12.0",
+      "replaces": "13.0",
       "onlyIf": [
         {
           "after": "<string>",
