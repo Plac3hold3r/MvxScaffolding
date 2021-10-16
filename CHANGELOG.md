@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.16.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.15.0...v1.16.0) (2021-10-16)
+
+
+### Features
+
+* switch UWP UI test with Appium with WinAppDriver ([#1021](https://github.com/Plac3hold3r/MvxScaffolding/issues/1021)) ([bfe26cf](https://github.com/Plac3hold3r/MvxScaffolding/commit/bfe26cfd3b31a32da2a1fd296aa478397b26e435))
+* update iOS min SDK versions ([#1019](https://github.com/Plac3hold3r/MvxScaffolding/issues/1019)) ([a59cf75](https://github.com/Plac3hold3r/MvxScaffolding/commit/a59cf75e098a053cdbba679b331511ed7fb23246))
+* update Xamarin Forms + Android target to 30 ([#1018](https://github.com/Plac3hold3r/MvxScaffolding/issues/1018)) ([c2edc77](https://github.com/Plac3hold3r/MvxScaffolding/commit/c2edc778fc535fe708c858d4314dc36df2d97ff4))
+
+
+### Bug Fixes
+
+* sync all iOS default values to 13 ([#1020](https://github.com/Plac3hold3r/MvxScaffolding/issues/1020)) ([f31607b](https://github.com/Plac3hold3r/MvxScaffolding/commit/f31607b8ab32dff97426d1b8d26a780001ef64d6))
+
 ## [1.15.0](https://github.com/Plac3hold3r/MvxScaffolding/compare/v1.14.0...v1.15.0) (2021-09-08)
 
 
