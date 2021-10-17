@@ -11,7 +11,7 @@ using EnvDTE80;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TemplateWizard;
+//using Microsoft.VisualStudio.TemplateWizard;
 using MvxScaffolding.Core.Contexts;
 using MvxScaffolding.Core.Diagnostics;
 using MvxScaffolding.Core.Files;
@@ -24,7 +24,7 @@ using MvxScaffolding.Vsix.Constants;
 
 namespace MvxScaffolding.Vsix.Wizards
 {
-    public abstract class MvxScaffoldingBase : IWizard
+    public abstract class MvxScaffoldingBase //: IWizard
     {
         protected MvxScaffoldingBase(TemplateType templateType)
         {
