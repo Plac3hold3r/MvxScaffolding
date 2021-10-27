@@ -172,7 +172,7 @@
     <value>Market Share</value>
   </data>
   <data name="PlatformOptions_Android_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>أدنى إصدار من SDK</value>
   </data>
   <data name="PlatformOptions_Android_Title" xml:space="preserve">
     <value>Android</value>
@@ -232,7 +232,7 @@
     <value>Market Share</value>
   </data>
   <data name="PlatformOptions_Ios_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>أدنى إصدار من SDK</value>
   </data>
   <data name="PlatformOptions_Ios_Title" xml:space="preserve">
     <value>iOS</value>
@@ -250,7 +250,7 @@
     <value>Market Share</value>
   </data>
   <data name="PlatformOptions_Uwp_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>أدنى إصدار من SDK</value>
   </data>
   <data name="PlatformOptions_Uwp_Title" xml:space="preserve">
     <value>UWP</value>
@@ -286,7 +286,7 @@
     <value>More Info</value>
   </data>
   <data name="Summary_Android_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>أدنى إصدار من SDK</value>
   </data>
   <data name="Summary_Android_Title" xml:space="preserve">
     <value>Android</value>
@@ -328,7 +328,7 @@
     <value>Layout Type</value>
   </data>
   <data name="Summary_Ios_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>أدنى إصدار من SDK</value>
   </data>
   <data name="Summary_Ios_UITestProject" xml:space="preserve">
     <value>UI Test Project</value>
@@ -343,7 +343,7 @@
     <value>Description</value>
   </data>
   <data name="Summary_Uwp_MinSdk" xml:space="preserve">
-    <value>Min SDK version</value>
+    <value>أدنى إصدار من SDK</value>
   </data>
   <data name="Summary_Uwp_Title" xml:space="preserve">
     <value>UWP</value>
