@@ -415,22 +415,22 @@
     <value>Github</value>
   </data>
   <data name="AppDetails_Solution_Name" xml:space="preserve">
-    <value>Solution Name</value>
+    <value>اسم حزمة المشاريع (solution)</value>
   </data>
   <data name="AppDetails_Validation_SolutionName" xml:space="preserve">
-    <value>Solution name required</value>
+    <value>اسم التطبيق مطلوب</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu" xml:space="preserve">
-    <value>Navigation Menu</value>
+    <value>قائمة التنقل</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu_Description" xml:space="preserve">
-    <value>Scaffold an app with a slide out menu. Template contains two starting views with view models.</value>
+    <value>سقالة (Scaffold) تطبيق مع قائمة قابلة للسحب للخارج. القالب يحتوي على views مع view models.</value>
   </data>
   <data name="AppDetails_Template_SingleView" xml:space="preserve">
-    <value>Single View</value>
+    <value>عرض (View) واحد</value>
   </data>
   <data name="AppDetails_Template_SingleView_Description" xml:space="preserve">
-    <value>Scaffold an app with a single starting view and view model.</value>
+    <value>صقالة (Scaffold) تطبيق مع نموذج بدء واحد (view) وعرض واحد (view model).</value>
   </data>
   <data name="AppDetails_Project_Name" xml:space="preserve">
     <value>Project Name</value>
@@ -439,7 +439,7 @@
     <value>Scaffold Type</value>
   </data>
   <data name="Summary_SolutionName" xml:space="preserve">
-    <value>Solution Name</value>
+    <value>اسم حزمة المشاريع (solution)</value>
   </data>
   <data name="ReleaseNotes_InstalledVersion" xml:space="preserve">
     <value>Installed Version</value>
