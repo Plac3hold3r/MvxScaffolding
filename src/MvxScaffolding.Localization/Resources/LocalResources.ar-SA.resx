@@ -217,7 +217,7 @@
     <value>أنشئ من قِبل</value>
   </data>
   <data name="About_General__Desc" xml:space="preserve">
-    <value>قالب قابل للتخصيص يستخدم للسقالة (scaffold) عبر منصة تطبيق MvvmCross. يتضمن مكتبة NET Standard class. ومراجع حزمة Nuget. يدعم مشاريع من نوع Xamarin Android و Xamarin iOS و UWP Xamarin Native و Xamarin.</value>
+    <value>قالب قابل للتخصيص يستخدم لسقالة (scaffold) تطبيق متقاطع المنصات عبر MvvmCross. يتضمن مكتبة NET Standard class. ومراجع حزمة Nuget. يدعم مشاريع من نوع Xamarin Android و Xamarin iOS و UWP Xamarin Native و Xamarin.</value>
   </data>
   <data name="About_GitHub_Desc" xml:space="preserve">
     <value>للاطلاع على المشاكل وطلبات الميزات يرجى زيارة مشروع MvxScaffolding على GitHub.</value>
