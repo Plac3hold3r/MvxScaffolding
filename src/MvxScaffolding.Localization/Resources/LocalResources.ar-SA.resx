@@ -433,28 +433,28 @@
     <value>صقالة (Scaffold) تطبيق مع نموذج بدء واحد (view) وعرض واحد (view model).</value>
   </data>
   <data name="AppDetails_Project_Name" xml:space="preserve">
-    <value>Project Name</value>
+    <value>إسم المشروع</value>
   </data>
   <data name="Summary_ScaffoldType" xml:space="preserve">
-    <value>Scaffold Type</value>
+    <value>نوع السقالة (Scaffold)</value>
   </data>
   <data name="Summary_SolutionName" xml:space="preserve">
     <value>اسم حزمة المشاريع (solution)</value>
   </data>
   <data name="ReleaseNotes_InstalledVersion" xml:space="preserve">
-    <value>Installed Version</value>
+    <value>الإصدار المثبت</value>
   </data>
   <data name="AppDetails_Template_Blank" xml:space="preserve">
-    <value>Blank</value>
+    <value>فارغ</value>
   </data>
   <data name="AppDetails_Template_Blank_Description" xml:space="preserve">
-    <value>Scaffold an app with bare basic features.</value>
+    <value>صقالة (Scaffold) تطبيق يحتوي على ميزات أساسية مجردة.</value>
   </data>
   <data name="AppDetails_Create_Solution_Directory" xml:space="preserve">
-    <value>Create directory for solution</value>
+    <value>إنشاء دليل للتطبيق</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Message" xml:space="preserve">
-    <value>MvxScaffolding cannot delete the default Visual Studio generated project folder due to the choice of file location requiring elevated privileges. You will need to either run Visual Studio as an Administrator or manually clean up the directory after the project has been generated.</value>
+    <value>لم يتمكن MvxScaffolding من حذف مجلد المشروع Visual Studio الافتراضي الذي تم إنشاؤه بسبب اختيار موقع الملف الذي يتطلب امتيازات مرتفعة. سوف تحتاج إما إلى تشغيل Visual Studio كمدير (as administrator) أو تنظيف الدليل يدوياً بعد إنشاء المشروع.</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Title" xml:space="preserve">
     <value>Unauthorized Access Error</value>
