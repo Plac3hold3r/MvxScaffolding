@@ -424,7 +424,7 @@
     <value>قائمة التنقل</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu_Description" xml:space="preserve">
-    <value>سقالة (Scaffold) تطبيق مع قائمة قابلة للسحب للخارج. القالب يحتوي على views مع view models.</value>
+    <value>سقالة (Scaffold) تطبيق مع قائمة قابلة للسحب للخارج. القالب يحتوي على واجهتان views مع view models.</value>
   </data>
   <data name="AppDetails_Template_SingleView" xml:space="preserve">
     <value>عرض (View) واحد</value>
