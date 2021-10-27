@@ -268,13 +268,13 @@
     <value>تجميع المشاريع في مجلدات داخل حزمة المشاريع (solution).</value>
   </data>
   <data name="ProjectGrouping_Select_Flat" xml:space="preserve">
-    <value>Select "Flat" for when you want all projects to be placed at the root of the solution.</value>
+    <value>حدد "Flat" عندما تريد وضع جميع المشاريع في جذر حزمة المشاريع (solution root).</value>
   </data>
   <data name="ProjectGrouping_Select_Platform" xml:space="preserve">
-    <value>Select "Platform"for when you want projects to be grouped based on their target platform.</value>
+    <value>حدد "المنصة" عندما تريد أن يتم تجميع المشاريع على أساس المنصة المستهدفة الخاصة بها.</value>
   </data>
   <data name="ProjectGrouping_Select_TestGroup" xml:space="preserve">
-    <value>Select "Test Group" for when you want all test projects to be placed in a test folder, other projects are placed at the root of the solution.</value>
+    <value>حدد "مجموعة الاختبار" عندما تريد وضع جميع مشاريع الاختبار في مجلد الاختبار، هناك مشاريع أخرى تم وضعها في مجلد حزمة المشاريع.</value>
   </data>
   <data name="ProjectGrouping_Title" xml:space="preserve">
     <value>تجميع المشاريع</value>
@@ -283,7 +283,7 @@
     <value>إغلاق</value>
   </data>
   <data name="SimpleInfo_Button_More_Info" xml:space="preserve">
-    <value>More Info</value>
+    <value>معلومات إضافية</value>
   </data>
   <data name="Summary_Android_MinSdk" xml:space="preserve">
     <value>أدنى إصدار من SDK</value>
@@ -355,64 +355,64 @@
     <value>مشروع اختبار الوحدة</value>
   </data>
   <data name="About_GitHub_Link" xml:space="preserve">
-    <value>GitHub</value>
+    <value>Github</value>
   </data>
   <data name="About_Privacy_Link" xml:space="preserve">
-    <value>Privacy Policy</value>
+    <value>سياسة الخصوصية</value>
   </data>
   <data name="Template_Choice_False" xml:space="preserve">
-    <value>False</value>
+    <value>خاطئ</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Flat" xml:space="preserve">
-    <value>Flat</value>
+    <value>مسطح</value>
   </data>
   <data name="Template_Choice_ProjectGroup_Platform" xml:space="preserve">
-    <value>Platform</value>
+    <value>منصة</value>
   </data>
   <data name="Template_Choice_ProjectGroup_TestGroup" xml:space="preserve">
-    <value>Test Group</value>
+    <value>مجموعة الاختبار</value>
   </data>
   <data name="Template_Choice_True" xml:space="preserve">
-    <value>True</value>
+    <value>صحيح</value>
   </data>
   <data name="Main_Window_Button_Translate" xml:space="preserve">
-    <value>Translate</value>
+    <value>ترجم</value>
   </data>
   <data name="SimpleInfo_Translate_Desc" xml:space="preserve">
-    <value>Find an error in spelling or grammar? Want MvxScaffolding translated into your native language? To help translate MvxScaffolding, please visit our Crowdin page.</value>
+    <value>العثور على خطأ في التهجئة أو النحوية؟ تريد MvxScaffolding أن تترجم إلى لغتك الأم؟ للمساعدة في ترجمة MvxScaffolding، يرجى زيارة صفحتنا على كراودن (Crowdin).</value>
   </data>
   <data name="SimpleInfo_Translate_Title" xml:space="preserve">
-    <value>Help Translate</value>
+    <value>ساعد في الترجمة</value>
   </data>
   <data name="About_Translate_Link" xml:space="preserve">
-    <value>Help Translate</value>
+    <value>ساعد في الترجمة</value>
   </data>
   <data name="About_Changelog_Link" xml:space="preserve">
-    <value>Changelog</value>
+    <value>سجل التغيير</value>
   </data>
   <data name="AppDetails_MvvmCross_Version" xml:space="preserve">
-    <value>MvvmCross Version</value>
+    <value>إصدار MvmCross</value>
   </data>
   <data name="Main_Window_Notify_Dismiss" xml:space="preserve">
-    <value>Dismiss</value>
+    <value>تجاهل</value>
   </data>
   <data name="Main_Window_Notify_ReleaseNotes" xml:space="preserve">
-    <value>Release Notes</value>
+    <value>ملاحظات الإصدار</value>
   </data>
   <data name="Main_Window_Notify_Updated" xml:space="preserve">
-    <value>{0} updated</value>
+    <value>تم تحديث {0}</value>
   </data>
   <data name="AppDetails_Required" xml:space="preserve">
-    <value>Required</value>
+    <value>مطلوب</value>
   </data>
   <data name="ReleaseNotes_Button_Close" xml:space="preserve">
     <value>إغلاق</value>
   </data>
   <data name="ReleaseNotes_Changelog_Link" xml:space="preserve">
-    <value>Changelog</value>
+    <value>سجل التغيير</value>
   </data>
   <data name="ReleaseNotes_GitHub_Link" xml:space="preserve">
-    <value>GitHub</value>
+    <value>Github</value>
   </data>
   <data name="AppDetails_Solution_Name" xml:space="preserve">
     <value>Solution Name</value>
