@@ -217,10 +217,10 @@
     <value>أنشئ من قِبل</value>
   </data>
   <data name="About_General__Desc" xml:space="preserve">
-    <value>A customizable template used to scaffold a cross platform MvvmCross application. Includes a .NET Standard class library and NuGet package references. Supports Xamarin Android, Xamarin iOS and UWP project types for Xamarin Native and Xamarin Forms.</value>
+    <value>قالب قابل للتخصيص يستخدم للسقالة (scaffold) عبر منصة تطبيق MvvmCross. يتضمن مكتبة NET Standard class. ومراجع حزمة Nuget. يدعم مشاريع من نوع Xamarin Android و Xamarin iOS و UWP Xamarin Native و Xamarin.</value>
   </data>
   <data name="About_GitHub_Desc" xml:space="preserve">
-    <value>For issues and feature requests visit MvxScaffolding project on GitHub.</value>
+    <value>للاطلاع على المشاكل وطلبات الميزات يرجى زيارة مشروع MvxScaffolding على GitHub.</value>
   </data>
   <data name="About_Privacy_Desc" xml:space="preserve">
     <value>إن مساعد التنصيب (wizard) هذا يتيح الاستفادة من تقارير فشل التطبيق و التقارير التحليلية عبر طرف ثالث. راجع سياسة الخصوصية لمزيد من المعلومات.</value>
@@ -244,7 +244,7 @@
     <value>مشروع اختبار الوحدة</value>
   </data>
   <data name="PlatformOptions_Uwp_Description" xml:space="preserve">
-    <value>Description</value>
+    <value>الوصف</value>
   </data>
   <data name="PlatformOptions_Uwp_MarketShare" xml:space="preserve">
     <value>Market Share</value>
@@ -265,7 +265,7 @@
     <value>إغلاق</value>
   </data>
   <data name="ProjectGrouping_Description" xml:space="preserve">
-    <value>The grouping for projects into folders inside of the solution.</value>
+    <value>تجميع المشاريع في مجلدات داخل حزمة المشاريع (solution).</value>
   </data>
   <data name="ProjectGrouping_Select_Flat" xml:space="preserve">
     <value>Select "Flat" for when you want all projects to be placed at the root of the solution.</value>
@@ -340,7 +340,7 @@
     <value>تجميع المشاريع</value>
   </data>
   <data name="Summary_Uwp_Description" xml:space="preserve">
-    <value>Description</value>
+    <value>الوصف</value>
   </data>
   <data name="Summary_Uwp_MinSdk" xml:space="preserve">
     <value>أدنى إصدار من SDK</value>
