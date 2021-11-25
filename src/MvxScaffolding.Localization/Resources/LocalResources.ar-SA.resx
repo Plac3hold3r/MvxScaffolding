@@ -133,7 +133,7 @@
     <value>تجميع المشاريع</value>
   </data>
   <data name="AppDetails_Solution" xml:space="preserve">
-    <value>حزمة المشاريع</value>
+    <value>الحل</value>
   </data>
   <data name="AppDetails_Validation_Display_Name" xml:space="preserve">
     <value>اسم التطبيق مطلوب</value>
@@ -199,7 +199,7 @@
     <value>الوصف مطلوب</value>
   </data>
   <data name="SimpleInfo_EditorConfig_Desc" xml:space="preserve">
-    <value>تمكين تضمين ملف تحرير التكوين (EditorConfig file) في جذر مجلد مجموع المشاريع (solution). يتم استخدام ملف تحرير التكوين (EditorConfig) لتحديد أنماط البرمجة التي تم إبرازها في "فيزوال ستوديو" (Visual Studio).</value>
+    <value>تمكين تضمين ملف تحرير التكوين (EditorConfig file) في جذر مجلد الحل (solution). يتم استخدام ملف تحرير التكوين (EditorConfig) لتحديد أنماط البرمجة التي تم إبرازها في "فيزوال ستوديو" (Visual Studio).</value>
   </data>
   <data name="SimpleInfo_EditorConfig_Title" xml:space="preserve">
     <value>تهيئة المحرر</value>
@@ -265,16 +265,16 @@
     <value>إغلاق</value>
   </data>
   <data name="ProjectGrouping_Description" xml:space="preserve">
-    <value>تجميع المشاريع في مجلدات داخل حزمة المشاريع (solution).</value>
+    <value>تجميع المشاريع في مجلدات داخل الحل (solution).</value>
   </data>
   <data name="ProjectGrouping_Select_Flat" xml:space="preserve">
-    <value>حدد "Flat" عندما تريد وضع جميع المشاريع في جذر حزمة المشاريع (solution root).</value>
+    <value>حدد "Flat" عندما تريد وضع جميع المشاريع في جذر الحل (solution root).</value>
   </data>
   <data name="ProjectGrouping_Select_Platform" xml:space="preserve">
     <value>حدد "المنصة" عندما تريد أن يتم تجميع المشاريع على أساس المنصة المستهدفة الخاصة بها.</value>
   </data>
   <data name="ProjectGrouping_Select_TestGroup" xml:space="preserve">
-    <value>حدد "مجموعة الاختبار" عندما تريد وضع جميع مشاريع الاختبار في مجلد الاختبار، هناك مشاريع أخرى تم وضعها في مجلد حزمة المشاريع.</value>
+    <value>حدد "مجموعة الاختبار" عندما تريد وضع جميع مشاريع الاختبار في مجلد الاختبار، هناك مشاريع أخرى تم وضعها في مجلد الحل.</value>
   </data>
   <data name="ProjectGrouping_Title" xml:space="preserve">
     <value>تجميع المشاريع</value>
@@ -415,10 +415,10 @@
     <value>Github</value>
   </data>
   <data name="AppDetails_Solution_Name" xml:space="preserve">
-    <value>اسم حزمة المشاريع (solution)</value>
+    <value>اسم الحل (solution)</value>
   </data>
   <data name="AppDetails_Validation_SolutionName" xml:space="preserve">
-    <value>اسم التطبيق مطلوب</value>
+    <value>اسم الحل مطلوب</value>
   </data>
   <data name="AppDetails_Template_NavigationMenu" xml:space="preserve">
     <value>قائمة التنقل</value>
@@ -439,7 +439,7 @@
     <value>نوع السقالة (Scaffold)</value>
   </data>
   <data name="Summary_SolutionName" xml:space="preserve">
-    <value>اسم حزمة المشاريع (solution)</value>
+    <value>اسم الحل (solution)</value>
   </data>
   <data name="ReleaseNotes_InstalledVersion" xml:space="preserve">
     <value>الإصدار المثبت</value>
@@ -451,7 +451,7 @@
     <value>صقالة (Scaffold) تطبيق يحتوي على ميزات أساسية مجردة.</value>
   </data>
   <data name="AppDetails_Create_Solution_Directory" xml:space="preserve">
-    <value>إنشاء دليل للتطبيق</value>
+    <value>إنشاء دليل للحل (solution)</value>
   </data>
   <data name="SimpleInfo_UnauthorizedAccess_Message" xml:space="preserve">
     <value>لم يتمكن MvxScaffolding من حذف مجلد المشروع Visual Studio الافتراضي الذي تم إنشاؤه بسبب اختيار موقع الملف الذي يتطلب امتيازات مرتفعة. سوف تحتاج إما إلى تشغيل Visual Studio كمدير (as administrator) أو تنظيف الدليل يدوياً بعد إنشاء المشروع.</value>
