@@ -110,7 +110,7 @@
       <Version>5.0.0.2125</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Google.Android.Material">
-      <Version>1.4.0.4</Version>
+      <Version>1.4.0.5</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
