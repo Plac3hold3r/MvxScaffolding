@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Copyright © 2018, Jonathan Froon, Plac3hold3r+github@outlook.com
 // MvxScaffolding is licensed using the MIT License
 //---------------------------------------------------------------------------------
@@ -21,7 +21,7 @@ namespace MvxScaffolding.UI.Threading
             }
             catch (NullReferenceException)
             {
-                var context = new JoinableTaskContext(System.Threading.Thread.CurrentThread);
+                var context = ThreadHelper.JoinableTaskContext;
                 JoinableTaskCollection collection = context.CreateCollection();
                 JoinableTaskFactory = context.CreateFactory(collection);
             }

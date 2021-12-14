@@ -6,8 +6,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows;
 using EnvDTE;
 using EnvDTE80;
+using Microsoft;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -107,6 +109,8 @@ namespace MvxScaffolding.Vsix.Wizards
 
         private static FileDeleteStatus RemoveOldSolutionDirectory(object automationObject, Dictionary<string, string> replacementsDictionary)
         {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
             var dte = (DTE)automationObject;
             var solution = (Solution2)dte.Solution;
             solution.Close();
@@ -177,30 +181,30 @@ namespace MvxScaffolding.Vsix.Wizards
 
         public void ShowModal(System.Windows.Window dialog)
         {
-            SafeThreading.JoinableTaskFactory.SwitchToMainThreadAsync();
-
-            UIShell.GetDialogOwnerHwnd(out IntPtr hwnd);
-
-            dialog.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
-
-            UIShell.EnableModeless(0);
-
-            try
+            SafeThreading.JoinableTaskFactory.Run(async delegate
             {
-                WindowHelper.ShowModal(dialog, hwnd);
-            }
-            finally
-            {
-                UIShell.EnableModeless(1);
-            }
+                await SafeThreading.JoinableTaskFactory.SwitchToMainThreadAsync();
+
+                UIShell = ServiceProvider.GlobalProvider.GetService(typeof(SVsUIShell)) as IVsUIShell;
+
+                Assumes.Present(UIShell);
+                UIShell.GetDialogOwnerHwnd(out IntPtr hwnd);
+
+                dialog.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+
+                UIShell.EnableModeless(0);
+
+                try
+                {
+                    WindowHelper.ShowModal(dialog, hwnd);
+                }
+                finally
+                {
+                    UIShell.EnableModeless(1);
+                }
+            });
         }
 
-        private readonly Lazy<IVsUIShell> _uiShell = new Lazy<IVsUIShell>(() =>
-        {
-            SafeThreading.JoinableTaskFactory.SwitchToMainThreadAsync();
-            return ServiceProvider.GlobalProvider.GetService(typeof(SVsUIShell)) as IVsUIShell;
-        }, true);
-
-        protected IVsUIShell UIShell => _uiShell.Value;
+        protected IVsUIShell UIShell { get; private set; }
     }
 }

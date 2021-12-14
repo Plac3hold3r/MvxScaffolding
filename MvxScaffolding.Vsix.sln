@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2026
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31808.319
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxScaffolding.Vsix", "src\MvxScaffolding.Vsix\MvxScaffolding.Vsix.csproj", "{5F73E421-52CF-464D-A53D-F9B76A87B31D}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxScaffolding.Localization", "src\MvxScaffolding.Localization\MvxScaffolding.Localization.csproj", "{CA88AB77-EF3F-4ECF-94F9-9527829123F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxScaffolding.Core", "src\MvxScaffolding.Core\MvxScaffolding.Core.csproj", "{079C1EB3-7123-4571-90DD-E4F298B78FB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxScaffolding.VsEmulator", "src\MvxScaffolding.VsEmulator\MvxScaffolding.VsEmulator.csproj", "{59B4974D-C88F-432C-B013-7F838A0A218E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{079C1EB3-7123-4571-90DD-E4F298B78FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{079C1EB3-7123-4571-90DD-E4F298B78FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{079C1EB3-7123-4571-90DD-E4F298B78FB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59B4974D-C88F-432C-B013-7F838A0A218E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59B4974D-C88F-432C-B013-7F838A0A218E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59B4974D-C88F-432C-B013-7F838A0A218E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59B4974D-C88F-432C-B013-7F838A0A218E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
