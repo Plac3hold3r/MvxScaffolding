@@ -107,7 +107,7 @@
       <Version>1.2.1.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>5.0.0.2125</Version>
+      <Version>5.0.0.2337+884-sha.8f765bd87-azdo.5638139</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Google.Android.Material">
       <Version>1.4.0.4</Version>
