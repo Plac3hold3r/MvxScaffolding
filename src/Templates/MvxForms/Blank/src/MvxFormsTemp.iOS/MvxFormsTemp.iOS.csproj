@@ -108,7 +108,7 @@
       <Version>8.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>5.0.0.2125</Version>
+      <Version>5.0.0.2401+905-sha.aeec18668-azdo.5950840</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
