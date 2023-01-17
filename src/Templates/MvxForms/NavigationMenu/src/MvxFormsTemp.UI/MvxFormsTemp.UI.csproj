@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MvvmCross" Version="8.0.2" />
+    <PackageReference Include="MvvmCross" Version="9.0.8" />
     <PackageReference Include="MvvmCross.Forms" Version="8.0.2" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2125" />
   </ItemGroup>
