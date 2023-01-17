@@ -86,7 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MvvmCross">
-      <Version>8.0.2</Version>
+      <Version>9.0.8</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.DroidX.Material">
       <Version>8.0.2</Version>
